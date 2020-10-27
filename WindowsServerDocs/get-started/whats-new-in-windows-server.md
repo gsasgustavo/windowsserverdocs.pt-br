@@ -1,17 +1,17 @@
 ---
 title: Novidades do Windows Server
 description: Quais são os novos recursos de computação, identidade, gerenciamento, automação, rede, segurança, armazenamento.
-ms.date: 08/22/2019
+ms.date: 10/22/2020
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: e4cfde0f4a9861f0cf215c301c45559f20b78d2c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1876c2dbfcff9c8ea653885cd12232c3c97891f3
+ms.sourcegitcommit: 5a67672c3ba9e666c29a41c7356006359c639912
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945648"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92440145"
 ---
 # <a name="whats-new-in-windows-server"></a>Novidades no Windows Server
 
@@ -26,6 +26,7 @@ Versões do LTSC (Canal de Manutenção em Longo Prazo):
 
 Versões do Canal Semestral:
 
+- [Novidades no Windows Server, versões 2004 e 20H2](whats-new-in-windows-server-2004.md)
 - [Novidades no Windows Server, versões 1903 e 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md)
 - [Novidades no Windows Server, versão 1809](whats-new-in-windows-server-1809.md)
 - [Novidades no Windows Server, versão 1803](whats-new-in-windows-server-1803.md) (sem suporte a partir de 12 de novembro de 2019)

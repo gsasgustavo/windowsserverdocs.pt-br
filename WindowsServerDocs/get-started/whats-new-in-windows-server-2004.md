@@ -1,23 +1,25 @@
 ---
-title: Novidades no Windows Server, versão 2004
-description: Novos recursos do Windows Server, versão 2004
+title: Novidades no Windows Server, versões 2004 e 20H2
+description: Novos recursos do Windows Server, versões 2004 e 20H2.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
 ms.date: 05/27/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 210aa06711c67af46d35a38fe4308bc4060691e8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f44dcc7a1c7fab2d99f0358794bd5b2aedb87b75
+ms.sourcegitcommit: b82dfbfdc5df1327feb8be053a760739b01e3031
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957003"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255863"
 ---
-# <a name="whats-new-in-windows-server-version-2004"></a>Novidades no Windows Server, versão 2004
+# <a name="whats-new-in-windows-server-version-2004-and-20h2"></a>Novidades no Windows Server, versão 2004 e 20H2
 
 >Aplica-se a: Windows Server (Canal semestral)
 
-Para saber mais sobre os recursos mais recentes do Windows, consulte [Novidades no Windows Server](whats-new-in-windows-server.md). Este tópico descreve alguns dos novos recursos do Windows Server, versão 2004.
+Para saber mais sobre os recursos mais recentes do Windows, consulte [Novidades no Windows Server](whats-new-in-windows-server.md). Este tópico descreve alguns dos novos recursos do Windows Server, versões 2004 e 20H2.
+
+O Windows Server, versão 20H2 é a próxima versão do Canal Semestral do Windows Server, versão 2004. Essa versão se concentra na confiabilidade, no desempenho e em outros aprimoramentos gerais, mas não tem novos recursos. Assim como ocorre com outras versões de Canal Semestral, o suporte para ela é de 18 meses a partir do lançamento. Para saber mais sobre as datas de suporte para as versões do Canal Semestral, confira as [informações de versão do Windows Server](windows-server-release-info.md).
 
 ## <a name="server-core-container-improvements"></a>Aprimoramentos no contêiner do Server Core
 

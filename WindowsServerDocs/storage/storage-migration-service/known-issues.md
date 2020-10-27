@@ -4,20 +4,20 @@ description: Problemas conhecidos e suporte de solução de problemas para o ser
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 07/29/2020
+ms.date: 10/23/2020
 ms.topic: article
-ms.openlocfilehash: 6c3ca3a44665bab08c58853d569823f88c908f35
-ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
+ms.openlocfilehash: 25d0c6666e0706b1c772957d9328db43ecfc5b18
+ms.sourcegitcommit: 1b214ca5030c77900f095d77c73cedc6381eb0e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91517512"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639039"
 ---
 # <a name="storage-migration-service-known-issues"></a>Problemas conhecidos do serviço de migração de armazenamento
 
 Este tópico contém respostas a problemas conhecidos ao usar o [serviço de migração de armazenamento](overview.md) para migrar servidores.
 
-O serviço de migração de armazenamento é lançado em duas partes: o serviço no Windows Server e a interface do usuário no centro de administração do Windows. O serviço está disponível no Windows Server, no canal de manutenção de longo prazo, bem como no Windows Server, canal semestral; enquanto o centro de administração do Windows está disponível como um download separado. Também incluímos periodicamente alterações em atualizações cumulativas para o Windows Server, lançadas por meio de Windows Update.
+O serviço de migração de armazenamento é lançado em duas partes: o serviço no Windows Server e a interface do usuário no centro de administração do Windows. O serviço está disponível no Windows Server, Long-Term canal de manutenção, bem como no Windows Server, Semi-Annual Channel; enquanto o centro de administração do Windows está disponível como um download separado. Também incluímos periodicamente alterações em atualizações cumulativas para o Windows Server, lançadas por meio de Windows Update.
 
 Por exemplo, o Windows Server, versão 1903 inclui novos recursos e correções para o serviço de migração de armazenamento, que também estão disponíveis para o Windows Server 2019 e o Windows Server, versão 1809, instalando [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
 
@@ -26,7 +26,7 @@ Por exemplo, o Windows Server, versão 1903 inclui novos recursos e correções 
 O serviço de migração de armazenamento contém logs de eventos para o serviço Orchestrator e o serviço de proxy. O servidor Orchestrator sempre contém ambos os logs de eventos, e os servidores de destino com o serviço de proxy instalado contêm os logs de proxy. Esses logs estão localizados em:
 
 - Logs de aplicativos e serviços \ Microsoft \ Windows \ StorageMigrationService
-- Logs de aplicativos e serviços \ Microsoft \ Windows \ StorageMigrationService-proxy
+- Logs de aplicativos e serviços \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
 Se você precisar reunir esses logs para exibição offline ou para enviar para Suporte da Microsoft, há um script do PowerShell de código aberto disponível no GitHub:
 
@@ -118,7 +118,7 @@ Se você não tiver instalado o serviço de proxy de serviço de migração de a
 
 ## <a name="certain-files-dont-inventory-or-transfer-error-5-access-is-denied"></a>Determinados arquivos não são inventariados ou transferidos, erro 5 "acesso negado"
 
-Ao inventariar ou transferir arquivos de origem para computadores de destino, os arquivos dos quais um usuário removeu permissões para o grupo de administradores falham ao migrar. Examinando o serviço de migração de armazenamento-depuração de proxy mostra:
+Ao inventariar ou transferir arquivos de origem para computadores de destino, os arquivos dos quais um usuário removeu permissões para o grupo de administradores falham ao migrar. Examinando a migração de armazenamento Service-Proxy depurar mostra:
 
 ```
 Log Name: Microsoft-Windows-StorageMigrationService-Proxy/Debug
@@ -418,13 +418,19 @@ Há duas soluções para esse problema:
 
 1. Esse problema foi resolvido primeiro pela atualização do [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) . Esse código anterior removeu todo o uso de endereços IP estáticos.
 
-2. Se você não tiver especificado um endereço IP de gateway padrão nas interfaces de rede do computador de origem, esse problema ocorrerá mesmo com a atualização KB4537818. Para contornar esse problema, defina um endereço IP padrão válido nas interfaces de rede usando o applet Network Connections (NCPA.CPL) ou o cmdlet Set-netroute do PowerShell.
+2. Se você não tiver especificado um endereço IP de gateway padrão nas interfaces de rede do computador de origem, esse problema ocorrerá mesmo com a atualização KB4537818. Para contornar esse problema, defina um endereço IP padrão válido nas interfaces de rede usando o miniaplicativo conexões de rede (NCPA.CPL) ou Set-NetRoute cmdlet do PowerShell.
 
 ## <a name="slower-than-expected-re-transfer-performance"></a>Mais lento do que o esperado desempenho de retransferência
 
-Depois de concluir uma transferência e, em seguida, executar uma retransferência subsequente dos mesmos dados, talvez você não veja muita melhoria no tempo de transferência, mesmo quando poucos dados forem alterados enquanto isso no servidor de origem.
+Depois de concluir uma transferência e, em seguida, executar uma retransferência subsequente dos mesmos dados, talvez você não veja muita melhoria no tempo de transferência, mesmo quando poucos dados forem alterados enquanto isso no servidor de origem. 
 
-Esse é o comportamento esperado ao transferir um número muito grande de arquivos e pastas aninhadas. O tamanho dos dados não é relevante. Primeiro, fizemos melhorias nesse comportamento no [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) e continuamos a otimizar o desempenho da transferência. Para ajustar ainda mais o desempenho, examine [otimizando o desempenho de inventário e transferência](./faq.md#optimizing-inventory-and-transfer-performance).
+Esse problema é resolvido pelo [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390). Para ajustar ainda mais o desempenho, examine [otimizando o desempenho de inventário e transferência](./faq.md#optimizing-inventory-and-transfer-performance).
+
+## <a name="slower-than-expected-inventory-performance"></a>Mais lento do que o esperado desempenho de inventário
+
+Ao inventariar um servidor de origem, você descobre que o inventário de arquivos está demorando muito tempo quando há muitos arquivos ou pastas aninhadas. Milhões de arquivos e pastas podem levar a inventários levando muitas horas mesmo em configurações de armazenamento rápido. 
+
+Esse problema é resolvido pelo [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390).
 
 ## <a name="data-does-not-transfer-user-renamed-when-migrating-to-or-from-a-domain-controller"></a>Os dados não são transferidos, o usuário renomeou ao migrar de ou para um controlador de domínio
 
@@ -535,7 +541,7 @@ Neste estágio, o orquestrador do serviço de migração de armazenamento está 
  - O serviço de registro remoto não está em execução no computador de origem.
  - o firewall não permite conexões de registro remoto para o servidor de origem do Orchestrator.
  - A conta de migração de origem não tem permissões de registro remoto para se conectar ao computador de origem.
- - A conta de migração de origem não tem permissões de leitura no registro do computador de origem, em "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" ou em "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer"
+ - A conta de migração de origem não tem permissões de leitura no registro do computador de origem, em "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" ou em "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
 
 ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>A transferência trava em "38% mapeando interfaces de rede no computador de origem..."
 
@@ -562,7 +568,7 @@ Error Message: Unknown error (0xa00a)
 Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
 ```
 
-Esse problema é causado por Política de Grupo que define o seguinte valor do registro no computador de origem: "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy = 0"
+Esse problema é causado por Política de Grupo que define o seguinte valor do registro no computador de origem: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy = 0"
 
 Essa configuração não faz parte do Política de Grupo padrão, é um complemento configurado usando o [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
 
@@ -606,7 +612,7 @@ Esse problema é causado por um defeito de código no serviço de migração de 
 
 ## <a name="inventory-fails-with-element-not-found"></a>O inventário falha com "elemento não encontrado"
 
-Considere o cenário a seguir.
+Considere o seguinte cenário:
 
 Você tem um servidor de origem com um nome de host DNS e Active Directory nome com mais de 15 caracteres Unicode, como "iamaverylongcomputername". Por design, o Windows não permitia que você definisse o nome NetBIOS herdado para ser definido como longo e avisado quando o servidor era nomeado que o nome NetBIOS seria truncado para 15 caracteres largos Unicode (exemplo: "iamaverylongcom"). Ao tentar inventariar este computador, você recebe no centro de administração do Windows e no log de eventos:
 
@@ -648,6 +654,6 @@ Remote exception : a parameter cannot be found that matches parameter name 'Incl
 Para resolver, atualize a extensão de serviço de migração de armazenamento para pelo menos a versão 1.113.0 no centro de administração do Windows. A atualização deve aparecer automaticamente no feed e solicitar a instalação.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral do serviço de migração de armazenamento](overview.md)
