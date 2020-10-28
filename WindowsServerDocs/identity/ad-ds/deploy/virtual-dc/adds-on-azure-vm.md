@@ -6,12 +6,12 @@ ms.author: iainfou
 manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
-ms.openlocfilehash: 98725e194226f048de5bc8332c02ec54c7525ee1
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: e95aea80bea16322f66a14c12b0a1388897c1b11
+ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940116"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793583"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Instalar uma nova floresta do Active Directory usando a CLI do Azure
 
@@ -51,7 +51,7 @@ O script abaixo pode ser executado diretamente do portal do Azure. Se você opta
 | AdminUsername | Nome de usuário a ser configurado em cada VM como o administrador local. |
 | AdminPassword | Senha de texto não criptografado a ser configurada em cada VM como a senha de administrador local. |
 | ResourceGroupName | Nome a ser usado para o grupo de recursos. Não deve duplicar um nome existente. |
-| Localização | Nome do local do Azure no qual você deseja implantar. Listar regiões com suporte para a assinatura atual usando `az account list-locations` . |
+| Location | Nome do local do Azure no qual você deseja implantar. Listar regiões com suporte para a assinatura atual usando `az account list-locations` . |
 | VNetName | O nome para atribuir a rede virtual do Azure não deve duplicar um nome existente. |
 | VNetAddress | Escopo de IP a ser usado para a rede do Azure. Não deve duplicar um intervalo existente. |
 | SubnetName | Nome para atribuir a sub-rede IP. Não deve duplicar um nome existente. |
@@ -148,7 +148,6 @@ az vm create \
     --data-disk-caching None \
     --nsg $NetworkSecurityGroup \
     --private-ip-address $DC2IP
-
 ```
 
 ## <a name="dns-and-active-directory"></a>DNS e Active Directory
@@ -161,7 +160,7 @@ Informações sobre como estender uma rede local para o Azure podem ser encontra
 
 ## <a name="configure-the-vms-and-install-active-directory-domain-services"></a>Configurar as VMs e instalar Active Directory Domain Services
 
-Depois que o script for concluído, navegue até o [portal do Azure](https://portal.azure.com)e, em seguida, **máquinas virtuais**.
+Depois que o script for concluído, navegue até o [portal do Azure](https://portal.azure.com)e, em seguida, **máquinas virtuais** .
 
 ### <a name="configure-the-first-domain-controller"></a>Configurar o primeiro controlador de domínio
 
@@ -193,6 +192,10 @@ Quando a VM tiver concluído a reinicialização, faça logon novamente com as c
 
 As [redes virtuais do Azure agora dão suporte ao IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , mas, caso você queira definir suas VMs para preferir IPv4 sobre IPv6, as informações sobre como concluir essa tarefa podem ser encontradas no artigo [orientação da base de dados de conhecimento para configurar o IPv6 no Windows para usuários avançados](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
+### <a name="configure-dns"></a>Configurar DNS
+
+Depois de promover o primeiro servidor no Azure, os servidores precisarão ser definidos para os servidores DNS primários e secundários para a rede virtual, e quaisquer servidores DNS locais serão rebaixados para terciário e posterior. Mais informações sobre como alterar servidores DNS podem ser encontradas no artigo [criar, alterar ou excluir uma rede virtual](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+
 ### <a name="configure-the-second-domain-controller"></a>Configurar o segundo controlador de domínio
 
 Conecte-se ao AZDC02 usando as credenciais fornecidas no script.
@@ -220,11 +223,7 @@ Quando o assistente conclui o processo de instalação, a VM é reiniciada.
 
 Quando a VM tiver concluído a reinicialização, faça logon novamente com as credenciais usadas antes, mas desta vez como um membro do domínio CONTOSO.com
 
-As [redes virtuais do Azure agora dão suporte ao IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , mas, caso você queira definir suas VMs para preferir IPv4 sobre IPv6, as informações sobre como concluir essa tarefa podem ser encontradas no artigo [orientação da base de dados de conhecimento para configurar o IPv6 no Windows para usuários avançados](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
-
-### <a name="configure-dns"></a>Configurar DNS
-
-Depois de promover os novos controladores de domínio no Azure, eles precisarão ser definidos para os servidores DNS primários e secundários para a rede virtual, e quaisquer servidores DNS locais serão rebaixados para o terciário e posterior. Mais informações sobre como alterar servidores DNS podem ser encontradas no artigo [criar, alterar ou excluir uma rede virtual](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+As [redes virtuais do Azure agora dão suporte ao IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6), mas, caso você queira definir suas VMs para preferir IPv4 sobre IPv6, as informações sobre como concluir essa tarefa podem ser encontradas no artigo [orientação da base de dados de conhecimento para configurar o IPv6 no Windows para usuários avançados](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### <a name="wrap-up"></a>Conclusão
 
@@ -236,7 +235,7 @@ Para remover o ambiente, quando você tiver concluído o teste, o grupo de recur
 
 ### <a name="remove-using-the-azure-portal"></a>Remover usando o portal do Azure
 
-No portal do Azure, navegue até **grupos de recursos** e escolha o grupo de recursos que criamos (neste exemplo ADonAzureVMs) e, em seguida, selecione **excluir grupo de recursos**. O processo solicita confirmação antes de excluir todos os recursos contidos no grupo de recursos.
+No portal do Azure, navegue até **grupos de recursos** e escolha o grupo de recursos que criamos (neste exemplo ADonAzureVMs) e, em seguida, selecione **excluir grupo de recursos** . O processo solicita confirmação antes de excluir todos os recursos contidos no grupo de recursos.
 
 ### <a name="remove-using-the-azure-cli"></a>Remover usando o CLI do Azure
 

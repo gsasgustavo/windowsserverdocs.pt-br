@@ -5,12 +5,12 @@ manager: mchad
 ms.topic: article
 author: gawatu
 ms.date: 06/29/2019
-ms.openlocfilehash: 668ee7a0c9e948c12140d3e25309a68ad3b2148b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 65ae84f354f535ba94a7331680234b3ad32d230d
+ms.sourcegitcommit: 92e46b11154bab929e2c622d759ef62ec264c4e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957263"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734744"
 ---
 # <a name="resilient-file-system-refs-overview"></a>Visão geral do ReFS (Sistema de Arquivos Resiliente)
 
@@ -33,7 +33,7 @@ O ReFS introduz novos recursos que podem detectar precisamente danos e também c
 
 Além de fornecer melhorias em resiliência, o ReFS apresenta novos recursos para cargas de trabalho sensíveis ao desempenho e virtualizadas. Otimização de camada em tempo real, clonagem de blocos e VDL esparso são bons exemplos dos recursos em evolução do ReFS, que foram desenvolvidos para dar suporte a cargas de trabalho dinâmicas e diversificadas:
 
-- **[Paridade com aceleração de espelho](./mirror-accelerated-parity.md)**: a paridade com aceleração de espelho oferece alto desempenho e também armazenamento eficiente de capacidade para seus dados.
+- **[Paridade com aceleração de espelho](./mirror-accelerated-parity.md)** : a paridade com aceleração de espelho oferece alto desempenho e também armazenamento eficiente de capacidade para seus dados.
 
     - Para oferecer alto desempenho e capacidade de armazenamento eficiente, o ReFS divide um volume em dois grupos lógicos de armazenamento, conhecidos como faixas. Essas camadas podem ter seus próprios tipos de unidade e resiliência, permitindo que cada camada se otimize para desempenho ou capacidade. Alguns exemplos de configurações incluem:
 
@@ -89,6 +89,10 @@ Implantar o ReFS nos Espaços de Armazenamento Diretos é recomendado para carga
 A implantação de ReFS em discos básicos é mais adequada para aplicativos que implementam suas próprias soluções de resiliência e disponibilidade de software.
 - Os aplicativos que apresentam suas próprias soluções de software de resiliência e disponibilidade podem aproveitar fluxos de integridade, clonagem de bloco, além da capacidade de dimensionar e oferecer suporte a grandes conjuntos de dados.
 
+> [!IMPORTANT]
+> Se você planeja usar ReFS para CSV (volumes compartilhados do cluster), considere as limitações para formatar previamente os volumes CSV posteriores com ReFS.
+> Para CSV: o NTFS deve ser usado para SANs tradicionais. ReFS deve ser usado na parte superior do S2D.
+
 > [!NOTE]
 > Os discos básicos incluem conexão direta local não removível via BusTypes SATA, SAS, NVME ou RAID. Os discos básicos não incluem espaços de armazenamento.
 
@@ -119,7 +123,7 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 |---------------------------|------------------|-----------------------|
 | Criptografia de BitLocker | Sim | Sim |
 | Eliminação de duplicação de dados | Sim<sup>1</sup> | Sim |
-| Suporte para CSV (Volume Compartilhado Clusterizado) | Sim<sup>2</sup> | Sim |
+| Suporte para CSV (Volume Compartilhado Clusterizado) | Sim<sup>2</sup> <sup>4</sup> | Sim |
 | Links virtuais | Sim | Sim |
 | Suporte para cluster de failover | Sim | Sim |
 | Listas de controle de acesso | Sim | Sim |
@@ -133,11 +137,12 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 | Oplocks | Sim | Sim |
 | Arquivos esparsos | Sim | Sim |
 | Fluxos nomeados | Sim | Sim |
-| Provisionamento dinâmico | Sim<sup>3</sup> | Sim |
-| Aparar/cancelar mapeamento | Sim<sup>3</sup> | Sim |
-1. Disponível no Windows Server, versão 1709 e posterior.
+| Provisionamento dinâmico | Sim<sup>3</sup> | Yes |
+| Aparar/cancelar mapeamento | Sim<sup>3</sup> | Yes |
+1. Disponível no Windows Server, versão 1709 e posterior, Windows Server 2019 (1809) LTSC ou posterior.
 2. Disponível no Windows Server 2012 R2 e posterior.
 3. Somente espaços de armazenamento
+4. O CSV não usará e/s direta em junção com espaço de armazenamento, Espaços de Armazenamento Diretos (S2D) ou SAN
 
 #### <a name="the-following-features-are-only-available-on-refs"></a>Os seguintes recursos só estão disponíveis em ReFS:
 
@@ -153,8 +158,8 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 |---------------------------|------------------|-----------------------|
 | Compactação de sistema de arquivos | Não | Sim |
 | Criptografia de sistema de arquivos | Não | Sim |
-| Transações | Não | Sim |
-| Links físicos | Não | Sim |
+| Transactions | Não | Sim |
+| Links físicos | Sim<sup>1</sup> | Sim |
 | Identificadores de objeto | Não | Sim |
 | Transferência de Dados descarregadas (ODX) | Não | Sim |
 | Nomes curtos | Não | Sim |
@@ -164,6 +169,8 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 | Suporte ao arquivo de paginação | Não | Sim |
 | Com suporte em mídia removível | Não | Sim |
 
+1. Versão ReFS 3,5 formatado pelo Build 19536 do Windows 10 Enterprise Insider Preview. Adicionado suporte de hardlink se o **volume formatado for atualizado. Não é possível usar o hardlink se atualizado da versão anterior**
+
 ## <a name="additional-references"></a>Referências adicionais
 
 - [Recomendações de tamanho de cluster para ReFS e NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
@@ -171,3 +178,5 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 - [Clonagem de blocos ReFS](block-cloning.md)
 - [Fluxos de integridade ReFS](integrity-streams.md)
 - [Solucionar problemas de ReFS com ReFSUtil](../../administration/windows-commands/refsutil.md)
+- [Uso de ReFS com Cluster-Shared volumes](../../failover-clustering/failover-cluster-csvs.md)
+- [Versões de ReFS e matriz de compatibilidade](https://gist.github.com/0xbadfca11/da0598e47dd643d933dc)
