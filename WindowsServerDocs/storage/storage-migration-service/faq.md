@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 06/02/2020
 ms.topic: article
-ms.openlocfilehash: e8e327fcf2f9173c7fb571580280ba4d5b7389fe
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: c59be01c856cac27f4372291b52bd43419c9ac46
+ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997499"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035772"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>FAQ (perguntas frequentes) sobre o serviço de migração de armazenamento
 
@@ -53,18 +53,18 @@ O serviço de migração de armazenamento migra todos os sinalizadores, configur
 - Estado de compartilhamento
 - Tipo de disponibilidade
 - Tipo de compartilhamento
-- Modo de enumeração de pasta *(também conhecido como enumeração baseada em acesso ou Abe)*
+- Modo de enumeração *de pasta (também Access-Based conhecido como enumeração ou Abe)*
 - Modo de cache
 - Modo de leasing
 - Instância SMB
 - Tempo limite da CA
 - Limite de usuários simultâneos
 - Continuamente disponível
-- Descrição
+- Description
 - Criptografar Dados
 - Comunicação remota de identidade
 - Infraestrutura
-- Nome
+- Name
 - Caminho
 - Com escopo
 - Nome do escopo
@@ -90,6 +90,8 @@ A versão do serviço de migração de armazenamento fornecida no Windows Server
 O serviço de migração de armazenamento contém um mecanismo de leitura e cópia com vários threads chamado serviço de proxy de serviço de migração de armazenamento, que criamos para ser tão rápido, bem como para oferecer uma fidelidade de dados perfeita em muitas ferramentas de cópia de arquivo. Embora a configuração padrão seja ideal para muitos clientes, há maneiras de melhorar o desempenho do SMS durante o inventário e a transferência.
 
 - **Use o Windows Server 2019 para o sistema operacional de destino.** O Windows Server 2019 contém o serviço de proxy de serviço de migração de armazenamento. Quando você instala esse recurso e migra para destinos do Windows Server 2019, todas as transferências funcionam como uma linha de visão direta entre a origem e o destino. Esse serviço é executado no Orchestrator durante a transferência se os computadores de destino forem Windows Server 2012 R2 ou Windows Server 2016, o que significa que o salto duplo de transferências e será muito mais lento. Se houver vários trabalhos em execução com destinos do Windows Server 2012 R2 ou do Windows Server 2016, o orquestrador se tornará um afunilamento.
+
+- **Instale a atualização cumulativa mensal mais recente.** Melhoramos o serviço de proxy de serviço de migração de armazenamento em várias atualizações para melhorar o desempenho de transferência e retransferência, bem como o desempenho do inventário. Instale a [atualização cumulativa do KB4580390 de outubro de 2020](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390) ou posterior para obter melhorias significativas na velocidade.
 
 - **Altere os threads de transferência padrão.** O serviço de proxy de serviço de migração de armazenamento copia 8 arquivos simultaneamente em um determinado trabalho. Você pode aumentar o número de threads de cópia simultâneas ajustando o seguinte registro REG_DWORD nome do valor em decimal em cada nó que executa o proxy do serviço de migração de armazenamento:
 
@@ -164,7 +166,7 @@ Ao executar uma transferência, o serviço de migração de armazenamento procur
 
 A maioria dos erros encontrados no arquivo CSV de transferência são os códigos de erro do sistema Windows. Você pode descobrir o que cada erro significa examinando a [documentação de códigos de erro do Win32](/windows/win32/debug/system-error-codes).
 
-## <a name="what-are-my-options-to-give-feedback-file-bugs-or-get-support"></a><a name="give-feedback"></a>Quais são minhas opções para fornecer comentários, arquivos de erros ou obter suporte?
+## <a name="what-are-my-options-to-give-feedback-file-bugs-or-get-support"></a><a name="give-feedback"></a> Quais são minhas opções para fornecer comentários, arquivos de erros ou obter suporte?
 
 Para fornecer comentários sobre o serviço de migração de armazenamento:
 

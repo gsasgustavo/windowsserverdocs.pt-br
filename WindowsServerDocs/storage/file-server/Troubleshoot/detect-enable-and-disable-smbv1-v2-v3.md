@@ -3,24 +3,37 @@ title: Como detectar, habilitar e desabilitar SMBv1, SMBv2 e SMBv3 no Windows
 description: Descreve como habilitar e desabilitar o protocolo de bloqueio de mensagens do servidor (SMBv1, SMBv2 e SMBv3) em ambientes de cliente e servidor do Windows.
 author: Deland-Han
 manager: dcscontentpm
-ms.topic: article
+ms.topic: how-to
 ms.author: delhan
-ms.date: 09/29/2020
-ms.openlocfilehash: 9008a3381ead368afb627bcfdcd8084a389afabb
-ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
+ms.date: 10/29/2020
+ms.openlocfilehash: ebf5617c108d959e4c4e107652f48ad4a4b53c08
+ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91517542"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035762"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Como detectar, habilitar e desabilitar SMBv1, SMBv2 e SMBv3 no Windows
 
-## <a name="summary"></a>Resumo
+>Aplica-se a: Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Este artigo descreve como habilitar e desabilitar o SMB (Server Message Block) versão 1 (SMBv1), o SMB versão 2 (SMBv2) e a versão 3 do SMB (SMBv3) nos componentes do cliente e do servidor SMB. 
+Este artigo descreve como habilitar e desabilitar o SMB (Server Message Block) versão 1 (SMBv1), o SMB versão 2 (SMBv2) e a versão 3 do SMB (SMBv3) nos componentes do cliente e do servidor SMB.
 
-> [!IMPORTANT]
-> Recomendamos que você **não** desabilite SMBv2 ou SMBv3. Desabilite SMBv2 ou SMBv3 apenas como uma medida temporária de solução de problemas. Não deixe o SMBv2 ou SMBv3 desabilitado.  
+Embora a desabilitação ou a remoção de SMBv1 possa causar alguns problemas de compatibilidade com computadores antigos ou software, o SMBv1 tem vulnerabilidades de segurança significativas e [incentivamos enfaticamente a você não usá-lo](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
+
+## <a name="disabling-smbv2-or-smbv3-for-troubleshooting"></a>Desabilitando o SMBv2 ou o SMBv3 para solução de problemas
+
+Embora seja recomendável manter o SMBv2 e o SMBv3 habilitados, talvez você ache útil desabilitar um temporariamente para solução de problemas, conforme descrito em [como detectar o status, habilitar e desabilitar protocolos SMB no servidor SMB](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server).
+
+No Windows 10, Windows 8.1 e no Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 e Windows Server 2012, desabilitar o SMBv3 desativa a funcionalidade a seguir (e também a funcionalidade SMBv2 descrita na lista anterior):
+
+- Failover transparente-os clientes reconectam-se sem interrupção para nós de cluster durante a manutenção ou failover    
+- Scale Out – acesso simultâneo a dados compartilhados em todos os nós de cluster de arquivos     
+- Multicanal-agregação de largura de banda de rede e tolerância a falhas se vários caminhos estiverem disponíveis entre o cliente e o servidor  
+- SMB Direct – adiciona suporte à rede RDMA para um desempenho muito alto, com baixa latência e baixa utilização da CPU    
+- Criptografia – fornece criptografia de ponta a ponta e protege contra espionagem de redes não confiáveis    
+- Concessão de diretório-melhora os tempos de resposta do aplicativo em filiais por meio de cache    
+- Otimizações de desempenho-otimizações para e/s de leitura/gravação aleatórias pequenas
 
 No Windows 7 e no Windows Server 2008 R2, desabilitar o SMBv2 desativa a seguinte funcionalidade: 
  
@@ -35,23 +48,7 @@ No Windows 7 e no Windows Server 2008 R2, desabilitar o SMBv2 desativa a seguint
 - Suporte a MTU grande-para uso completo de Ethernet de 10 Gigabye (GB)    
 - Eficiência de energia aprimorada-os clientes que têm arquivos abertos em um servidor podem dormir    
 
-No Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 e Windows Server 2019, desabilitar o SMBv3 desativa a funcionalidade a seguir (e também a funcionalidade SMBv2 descrita na lista anterior): 
- 
-- Failover transparente-os clientes reconectam-se sem interrupção para nós de cluster durante a manutenção ou failover    
-- Scale Out – acesso simultâneo a dados compartilhados em todos os nós de cluster de arquivos     
-- Multicanal-agregação de largura de banda de rede e tolerância a falhas se vários caminhos estiverem disponíveis entre o cliente e o servidor  
-- SMB Direct – adiciona suporte à rede RDMA para um desempenho muito alto, com baixa latência e baixa utilização da CPU    
-- Criptografia – fornece criptografia de ponta a ponta e protege contra espionagem de redes não confiáveis    
-- Concessão de diretório-melhora os tempos de resposta do aplicativo em filiais por meio de cache    
-- Otimizações de desempenho-otimizações para e/s de leitura/gravação aleatórias pequenas
-
-##  <a name="more-information"></a>Mais informações
-
-O protocolo SMBv2 foi introduzido no Windows Vista e no Windows Server 2008.
-
-O protocolo SMBv3 foi introduzido no Windows 8 e no Windows Server 2012.
-
-Para obter mais informações sobre os recursos dos recursos SMBv2 e SMBv3, consulte os seguintes artigos:
+O protocolo SMBv2 foi introduzido no Windows Vista e no Windows Server 2008, enquanto o protocolo SMBv3 foi introduzido no Windows 8 e no Windows Server 2012. Para obter mais informações sobre os recursos dos recursos SMBv2 e SMBv3, consulte os seguintes artigos:
 
 [Visão geral do Protocolo SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
 
@@ -109,7 +106,7 @@ Para obter mais informações sobre os recursos dos recursos SMBv2 e SMBv3, cons
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-##### <a name="smb-v2v3protocol-only-disables-smb-v2v3-server"></a>Protocolo SMB V2/V3 (desabilita apenas o servidor SMB V2/V3)
+##### <a name="smb-v2v3-protocol-only-disables-smb-v2v3-server"></a>Protocolo SMB V2/V3 (desabilita apenas o servidor SMB V2/V3)
 
 - Ocorre 
   
@@ -131,13 +128,13 @@ Para obter mais informações sobre os recursos dos recursos SMBv2 e SMBv3, cons
 
 #### <a name="windows-81-and-windows-10-add-or-remove-programs-method"></a>Windows 8.1 e Windows 10: método adicionar ou remover programas
 
-![Método de cliente adicionar-remover programas](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
+![Método de cliente de programas de Add-Remove](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server"></a>Como detectar o status, habilitar e desabilitar protocolos SMB no servidor SMB
 
 ### <a name="for-windows-8-and-windows-server-2012"></a>Para Windows 8 e Windows Server 2012
 
-O Windows 8 e o Windows Server 2012 apresentam o novo cmdlet **set-SMBServerConfiguration** do Windows PowerShell. O cmdlet permite habilitar ou desabilitar os protocolos SMBv1, SMBv2 e SMBv3 no componente de servidor.  
+O Windows 8 e o Windows Server 2012 apresentam o novo cmdlet **set-SMBServerConfiguration** do Windows PowerShell. O cmdlet permite habilitar ou desabilitar os protocolos SMBv1, SMBv2 e SMBv3 no componente de servidor.  
 
 > [!NOTE]   
 > Quando você habilita ou desabilita o SMBv2 no Windows 8 ou no Windows Server 2012, o SMBv3 também é habilitado ou desabilitado. Esse comportamento ocorre porque esses protocolos compartilham a mesma pilha.     
@@ -246,28 +243,28 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
  
 Para habilitar ou desabilitar o SMBv1 no servidor SMB, configure a seguinte chave do registro:
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
 
 ```
 Registry entry: SMB1
 REG_DWORD: 0 = Disabled
 REG_DWORD: 1 = Enabled
-Default: 1 = Enabled (No registry key is created)
+Default: 1 = Enabled (No registry key is created)
 ```
 
 Para habilitar ou desabilitar o SMBv2 no servidor SMB, configure a seguinte chave do registro: 
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
 
 ```
 Registry entry: SMB2
 REG_DWORD: 0 = Disabled
 REG_DWORD: 1 = Enabled
-Default: 1 = Enabled (No registry key is created) 
+Default: 1 = Enabled (No registry key is created) 
 ```
 
 > [!NOTE]
-> Você deve reiniciar o computador depois de fazer essas alterações. 
+> Você deve reiniciar o computador depois de fazer essas alterações. 
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-client"></a>Como detectar o status, habilitar e desabilitar protocolos SMB no cliente SMB
 
@@ -330,36 +327,36 @@ Para obter mais informações, consulte [armazenamento do servidor na Microsoft]
 
 Este procedimento configura o seguinte novo item no registro:
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters** 
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters** 
 
 - Entrada do registro: **SMB1** 
 - REG_DWORD: **0** = desabilitado   
 
 Para configurar isso usando Política de Grupo, siga estas etapas:
  
-1. Abra o **Console de Gerenciamento de Diretiva de Grupo**. Clique com o botão direito no GPO (Objeto de Diretiva de Grupo) que deve conter o novo item de preferência e clique em **Editar**.
+1. Abra o **Console de Gerenciamento de Diretiva de Grupo** . Clique com o botão direito no GPO (Objeto de Diretiva de Grupo) que deve conter o novo item de preferência e clique em **Editar** .
 
-2. Na árvore de console em **configuração do computador**, expanda a pasta **preferências** e expanda a pasta **configurações do Windows** .
+2. Na árvore de console em **configuração do computador** , expanda a pasta **preferências** e expanda a pasta **configurações do Windows** .
 
-3. Clique com o botão direito do mouse no nó **do registro** , aponte para **novo**e selecione **item do registro**.
+3. Clique com o botão direito do mouse no nó **do registro** , aponte para **novo** e selecione **item do registro** .
 
    ![Registro-item de novo registro](media/detect-enable-and-disable-smbv1-v2-v3-3.png)    
  
-Na caixa de diálogo **Propriedades do novo registro**, selecione o seguinte: 
+Na caixa de diálogo **Propriedades do novo registro** , selecione o seguinte: 
  
-- **Ação**: criar    
-- **Hive**: HKEY_LOCAL_MACHINE    
-- **Caminho da chave**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters    
-- **Nome do valor**: SMB1    
-- **Tipo de valor**: REG_DWORD    
-- **Dados do valor**: 0    
+- **Ação** : criar    
+- **Hive** : HKEY_LOCAL_MACHINE    
+- **Caminho da chave** : SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters    
+- **Nome do valor** : SMB1    
+- **Tipo de valor** : REG_DWORD    
+- **Dados do valor** : 0    
  
 ![Novas propriedades do registro-geral](media/detect-enable-and-disable-smbv1-v2-v3-4.png)
 
 Isso desabilita os componentes do servidor SMBv1. Esse Política de Grupo deve ser aplicado a todas as estações de trabalho, servidores e controladores de domínio necessários no domínio.
 
 > [!NOTE]
->Os  [filtros WMI](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10)) também podem ser definidos para excluir sistemas operacionais sem suporte ou exclusões selecionadas, como o Windows XP.
+> Os [filtros WMI](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10)) também podem ser definidos para excluir sistemas operacionais sem suporte ou exclusões selecionadas, como o Windows XP.
 
 > [!IMPORTANT]
 > Tenha cuidado ao fazer essas alterações nos controladores de domínio nos quais o Windows XP herdado ou os sistemas Linux anteriores e de terceiros (que não dão suporte a SMBv2 ou SMBv3) exigem acesso ao SYSVOL ou a outros compartilhamentos de arquivos em que o SMB v1 está sendo desabilitado.     
@@ -368,35 +365,35 @@ Isso desabilita os componentes do servidor SMBv1. Esse Política de Grupo deve s
 
 Para desabilitar o cliente SMBv1, a chave do registro de serviços precisa ser atualizada para desabilitar o início de **MRxSMB10** e, em seguida, a dependência em **MRxSMB10** precisa ser removida da entrada para **LanmanWorkstation** para que possa ser iniciada normalmente sem exigir que o **MRxSMB10** seja iniciado pela primeira vez.
 
-Isso atualizará e substituirá os valores padrão nos 2 itens a seguir no registro: 
+Isso atualizará e substituirá os valores padrão nos dois itens a seguir no registro: 
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\services\mrxsmb10** 
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mrxsmb10** 
 
-Entrada do registro: **iniciar** REG_DWORD: **4**= desabilitado
+Entrada do registro: **iniciar** REG_DWORD: **4** = desabilitado
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
 Entrada do registro: **DependOnService** REG_MULTI_SZ: **"Bowser", "MRxSmb20", "NSI"**   
 
 > [!NOTE]
-> O padrão incluído MRxSMB10, que agora é removido como dependência.
+> O padrão incluído MRxSMB10, que agora é removido como dependência.
 
 Para configurar isso usando Política de Grupo, siga estas etapas:
  
-1. Abra o **Console de Gerenciamento de Diretiva de Grupo**. Clique com o botão direito no GPO (Objeto de Diretiva de Grupo) que deve conter o novo item de preferência e clique em **Editar**.
+1. Abra o **Console de Gerenciamento de Diretiva de Grupo** . Clique com o botão direito no GPO (Objeto de Diretiva de Grupo) que deve conter o novo item de preferência e clique em **Editar** .
 
-2. Na árvore de console em **configuração do computador**, expanda a pasta **preferências** e expanda a pasta **configurações do Windows** .
+2. Na árvore de console em **configuração do computador** , expanda a pasta **preferências** e expanda a pasta **configurações do Windows** .
 
-3. Clique com o botão direito do mouse no nó **do registro** , aponte para **novo**e selecione **item do registro**.    
+3. Clique com o botão direito do mouse no nó **do registro** , aponte para **novo** e selecione **item do registro** .    
 
 4. Na caixa de diálogo **Propriedades do novo registro** , selecione o seguinte: 
  
-   - **Ação**: atualizar
-   - **Hive**: HKEY_LOCAL_MACHINE
-   - **Caminho da chave**: SYSTEM\CurrentControlSet\services\mrxsmb10
-   - **Nome do valor**: iniciar
-   - **Tipo de valor**: REG_DWORD
-   - **Dados do valor**: 4
+   - **Ação** : atualizar
+   - **Hive** : HKEY_LOCAL_MACHINE
+   - **Caminho da chave** : SYSTEM\CurrentControlSet\services\mrxsmb10
+   - **Nome do valor** : iniciar
+   - **Tipo de valor** : REG_DWORD
+   - **Dados do valor** : 4
  
    ![Propriedades de início – geral](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
 
@@ -404,12 +401,12 @@ Para configurar isso usando Política de Grupo, siga estas etapas:
 
    Na caixa de diálogo **Propriedades do novo registro** , selecione o seguinte: 
  
-   - **Ação**: substituir
-   - **Hive**: HKEY_LOCAL_MACHINE
-   - **Caminho da chave**: SYSTEM\CurrentControlSet\Services\LanmanWorkstation
-   - **Nome do valor**: DependOnService
-   - **Tipo de valor**: REG_MULTI_SZ 
-   - **Dados do valor**:
+   - **Ação** : substituir
+   - **Hive** : HKEY_LOCAL_MACHINE
+   - **Caminho da chave** : SYSTEM\CurrentControlSet\Services\LanmanWorkstation
+   - **Nome do valor** : DependOnService
+   - **Tipo de valor** : REG_MULTI_SZ 
+   - **Dados do valor** :
       - Bowser
       - MRxSmb20
       - NSI
