@@ -2,16 +2,16 @@
 title: cleanmgr
 description: Configure a ferramenta de limpeza de disco (Cleanmgr.exe) para limpar automaticamente determinados arquivos.
 ms.reviewer: cosmosdarwin
-author: iangpgh
+author: JasonGerend
 ms.author: jgerend
 manager: daveba
 ms.date: 06/20/2019
-ms.openlocfilehash: 81a9283ef75ef76b14a8ee8a5ecc3ab225207560
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.openlocfilehash: dd8a015ff27809d0ef960241ce9221b4215c20aa
+ms.sourcegitcommit: 7499749ce7baaf58a523cae2dd46737d635475ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083657"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043878"
 ---
 # <a name="cleanmgr"></a>cleanmgr
 
@@ -66,7 +66,7 @@ As opções para os arquivos que você pode especificar para limpeza de disco us
 
 ## <a name="examples"></a>Exemplos
 
-Para executar o aplicativo de limpeza de disco para que você possa usar sua caixa de diálogo para especificar opções para uso posterior, salvando as configurações no conjunto **1**, digite o seguinte:
+Para executar o aplicativo de limpeza de disco para que você possa usar sua caixa de diálogo para especificar opções para uso posterior, salvando as configurações no conjunto **1** , digite o seguinte:
 
 ```
 cleanmgr /sageset:1
