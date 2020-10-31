@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementar modelos administrativos com menos privilégios
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: ab4d6f282de88b7d55256ecd3a9ff4a82a7881fb
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 95f8158f5565c57904b7423456eb7189f9e58a2a
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941446"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069658"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>Implementar modelos administrativos com menos privilégios
 
@@ -86,16 +86,16 @@ Instruções detalhadas para implementar esses controles são fornecidas no [Ap�
 
 As contas de administrador internas nunca devem ser usadas como contas de serviço em servidores membros, nem devem ser usadas para fazer logon em computadores locais (exceto no modo de segurança, que é permitido mesmo que a conta esteja desabilitada). O objetivo de implementar as configurações descritas aqui é impedir que a conta de administrador local de cada computador seja utilizável, a menos que os controles de proteção sejam revertidos primeiro. Ao implementar esses controles e monitorar contas de administrador para alterações, você pode reduzir significativamente a probabilidade de sucesso de um ataque direcionado a contas de administrador local.
 
-##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>Configurando GPOs para restringir contas de administrador em sistemas ingressados no domínio
+##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>Configurando GPOs para restringir contas de administrador em sistemas Domain-Joined
 
-Em um ou mais GPOs que você cria e vincula a estações de trabalho e a UOs de servidor membro em cada domínio, adicione a conta de administrador aos seguintes direitos de usuário em **computador \**\ \ \ \ \ Configurações de direitos:
+Em um ou mais GPOs que você cria e vincula a estações de trabalho e a UOs de servidor membro em cada domínio, adicione a conta de administrador aos seguintes direitos de usuário em **computador \** \ \ \ \ \ Configurações de direitos:
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes
 - Negar o logon como um serviço
 - Negar o logon por meio dos Serviços de Área de Trabalho Remota
 
-Ao adicionar contas de administrador a esses direitos de usuário, especifique se você está adicionando a conta de administrador local ou a conta de administrador do domínio da maneira que você rotula a conta. Por exemplo, para adicionar a conta de administrador do domínio NWTRADERS a esses direitos de negação, você deve digitar a conta como **Nwtraders\Administrador**ou navegar até a conta de administrador do domínio nwtraders. Para garantir que você restrinja a conta de administrador local, digite **administrador** nessas configurações de direitos de usuário na editor de objeto de política de grupo.
+Ao adicionar contas de administrador a esses direitos de usuário, especifique se você está adicionando a conta de administrador local ou a conta de administrador do domínio da maneira que você rotula a conta. Por exemplo, para adicionar a conta de administrador do domínio NWTRADERS a esses direitos de negação, você deve digitar a conta como **Nwtraders\Administrador** ou navegar até a conta de administrador do domínio nwtraders. Para garantir que você restrinja a conta de administrador local, digite **administrador** nessas configurações de direitos de usuário na editor de objeto de política de grupo.
 
 > [!NOTE]
 > Mesmo se as contas de administrador local forem renomeadas, as políticas ainda serão aplicadas.
@@ -108,13 +108,13 @@ Se um servidor membro ou estação de trabalho se tornar desassociado do domíni
 
 *Número da lei seis: um computador é tão seguro quanto o administrador é confiável.* - [Dez leis imutáveis de segurança (versão 2,0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 
-As informações fornecidas aqui se destinam a fornecer diretrizes gerais para proteger as contas e grupos internos de privilégio mais alto no Active Directory. Instruções passo a passo detalhadas também são fornecidas no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md), [Apêndice E: protegendo grupos de administradores corporativos no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md), [Apêndice F: protegendo grupos de administradores de domínio no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)e no [Apêndice G: protegendo grupos de administradores no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md).
+As informações fornecidas aqui se destinam a fornecer diretrizes gerais para proteger as contas e grupos internos de privilégio mais alto no Active Directory. Instruções passo a passo detalhadas também são fornecidas no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md), [apêndice e: protegendo grupos de administradores corporativos no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md), [Apêndice F: protegendo grupos de administradores de domínio no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)e no [Apêndice G: protegendo grupos de administradores no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md).
 
 Antes de implementar qualquer uma dessas configurações, você também deve testar todas as configurações de forma completa para determinar se elas são apropriadas para o seu ambiente. Nem todas as organizações poderão implementar essas configurações.
 
 #### <a name="securing-built-in-administrator-accounts-in-active-directory"></a>Protegendo contas de administrador internas no Active Directory
 
-Em cada domínio no Active Directory, uma conta de administrador é criada como parte da criação do domínio. Essa conta é, por padrão, um membro dos grupos admins. do domínio no domínio e, se o domínio for o domínio raiz da floresta, a conta também será um membro do grupo Administradores de empresa. O uso da conta de administrador local de um domínio deve ser reservado somente para atividades de compilação iniciais e, possivelmente, cenários de recuperação de desastres. Para garantir que uma conta de administrador interno possa ser usada para afetar os reparos no caso de nenhuma outra contas poder ser usada, você não deve alterar a associação padrão da conta de administrador em nenhum domínio na floresta. Em vez disso, você deve seguir as diretrizes para ajudar a proteger a conta de administrador em cada domínio na floresta. Instruções detalhadas para implementar esses controles são fornecidas no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+Em cada domínio no Active Directory, uma conta de administrador é criada como parte da criação do domínio. Essa conta é, por padrão, um membro dos grupos admins. do domínio no domínio e, se o domínio for o domínio raiz da floresta, a conta também será um membro do grupo Administradores de empresa. O uso da conta de administrador local de um domínio deve ser reservado somente para atividades de compilação iniciais e, possivelmente, cenários de recuperação de desastres. Para garantir que uma conta de administrador interno possa ser usada para afetar os reparos no caso de nenhuma outra contas poder ser usada, você não deve alterar a associação padrão da conta de administrador em nenhum domínio na floresta. Em vez disso, você deve seguir as diretrizes para ajudar a proteger a conta de administrador em cada domínio na floresta. Instruções detalhadas para implementar esses controles são fornecidas no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 
 #### <a name="controls-for-built-in-administrator-accounts"></a>Controles para contas de administrador internas
 
@@ -130,11 +130,11 @@ Quando você habilita o **cartão inteligente é necessário para o atributo de 
 
 Embora a definição do **cartão inteligente seja necessária para** que o sinalizador de logon interativo redefina a senha da conta, ela não impede que um usuário com direitos redefina a senha da conta de definir a conta como um valor conhecido e usando o nome da conta e a nova senha para acessar recursos na rede. Por isso, você deve implementar os seguintes controles adicionais na conta.
 
-##### <a name="configuring-gpos-to-restrict-domains-administrator-accounts-on-domain-joined-systems"></a>Configurando GPOs para restringir contas de administrador de domínios em sistemas ingressados no domínio
+##### <a name="configuring-gpos-to-restrict-domains-administrator-accounts-on-domain-joined-systems"></a>Configurando GPOs para restringir contas de administrador de domínios em sistemas Domain-Joined
 
 Embora a desabilitação da conta de administrador em um domínio torne a conta efetivamente inutilizável, você deve implementar restrições adicionais na conta caso a conta seja habilitada inadvertidamente ou maliciosamente. Embora esses controles possam ser eventualmente revertidos pela conta de administrador, o objetivo é criar controles que prejudiquem o progresso de um invasor e limitar o dano que a conta pode gerar.
 
-Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \**\ \ \ \ Configurações de direitos:
+Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \** \ \ \ \ Configurações de direitos:
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes
@@ -142,13 +142,13 @@ Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de se
 - Negar o logon por meio dos Serviços de Área de Trabalho Remota
 
 > [!NOTE]
-> Ao adicionar contas de administrador local a essa configuração, você deve especificar se está configurando contas de administrador local ou contas de administrador de domínio. Por exemplo, para adicionar a conta de administrador local do domínio NWTRADERS a esses direitos de negação, você deve digitar a conta como **Nwtraders\Administrador**ou navegar até a conta de administrador local do domínio nwtraders. Se você digitar **administrador** nessas configurações de direitos de usuário na editor de objeto de política de grupo, restringirá a conta de administrador local em cada computador ao qual o GPO é aplicado.
+> Ao adicionar contas de administrador local a essa configuração, você deve especificar se está configurando contas de administrador local ou contas de administrador de domínio. Por exemplo, para adicionar a conta de administrador local do domínio NWTRADERS a esses direitos de negação, você deve digitar a conta como **Nwtraders\Administrador** ou navegar até a conta de administrador local do domínio nwtraders. Se você digitar **administrador** nessas configurações de direitos de usuário na editor de objeto de política de grupo, restringirá a conta de administrador local em cada computador ao qual o GPO é aplicado.
 >
 > É recomendável restringir contas de administrador local em estações de trabalho e servidores membros da mesma maneira que as contas de administrador baseadas em domínio. Portanto, você geralmente deve adicionar a conta de administrador para cada domínio na floresta e a conta de administrador para os computadores locais a essas configurações de direitos de usuário.
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-controllers"></a>Configurando GPOs para restringir contas de administrador em controladores de domínio
 
-Em cada domínio na floresta, a política de controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no computador \ \ \ \ \ \ \ \ \ **atribuições de direitos**:
+Em cada domínio na floresta, a política de controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no computador \ \ \ \ \ \ \ \ \ **atribuições de direitos** :
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes
@@ -166,13 +166,13 @@ Quando você tiver protegido a conta de administrador de cada domínio e desabil
 
 #### <a name="securing-enterprise-admin-groups"></a>Protegendo grupos de administradores corporativos
 
-O grupo de administradores de empresa, que está hospedado no domínio raiz da floresta, não deve conter nenhum usuário em uma base diária, com a possível exceção da conta de administrador local do domínio, desde que ele seja protegido conforme descrito anteriormente e no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+O grupo de administradores de empresa, que está hospedado no domínio raiz da floresta, não deve conter nenhum usuário em uma base diária, com a possível exceção da conta de administrador local do domínio, desde que ele seja protegido conforme descrito anteriormente e no [Apêndice D: Protegendo contas de administrador Built-In no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 
 Quando o acesso EA é necessário, os usuários cujas contas exigem direitos de EA e permissões devem ser colocados temporariamente no grupo Administradores de empresa. Embora os usuários estejam usando contas altamente privilegiadas, suas atividades devem ser auditadas e, de preferência, executadas com um usuário executando as alterações e outro usuário que observa as alterações para minimizar a probabilidade de uso indevido acidental ou configuração incorreta. Quando as atividades forem concluídas, as contas deverão ser removidas do grupo EA. Isso pode ser obtido por meio de procedimentos manuais e processos documentados, software PIM/PAM (gerenciamento de identidade/acesso) com privilégios de terceiros ou uma combinação de ambos. As diretrizes para criar contas que podem ser usadas para controlar a associação de grupos com privilégios no Active Directory são fornecidas em [contas atrativas para roubo de credenciais](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md) e instruções detalhadas são fornecidas no [Apêndice I: Criando contas de gerenciamento para contas e grupos protegidos no Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md).
 
 Os administradores corporativos são, por padrão, membros do grupo de administradores internos em cada domínio na floresta. A remoção do grupo de administradores de empresa dos grupos de administradores em cada domínio é uma modificação inadequada porque, no caso de um cenário de recuperação de desastre da floresta, os direitos de EA provavelmente serão necessários. Se o grupo Administradores de empresa tiver sido removido dos grupos de administradores em uma floresta, ele deverá ser adicionado ao grupo Administradores em cada domínio e os seguintes controles adicionais deverão ser implementados:
 
-- Conforme descrito anteriormente, o grupo Administradores de empresa não deve conter nenhum usuário diariamente, com a possível exceção da conta de administrador do domínio raiz da floresta, que deve ser protegido conforme descrito no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+- Conforme descrito anteriormente, o grupo Administradores de empresa não deve conter nenhum usuário diariamente, com a possível exceção da conta de administrador do domínio raiz da floresta, que deve ser protegido conforme descrito no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 - Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo EA deve ser adicionado aos seguintes direitos de usuário:
    - Negar acesso a este computador pela rede
    - Negar o logon como um trabalho em lotes
@@ -186,7 +186,7 @@ Isso impedirá que os membros do grupo EA efetuem logon em servidores membros e 
 
 #### <a name="securing-domain-admins-groups"></a>Protegendo grupos de administradores de domínio
 
-Como é o caso do grupo Administradores de empresa, a associação em grupos de administradores de domínio deve ser necessária somente em cenários de compilação ou recuperação de desastre. Não deve haver contas de usuário cotidianas no grupo DA com exceção da conta de administrador local para o domínio, se ele tiver sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+Como é o caso do grupo Administradores de empresa, a associação em grupos de administradores de domínio deve ser necessária somente em cenários de compilação ou recuperação de desastre. Não deve haver contas de usuário cotidianas no grupo DA com exceção da conta de administrador local para o domínio, se ele tiver sido protegido, conforme descrito no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 
 Quando o acesso DA é necessário, as contas que precisam desse nível de acesso devem ser temporariamente colocadas no grupo DA para o domínio em questão. Embora os usuários estejam usando contas altamente privilegiadas, as atividades devem ser auditadas e, de preferência, executadas com um usuário executando as alterações e outro usuário observando as alterações para minimizar a probabilidade de uso indevido acidental ou configuração incorreta. Quando as atividades tiverem sido concluídas, as contas deverão ser removidas do grupo Admins. do domínio. Isso pode ser obtido por meio de procedimentos manuais e processos documentados, por meio de software de PIM/PAM (gerenciamento de identidade/acesso) com privilégios de terceiros ou uma combinação de ambos. As diretrizes para criar contas que podem ser usadas para controlar a associação de grupos com privilégios no Active Directory são fornecidas no [Apêndice I: Criando contas de gerenciamento para contas e grupos protegidos no Active Directory](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md).
 
@@ -194,7 +194,7 @@ Os administradores de domínio são, por padrão, membros dos grupos de administ
 
 Para o grupo Admins. do domínio em cada domínio na floresta:
 
-1. Remova todos os membros do grupo DA, com a possível exceção da conta interna de administrador do domínio, desde que ele tenha sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+1. Remova todos os membros do grupo DA, com a possível exceção da conta interna de administrador do domínio, desde que ele tenha sido protegido, conforme descrito no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 2. Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo DA deve ser adicionado aos seguintes direitos de usuário:
    - Negar acesso a este computador pela rede
    - Negar o logon como um trabalho em lotes
@@ -208,13 +208,13 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
 #### <a name="securing-administrators-groups-in-active-directory"></a>Como proteger grupos de administradores no Active Directory
 
-Como é o caso com os grupos EA e DA, a associação no grupo Administradores (BA) deve ser necessária somente em cenários de compilação ou recuperação de desastre. Não deve haver contas de usuário do dia a dia no grupo Administradores, com exceção da conta de administrador local do domínio, se ele tiver sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+Como é o caso com os grupos EA e DA, a associação no grupo Administradores (BA) deve ser necessária somente em cenários de compilação ou recuperação de desastre. Não deve haver contas de usuário do dia a dia no grupo Administradores, com exceção da conta de administrador local do domínio, se ele tiver sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador de Built-In no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 
 Quando o acesso de administradores é necessário, as contas que precisam desse nível de acesso devem ser temporariamente colocadas no grupo Administradores para o domínio em questão. Embora os usuários estejam usando contas altamente privilegiadas, as atividades devem ser auditadas e, preferencialmente, executadas com um usuário executando as alterações e outro usuário observando as alterações para minimizar a probabilidade de uso indevido inadvertido ou configuração incorreta. Quando as atividades forem concluídas, as contas deverão ser removidas imediatamente do grupo Administradores. Isso pode ser obtido por meio de procedimentos manuais e processos documentados, por meio de software de PIM/PAM (gerenciamento de identidade/acesso) com privilégios de terceiros ou uma combinação de ambos.
 
 Os administradores são, por padrão, os proprietários da maioria dos objetos AD DS em seus respectivos domínios. A associação a esse grupo pode ser necessária em cenários de compilação e recuperação de desastres nos quais a propriedade ou a capacidade de apropriar-se de objetos é necessária. Além disso, o DAs e EAs herdam vários direitos e permissões em virtude de sua associação padrão no grupo Administradores. O aninhamento de grupo padrão para grupos com privilégios no Active Directory não deve ser modificado, e o grupo de administradores de cada domínio deve ser protegido, conforme descrito no [Apêndice G: protegendo grupos de administradores no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)e nas instruções gerais abaixo.
 
-1. Remova todos os membros do grupo Administradores, com a possível exceção da conta de administrador local para o domínio, desde que ele tenha sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador internas no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+1. Remova todos os membros do grupo Administradores, com a possível exceção da conta de administrador local do domínio, desde que ele tenha sido protegido, conforme descrito no [Apêndice D: protegendo Built-In contas de administrador no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 2. Os membros do grupo Administradores do domínio nunca devem precisar fazer logon em servidores membros ou estações de trabalho. Em um ou mais GPOs vinculados a UOs de estação de trabalho e servidor membro em cada domínio, o grupo Administradores deve ser adicionado aos seguintes direitos de usuário:
    - Negar acesso a este computador pela rede
    - Negar logon como um trabalho em lotes,
@@ -233,7 +233,7 @@ Os administradores são, por padrão, os proprietários da maioria dos objetos A
 >
 > ![modelos de administrador de privilégios mínimos](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)
 
-### <a name="role-based-access-controls-rbac-for-active-directory"></a>RBAC (controles de acesso baseado em função) para Active Directory
+### <a name="role-based-access-controls-rbac-for-active-directory"></a>Controles de acesso de Role-Based (RBAC) para Active Directory
 
 Em termos gerais, os RBAC (controles de acesso baseado em função) são um mecanismo para agrupar usuários e fornecer acesso a recursos com base em regras de negócio. No caso do Active Directory, a implementação de RBAC para AD DS é o processo de criação de funções às quais direitos e permissões são delegadas para permitir que os membros da função executem tarefas administrativas cotidianas sem conceder a eles privilégios excessivos. O RBAC para Active Directory pode ser projetado e implementado por meio de ferramentas e interfaces nativas, aproveitando o software que você já tem, adquirindo produtos de terceiros ou qualquer combinação dessas abordagens. Esta seção não fornece instruções passo a passo para implementar o RBAC para Active Directory, mas, em vez disso, aborda fatores que você deve considerar ao escolher uma abordagem para implementar o RBAC em suas instalações de AD DS.
 

@@ -2,16 +2,16 @@
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Redução da superfície de ataque do Active Directory
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5c151f0b152fadc4c86fc7bc0a414e9a190c0080
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8802091de7746844176a97acf5e958d55b0b1f92
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941386"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069508"
 ---
 # <a name="reducing-the-active-directory-attack-surface"></a>Redução da superfície de ataque do Active Directory
 
@@ -19,14 +19,14 @@ ms.locfileid: "88941386"
 
 Esta seção aborda os controles técnicos a serem implementados para reduzir a superfície de ataque da instalação do Active Directory. A seção contém as seguintes informações:
 
-- A [implementação de modelos administrativos de privilégios mínimos](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) se concentra na identificação do risco de que o uso de contas altamente privilegiadas para a administração diária apresenta, além de fornecer recomendações para implementar a fim de reduzir o risco de contas privilegiadas presentes.
+- A [implementação de Least-Privilege modelos administrativos](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) se concentra na identificação do risco de que o uso de contas altamente privilegiadas para a administração diária apresenta, além de fornecer recomendações para implementar a fim de reduzir o risco de contas privilegiadas presentes.
 
 - A [implementação de hosts administrativos seguros](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md) descreve os princípios para a implantação de sistemas administrativos dedicados e seguros, além de algumas abordagens de exemplo para uma implantação segura de host administrativo.
 
 - A [proteção de controladores de domínio contra ataques](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md) discute políticas e configurações que, embora semelhantes às recomendações para a implementação de hosts administrativos seguros, contêm algumas recomendações específicas do controlador de domínio para ajudar a garantir que os controladores de domínio e os sistemas usados para gerenciá-los estejam bem protegidos.
 
 ## <a name="privileged-accounts-and-groups-in-active-directory"></a>Contas privilegiadas e grupos no Active Directory
-Esta seção fornece informações básicas sobre contas e grupos com privilégios no Active Directory destinado a explicar o semelhanças e as diferenças entre contas com privilégios e grupos no Active Directory. Ao compreender essas distinções, se você implementar as recomendações na [implementação de modelos administrativos de privilégios mínimos](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) ou optar por personalizá-los para sua organização, terá as ferramentas necessárias para proteger cada grupo e conta adequadamente.
+Esta seção fornece informações básicas sobre contas e grupos com privilégios no Active Directory destinado a explicar o semelhanças e as diferenças entre contas com privilégios e grupos no Active Directory. Ao compreender essas distinções, se você implementar as recomendações para [implementar Least-Privilege modelos administrativos](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) de forma idêntica ou optar por personalizá-los para sua organização, terá as ferramentas necessárias para proteger cada grupo e conta adequadamente.
 
 ### <a name="built-in-privileged-accounts-and-groups"></a>Contas e grupos com privilégios internos
 Active Directory facilita a delegação de administração e dá suporte ao princípio de privilégios mínimos na atribuição de direitos e permissões. Os usuários "regulares" que têm contas em um domínio são, por padrão, capazes de ler grande parte do que está armazenado no diretório, mas podem alterar apenas um conjunto muito limitado de dados no diretório. Os usuários que exigem privilégios adicionais podem receber associação em vários grupos "privilegiados" que são criados no diretório para que possam executar tarefas específicas relacionadas às suas funções, mas não podem executar tarefas que não são relevantes para suas tarefas. As organizações também podem criar grupos que são personalizados para responsabilidades específicas de trabalho e recebem direitos e permissões granulares que permitem que a equipe de ti execute funções administrativas cotidianas sem conceder direitos e permissões que excedem o que é necessário para essas funções.

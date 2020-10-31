@@ -1,17 +1,18 @@
 ---
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: Descrições das páginas do assistente de instalação e remoção do AD DS
+description: Fornece descrições para os controles nas páginas do assistente a seguir que compõem a instalação e a remoção da função de servidor AD DS no Gerenciador do Servidor.
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0eab71426d282bbd1c0411b13286a9cc93dc38ab
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 85b072122c87203d0865f27efe6d584985d0319f
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941016"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068388"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>Descrições das páginas do assistente de instalação e remoção do AD DS
 
@@ -29,7 +30,7 @@ Este tópico fornece descrições dos controles localizados nas seguintes págin
 
 -   [Opções adicionais](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdditionalOptionsPage)
 
--   [Estruturas](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Paths)
+-   [Caminhos](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Paths)
 
 -   [Opções de preparação](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdprepCreds)
 
@@ -48,7 +49,7 @@ Este tópico fornece descrições dos controles localizados nas seguintes págin
 -   [Confirmar Seleções de Remoção de Função](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)
 
 ## <a name="deployment-configuration"></a><a name="BKMK_DepConfigPage"></a>Configuração de implantação
-O Gerenciador do Servidor começa cada instalação de controlador de domínio na página **Configuração de Implantação**. As demais opções e campos exigidos mudam nessa página e nas páginas subsequentes, dependendo da operação de implantação selecionada. Por exemplo, se você criar uma nova floresta, a página **Opções de preparação** não será exibida, mas se você instalar o primeiro controlador de domínio que executa o Windows Server 2012 em uma floresta ou domínio existente.
+O Gerenciador do Servidor começa cada instalação de controlador de domínio na página **Configuração de Implantação** . As demais opções e campos exigidos mudam nessa página e nas páginas subsequentes, dependendo da operação de implantação selecionada. Por exemplo, se você criar uma nova floresta, a página **Opções de preparação** não será exibida, mas se você instalar o primeiro controlador de domínio que executa o Windows Server 2012 em uma floresta ou domínio existente.
 
 Alguns testes de validação são executados nessa página e, mais tarde, serão executados novamente como parte das verificações de pré-requisitos. Por exemplo, se você tentar instalar o primeiro controlador de domínio do Windows Server 2012 em uma floresta que tenha um nível funcional do Windows 2000, um erro aparecerá nessa página.
 
@@ -71,7 +72,7 @@ As opções a seguir são exibidas quando uma nova floresta é criada.
 > [!NOTE]
 > Ao criar um novo domínio de árvore, você precisa especificar o nome do domínio raiz da floresta, em vez do nome do domínio pai. As demais páginas e opções do assistente são as mesmas.
 
--   Clique em **Selecionar** para procurar o domínio pai ou a árvore do Active Directory ou digite um nome válido de domínio pai ou árvore. Depois, digite o nome do novo domínio em **Novo nome de domínio**.
+-   Clique em **Selecionar** para procurar o domínio pai ou a árvore do Active Directory ou digite um nome válido de domínio pai ou árvore. Depois, digite o nome do novo domínio em **Novo nome de domínio** .
 
 -   Domínio de árvore: forneça um nome válido e totalmente qualificado de domínio raiz; o nome não pode conter apenas uma palavra e deve usar os requisitos de nome de domínio DNS.
 
@@ -117,7 +118,7 @@ Ao criar um domínio filho, este será o conteúdo da página Opções do Contro
 
 -   O nível funcional do domínio é definido como Windows Server 2012 por padrão. Você pode especificar qualquer outro valor que seja pelo menos o valor do nível funcional de floresta ou superior.
 
--   As opções configuráveis de controlador de domínio incluem **Servidor DNS** e **Catálogo Global**; não é possível configurar um controlador de domínio somente leitura como o primeiro controlador de domínio em um novo domínio.
+-   As opções configuráveis de controlador de domínio incluem **Servidor DNS** e **Catálogo Global** ; não é possível configurar um controlador de domínio somente leitura como o primeiro controlador de domínio em um novo domínio.
 
     A Microsoft recomenda que todos os controladores de domínio forneçam serviços DNS e de catálogo global para alta disponibilidade em ambientes distribuídos, e é por isso que o assistente habilita essas opções, por padrão, na criação de um novo domínio.
 
@@ -132,7 +133,7 @@ Se estiver adicionando um controlador de domínio a um domínio, este será o co
 
 ![AD DS instalar](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DCOptions_Replica.gif)
 
--   As opções configuráveis de controlador de domínio incluem **servidor DNS** e **Catálogo Global** e o **controlador de domínio somente leitura**.
+-   As opções configuráveis de controlador de domínio incluem **servidor DNS** e **Catálogo Global** e o **controlador de domínio somente leitura** .
 
     A Microsoft recomenda que todos os controladores de domínio forneçam serviços DNS e de catálogo global para alta disponibilidade em ambientes distribuídos, e é por isso que o assistente habilita essas opções, por padrão. Para saber mais sobre a implantação de RODCs, consulte o [Guia de Implantação e Planejamento do Controlador de Domínio Somente Leitura](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)).
 
@@ -149,15 +150,15 @@ Quando o servidor DNS é instalado, a delegação registra esse ponto no servido
 
 -   Um registro de recurso de host (A ou AAAA) também conhecido como registro de União deve estar presente para resolver o nome do servidor especificado no registro de recurso do servidor de nomes (NS) para seu endereço IP. O processo de resolver o nome do host nesse registro de recurso para o servidor DNS delegado no registro de recurso do servidor de nomes, às vezes, é chamado de "caça a registros cola".
 
-O Assistente de Configuração dos Serviços de Domínio Active Directory pode criá-los automaticamente. O assistente verifica se os registros adequados existem na zona DNS pai depois que você clica em **Avançar** na página **Opções do Controlador de Domínio**. Se o assistente não puder verificar a existência dos registros no domínio pai, o assistente dará a você a opção de criar automaticamente uma nova delegação DNS para um novo domínio (ou atualizar a delegação existente) e continuar com a instalação do novo controlador de domínio.
+O Assistente de Configuração dos Serviços de Domínio Active Directory pode criá-los automaticamente. O assistente verifica se os registros adequados existem na zona DNS pai depois que você clica em **Avançar** na página **Opções do Controlador de Domínio** . Se o assistente não puder verificar a existência dos registros no domínio pai, o assistente dará a você a opção de criar automaticamente uma nova delegação DNS para um novo domínio (ou atualizar a delegação existente) e continuar com a instalação do novo controlador de domínio.
 
-Outra alternativa é criar esses registros de delegação DNS antes de instalar o servidor DNS. Para criar uma delegação de zona, abra o **Gerenciador DNS**, clique com o botão direito do mouse no domínio pai e depois clique em **Nova Delegação**. Siga as etapas do Assistente de Nova Delegação para criar a delegação.
+Outra alternativa é criar esses registros de delegação DNS antes de instalar o servidor DNS. Para criar uma delegação de zona, abra o **Gerenciador DNS** , clique com o botão direito do mouse no domínio pai e depois clique em **Nova Delegação** . Siga as etapas do Assistente de Nova Delegação para criar a delegação.
 
 O processo de instalação tenta criar a delegação para assegurar que os computadores de outros domínios possam resolver consultas DNS para hosts, incluindo controladores de domínio e computadores membro, no subdomínio DNS. Observe que os registros de delegação podem ser criados automaticamente somente em servidores DNS da Microsoft. Se a zona pai de domínio DNS residir em servidores DNS de terceiros (por exemplo, BIND), um aviso informando que não foi possível criar registros de delegação DNS aparecerá na página Comprovação de requisitos anteriores. Para saber mais sobre esse aviso, consulte [Problemas conhecidos relacionados à instalação de AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
 
 Delegações entre o domínio pai e o subdomínio que está sendo promovido podem ser criadas e validadas antes ou depois da instalação. Não há motivo para atrasar a instalação de um novo controlador de domínio porque você não pode criar ou atualizar a delegação DNS.
 
-Para obter mais informações sobre delegação, consulte [noções básicas](https://go.microsoft.com/fwlink/?LinkId=164773) sobre a delegação de zona ( https://go.microsoft.com/fwlink/?LinkId=164773) . Se a delegação de zona não for possível na sua situação, talvez você possa considerar outros métodos para fornecer resolução de nome de outros domínios para os hosts do seu domínio. Por exemplo, o administrador DNS de outro domínio poderia configurar o encaminhamento condicional, zonas de stub ou zonas secundárias para resolver nomes no seu domínio. Para obter mais informações, consulte estes tópicos:
+Para obter mais informações sobre delegação, consulte [noções básicas](https://go.microsoft.com/fwlink/?LinkId=164773) sobre a delegação de zona ( https://go.microsoft.com/fwlink/?LinkId=164773) . Se a delegação de zona não for possível na sua situação, talvez você possa considerar outros métodos para fornecer resolução de nome de outros domínios para os hosts do seu domínio. Por exemplo, o administrador DNS de outro domínio poderia configurar o encaminhamento condicional, zonas de stub ou zonas secundárias para resolver nomes no seu domínio. Para mais informações, consulte os seguintes tópicos:
 
 -   [Noções básicas sobre tipos de zona](https://go.microsoft.com/fwlink/?LinkID=157399) (https://go.microsoft.com/fwlink/?LinkID=157399)
 
@@ -178,7 +179,7 @@ As opções a seguir são exibidas quando um RODC (controlador de domínio somen
 
     Todos os usuários ou computadores que não estiverem autorizados (inclusive os implícitos) ou que foram recusados não armazenarão suas senhas no cache. Se esses usuários ou computadores não tiverem acesso ao controlador de domínio gravável, eles não poderão acessar recursos ou funcionalidade fornecidos pelo AD DS. Para saber mais sobre a PRP, consulte  [Política de Replicação de Senha](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730883(v=ws.10)). Para saber mais sobre o gerenciamento da PRP, consulte [Administrando a Política de Replicação de Senha](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754646(v=ws.10)).
 
-Para obter mais informações sobre a instalação de RODCs, consulte [instalar um controlador de domínio somente leitura do Windows Server 2012 Active Directory &#40;RODC&#41; &#40;nível 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
+Para obter mais informações sobre a instalação de RODCs, consulte [instalar um Windows Server 2012 Active Directory Read-Only controlador de domínio &#40;RODC&#41; &#40;nível 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
 
 ## <a name="additional-options"></a><a name="BKMK_AdditionalOptionsPage"></a>Opções adicionais
 A opção a seguir aparecerá na página **Opções Adicionais** se você criar um novo domínio:
@@ -195,8 +196,8 @@ As opções a seguir aparecerão na página **Opções Adicionais** se você ins
 
 Para obter mais informações sobre como criar um domínio, consulte [instalar um novo Windows Server 2012 Active Directory domínio filho ou de árvore &#40;nível 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md). Para obter mais informações sobre como adicionar um controlador de domínio a um domínio existente, consulte [instalar um controlador de domínio de réplica do Windows Server 2012 em um domínio existente &#40;nível 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
-## <a name="paths"></a><a name="BKMK_Paths"></a>Estruturas
-As opções a seguir aparecem na página **Rotas**.
+## <a name="paths"></a><a name="BKMK_Paths"></a>Caminhos
+As opções a seguir aparecem na página **Rotas** .
 
 ![AD DS instalar](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_Paths.gif)
 
@@ -249,7 +250,7 @@ Se não for possível reiniciar o servidor de destino, reinicie-o manualmente. F
 ## <a name="role-removal-credentials"></a><a name="BKMK_RemovalCredsPage"></a>Credenciais de Remoção de Função
 ![AD DS instalar](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_Credentials.gif)
 
-Você pode configurar opções de rebaixamento na página **Credenciais**. Forneça as credenciais necessárias à execução do rebaixamento na lista a seguir:
+Você pode configurar opções de rebaixamento na página **Credenciais** . Forneça as credenciais necessárias à execução do rebaixamento na lista a seguir:
 
 -   O rebaixamento de um controlador de domínio adicional exige credenciais de Admin. do Domínio. A seleção **da remoção forçada do controlador de domínio** rebaixa o controlador de domínio sem remover os metadados do objeto do controlador de domínio do Active Directory.
 

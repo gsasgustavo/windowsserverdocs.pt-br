@@ -2,16 +2,16 @@
 title: Instalar o Active Directory Domain Services em uma máquina virtual do Azure
 description: Como criar uma nova floresta Active Directory em uma VM (máquina virtual) em uma máquina virtual do Azure.
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
-ms.openlocfilehash: e95aea80bea16322f66a14c12b0a1388897c1b11
-ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
+ms.openlocfilehash: fef394aaef059ec83303c903ca5e548f002775c0
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793583"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069068"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Instalar uma nova floresta do Active Directory usando a CLI do Azure
 
@@ -51,7 +51,7 @@ O script abaixo pode ser executado diretamente do portal do Azure. Se você opta
 | AdminUsername | Nome de usuário a ser configurado em cada VM como o administrador local. |
 | AdminPassword | Senha de texto não criptografado a ser configurada em cada VM como a senha de administrador local. |
 | ResourceGroupName | Nome a ser usado para o grupo de recursos. Não deve duplicar um nome existente. |
-| Location | Nome do local do Azure no qual você deseja implantar. Listar regiões com suporte para a assinatura atual usando `az account list-locations` . |
+| Localização | Nome do local do Azure no qual você deseja implantar. Listar regiões com suporte para a assinatura atual usando `az account list-locations` . |
 | VNetName | O nome para atribuir a rede virtual do Azure não deve duplicar um nome existente. |
 | VNetAddress | Escopo de IP a ser usado para a rede do Azure. Não deve duplicar um intervalo existente. |
 | SubnetName | Nome para atribuir a sub-rede IP. Não deve duplicar um nome existente. |

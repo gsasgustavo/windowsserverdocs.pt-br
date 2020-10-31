@@ -2,16 +2,16 @@
 ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Alternativas ao comprometimento
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 31d936647be758c3f9cf2cd6d922f00ec5554e98
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 58578d96f3a66177f858f78861cb93be51df3a1e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938206"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069678"
 ---
 # <a name="avenues-to-compromise"></a>Alternativas ao comprometimento
 
@@ -122,7 +122,7 @@ Se a conta de administrador local for nomeada com o mesmo valor entre os servido
 Desde que outro computador tenha uma conta local com o mesmo nome de usuário e senha (ou hash de senha) que as credenciais de conta que estão sendo apresentadas, a tentativa de logon será realizada com sucesso e o invasor obterá acesso privilegiado ao computador definido como destino. Nas versões atuais do Windows, a conta interna de administrador é [desabilitada por padrão](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753450(v=ws.11)), mas em sistemas operacionais herdados, a conta é habilitada por padrão.
 
 > [!NOTE]
-> Algumas organizações configuraram intencionalmente contas de administrador local para serem habilitadas na crença de que isso fornece uma "FailSafe" caso todas as outras contas privilegiadas estejam bloqueadas em um sistema. No entanto, mesmo que a conta de administrador local esteja desabilitada e não haja nenhuma outra conta disponível que possa habilitar a conta ou fazer logon no sistema com privilégios de administrador, o sistema poderá ser inicializado no modo de segurança e a conta de administrador local interna poderá ser reabilitada, conforme descrito em [suporte da Microsoft artigo 814777](https://support.microsoft.com/kb/814777). Além disso, se o sistema ainda aplicar GPOs com êxito, um GPO poderá ser modificado para (temporariamente) reabilitar a conta de administrador ou os grupos restritos poderão ser configurados para adicionar uma conta baseada em domínio ao grupo local de administradores. Os reparos podem ser executados e a conta de administrador pode ser novamente desabilitada. Para evitar efetivamente um comprometimento lateral que usa credenciais internas de conta de administrador local, nomes de usuário e senhas exclusivos devem ser configurados para contas de administrador local. Para implantar senhas exclusivas para contas de administrador local por meio de um GPO, consulte [solução para o gerenciamento de senha da conta de administrador interno por meio de GPO](/previous-versions/mt227395(v=msdn.10)) no TechNet.  
+> Algumas organizações configuraram intencionalmente contas de administrador local para serem habilitadas na crença de que isso fornece uma "FailSafe" caso todas as outras contas privilegiadas estejam bloqueadas em um sistema. No entanto, mesmo que a conta de administrador local esteja desabilitada e não haja nenhuma outra conta disponível que possa habilitar a conta ou fazer logon no sistema com privilégios de administrador, o sistema poderá ser inicializado no modo de segurança e a conta de administrador local interna poderá ser reabilitada, conforme descrito em [suporte da Microsoft artigo 814777](https://support.microsoft.com/kb/814777). Além disso, se o sistema ainda aplicar GPOs com êxito, um GPO poderá ser modificado para (temporariamente) reabilitar a conta de administrador ou os grupos restritos poderão ser configurados para adicionar uma conta baseada em domínio ao grupo local de administradores. Os reparos podem ser executados e a conta de administrador pode ser novamente desabilitada. Para evitar efetivamente um comprometimento lateral que usa credenciais internas de conta de administrador local, nomes de usuário e senhas exclusivos devem ser configurados para contas de administrador local. Para implantar senhas exclusivas para contas de administrador local por meio de um GPO, consulte [solução para o gerenciamento de senha da conta de administrador interno por meio de GPO](/previous-versions/mt227395(v=msdn.10)) no TechNet.  
 
 ##### <a name="permitting-installation-of-unauthorized-applications"></a>Permitindo a instalação de aplicativos não autorizados
 *Número da lei: se uma pessoa mal-intencionada puder persuadir você a executar seu programa em seu computador, ele não será mais o seu computador.* - [Dez leis imutáveis de segurança (versão 2,0)](https://www.microsoft.com/en-us/msrc?rtc=1)

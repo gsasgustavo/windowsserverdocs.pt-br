@@ -2,16 +2,16 @@
 ms.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Arquitetura do controlador de domínio virtualizado
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 04d50961aeb6190c15ba4c772afd8767d9d24f9b
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b644103342e94a171699efeab238453bdb583eec
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939006"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067798"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>Arquitetura do controlador de domínio virtualizado
 
@@ -109,7 +109,7 @@ As seguintes etapas explicam o processo em mais detalhes:
 
 15. O convidado força a sincronização de tempo NT5DS (Windows NTP) com outro controlador de domínio (em uma hierarquia padrão do Serviço de Horário do Windows, isso significa usar o PDCE). O convidado contata o PDCE. Todos os tíquetes Kerberos existentes são liberados.
 
-16. O convidado configura os serviços DFSR ou NTFRS para que sejam executados automaticamente. O convidado exclui todos os arquivos de banco de dados DFSR e NTFRS existentes (padrão: c:\windows\ntfrs e c:\System Volume Information\DFSR \\ *<database_GUID>*), a fim de forçar a sincronização não autoritativa do SYSVOL quando o serviço é iniciado pela próxima vez. O convidado não exclui o conteúdo de arquivo de SYSVOL para propagar previamente o SYSVOL quando a sincronização for iniciada depois.
+16. O convidado configura os serviços DFSR ou NTFRS para que sejam executados automaticamente. O convidado exclui todos os arquivos de banco de dados DFSR e NTFRS existentes (padrão: c:\windows\ntfrs e c:\System Volume Information\DFSR \\ *<database_GUID>* ), a fim de forçar a sincronização não autoritativa do SYSVOL quando o serviço é iniciado pela próxima vez. O convidado não exclui o conteúdo de arquivo de SYSVOL para propagar previamente o SYSVOL quando a sincronização for iniciada depois.
 
 17. O convidado é renomeado. O serviço Servidor de Função de SD no convidado inicia a configuração do AD DS (promoção) usando o arquivo de banco de dados NTDS.DIT existente como uma origem, em vez do banco de dados modelo incluído em c:\windows\system32, como uma promoção normalmente faz.
 
@@ -177,9 +177,9 @@ O diagrama a seguir mostra como as garantias de virtualização impedem a diverg
 > [!NOTE]
 > A ilustração anterior foi simplificada para explicar os conceitos.
 
-1.  No horário T1, o administrador do hipervisor faz um instantâneo do DC1 virtual. Nesse horário, o DC1 tem um valor de USN (**highestCommittedUsn**, na prática) definido como 100 e valor de InvocationId (representado como ID no diagrama anterior) definido como A (na prática, isso deveria ser GUID). O valor de savedVMGID é o VM-GenerationID no arquivo DIT do DC (armazenado no objeto de computador do DC, em um atributo denominado **msDS-GenerationId**). O VMGID é o valor atual da VM-GenerationId disponível no driver da máquina virtual. Esse valor é fornecido pelo hipervisor.
+1.  No horário T1, o administrador do hipervisor faz um instantâneo do DC1 virtual. Nesse horário, o DC1 tem um valor de USN ( **highestCommittedUsn** , na prática) definido como 100 e valor de InvocationId (representado como ID no diagrama anterior) definido como A (na prática, isso deveria ser GUID). O valor de savedVMGID é o VM-GenerationID no arquivo DIT do DC (armazenado no objeto de computador do DC, em um atributo denominado **msDS-GenerationId** ). O VMGID é o valor atual da VM-GenerationId disponível no driver da máquina virtual. Esse valor é fornecido pelo hipervisor.
 
-2.  No horário T2, 100 usuários são adicionados a esse DC (considere usuários como um exemplo de atualizações que poderiam ter sido realizadas nesse DC entre T1 e T2; essas atualizações poderim, na verdade, ser uma combinação de criações de usuários, criações de grupos, atualizações de senhas, atualizações de atributos e assim por diante). Neste exemplo, cada atualização consome um USN exclusivo (embora, na prática, uma criação de usuário possa consumir mais que um USN). Antes de confirmar essas atualizações, o DC1 verifica se o valor de VM-GenerationID em seu banco de dados (savedVMGID) é o mesmo que o valor atual disponível no driver (VMGID). Eles são os mesmos, já que nenhuma reversão ocorreu ainda. Portanto, as atualizações são confirmadas e o USN muda para 200, indicando que a próxima atualização pode usar o USN 201. Não há alteração em InvocationId, savedVMGID nem VMGID. Essas atualizações são replicadas no DC2 no próximo ciclo de replicação. DC2 atualiza a marca d' água alta de ti (e **UptoDatenessVector**) representada aqui simplesmente como DC1 (A) @USN = 200. Ou seja, o DC2 reconhece todas as atualizações do DC1 no contexto do InvocationId A por meio do USN 200.
+2.  No horário T2, 100 usuários são adicionados a esse DC (considere usuários como um exemplo de atualizações que poderiam ter sido realizadas nesse DC entre T1 e T2; essas atualizações poderim, na verdade, ser uma combinação de criações de usuários, criações de grupos, atualizações de senhas, atualizações de atributos e assim por diante). Neste exemplo, cada atualização consome um USN exclusivo (embora, na prática, uma criação de usuário possa consumir mais que um USN). Antes de confirmar essas atualizações, o DC1 verifica se o valor de VM-GenerationID em seu banco de dados (savedVMGID) é o mesmo que o valor atual disponível no driver (VMGID). Eles são os mesmos, já que nenhuma reversão ocorreu ainda. Portanto, as atualizações são confirmadas e o USN muda para 200, indicando que a próxima atualização pode usar o USN 201. Não há alteração em InvocationId, savedVMGID nem VMGID. Essas atualizações são replicadas no DC2 no próximo ciclo de replicação. DC2 atualiza a marca d' água alta de ti (e **UptoDatenessVector** ) representada aqui simplesmente como DC1 (A) @USN = 200. Ou seja, o DC2 reconhece todas as atualizações do DC1 no contexto do InvocationId A por meio do USN 200.
 
 3.  No horário T3, o instantâneo feito no horário T1 é aplicado ao DC1. O DC1 sofreu reversão. Assim, seu USN é revertido para 100, indicando que ele poderia usar USNs a partir de 101 para se associar às atualizações subsequentes. No entanto, nesse ponto, o valor de VMGID seria diferente nos hipervisores que dão suporte a VM-GenerationID.
 

@@ -2,16 +2,16 @@
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Rebaixando controladores de domínio e domínios (nível 200)
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 11/14/2018
 ms.topic: article
-ms.openlocfilehash: 5a450d37c3dcd5f92e6685c1a7f0393d764b8e55
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 4e6bc1bd6b2a2db9267ad76da13c5ff26efed506
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940956"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068328"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>Rebaixando controladores de domínio e domínios
 
@@ -32,8 +32,8 @@ Este tópico explica como remover o AD DS usando o Gerenciador do Servidor ou o 
 
 | Cmdlets do ADDSDeployment e ServerManager | Argumentos (os argumentos em **Negrito** são necessários. Os argumentos em *Itálico* podem ser especificados usando o Windows PowerShell ou o Assistente de Configuração do AD DS.) |
 |--|--|
-| Uninstall-ADDSDomainController | -SkipPreChecks<p>*-LocalAdministratorPassword*<p>-Confirm<p>***-Credential***<p>-DemoteOperationMasterRole<p>*-DNSDelegationRemovalCredential*<p>-Force<p>*-ForceRemoval*<p>*-IgnoreLastDCInDomainMismatch*<p>*-IgnoreLastDNSServerForZone*<p>*-LastDomainControllerInDomain*<p>-Norebootoncompletion<p>*-RemoveApplicationPartitions*<p>*-RemoveDNSDelegation*<p>-RetainDCMetadata |
-| Uninstall-WindowsFeature/Remove-WindowsFeature | ***-Nome***<p>***-IncludeManagementTools***<p>*-Reiniciar*<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd |
+| Uninstall-ADDSDomainController | -SkipPreChecks<p>*-LocalAdministratorPassword*<p>-Confirm<p>***-Credential**_<p> -DemoteOperationMasterRole <p>_ -DNSDelegationRemovalCredential *<p> -Force <p>* -ForceRemoval *<p>* -IgnoreLastDCInDomainMismatch *<p>* -IgnoreLastDNSServerForZone *<p>* -LastDomainControllerInDomain *<p> -Norebootoncompletion <p>* -RemoveApplicationPartitions *<p>* -RemoveDNSDelegation *<p>-RetainDCMetadata |
+| Uninstall-WindowsFeature/Remove-WindowsFeature | ***-Nome** _<p>_ *_-IncludeManagementTools_* _<p>_ Reiniciar<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd |
 
 > [!NOTE]
 > O argumento **-credential** somente é necessário se você ainda não tiver entrado como membro do grupo Administradores de Empresa (rebaixando o último DC em um domínio) ou o grupo Admins. do Domínio (rebaixando um DC de réplica). O argumento **-includemanagementtools** é necessário somente se você também desejar remover todos os utilitários de gerenciamento do AD DS.
@@ -48,7 +48,7 @@ O Gerenciador do Servidor oferece duas interfaces para remover a função do Ser
 
    ![Gerenciador do Servidor-remover funções e recursos](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Manage.png)
 
-* Clique em **AD DS** ou **Todos os servidores** no painel de navegação. Arraste para baixo até a seção **Função e recursos**. Clique com o botão direito do mouse em **Serviços de Domínio Active Directory** na lista **Funções e recursos** e clique em **Remover funções e recursos**. Esta interface ignora a página **Seleção do servidor**.
+* Clique em **AD DS** ou **Todos os servidores** no painel de navegação. Arraste para baixo até a seção **Função e recursos** . Clique com o botão direito do mouse em **Serviços de Domínio Active Directory** na lista **Funções e recursos** e clique em **Remover funções e recursos** . Esta interface ignora a página **Seleção do servidor** .
 
    ![Gerenciador do Servidor-todos os servidores – remover funções e recursos](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)
 
@@ -93,7 +93,7 @@ Uninstall-windowsfeature
 
 ![Assistente de configuração de Active Directory Domain Services-seleção de credenciais](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Credentials.png)
 
-Você pode configurar opções de rebaixamento na página **Credenciais**. Forneça as credenciais necessárias à execução do rebaixamento na lista a seguir:
+Você pode configurar opções de rebaixamento na página **Credenciais** . Forneça as credenciais necessárias à execução do rebaixamento na lista a seguir:
 
 * O rebaixamento de um controlador de domínio adicional exige credenciais de Admin. do Domínio. Selecionar **forçar a remoção deste controlador de domínio** rebaixa o controlador de domínio sem remover os metadados do objeto do controlador de domínio do Active Directory.
 
@@ -118,7 +118,7 @@ Os argumentos equivalentes de ADDSDeployment do Windows PowerShell são:
 
 ![Assistente de configuração de Active Directory Domain Services-impacto das funções FSMO de credenciais](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Warnings.png)
 
-A página **Avisos** alerta sobre as possíveis consequências de remover este controlador de domínio. Para continuar, selecione **Prosseguir com a remoção**.
+A página **Avisos** alerta sobre as possíveis consequências de remover este controlador de domínio. Para continuar, selecione **Prosseguir com a remoção** .
 
 > [!WARNING]
 > Se **Forçar a remoção deste controlador de domínio** na página **Credenciais** tiver sido marcado anteriormente, a página **Avisos** mostrará as funções de Operações de mestre único flexível hospedadas por este controlador de domínio. Você *deverá* executar as funções de outro controlador de domínio *imediatamente* após rebaixar este servidor. Para obter mais informações sobre como executar funções FSMO, consulte [Capturar a função de mestre de operações](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816779(v=ws.10)).
@@ -129,7 +129,7 @@ Esta página não possui um argumento equivalente para o ADDSDeployment no Windo
 
 ![Assistente de configuração do Active Directory Domain Services-credenciais remover partições de DNS e de aplicativo](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ReviewOptions.png)
 
-A página **Opções de remoção** será exibida se o **Último controlador de domínio no domínio** tiver sido selecionado na página **Credenciais**. Esta página permite configurar as opções adicionais de remoção. Selecione **ignorar o último servidor DNS para a zona**, **remover partições de aplicativo**e **remover delegação de DNS** para habilitar o botão **Avançar** .
+A página **Opções de remoção** será exibida se o **Último controlador de domínio no domínio** tiver sido selecionado na página **Credenciais** . Esta página permite configurar as opções adicionais de remoção. Selecione **ignorar o último servidor DNS para a zona** , **remover partições de aplicativo** e **remover delegação de DNS** para habilitar o botão **Avançar** .
 
 As opções somente aparecerão se forem aplicáveis a este controlador de domínio. Por exemplo, se não houver delegação de DNS para este servidor, a caixa de seleção em questão não será exibida.
 
@@ -166,7 +166,7 @@ Por exemplo, você pode solicitar manualmente uma senha usando o cmdlet **Read-H
 > [!WARNING]
 > Como as duas opções anteriores não confirmam a senha, tenha muito cuidado: a senha não está visível.
 
-Você também pode fornecer uma cadeia de caracteres segura como uma variável de texto não criptografado convertida, embora seja altamente recomendável não fazer isso. Por exemplo:
+Você também pode fornecer uma cadeia de caracteres segura como uma variável de texto não criptografado convertida, embora seja altamente recomendável não fazer isso. Por exemplo: 
 
 ```
 -localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
@@ -189,11 +189,11 @@ Uninstall-ADDSDomainController
 
 Use o argumento opcional **Whatif** com o **Uninstall-ADDSDomainController** e o cmdlet para examinar as informações da configuração. Isso permite que você veja os valores explícitos e implícitos de argumento de um cmdlet.
 
-Por exemplo:
+Por exemplo: 
 
-![Desinstalação do PowerShell-exemplo de ADDSDomainController](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
+![Exemplo de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 
-o prompt para reiniciar é sua última oportunidade de cancelar esta operação ao usar o ADDSDeployment no Windows PowerShell. Para substituir este prompt, use os argumentos **-force** ou **confirm:$false**.
+o prompt para reiniciar é sua última oportunidade de cancelar esta operação ao usar o ADDSDeployment no Windows PowerShell. Para substituir este prompt, use os argumentos **-force** ou **confirm:$false** .
 
 ### <a name="demotion"></a>Rebaixamento
 
@@ -206,24 +206,24 @@ Quando a página **Rebaixamento** é exibida, a configuração do controlador de
 
 Como o **Uninstall-ADDSDomainController** e o **Uninstall-WindowsFeature** têm apenas uma ação cada, eles são mostrados aqui na fase de confirmação com os argumentos mínimos necessários. Pressionar ENTER inicia o processo irrevogável de rebaixamento e reinicia o computador.
 
-![Desinstalação do PowerShell-exemplo de ADDSDomainController](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
+![Exemplo de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 
-![Desinstalação do PowerShell-exemplo de WindowsFeature](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
+![Exemplo de Uninstall-WindowsFeature do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
 
-Para aceitar o prompt de reinicialização automática, use os argumentos **-force** ou **-confirm:$false** com qualquer cmdlet ADDSDeployment do Windows PowerShell. Para evitar que o servidor reinicie automaticamente no final da promoção, use o argumento **-norebootoncompletion:$false**.
+Para aceitar o prompt de reinicialização automática, use os argumentos **-force** ou **-confirm:$false** com qualquer cmdlet ADDSDeployment do Windows PowerShell. Para evitar que o servidor reinicie automaticamente no final da promoção, use o argumento **-norebootoncompletion:$false** .
 
 > [!WARNING]
 > Não é recomendável substituir a reinicialização. O servidor membro deve ser reiniciado para funcionar corretamente.
 
-![Desinstalação do PowerShell-exemplo de força ADDSDomainController](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallFinished.png)
+![Exemplo de força de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallFinished.png)
 
-Aqui está um exemplo de rebaixamento forçado com o mínimo necessário de argumentos **-forceremoval** e **-demoteoperationmasterrole**. O argumento **-credential** não é necessário porque o usuário fez logon como membro do grupo Administradores Corporativos:
+Aqui está um exemplo de rebaixamento forçado com o mínimo necessário de argumentos **-forceremoval** e **-demoteoperationmasterrole** . O argumento **-credential** não é necessário porque o usuário fez logon como membro do grupo Administradores Corporativos:
 
-![Desinstalação do PowerShell-exemplo de ADDSDomainController](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
+![Exemplo de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
 
-Aqui está um exemplo de remoção do último controlador de domínio, no domínio, usando o mínimo necessário de argumentos **-lastdomaincontrollerindomain** e **-removeapplicationpartitions**:
+Aqui está um exemplo de remoção do último controlador de domínio, no domínio, usando o mínimo necessário de argumentos **-lastdomaincontrollerindomain** e **-removeapplicationpartitions** :
 
-![Desinstalação do PowerShell – exemplo de ADDSDomainController-LastDomainControllerInDomain](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleLastDC.png)
+![Uninstall-ADDSDomainController do PowerShell – exemplo de LastDomainControllerInDomain](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleLastDC.png)
 
 Se você tentar remover a função de AD DS antes de rebaixar o servidor, o Windows PowerShell o bloqueará com um erro:
 

@@ -2,16 +2,16 @@
 ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: Manter um ambiente mais seguro
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7cde4344a28888c997cfb751b2943429fbc4e686
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 14cbe8a6610a370e20e338f3a09ab24f21334169
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941406"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069578"
 ---
 # <a name="maintaining-a-more-secure-environment"></a>Manter um ambiente mais seguro
 
@@ -23,7 +23,7 @@ Quando você tiver criado um ambiente gerenciável e seguro para seus ativos de 
 
 Em alguns casos, sua organização de ti pode já ter uma relação de trabalho próxima com unidades de negócios, o que facilitará a implementação dessas recomendações. Em organizações nas quais as unidades de ti e de negócios não estão fortemente ligadas, talvez seja necessário primeiro obter o patrocínio executivo para os esforços de forjar uma relação mais próxima entre ti e unidades de negócios. O [Resumo executivo](../../../ad-ds/manage/component-updates/Executive-Summary.md) destina-se a ser útil como um documento autônomo para análise executiva e pode ser disseminado para os tomadores de decisões em sua organização.
 
-## <a name="creating-business-centric-security-practices-for-active-directory"></a>Criando práticas de segurança centradas nos negócios para Active Directory
+## <a name="creating-business-centric-security-practices-for-active-directory"></a>Criando Business-Centric práticas de segurança para Active Directory
 No passado, a tecnologia da informação em muitas organizações foi vista como uma estrutura de suporte e um centro de custo. Os departamentos de ti costumavam ser amplamente separados dos usuários empresariais e as interações limitadas a um modelo de solicitação-resposta no qual os negócios solicitaram recursos e responderam.
 
 À medida que a tecnologia evoluiu e proliferau, a visão de "um computador em cada área de trabalho" foi efetivamente passada para a maioria do mundo e, até mesmo, foi acompanhada pela ampla variedade de tecnologias facilmente acessíveis disponíveis atualmente. A tecnologia da informação não é mais uma função de suporte, é uma função comercial fundamental. Se a sua organização não pôde continuar a funcionar se todos os serviços de ti estivessem indisponíveis, o negócio da sua organização é, pelo menos, em parte, tecnologia da informação.
@@ -39,7 +39,7 @@ Os dados no Active Directory devem ter um proprietário de negócios identificad
 
 Se você usar Active Directory para registrar a propriedade dos dados no diretório, ou se você implementar um banco de dado separado para acompanhar ativos de ti, nenhuma conta de usuário deverá ser criada, nenhum servidor ou estação de trabalho deverá ser instalado e nenhum aplicativo deverá ser implantado sem um proprietário designado do registro. A tentativa de estabelecer a propriedade dos sistemas depois que eles foram implantados na produção pode ser desafiadora na melhor das hipóteses e não é possível em alguns casos. Portanto, a propriedade deve ser estabelecida no momento em que os dados são introduzidos em Active Directory.
 
-### <a name="implement-business-driven-lifecycle-management"></a>Implementar o gerenciamento do ciclo de vida orientado aos negócios
+### <a name="implement-business-driven-lifecycle-management"></a>Implementar Business-Driven o gerenciamento do ciclo de vida
 O gerenciamento do ciclo de vida deve ser implementado para todos os dados no Active Directory. Por exemplo, quando um novo aplicativo é introduzido em um domínio Active Directory, o proprietário de negócios do aplicativo deve, em intervalos regulares, ser atestado para o uso contínuo do aplicativo. Quando uma nova versão de um aplicativo é liberada, o proprietário da empresa do aplicativo deve ser informado e deve decidir se e quando a nova versão será implementada.
 
 Se um proprietário de negócios optar por não aprovar a implantação de uma nova versão de um aplicativo, o proprietário da empresa também deverá ser notificado sobre a data em que a versão atual não terá mais suporte e deverá ser responsável por determinar se o aplicativo será encerrado ou substituído. Manter aplicativos herdados em execução e sem suporte não deve ser uma opção.

@@ -2,16 +2,16 @@
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Localizar recursos adicionais para design de estrutura lógica
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 25fdb357ae4be103a6c543a6969f72f1a5df91e1
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: c2b445661fb10e03a3d764611a1a3e213613b69e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939136"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068559"
 ---
 # <a name="finding-additional-resources-for-logical-structure-design"></a>Localizar recursos adicionais para design de estrutura lógica
 
@@ -53,8 +53,8 @@ Você pode encontrar recursos adicionais para o design de estrutura lógica na s
 
 - Para obter mais informações sobre a infraestrutura de Política de Grupo, consulte [projetando uma infraestrutura de política de grupo](/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10)).
 
-- Para obter mais informações sobre controladores de domínio somente leitura (RODCs), consulte [AD DS: controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
+- Para obter mais informações sobre controladores de domínio somente leitura (RODCs), consulte [AD DS: Read-Only controladores de domínio](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
 
-- Para obter mais informações sobre políticas refinadas de bloqueio de senha e de conta, consulte o [guia passo a passo AD DS política de bloqueio de conta e senha](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770842(v=ws.10))refinada.
+- Para obter mais informações sobre políticas de bloqueio de conta e senha refinadas, consulte o [guia passo a passo AD DS Fine-Grained senha e política de bloqueio de conta](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770842(v=ws.10)).
 
 - Para obter mais informações sobre convenções de nomenclatura no AD DS, consulte o artigo 909264 na base de dados de conhecimento Microsoft, [convenções de nomenclatura no Active Directory para computadores, domínios, sites e UOs](https://support.microsoft.com/help/909264/).

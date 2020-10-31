@@ -1,17 +1,17 @@
 ---
 ms.assetid: bd64a766-5362-4f29-b963-5465c2bb79e7
 title: Planejando posicionamento da função de mestre das operações
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: e1117677b9d1e898a3c93850c69230e6912c20c3
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 158209ca281fdd3839747e936d1f439951cc644f
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938616"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069148"
 ---
 # <a name="planning-operations-master-role-placement"></a>Planejando posicionamento da função de mestre das operações
 
@@ -20,7 +20,7 @@ ms.locfileid: "88938616"
 Active Directory Domain Services (AD DS) dá suporte à replicação multimestre de dados de diretório, o que significa que qualquer controlador de domínio pode aceitar alterações de diretório e replicar as alterações para todos os outros controladores de domínio. No entanto, determinadas alterações, como modificações de esquema, são impraticável de serem executadas em uma maneira de vários mestres. Por esse motivo, determinados controladores de domínio, conhecidos como mestres de operações, mantêm as funções responsáveis por aceitar solicitações para determinadas alterações específicas.
 
 > [!NOTE]
-> Os detentores de função do mestre de operações devem ser capazes de gravar algumas informações no banco de dados Active Directory. Devido à natureza somente leitura do banco de dados de Active Directory em um RODC (controlador de domínio somente leitura), **os RODCs não podem atuar como detentores de função de mestre de operações**.
+> Os detentores de função do mestre de operações devem ser capazes de gravar algumas informações no banco de dados Active Directory. Devido à natureza somente leitura do banco de dados de Active Directory em um RODC (controlador de domínio somente leitura), **os RODCs não podem atuar como detentores de função de mestre de operações** .
 
 Três funções de mestre de operações (também conhecidas como operações de mestre único flexíveis ou FSMO) existem em cada domínio:
 

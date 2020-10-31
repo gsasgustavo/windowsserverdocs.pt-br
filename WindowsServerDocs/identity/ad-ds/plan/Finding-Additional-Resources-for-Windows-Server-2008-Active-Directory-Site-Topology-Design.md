@@ -2,16 +2,16 @@
 ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Localizar recursos adicionais de design de topologia de site do Active Directory do Windows Server 2008
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f4e444eec232bb6dabfd4acfdce9f4cc7e007bf8
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b5edda407ce85ec8024f6cc1c9a6e9ec463e7618
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939096"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068558"
 ---
 # <a name="finding-additional-resources-for-windows-server-2008-active-directory-site-topology-design"></a>Localizar recursos adicionais de design de topologia de site do Active Directory do Windows Server 2008
 
@@ -25,7 +25,7 @@ Você pode encontrar a seguinte documentação sobre Active Directory Domain Ser
 
 - Para obter mais informações sobre árvores de abrangência e topologia de replicação de Active Directory, consulte [Active Directory referência técnica da topologia de replicação](/previous-versions/windows/it-pro/windows-server-2003/cc755326(v=ws.10)).
 
-- Para obter mais informações sobre como usar Adlb.exe e gerenciar ambientes que têm 100 ou mais sites de filiais, consulte [examinar melhorias de balanceamento de carga do servidor bridgehead com RODCs do Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd735927(v%3dws.10)).
+- Para obter mais informações sobre como usar Adlb.exe e gerenciar ambientes que têm 100 ou mais sites de filiais, consulte [examinar o servidor Bridgehead Load-Balancing aprimoramentos com os RODCs do Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd735927(v%3dws.10)).
 
 - Para obter informações sobre como instalar Monitor de Rede, consulte [monitorando o tráfego de rede](/previous-versions/windows/it-pro/windows-server-2003/cc783075(v=ws.10)).
 
@@ -49,6 +49,6 @@ Você pode encontrar a seguinte documentação sobre Active Directory Domain Ser
 
 - Para obter informações sobre como gerenciar a replicação por meio de firewalls, consulte [Active Directory em redes segmentadas por firewalls](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e).
 
-- Para obter mais informações sobre os recursos do RODC (controlador de domínio somente leitura), consulte [AD DS: controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
+- Para obter mais informações sobre os recursos do RODC (controlador de domínio somente leitura), consulte [AD DS: Read-Only controladores de domínio](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
 
 - Para obter informações sobre como implantar um RODC, consulte o [guia passo a passo dos controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10)).

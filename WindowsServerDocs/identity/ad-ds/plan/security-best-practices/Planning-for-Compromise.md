@@ -2,16 +2,16 @@
 ms.assetid: 6f50476c-a1f1-48fb-999b-76c4c3816496
 title: Planejar para comprometimento
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9be3768f4ac0f95c1c268d9a4efb55af3f74d304
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b4cdd6d9383a27b97d3368903fed4b41fe5b5952
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941396"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069568"
 ---
 # <a name="planning-for-compromise"></a>Planejar para comprometimento
 
@@ -92,7 +92,7 @@ Independentemente de sua floresta original contiver alguns usuários e sistemas 
 
 5.  Não permita a instalação de sistemas operacionais herdados ou aplicativos na floresta original. Se um aplicativo não puder ser atualizado e instalado recentemente, deixe-o na floresta herdada e considere a destruição criativa para substituir a funcionalidade do aplicativo.
 
-### <a name="defining-a-limited-risk-based-migration-plan"></a>Definindo um plano de migração limitado baseado em risco
+### <a name="defining-a-limited-risk-based-migration-plan"></a>Definindo um plano de migração Risk-Based e limitado
 Criar um plano de migração limitado baseado em risco simplesmente significa que, ao decidir quais usuários, aplicativos e dados serão migrados para sua floresta original, você deverá identificar os destinos de migração com base no grau de risco para o qual sua organização será exposta se um dos usuários ou sistemas for comprometido. Os usuários VIP cujas contas têm mais probabilidade de ser alvo de invasores devem estar hospedados na floresta original. Os aplicativos que fornecem funções corporativas vitais devem ser instalados em servidores com nova compilação na floresta original, e dados altamente confidenciais devem ser movidos para servidores seguros na floresta original.
 
 Se você ainda não tiver uma visão clara dos usuários, sistemas, aplicativos e dados mais críticos para os negócios em seu ambiente de Active Directory, trabalhe com unidades de negócios para identificá-los. Qualquer aplicativo necessário para operar a empresa deve ser identificado, assim como os servidores em que os aplicativos críticos são executados ou dados críticos são armazenados. Ao identificar os usuários e recursos necessários para que sua organização continue a funcionar, você cria uma coleção priorizada naturalmente de ativos nos quais concentrar seus esforços.

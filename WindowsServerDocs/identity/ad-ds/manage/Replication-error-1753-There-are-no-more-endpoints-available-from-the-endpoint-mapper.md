@@ -2,16 +2,16 @@
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: Erro de replicação 1753 Não há mais pontos de extremidade disponíveis do mapeador de ponto de extremidade
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9752425c0732c2290642d62239151f20acb99ad0
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 94e63d439217c21c1634e7f1b685267ad98178b4
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940476"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067668"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>Erro de replicação 1753 Não há mais pontos de extremidade disponíveis do mapeador de ponto de extremidade
 
@@ -284,9 +284,9 @@ F# SRC    DEST    Operation
 11 x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
 ```
 
-No quadro **10**, o DC de destino consulta o mapeador de ponto de extremidade DCS de origem pela porta 135 para o Active Directory UUID de classe de serviço de replicação E351...
+No quadro **10** , o DC de destino consulta o mapeador de ponto de extremidade DCS de origem pela porta 135 para o Active Directory UUID de classe de serviço de replicação E351...
 
-No quadro **11**, o DC de origem, nesse caso, um computador membro que ainda não hospeda a função de controlador de domínio e, portanto, não registrou o E351... O UUID para o serviço de replicação com seu EPM local responde com o erro simbólico EP_S_NOT_REGISTERED que mapeia para o erro decimal 1753, erro hexadecimal 0x6d9 e erro amigável "não há mais pontos de extremidade disponíveis no mapeador de Endpoint".
+No quadro **11** , o DC de origem, nesse caso, um computador membro que ainda não hospeda a função de controlador de domínio e, portanto, não registrou o E351... O UUID para o serviço de replicação com seu EPM local responde com o erro simbólico EP_S_NOT_REGISTERED que mapeia para o erro decimal 1753, erro hexadecimal 0x6d9 e erro amigável "não há mais pontos de extremidade disponíveis no mapeador de Endpoint".
 
 Posteriormente, o computador membro com o endereço IP x. x. 1.2 é promovido como uma réplica "MayberryDC" no domínio contoso.com. Novamente, o comando **replicate Now** é usado para disparar a replicação, mas esse tempo falha com o erro na tela "o nome principal de destino está incorreto". O computador cujo adaptador de rede é atribuído o endereço IP x. x. 1.2 é um controlador de domínio, atualmente é inicializado no modo normal e registrou o E351... UUID do serviço de replicação com seu EPM local, mas ele não possui o nome ou a identidade de segurança de DC2 e não pode descriptografar a solicitação Kerberos do DC1 para que a solicitação agora falhe com o erro "o nome da entidade de destino está incorreto". O erro é mapeado para erro decimal-2146893022/erro hexadecimal 0x80090322.
 
@@ -294,7 +294,7 @@ Esses mapeamentos inválidos de host para IP podem ser causados por entradas obs
 
 Resumo: Este exemplo falhou porque um mapeamento de host para IP inválido (no arquivo de HOST, nesse caso) fez com que o DC de destino fosse resolvido para um controlador de domínio de "origem" que não tenha o serviço de Active Directory Domain Services em execução (ou até mesmo instalado para esse assunto) para que o SPN de replicação não tenha sido registrado e o DC de origem retornou o erro 1753. No segundo caso, um mapeamento de host para IP inválido (novamente no arquivo de HOST) fez com que o DC de destino se conectasse a um controlador de domínio que registrou o E351... o SPN de replicação, mas essa origem tinha um nome de host e uma identidade de segurança diferentes do DC de origem pretendido, de modo que as tentativas falharam com Error-2146893022: o nome principal de destino está incorreto.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 * [Solução de problemas Active Directory operações que falham com o erro 1753: não há mais pontos de extremidade disponíveis no mapeador de pontos de extremidades.](https://support.microsoft.com/kb/2089874)
 * [Artigo 839880 da base de problemas ao solucionar erros do mapeador de ponto de extremidade RPC usando as ferramentas de suporte do Windows Server 2003 do CD do produto](https://support.microsoft.com/kb/839880)

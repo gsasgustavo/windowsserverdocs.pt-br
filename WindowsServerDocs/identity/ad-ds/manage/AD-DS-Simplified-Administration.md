@@ -1,17 +1,17 @@
 ---
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: Administração simplificada do AD DS
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 5fec303bb5681147d1a2d9ab008ad40ac6a1b52c
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 6390fcea3cf0b08cf36b9c8e73514b3af284122e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940046"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068128"
 ---
 # <a name="ad-ds-simplified-administration"></a>Administração simplificada do AD DS
 
@@ -174,7 +174,7 @@ O código de preparação AD, antes situado no ADprep.exe, é refatorado no adpr
 
 O sistema de verificação de pré-requisitos compilado no código gerenciado do ADDSDeployment do Windows PowerShell funciona em diferentes modos, de acordo com a operação. As tabelas abaixo descrevem cada teste, quando ele é usado e contêm uma explicação de como e o que ele valida. Essas tabelas podem ser úteis se houver problemas em que a validação falha e o erro não é suficiente para a solução de problemas.
 
-Esses testes registram no log de evento operacional do **DirectoryServices-Deployment** o canal sob a Categoria da tarefa **Core**, sempre como o ID do evento **103**.
+Esses testes registram no log de evento operacional do **DirectoryServices-Deployment** o canal sob a Categoria da tarefa **Core** , sempre como o ID do evento **103** .
 
 ### <a name="prerequisite-windows-powershell"></a>Pré-requisito do Windows PowerShell
 

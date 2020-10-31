@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7d957ebb-3476-49d8-b00b-6e93b4a94778
 title: Identificando requisitos de design de floresta
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 9c5278fa01d34b5ed0bf77153dce1575ee6ac509
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 0a94f1ce10ec1574fda6776fac85bf80db75f749
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939076"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068439"
 ---
 # <a name="identifying-forest-design-requirements"></a>Identificando requisitos de design de floresta
 
@@ -23,9 +23,9 @@ O Active Directory Domain Services (AD DS) permite que você projete uma infraes
 
 Os grupos em sua organização podem ter alguns dos seguintes tipos de requisitos:
 
-- **Requisitos da estrutura organizacional**. Partes de uma organização podem participar de uma infraestrutura compartilhada para economizar custos, mas exigem a capacidade de operar independentemente do restante da organização. Por exemplo, um grupo de pesquisa em uma organização de grande porte pode precisar manter o controle sobre todos os seus dados de pesquisa.
+- **Requisitos da estrutura organizacional** . Partes de uma organização podem participar de uma infraestrutura compartilhada para economizar custos, mas exigem a capacidade de operar independentemente do restante da organização. Por exemplo, um grupo de pesquisa em uma organização de grande porte pode precisar manter o controle sobre todos os seus dados de pesquisa.
 
-- **Requisitos operacionais**. Uma parte de uma organização pode posicionar restrições exclusivas sobre a configuração, a disponibilidade ou a segurança do serviço de diretório, ou usar aplicativos que colocam restrições exclusivas no diretório. Por exemplo, unidades de negócios individuais dentro de uma organização podem implantar aplicativos habilitados para diretório que modificam o esquema de diretório que não são implantados por outras unidades de negócios. Como o esquema de diretório é compartilhado entre todos os domínios na floresta, a criação de várias florestas é uma solução para tal cenário. Outros exemplos são encontrados nas seguintes organizações e cenários:
+- **Requisitos operacionais** . Uma parte de uma organização pode posicionar restrições exclusivas sobre a configuração, a disponibilidade ou a segurança do serviço de diretório, ou usar aplicativos que colocam restrições exclusivas no diretório. Por exemplo, unidades de negócios individuais dentro de uma organização podem implantar aplicativos habilitados para diretório que modificam o esquema de diretório que não são implantados por outras unidades de negócios. Como o esquema de diretório é compartilhado entre todos os domínios na floresta, a criação de várias florestas é uma solução para tal cenário. Outros exemplos são encontrados nas seguintes organizações e cenários:
 
     - Organizações militares
 
@@ -33,7 +33,7 @@ Os grupos em sua organização podem ter alguns dos seguintes tipos de requisito
 
     - Organizações que mantêm um diretório que está disponível interna e externamente (como aquelas publicamente acessíveis aos usuários na Internet)
 
-- **Requisitos legais**. Algumas organizações têm requisitos legais para operar de uma maneira específica, por exemplo, restringindo o acesso a determinadas informações conforme especificado em um contrato de negócios. Algumas organizações têm requisitos de segurança para operar em redes internas isoladas. A falha ao atender a esses requisitos pode resultar na perda do contrato e possivelmente na ação legal.
+- **Requisitos legais** . Algumas organizações têm requisitos legais para operar de uma maneira específica, por exemplo, restringindo o acesso a determinadas informações conforme especificado em um contrato de negócios. Algumas organizações têm requisitos de segurança para operar em redes internas isoladas. A falha ao atender a esses requisitos pode resultar na perda do contrato e possivelmente na ação legal.
 
 Parte da identificação de seus requisitos de design de floresta envolve identificar o grau em que os grupos em sua organização podem confiar nos possíveis proprietários de floresta e seus administradores de serviço e identificar os requisitos de autonomia e isolamento para cada grupo em sua organização.
 

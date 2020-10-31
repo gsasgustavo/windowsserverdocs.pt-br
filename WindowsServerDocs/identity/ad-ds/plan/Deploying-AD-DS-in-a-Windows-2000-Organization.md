@@ -2,16 +2,16 @@
 ms.assetid: 7530cafe-98d7-46c9-95d9-e49d39caa021
 title: Implantar o AD DS em uma organização com o Windows 2000
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 664224168efd347e6ca391112bf6b838d1f1c29a
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 73a9f921d393bc4be244f9aa4d20d1201d93934e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938826"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069368"
 ---
 # <a name="deploying-ad-ds-in-a-windows-2000-organization"></a>Implantar o AD DS em uma organização com o Windows 2000
 
@@ -19,7 +19,7 @@ ms.locfileid: "88938826"
 
 Se sua organização estiver executando o Windows 2000 Active Directory, você poderá implantar o Windows Server 2008 Active Directory Domain Services (AD DS) executando uma atualização in-loco de alguns ou de todos os sistemas operacionais dos controladores de domínio para o Windows Server 2008 ou introduzindo os controladores de domínio que executam o Windows Server 2008 em seu ambiente.
 
-Antes de adicionar um controlador de domínio executando o Windows Server 2008 a um domínio existente do Windows 2000 Active Directory, você deve executar **adprep**, uma ferramenta de linha de comando. A adprep estende o esquema de AD DS, atualiza os descritores de segurança padrão dos objetos selecionados e adiciona novos objetos de diretório conforme exigido por alguns aplicativos. A Adprep está disponível no disco de instalação do Windows Server 2008 (\sources\adprep\adprep.exe). Para obter mais informações, consulte [adprep](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11)).
+Antes de adicionar um controlador de domínio executando o Windows Server 2008 a um domínio existente do Windows 2000 Active Directory, você deve executar **adprep** , uma ferramenta de linha de comando. A adprep estende o esquema de AD DS, atualiza os descritores de segurança padrão dos objetos selecionados e adiciona novos objetos de diretório conforme exigido por alguns aplicativos. A Adprep está disponível no disco de instalação do Windows Server 2008 (\sources\adprep\adprep.exe). Para obter mais informações, consulte [adprep](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11)).
 
 > [!NOTE]
 > Se você quiser executar uma atualização in-loco de um controlador de domínio existente do Windows 2000 AD DS para o Windows Server 2008, você deve primeiro atualizar o servidor para o Windows Server 2003 e, em seguida, atualizá-lo para o Windows Server 2008.

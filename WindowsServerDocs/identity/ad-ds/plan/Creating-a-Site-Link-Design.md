@@ -1,17 +1,17 @@
 ---
 ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: Criar um design de link de site
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 881ca5f2d932a8e13aaa7467179360ca8bb4af66
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 390cc0d69fa4d43a957500c0078d53dcdc69c10c
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941136"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068768"
 ---
 # <a name="creating-a-site-link-design"></a>Criar um design de link de site
 
@@ -21,7 +21,7 @@ Crie um design de link de site para conectar seus sites com links de site. Os li
 
 ## <a name="connecting-sites-with-site-links"></a>Conectando sites com links de site
 
-Para conectar sites com links de site, identifique os sites membros que você deseja conectar com o link do site, crie um objeto de link de site no respectivo contêiner Transportes entre sites e, em seguida, nomeie o link do site. Depois de criar o link do site, você pode continuar a definir as propriedades do link do site.
+Para conectar sites com links de site, identifique os sites de membros que você deseja conectar com o link de site, crie um objeto de link de site no respectivo contêiner de transportes de Inter-Site e, em seguida, nomeie o link do site. Depois de criar o link do site, você pode continuar a definir as propriedades do link do site.
 
 Ao criar links de site, verifique se todos os sites estão incluídos em um link de site. Além disso, verifique se todos os sites estão conectados entre si por meio de outros links de site para que as alterações possam ser replicadas de controladores de domínio em qualquer site para todos os outros sites. Se você não conseguir fazer isso, uma mensagem de erro será gerada no log do serviço de diretório no Visualizador de Eventos informando que a topologia do site não está conectada.
 
@@ -29,12 +29,12 @@ Sempre que você adicionar sites a um link de site recém-criado, determine se o
 
 Para identificar os sites membros que você deseja conectar a um link de site, use a lista de locais e locais vinculados que você registrou na planilha "locais geográficos e links de comunicação" (DSSTOPO_1.doc). Se vários sites tiverem a mesma conectividade e disponibilidade entre si, você poderá conectá-los com o mesmo link de site.
 
-O contêiner Transportes entre sites fornece os meios para mapear links de site para o transporte usado pelo link. Ao criar um objeto de link de site, você o cria no contêiner IP, que associa o link de site à RPC (chamada de procedimento remoto) sobre o transporte de IP ou o contêiner SMTP, que associa o link de site ao transporte SMTP.
+O contêiner de transportes de Inter-Site fornece os meios para mapear links de site para o transporte usado pelo link. Ao criar um objeto de link de site, você o cria no contêiner IP, que associa o link de site à RPC (chamada de procedimento remoto) sobre o transporte de IP ou o contêiner SMTP, que associa o link de site ao transporte SMTP.
 
 > [!NOTE]
 > A replicação SMTP não terá suporte em versões futuras do Active Directory Domain Services (AD DS); Portanto, a criação de objetos de links de site no contêiner SMTP não é recomendada.
 
-Quando você cria um objeto de link de site no respectivo contêiner de transportes entre sites, AD DS usa RPC sobre IP para transferir a replicação entre sites e intra-site entre controladores de domínio. Para manter os dados protegidos em trânsito, a replicação de RPC sobre IP usa o protocolo de autenticação Kerberos e a criptografia de dados.
+Quando você cria um objeto de link de site no respectivo contêiner de transportes de Inter-Site, AD DS usa RPC sobre IP para transferir a replicação entre sites e intra-site entre controladores de domínio. Para manter os dados protegidos em trânsito, a replicação de RPC sobre IP usa o protocolo de autenticação Kerberos e a criptografia de dados.
 
 Quando uma conexão IP direta não está disponível, você pode configurar a replicação entre sites para usar o SMTP. No entanto, a funcionalidade de replicação SMTP é limitada e requer uma autoridade de certificação (CA) corporativa. O SMTP só pode replicar a configuração, o esquema e as partições de diretório de aplicativo e não oferece suporte à replicação de partições de diretório de domínio.
 

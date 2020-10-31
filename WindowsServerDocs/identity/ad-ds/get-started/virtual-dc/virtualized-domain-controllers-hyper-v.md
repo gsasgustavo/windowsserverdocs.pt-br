@@ -2,15 +2,15 @@
 title: Virtualizando controladores de domínio usando o Hyper-V
 description: Considerações a serem feitas ao virtualizar controladores de Domínio do Active Directory do Windows Server no Hyper-V
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 ms.date: 04/19/2018
 ms.topic: article
-ms.openlocfilehash: 55895a86521cc7d093c474fb8e4d3c53e4132894
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: cb01ef2c7a483b1160e68ea34ef38de67f7ff581
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940066"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068168"
 ---
 # <a name="virtualizing-domain-controllers-using-hyper-v"></a>Virtualizando controladores de domínio usando o Hyper-V
 
@@ -239,13 +239,13 @@ Para desabilitar o provedor de sincronização de tempo do Hyper-V, desligue a V
 
 Para otimizar o desempenho da máquina virtual do controlador de domínio e garantir a durabilidade das gravações de Active Directory, use as seguintes recomendações para armazenar arquivos de sistema operacional, Active Directory e VHD:
 
-- **Armazenamento convidado**. Armazene o arquivo de banco de dados do Active Directory (Ntds.dit), os arquivos de log e os arquivos SYSVOL em um disco virtual separado dos arquivos do sistema operacional. Crie um segundo VHD anexado a um controlador SCSI virtual e armazene o banco de dados, os logs e o SYSVOL no disco SCSI virtual da máquina virtual. Os discos SCSI virtuais oferecem maior desempenho em comparação com o IDE virtual e dão suporte ao FUA (acesso forçado à unidade). O FUA garante que o sistema operacional grave e leia dados diretamente da mídia, ignorando qualquer e todos os mecanismos de cache.
+- **Armazenamento convidado** . Armazene o arquivo de banco de dados do Active Directory (Ntds.dit), os arquivos de log e os arquivos SYSVOL em um disco virtual separado dos arquivos do sistema operacional. Crie um segundo VHD anexado a um controlador SCSI virtual e armazene o banco de dados, os logs e o SYSVOL no disco SCSI virtual da máquina virtual. Os discos SCSI virtuais oferecem maior desempenho em comparação com o IDE virtual e dão suporte ao FUA (acesso forçado à unidade). O FUA garante que o sistema operacional grave e leia dados diretamente da mídia, ignorando qualquer e todos os mecanismos de cache.
 
   > [!NOTE]
   > Se você estiver planejando usar o BitLocker para o controlador de domínio de convidado virtual, será necessário verificar se os volumes adicionais estão configurados para "desbloqueio automático".
   > Mais informações sobre como configurar o desbloqueio automático podem ser encontradas em [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock)
 
-- **Armazenamento do host de arquivos VHD**. Recomendações: as recomendações de armazenamento de hosts abordam o armazenamento de arquivos VHD. Para obter um máximo desempenho, não armazene arquivos VHD em um disco que seja usado frequentemente por outros serviços ou aplicativos, como o disco do sistema no qual o sistema operacional Windows host está instalado. Armazene cada arquivo VHD em uma partição separada do sistema operacional host e de quaisquer outros arquivos VHD. A configuração ideal é armazenar cada arquivo VHD em uma unidade de disco física separada.
+- **Armazenamento do host de arquivos VHD** . Recomendações: as recomendações de armazenamento de hosts abordam o armazenamento de arquivos VHD. Para obter um máximo desempenho, não armazene arquivos VHD em um disco que seja usado frequentemente por outros serviços ou aplicativos, como o disco do sistema no qual o sistema operacional Windows host está instalado. Armazene cada arquivo VHD em uma partição separada do sistema operacional host e de quaisquer outros arquivos VHD. A configuração ideal é armazenar cada arquivo VHD em uma unidade de disco física separada.
 
   O sistema de disco físico do host também deve satisfazer **pelo menos um** dos seguintes critérios para atender aos requisitos de integridade de dados de carga de trabalho virtualizada:
 
@@ -255,7 +255,7 @@ Para otimizar o desempenho da máquina virtual do controlador de domínio e gara
    - O sistema garante que a energia para o disco seja protegida por uma fonte de alimentação ininterrupta (UPS).
    - O sistema garante que o recurso de gravação em cache do disco esteja desabilitado.
 
-- **VHD fixo versus discos de passagem**. Há muitas maneiras de configurar o armazenamento para máquinas virtuais. Quando os arquivos VHD são usados, os VHDs de tamanho fixo são mais eficientes que os VHDs dinâmicos, porque a memória dos VHDs de tamanho fixo é alocada quando eles são criados. Os discos de passagem, que as máquinas virtuais podem usar para acessar a mídia de armazenamento físico, estão ainda mais otimizados para desempenho. Os discos de passagem são essencialmente discos físicos ou LUNs (números de unidade lógica) conectados a uma máquina virtual. Os discos de passagem não oferecem suporte ao recurso de instantâneo. Por isso, eles são a configuração de disco rígido preferencial, pois o uso de instantâneos com controladores de domínio não é recomendável.
+- **VHD fixo versus discos de passagem** . Há muitas maneiras de configurar o armazenamento para máquinas virtuais. Quando os arquivos VHD são usados, os VHDs de tamanho fixo são mais eficientes que os VHDs dinâmicos, porque a memória dos VHDs de tamanho fixo é alocada quando eles são criados. Os discos de passagem, que as máquinas virtuais podem usar para acessar a mídia de armazenamento físico, estão ainda mais otimizados para desempenho. Os discos de passagem são essencialmente discos físicos ou LUNs (números de unidade lógica) conectados a uma máquina virtual. Os discos de passagem não oferecem suporte ao recurso de instantâneo. Por isso, eles são a configuração de disco rígido preferencial, pois o uso de instantâneos com controladores de domínio não é recomendável.
 
 Para reduzir a chance de corrupção de dados de Active Directory, use controladores SCSI virtuais:
 
@@ -335,7 +335,7 @@ Se um backup de estado do sistema válido existir na máquina virtual do control
    Se você não vir a tela do Gerenciador de Inicialização do Windows e o controlador de domínio começar a inicializar no modo normal, desligue a máquina virtual para evitar que ela complete a inicialização. Repita essa etapa quantas vezes for necessário até que você possa acessar a tela do Gerenciador de Inicialização do Windows. Você não pode acessar DSRM no menu do Windows Error Recovery. Por isso, desative a máquina virtual e tente novamente se o menu do Windows Error Recovery aparecer.
 
 2. Na tela do Gerenciador de Inicialização do Windows, pressione F8 para acessar opções de inicialização avançada.
-3. Na tela **Opções de Inicialização Avançadas**, selecione **Modo de Restauração dos Serviços de Diretório** e pressione ENTER. Isso inicia o controlador de domínio no DSRM.
+3. Na tela **Opções de Inicialização Avançadas** , selecione **Modo de Restauração dos Serviços de Diretório** e pressione ENTER. Isso inicia o controlador de domínio no DSRM.
 4. Use o método de restauração adequado para a ferramenta usada para criada o backup de estado do sistema. Se você usou Backup do Windows Server, consulte [executando uma restauração não autoritativa de AD DS](https://go.microsoft.com/fwlink/?linkid=132637).
 
 ## <a name="restoring-a-virtual-domain-controller-when-an-appropriate-system-state-data-backup-is-not-available"></a>Restaurando um controlador de domínio virtual quando um backup de dados de estado do sistema adequado não está disponível
@@ -350,14 +350,14 @@ Se você não tiver um backup de dados de estado do sistema que pré-date a falh
 ## <a name="to-restore-a-previous-version-of-a-virtual-domain-controller-vhd-without-system-state-data-backup"></a>Para restaurar uma versão anterior de um VHD de controlador de domínio virtual sem o backup de dados de estado do sistema
 
 1. Usando o VHD anterior, inicie o controlador de domínio virtual no DSRM, conforme descrito na seção anterior. Não permita que o controlador de domínio inicie no modo normal. Se você não vir a tela do Gerenciador de Inicialização do Windows e o controlador de domínio começar a inicializar no modo normal, desligue a máquina virtual para evitar que ela complete a inicialização. Consulte a seção anterior para obter instruções detalhadas para acessar o DSRM.
-2. Abra o Editor do Registro. Para abrir o Editor do Registro, clique em **Iniciar**, **Executar**, digite **regedit** e clique em OK. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**. No editor do registro, expanda o seguinte caminho: **HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Services \\ NTDS \\ Parameters**. Procure um valor chamado **Contagem da restauração anterior DSA**. Se existir um valor, anote a configuração. Se não houver o valor, a configuração será igual ao padrão, que é zero. Não adicione um valor se você não vir um lá.
-3. Clique com o botão direito do mouse em **Parâmetros**, clique em **Novo** e, em seguida, clique em **Valor DWORD (32 bits)**.
+2. Abra o Editor do Registro. Para abrir o Editor do Registro, clique em **Iniciar** , **Executar** , digite **regedit** e clique em OK. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim** . No editor do registro, expanda o seguinte caminho: **HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Services \\ NTDS \\ Parameters** . Procure um valor chamado **Contagem da restauração anterior DSA** . Se existir um valor, anote a configuração. Se não houver o valor, a configuração será igual ao padrão, que é zero. Não adicione um valor se você não vir um lá.
+3. Clique com o botão direito do mouse em **Parâmetros** , clique em **Novo** e, em seguida, clique em **Valor DWORD (32 bits)** .
 4. Digite o novo nome **Banco de dados restaurado do backup** e, em seguida, pressione ENTER.
-5. Clique duas vezes no valor que você acabou de criar para abrir a caixa de diálogo **Editar valor DWORD (32 bits)** e, em seguida, digite **1** na caixa **Dados do valor**. O **banco de dados restaurado da opção de entrada de backup** está disponível em controladores de domínio que executam o Windows 2000 Server com Service Pack 4 (SP4), windows Server 2003 com as atualizações incluídas em [como detectar e recuperar de uma reversão de USN no Windows Server 2003, Windows Server 2008 e Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=137182) na base de dados de conhecimento Microsoft instalada e Windows Server 2008.
+5. Clique duas vezes no valor que você acabou de criar para abrir a caixa de diálogo **Editar valor DWORD (32 bits)** e, em seguida, digite **1** na caixa **Dados do valor** . O **banco de dados restaurado da opção de entrada de backup** está disponível em controladores de domínio que executam o Windows 2000 Server com Service Pack 4 (SP4), windows Server 2003 com as atualizações incluídas em [como detectar e recuperar de uma reversão de USN no Windows Server 2003, Windows Server 2008 e Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=137182) na base de dados de conhecimento Microsoft instalada e Windows Server 2008.
 6. Reinicie o controlador de domínio no modo normal.
-7. Quando o controlador de domínio reiniciar, abra o Visualizador de Eventos. Para abrir o Visualizador de Eventos, clique em **Iniciar**, **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas** e em **Visualizador de Eventos**.
-8. Expanda **Logs de Aplicativos e Serviços** e, em seguida, clique no log **Serviços de Diretório**. Verifique se esses eventos aparecem no painel de detalhes.
-9. Clique com o botão direito do mouse no log **Serviços de Diretório** e, em seguida, clique em **Localizar**. Em **Localizar**, digite **1109** e clique em **Localizar Próximo**.
+7. Quando o controlador de domínio reiniciar, abra o Visualizador de Eventos. Para abrir o Visualizador de Eventos, clique em **Iniciar** , **Painel de Controle** , clique duas vezes em **Ferramentas Administrativas** e em **Visualizador de Eventos** .
+8. Expanda **Logs de Aplicativos e Serviços** e, em seguida, clique no log **Serviços de Diretório** . Verifique se esses eventos aparecem no painel de detalhes.
+9. Clique com o botão direito do mouse no log **Serviços de Diretório** e, em seguida, clique em **Localizar** . Em **Localizar** , digite **1109** e clique em **Localizar Próximo** .
 10. Você deve ver pelo menos uma entrada da ID de evento 1109. Se você não vir essa entrada, vá para a próxima etapa. Caso contrário, clique duas vezes na entrada e analise o texto que confirma que a atualização foi feita no InvocationID:
 
     ```
@@ -388,16 +388,16 @@ Para cada partição de diretório que um controlador de domínio de destino arm
 
 As duas tabelas de metadados de replicação a seguir contêm USNs. Os controladores de domínio de origem e de destino os usam para filtrar alterações que o controlador de domínio de destino exige.
 
-1. **Vetor de atualização**: uma tabela que o controlador de domínio de destino mantém para acompanhar as atualizações de origem recebidas de todos os controladores de domínio de origem. Quando um controlador de domínio de destino solicita alterações para uma partição de diretório, ela fornece seu vetor atual para o controlador de domínio de origem. O controlador de domínio de origem usa esse valor para filtrar as atualizações que ele envia para o controlador de domínio de destino. O controlador de domínio de origem envia seu vetor de atualização para o destino na conclusão de um ciclo de replicação bem-sucedido para garantir que o controlador de domínio de destino saiba que ele foi sincronizado com todas as atualizações originadas de controladores de domínio e que as atualizações estão no mesmo nível que a origem.
-2. **Marca d' água alta**: um valor que o controlador de domínio de destino mantém para manter o controle das alterações mais recentes que recebeu de um controlador de domínio de origem específico para uma partição específica. A marca d' água alta impede que o controlador de domínio de origem envie alterações que pelo controlador de domínio de destino já tenha recebido dele.
+1. **Vetor de atualização** : uma tabela que o controlador de domínio de destino mantém para acompanhar as atualizações de origem recebidas de todos os controladores de domínio de origem. Quando um controlador de domínio de destino solicita alterações para uma partição de diretório, ela fornece seu vetor atual para o controlador de domínio de origem. O controlador de domínio de origem usa esse valor para filtrar as atualizações que ele envia para o controlador de domínio de destino. O controlador de domínio de origem envia seu vetor de atualização para o destino na conclusão de um ciclo de replicação bem-sucedido para garantir que o controlador de domínio de destino saiba que ele foi sincronizado com todas as atualizações originadas de controladores de domínio e que as atualizações estão no mesmo nível que a origem.
+2. **Marca d' água alta** : um valor que o controlador de domínio de destino mantém para manter o controle das alterações mais recentes que recebeu de um controlador de domínio de origem específico para uma partição específica. A marca d' água alta impede que o controlador de domínio de origem envie alterações que pelo controlador de domínio de destino já tenha recebido dele.
 
 ## <a name="directory-database-identity"></a>Identidade do banco de dados do diretório
 
-Além dos USNs, os controladores de domínio acompanham o banco de dados do diretório dos parceiros de replicação de origem. A identidade do banco de dados do diretório executado no servidor é mantida separadamente da identidade do próprio objeto do servidor. A identidade do banco de dados do diretório em cada controlador de domínio é armazenada no atributo **inrevocationid** do objeto de configurações NTDS, localizado no seguinte caminho do protocolo LDAP: CN = NTDS Settings, CN = ServerName, CN = Servers, CN =*SiteName*, CN = sites, CN = Configuration, DC =*ForestRootDomain*. A identidade do objeto do servidor é armazenada no atributo **objectGUID** do objeto Configurações de NTDS. A identidade do objeto do servidor nunca muda. No entanto, a identidade do banco de dados de diretório é alterada quando ocorre um procedimento de restauração de estado do sistema no servidor ou quando uma partição de diretório de aplicativo é adicionada e, em seguida, removida e depois adicionada novamente do servidor. (outro cenário: quando uma instância do HyperV dispara seus gravadores VSS em uma partição que contém um VHD do DC virtual, o convidado, por sua vez, dispara seus próprios gravadores VSS (o mesmo mecanismo usado pelo backup/restauração acima) resultando em outro meio pelo qual a invocação é redefinida)
+Além dos USNs, os controladores de domínio acompanham o banco de dados do diretório dos parceiros de replicação de origem. A identidade do banco de dados do diretório executado no servidor é mantida separadamente da identidade do próprio objeto do servidor. A identidade do banco de dados do diretório em cada controlador de domínio é armazenada no atributo **inrevocationid** do objeto de configurações NTDS, localizado no seguinte caminho do protocolo LDAP: CN = NTDS Settings, CN = ServerName, CN = Servers, CN = *SiteName* , CN = sites, CN = Configuration, DC = *ForestRootDomain* . A identidade do objeto do servidor é armazenada no atributo **objectGUID** do objeto Configurações de NTDS. A identidade do objeto do servidor nunca muda. No entanto, a identidade do banco de dados de diretório é alterada quando ocorre um procedimento de restauração de estado do sistema no servidor ou quando uma partição de diretório de aplicativo é adicionada e, em seguida, removida e depois adicionada novamente do servidor. (outro cenário: quando uma instância do HyperV dispara seus gravadores VSS em uma partição que contém um VHD do DC virtual, o convidado, por sua vez, dispara seus próprios gravadores VSS (o mesmo mecanismo usado pelo backup/restauração acima) resultando em outro meio pelo qual a invocação é redefinida)
 
 Consequentemente, **invocationID** relaciona efetivamente um conjunto de atualizações de origem em um controlador específico a uma versão específica do banco de dados do diretório. O vetor de atualização e as tabelas de marca d' água alta usam o GUID de **invocação** e de DC, respectivamente, para que os controladores de domínio saibam de qual cópia do banco de dados de Active Directory as informações de replicação estão chegando.
 
-O **invocationID** é um valor de GUID que pode ser visto próximo à parte superior da saída depois que você executa o comando **repadmin /showrepl**. O seguinte texto representa uma saída de exemplo do comando:
+O **invocaid** é um valor de GUID (identificador global exclusivo) que é visível próximo à parte superior da saída depois que você executa o comando **repadmin/showrepl** . O seguinte texto representa uma saída de exemplo do comando:
 
    ```
    Repadmin: running command /showrepl against full DC local host
@@ -442,7 +442,7 @@ A ilustração a seguir mostra a sequência de eventos que ocorre quando a rever
 
 Se o log de eventos do Serviço de Diretório reportar uma ID do evento 2095, complete o procedimento a seguir imediatamente.
 
-## <a name="to-resolve-event-id2095"></a>Para resolver a ID do evento 2095
+## <a name="to-resolve-event-id-2095"></a>Para resolver a ID do evento 2095
 
 1. Isole a máquina virtual que registrou o erro da rede.
 2. Tente determinar se alguma alteração foi originada desse controlador de domínio e propagou-se para outros controladores de domínio. Se o evento foi um resultado de um instantâneo ou cópia de uma máquina virtual sendo inicializada, tente determinar o horário em que a reversão de USN ocorreu. Você pode verificar os parceiros de replicação daquele controlador de domínio para determinar se a replicação ocorreu desde então.

@@ -1,16 +1,16 @@
 ---
 title: Recuperação de floresta do AD-configurar o serviço do servidor DNS
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 5ed2c279dec2fc6599c46488a0147092b5259364
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 6dd9caff9f4dc36ee2e55850bb764dd298c2bc7e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938946"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067948"
 ---
 # <a name="ad-forest-recovery---configuring-the-dns-server-service"></a>Recuperação de floresta do AD-Configurando o serviço do servidor DNS
 
@@ -29,22 +29,22 @@ Conclua as etapas de instalação e configuração abaixo.
 
 ### <a name="to-install-and-the-dns-server-service-using-server-manager"></a>Para instalar o e o serviço do servidor DNS usando Gerenciador do Servidor
 
-1. Abra Gerenciador do Servidor e clique em **adicionar funções e recursos**.
-2. No Assistente para Adicionar Funções, se for exibida a página **Antes de Começar**, clique em **Avançar**.
-3. Na tela **tipo de instalação** , selecione instalação baseada em **função ou recurso** e clique em **Avançar**.
-4. Na tela de **seleção do servidor** , selecione o servidor e clique em **Avançar**.
-5. Na tela **funções do servidor** , selecione **servidor DNS**, se solicitado, clique em **Adicionar recursos** e clique em **Avançar**.
-6. Na tela **recursos** , clique em **Avançar**.
-7. Leia as informações na página do **servidor DNS** e clique em **Avançar**.
+1. Abra Gerenciador do Servidor e clique em **adicionar funções e recursos** .
+2. No Assistente para Adicionar Funções, se for exibida a página **Antes de Começar** , clique em **Avançar** .
+3. Na tela **tipo de instalação** , selecione instalação baseada em **função ou recurso** e clique em **Avançar** .
+4. Na tela de **seleção do servidor** , selecione o servidor e clique em **Avançar** .
+5. Na tela **funções do servidor** , selecione **servidor DNS** , se solicitado, clique em **Adicionar recursos** e clique em **Avançar** .
+6. Na tela **recursos** , clique em **Avançar** .
+7. Leia as informações na página do **servidor DNS** e clique em **Avançar** .
    ![Servidor DNS](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
-8. Na página **confirmação** , verifique se a função servidor DNS será instalada e clique em **instalar**.
+8. Na página **confirmação** , verifique se a função servidor DNS será instalada e clique em **instalar** .
 
 ### <a name="to-configure-the-dns-server-service"></a>Para configurar o serviço do servidor DNS
 
-1. Abra Gerenciador do Servidor, clique em **ferramentas** e clique em **DNS**.
+1. Abra Gerenciador do Servidor, clique em **ferramentas** e clique em **DNS** .
    ![Servidor DNS](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. Crie zonas DNS para os mesmos nomes de domínio DNS que foram hospedados nos servidores DNS antes do mau funcionamento crítico. Para obter mais informações, consulte Adicionar uma zona de pesquisa direta ( [https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574) ).
-3. Configure os dados DNS como existiam antes do mau funcionamento crítico. Por exemplo:
+3. Configure os dados DNS como existiam antes do mau funcionamento crítico. Por exemplo: 
 
    - Configure as zonas DNS a serem armazenadas no AD DS. Para obter mais informações, consulte alterar o tipo de zona ( [https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579) ).
    - Configure a zona DNS que é autoritativa para registros de recurso do localizador de controlador de domínio (localizador de DC) para permitir atualização dinâmica segura. Para obter mais informações, consulte permitir apenas atualizações dinâmicas seguras ( [https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580) ).

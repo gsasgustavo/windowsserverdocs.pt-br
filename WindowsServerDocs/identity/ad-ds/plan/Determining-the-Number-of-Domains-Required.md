@@ -1,17 +1,17 @@
 ---
 ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determinando o número de domínios necessários
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 8fe9e6d50bef530d50ba8e7a33432fe2613b871b
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 68daaede92cd835846510d76e41282e03205884e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939346"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068778"
 ---
 # <a name="determining-the-number-of-domains-required"></a>Determinando o número de domínios necessários
 
@@ -31,11 +31,11 @@ Cada floresta começa com um único domínio. O número máximo de usuários que
 
 |Link mais lento conectando um controlador de domínio (Kbps)|Número máximo de usuários se a largura de banda de 1% estiver disponível|Número máximo de usuários se a largura de banda de 5% estiver disponível|Número máximo de usuários se a largura de banda de 10% estiver disponível|
 | --- | --- | --- | --- |
-|28,8|10.000|25.000|40.000|
+|28,8|10.000|25,000|40.000|
 |32|10.000|25.000|50.000|
 |56|10.000|50.000|100.000|
 |64|10.000|50.000|100.000|
-|128|25.000|100.000|100.000|
+|128|25,000|100.000|100.000|
 |256|50.000|100.000|100.000|
 |512|80.000|100.000|100.000|
 |1\.500|100.000|100.000|100.000|
@@ -72,7 +72,7 @@ Primeiro, determine o número máximo de usuários que sua floresta pode hospeda
 |28,8|10.000|50.000|75.000|
 |32|10.000|50.000|75.000|
 |56|10.000|75.000|100.000|
-|64|25.000|75.000|100.000|
+|64|25,000|75.000|100.000|
 |128|50.000|100.000|100.000|
 |256|75.000|100.000|100.000|
 |512|100.000|100.000|100.000|
