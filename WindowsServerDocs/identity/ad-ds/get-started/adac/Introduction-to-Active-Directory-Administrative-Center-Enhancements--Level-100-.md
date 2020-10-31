@@ -1,17 +1,17 @@
 ---
 ms.assetid: 074e63e9-976c-49da-8cba-9ae0b3325e34
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: a7639fccf472d3b23b06a64dc0e621cfa4f8bb37
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 4cb57ded79f77041b49f58a8779ba213840a253b
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940106"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071008"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Introduction to Active Directory Administrative Center Enhancements (Level 100)
 
@@ -68,11 +68,11 @@ Nesta etapa, você aumentará o nível funcional da floresta. Primeiro, você de
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. Clique no domínio de destino no painel de navegação esquerdo e, no painel **Tarefas**, clique em **Aumentar nível funcional da floresta**. Selecione um nível funcional de floresta que seja pelo menos o Windows Server 2008 R2 ou superior e clique em **OK**.
+3. Clique no domínio de destino no painel de navegação esquerdo e, no painel **Tarefas** , clique em **Aumentar nível funcional da floresta** . Selecione um nível funcional de floresta que seja pelo menos o Windows Server 2008 R2 ou superior e clique em **OK** .
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -80,7 +80,7 @@ O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que
 Set-ADForestMode -Identity contoso.com -ForestMode Windows2008R2Forest -Confirm:$false
 ```
 
-Para o argumento **-Identity** , especifique o nome de domínio DNS totalmente qualificado.
+Para o argumento _ *-Identity* *, especifique o nome de domínio DNS totalmente qualificado.
 
 ### <a name="step-2-enable-recycle-bin"></a><a name="bkmk_enable_recycle_bin"></a>Etapa 2: Habilitar a Lixeira
 
@@ -90,13 +90,13 @@ Nesta etapa, você habilitará a Lixeira para restaurar objetos excluídos do AD
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. No **Painel de Tarefas**, clique em **Habilitar Lixeira...**; no **Painel de Tarefas**, clique em **OK** na caixa de mensagem de aviso e clique em **OK** para atualizar a mensagem do ADAC.
+3. No **Painel de Tarefas** , clique em **Habilitar Lixeira...** ; no **Painel de Tarefas** , clique em **OK** na caixa de mensagem de aviso e clique em **OK** para atualizar a mensagem do ADAC.
 
 4. Pressione F5 para atualizar o ADAC.
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -110,11 +110,11 @@ Nos procedimentos a seguir, você criará dois usuários de teste. Em seguida, c
 
 #### <a name="to-create-test-users"></a>Para criar usuários de teste
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. No painel **Tarefas**, clique em **Novo** e depois em **Usuário**.
+3. No painel **Tarefas** , clique em **Novo** e depois em **Usuário** .
 
     ![Introdução ao centro de administração do AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
 
@@ -130,16 +130,16 @@ Nos procedimentos a seguir, você criará dois usuários de teste. Em seguida, c
 #### <a name="to-create-a-test-group-and-add-users-to-the-group"></a>Para criar um grupo de teste e adicionar usuários ao grupo
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
-3. No painel **Tarefas**, clique em **Novo** e depois em **Grupo**.
-4. Insira as informações a seguir em **Grupo** e clique em **OK**:
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
+3. No painel **Tarefas** , clique em **Novo** e depois em **Grupo** .
+4. Insira as informações a seguir em **Grupo** e clique em **OK** :
 
     -   **Nome do Grupo: grupo1**
 
-5. Clique em **group1** e, no **Painel de Tarefas**, clique em **Propriedades**.
-6. Clique em **Membros**, clique em **Adicionar**, digite **test1;test2** e clique em **OK**.
+5. Clique em **group1** e, no **Painel de Tarefas** , clique em **Propriedades** .
+6. Clique em **Membros** , clique em **Adicionar** , digite **test1;test2** e clique em **OK** .
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -149,14 +149,14 @@ Add-ADGroupMember -Identity group1 -Member test1
 
 #### <a name="to-create-an-organizational-unit"></a>Para criar uma unidade organizacional
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
-2. Clique em **gerenciar**, clique em **adicionar nós de navegação** e selecione o domínio de destino apropriado na caixa de diálogo **adicionar nós de navegação** e clique em * * OK
-3. No painel **Tarefas**, clique em **Novo** e depois em **Unidade Organizacional**.
-4. Insira as informações a seguir em **Unidade Organizacional** e clique em **OK**:
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
+2. Clique em **gerenciar** , clique em **adicionar nós de navegação** e selecione o domínio de destino apropriado na caixa de diálogo **adicionar nós de navegação** e clique em * * OK
+3. No painel **Tarefas** , clique em **Novo** e depois em **Unidade Organizacional** .
+4. Insira as informações a seguir em **Unidade Organizacional** e clique em **OK** :
 
    - **NameOU1**
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -168,59 +168,59 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 ### <a name="step-4-restore-deleted-objects"></a><a name="bkmk_restore_del_obj"></a>Etapa 4: Restaurar objetos excluídos
 
-Nos procedimentos a seguir, você restaurará objetos excluídos do contêiner **Deleted Objects** no local original e em outro local.
+Nos procedimentos a seguir, você irá restaurar objetos excluídos do contêiner _ *Deleted Objects* * para seu local original e para um local diferente.
 
 #### <a name="to-restore-deleted-objects-to-their-original-location"></a>Para restaurar objetos excluídos no local original
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. Selecione os usuários **test1** e **test2**, clique em **Excluir** no **Painel de Tarefas** e clique em **Sim** para confirmar a exclusão.
+3. Selecione os usuários **test1** e **test2** , clique em **Excluir** no **Painel de Tarefas** e clique em **Sim** para confirmar a exclusão.
 
-    ![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+    ![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
     O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
     ```powershell
-    Get-ADUser -Filter 'Name -Like "*test*"'|Remove-ADUser -Confirm:$false
+    Get-ADUser -Filter 'Name -Like "_test*"'|Remove-ADUser -Confirm:$false
     ```
 
-4. Navegue até o contêiner **Deleted Objects**, selecione **test2** e **test1**, e depois clique em **Restaurar** no painel **Tarefas**.
+4. Navegue até o contêiner **Deleted Objects** , selecione **test2** e **test1** , e depois clique em **Restaurar** no painel **Tarefas** .
 
 5. Para confirmar se os objetos foram restaurados no local original, navegue até o domínio de destino e verifique se as contas de usuário estão listadas.
 
     > [!NOTE]
-    > Se você navegar para as **Propriedades** das contas de usuário **test1** e **test2** e depois clicar em **Membro de**, verá que as respectivas associações de grupo também foram restauradas.
+    > Se você navegar para as **Propriedades** das contas de usuário **test1** e **test2** e depois clicar em **Membro de** , verá que as respectivas associações de grupo também foram restauradas.
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 ```powershell
-Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
+Get-ADObject -Filter 'Name -Like "_test*"' -IncludeDeletedObjects | Restore-ADObject
 ```
 
 #### <a name="to-restore-deleted-objects-to-a-different-location"></a>Para restaurar objetos excluídos em outro local
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. Selecione os usuários **test1** e **test2**, clique em **Excluir** no **Painel de Tarefas** e clique em **Sim** para confirmar a exclusão.
+3. Selecione os usuários **test1** e **test2** , clique em **Excluir** no **Painel de Tarefas** e clique em **Sim** para confirmar a exclusão.
 
-4. Navegue até o contêiner **Deleted Objects**, selecione **test2** e **test1**, e depois clique em **Restaurar em** no painel **Tarefas**.
+4. Navegue até o contêiner **Deleted Objects** , selecione **test2** e **test1** , e depois clique em **Restaurar em** no painel **Tarefas** .
 
-5. Selecione **OU1** e clique em **OK**.
+5. Selecione **OU1** e clique em **OK** .
 
-6. Para confirmar se os objetos foram restaurados em **OU1**, navegue até o domínio de destino, clique duas vezes em **OU1** e verifique se as contas de usuário estão listadas.
+6. Para confirmar se os objetos foram restaurados em **OU1** , navegue até o domínio de destino, clique duas vezes em **OU1** e verifique se as contas de usuário estão listadas.
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
 ```powershell
-Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=OU1,DC=contoso,DC=com"
+Get-ADObject -Filter 'Name -Like "_test*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=OU1,DC=contoso,DC=com"
 ```
 
 ## <a name="fine-grained-password-policy"></a><a name="fine_grained_pswd_policy_mgmt"></a>Política de senha refinada
@@ -266,11 +266,11 @@ No procedimento a seguir, você aumentará o nível funcional de domínio do dom
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. Clique no domínio de destino no painel de navegação esquerdo e, no **Painel de Tarefas**, clique em **Aumentar nível funcional do domínio**. Selecione um nível funcional de floresta que seja pelo menos o Windows Server 2008 ou superior e clique em **OK**.
+3. Clique no domínio de destino no painel de navegação esquerdo e, no **Painel de Tarefas** , clique em **Aumentar nível funcional do domínio** . Selecione um nível funcional de floresta que seja pelo menos o Windows Server 2008 ou superior e clique em **OK** .
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -288,25 +288,25 @@ No procedimento a seguir, você criará uma nova política de senha refinada usa
 
 ##### <a name="to-create-a-new-fine-grained-password-policy"></a>Para criar uma nova política de senha refinada
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. No painel de navegação do ADAC, abra o contêiner **System** e clique em **Password Settings Container**.
+3. No painel de navegação do ADAC, abra o contêiner **System** e clique em **Password Settings Container** .
 
-4. No **Painel de Tarefas**, clique em **Novo** e clique em **Configurações de Senha**.
+4. No **Painel de Tarefas** , clique em **Novo** e clique em **Configurações de Senha** .
 
-    Preencha ou edite campos da página de propriedades para criar um objeto **Configurações de Senha**. Os campos **Nome** e **Precedência** são obrigatórios.
+    Preencha ou edite campos da página de propriedades para criar um objeto **Configurações de Senha** . Os campos **Nome** e **Precedência** são obrigatórios.
 
     ![Introdução ao centro de administração do AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
 
-5. Em **Aplica-se Diretamente a**, em **Adicionar**, digite **group1**e clique em **OK**.
+5. Em **Aplica-se Diretamente a** , em **Adicionar** , digite **group1** e clique em **OK** .
 
     O objeto Política de Senha será associado aos membros do grupo global que você criou para o ambiente de teste.
 
 6. Clique em **OK** para enviar a criação.
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -321,17 +321,17 @@ No procedimento a seguir, você exibirá as configurações de senha resultantes
 
 ##### <a name="to-view-a-resultant-set-of-policies-for-a-user"></a>Para exibir um conjunto de políticas resultantes de um usuário
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. Selecione um usuário, **test1**, que pertença ao grupo, **group1**, que você associou a uma política de senha refinada na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
+3. Selecione um usuário, **test1** , que pertença ao grupo, **group1** , que você associou a uma política de senha refinada na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
 
-4. Clique em **Exibir Configurações de Senha Resultantes** no **Painel de Tarefas**.
+4. Clique em **Exibir Configurações de Senha Resultantes** no **Painel de Tarefas** .
 
-5. Examine a política de configuração de senha e clique em **Cancelar**.
+5. Examine a política de configuração de senha e clique em **Cancelar** .
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -345,19 +345,19 @@ No procedimento a seguir, você editará a política de senha refinada que criou
 
 ##### <a name="to-edit-a-fine-grained-password-policy"></a>Para editar uma política de senha refinada
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. No **Painel de Navegação** do ADAC, expanda **Sistema** e clique em **Contêiner de Configuração de Senha**.
+3. No **Painel de Navegação** do ADAC, expanda **Sistema** e clique em **Contêiner de Configuração de Senha** .
 
-4. Selecione a política de senha refinada que você criou na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) e clique em **Propriedades** no painel **Tarefas**.
+4. Selecione a política de senha refinada que você criou na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) e clique em **Propriedades** no painel **Tarefas** .
 
-5. Em **Impor histórico de senhas**, altere o valor de **Número de senhas lembradas** para **30**.
+5. Em **Impor histórico de senhas** , altere o valor de **Número de senhas lembradas** para **30** .
 
-6. Clique em **OK**.
+6. Clique em **OK** .
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -369,21 +369,21 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 ##### <a name="to-delete-a-fine-grained-password-policy"></a>Para excluir uma política de senha refinada
 
-1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
+1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador* * e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
-3. No Painel de Navegação do ADAC, expanda **System** e clique em **Password Settings Container**.
+3. No Painel de Navegação do ADAC, expanda **System** e clique em **Password Settings Container** .
 
-4. Selecione a política de senha refinada que você criou na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) e, no painel **Tarefas**, clique em **Propriedades**.
+4. Selecione a política de senha refinada que você criou na [Etapa 3: Criar uma nova política de senha refinada](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) e, no painel **Tarefas** , clique em **Propriedades** .
 
-5. Desmarque a caixa de seleção **Proteger contra exclusão acidental** e clique em **OK**.
+5. Desmarque a caixa de seleção **Proteger contra exclusão acidental** e clique em **OK** .
 
-6. Selecione a política de senha refinada e, no painel **Tarefas**, clique em **Excluir**.
+6. Selecione a política de senha refinada e, no painel **Tarefas** , clique em **Excluir** .
 
 7. Clique em **OK** na caixa de diálogo de confirmação.
 
-![Introdução aos](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell no</em> centro de administração do AD***
+![Introdução ao centro de administração do AD ](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -401,7 +401,7 @@ Ao usar o Visualizador de histórico do Windows PowerShell no Windows Server 201
 - Para usar o Visualizador de scripts do Windows PowerShell, você deve usar o Windows Server 2012 ou a versão mais recente do ADAC
 
     > [!NOTE]
-    > Você pode usar **Gerenciador do servidor** para instalar o ferramentas de administração de servidor remoto (RSAT) para usar a versão correta do centro administrativo do Active Directory para gerenciar a lixeira por meio de uma interface do usuário.
+    > Você pode usar _ *Gerenciador do servidor* * para instalar o ferramentas de administração de servidor remoto (RSAT) para usar a versão correta do centro administrativo do Active Directory para gerenciar a lixeira por meio de uma interface do usuário.
     >
     > Para obter informações sobre como instalar o RSAT, consulte o artigo [ferramentas de administração de servidor remoto](../../../../remote/remote-server-administration-tools.md).
 
@@ -409,17 +409,17 @@ Ao usar o Visualizador de histórico do Windows PowerShell no Windows Server 201
 
 ### <a name="windows-powershell-history-viewer-step-by-step"></a>Visualizador do Histórico do Windows PowerShell passo a passo
 
-No procedimento a seguir, você usará o Visualizador do Histórico do Windows PowerShell no ADAC para construir um script do Windows PowerShell.  Antes de começar esse procedimento, remova o usuário **test1** do grupo **group1**.
+No procedimento a seguir, você usará o Visualizador do Histórico do Windows PowerShell no ADAC para construir um script do Windows PowerShell.  Antes de começar esse procedimento, remova o usuário **test1** do grupo **group1** .
 
 #### <a name="to-construct-a-script-using-powershell-history-viewer"></a>Para construir um script usando o Visualizador do Histórico do PowerShell
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em **Executar como administrador** e digite **dsac.exe** para abrir ADAC.
 
-2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
+2. Clique em **Gerenciar** , em **Adicionar Nós de Navegação** , selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK** .
 
 3. Expanda o painel **Windows PowerShell History** na parte inferior da tela do ADAC.
 
-4. Selecione o usuário **test1**.
+4. Selecione o usuário **test1** .
 
 5. Clique em **Adicionar ao grupo...** no painel **tarefas** .
 

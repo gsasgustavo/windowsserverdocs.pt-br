@@ -2,22 +2,22 @@
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Atualizações de componentes dos Serviços de Diretório
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 39f13d18210a6527c5da2ccb6655150be9608a46
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 85095e1b75ca5c2ae781ffddbeed43e5bb3a3864
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939586"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070758"
 ---
 # <a name="directory-services-component-updates"></a>Atualizações de componentes dos Serviços de Diretório
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.
@@ -55,7 +55,7 @@ Com o lançamento, há novos níveis funcionais de domínio e floresta:
 
 1.  Proteções no lado do DC para *usuários protegidos*
 
-    *Usuários protegidos* que se autenticam em um domínio do Windows Server 2012 R2 **não podem mais**:
+    *Usuários protegidos* que se autenticam em um domínio do Windows Server 2012 R2 **não podem mais** :
 
     -   Autenticar-se com a autenticação NTLM
 
@@ -112,7 +112,7 @@ Nova criação de domínio em uma floresta existente
 ### <a name="adprep"></a>A
 Não há nenhuma nova operação de floresta ou domínio nesta versão.
 
-Esses arquivos. ldf contêm alterações de esquema para o **serviço de registro de dispositivo**.
+Esses arquivos. ldf contêm alterações de esquema para o **serviço de registro de dispositivo** .
 
 1.  Sch59
 
@@ -147,7 +147,7 @@ Esses arquivos. ldf contêm alterações de esquema para o **serviço de registr
 ### <a name="overview"></a>Visão geral
 O FRS foi preterido no Windows Server 2012 R2.  A substituição do FRS é realizada pela imposição de um DFL (nível funcional mínimo de domínio) do Windows Server 2008.  Essa imposição estará presente somente se o novo domínio for criado usando Gerenciador do Servidor ou o Windows PowerShell.
 
-Use o parâmetro-DomainMode com os cmdlets install-ADDSForest ou install-ADDSDomain para especificar o nível funcional do domínio.  Os valores com suporte para esse parâmetro podem ser um número inteiro válido ou um valor de cadeia de caracteres enumerado correspondente. Por exemplo, para definir o nível de modo de domínio como Windows Server 2008 R2, você pode especificar o valor 4 ou "Win2008R2".  Ao executar esses cmdlets do Server 2012 R2, os valores válidos incluem aqueles para Windows Server 2008 (3, Win2008) Windows Server 2008 R2 (4, Win2008R2) Windows Server 2012 (5, Win2012) e Windows Server 2012 R2 (6, Win2012R2). O nível de domínio funcional não pode ser inferior ao nível funcional da floresta, mas pode ser superior.  Como o FRS foi preterido nesta versão, o Windows Server 2003 (2, Win2003) não é um parâmetro reconhecido com esses cmdlets quando executado do Windows Server 2012 R2.
+Use o parâmetro-DomainMode com os cmdlets Install-ADDSForest ou Install-ADDSDomain para especificar o nível funcional do domínio.  Os valores com suporte para esse parâmetro podem ser um número inteiro válido ou um valor de cadeia de caracteres enumerado correspondente. Por exemplo, para definir o nível de modo de domínio como Windows Server 2008 R2, você pode especificar o valor 4 ou "Win2008R2".  Ao executar esses cmdlets do Server 2012 R2, os valores válidos incluem aqueles para Windows Server 2008 (3, Win2008) Windows Server 2008 R2 (4, Win2008R2) Windows Server 2012 (5, Win2012) e Windows Server 2012 R2 (6, Win2012R2). O nível de domínio funcional não pode ser inferior ao nível funcional da floresta, mas pode ser superior.  Como o FRS foi preterido nesta versão, o Windows Server 2003 (2, Win2003) não é um parâmetro reconhecido com esses cmdlets quando executado do Windows Server 2012 R2.
 
 ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
 
@@ -269,9 +269,9 @@ Log Record Bytes Generated: 0
 
 1.  Abra LDP.exe e conecte-se e associe-se a um controlador de domínio.
 
-2.  No menu **Opções** , clique em **controles**.
+2.  No menu **Opções** , clique em **controles** .
 
-3.  Na caixa de diálogo controles, expanda o menu suspenso **carregar predefinido** , clique em **Pesquisar estatísticas** e clique em **OK**.
+3.  Na caixa de diálogo controles, expanda o menu suspenso **carregar predefinido** , clique em **Pesquisar estatísticas** e clique em **OK** .
 
     ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
@@ -279,7 +279,7 @@ Log Record Bytes Generated: 0
 
 5.  Na caixa de diálogo Pesquisar, selecione o botão **Opções** .
 
-6.  Verifique se a caixa de seleção **estendida** está marcada na caixa de diálogo opções de pesquisa e selecione **OK**.
+6.  Verifique se a caixa de seleção **estendida** está marcada na caixa de diálogo opções de pesquisa e selecione **OK** .
 
     ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
 
@@ -301,7 +301,7 @@ Execute o seguinte em um controlador de domínio ou em um cliente ou servidor in
 
 [Como Active Directory pesquisas funcionam](/previous-versions/windows/it-pro/windows-server-2003/cc755809(v=ws.10))
 
-[Criando aplicativos mais eficientes habilitados para o Microsoft Active Directory](/previous-versions/ms808539(v=msdn.10))
+[Criando aplicativos Microsoft Active Directory-Enabled mais eficientes](/previous-versions/ms808539(v=msdn.10))
 
 [951581](https://support.microsoft.com/kb/951581) consultas LDAP são executadas mais lentamente do que o esperado no serviço de diretório ad ou LDS/Adam e a ID de evento 1644 pode ser registrada
 

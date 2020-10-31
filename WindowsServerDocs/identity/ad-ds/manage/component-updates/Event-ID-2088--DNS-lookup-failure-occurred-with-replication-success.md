@@ -2,16 +2,16 @@
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: ID do evento 2088-falha na pesquisa de DNS com êxito de replicação
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a6e78c458f92e477ddeaf156370f5e254caf4679
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 41ab450c98dd607c3c849fb94a1adbb9f1708375
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941336"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070708"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>ID do evento 2088: falha de pesquisa de DNS ocorreu com êxito na replicação
 
@@ -39,7 +39,7 @@ A configuração de DNS inválida pode estar afetando outras operações essenci
 
 Você deve resolver imediatamente esse erro de configuração de DNS para que esse controlador de domínio possa resolver o endereço IP do controlador de domínio de origem usando DNS.
 
-Nome de servidor alternativo: DC1 falha no nome de host DNS: 4a8717eb-8e58-456c-995a-c92e4add7e8e. _msdcs. contoso. com
+Nome de servidor alternativo: DC1 falha no nome de host DNS: 4a8717eb-8e58-456c-995a-c92e4add7e8e._msdcs. contoso. com
 
 Observação: por padrão, apenas até 10 falhas de DNS são mostradas para um determinado período de 12 horas, mesmo se ocorrerem mais de 10 falhas.  Para registrar em log todos os eventos de falha individuais, defina o seguinte valor de registro de diagnóstico como 1:
 

@@ -6,12 +6,13 @@ manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
 ms.date: 10/29/2020
-ms.openlocfilehash: ebf5617c108d959e4c4e107652f48ad4a4b53c08
-ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
+ms.custom: contperfq1
+ms.openlocfilehash: d121fb8f4899bcf70468035c9d7595504f3b3b45
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035762"
+ms.locfileid: "93071018"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Como detectar, habilitar e desabilitar SMBv1, SMBv2 e SMBv3 no Windows
 
@@ -54,7 +55,9 @@ O protocolo SMBv2 foi introduzido no Windows Vista e no Windows Server 2008, enq
 
 [Novidades do SMB](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff625695(v=ws.10))  
 
-## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-windows-server-2016-and-windows-server-2019"></a>Como remover normalmente o SMB v1 em Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016 e Windows Server 2019
+## <a name="how-to-remove-smb-v1"></a>Como remover o SMB v1
+
+Veja como remover o SMBv1 no Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016 e Windows 2012 R2.
 
 #### <a name="powershell-methods"></a>Métodos do PowerShell
 

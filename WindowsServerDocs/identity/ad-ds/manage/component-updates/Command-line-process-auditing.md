@@ -2,22 +2,22 @@
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: Auditoria de processo de linha de comando
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 12bf07aa5fb60f18cdd5b04b7d7f91c00388ed42
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: d08032a01a1c3bf2fd03ba302d6eaba5162c317d
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939566"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070738"
 ---
 # <a name="command-line-process-auditing"></a>Auditoria de processo de linha de comando
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 R2
 
-**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.

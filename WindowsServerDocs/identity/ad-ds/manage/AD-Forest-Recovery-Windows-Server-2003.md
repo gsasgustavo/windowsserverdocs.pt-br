@@ -1,17 +1,17 @@
 ---
 title: Recuperação de floresta do AD-recuperação do Windows Server 2003
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 07/07/2017
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 01557790072d4606cc98c32c7a437078940c258d
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b5c633ad1e8fd354ae75baf88ef1393e91f8dc12
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939606"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070748"
 ---
 # <a name="ad-forest-recovery---windows-server-2003-recovery"></a>Recuperação de floresta do AD-recuperação do Windows Server 2003
 
@@ -26,7 +26,7 @@ Este tópico inclui procedimentos de recuperação de floresta para controladore
 ## <a name="backing-up-the-system-state-data"></a>Fazendo backup dos dados de estado do sistema
 Use o procedimento a seguir para fazer backup dos dados de estado do sistema, juntamente com quaisquer outros dados que você selecionou para a operação de backup atual, de um controlador de domínio que executa o Windows Server 2003. O Windows Server 2003 inclui a ferramenta Ntbackup, que pode ser usada para fazer backup dos dados de estado do sistema.
 
-A associação em **Administradores** ou **operadores de backup**, ou equivalente, é o mínimo necessário para fazer backup de arquivos e pastas.
+A associação em **Administradores** ou **operadores de backup** , ou equivalente, é o mínimo necessário para fazer backup de arquivos e pastas.
 
 Se você estiver fazendo backup dos dados de estado do sistema em uma fita e o programa de backup indicar que não há mídia não utilizada disponível, talvez seja necessário usar o armazenamento removível. Isso adiciona a fita ao pool de mídia livre para que o backup possa usá-la.
 
@@ -34,11 +34,11 @@ Você só pode fazer backup dos dados de estado do sistema em um computador loca
 
 ### <a name="to-back-up-the-system-state-data-on-a-domain-controller-that-runs-windows-server-2003"></a>Para fazer backup dos dados de estado do sistema em um controlador de domínio que executa o Windows Server 2003
 
-1. Clique em **Iniciar**, aponte **para todos os programas**, **acessórios**, ferramentas do **sistema**e clique em **backup**.
-2. Na página de **boas-vindas** , clique em **modo avançado**.
+1. Clique em **Iniciar** , aponte **para todos os programas** , **acessórios** , ferramentas do **sistema** e clique em **backup** .
+2. Na página de **boas-vindas** , clique em **modo avançado** .
 3. Na guia **backup** , marque a caixa de seleção de qualquer unidade, pasta ou arquivo do qual você deseja fazer backup.
 4. Marque a caixa de seleção **estado do sistema** .
-5. Clique em **Iniciar backup**.
+5. Clique em **Iniciar backup** .
 
 ## <a name="performing-a-nonauthoritative-restore"></a>Executando uma restauração não autoritativa
 
@@ -54,13 +54,13 @@ Para poupar tempo necessário para reinstalar o software, determine se os aplica
 ### <a name="to-perform-a-nonauthoritative-restore"></a>Para executar uma restauração não autoritativa
 
 1. Depois de iniciar o controlador de domínio, pressione F8 para reiniciar o computador em Modo de Restauração dos Serviços de Diretório (DSRM).
-2. Selecione **modo de restauração dos serviços de diretório (somente controladores de domínio do Windows)**.
+2. Selecione **modo de restauração dos serviços de diretório (somente controladores de domínio do Windows)** .
 3. Selecione o sistema operacional que você deseja iniciar no modo de restauração.
 4. Faça logon como administrador (você só pode usar uma conta de computador local, nenhuma opção de logon de domínio está disponível).
-5. Em um prompt de comando, digite **Ntbackup**e pressione Enter.
-6. Na página de **boas-vindas** , clique em **modo avançado**e selecione a guia **restaurar e gerenciar mídia** . (não selecione **Assistente de restauração**.)
+5. Em um prompt de comando, digite **Ntbackup** e pressione Enter.
+6. Na página de **boas-vindas** , clique em **modo avançado** e selecione a guia **restaurar e gerenciar mídia** . (não selecione **Assistente de restauração** .)
 7. Selecione o arquivo de backup apropriado para restaurar e verifique se as caixas de seleção **disco do sistema** e **estado do sistema** estão marcadas.
-8. Clique em **Iniciar Restauração**.
+8. Clique em **Iniciar Restauração** .
 9. Quando a operação de restauração for concluída, reinicie o computador.
 
 Use o procedimento a seguir para executar uma restauração autoritativa (também conhecida como primária) do SYSVOL em um controlador de domínio que executa o Windows Server 2003. Execute este procedimento somente no primeiro DC do Windows Server 2003 que é restaurado no domínio.
@@ -68,13 +68,13 @@ Use o procedimento a seguir para executar uma restauração autoritativa (també
 ### <a name="to-perform-an-authoritative-restore-of-sysvol"></a>Para executar uma restauração autoritativa do SYSVOL
 
 1. Execute as etapas 1 a 8 no procedimento anterior.
-2. Na caixa de diálogo **confirmar restauração** , clique em **avançado**.
-3. Para executar uma restauração autoritativa do SYSVOL, marque a caixa de seleção **ao restaurar conjuntos de dados replicados, marque os dados restaurados como os dados primários para todas as réplicas**.
+2. Na caixa de diálogo **confirmar restauração** , clique em **avançado** .
+3. Para executar uma restauração autoritativa do SYSVOL, marque a caixa de seleção **ao restaurar conjuntos de dados replicados, marque os dados restaurados como os dados primários para todas as réplicas** .
 
    > [!NOTE]
    > Marcar os dados restaurados como os dados primários no backup é equivalente a definir a entrada **BurFlags** como D4 na seguinte subchave do registro:
    >
-   > **HKEY_LOCAL_MACHINE conjuntos \\ de réplicas do \system\currentcontrolset\services\ntfrs\parameters\cumulative** *GUID* do
+   > **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Cumulative Replica Sets\\** *GUID* do
 
 4. Quando a operação de restauração for concluída, reinicie o computador.
 
@@ -86,18 +86,18 @@ Se o DC que você restaurou do backup estiver executando o Windows Server 2003, 
 
 1. Abra o assistente de componentes do Windows. Para abrir o assistente:
 
-   - Clique em **Iniciar**, clique em **Painel de Controle** e clique em **Adicionar ou Remover Programas**.
-   - Clique em **Adicionar ou remover componentes do Windows**.
+   - Clique em **Iniciar** , clique em **Painel de Controle** e clique em **Adicionar ou Remover Programas** .
+   - Clique em **Adicionar ou remover componentes do Windows** .
 
-2. Em **componentes**, marque a caixa de seleção **serviços de rede** e clique em **detalhes**.
-3. Em **Subcomponentes de serviços de rede**, marque a caixa de seleção **DNS (sistema de nomes de domínio)** , clique em **OK**e em **Avançar**.
-4. Se for solicitado, em **copiar arquivos de**, digite o caminho completo dos arquivos de distribuição e clique em **OK**.
+2. Em **componentes** , marque a caixa de seleção **serviços de rede** e clique em **detalhes** .
+3. Em **Subcomponentes de serviços de rede** , marque a caixa de seleção **DNS (sistema de nomes de domínio)** , clique em **OK** e em **Avançar** .
+4. Se for solicitado, em **copiar arquivos de** , digite o caminho completo dos arquivos de distribuição e clique em **OK** .
 
    Após a instalação, conclua as etapas a seguir para configurar o servidor DNS.
 
-5. Clique em **Iniciar**, aponte para **todos os programas**, aponte para **Ferramentas administrativas**e clique em **DNS**.
+5. Clique em **Iniciar** , aponte para **todos os programas** , aponte para **Ferramentas administrativas** e clique em **DNS** .
 6. Crie zonas DNS para os mesmos nomes de domínio DNS que foram hospedados nos servidores DNS antes do mau funcionamento crítico. Para obter mais informações, consulte Adicionar uma zona de pesquisa direta ( [https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574) ).
-7. Configure os dados DNS como existiam antes do mau funcionamento crítico. Por exemplo:
+7. Configure os dados DNS como existiam antes do mau funcionamento crítico. Por exemplo: 
 
    - Configure as zonas DNS a serem armazenadas no AD DS. Para obter mais informações, consulte alterar o tipo de zona ( [https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579) ).
    - Configure a zona DNS que é autoritativa para registros de recurso do localizador de controlador de domínio (localizador de DC) para permitir atualização dinâmica segura. Para obter mais informações, consulte permitir apenas atualizações dinâmicas seguras ( [https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580) ).

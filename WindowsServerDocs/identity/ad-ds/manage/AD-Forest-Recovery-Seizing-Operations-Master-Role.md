@@ -1,17 +1,17 @@
 ---
 title: Recuperação de floresta do AD-capturando uma função de mestre de operações
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
-ms.openlocfilehash: 7d7b1abfaf7e3ed4f3780ff2d819340ba8fe98c0
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 76e32be8db1647a209f94b49484898cf88333040
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941526"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070798"
 ---
 # <a name="ad-forest-recovery---seizing-an-operations-master-role"></a>Recuperação de floresta do AD-capturando uma função de mestre de operações
 
@@ -42,10 +42,10 @@ Use o procedimento a seguir para executar uma função de mestre de operações 
 4. No prompt **conexões do servidor:** , digite o seguinte comando e pressione ENTER:
 
    ```
-   Connect to server ServerFQDN
+   Connect to server ServerFQDN
    ```
 
-   Em que *ServerFQDN* é o FQDN (nome de domínio totalmente qualificado) desse DC, por exemplo: **conectar-se ao servidor nycdc01.example.com**.
+   Em que *ServerFQDN* é o FQDN (nome de domínio totalmente qualificado) desse DC, por exemplo: **conectar-se ao servidor nycdc01.example.com** .
 
    Se *ServerFQDN* não tiver sucesso, use o nome NetBIOS do controlador de domínio.
 
@@ -68,7 +68,7 @@ Use o procedimento a seguir para executar uma função de mestre de operações 
 Depois de confirmar a solicitação, Active Directory ou AD DS tentar transferir a função. Quando a transferência falha, algumas informações de erro são exibidas e Active Directory ou AD DS prossegue com a captura. Após a conclusão da captura, será exibida uma lista das funções e o nome do protocolo LDAP do servidor que contém atualmente cada função. Você também pode executar **netdom query fsmo** em um prompt de comandos com privilégios elevados para verificar os detentores de função atuais.
 
 > [!NOTE]
-> Se este computador não foi um mestre RID antes da falha e você tentar executar a função mestre RID, o computador tentará sincronizar com um parceiro de replicação antes de aceitar essa função. No entanto, como essa etapa é executada quando o computador está isolado, ele não terá sucesso na sincronização com um parceiro. Portanto, uma caixa de diálogo é exibida perguntando se você deseja continuar com a operação, apesar deste computador não poder ser sincronizado com um parceiro. Clique em **Sim**.
+> Se este computador não foi um mestre RID antes da falha e você tentar executar a função mestre RID, o computador tentará sincronizar com um parceiro de replicação antes de aceitar essa função. No entanto, como essa etapa é executada quando o computador está isolado, ele não terá sucesso na sincronização com um parceiro. Portanto, uma caixa de diálogo é exibida perguntando se você deseja continuar com a operação, apesar deste computador não poder ser sincronizado com um parceiro. Clique em **Sim** .
 
 ## <a name="next-steps"></a>Próximas etapas
 

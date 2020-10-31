@@ -2,16 +2,16 @@
 ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomia x isolamento
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: eccbfc7767821a15d32d6aabef156861cb409f40
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 4e422ce523a5433cafaad2b0bbaf45da154b6fa8
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941206"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071148"
 ---
 # <a name="autonomy-vs-isolation"></a>Autonomia x isolamento
 
@@ -19,17 +19,17 @@ ms.locfileid: "88941206"
 
 Você pode criar sua estrutura de Active Directory lógica para obter um dos seguintes:
 
--   **Autonomia**. Envolve o controle independente, mas não exclusivo de um recurso. Quando você alcança autonomia, os administradores têm autoridade para gerenciar recursos de forma independente; no entanto, os administradores com maior autoridade existem que também têm controle sobre esses recursos e podem assumir o controle, se necessário. Você pode criar sua estrutura de Active Directory lógica para obter os seguintes tipos de autonomia:
+-   **Autonomia** . Envolve o controle independente, mas não exclusivo de um recurso. Quando você alcança autonomia, os administradores têm autoridade para gerenciar recursos de forma independente; no entanto, os administradores com maior autoridade existem que também têm controle sobre esses recursos e podem assumir o controle, se necessário. Você pode criar sua estrutura de Active Directory lógica para obter os seguintes tipos de autonomia:
 
-    -   **Autonomia do serviço**. Esse tipo de autonomia envolve o controle sobre todo ou parte do gerenciamento de serviços.
+    -   **Autonomia do serviço** . Esse tipo de autonomia envolve o controle sobre todo ou parte do gerenciamento de serviços.
 
-    -   **Autonomia de dados**. Esse tipo de autonomia envolve o controle sobre todos ou parte dos dados armazenados no diretório ou em computadores membros que ingressaram no diretório.
+    -   **Autonomia de dados** . Esse tipo de autonomia envolve o controle sobre todos ou parte dos dados armazenados no diretório ou em computadores membros que ingressaram no diretório.
 
--   **Isolamento**. Envolve o controle independente e exclusivo de um recurso. Quando você atinge o isolamento, os administradores têm autoridade para gerenciar um recurso de forma independente, e nenhum outro administrador pode retirar o controle do recurso. Você pode projetar sua estrutura lógica de Active Directory para obter os seguintes tipos de isolamento:
+-   **Isolamento** . Envolve o controle independente e exclusivo de um recurso. Quando você atinge o isolamento, os administradores têm autoridade para gerenciar um recurso de forma independente, e nenhum outro administrador pode retirar o controle do recurso. Você pode projetar sua estrutura lógica de Active Directory para obter os seguintes tipos de isolamento:
 
-    -   **Isolamento de serviço**. Impede que os administradores (que não sejam os administradores especificamente designados para controlar o gerenciamento de serviços) controlem ou interfiram no gerenciamento de serviços.
+    -   **Isolamento de serviço** . Impede que os administradores (que não sejam os administradores especificamente designados para controlar o gerenciamento de serviços) controlem ou interfiram no gerenciamento de serviços.
 
-    -   **Isolamento de dados**. Impede que os administradores (que não sejam os administradores especificamente designados para controlar ou exibir dados) controlem ou exibam um subconjunto de dados no diretório ou em computadores membros que ingressaram no diretório.
+    -   **Isolamento de dados** . Impede que os administradores (que não sejam os administradores especificamente designados para controlar ou exibir dados) controlem ou exibam um subconjunto de dados no diretório ou em computadores membros que ingressaram no diretório.
 
 Os administradores que precisam apenas de autonomia aceitam que outros administradores com autoridade administrativa igual ou maior tenham controle igual ou maior sobre o gerenciamento de serviços ou de dados. Os administradores que precisam de isolamento têm controle exclusivo sobre o gerenciamento de serviços ou de dados. Criar um design para atingir a autonomia é geralmente menos caro do que criar um design para atingir o isolamento.
 
@@ -41,7 +41,7 @@ O número de florestas que você precisa implantar baseia-se nos requisitos de a
 ### <a name="data-isolation"></a>Isolamento dos dados
 O isolamento de dados envolve o controle exclusivo sobre os dados pelo grupo ou pela organização que possui os dados. É importante observar que os administradores de serviço têm a capacidade de assumir o controle de um recurso de administradores de dados. E os administradores de dados não têm a capacidade de impedir que os administradores de serviço acessem os recursos que eles controlam. Portanto, você não pode obter isolamento de dados quando outro grupo dentro da organização é responsável pela administração do serviço. Se um grupo exigir isolamento de dados, esse grupo também deverá assumir a responsabilidade pela administração do serviço.
 
-Como os dados armazenados em AD DS e em computadores ingressados no AD DS não podem ser isolados dos administradores de serviço, a única maneira de um grupo dentro de uma organização atingir o isolamento de dados completo é criar uma floresta separada para esses dados. Organizações para as quais as consequências de um ataque por software mal-intencionado ou por um administrador de serviço forçado são substanciais podem optar por criar uma floresta separada para obter isolamento de dados. Normalmente, os requisitos legais criam uma necessidade desse tipo de isolamento de dados. Por exemplo:
+Como os dados armazenados em AD DS e em computadores ingressados no AD DS não podem ser isolados dos administradores de serviço, a única maneira de um grupo dentro de uma organização atingir o isolamento de dados completo é criar uma floresta separada para esses dados. Organizações para as quais as consequências de um ataque por software mal-intencionado ou por um administrador de serviço forçado são substanciais podem optar por criar uma floresta separada para obter isolamento de dados. Normalmente, os requisitos legais criam uma necessidade desse tipo de isolamento de dados. Por exemplo: 
 
 -   Uma instituição financeira é exigida por lei para limitar o acesso a dados que pertencem a clientes em uma jurisdição específica para usuários, computadores e administradores localizados nessa jurisdição. Embora a instituição confie nos administradores de serviço que trabalham fora da área protegida, se a limitação de acesso for violada, a instituição não poderá mais fazer negócios nessa jurisdição. Portanto, a instituição financeira deve isolar os dados dos administradores de serviço fora dessa jurisdição. Observe que a criptografia nem sempre é uma alternativa para essa solução. A criptografia pode não proteger dados de administradores de serviço.
 
@@ -58,7 +58,7 @@ A autonomia de dados não impede que os administradores de serviço na floresta 
 ### <a name="service-isolation"></a>Isolamento de serviço
 O isolamento de serviço envolve o controle exclusivo da infraestrutura de Active Directory. Os grupos que exigem o isolamento de serviço exigem que nenhum administrador fora do grupo possa interferir na operação do serviço de diretório.
 
-Os requisitos operacionais ou legais normalmente criam uma necessidade de isolamento de serviço. Por exemplo:
+Os requisitos operacionais ou legais normalmente criam uma necessidade de isolamento de serviço. Por exemplo: 
 
 -   Uma empresa de manufatura tem um aplicativo crítico que controla equipamentos no chão de fábrica. As interrupções no serviço em outras partes da rede da organização não podem ter permissão para interferir na operação do piso de fábrica.
 

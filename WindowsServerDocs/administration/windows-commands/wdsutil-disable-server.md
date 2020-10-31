@@ -1,20 +1,20 @@
 ---
-title: desabilitar-servidor
-description: Artigo de referência para Disable-Server, que desabilita todos os serviços de um servidor de serviços de implantação do Windows.
+title: WDSUTIL Disable-Server
+description: Artigo de referência para o comando WDSUTIL Disable-Server, que desabilita todos os serviços de um servidor de serviços de implantação do Windows.
 ms.topic: reference
 ms.assetid: b69fcfe0-b744-4794-bc75-2c9218c0ba66
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ff13092b5d99cd007d30eee80076f18814e138d
-ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
+ms.openlocfilehash: d8af0a0c929e2bff341b2b5bff71d0838b09d418
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524161"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070388"
 ---
-# <a name="disable-server"></a>desabilitar-servidor
+# <a name="wdsutil-disable-server"></a>WDSUTIL Disable-Server
 
 Desabilita todos os serviços de um servidor de serviços de implantação do Windows.
 
@@ -26,15 +26,19 @@ wdsutil [Options] /Disable-Server [/Server:<Server name>]
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------|-----------|
-|[/Server:\<Server name>]|Especifica o nome do servidor. Pode ser o nome NetBIOS ou o FQDN (nome de domínio totalmente qualificado). Se nenhum nome de servidor for especificado, o servidor local será usado.|
+| Parâmetro | Descrição |
+|--|--|
+| [/Server:`<Servername>`] | Especifica o nome do servidor. Pode ser o nome NetBIOS ou o FQDN (nome de domínio totalmente qualificado). Se nenhum nome de servidor for especificado, o servidor local será usado. |
 
 ## <a name="examples"></a>Exemplos
 
-Para desabilitar o servidor, execute um dos seguintes:
+Para desabilitar o servidor, digite:
+
 ```
 wdsutil /Disable-Server
+```
+
+```
 wdsutil /Verbose /Disable-Server /Server:MyWDSServer
 ```
 
@@ -42,3 +46,4 @@ wdsutil /Verbose /Disable-Server /Server:MyWDSServer
 
 - [Chave da sintaxe de linha de comando](command-line-syntax-key.md)
 
+- [Cmdlets dos serviços de implantação do Windows](/powershell/module/wds)

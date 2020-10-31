@@ -2,16 +2,16 @@
 ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Conceitos de replicação do Active Directory
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 403a8be3d6b7fc6330395bf6e4d20141e01b76ba
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 6acd9d1974395cdd4c07df3b09d47ffb104a16ef
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940316"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070988"
 ---
 # <a name="active-directory-replication-concepts"></a>Conceitos de replicação do Active Directory
 
@@ -65,7 +65,7 @@ Para controladores de domínio do Windows Server 2003, você pode reequilibrar a
 
 Para RODCs do Windows Server 2008, o funcionamento normal do KCC fornece algum rebalanceamento, o que elimina a necessidade de usar uma ferramenta adicional, como o Adlb.exe. A nova funcionalidade é habilitada por padrão. Você pode desabilitá-lo adicionando o seguinte conjunto de chaves do registro no RODC:
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\NTDS\Parameters**
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**
 
 **"Balanceamento de carga de BH aleatório permitido"** 
  **1 = habilitado (padrão), 0 = desabilitado**
@@ -75,7 +75,7 @@ Para obter mais informações sobre como esses aprimoramentos do KCC funcionam, 
 ## <a name="failover-functionality"></a><a name="BKMK_3"></a>Funcionalidade de failover
 Os sites asseguram que a replicação seja roteada em relação a falhas de rede e controladores de domínio offline. O KCC é executado em intervalos especificados para ajustar a topologia de replicação para alterações que ocorrem em AD DS, como quando novos controladores de domínio são adicionados e novos sites são criados. O KCC revisa o status de replicação das conexões existentes para determinar se as conexões não estão funcionando. Se uma conexão não estiver funcionando devido a um controlador de domínio com falha, o KCC criará automaticamente conexões temporárias com outros parceiros de replicação (se disponíveis) para garantir que a replicação ocorra. Se todos os controladores de domínio em um site estiverem indisponíveis, o KCC criará automaticamente conexões de replicação entre os controladores de domínio de outro site.
 
-## <a name="subnet"></a><a name="BKMK_4"></a>Redes
+## <a name="subnet"></a><a name="BKMK_4"></a>Sub-rede
 Uma sub-rede é um segmento de uma rede TCP/IP à qual um conjunto de endereços IP lógicos é atribuído. Sub-redes agrupam computadores de uma maneira que identifica sua proximidade física na rede. Os objetos de sub-rede no AD DS identificam os endereços de rede que são usados para mapear computadores para sites.
 
 ## <a name="site"></a><a name="BKMK_5"></a>Site

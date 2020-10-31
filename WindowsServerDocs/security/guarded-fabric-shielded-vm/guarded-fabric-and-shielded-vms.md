@@ -5,12 +5,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: f81e77b0de231a03bcaa0cfe6877b1e67dd081db
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 62098234f75a35d5c7ab4d386e5d2ce41aaa3641
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989577"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071138"
 ---
 # <a name="guarded-fabric-and-shielded-vms-overview"></a>Visão geral sobre malha protegida e VMs blindadas
 
@@ -34,7 +34,7 @@ Quando um locatário cria VMs blindadas que são executadas em uma malha protegi
 
 ## <a name="video-introduction-to-shielded-virtual-machines"></a>Vídeo: introdução às máquinas virtuais blindadas
 
-> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016]
+> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player]
 
 ## <a name="attestation-modes-in-the-guarded-fabric-solution"></a>Modos de Atestado na solução de malha protegida
 
@@ -97,7 +97,7 @@ As VMs blindadas destinam-se ao uso em malhas onde os dados e o estado da máqui
 
 A tabela a seguir resume as diferenças entre as VMs blindadas e com suporte de criptografia.
 
-| Recurso        | Suporte à criptografia de geração 2     | Blindado de geração 2         |
+| Funcionalidade        | Suporte à criptografia de geração 2     | Blindado de geração 2         |
 |----------|--------------------|----------------|
 |Inicialização Segura        | Sim, obrigatória mas configurável        | Sim, obrigatória e imposta    |
 |Vtpm               | Sim, obrigatória mas configurável        | Sim, obrigatória e imposta    |
@@ -121,16 +121,16 @@ As VMs blindadas e as VMs com suporte à criptografia continuam a oferecer supor
 
 2. **Hosts exigem atestado.** O host protegido exige atestado. O modo de atestado é determinado pelo Serviço Guardião de Host:
 
-    - **Atestado confiável de TPM**: o host Hyper-V envia informações que incluem:
+    - **Atestado confiável de TPM** : o host Hyper-V envia informações que incluem:
       - Informações de identificação do TPM (sua chave de endosso)
       - Informações sobre os processos que foram iniciados durante a sequência de inicialização mais recente (o log do TCG)
       - Informações sobre a política de integridade de código (CI) que foi aplicada no host.
 
         O atestado acontece quando o host é iniciado e a cada 8 horas. Se, por algum motivo, um host não tiver um certificado de atestado quando uma VM tentar iniciar, isso também disparará o atestado.
 
-    - **Atestado de chave de host**: o host Hyper-V envia a metade pública do par de chaves. O HGS valida que a chave de host está registrada.
+    - **Atestado de chave de host** : o host Hyper-V envia a metade pública do par de chaves. O HGS valida que a chave de host está registrada.
 
-    - **Atestado de admin confiável**: o host do Hyper-V envia um tíquete Kerberos, que identifica os grupos de segurança em que o host está. O HGS valida que o host pertence a um grupo de segurança que foi configurado anteriormente pelo administrador de HGS confiável.
+    - **Atestado de admin confiável** : o host do Hyper-V envia um tíquete Kerberos, que identifica os grupos de segurança em que o host está. O HGS valida que o host pertence a um grupo de segurança que foi configurado anteriormente pelo administrador de HGS confiável.
 
 3. **O atestado tem êxito (ou falha).** O modo de atestado determina quais verificações são necessárias para atestar com êxito que o host está íntegro. Com o atestado confiável do TPM, a identidade do TPM do host, as medidas de inicialização e a política de integridade de código são validadas. Com o atestado de chave do host, somente o registro da chave do host é validado.
 

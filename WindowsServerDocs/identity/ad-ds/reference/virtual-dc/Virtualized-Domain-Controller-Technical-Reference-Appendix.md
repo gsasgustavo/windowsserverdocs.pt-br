@@ -2,16 +2,16 @@
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: Apêndice de referência técnica do controlador de domínio virtualizado
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6387abbe150630d2fd8f6f14724618a6ab32b94a
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: f387fd0e87887ea8e69732efa405299fb18fe800
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940276"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070898"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>Apêndice de referência técnica do controlador de domínio virtualizado
 
@@ -33,11 +33,11 @@ Este tópico aborda:
 
 -   **Disco diferencial** – uma cópia de uma máquina virtual que compartilha discos virtuais com a máquina virtual pai de maneira contínua. Isso geralmente conserva espaço em disco e permite que várias máquinas virtuais usem a mesma instalação de software.
 
--   **Cópia de VM**-uma cópia do sistema de arquivos de todos os arquivos e pastas relacionados de uma máquina virtual.
+-   **Cópia de VM** -uma cópia do sistema de arquivos de todos os arquivos e pastas relacionados de uma máquina virtual.
 
 -   **Cópia de arquivo VHD** – uma cópia do VHD de uma máquina virtual
 
--   **ID de geração de VM** -um inteiro de 128 bits fornecido à máquina virtual pelo hipervisor. Essa ID é armazenada na memória e redefinida toda vez que um instantâneo é aplicado. O design usa um mecanismo independente de hipervisor para identificando a ID de geração de VM na máquina virtual. A implementação do Hyper-V expõe a ID na tabela ACPI da máquina virtual.
+-   **ID de geração de VM** -um inteiro de 128 bits fornecido à máquina virtual pelo hipervisor. Essa ID é armazenada na memória e redefinida toda vez que um instantâneo é aplicado. O design usa um mecanismo independente de hipervisor para identificando a ID de VM-Generation na máquina virtual. A implementação do Hyper-V expõe a ID na tabela ACPI da máquina virtual.
 
 -   **Importação/exportação** – um recurso do Hyper-V que permite ao usuário salvar toda a máquina virtual (arquivos de VM, VHD e a configuração da máquina). Em seguida, ele permite que os usuários usem esse conjunto de arquivos para colocar o computador novamente na mesma máquina que a mesma VM (Restore), em um computador diferente como a mesma VM (mover) ou uma nova VM (cópia)
 

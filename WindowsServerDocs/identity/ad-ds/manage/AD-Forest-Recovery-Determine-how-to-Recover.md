@@ -1,17 +1,17 @@
 ---
 title: Recuperação de floresta do AD-determine como recuperar a floresta
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: dda621c8b567822a882e8230aba604ce0a115835
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2cf48d391e675507d3fc227efc4ab691b10234bb
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939786"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071338"
 ---
 # <a name="determine-how-to-recover-the-forest"></a>Determinar como recuperar a floresta
 
@@ -95,7 +95,7 @@ Prepare uma tabela que mostra as funções de cada DC no domínio, conforme most
 |DC_4|Windows Server 2012|Emulador de PDC, mestre de RID|Sim|Não|Não|Não|Não|Sim|Não|
 |DC_5|Windows Server 2012|Nenhum|Não|Não|Sim|Sim|Não|Sim|Sim|
 |RODC_1|Windows Server 2008 R2|Nenhum|Sim|Sim|Sim|Sim|Sim|Sim|Não|
-|RODC_2|Windows Server 2008|Nenhum|Sim|Sim|Não|Sim|Sim|Sim|Não|
+|RODC_2|Windows Server 2008|Nenhum|Sim|Sim|Não|Sim|Sim|Sim|Não|
 
 Para cada domínio na floresta, identifique um único DC gravável que tenha um backup confiável do banco de dados Active Directory para esse domínio. Tenha cuidado ao escolher um backup para restaurar um DC. Se o dia e a causa da falha forem aproximadamente conhecidos, a recomendação geral é usar um backup feito alguns dias antes dessa data.
 

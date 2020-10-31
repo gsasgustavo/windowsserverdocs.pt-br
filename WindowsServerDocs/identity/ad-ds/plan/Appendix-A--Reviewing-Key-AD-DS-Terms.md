@@ -2,16 +2,16 @@
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Apêndice A-revisando os principais termos de AD DS
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2e899b3f61a23e29a3ecd6a312e50b596ce4e172
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 4f8f9d0b89868ccdc795740ecadb00b979dbc066
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941236"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071178"
 ---
 # <a name="appendix-a-reviewing-key-ad-ds-terms"></a>Apêndice A: Examinar os principais termos do AD DS
 
@@ -22,15 +22,15 @@ Os termos a seguir são relevantes para o processo de implantação do Windows S
 ## <a name="active-directory-domain"></a>Domínio do Active Directory
 Uma unidade administrativa em uma rede de computador que, para conveniência de gerenciamento, agrupa vários recursos, incluindo o seguinte:
 
--   **Identidade de usuário em toda a rede**. Em domínios, as identidades de usuário podem ser criadas uma vez e, em seguida, referenciadas em qualquer computador que tenha ingressado na floresta em que o domínio está localizado. Controladores de domínio que compõem uma conta de usuário de armazenamento de domínio e credenciais de usuário, como senhas ou certificados, com segurança.
+-   **Identidade de usuário em toda a rede** . Em domínios, as identidades de usuário podem ser criadas uma vez e, em seguida, referenciadas em qualquer computador que tenha ingressado na floresta em que o domínio está localizado. Controladores de domínio que compõem uma conta de usuário de armazenamento de domínio e credenciais de usuário, como senhas ou certificados, com segurança.
 
--   **Autenticação**. Os controladores de domínio fornecem serviços de autenticação para usuários. Eles também fornecem dados de autorização adicionais, como associações de grupo de usuários. Os administradores podem usar esses serviços para controlar o acesso aos recursos na rede.
+-   **Autenticação** . Os controladores de domínio fornecem serviços de autenticação para usuários. Eles também fornecem dados de autorização adicionais, como associações de grupo de usuários. Os administradores podem usar esses serviços para controlar o acesso aos recursos na rede.
 
--   **Relações de confiança**. Os domínios estendem os serviços de autenticação para usuários em outros domínios em sua própria floresta por meio de relações de confiança bidirecionais automáticas. Os domínios também estendem os serviços de autenticação para usuários em domínios em outras florestas por meio de relações de confiança de floresta ou relações de confiança externas criadas manualmente.
+-   **Relações de confiança** . Os domínios estendem os serviços de autenticação para usuários em outros domínios em sua própria floresta por meio de relações de confiança bidirecionais automáticas. Os domínios também estendem os serviços de autenticação para usuários em domínios em outras florestas por meio de relações de confiança de floresta ou relações de confiança externas criadas manualmente.
 
--   **Administração de política**. Um domínio é um escopo de políticas administrativas, como a complexidade de senha e as regras de reutilização de senha.
+-   **Administração de política** . Um domínio é um escopo de políticas administrativas, como a complexidade de senha e as regras de reutilização de senha.
 
--   **Replicação**. Um domínio define uma partição da árvore de diretórios que fornece dados adequados para fornecer os serviços necessários e que são replicados entre controladores de domínio. Dessa forma, todos os controladores de domínio são pares em um domínio e são gerenciados como uma unidade.
+-   **Replicação** . Um domínio define uma partição da árvore de diretórios que fornece dados adequados para fornecer os serviços necessários e que são replicados entre controladores de domínio. Dessa forma, todos os controladores de domínio são pares em um domínio e são gerenciados como uma unidade.
 
 ## <a name="active-directory-forest"></a>Floresta do Active Directory
 Uma coleção de um ou mais domínios Active Directory que compartilham uma estrutura lógica comum, esquema de diretório e configuração de rede, bem como relações de confiança transitivas automáticas e bidirecionais. Cada floresta é uma única instância do diretório e define um limite de segurança.

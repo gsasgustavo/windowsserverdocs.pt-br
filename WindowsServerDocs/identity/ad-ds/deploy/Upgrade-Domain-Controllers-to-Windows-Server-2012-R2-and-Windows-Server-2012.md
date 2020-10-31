@@ -1,17 +1,17 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Atualizar controladores de domínio para o Windows Server 2012 R2 e o Windows Server 2012
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 4034ea96fbe1f758d6948b2bc52ba9786158b0ba
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: edffa7869aa1895a09e7007c375b8973f68e4eed
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940556"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069898"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>Atualizar controladores de domínio para o Windows Server 2012 R2 e o Windows Server 2012
 
@@ -122,9 +122,9 @@ A tabela a seguir lista alguns exemplos de como definir essas configurações pa
 |||
 |-|-|
 |**Cenário**|**Configuração (ões) recomendada (s)**|
-|**Gerenciado pelo WSUS**<p>-Instalar atualizações uma vez por semana<br />-Reinicializar sexta-feiras em 23h|Configurar as máquinas para instalação automática, impedir a reinicialização automática até a hora desejada<p>**Política**: Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Política**: sem reinicialização automática com usuários conectados (desabilitado)<p>**Datas limites de WSUS**: definido para sextas-feitas às 23h|
+|**Gerenciado pelo WSUS**<p>-Instalar atualizações uma vez por semana<br />-Reinicializar sexta-feiras em 23h|Configurar as máquinas para instalação automática, impedir a reinicialização automática até a hora desejada<p>**Política** : Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Política** : sem reinicialização automática com usuários conectados (desabilitado)<p>**Datas limites de WSUS** : definido para sextas-feitas às 23h|
 |**Gerenciado pelo WSUS**<p>-O uptais é instalado em diferentes horas/dias|Definir grupos de destino para diferentes grupos de máquinas que devem ser atualizados em conjunto<p>Usar as etapas acima para o cenário anterior<p>Definir datas limites diferentes para grupos de destino diferentes|
-|**Não gerenciado pelo WSUS-sem suporte para prazos finais**<p>-O escalonamento é instalado em momentos diferentes|**Política**: Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Chave do Registro:** Habilitar a chave do Registro discutida no artigo da Base de Dados de Conhecimento da Microsoft [2835627](https://support.microsoft.com/kb/2835627)<p>**Política:** Atraso aleatório na manutenção automática (Habilitado)<p>Defina **Atraso aleatório na manutenção regular** de PT6H para atraso aleatório de seis horas para obter o seguinte comportamento:<p>-As atualizações serão instaladas no tempo de manutenção configurado mais um atraso aleatório<p>-A reinicialização de cada máquina ocorrerá exatamente três dias depois<p>Como alternativa, defina um horário de manutenção diferente para cada grupo de máquinas|
+|**Não gerenciado pelo WSUS-sem suporte para prazos finais**<p>-O escalonamento é instalado em momentos diferentes|**Política** : Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Chave do Registro:** Habilitar a chave do Registro discutida no artigo da Base de Dados de Conhecimento da Microsoft [2835627](https://support.microsoft.com/kb/2835627)<p>**Política:** Atraso aleatório na manutenção automática (Habilitado)<p>Defina **Atraso aleatório na manutenção regular** de PT6H para atraso aleatório de seis horas para obter o seguinte comportamento:<p>-As atualizações serão instaladas no tempo de manutenção configurado mais um atraso aleatório<p>-A reinicialização de cada máquina ocorrerá exatamente três dias depois<p>Como alternativa, defina um horário de manutenção diferente para cada grupo de máquinas|
 
 Para ver mais informações sobre por que a equipe de desenvolvimento do Windows implementou essas mudanças, consulte [Minimizing restarts after automatic updating in Windows Update (Minimizando as reinicializações depois de atualizações automáticas no Windows Update)](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).
 
@@ -155,9 +155,9 @@ A partir do Windows Server 2008, os controladores de domínio também têm as se
 | Tipo ou política de criptografia | Padrão do Windows Server 2008 | Padrão do Windows Server 2012 e Windows Server 2008 R2 | Comentário |
 |--|--|--|--|
 | AllowNT4Crypto | Desabilitado | Desabilitado | Os clientes do protocolo SMB podem ser incompatíveis com as configurações padrão seguras em controladores de domínio. Em todos os casos, essas configurações podem ser reduzidas a fim de permitir a interoperabilidade (porém, em detrimento da segurança). Para obter mais informações, consulte o [artigo 942564](https://go.microsoft.com/fwlink/?LinkId=164558) na base de dados de conhecimento Microsoft ( https://go.microsoft.com/fwlink/?LinkId=164558) . |
-| DES | Habilitada | Desabilitado | [Artigo 977321](https://go.microsoft.com/fwlink/?LinkId=177717) na base de dados de conhecimento Microsoft (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| Proteção CBT/estendida para autenticação integrada | N/D | Habilitada | Consulte [consultoria de segurança da Microsoft (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) e [artigo 976918](https://go.microsoft.com/fwlink/?LinkId=178251) na base de dados de conhecimento Microsoft ( https://go.microsoft.com/fwlink/?LinkId=178251) .<p>Examine e instale o hotfix no [artigo 977073](https://go.microsoft.com/fwlink/?LinkId=186394) ( https://go.microsoft.com/fwlink/?LinkId=186394) na base de dados de conhecimento Microsoft, conforme necessário. |
-| LMv2 | Habilitada | Desabilitado | [Artigo 976918](https://go.microsoft.com/fwlink/?LinkId=178251) na base de dados de conhecimento Microsoft (https://go.microsoft.com/fwlink/?LinkId=178251) |
+| DES | habilitado | Desabilitado | [Artigo 977321](https://go.microsoft.com/fwlink/?LinkId=177717) na base de dados de conhecimento Microsoft (https://go.microsoft.com/fwlink/?LinkId=177717) |
+| Proteção CBT/estendida para autenticação integrada | N/D | habilitado | Consulte [consultoria de segurança da Microsoft (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) e [artigo 976918](https://go.microsoft.com/fwlink/?LinkId=178251) na base de dados de conhecimento Microsoft ( https://go.microsoft.com/fwlink/?LinkId=178251) .<p>Examine e instale o hotfix no [artigo 977073](https://go.microsoft.com/fwlink/?LinkId=186394) ( https://go.microsoft.com/fwlink/?LinkId=186394) na base de dados de conhecimento Microsoft, conforme necessário. |
+| LMv2 | habilitado | Desabilitado | [Artigo 976918](https://go.microsoft.com/fwlink/?LinkId=178251) na base de dados de conhecimento Microsoft (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="operating-system-requirements"></a><a name="BKMK_SysReqs"></a>Requisitos do sistema operacional
 
@@ -223,7 +223,7 @@ Os controladores de domínio do Windows 2000 devem ser removidos antes da adiç�
 4. Instale controladores de domínio que executem o Windows Server 2012.
 5. Remova controladores de domínio que executam versões anteriores do Windows Server.
 
-O novo nível funcional de domínio do Windows Server 2012 permite um novo recurso: o **suporte do KDC para declarações, autenticação composta e** política de modelo administrativo do KDC de proteção de Kerberos tem duas configurações (**sempre fornecer declarações** e **falhas de solicitações de autenticação não protegidas**) que exigem o nível funcional de domínio do Windows Server 2012.
+O novo nível funcional de domínio do Windows Server 2012 permite um novo recurso: o **suporte do KDC para declarações, autenticação composta e** política de modelo administrativo do KDC de proteção de Kerberos tem duas configurações ( **sempre fornecer declarações** e **falhas de solicitações de autenticação não protegidas** ) que exigem o nível funcional de domínio do Windows Server 2012.
 
 O nível funcional de floresta do Windows Server 2012 não fornece novos recursos, mas garante que qualquer novo domínio criado na floresta operará automaticamente no nível funcional de domínio do Windows Server 2012. O nível funcional de domínio do Windows Server 2012 não fornece outros recursos novos além do suporte do KDC para declarações, autenticação composta e proteção Kerberos. Mas garante que qualquer controlador de domínio no domínio execute o Windows Server 2012. Para obter mais informações sobre outros recursos que estão disponíveis em diferentes níveis funcionais, consulte [Noções básicas sobre níveis funcionais dos AD DS (Serviços de Domínio do Active Directory)](../active-directory-functional-levels.md).
 

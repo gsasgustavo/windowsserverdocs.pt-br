@@ -1,17 +1,17 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: Novidades na instalação e na remoção dos Serviços de Domínio Active Directory
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 9658fe8ea7c9c11cda10989bfe9d1568c21d9704
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: a16d4ab1a831eb4f057e3802ad644a13a234805b
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940586"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069908"
 ---
 # <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Novidades na instalação e na remoção dos Serviços de Domínio Active Directory
 
@@ -119,7 +119,7 @@ Outras verificações de pré-requisitos que foram transferidas do Assistente de
 - Verificação de nome de domínio filho: verifica se os nomes de domínio pai e dos novos domínios filho são válidos e se não há conflitos com domínios existentes.
 - Verificação de nome de domínio de árvore: verifica se o nome da árvore é válido e único.
 
-## <a name="system-requirements"></a><a name="BKMK_SystemReqs"></a>Requisitos de sistema
+## <a name="system-requirements"></a><a name="BKMK_SystemReqs"></a>Requisitos do sistema
 
 Os requisitos do sistema para o Windows Server 2012 não foram alterados no Windows Server 2008 R2. Para obter mais informações, consulte [requisitos de sistema do Windows Server 2008 R2 com SP1](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) ( https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) .
 
@@ -165,7 +165,7 @@ Esta seção lista alguns dos problemas conhecidos que afetam AD DS instalação
 
    A mensagem de erro apresentada nesse caso é a seguinte:
 
-   Não é possível se conectar ao controlador de domínio de origem de replicação *nome do controlador de domínio de origem*. (Exceção: Longonfailure: nome se usuário desconhecido ou senha incorreta)
+   Não é possível se conectar ao controlador de domínio de origem de replicação *nome do controlador de domínio de origem* . (Exceção: Longonfailure: nome se usuário desconhecido ou senha incorreta)
 
    Se você ingressar o servidor de destino no domínio e depois executar a instalação usando um cartão inteligente, a instalação terá êxito.
 

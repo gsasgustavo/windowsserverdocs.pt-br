@@ -3,23 +3,23 @@ ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Logon automático de reinício do Winlogon (ARSO)
 description: Como o logon automático de reinicialização do Windows pode ajudar a tornar seus usuários mais produtivos.
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.openlocfilehash: 3f2957d2290934505f67edbcb8a49733452939e2
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: bbeff22ce85e1c108852a0e978ad56b1e70d10c5
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939866"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070537"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Logon automático de reinício do Winlogon (ARSO)
 
 Durante uma Windows Update, há processos específicos do usuário que devem acontecer para que a atualização seja concluída. Esses processos exigem que o usuário esteja conectado ao seu dispositivo. No primeiro logon após a inicialização de uma atualização, os usuários devem aguardar até que esses processos específicos do usuário sejam concluídos antes que possam começar a usar seu dispositivo.
 
-## <a name="how-does-it-work"></a>Como ela funciona?
+## <a name="how-does-it-work"></a>Como ele funciona?
 
 Quando Windows Update inicia uma reinicialização automática, o ARSO extrai as credenciais derivadas do usuário conectado no momento, persiste-as em disco e configura o logon automático para o usuário. Windows Update em execução como sistema com privilégio TCB iniciará a chamada RPC para fazer isso.
 
@@ -70,7 +70,7 @@ Se você desabilitar essa configuração de política, o dispositivo não config
 
 **Editor do registro:**
 
-| Nome do valor | Type | Dados |
+| Nome do valor | Tipo | Dados |
 | --- | --- | --- |
 | DisableAutomaticRestartSignOn | DWORD | 0 (habilitar ARSO) |
 |   |   | 1 (desabilitar ARSO) |
@@ -111,7 +111,7 @@ Se você desabilitar ou não definir essa configuração, o logon automático us
 
 **Editor do registro**
 
-| Nome do valor | Type | Dados |
+| Nome do valor | Tipo | Dados |
 | --- | --- | --- |
 | AutomaticRestartSignOnConfig | DWORD | 0 (habilitar ARSO se seguro) |
 |   |   | 1 (habilitar ARSO Always) |

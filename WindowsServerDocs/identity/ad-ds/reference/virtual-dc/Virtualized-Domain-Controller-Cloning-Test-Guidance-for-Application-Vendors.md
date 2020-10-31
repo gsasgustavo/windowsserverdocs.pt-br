@@ -2,16 +2,16 @@
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Diretrizes do teste de clonagem do controlador de domínio virtualizado para fornecedores de aplicativos
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f8a108226f0aff37cd730a477bd6ee5d865399df
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 03272c7dc3afaccac9fb48d591f4f17d84bcccd4
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940256"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070908"
 ---
 # <a name="virtualized-domain-controller-cloning-test-guidance-for-application-vendors"></a>Diretrizes do teste de clonagem do controlador de domínio virtualizado para fornecedores de aplicativos
 
@@ -43,13 +43,13 @@ O processo de clonagem do controlador de domínio virtualizado é descrito em de
 ### <a name="customdccloneallowlistxml"></a>CustomDCCloneAllowList.xml
 Um controlador de domínio que executa seu aplicativo ou serviço não pode ser clonado até que o aplicativo ou serviço seja:
 
--   Adicionado ao arquivo de CustomDCCloneAllowList.xml usando o cmdlet Get-ADDCCloningExcludedApplicationList do Windows PowerShell
+-   Adicionado ao arquivo de CustomDCCloneAllowList.xml usando o cmdlet Get-ADDCCloningExcludedApplicationList Windows PowerShell
 
 -Ou-
 
 -   Removido do controlador de domínio
 
-Na primeira vez que o usuário executa o cmdlet Get-ADDCCloningExcludedApplicationList, ele retorna uma lista de serviços e aplicativos que estão em execução no controlador de domínio, mas que não estão na lista padrão de serviços e aplicativos com suporte para clonagem. Por padrão, seu serviço ou aplicativo não será listado. Para adicionar seu serviço ou aplicativo à lista de aplicativos e serviços que podem ser clonados com segurança, o usuário executa o cmdlet Get-ADDCCloningExcludedApplicationList novamente com a opção-GenerateXML para adicioná-lo ao arquivo de CustomDCCloneAllowList.xml. Para obter mais informações, consulte [etapa 2: executar o cmdlet Get-ADDCCloningExcludedApplicationList](/powershell/module/addsadministration/get-addccloningexcludedapplicationlist).
+Na primeira vez que o usuário executa o cmdlet Get-ADDCCloningExcludedApplicationList, ele retorna uma lista de serviços e aplicativos que estão em execução no controlador de domínio, mas que não estão na lista padrão de serviços e aplicativos com suporte para clonagem. Por padrão, seu serviço ou aplicativo não será listado. Para adicionar seu serviço ou aplicativo à lista de aplicativos e serviços que podem ser clonados com segurança, o usuário executa Get-ADDCCloningExcludedApplicationList cmdlet novamente com a opção-GenerateXML para adicioná-lo ao arquivo de CustomDCCloneAllowList.xml. Para obter mais informações, consulte [etapa 2: executar Get-ADDCCloningExcludedApplicationList cmdlet](/powershell/module/addsadministration/get-addccloningexcludedapplicationlist).
 
 ### <a name="distributed-system-interactions"></a>Interações do sistema distribuído
 Normalmente, os serviços isolados no computador local são aprovados ou reprovados quando participam da clonagem. Os serviços distribuídos precisam se preocupar em ter duas instâncias do computador host na rede simultaneamente por um breve período de tempo. Isso pode ser manifestado como uma instância de serviço que tenta efetuar pull de informações de um sistema de parceiros em que o clone se registrou como o novo fornecedor da identidade. Ou as duas instâncias do serviço podem enviar informações por push para o banco de dados AD DS ao mesmo tempo com resultados diferentes. Por exemplo, não é determinístico para qual computador será comunicado quando dois computadores que têm o serviço WTT (tecnologias de teste do Windows) estão na rede com o controlador de domínio.

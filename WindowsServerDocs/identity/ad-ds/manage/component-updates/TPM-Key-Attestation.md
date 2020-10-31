@@ -2,22 +2,22 @@
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: Atestado de chave de TPM
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: aa23d8df4391514d08ff1ef065af14275274dfa9
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 18bf859e6e02d3c01fead9291d31c8dac3f002f1
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939896"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070628"
 ---
 # <a name="tpm-key-attestation"></a>Atestado de chave de TPM
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.
@@ -56,7 +56,7 @@ Com o atestado de chave do TPM, agora é possível um novo paradigma de gerencia
 ### <a name="how-does-tpm-key-attestation-work"></a>Como o atestado de chave do TPM funciona?
 Em geral, o atestado de chave do TPM baseia-se nos seguintes pilares:
 
-1.  Cada TPM é fornecido com uma chave assimétrica exclusiva, chamada de *chave de endosso* (EK), gravada pelo fabricante. Nós nos referimos à parte pública dessa chave como *EKPub* e à chave privada associada como *EKPriv*. Alguns chips do TPM também têm um certificado EK emitido pelo fabricante para o EKPub. Nós nos referimos a esse certificado como *EKCert*.
+1.  Cada TPM é fornecido com uma chave assimétrica exclusiva, chamada de *chave de endosso* (EK), gravada pelo fabricante. Nós nos referimos à parte pública dessa chave como *EKPub* e à chave privada associada como *EKPriv* . Alguns chips do TPM também têm um certificado EK emitido pelo fabricante para o EKPub. Nós nos referimos a esse certificado como *EKCert* .
 
 2.  Uma autoridade de certificação estabelece confiança no TPM por meio de EKPub ou EKCert.
 
@@ -73,7 +73,7 @@ Há três etapas para implantar o atestado de chave do TPM:
 
     -   **Confiança baseada em credencial do usuário:** A autoridade de certificação corporativa confia no EKPub fornecido pelo usuário como parte da solicitação de certificado e nenhuma validação é executada além das credenciais de domínio do usuário.
 
-    -   **Relação de confiança baseada em EKCert:** A autoridade de certificação corporativa valida a cadeia EKCert fornecida como parte da solicitação de certificado em uma lista gerenciada pelo administrador de *cadeias de certificados de EK aceitáveis*. As cadeias aceitáveis são definidas por fabricante e são expressas por meio de dois repositórios de certificados personalizados na AC emissora (uma loja para os certificados intermediários e um para certificado de CA raiz). Esse modo de confiança significa que **todos os** TPMS de um determinado fabricante são confiáveis. Observe que, nesse modo, o TPMs em uso no ambiente deve conter EKCerts.
+    -   **Relação de confiança baseada em EKCert:** A autoridade de certificação corporativa valida a cadeia EKCert fornecida como parte da solicitação de certificado em uma lista gerenciada pelo administrador de *cadeias de certificados de EK aceitáveis* . As cadeias aceitáveis são definidas por fabricante e são expressas por meio de dois repositórios de certificados personalizados na AC emissora (uma loja para os certificados intermediários e um para certificado de CA raiz). Esse modo de confiança significa que **todos os** TPMS de um determinado fabricante são confiáveis. Observe que, nesse modo, o TPMs em uso no ambiente deve conter EKCerts.
 
     -   **Relação de confiança baseada em EKPub:** A autoridade de certificação corporativa valida que o EKPub fornecido como parte da solicitação de certificado aparece em uma lista gerenciada pelo administrador de EKPubs permitidos. Essa lista é expressa como um diretório de arquivos em que o nome de cada arquivo nesse diretório é o hash SHA-2 do EKPub permitido. Essa opção oferece o nível de garantia mais alto, mas requer mais esforço administrativo, pois cada dispositivo é identificado individualmente. Nesse modelo de confiança, somente os dispositivos que tiveram o EKPub do TPM adicionado à lista de permissões de EKPubs têm permissão para se registrar para um certificado atestado pelo TPM.
 
@@ -107,15 +107,15 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
     Na seção **configurações de compatibilidade** :
 
-    -   Verifique se o **Windows Server 2012 R2** está selecionado para a **autoridade de certificação**.
+    -   Verifique se o **Windows Server 2012 R2** está selecionado para a **autoridade de certificação** .
 
-    -   Verifique se **Windows 8.1/Windows Server 2012 R2** está selecionado para o **destinatário do certificado**.
+    -   Verifique se **Windows 8.1/Windows Server 2012 R2** está selecionado para o **destinatário do certificado** .
 
     ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
 
 2.  Guia **Criptografia**
 
-    Verifique se o **provedor de armazenamento de chaves** está selecionado para a categoria de **provedor** e **RSA** está selecionado para o **nome do algoritmo**. Verifique se as **solicitações devem usar um dos seguintes provedores** está selecionado e a opção **provedor de criptografia de plataforma da Microsoft** está selecionada em **provedores**.
+    Verifique se o **provedor de armazenamento de chaves** está selecionado para a categoria de **provedor** e **RSA** está selecionado para o **nome do algoritmo** . Verifique se as **solicitações devem usar um dos seguintes provedores** está selecionado e a opção **provedor de criptografia de plataforma da Microsoft** está selecionada em **provedores** .
 
     ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
 
@@ -149,7 +149,7 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
     **OIDs da política de emissão**
 
-    |OID|Tipo de atestado de chave|DESCRIÇÃO|Nível de garantia|
+    |OID|Tipo de atestado de chave|Description|Nível de garantia|
     |-------|------------------------|---------------|-------------------|
     |1.3.6.1.4.1.311.21.30|EK|"EK verificado": para lista de EK gerenciada pelo administrador|Alto|
     |1.3.6.1.4.1.311.21.31|Certificado de endosso|"Certificado EK verificado": quando a cadeia de certificados EK é validada|Médio|
@@ -172,7 +172,7 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
     2.  Obtenha os certificados de autoridade de certificação intermediários e raiz do (s) fabricante (es) que você deseja permitir em seu ambiente corporativo. Esses certificados devem ser importados para os repositórios de certificados criados anteriormente (EKCA e EKROOT) conforme apropriado.
 
-    O script do Windows PowerShell a seguir executa essas duas etapas. No exemplo a seguir, o fabricante do TPM da Fabrikam forneceu um certificado raiz *FabrikamRoot. cer* e um certificado de AC emissora *Fabrikamca. cer*.
+    O script do Windows PowerShell a seguir executa essas duas etapas. No exemplo a seguir, o fabricante do TPM da Fabrikam forneceu um certificado raiz *FabrikamRoot. cer* e um certificado de AC emissora *Fabrikamca. cer* .
 
     ```powershell
     PS C:>\cd cert:
@@ -196,7 +196,7 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
         O EndorsementKeyListDirectories no comando certutil é uma configuração do registro, conforme descrito na tabela a seguir.
 
-        |Nome do valor|Type|Dados|
+        |Nome do valor|Tipo|Dados|
         |--------------|--------|--------|
         |EndorsementKeyListDirectories|REG_MULTI_SZ|<caminho LOCAL ou UNC para EKPUB permitir lista (s) ><p>Exemplo:<p>*\\\blueCA.contoso.com\ekpub*<p>*\\\bluecluster1.contoso.com\ekpub*<p>D:\ekpub|
 
@@ -222,17 +222,17 @@ Os campos de atestado de chave não estarão disponíveis se as configurações 
 
 1.  As configurações de compatibilidade não estão configuradas corretamente. Verifique se eles estão configurados da seguinte maneira:
 
-    1.  **Autoridade de certificação**: **Windows Server 2012 R2**
+    1.  **Autoridade de certificação** : **Windows Server 2012 R2**
 
-    2.  **Destinatário do certificado**: **Windows 8.1/Windows Server 2012 R2**
+    2.  **Destinatário do certificado** : **Windows 8.1/Windows Server 2012 R2**
 
 2.  As configurações de criptografia não estão configuradas corretamente. Verifique se eles estão configurados da seguinte maneira:
 
-    1.  **Categoria do provedor**: **provedor de armazenamento de chaves**
+    1.  **Categoria do provedor** : **provedor de armazenamento de chaves**
 
-    2.  **Nome do algoritmo**: **RSA**
+    2.  **Nome do algoritmo** : **RSA**
 
-    3.  **Provedores**: **provedor de criptografia de plataforma Microsoft**
+    3.  **Provedores** : **provedor de criptografia de plataforma Microsoft**
 
 3.  As configurações de tratamento de solicitação não estão configuradas corretamente. Verifique se eles estão configurados da seguinte maneira:
 
@@ -241,11 +241,11 @@ Os campos de atestado de chave não estarão disponíveis se as configurações 
     2.  A opção **arquivar chave privada de criptografia da entidade** não deve ser selecionada.
 
 ### <a name="verification-of-tpm-device-for-attestation"></a>Verificação do dispositivo TPM para atestado
-Use o cmdlet do Windows PowerShell, **Confirm-CAEndorsementKeyInfo**, para verificar se um dispositivo TPM específico é confiável para atestado por CAS. Há duas opções: uma para verificar o EKCert e a outra para verificar um EKPub. O cmdlet é executado localmente em uma autoridade de certificação ou em CAs remotas usando a comunicação remota do Windows PowerShell.
+Use o cmdlet do Windows PowerShell, **Confirm-CAEndorsementKeyInfo** , para verificar se um dispositivo TPM específico é confiável para atestado por CAS. Há duas opções: uma para verificar o EKCert e a outra para verificar um EKPub. O cmdlet é executado localmente em uma autoridade de certificação ou em CAs remotas usando a comunicação remota do Windows PowerShell.
 
 1.  Para verificar a confiança em um EKPub, execute as duas etapas a seguir:
 
-    1.  **Extraia o EKPub do computador cliente:** O EKPub pode ser extraído de um computador cliente por meio de **Get-TpmEndorsementKeyInfo**. Em um prompt de comando com privilégios elevados, execute o seguinte:
+    1.  **Extraia o EKPub do computador cliente:** O EKPub pode ser extraído de um computador cliente por meio de **Get-TpmEndorsementKeyInfo** . Em um prompt de comando com privilégios elevados, execute o seguinte:
 
         ```
         PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256
@@ -259,7 +259,7 @@ Use o cmdlet do Windows PowerShell, **Confirm-CAEndorsementKeyInfo**, para verif
 
 2.  Para verificar a confiança em um EKCert, execute as duas etapas a seguir:
 
-    1.  **Extraia o EKCert do computador cliente:** O EKCert pode ser extraído de um computador cliente por meio de **Get-TpmEndorsementKeyInfo**. Em um prompt de comando com privilégios elevados, execute o seguinte:
+    1.  **Extraia o EKCert do computador cliente:** O EKCert pode ser extraído de um computador cliente por meio de **Get-TpmEndorsementKeyInfo** . Em um prompt de comando com privilégios elevados, execute o seguinte:
 
         ```
         PS C:>\$a=Get-TpmEndorsementKeyInfo

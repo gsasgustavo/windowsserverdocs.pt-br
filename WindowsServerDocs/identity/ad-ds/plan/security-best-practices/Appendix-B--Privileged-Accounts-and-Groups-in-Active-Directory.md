@@ -2,16 +2,16 @@
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Apêndice B-contas e grupos com privilégios no Active Directory
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 22bcea1426502af83fdeeecb0005324de2d54e64
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2f720c09ee59544376693cdb97ecf7af54e308bd
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941566"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070468"
 ---
 # <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>Apêndice B: Contas privilegiadas e grupos no Active Directory
 
@@ -27,7 +27,7 @@ As informações também são fornecidas sobre contas e grupos internos e padrã
 As diferenças entre direitos, permissões e privilégios podem ser confusas e contraditórias, mesmo na documentação da Microsoft. Esta seção descreve algumas das características de cada uma conforme elas são usadas neste documento. Essas descrições não devem ser consideradas autoritativas para outras documentações da Microsoft, pois podem usar esses termos de maneira diferente.
 
 #### <a name="rights-and-privileges"></a>Direitos e privilégios
-Direitos e privilégios são efetivamente os mesmos recursos de todo o sistema que são concedidos a entidades de segurança, como usuários, serviços, computadores ou grupos. Em interfaces normalmente usadas por profissionais de ti, elas são geralmente chamadas de "direitos" ou "direitos de usuário", e geralmente são atribuídas por objetos Política de Grupo. A captura de tela a seguir mostra alguns dos direitos de usuário mais comuns que podem ser atribuídos às entidades de segurança (ele representa o GPO controladores de domínio padrão em um domínio do Windows Server 2012). Alguns desses direitos se aplicam a Active Directory, como o direito de usuário **habilitar computador e contas de usuário para ser confiável para delegação** , enquanto outros direitos se aplicam ao sistema operacional Windows, como **alterar a hora do sistema**.
+Direitos e privilégios são efetivamente os mesmos recursos de todo o sistema que são concedidos a entidades de segurança, como usuários, serviços, computadores ou grupos. Em interfaces normalmente usadas por profissionais de ti, elas são geralmente chamadas de "direitos" ou "direitos de usuário", e geralmente são atribuídas por objetos Política de Grupo. A captura de tela a seguir mostra alguns dos direitos de usuário mais comuns que podem ser atribuídos às entidades de segurança (ele representa o GPO controladores de domínio padrão em um domínio do Windows Server 2012). Alguns desses direitos se aplicam a Active Directory, como o direito de usuário **habilitar computador e contas de usuário para ser confiável para delegação** , enquanto outros direitos se aplicam ao sistema operacional Windows, como **alterar a hora do sistema** .
 
 ![contas e grupos com privilégios](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)
 
@@ -49,12 +49,12 @@ Para obter mais informações sobre cada um dos direitos de usuário listados na
 |[Ajustar cotas de memória para um processo](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_5)|SeIncreaseQuotaPrivilege|
 |[Permitir logon local](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_6)|SeInteractiveLogonRight|
 |[Permitir logon pelos Serviços de Terminal](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_7)|SeRemoteInteractiveLogonRight|
-|[Fazer backup de arquivos e pastas](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_8)|SeBackupPrivilege|
+|[Fazer backup de arquivos e diretórios](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_8)|SeBackupPrivilege|
 |[Ignorar verificação completa](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_9)|SeChangeNotifyPrivilege|
 |[Alterar a hora do sistema](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_10)|SeSystemtimePrivilege|
 |[Alterar o fuso horário](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_11)|SeTimeZonePrivilege|
 |[Criar um arquivo de página](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_12)|SeCreatePagefilePrivilege|
-|[Criar um objeto token](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|
+|[Criar um objeto de token](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|
 |[Create global objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|
 |[Criar objetos compartilhados permanentemente](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_15)|SeCreatePermanentPrivilege|
 |[Criar vínculos simbólicos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_16)|SeCreateSymbolicLinkPrivilege|
@@ -64,7 +64,7 @@ Para obter mais informações sobre cada um dos direitos de usuário listados na
 |[Negar o logon como um serviço](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|
 |[Negar o logon localmente](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_20)|SeDenyInteractiveLogonRight|
 |[Negar logon pelos serviços de terminal](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|
-|[Permitir que contas de computador e usuário sejam confiáveis para delegação](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_22)|Seenabledelegationprivilege foi|
+|[Habilitar contas de computador e usuário para serem confiáveis para delegação](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_22)|Seenabledelegationprivilege foi|
 |[Forçar o desligamento a partir de um sistema remoto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_23)|SeRemoteShutdownPrivilege|
 |[Gerar auditorias de segurança](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_24)|SeAuditPrivilege|
 |[Representar um cliente após a autenticação](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|
@@ -74,7 +74,7 @@ Para obter mais informações sobre cada um dos direitos de usuário listados na
 |[Bloquear páginas na memória](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|
 |[Fazer logon como um trabalho em lotes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_30)|SeBatchLogonRight|
 |[Fazer logon como um serviço](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_31)|SeServiceLogonRight|
-|[Gerenciar a auditoria e o log de segurança](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_32)|SeSecurityPrivilege|
+|[Gerenciar auditoria e log de segurança](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_32)|SeSecurityPrivilege|
 |[Modificar um rótulo de objeto](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_33)|SeRelabelPrivilege|
 |[Modificar valores de ambiente de firmware](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|
 |[Executar tarefas de manutenção de volume](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_35)|SeManageVolumePrivilege|
@@ -85,7 +85,7 @@ Para obter mais informações sobre cada um dos direitos de usuário listados na
 |[Restaurar arquivos e diretórios](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_40)|SeRestorePrivilege|
 |[Desligar o sistema](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_41)|SeShutdownPrivilege|
 |[Sincronizar dados do serviço de diretório](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|
-|[Apropriar-se de arquivos ou de outros objetos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|
+|[Apropriar-se de arquivos ou outros objetos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|
 
 #### <a name="permissions"></a>Permissões
 As permissões são controles de acesso aplicados a objetos protegíveis, como o sistema de arquivos, o registro, o serviço e os objetos de Active Directory. Cada objeto protegível tem uma ACL (lista de controle de acesso) associada, que contém ACEs (entradas de controle de acesso) que concedem ou negam entidades de segurança (usuários, serviços, computadores ou grupos) a capacidade de executar várias operações no objeto. Por exemplo, as ACLs para muitos objetos no Active Directory contêm ACEs que permitem que os usuários autenticados leiam informações gerais sobre os objetos, mas não lhes concedem a capacidade de ler informações confidenciais ou de alterar os objetos.
@@ -187,11 +187,11 @@ Além dos grupos com privilégios mais altos descritos anteriormente neste apên
 |Servidores de acesso remoto RDS (Windows Server 2012)|Contêiner interno<p>Grupo de segurança de domínio local|Os servidores desse grupo permitem que os usuários de programas RemoteApp e áreas de trabalho virtuais pessoais acessem esses recursos. Em implantações voltadas para a Internet, esses servidores normalmente são implantados em uma rede de borda. Esse grupo precisa ser preenchido em servidores que executam o agente de conexão RD. Os servidores de gateway de área de trabalho remota e os servidores de Acesso via Web de trabalho remota usados na implantação precisam estar nesse grupo.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Controladores de Domínio somente leitura|Contêiner de usuários<p>Grupo de segurança global|Esse grupo contém todos os controladores de domínio somente leitura no domínio.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Usuários da Área de Trabalho Remota|Contêiner interno<p>Grupo de segurança de domínio local|Os membros desse grupo recebem o direito de fazer logon remotamente usando o RDP.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
-|Usuários de gerenciamento remoto (Windows Server 2012)|Contêiner interno<p>Grupo de segurança de domínio local|Os membros desse grupo podem acessar recursos do WMI por meio de protocolos de gerenciamento (como o WS-Management por meio do serviço de Gerenciamento Remoto do Windows). Isso se aplica somente a namespaces WMI que concedem acesso ao usuário.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
+|Usuários de gerenciamento remoto (Windows Server 2012)|Contêiner interno<p>Grupo de segurança de domínio local|Os membros desse grupo podem acessar recursos do WMI por meio de protocolos de gerenciamento (como WS-Management por meio do Serviço Gerenciamento Remoto do Windows). Isso se aplica somente a namespaces WMI que concedem acesso ao usuário.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Replicador|Contêiner interno<p>Grupo de segurança de domínio local|Dá suporte à replicação de arquivo herdada em um domínio.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Administradores de esquema (existem somente no domínio raiz da floresta)|Contêiner de usuários<p>Grupo de segurança universal|Os administradores de esquema são os únicos usuários que podem fazer modificações no esquema de Active Directory e somente se o esquema estiver habilitado para gravação.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Opers. de servidores|Contêiner interno<p>Grupo de segurança de domínio local|Os membros deste grupo podem administrar servidores de domínio.<p>**Direitos de usuário diretos:**<p>Permitir logon localmente<p>Fazer backup de arquivos e pastas<p>Alterar a hora do sistema<p>Alterar o fuso horário<p>Forçar o desligamento a partir de um sistema remoto<p>Restaurar arquivos e diretórios<p>Desligar o sistema<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Terminal Server servidores de licença|Contêiner interno<p>Grupo de segurança de domínio local|Os membros deste grupo podem atualizar contas de usuário no Active Directory com informações sobre a emissão de licenças, para fins de acompanhamento e relatório de uso de CAL por usuário TS<p>**Direitos de usuário direto padrão:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
 |Usuários|Contêiner interno<p>Grupo de segurança de domínio local|Os usuários têm permissões que permitem que eles leiam muitos objetos e atributos em Active Directory, embora não possam alterar a maior parte. Os usuários são impedidos de fazer alterações acidentais ou intencionais em todo o sistema e podem executar a maioria dos aplicativos.<p>**Direitos de usuário diretos:**<p>Aumentar um conjunto de trabalho de processo<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa|
 |Grupo de acesso de autorização do Windows|Contêiner interno<p>Grupo de segurança de domínio local|Os membros deste grupo têm acesso ao atributo computado tokenGroupsGlobalAndUniversal em objetos de usuário<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
-|WinRMRemoteWMIUsers_ (Windows Server 2012)|Contêiner de usuários<p>Grupo de segurança de domínio local|Os membros desse grupo podem acessar recursos do WMI por meio de protocolos de gerenciamento (como o WS-Management por meio do serviço de Gerenciamento Remoto do Windows). Isso se aplica somente a namespaces WMI que concedem acesso ao usuário.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|
+|WinRMRemoteWMIUsers_ (Windows Server 2012)|Contêiner de usuários<p>Grupo de segurança de domínio local|Os membros desse grupo podem acessar recursos do WMI por meio de protocolos de gerenciamento (como WS-Management por meio do Serviço Gerenciamento Remoto do Windows). Isso se aplica somente a namespaces WMI que concedem acesso ao usuário.<p>**Direitos de usuário diretos:** None<p>**Direitos de usuário herdados:**<p>Acesso a este computador da rede<p>Adicionar estações de trabalho ao domínio<p>Ignorar a verificação completa<p>Aumentar um conjunto de trabalho de processo|

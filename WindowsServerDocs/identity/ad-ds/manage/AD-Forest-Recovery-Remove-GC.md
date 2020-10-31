@@ -1,17 +1,17 @@
 ---
 title: Recuperação de floresta do AD-remover o catálogo global
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
-ms.openlocfilehash: e24449f2debdeeaf1e0ccdaf51a44d041c7dcc61
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 0ec7af53bc43806f97edbd9174f2c2179641238b
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941576"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070848"
 ---
 # <a name="ad-forest-recovery---removing-the-global-catalog"></a>Recuperação de floresta do AD-removendo o catálogo global
 
@@ -23,13 +23,13 @@ ms.locfileid: "88941576"
 
 ## <a name="to-remove-the-global-catalog-using-active-directory-sites-and-services"></a>Para remover o catálogo global usando Active Directory sites e serviços
 
-1. Abra Gerenciador do Servidor, clique em **ferramentas** e em **Active Directory sites e serviços**.
+1. Abra Gerenciador do Servidor, clique em **ferramentas** e em **Active Directory sites e serviços** .
 2. Na árvore de console, expanda o contêiner **sites** e selecione o site apropriado que contém o servidor de destino.
 3. Expanda o contêiner **servidores** e expanda o objeto de *servidor* para o controlador de domínio do qual você deseja remover o catálogo global.
-4. Clique com o botão direito do mouse em **Configurações NTDS**e clique em **Propriedades**.
+4. Clique com o botão direito do mouse em **Configurações NTDS** e clique em **Propriedades** .
 5. Desmarque a caixa de seleção **catálogo global** .
    ![Remover GC](media/AD-Forest-Recovery-Remove-GC/removegc1.png)
-6. Clique em **Aplicar**.
+6. Clique em **Aplicar** .
 
 ## <a name="to-remove-the-global-catalog-using-repadmin"></a>Para remover o catálogo global usando repadmin
 

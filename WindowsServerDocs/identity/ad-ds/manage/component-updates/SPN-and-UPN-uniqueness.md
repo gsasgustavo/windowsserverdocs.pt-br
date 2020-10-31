@@ -2,22 +2,22 @@
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: Exclusividade de SPN e UPN
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: cafbc577bd025fc30f409385f51f6981fb3ab81d
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: c41b532b6be241a937500485aca723e391ff9210
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941376"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070718"
 ---
 # <a name="spn-and-upn-uniqueness"></a>Exclusividade de SPN e UPN
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.
@@ -179,11 +179,11 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
 
 -   Selecione o botão de opção **converter para LDAP**
 
--   Tipo **(userPrincipalName =*ConflictingUPN*)**
+-   Tipo **(userPrincipalName = *ConflictingUPN* )**
 
-    -   Substitua ***ConflictingUPN*** pelo UPN real que está em conflito
+    -   Substitua * *_ConflictingUPN_* _ pelo UPN real que está em conflito
 
--   Selecione **aplicar**
+-   Selecionar _ *aplicar**
 
 ![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)
 
@@ -209,7 +209,7 @@ Para anular o atributo UserPrincipalName usando o Windows PowerShell:
 
 **Figura SEQ Figure a \\ \* mensagem de erro Arabic 8 exibida no ADSIEdit quando a adição de SPN duplicado é bloqueada**
 
-Registrado no log de eventos de serviços de diretório é uma **ACTIVEDIRECTORY_DOMAINSERVICE** ID de evento **2974**.
+Registrado no log de eventos de serviços de diretório é uma **ACTIVEDIRECTORY_DOMAINSERVICE** ID de evento **2974** .
 
 ```
 Operation failed. Error code: 0x21c7
@@ -229,9 +229,9 @@ servicePrincipalName Value=<SPN>
 
     -   Nenhuma chamada offbox necessária, a consulta pode ser satisfeita localmente
 
-    -   ***Caso UPN***
+    -   **_Caso UPN_* _
 
-        -   Consultar o índice UPN de toda a floresta local para o UPN fornecido (*userPrincipalName; um índice global*)
+        -   Consultar o índice UPN de toda a floresta local para o UPN fornecido (_userPrincipalName; um índice global *)
 
             -   Se as entradas retornadas = = 0-> gravação continuar
 
@@ -245,9 +245,9 @@ servicePrincipalName Value=<SPN>
 
                         *ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST*
 
-    -   ***Caso SPN***
+    -   ***Caso de SPN** _
 
-        -   Consultar o índice SPN de toda a floresta local para obter o SPN fornecido (*um índice global*)
+        -   Consultar o índice SPN de toda a floresta local para o SPN fornecido (_servicePrincipalName; um índice global *)
 
             -   Se as entradas retornadas = = 0-> gravação continuar
 
@@ -269,9 +269,9 @@ servicePrincipalName Value=<SPN>
 
         -   Evento registrado para indicar tal
 
-    -   ***Caso UPN***
+    -   **_Caso UPN_* _
 
-        -   Enviar consulta LDAP contra GC mais próximo? consultar o índice UPN de toda a floresta do GC para o UPN fornecido (*userPrincipalName; um índice global*)
+        -   Enviar consulta LDAP contra GC mais próximo? índice UPN de toda a floresta do GC de consulta para o UPN fornecido (_userPrincipalName; um índice global *)
 
             -   Se as entradas retornadas = = 0-> gravação continuar
 
@@ -285,9 +285,9 @@ servicePrincipalName Value=<SPN>
 
                         *ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST*
 
-    -   ***Caso SPN***
+    -   ***Caso de SPN** _
 
-        -   Enviar consulta LDAP contra GC mais próximo? consultar índice SPN de toda a floresta do GC para obter o SPN fornecido (*um índice global*)
+        -   Enviar consulta LDAP contra GC mais próximo? consultar o índice SPN de toda a floresta do GC para o SPN fornecido (_servicePrincipalName; um índice global *)
 
             -   Se as entradas retornadas = = 0-> gravação continuar
 
@@ -320,10 +320,10 @@ Quando objetos excluídos são reanimados, os valores SPN ou UPN presentes são 
 Se qualquer um dos novos valores de SPN for uma duplicata, a modificação falhará. Da lista acima, os atributos importantes são ATT_DNS_HOST_NAME (nome da máquina) e ATT_SAM_ACCOUNT_NAME (nome da conta SAM).
 
 ### <a name="try-this-exploring-spn-and-upn-uniqueness"></a>Experimente: explorando a exclusividade do SPN e do UPN
-Esta é a primeira de várias atividades "**Experimente isso**" no módulo.  Não há um guia de laboratório separado para este módulo.  As atividades de **teste** são essencialmente atividades de forma livre que permitem explorar o material da lição no ambiente de laboratório.  Você tem a opção de seguir o prompt ou sair do script e surgir com sua própria atividade.
+Esta é a primeira de várias atividades " **Experimente isso** " no módulo.  Não há um guia de laboratório separado para este módulo.  As atividades de **teste** são essencialmente atividades de forma livre que permitem explorar o material da lição no ambiente de laboratório.  Você tem a opção de seguir o prompt ou sair do script e surgir com sua própria atividade.
 
 > [!NOTE]
-> -   Esta é a primeira de várias atividades "**Experimente isso**".
+> -   Esta é a primeira de várias atividades " **Experimente isso** ".
 > -   Não há um guia de laboratório separado para este módulo.
 > -   As atividades de **teste** são essencialmente atividades de forma livre que permitem explorar o material da lição no ambiente de laboratório.
 > -   Você tem a opção de seguir o prompt ou sair do script e surgir com sua própria atividade.

@@ -1,15 +1,15 @@
 ---
 ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verificar a funcionalidade do DNS para oferecer suporte à replicação de diretório
-ms.author: iainfou
+ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
-ms.openlocfilehash: c59160cb3242a91ef8a86d9e8247e0f2d376395b
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 0a79a4b73a9e3d610408076c8e7526f504055d53
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938056"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071248"
 ---
 # <a name="verify-dns-functionality-to-support-directory-replication"></a>Verificar a funcionalidade do DNS para oferecer suporte à replicação de diretório
 
@@ -40,7 +40,7 @@ Você pode usar o procedimento a seguir para verificar a funcionalidade básica 
 ### <a name="to-verify-basic-dns-functionality"></a>Para verificar a funcionalidade básica do DNS:
 
 
-1. No controlador de domínio que você deseja testar ou em um computador membro do domínio que tenha as ferramentas Active Directory Domain Services (AD DS) instaladas, abra um prompt de comando como administrador. Para abrir um prompt de comando como administrador, clique em **Iniciar**.
+1. No controlador de domínio que você deseja testar ou em um computador membro do domínio que tenha as ferramentas Active Directory Domain Services (AD DS) instaladas, abra um prompt de comando como administrador. Para abrir um prompt de comando como administrador, clique em **Iniciar** .
 2. Em Iniciar Pesquisa, digite Prompt de Comando.
 3. Na parte superior do menu Iniciar, clique com o botão direito no Prompt de Comando e, em seguida, clique em Executar como administrador. Se a caixa de diálogo Controle de Conta de Usuário aparecer, confirme a ação exibida e clique em Continuar.
 4. No prompt de comando, digite o seguinte comando e pressione ENTER: `dcdiag /test:dns /v /s:<DCName> /DnsBasic /f:dcdiagreport.txt`
@@ -73,8 +73,8 @@ Este comando verifica o registro dos seguintes registros de recursos no DNS:
 - **alias (CNAME):** o registro de recurso baseado em GUID (identificador global exclusivo) que localiza um parceiro de replicação
 - **host (A):**  o registro de recurso do host que contém o endereço IP do controlador de domínio
 - **SRV LDAP:** os registros de recurso de serviço (SRV) que localizam servidores LDAP
-- **GC SRV**: os registros de recurso de serviço (SRV) que localizam servidores de catálogo global
-- **PDC SRV**: os registros de recurso do serviço (SRV) que localizam mestres de operações do emulador do controlador de domínio primário (PDC)
+- **GC SRV** : os registros de recurso de serviço (SRV) que localizam servidores de catálogo global
+- **PDC SRV** : os registros de recurso do serviço (SRV) que localizam mestres de operações do emulador do controlador de domínio primário (PDC)
 
 Você pode usar o procedimento a seguir para verificar o registro de recurso de alias (CNAME) sozinho.
 
@@ -83,7 +83,7 @@ Você pode usar o procedimento a seguir para verificar o registro de recurso de 
 1. Abra o snap-in DNS. Para abrir o DNS, clique em Iniciar. Em Iniciar pesquisa, digite DNSMGMT. msc e pressione ENTER. Se a caixa de diálogo controle de conta de usuário for exibida, confirme se ela exibe a ação desejada e clique em continuar.
 2. Use o snap-in DNS para localizar qualquer controlador de domínio que esteja executando o serviço do servidor DNS, no qual o servidor hospeda a zona DNS com o mesmo nome que o domínio Active Directory do controlador de domínio.
 3. Na árvore de console, clique na zona chamada _msdcs. Dns_Domain_Name.
-4. No painel de detalhes, verifique se os seguintes registros de recursos estão presentes: um registro de recurso de alias (CNAME) chamado Dsa_Guid. _msdcs. <placeholder>Dns_Domain_Name</placeholder> e um registro de recurso de host (a) correspondente para o nome do servidor DNS.
+4. No painel de detalhes, verifique se os seguintes registros de recursos estão presentes: um registro de recurso de alias (CNAME) chamado Dsa_Guid. _ msdcs. <placeholder>Dns_Domain_Name</placeholder> e um registro de recurso de host (a) correspondente para o nome do servidor DNS.
 
 Se o registro de recurso de alias (CNAME) não estiver registrado, verifique se a atualização dinâmica está funcionando corretamente. Use o teste na seção a seguir para verificar a atualização dinâmica.
 

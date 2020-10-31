@@ -2,16 +2,16 @@
 ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planejar o posicionamento de controlador de domínio
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9c96537650f5c49aa25a75211e28430b6bcf5f34
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: ea98ff3dd41e7280acec36432010b6b73156621c
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941036"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071078"
 ---
 # <a name="planning-domain-controller-placement"></a>Planejar o posicionamento de controlador de domínio
 
@@ -21,7 +21,7 @@ Depois de coletar todas as informações de rede que serão usadas para criar a 
 
 No Windows Server 2008, você também pode aproveitar os RODCs (controladores de domínio somente leitura). Um RODC é um novo tipo de controlador de domínio que hospeda partições somente leitura do banco de dados Active Directory. Exceto para senhas de contas, um RODC mantém todos os objetos Active Directory e atributos que um controlador de domínio gravável mantém. No entanto, as alterações não podem ser feitas no banco de dados armazenado no RODC. As alterações devem ser feitas em um controlador de domínio gravável e, em seguida, replicadas de volta para o RODC.
 
-Um RODC foi projetado principalmente para ser implantado em ambientes remotos ou de filiais, que normalmente têm relativamente poucos usuários, pouca segurança física, largura de banda de rede relativamente ruim a um site de Hub e pessoal com conhecimento limitado de ti (tecnologia da informação). A implantação de RODCs resulta em segurança aprimorada e acesso mais eficiente aos recursos de rede. Para obter mais informações sobre os recursos do RODC, consulte [AD DS: controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)). Para obter informações sobre como implantar um RODC, consulte o [guia passo a passo dos controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10))
+Um RODC foi projetado principalmente para ser implantado em ambientes remotos ou de filiais, que normalmente têm relativamente poucos usuários, pouca segurança física, largura de banda de rede relativamente ruim a um site de Hub e pessoal com conhecimento limitado de ti (tecnologia da informação). A implantação de RODCs resulta em segurança aprimorada e acesso mais eficiente aos recursos de rede. Para obter mais informações sobre os recursos do RODC, consulte [AD DS: Read-Only controladores de domínio](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)). Para obter informações sobre como implantar um RODC, consulte o [guia passo a passo dos controladores de domínio somente leitura](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10))
 
 > [!NOTE]
 > Este guia não explica como determinar o número correto de controladores de domínio e os requisitos de hardware do controlador de domínio para cada domínio representado em cada site.
