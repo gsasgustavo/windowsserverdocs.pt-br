@@ -1,19 +1,19 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Níveis funcionais do Windows Server 2016
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.openlocfilehash: 8a990e5ab19a5f5cd30d23d0d31e28249801040b
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: b74bb786b3d1a6ec8a1f96054b2d74ca93bd9bcf
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90765937"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068368"
 ---
 # <a name="forest-and-domain-functional-levels"></a>Níveis funcionais de floresta e domínio
 
@@ -105,7 +105,7 @@ Sistemas operacionais do controlador de domínio compatíveis:
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
-* Windows Server 2008 R2
+* Windows Server 2008 R2
 
 ### <a name="windows-server-2008r2-forest-functional-level-features"></a>Recursos de nível funcional de floresta do Windows Server 2008R2
 
@@ -126,8 +126,8 @@ Sistemas operacionais do controlador de domínio compatíveis:
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
-* Windows Server 2008 R2
-* Windows Server 2008
+* Windows Server 2008 R2
+* Windows Server 2008
 
 ### <a name="windows-server-2008-forest-functional-level-features"></a>Recursos de nível funcional de floresta do Windows Server 2008
 
@@ -165,9 +165,9 @@ Sistemas operacionais do controlador de domínio compatíveis:
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
-* Windows Server 2008 R2
-* Windows Server 2008
-* Windows Server 2003
+* Windows Server 2008 R2
+* Windows Server 2008
+* Windows Server 2003
 
 ### <a name="windows-server-2003-forest-functional-level-features"></a>Recursos de nível funcional de floresta do Windows Server 2003
 
@@ -206,9 +206,9 @@ Sistemas operacionais do controlador de domínio compatíveis:
 
 Sistemas operacionais do controlador de domínio compatíveis:
 
-* Windows Server 2008 R2
-* Windows Server 2008
-* Windows Server 2003
+* Windows Server 2008 R2
+* Windows Server 2008
+* Windows Server 2003
 * Windows 2000
 
 ### <a name="windows-2000-native-forest-functional-level-features"></a>Recursos de nível funcional de floresta nativos do Windows 2000
