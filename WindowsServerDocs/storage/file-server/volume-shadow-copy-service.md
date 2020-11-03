@@ -4,12 +4,12 @@ ms.date: 01/30/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 7bdcb67c5bcb36d2ebe5ee02d765f3cab63c7bed
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 0a8015096d22cfb384815f1e5b8c5b9c9c248922
+ms.sourcegitcommit: 7499749ce7baaf58a523cae2dd46737d635475ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766819"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043914"
 ---
 # <a name="volume-shadow-copy-service"></a>Serviço de Cópias de Sombra de Volume
 
@@ -31,7 +31,7 @@ O VSS coordena as ações necessárias para criar uma cópia de sombra consisten
 
   - Você está executando backups de disco para disco.
 
-  - Você precisa de uma recuperação rápida da perda de dados restaurando os dados para o LUN original ou para um LUN totalmente novo que substitua um LUN original que falhou.
+  - Você precisa de uma recuperação rápida da perda de dados restaurando os dados para o LUN (Número de Unidade Lógica) original ou para um LUN totalmente novo que substitua um LUN original que falhou.
 
 
 Os recursos e aplicativos do Windows que usam o VSS incluem o seguinte:
@@ -49,19 +49,19 @@ Os recursos e aplicativos do Windows que usam o VSS incluem o seguinte:
 
 Uma solução completa do VSS requer todas as seguintes partes básicas:
 
-**Serviço VSS**   Parte do sistema operacional Windows que garante que os outros componentes consigam se comunicar entre si corretamente e funcionar juntos.
+**Serviço VSS**   Parte do sistema operacional Windows que garante que os outros componentes consigam se comunicar entre si corretamente e funcionar juntos.
 
-**Solicitante do VSS**   O software que solicita a criação real de cópias de sombra (ou outras operações de alto nível, como importar ou excluir as cópias). Normalmente, esse é o aplicativo de backup. O utilitário Backup do Windows Server e o aplicativo System Center Data Protection Manager são solicitantes do VSS. Solicitantes do VSS que não são da Microsoft® incluem quase todos os programas de software de backup executados no Windows.
+**Solicitante do VSS**   O software que solicita a criação real de cópias de sombra (ou outras operações de alto nível, como importar ou excluir as cópias). Normalmente, esse é o aplicativo de backup. O utilitário Backup do Windows Server e o aplicativo System Center Data Protection Manager são solicitantes do VSS. Solicitantes do VSS que não são da Microsoft® incluem quase todos os programas de software de backup executados no Windows.
 
-**Gravador VSS**   O componente que garante que temos um conjunto de dados consistente para fazer backup. Normalmente, isso é fornecido como parte de um aplicativo de linha de negócios, como SQL Server® ou Exchange Server. Os gravadores VSS para vários componentes do Windows, como o Registro, estão incluídos no sistema operacional Windows. Os gravadores VSS não Microsoft são incluídos em muitos aplicativos para Windows que precisam garantir a consistência dos dados durante o backup.
+**Gravador VSS**   O componente que garante que temos um conjunto de dados consistente para fazer backup. Normalmente, isso é fornecido como parte de um aplicativo de linha de negócios, como SQL Server® ou Exchange Server. Os gravadores VSS para vários componentes do Windows, como o Registro, estão incluídos no sistema operacional Windows. Os gravadores VSS não Microsoft são incluídos em muitos aplicativos para Windows que precisam garantir a consistência dos dados durante o backup.
 
-**Provedor VSS**   O componente que cria e mantém as cópias de sombra. Isso pode ocorrer no software ou no hardware. O sistema operacional Windows inclui um provedor VSS que usa cópia em gravação. Se você usa uma SAN (rede de área de armazenamento), é importante instalar o provedor de hardware VSS para a SAN, se houver um. Um provedor de hardware descarrega a tarefa de criar e manter uma cópia de sombra do sistema operacional do host.
+**Provedor VSS**   O componente que cria e mantém as cópias de sombra. Isso pode ocorrer no software ou no hardware. O sistema operacional Windows inclui um provedor VSS que usa cópia em gravação. Se você usa uma SAN (rede de área de armazenamento), é importante instalar o provedor de hardware VSS para a SAN, se houver um. Um provedor de hardware descarrega a tarefa de criar e manter uma cópia de sombra do sistema operacional do host.
 
 O diagrama a seguir ilustra como o serviço VSS coordena-se com solicitantes, gravadores e provedores para criar uma cópia de sombra de um volume.
 
 ![Diagrama arquitetônico do Serviço de Cópias de Sombra de Volume](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
 
-**Figura 1**   Diagrama arquitetônico do Serviço de Cópias de Sombra de Volume
+**Figura 1**   Diagrama arquitetônico do Serviço de Cópias de Sombra de Volume
 
 ### <a name="how-a-shadow-copy-is-created"></a>Como uma cópia de sombra é criada
 
@@ -103,11 +103,11 @@ Para criar uma cópia de sombra, o solicitante, o gravador e o provedor executam
 
 Um provedor de cópia de sombra de hardware ou software usa um dos seguintes métodos para criar uma cópia de sombra:
 
-**Concluir a cópia**   Esse método faz uma cópia completa (chamada de "cópia completa" ou "clone") do volume original em um determinado momento. Esta cópia é somente leitura.
+**Concluir a cópia**   Esse método faz uma cópia completa (chamada de "cópia completa" ou "clone") do volume original em um determinado momento. Esta cópia é somente leitura.
 
-**Cópia em gravação**   Esse método não copia o volume original. Em vez disso, ele faz uma cópia diferencial copiando todas as alterações (solicitações de E/S de gravação concluídas) que são feitas no volume após um determinado ponto no tempo.
+**Cópia em gravação**   Esse método não copia o volume original. Em vez disso, ele faz uma cópia diferencial copiando todas as alterações (solicitações de E/S de gravação concluídas) que são feitas no volume após um determinado ponto no tempo.
 
-**Redirecionamento na gravação**   Esse método não copia o volume original e não faz nenhuma alteração no volume original após um determinado ponto no tempo. Em vez disso, faz uma cópia diferencial redirecionando todas as alterações para um volume diferente.
+**Redirecionamento na gravação**   Esse método não copia o volume original e não faz nenhuma alteração no volume original após um determinado ponto no tempo. Em vez disso, faz uma cópia diferencial redirecionando todas as alterações para um volume diferente.
 
 ## <a name="complete-copy"></a>Cópia completa
 
@@ -157,7 +157,7 @@ No método de cópia na gravação, quando ocorre uma alteração no volume orig
 </tbody>
 </table>
 
-**Tabela 1**   O método de cópia na gravação de criação de cópias de sombra
+**Tabela 1**   O método de cópia na gravação de criação de cópias de sombra
 
 O método d cópia em gravação é um método rápido para criar uma cópia de sombra, pois copia apenas os dados que mudaram. Os blocos copiados na área de comparação podem ser combinados com os dados alterados no volume original para restaurar o volume para seu estado antes que qualquer uma das alterações tenha sido feita. Se houver muitas alterações, o método de cópia na gravação poderá se tornar caro.
 
@@ -198,7 +198,7 @@ No método de redirecionamento na gravação, sempre que o volume original receb
 </tbody>
 </table>
 
-**Tabela 2**   O método de redirecionamento na gravação de criação de cópias de sombra
+**Tabela 2**   O método de redirecionamento na gravação de criação de cópias de sombra
 
 Assim como o método de cópia na gravação, o método de redirecionamento na gravação é um método rápido para criar uma cópia de sombra, pois copia apenas as alterações aos dados. Os blocos copiados na área de comparação podem ser combinados com os dados inalterados no volume original para criar uma cópia completa e atualizada dos dados. Se houver muitas solicitações de E/S de leitura, o método de redirecionamento na gravação poderá se tornar caro.
 
@@ -308,7 +308,7 @@ Com o Serviço de Cópias de Sombra de Volume e uma matriz de armazenamento com 
 
 ![Diagrama como transportar uma cópia de sombra entre dois servidores](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
 
-**Figura 3**   Criação e transporte da cópia de sombra entre dois servidores
+**Figura 3**   Criação e transporte da cópia de sombra entre dois servidores
 
 
 > [!NOTE]
@@ -338,13 +338,13 @@ Quando os dados são copiados da cópia de sombra para uma fita ou de outra míd
 
 O Serviço de Cópias de Sombra de Volume é compatível com um tamanho de volume de até 64 TB.
 
-### <a name="i-made-a-backup-on-windows-server2008-can-i-restore-it-on-windows-server2008r2"></a>Fiz um backup no Windows Server 2008. Posso restaurá-lo no Windows Server 2008 R2?
+### <a name="i-made-a-backup-on-windows-server-2008-can-i-restore-it-on-windows-server-2008-r2"></a>Fiz um backup no Windows Server 2008. Posso restaurá-lo no Windows Server 2008 R2?
 
 Depende do software de backup que você usou. A maioria dos programas de backup é compatível com esse cenário para dados, mas não para backups de estado do sistema.
 
 As cópias de sombra criadas em qualquer uma dessas versões do Windows podem ser usadas no outro.
 
-### <a name="i-made-a-backup-on-windows-server2003-can-i-restore-it-on-windows-server2008"></a>Fiz um backup no Windows Server 2003. Posso restaurá-lo no Windows Server 2008?
+### <a name="i-made-a-backup-on-windows-server-2003-can-i-restore-it-on-windows-server-2008"></a>Fiz um backup no Windows Server 2003. Posso restaurá-lo no Windows Server 2008?
 
 Depende do software de backup que você usou. Se você criar uma cópia de sombra no Windows Server 2003, não poderá usá-la no Windows Server 2008. Também, se você criar uma cópia de sombra no Windows Server 2008, não poderá restaurá-la no Windows Server 2003.
 
@@ -442,15 +442,15 @@ O sistema operacional Windows fornece as seguintes ferramentas para trabalhar co
 
 O DiskShadow é um solicitante VSS que você pode usar para gerenciar todos os instantâneos de hardware e software que você pode ter em um sistema. O DiskShadow inclui comandos como os seguintes:
 
-  - **list**: lista gravadores do VSS, provedores do VSS e cópias de sombra
+  - **list** : lista gravadores do VSS, provedores do VSS e cópias de sombra
 
-  - **create**: cria uma cópia de sombra
+  - **create** : cria uma cópia de sombra
 
-  - **import**: importa uma cópia de sombra transportável
+  - **import** : importa uma cópia de sombra transportável
 
-  - **expose**: expõe uma cópia de sombra persistente (como uma letra da unidade)
+  - **expose** : expõe uma cópia de sombra persistente (como uma letra da unidade)
 
-  - **revert**: reverte um volume de volta para uma cópia de sombra especificada
+  - **revert** : reverte um volume de volta para uma cópia de sombra especificada
 
 
 Essa ferramenta é destinada ao uso por profissionais de TI, mas também pode ser útil para desenvolvedores no teste de um VSS Writer ou de um provedor VSS.
@@ -463,15 +463,15 @@ O VssAdmin é usado para criar, excluir e listar informações sobre cópias de 
 
 O VssAdmin inclui comandos como os seguintes:
 
-  - **create shadow**: cria uma cópia de sombra
+  - **create shadow** : cria uma cópia de sombra
 
-  - **delete shadows**: exclui cópias de sombra
+  - **delete shadows** : exclui cópias de sombra
 
-  - **list providers**: lista todos os provedores do VSS registrados
+  - **list providers** : lista todos os provedores do VSS registrados
 
-  - **list writers**: lista todos os gravadores do VSS inscritos
+  - **list writers** : lista todos os gravadores do VSS inscritos
 
-  - **resize shadowstorage**: altera o tamanho máximo da área de armazenamento de cópia de sombra
+  - **resize shadowstorage** : altera o tamanho máximo da área de armazenamento de cópia de sombra
 
 
 O VssAdmin só pode ser usado para administrar cópias de sombra criadas pelo provedor de software do sistema.
@@ -538,12 +538,12 @@ A tabela a seguir lista as versões mínimas do sistema operacional compatíveis
 <tr class="odd">
 <td><p>Ressincronização de LUN</p></td>
 <td><p>Nenhum compatível</p></td>
-<td><p>Windows Server 2008 R2</p></td>
+<td><p>Windows Server 2008 R2</p></td>
 </tr>
 <tr class="even">
 <td><p>Chave do Registro <strong>FilesNotToSnapshot</strong></p></td>
 <td><p>Windows Vista</p></td>
-<td><p>Windows Server 2008</p></td>
+<td><p>Windows Server 2008</p></td>
 </tr>
 <tr class="odd">
 <td><p>Cópias de sombra transportáveis</p></td>
@@ -553,12 +553,12 @@ A tabela a seguir lista as versões mínimas do sistema operacional compatíveis
 <tr class="even">
 <td><p>Cópias de sombra de hardware</p></td>
 <td><p>Nenhum compatível</p></td>
-<td><p>Windows Server 2003</p></td>
+<td><p>Windows Server 2003</p></td>
 </tr>
 <tr class="odd">
 <td><p>Versões anteriores do Windows Server</p></td>
 <td><p>Windows Vista</p></td>
-<td><p>Windows Server 2003</p></td>
+<td><p>Windows Server 2003</p></td>
 </tr>
 <tr class="even">
 <td><p>Recuperação rápida usando troca de LUN</p></td>
@@ -587,31 +587,31 @@ A tabela a seguir lista as versões mínimas do sistema operacional compatíveis
 <p></p>
 </div></td>
 <td><p>Nenhum compatível</p></td>
-<td><p>Windows Server 2008</p></td>
+<td><p>Windows Server 2008</p></td>
 </tr>
 <tr class="even">
 <td><p>Cópias de Sombra para Pastas Compartilhadas</p></td>
 <td><p>Nenhum compatível</p></td>
-<td><p>Windows Server 2003</p></td>
+<td><p>Windows Server 2003</p></td>
 </tr>
 <tr class="odd">
 <td><p>Cópias de sombra transportáveis recuperadas automaticamente</p></td>
 <td><p>Nenhum compatível</p></td>
-<td><p>Windows Server 2008</p></td>
+<td><p>Windows Server 2008</p></td>
 </tr>
 <tr class="even">
 <td><p>Sessões de backup simultâneas (até 64)</p></td>
 <td><p>Windows XP</p></td>
-<td><p>Windows Server 2003</p></td>
+<td><p>Windows Server 2003</p></td>
 </tr>
 <tr class="odd">
 <td><p>Sessão de restauração única simultânea com backups</p></td>
 <td><p>Windows Vista</p></td>
-<td><p>Windows Server 2003 com SP2</p></td>
+<td><p>Windows Server 2003 com SP2</p></td>
 </tr>
 <tr class="even">
 <td><p>Até oito sessões de restauração simultâneas com backups</p></td>
-<td><p>Windows 7</p></td>
+<td><p>Windows 7</p></td>
 <td><p>Windows Server 2003 R2</p></td>
 </tr>
 </tbody>

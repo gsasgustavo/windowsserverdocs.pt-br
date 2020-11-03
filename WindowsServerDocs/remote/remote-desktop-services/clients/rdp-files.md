@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 6524c186e42b2c1c39dae5b95f4c6657bdd9dcbf
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.openlocfilehash: 00bda15c409f5323a96dcbf48bc2dd130ec6368b
+ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083737"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793593"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>Configurações do arquivo RDP com suporte da Área de Trabalho Remota
 
@@ -43,8 +43,8 @@ A tabela também realça quais configurações são compatíveis como propriedad
 | Configuração de RDP                        | Descrição            | Valores                 | Valor padrão          | Suporte à Área de Trabalho Virtual do Windows |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | autoreconnection enabled:i:value | Determina se o cliente tentará se reconectar automaticamente ao computador remoto caso a conexão caia, como quando houver uma interrupção da conectividade de rede. | - 0: Cliente não tenta reconectar automaticamente</br>- 1: Cliente tenta reconectar automaticamente | 1 | Sim |
-| bandwidthautodetect:i:value | Determina se a detecção automática do tipo de rede está habilitada | - 0: Desabilitar a detecção automática do tipo de rede</br>- 1: Habilitar a detecção automática do tipo de rede | 1 | Sim |
-| networkautodetect:i:value | Determina se a detecção automática de largura de banda da rede deve ou não ser usada. Requer que bandwidthautodetect seja definido como 1. | - 0: Não usar detecção automática de largura de banda da rede</br> - 1: Usar detecção automática de largura de banda da rede | 1 | Sim |
+| bandwidthautodetect:i:value | Determina se a detecção automática de largura de banda da rede deve ou não ser usada. Requer que bandwidthautodetect seja definido como 1. | - 0: Desabilitar a detecção automática do tipo de rede</br>- 1: Habilitar a detecção automática do tipo de rede | 1 | Sim |
+| networkautodetect:i:value | Determina se a detecção automática do tipo de rede está habilitada | - 0: Não usar detecção automática de largura de banda da rede</br> - 1: Usar detecção automática de largura de banda da rede | 1 | Sim |
 | compression:i:value | Determina se a compactação em massa é habilitada quando durante a transmissão por RDP para o computador local.|- 0: Desabilitar a compactação em massa de RDP</br>- 1: Habilitar a compactação em massa de RDP | 1 | Sim |
 | videoplaybackmode:i:value| Determina se a conexão usará streaming de multimídia eficiente de RDP para a reprodução de vídeo.|- 0: Não usar streaming de multimídia eficiente de RDP para reprodução de vídeo</br>- 1: Usar streaming de multimídia eficiente de RDP para reprodução de vídeo, quando possível | 1 | Sim |
 

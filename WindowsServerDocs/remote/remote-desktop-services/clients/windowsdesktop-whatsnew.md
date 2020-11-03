@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/14/2020
+ms.date: 10/27/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8708f8ab6e8fb751f0ca39238574823ae5b499c4
-ms.sourcegitcommit: 45099dfe3682df1e2bc0bd5998594a79cfff16fe
+ms.openlocfilehash: 9f14d93176fd1bd7b97d90550701f79b55774297
+ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92079835"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793603"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Novidades no cliente da Área de Trabalho do Windows
 
@@ -24,24 +24,26 @@ O cliente pode ser configurado para diferentes [grupos de usuários](windowsdesk
 
 |Grupo de usuários |Última versão  |Versão mínima com suporte |
 |-----------|----------------|--------------------------|
-|Público     |1.2.1364        |1.2.945                   |
-|Participante do Programa Windows Insider    |1.2.1440        |1.2.945                   |
+|Público     |1.2.1446        |1.2.945                   |
+|Participante do Programa Windows Insider    |1.2.1446        |1.2.945                   |
 
-## <a name="updates-for-version-121440-insiders"></a>Atualizações para a versão 1.2.1440 (Participantes do Programa Windows Insider)
+## <a name="updates-for-version-121446"></a>Atualizações para a versão 1.2.1446
 
-*Data da publicação: 13/10/2020*
+*Data da publicação: 27/10/2020*
 
-Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
+- Foi adicionado o recurso de atualização automática, que permite que o cliente instale as atualizações mais recentes automaticamente.
 - O cliente agora consegue distinguir os diferentes feeds no Centro de Conexão.
 - Correção de um problema em que a conta da assinatura não é a conta com que o usuário entrou.
+- Correção de um problema em que alguns usuários não podiam acessar aplicativos remotos por meio de um arquivo baixado.
 - Correção de um problema com o redirecionamento do Smartcard.
 
 ## <a name="updates-for-version-121364"></a>Atualizações para a versão 1.2.1364
 
 *Data da publicação: 22/09/2020*
 
-Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK), [Windows 32 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
 
 - Correção de um problema em que o SSO (logon único) não funcionava no Windows 7.
 - Corrigida a falha de conexão que acontecia ao chamar ou ingressar em uma chamada de equipe enquanto outro aplicativo tinha um fluxo de áudio aberto em modo exclusivo e quando a otimização de mídia para o Teams estava habilitada.
@@ -52,8 +54,6 @@ Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139369), [W
 ## <a name="updates-for-version-121275"></a>Atualizações para a versão 1.2.1275
 
 *Data da publicação: 25/08/2020*
-
-Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYR), [Windows 32 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYS), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Fg3H)
 
 - Funcionalidade adicionada para detectar automaticamente nuvens soberanas da identidade do usuário.
 - Funcionalidade adicionada para habilitar assinaturas de URL personalizadas para todos os usuários.
@@ -107,7 +107,7 @@ Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/b
 *Data da publicação: 28/04/2020*
 
 - Adição de novas opções de configurações de exibição para conexões da área de trabalho disponíveis ao clicar com o botão direito do mouse em um ícone de área de trabalho no Centro de Conexão.
-  - Agora há três opções de configuração de exibição: **Todas as exibições**, **Exibição única** e **Exibições selecionadas**.
+  - Agora há três opções de configuração de exibição: **Todas as exibições** , **Exibição única** e **Exibições selecionadas**.
   - Agora mostramos apenas configurações disponíveis quando uma configuração de exibição é selecionada.
   - No modo Exibição selecionada, uma nova opção **Maximizar para exibições atuais** permite que você altere dinamicamente as exibições usadas para a sessão sem se reconectar. Quando habilitada, a maximização da sessão a faz entrar em modo de tela inteira em todas as exibições abrangidas pela janela de sessão.
   - Adicionamos uma nova **Exibição única quando está em modo de janela** para todas as exibições e modos de exibição selecionados. A opção alterna sua sessão automaticamente para uma exibição única quando você sai do modo de tela inteira e retorna automaticamente para várias exibições quando você maximiza a janela.
