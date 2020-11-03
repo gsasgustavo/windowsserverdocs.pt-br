@@ -6,12 +6,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b644103342e94a171699efeab238453bdb583eec
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 8d8a200881b8b1acf21afb8eb0b41cff6e390d88
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067798"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235853"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>Arquitetura do controlador de domínio virtualizado
 
@@ -30,7 +30,7 @@ A clonagem de controlador de domínio virtualizado conta com a plataforma de hip
 
 Em um ambiente misto no qual alguns hipervisores dão suporte de VM-GenerationID, mas outros não, é possível que uma mídia de clone seja implantada acidentalmente em um hipervisor que não dá suporte a VM-GenerationID. A presença do arquivo DCCloneConfig.xml indica a intenção administrativa de clonar um DC (controlador de domínio). Portanto, se o arquivo DCCloneConfig.xml for localizado durante a inicialização, mas um VM-GenerationID não tiver sido fornecido pelo host, o DC de clone será inicializado em DSRM (Modo de Restauração dos Serviços de Diretório) para impedir qualquer impacto no restante do ambiente. A mídia de clone poderá ser movida subsequentemente para um hipervisor que dê suporte à VM-GenerationID e, depois, a tentativa de clonagem poderá ser repetida.
 
-Se a mídia de clone for implantada em um hipervisor que dê suporte a VM-GenerationID, mas o arquivo DCCloneConfig.xml não for fornecido, conforme o DC detectar uma alteração de VM-GenerationID entre seu DIT e o da nova VM (máquina virtual), ele acionará garantias para impedir a reutilização de USN e evitar SIDs duplicados. Porém, a clonagem não será iniciada e, portanto, o DC secundário continuará em execução sob a mesma identidade como o DC de origem. Esse DC secundário deve ser removido da rede o quanto antes para evitar quaisquer inconsistências no ambiente. Para obter mais informações sobre como recuperar esse controlador de domínio secundário, garantindo que as atualizações sejam replicadas de saída, consulte o artigo [2742970](https://support.microsoft.com/kb/2742970)do Microsoft KB.
+Se a mídia de clone for implantada em um hipervisor que dê suporte a VM-GenerationID, mas o arquivo DCCloneConfig.xml não for fornecido, conforme o DC detectar uma alteração de VM-GenerationID entre seu DIT e o da nova VM (máquina virtual), ele acionará garantias para impedir a reutilização de USN e evitar SIDs duplicados. Porém, a clonagem não será iniciada e, portanto, o DC secundário continuará em execução sob a mesma identidade como o DC de origem. Esse DC secundário deve ser removido da rede o quanto antes para evitar quaisquer inconsistências no ambiente.
 
 ### <a name="cloning-detailed-processing"></a><a name="BKMK_CloneProcessDetails"></a>Processamento detalhado de clonagem
 O diagrama a seguir mostra a arquitetura de uma operação de clonagem inicial e de uma operação de repetição de clonagem. Esses processos serão explicados em mais detalhes posteriormente neste tópico.
@@ -59,7 +59,7 @@ As seguintes etapas explicam o processo em mais detalhes:
 
     2.  Se as duas IDs não corresponderem, essa será uma máquina virtual nova que contém um NTDS.DIT de um controlador de domínio anterior (ou será um instantâneo restaurado). Se o arquivo DCCloneConfig.xml existir, o controlador de domínio prosseguirá com as operações de clonagem. Caso contrário, ele continuará com as operações de restauração de instantâneo. Consulte [Arquitetura da restauração segura de controlador de domínio virtualizado](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).
 
-    3.  Se o hipervisor não fornecer uma ID de geração de VM para a comparação, mas houver um arquivo DCCloneConfig.xml, o convidado renomeará o arquivo e será inicializado em DSRM para proteger a rede contra um controlador de domínio duplicado. Se não houver um arquivo dccloneconfig.xml, o convidado será inicializado normalmente (com a possibilidade de um controlador de domínio duplicado na rede). Para obter mais informações sobre como recuperar esse controlador de domínio duplicado, consulte o artigo [2742970](https://support.microsoft.com/kb/2742970) da Microsoft KB.
+    3.  Se o hipervisor não fornecer uma ID de geração de VM para a comparação, mas houver um arquivo DCCloneConfig.xml, o convidado renomeará o arquivo e será inicializado em DSRM para proteger a rede contra um controlador de domínio duplicado. Se não houver um arquivo dccloneconfig.xml, o convidado será inicializado normalmente (com a possibilidade de um controlador de domínio duplicado na rede).
 
 3.  O serviço NTDS verifica o valor do nome do valor de registro VDCisCloning DWORD (em HKEY_Local_Machine\System\CurrentControlSet\Services\Ntds\Parameters).
 

@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 19da2b6ec2a7a3ca31c479388c087850c77d9c23
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8a6e0ff7e0ba412ff3f8241465a71ab8b81f7d80
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638052"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235843"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>Getting Started with Group Managed Service Accounts
 
@@ -139,7 +139,7 @@ Ao implantar um novo farm de servidores, o administrador de serviço precisará 
 ### <a name="step-1-provisioning-group-managed-service-accounts"></a><a name="BKMK_Step1"></a>Etapa 1: provisionando Contas de Serviço Gerenciado de grupo
 Você pode criar um gMSA somente se o esquema de floresta foi atualizado para o Windows Server 2012, a chave raiz mestra para Active Directory foi implantada e há pelo menos um Windows Server 2012 DC no domínio no qual o gMSA será criado.
 
-A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade de criar objetos msDS-GroupManagedServiceAccount é o mínimo necessário para concluir os procedimentos a seguir.
+A associação em **Administradores de domínio** ou a capacidade de criar objetos msDS-GroupManagedServiceAccount é o mínimo necessário para concluir os procedimentos a seguir.
 
 > [!NOTE]
 > Um valor para o parâmetro-Name é sempre necessário (independentemente de você especificar-Name ou not), com-DNSHostName,-RestrictToSingleComputer e-RestrictToOutboundAuthentication os requisitos secundários para os três cenários de implantação.
@@ -155,7 +155,7 @@ A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade 
 
     |Parâmetro|String|Exemplo|
     |-------|-----|------|
-    |Nome|Nome da conta|ITFarm1|
+    |Name|Nome da conta|ITFarm1|
     |DNSHostName|Nome de host DNS do serviço|ITFarm1.contoso.com|
     |KerberosEncryptionType|Quaisquer tipos de criptografia com suporte pelos servidores host|Nenhum, RC4, AES128, AES256|
     |ManagedPasswordIntervalInDays|Intervalo de alteração de senha em dias (o padrão é 30 dias, se nenhum tiver sido fornecido)|90|
@@ -174,7 +174,7 @@ A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade 
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
-A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade de criar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e associações de grupo apropriadas, consulte [grupos padrão de domínio e locais](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+A associação em **Admins. do Domínio** , **Opers. de Contas** ou a capacidade de criar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e associações de grupo apropriadas, consulte [grupos padrão de domínio e locais](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ##### <a name="to-create-a-gmsa-for-outbound-authentication-only-using-the-new-adserviceaccount-cmdlet"></a>Para criar uma gMSA para autenticação de saída usando apenas o cmdlet New-ADServiceAccount
 
@@ -186,7 +186,7 @@ A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade 
 
     |Parâmetro|String|Exemplo|
     |-------|-----|------|
-    |Nome|Nome da conta|ITFarm1|
+    |Name|Nome da conta|ITFarm1|
     |ManagedPasswordIntervalInDays|Intervalo de alteração de senha em dias (o padrão é 30 dias, se nenhum tiver sido fornecido)|75|
     |PrincipalsAllowedToRetrieveManagedPassword|As contas de computador dos hosts membros ou o grupo de segurança dos quais os hosts membros fazem parte|ITFarmHosts|
 
@@ -235,7 +235,7 @@ A associação em **Admins. do Domínio** ou a capacidade de adicionar membros a
 
 Se estiver usando contas de computador, localize as contas existentes e adicione a nova conta de computador.
 
-A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade de gerenciar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e as associações a grupos apropriadas, consulte Grupos padrão Local e Domínio.
+A associação em **Admins. do Domínio** , **Opers. de Contas** ou a capacidade de gerenciar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e as associações a grupos apropriadas, consulte Grupos padrão Local e Domínio.
 
 #### <a name="to-add-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Para adicionar hosts membros usando o cmdlet Set-ADServiceAccount
 
@@ -251,7 +251,7 @@ A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade 
 
 |Parâmetro|String|Exemplo|
 |-------|-----|------|
-|Nome|Nome da conta|ITFarm1|
+|Name|Nome da conta|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|As contas de computador dos hosts membros ou o grupo de segurança dos quais os hosts membros fazem parte|Host1, Host2, Host3|
 
 **Exemplo**
@@ -267,7 +267,7 @@ Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPass
 ```
 
 ## <a name="updating-the-group-managed-service-account-properties"></a><a name="BKMK_Update_gMSA"></a>Atualizando as propriedades da Conta de Serviço Gerenciado de grupo
-A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade de gravar em objetos msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esses procedimentos.
+A associação em **Admins. do Domínio** , **Opers. de Contas** ou a capacidade de gravar em objetos msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esses procedimentos.
 
 Abra o Módulo Active Directory do Windows PowerShell e configure qualquer propriedade usando o cmdlet Set-ADServiceAccount.
 
@@ -293,7 +293,7 @@ Se estiver usando grupos de segurança para gerenciar hosts membros, remova a co
 
 Se estiver listando contas de computador, recupere as contas existentes e adicione todas, exceto a conta de computador removida.
 
-A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade de gerenciar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e as associações a grupos apropriadas, consulte Grupos padrão Local e Domínio.
+A associação em **Admins. do Domínio** , **Opers. de Contas** ou a capacidade de gerenciar objetos de msDS-GroupManagedServiceAccount é o mínimo necessário para concluir esse procedimento. Para obter informações detalhadas sobre como usar as contas e as associações a grupos apropriadas, consulte Grupos padrão Local e Domínio.
 
 ##### <a name="to-remove-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Para remover hosts membros usando o cmdlet Set-ADServiceAccount
 
@@ -309,7 +309,7 @@ A associação em **Admins. do Domínio**, **Opers. de Contas** ou a capacidade 
 
 |Parâmetro|String|Exemplo|
 |-------|-----|------|
-|Nome|Nome da conta|ITFarm1|
+|Name|Nome da conta|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|As contas de computador dos hosts membros ou o grupo de segurança dos quais os hosts membros fazem parte|Host1, Host3|
 
 **Exemplo**
@@ -345,7 +345,7 @@ A associação em **Administradores** ou equivalente é o mínimo necessário pa
     Uninstall-ADServiceAccount ITFarm1
     ```
 
-Para obter mais informações sobre o cmdlet Uninstall-ADServiceAccount, no prompt de comando do módulo Active Directory para Windows PowerShell, digite **Get-Help Uninstall-ADServiceAccount**e pressione ENTER ou consulte as informações na Web no TechNet em [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
+Para obter mais informações sobre o cmdlet Uninstall-ADServiceAccount, no prompt de comando do módulo Active Directory para Windows PowerShell, digite **Get-Help Uninstall-ADServiceAccount** e pressione ENTER ou consulte as informações na Web no TechNet em [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
 
 
 

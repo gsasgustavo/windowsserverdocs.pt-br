@@ -7,16 +7,16 @@ ms.author: jgerend
 manager: lizross
 ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 28cc760972123c67fea2d6db56dbfaf971b0cd16
-ms.sourcegitcommit: 92e46b11154bab929e2c622d759ef62ec264c4e6
+ms.openlocfilehash: c8d7b45b14cd7124af9862666d232ba1beb44b6b
+ms.sourcegitcommit: 3416acf0c04f9db61759f99071fa81f554728180
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734727"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243865"
 ---
 # <a name="use-cluster-shared-volumes-in-a-failover-cluster"></a>Usar volumes compartilhados de cluster em um cluster de failover
 
->Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+> Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 Os CSVs (Volumes Compartilhados Clusterizados) habilitam múltiplos nós em um cluster de failover a ter acesso de leitura e gravação simultaneamente ao LUN (número de unidade lógica), ou disco, provisionado como volume NTFS (New Technology File System). (No Windows Server 2012 R2, o disco pode ser provisionado como NTFS ou ReFS (sistema de arquivos resilientes).) Com o CSV, as funções clusterizadas podem fazer failover rapidamente de um nó para outro nó sem a necessidade de uma alteração na propriedade da unidade, ou desmontagem e remontagem de um volume. O CSV também ajuda a simplificar o gerenciamento potencial de muitos LUNs em um cluster de failover.
 
@@ -33,7 +33,7 @@ No Windows Server 2012, a funcionalidade CSV foi significativamente aprimorada. 
 O Windows Server 2012 R2 apresenta funcionalidade adicional, como propriedade de CSV distribuída, maior resiliência por meio da disponibilidade do serviço de servidor, maior flexibilidade na quantidade de memória física que você pode alocar para o cache CSV, melhor diagnosibility e interoperabilidade aprimorada que inclui suporte para ReFS e eliminação de duplicação. Para obter mais informações, consulte [novidades no clustering de failover](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
 > [!NOTE]
-> Para obter informações sobre o uso de eliminação de duplicação de dados em CSV para cenários de Virtual Desktop Infrastructure (VDI), consulte as postagens de blog [Implantação de eliminação de duplicação de dados para o armazenamento VDI no Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) e [Estendendo a duplicação de dados para novas cargas de trabalho no Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx).
+> Para obter informações sobre o uso de eliminação de duplicação de dados em CSV para cenários de Virtual Desktop Infrastructure (VDI), consulte as postagens de blog [Implantação de eliminação de duplicação de dados para o armazenamento VDI no Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deploying-data-deduplication-for-vdi-storage-in-windows-server/ba-p/424777) e [Estendendo a duplicação de dados para novas cargas de trabalho no Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/extending-data-deduplication-to-new-workloads-in-windows-server/ba-p/424787).
 
 ## <a name="review-requirements-and-considerations-for-using-csv-in-a-failover-cluster"></a>Revisar requisitos e considerações para usar o CSV em um cluster de failover
 
@@ -50,13 +50,13 @@ Considere o seguinte ao configurar redes que deem suporte o CSV.
 
   - **Cliente para redes Microsoft** e **Compartilhamento Arquivos/Impressoras para Redes Microsoft** . Essas configurações dão suporte ao protocolo SMB 3.0, que é usado por padrão para transportar o tráfego CSV entre os nós. Para habilitar o SMB, certifique-se também de que o serviço Servidor e Estação de Trabalho estejam sendo executados e configurados para serem iniciados automaticamente em cada nó de cluster.
 
-    >[!NOTE]
-    >No Windows Server 2012 R2, há várias instâncias de serviço de servidor por nó de cluster de failover. Há a instância padrão, que manuseia o tráfego de entrada dos clientes SMB que acessam compartilhamentos de arquivos regulares, e uma segunda instância do CSV, que manuseia somente o tráfego CSV entre nós. Além disso, se o serviço Servidor em um nó tiver sua integridade comprometida, a propriedade de CSV mudará automaticamente para outro nó.
+    > [!NOTE]
+    > No Windows Server 2012 R2, há várias instâncias de serviço de servidor por nó de cluster de failover. Há a instância padrão, que manuseia o tráfego de entrada dos clientes SMB que acessam compartilhamentos de arquivos regulares, e uma segunda instância do CSV, que manuseia somente o tráfego CSV entre nós. Além disso, se o serviço Servidor em um nó tiver sua integridade comprometida, a propriedade de CSV mudará automaticamente para outro nó.
 
     O SMB 3.0 inclui os recursos SMB Multichannel e SMB Direct, que habilitam a transmissão do tráfego CSV em várias redes no cluster e o aproveitamento de adaptadores de rede que deem suporte ao o RDMA (Acesso Remoto Direto à Memória). Por padrão, o SMB Multichannel é usado para o tráfego CSV. Para saber mais, confira [Visão geral do protocolo SMB](../storage/file-server/file-server-smb-overview.md).
   - **Filtro de desempenho do adaptador virtual de cluster de failover da Microsoft** . Esta configuração aprimora a capacidade de os nós efetuarem o redirecionamento de E/S, quando for preciso se comunicar ao CSV. Por exemplo, quando uma falha de conectividade impedir que o nó se conecte diretamente ao disco do CSV. Para obter mais informações, consulte [sobre sincronização de e/s e redirecionamento de e/s na comunicação CSV,](#about-io-synchronization-and-io-redirection-in-csv-communication) mais adiante neste tópico.
 - **Priorização de rede de cluster** . Geralmente, é recomendável não alterar as preferências configuradas no cluster para as redes.
-- **Configuração da sub-rede de IP** . Nenhuma configuração de sub-rede específica é necessária para que os nós de uma rede usem o CSV. O CSV pode dar suporte a clusters com múltiplas sub-redes.
+- **Configuração da sub-rede de IP** . Nenhuma configuração de sub-rede específica é necessária para que os nós de uma rede usem o CSV. O CSV pode dar suporte a clusters de várias sub-redes.
 - **QoS (Qualidade de Serviço) baseado em políticas** . Recomendamos configurar uma política de prioridade de QoS e uma política de largura de banda mínima para o tráfego de rede em cada nó ao usar o CSV. Para obter mais informações, consulte [Quality of Service (QoS)](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>).
 - **Rede de armazenamento** . Para recomendações de rede de armazenamento, analise as diretrizes fornecidas pelo seu fornecedor de armazenamento. Para obter considerações adicionais sobre o armazenamento para CSV, consulte [requisitos de configuração de armazenamento e disco](#storage-and-disk-configuration-requirements) mais adiante neste tópico.
 
@@ -66,8 +66,8 @@ Para uma visão geral dos requisitos de hardware, rede e armazenamento para os c
 
 - **Sincronização de e/s** : o CSV permite que vários nós tenham acesso de leitura/gravação simultâneo ao mesmo armazenamento compartilhado. Quando um nó realizar uma entrada/saída (E/S) de disco em um volume CSV, o nó se comunicará diretamente com o armazenamento, por meio se uma SAN (rede de área de armazenamento), por exemplo. No entanto, a qualquer momento, um único nó (chamado de nó de coordenador) "possui" o recurso de disco físico que está associado ao LUN. O nó coordenador de um volume CSV é exibido no Gerenciador de Cluster de Failover como **Nó do Proprietário** , em **Discos** . Ele também aparece na saída do cmdlet [Get-ClusterSharedVolume](/powershell/module/failoverclusters/get-clustersharedvolume?view=win10-ps) do Windows PowerShell.
 
-  >[!NOTE]
-  >No Windows Server 2012 R2, a propriedade CSV é distribuída uniformemente entre os nós de cluster de failover com base no número de volumes CSV que cada nó possui. Além disso, a propriedade é rebalanceada automaticamente em caso de condições, como failover de CSV, um nó reingressar no cluster, adição de um novo nó ao cluster, reinicialização de um nó de cluster ou inicialização do cluster de failover após um desligamento.
+  > [!NOTE]
+  > No Windows Server 2012 R2, a propriedade CSV é distribuída uniformemente entre os nós de cluster de failover com base no número de volumes CSV que cada nó possui. Além disso, a propriedade é rebalanceada automaticamente em caso de condições, como failover de CSV, um nó reingressar no cluster, adição de um novo nó ao cluster, reinicialização de um nó de cluster ou inicialização do cluster de failover após um desligamento.
 
   Quando certas alterações pequenas ocorrerem no sistema de arquivos de um volume CSV, esses metadados deverão ser sincronizados em cada um dos nós físicos que acessarem o LUN, não somente no nó coordenador único. Por exemplo, quando uma máquina virtual em um volume CSV for iniciada, criada ou excluída, ou quando uma máquina virtual for migrada, tais informações precisarão ser sincronizadas em cada um dos nós físicos que acessarem a máquina virtual. Tais operações de atualização de metadados ocorrem em paralelo nas redes de cluster, usando o SMB 3.0. Essas operações não requerem que todos os nós físicos se comuniquem com o armazenamento compartilhado.
 
@@ -83,7 +83,7 @@ No Windows Server 2012 R2, você pode exibir o estado de um volume CSV em uma ba
 > [!IMPORTANT]
 > * Observe que CSVs previamente formatada com **ReFS usado sobre Sans não usará e/s direta** , independentemente de todos os outros requisitos para e/s direta ser atendida.
 > * Se você planeja usar CSV em junção com discos anexados de SAN (-FrontEnd), formate unidades com NTFS antes de convertê-las em um CSV para aproveitar os benefícios de desempenho da e/s direta.
-> * Esse comportamento é por design. Consulte as páginas vinculadas na seção **mais informações** abaixo.
+> * Este comportamento ocorre por design. Consulte as páginas vinculadas na seção **mais informações** abaixo.
 
 > * Pela integração do CSV com os recursos do SMB 3.0, como SMB Multichannel e SMB Direct, o tráfego de E/S redirecionada pode fluir em diversas redes de cluster.
 > * Planeje suas redes de cluster para permitir um potencial aumento no tráfego de rede para o nó coordenador durante o redirecionamento de E/S.
@@ -183,10 +183,10 @@ Get-ClusterAvailableDisk | Add-ClusterDisk
 1. No Gerenciador de Cluster de Failover, na árvore de console, expanda o nome do cluster, expanda **armazenamento** e, em seguida, selecione **discos** .
 2. Selecione um ou mais discos atribuídos ao **armazenamento disponível** , clique com o botão direito do mouse na seleção e selecione **Adicionar aos volumes compartilhados do cluster** .
 
-    Os discos serão atribuídos ao grupo **Volume Compartilhado do Cluster** no cluster. Os discos são expostos para cada nó de cluster como volumes numerados (pontos de montagem) na pasta %SystemDisk%ClusterStorage. Os volumes aparecem no sistema de arquivos CSVFS.
+    Os discos serão atribuídos ao grupo **Volume Compartilhado do Cluster** no cluster. Os discos são expostos a cada nó de cluster como volumes numerados (pontos de montagem) na pasta% SystemDrive% ClusterStorage Os volumes aparecem no sistema de arquivos CSVFS.
 
->[!NOTE]
->Você pode renomear os volumes CSV na pasta %SystemDisk%ClusterStorage.
+> [!NOTE]
+> Você pode renomear volumes CSV na pasta% SystemDrive% ClusterStorage
 
 #### <a name="windows-powershell-equivalent-commands-add-a-disk-to-csv"></a>Comandos equivalentes do Windows PowerShell (adicionar um disco ao CSV)
 
@@ -202,8 +202,8 @@ Add-ClusterSharedVolume –Name "Cluster Disk 1"
 
 O cache do CSV oferece armazenamento em cache no nível do bloco das operações de E/S somente leitura não armazenadas em buffer alocando a memória do sistema (RAM) como um cache de gravação. (As operações de e/s sem buffer não são armazenadas em cache pelo Gerenciador de cache.) Isso pode melhorar o desempenho de aplicativos como o Hyper-V, que realiza operações de e/s sem buffer ao acessar um VHD. O cache do CSV pode melhorar o desempenho de solicitações de leitura sem solicitações de gravação de armazenamento em cache. Habilitar o cache do CSV também é útil para cenários do Servidor de Arquivos Escalável.
 
->[!NOTE]
->Recomendamos habilitar o cache do CSV para todas as implantações clusterizadas do Hyper-V e do Servidor de Arquivos Escalável.
+> [!NOTE]
+> Recomendamos habilitar o cache do CSV para todas as implantações clusterizadas do Hyper-V e do Servidor de Arquivos Escalável.
 
 No Windows Server 2019, o cache CSV está ativado por padrão com 1 Gibibyte (GiB) alocado. No Windows Server 2016 e no Windows Server 2012, ele está desativado por padrão. No Windows Server 2012 R2, o cache CSV é habilitado por padrão; no entanto, você ainda deve alocar o tamanho do cache de blocos a ser reservado.
 
@@ -238,11 +238,11 @@ Você pode monitorar o cache do CSV no Monitor de Desempenho adicionando os cont
     Get-ClusterSharedVolume "Cluster Disk 1" | Set-ClusterParameter CsvEnableBlockCache 1
     ```
 
->[!NOTE]
+> [!NOTE]
 > * No Windows Server 2012, você pode alocar apenas 20% da RAM física total para o cache CSV. No Windows Server 2012 R2 e posterior, você pode alocar até 80%. Como os Servidores de Arquivos Escaláveis geralmente não são restritos pela memória, você pode obter maiores ganhos de desempenho usando a memória extra para o cache do CSV.
 > * Para evitar a contenção de recursos, você deve reiniciar cada nó no cluster depois de modificar a memória alocada para o cache CSV. No Windows Server 2012 R2 e posterior, uma reinicialização não é mais necessária.
 > * Depois de habilitar ou desabilitar o cache do CSV em um disco específico, deixe o recurso Disco Físico offline e deixe-o novamente online para que a configuração entre em vigor. (Por padrão, no Windows Server 2012 R2 e posterior, o cache CSV está habilitado.)
-> * Para obter mais informações sobre o cache CSV que inclui informações sobre contadores de desempenho, consulte a postagem de blog [Como habilitar o cache de CSV](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
+> * Para obter mais informações sobre o cache CSV que inclui informações sobre contadores de desempenho, consulte a postagem de blog [Como habilitar o cache de CSV](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-enable-csv-cache/ba-p/371854).
 
 ## <a name="backing-up-csvs"></a>Fazendo backup de CSVs
 
@@ -253,11 +253,11 @@ Considere os seguintes fatores ao escolher um aplicativo e agenda de backup para
 - O backup no nível do volume de um volume CSV pode ser executado de qualquer nó conectado ao volume CSV.
 - Seu aplicativo de backup pode usar instantâneos de software ou hardware. Dependendo da capacidade do aplicativo de backup para dar suporte a eles, os backups podem usar instantâneos do VSS (Serviço de Cópias de Sombra de Volume) consistentes com aplicativos ou falhas.
 - Se estiver fazendo backup de um CSV contendo diversas máquinas virtuais em execução, você deverá escolher um método de backup baseado no sistema operacional de gerenciamento. Se o aplicativo de backup der suporte esta função, será possível efetuar o backup de diversas máquinas virtuais ao mesmo tempo.
-- O CSV dá suporte a solicitantes de backup que executam o backup do Windows Server 2012 R2, o backup do Windows Server 2012 ou o backup do Windows Server 2008 R2. Porém, o Backup do Windows Server geralmente fornece apenas uma solução de backup básica que pode não ser adequada a organizações com clusters grandes. O Backup do Windows Server não dá suporte a backup de máquinas virtuais consistentes com aplicativos no CSV. Ele dá suporte somente a backup no nível do volume consistente com falhas. (Se você restaurar um backup consistente com falhas, a máquina virtual estará no mesmo estado em que estava se a máquina virtual tivesse falhado no momento exato em que o backup foi feito.) Um backup de uma máquina virtual em um volume CSV terá sucesso, mas um evento de erro será registrado indicando que não há suporte para isso.
+- CSV dá suporte a solicitantes de backup que executam o backup do Windows Server 2012 R2, o backup do Windows Server 2012 ou o backup do Windows Server 2008 R2. Porém, o Backup do Windows Server geralmente fornece apenas uma solução de backup básica que pode não ser adequada a organizações com clusters grandes. O Backup do Windows Server não dá suporte a backup de máquinas virtuais consistentes com aplicativos no CSV. Ele dá suporte somente a backup no nível do volume consistente com falhas. (Se você restaurar um backup consistente com falhas, a máquina virtual estará no mesmo estado em que estava se a máquina virtual tivesse falhado no momento exato em que o backup foi feito.) Um backup de uma máquina virtual em um volume CSV terá sucesso, mas um evento de erro será registrado indicando que não há suporte para isso.
 - Você pode precisar de credenciais administrativas ao fazer backup de um cluster de failover.
 
 > [!IMPORTANT]
->Certifique-se de analisar atentamente os dados que o aplicativo de backup salvar e restaurar, a quais recursos do CSV ele dá suporte e os requisitos de recursos para o aplicativo em cada nó de cluster.
+> Certifique-se de analisar atentamente os dados que o aplicativo de backup salvar e restaurar, a quais recursos do CSV ele dá suporte e os requisitos de recursos para o aplicativo em cada nó de cluster.
 
 > [!WARNING]
 > Se você precisar restaurar os dados do backup em um volume CSV, esteja ciente das capacidades e limitações do aplicativo de backup quanto a manter e restaurar dados consistentes com aplicativos em nós de cluster. Por exemplo, com alguns aplicativos, se o CSV for restaurado em um nó diferente do qual backup do volume CSV tiver sido efetuado, você poderá inadvertidamente substituir dados importantes sobre o estado do aplicativo no nó da restauração.

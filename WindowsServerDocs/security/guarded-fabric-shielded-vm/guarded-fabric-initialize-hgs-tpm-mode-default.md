@@ -5,22 +5,22 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 47e0780eb846e690c766dd241060d2687587c7ff
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2a89ffb238b631fc24035f2b18a57c614003c644
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961640"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235823"
 ---
 # <a name="initialize-the-hgs-cluster-using-tpm-mode-in-a-new-dedicated-forest-default"></a>Inicializar o cluster HGS usando o modo TPM em uma nova floresta dedicada (padrão)
 
->Aplica-se a: Windows Server 2019, Windows Server (canal semestral), Windows Server 2016
+> Aplica-se a: Windows Server 2019, Windows Server (canal semestral), Windows Server 2016
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
-3.  Execute [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) em uma janela do PowerShell com privilégios elevados no primeiro nó HgS. A sintaxe desse cmdlet dá suporte a várias entradas diferentes, mas as duas invocações mais comuns estão abaixo:
+3.  Execute [Initialize-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/initialize-hgsserver) em uma janela do PowerShell com privilégios elevados no primeiro nó HgS. A sintaxe desse cmdlet dá suporte a várias entradas diferentes, mas as duas invocações mais comuns estão abaixo:
 
     -   Se você estiver usando arquivos PFX para seus certificados de assinatura e criptografia, execute os seguintes comandos:
 

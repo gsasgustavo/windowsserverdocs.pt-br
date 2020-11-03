@@ -7,12 +7,12 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: 1aa270adc30f72f8efcdbbea2162e3c6b925dade
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 8dc2fec785771db4ccefb08e2359506932e11620
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746421"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235863"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Gerenciando tipos de Agendador de hipervisor do Hyper-V
 
@@ -23,7 +23,7 @@ Este artigo descreve os novos modos de lógica de agendamento do processador vir
 > [!NOTE]
 > São necessárias atualizações para usar os recursos do Agendador de hipervisor descritos neste documento. Para obter detalhes, consulte [atualizações necessárias](#required-updates).
 
-## <a name="background"></a>Tela de fundo
+## <a name="background"></a>Segundo plano
 
 Antes de discutir a lógica e os controles por trás do agendamento do processador virtual do Hyper-V, é útil examinar os conceitos básicos abordados neste artigo.
 
@@ -34,7 +34,7 @@ Os processadores com suporte a SMT estão disponíveis na Intel e na AMD. A Inte
 
 Para os fins deste artigo, as descrições de SMT e como ela é utilizada pelo Hyper-V aplicam-se igualmente aos sistemas Intel e AMD.
 
-* Para obter mais informações sobre a tecnologia Intel HT, consulte [tecnologia Hyper-Threading da Intel](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html)
+* Para obter mais informações sobre a tecnologia Intel HT, consulte [tecnologia de Hyper-Threading Intel](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html)
 
 * Para obter mais informações sobre o AMD SMT, consulte [a arquitetura principal do "Zen"](https://www.amd.com/en/technologies/zen-core)
 
@@ -135,7 +135,7 @@ O Windows Server 2016 Hyper-V usa o modelo de Agendador de hipervisor clássico 
 
 ## <a name="windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler"></a>O Windows Server 2019 Hyper-V usa como padrão o Agendador principal
 
-Para ajudar a garantir que os hosts do Hyper-V sejam implantados na configuração de segurança ideal, o Hyper-V do Windows Server 2019 agora usa o modelo do Agendador do hipervisor principal por padrão. O administrador de host pode, opcionalmente, configurar o host para usar o Agendador clássico herdado. Os administradores devem ler atentamente, entender e considerar os impactos que cada tipo de Agendador tem sobre a segurança e o desempenho dos hosts de virtualização antes de substituir as configurações padrão do tipo de Agendador.  Consulte [noções básicas sobre a seleção do tipo de Agendador do Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) para obter mais informações.
+Para ajudar a garantir que os hosts do Hyper-V sejam implantados na configuração de segurança ideal, o Hyper-V do Windows Server 2019 agora usa o modelo do Agendador do hipervisor principal por padrão. O administrador de host pode, opcionalmente, configurar o host para usar o Agendador clássico herdado. Os administradores devem ler atentamente, entender e considerar os impactos que cada tipo de Agendador tem sobre a segurança e o desempenho dos hosts de virtualização antes de substituir as configurações padrão do tipo de Agendador. Consulte [sobre a seleção do tipo de Agendador de hipervisor do Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection) para obter mais informações.
 
 ### <a name="required-updates"></a>Atualizações necessárias
 
