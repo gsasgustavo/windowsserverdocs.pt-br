@@ -5,20 +5,37 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 72d828099d8dfe29639789f526533a7bb1ba159d
-ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
+ms.openlocfilehash: b53046f493fca630b24f31818ae724403ffc3c53
+ms.sourcegitcommit: 5fc77b4325a18d8c22385d899b14fe724a662347
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88702855"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94361153"
 ---
 # <a name="whats-new-in-the-macos-client"></a>Novidades do cliente para macOS
 
 Atualizamos regularmente o [cliente da Área de Trabalho Remota para macOS](remote-desktop-mac.md), adicionando novos recursos e corrigindo problemas. Veja onde você encontrará as atualizações mais recentes.
 
 Caso tenha problemas, entre em contato conosco a qualquer momento navegando em **Ajuda** > **Relatar um Problema**.
+
+## <a name="updates-for-version-1041"></a>Atualizações da versão 10.4.1
+
+*Data da publicação: 06/11/2020*
+
+Reunimos algumas correções de bug e pequenas atualizações de recurso para essa versão 10.4.1. Confira as novidades:
+
+- Foram solucionados vários problemas de confiabilidade identificados por meio do relatório de falhas.
+- Foram solucionados vários erros de acessibilidade relacionados ao teclado e a VoiceOver.
+- Foi corrigido um problema em que o cliente enfrentava um travamento ao se reconectar após sair do estado de suspensão.
+- Foi corrigido um artefato de áudio ouvido quando a primeira parte de um fluxo de áudio redirecionado era reproduzida.
+- Foi resolvido um problema em que o cliente relatava uma mensagem de erro 0x5000007 ao se conectar usando um servidor de Gateway de Área de Trabalho Remota.
+- Foi corrigida a taxa de proporção das miniaturas do PC exibidas na Central de Conexões.
+- Foi aprimorada a heurística de redirecionamento de cartão inteligente para lidar melhor com transações aninhadas.
+- Foi corrigido um bug que impedia a exportação de indicador se o nome de exibição do indicador contivesse o caractere "/".
+- Foi resolvido um bug que causava um erro de protocolo 0xD06 quando o Outlook era executado como um aplicativo remoto.
+- Foi adicionado suporte para uma nova propriedade de arquivo RDP de inteiro (ForceHiDpiOptimizations) para habilitar a otimização para telas Retina.
 
 ## <a name="updates-for-version-1040"></a>Atualizações para a versão 10.4.0
 
@@ -315,19 +332,19 @@ Há algumas semanas desde a última atualização, mas trabalhamos duro durante 
 - Correção de um bug que fazia com que miniaturas consumissem muito armazenamento em disco no macOS 10.14.
 - Inclusão de suporte para a imposição de políticas de redirecionamento de dispositivo de Gateway de Área de Trabalho Remota.
 - Correção de um problema que impedia o fechamento das janelas de sessão ao desconectar de uma conexão usando o Gateway de Área de Trabalho Remota.
-- Se a NLA (Autenticação no Nível da Rede) não for imposta pelo servidor, agora você será roteado para a tela de logon se a senha tiver expirado.
+- Se a NLA (Autenticação no Nível da Rede) não for imposta pelo servidor, você será direcionado à tela de entrada se a senha tiver expirado.
 - Correção de problemas de desempenho que surgem durante a transferência de grandes quantidades de dados pela rede.
 - Correções de redirecionamento de cartão inteligente.
 - Suporte para todos os valores possíveis nas configurações do arquivo RDP "EnableCredSspSupport" e "Nível de Autenticação" se a chave padrão do usuário ClientSettings.EnforceCredSSPSupport (no domínio com.microsoft.rdc.macos) for definida como 0.
 - Suporte para a configuração do arquivo RDP do "Prompt para Credenciais sobre o Cliente" quando a NLA não for negociada.
-- Suporte para logon baseado em cartão inteligente por meio de redirecionamento de cartão inteligente no prompt do Winlogon, quando a NLA não for negociada.
+- Suporte para entrada baseada em cartão inteligente por meio de redirecionamento de cartão inteligente no prompt do Winlogon quando a NLA não for negociada.
 - Corrigido um problema que impedia o download de recursos de feed que têm espaços na URL.
 
 ## <a name="updates-for-version-1021"></a>Atualizações para a versão 10.2.1
 
 *Data da publicação: 06/08/2018*
 
-- Habilitação de conectividade para PCs associados ao AAD (Azure Active Directory). Para conectar um computador associado ao AAD, o nome de usuário deve estar em um dos seguintes formatos: "AzureAD\user" ou "AzureAD\user@domain".
+- Foi habilitada a conectividade para PCs ingressados no Azure AD (Azure Active Directory). Para se conectar a um computador ingressado no Azure AD, o nome de usuário precisa estar em um dos seguintes formatos: "AzureAD\user" ou "AzureAD\user@domain".
 - Solução de alguns bugs que afetavam o uso de cartões inteligentes em uma sessão remota.
 
 ## <a name="updates-for-version-1020"></a>Atualizações para a versão 10.2.0
@@ -347,7 +364,7 @@ Há algumas semanas desde a última atualização, mas trabalhamos duro durante 
 - Forma de cursor do mouse agora atualiza corretamente quando movida para fora de uma sessão ou da janela do RemoteApp.
 - Correção de um bug de redirecionamento de pasta que estava causando perda de dados ao copiar e colar pastas.
 - Correção de um problema de redirecionamento de pasta que causava relatórios incorretos de tamanhos de pastas.
-- Correção de uma regressão que estava impedindo o logon em um computador associado ao AAD usando uma conta local.
+- Foi corrigida uma regressão que estava impedindo o logon em um computador ingressado no Azure AD usando uma conta local.
 - Correção de bugs que estavam cortando o conteúdo da janela da sessão.
 - Inclusão de suporte para certificados de ponto de extremidade de Área de Trabalho Remota que contêm as chaves assimétricas de curva elíptica.
 - Correção de um bug que estava impedindo o download de recursos gerenciados em alguns cenários.
@@ -378,7 +395,7 @@ Há algumas semanas desde a última atualização, mas trabalhamos duro durante 
 - Agora é possível iniciar uma conexão ao pressionar ENTER em um bloco da área de trabalho.
 - Quando você estiver no modo de exibição de tela inteira, Cmd+M agora será mapeado corretamente para WIN+M.
 - As janelas Central de Conexão, Preferências e Sobre agora respondem a Cmd+M.
-- Agora é possível começar a descobrir feeds pressionando ENTER na página **Adicionar Recursos Remotos*.
+- Agora é possível começar a descobrir feeds pressionando ENTER na página * *Adicionar Recursos Remotos*.
 - Correção de um problema em que um novo feed de recursos remotos aparecia vazio no Connection Center até que você atualizasse.
 
 ## <a name="updates-for-version-1016"></a>Atualizações para a versão 10.1.6

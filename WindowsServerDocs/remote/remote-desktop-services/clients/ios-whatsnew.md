@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/17/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0afb5a64a86d3b33ea5d78756abe09bf87564928
-ms.sourcegitcommit: 3ed5dd72451b494e17d508fed82fdc5559ba4ef0
+ms.openlocfilehash: beb97113165127c50c815ccca8a667a1654215fa
+ms.sourcegitcommit: 5fc77b4325a18d8c22385d899b14fe724a662347
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88270138"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94361163"
 ---
 # <a name="whats-new-in-the-ios-client"></a>Novidades do cliente para iOS
 
@@ -22,6 +22,50 @@ Atualizamos regularmente o [cliente da Área de Trabalho Remota para iOS](remote
 
 Temos o compromisso de tornar o cliente da Área de Trabalho Remota para iOS o melhor possível, por isso valorizamos seus comentários. Você pode relatar problemas em **Ajuda** > **Relatar um Problema**.
 
+## <a name="updates-for-version-1020"></a>Atualizações para a versão 10.2.0
+
+*Data da publicação: 06/11/2020*
+
+Nessa versão, solucionamos alguns problemas de compatibilidade com o iOS e o iPadOS 14. Além disso, fizemos as seguintes correções e atualizações de recurso:
+
+- Foram solucionadas as falhas no iOS e no iPadOS que ocorriam quando a entrada era inserida por meio de um teclado.
+- Foram adicionados os atalhos Cmd+S e Cmd+N para acessar os processos "Adicionar Workspace" e "Adicionar PC", respectivamente.
+- Foi adicionado o atalho Cmd+F para invocar a interface do usuário de Pesquisa na Central de Conexões.
+- Foram adicionados os comandos "Expandir Tudo" e "Recolher Tudo" à guia Workspaces.
+- Foi resolvido um bug que causava um erro de protocolo 0xD06 quando o Outlook era executado como um aplicativo remoto.
+- O teclado na tela agora desaparecerá quando você rolar pelos resultados da pesquisa na Central de Conexões.
+- Foi atualizada a animação usada ao focalizar os ícones do workspace com um ponteiro de mouse ou trackpad no iPadOS 14.
+
+## <a name="updates-for-version-1014"></a>Atualizações da versão 10.1.4
+
+*Data da publicação: 06/11/2020*
+
+Reunimos algumas correções de bug e pequenas atualizações de recurso para essa versão 10.1.4. Confira as novidades:
+
+- Foi resolvido um problema em que o cliente relatava uma mensagem de erro 0x5000007 ao tentar se conectar a um servidor de Gateway de Área de Trabalho Remota.
+- As senhas de conta de usuário atualizadas na interface do usuário da credencial agora são salvas após um logon bem-sucedido.
+- Foi resolvido um problema em que a seleção múltipla e de intervalo com o mouse ou trackpad (Ctrl + clique e Shift + clique) não funcionavam de maneira consistente.
+- Foi resolvido um bug em que os aplicativos exibidos na interface do usuário do alternador na sessão estavam fora de sincronia com a sessão remota.
+- Foram feitas algumas alterações estéticas ao layout dos cabeçalhos de workspace da Central de Conexões.
+- Foi aprimorada a visibilidade dos botões de teclado na tela para os panos de fundo escuros.
+- Foi corrigido um bug de localização na caixa de diálogo desconectar.
+
+## <a name="updates-for-version-1013"></a>Atualizações da versão 10.1.3
+
+*Data da publicação: 06/11/2020*
+
+Reunimos algumas correções de bug e atualizações de recurso para essa versão 10.1.3. Confira as novidades:
+
+- O modo de entrada (modo Ponteiro do Mouse ou Toque) agora é global em todas as conexões de PC e de aplicativo remoto ativas.
+- Foi corrigido um problema que impedia que o redirecionamento de microfone funcionasse consistentemente.
+- Foi corrigido um bug que fazia com que a saída de áudio fosse reproduzida no fone de ouvido do iPhone em vez de no alto-falante interno.
+- O cliente agora dá suporte à troca automática de saída de áudio entre os auto-falantes internos do iPhone ou do iPad, os alto-falantes Bluetooth e o Airpods.
+- O áudio agora continua a ser reproduzido em segundo plano quando sai do cliente ou quando o dispositivo é bloqueado.
+- O modo de entrada muda automaticamente para o modo Toque ao usar um mouse SwiftPoint em iPhones ou iPads (que não estejam executando o iPadOS versão 13.4 ou posterior).
+- Foram corrigidos problemas de saída de gráficos que ocorriam quando o servidor era configurado para usar o modo de tela inteira do AVC444.
+- Foram corrigidos alguns bugs de VoiceOver.
+- A ação de percorrer uma panorâmica em uma sessão ampliada ao usar um mouse externo ou trackpad agora funciona de maneira diferente. Para aplicar panorâmica em uma sessão ampliada com um mouse ou trackpad externo, selecione o botão de panorâmica e, em seguida, arraste o cursor do mouse para longe enquanto mantém o botão do mouse pressionado. Para percorrer a panorâmica no modo Toque, pressione o botão de panorâmica e, em seguida, mova o dedo. A sessão ficará atrelada ao seu dedo e o acompanhará. No modo Ponteiro do Mouse, empurre o cursor do mouse virtual contra os lados da tela.
+
 ## <a name="updates-for-version-1012"></a>Atualizações para a versão 10.1.2
 
 *Data da publicação 17/8/2020*
@@ -30,6 +74,44 @@ Nesta atualização, abordamos problemas que foram relatados na atualização da
 
 - Correção de uma falha que ocorreu para alguns usuários ao assinar um feed da Área de Trabalho Virtual do Windows usando autenticação não agenciada.
 - Corrigido o layout de ícones do espaço de trabalho no iPhone X, iPhone XS e iPhone 11 Pro.
+
+## <a name="updates-for-version-1011"></a>Atualizações da versão 10.1.1
+
+*Data da publicação: 06/11/2020*
+
+Aqui está o que incluímos nesta versão:
+
+- Foi corrigido um bug que impedia a digitação em coreano.
+- Foi adicionado suporte para as teclas F1 a F12, Home, End, PgUp e PgDn em teclados de hardware.
+- Foi resolvido um bug que dificultava a movimentação do cursor do mouse para a parte superior da tela no modo em letterbox em dispositivos iPadOS.
+- Foi resolvido um problema no qual pressionar Backspace após o espaço excluía dois caracteres.
+- Foi corrigido um bug que fazia com que o cursor do mouse no iPadOS aparecesse sobre o cursor do mouse do cliente na Área de Trabalho Remota no modo "Tocar para Clicar".
+- Foi resolvido um problema que impedia conexões a alguns servidores de Gateway de Área de Trabalho Remota (código de erro 0x30000064).
+- Foi corrigido um bug que fazia com que o cursor do mouse fosse mostrado na interface do usuário do alternador na sessão em dispositivos iOS com o uso de um mouse SwiftPoint.
+- Foi redimensionado o cursor do mouse do cliente de Área de Trabalho Remota para ser consistente com o fator de escala do cliente atual.
+- O cliente agora verifica a conectividade de rede antes de iniciar um recurso de workspace ou uma conexão de computador.
+- O pressionamento do botão de escape remapeado ou de Cmd+. agora cancela qualquer solicitação de credenciais.
+- Adicionamos algumas animações e aperfeiçoamentos que aparecem quando você move o cursor do mouse em iPads executando o iPadOS 13.4 ou posterior.
+
+## <a name="updates-for-version-1010"></a>Atualizações da versão 10.1.0
+
+*Data da publicação: 06/11/2020*
+
+Veja as novidades dessa versão:
+
+- Se você estiver usando o iPadOS 13.4 ou posterior, agora poderá controlar a sessão remota com um mouse ou trackpad.
+- Agora, o cliente dá suporte aos seguintes gestos do Apple Magic Mouse 2 e do Apple Magic Trackpad 2: clicar com o botão esquerdo do mouse, arrastar para a esquerda, clicar com o botão direito do mouse, arrastar para a direita, rolagem horizontal e vertical e zoom local.
+- Para mouses externos, o cliente agora dá suporte aos gestos de clicar com o botão esquerdo do mouse, arrastar para a esquerda, clicar com o botão direito do mouse, arrastar para a direita, clicar com o botão central e rolar verticalmente.
+- O cliente agora dá suporte a atalhos de teclado que usam as teclas Ctrl, Alt ou Shift com o mouse ou trackpad, incluindo seleção múltipla e de intervalo.
+- O cliente agora dá suporte ao recurso "Toque para Clicar" para o trackpad.
+- Atualizamos o gesto de clique com o botão direito do mouse do modo Ponteiro do Mouse para pressionar e manter pressionado (não pressionar, segurar e soltar). No cliente do iPhone, adicionamos um pouco de resposta tátil ao detectar o gesto de clique com o botão direito do mouse.
+- Foi adicionada uma opção para desabilitar a imposição de NLA em **Configurações do iOS** > **Cliente da Área de Trabalho Remota**.
+- O comando Control + Shift + Escape foi mapeado para Ctrl + Shift + Esc, em que o Escape é gerado usando uma tecla remapeada no iPadOS ou Command+.
+- Command + F foi mapeado para Ctrl + F.
+- Foi corrigido um problema em que o botão central do mouse do SwiftPoint não funcionava no iPadOS versão 13.3.1 ou anterior e no iOS.
+- Foram corrigidos alguns bugs que impediam o cliente de reconhecer o URI "rdp:".
+- Foi resolvido um problema em que a interface do usuário do alternador de imersão na sessão mostrava entradas de aplicativo desatualizadas se uma desconexão fosse iniciada pelo servidor.
+- O cliente agora dá suporte à versão integrada do Azure Resource Manager da Área de Trabalho Virtual do Windows.
 
 ## <a name="updates-for-version-1007"></a>Atualizações para a versão 10.0.7
 
@@ -68,9 +150,9 @@ Reunimos algumas correções de bug e atualizações de recurso para essa versã
 - Correção de um bug no reconhecedor de gesto que fazia o cliente ficar sem resposta quando se conectava a uma sessão remota.
 - Agora você pode entrar no modo Alternância de Aplicativos apenas deslizando o dedo para cima (exceto quando você está no modo Toque com a sessão estendida para a área do indicador Início).
 - O indicador Início agora ficará oculto automaticamente quando conectado a uma sessão remota e será exibido novamente quando você tocar na tela.
-- Adição de um atalho do teclado para acessar as configurações do aplicativo no Centro de Conexão (**Command + ,** ).
-- Adição de um atalho do teclado para atualizar todos os workspaces no Centro de Conexão (**Command + R**).
-- Conexão do atalho do teclado do sistema para Escape quando conectado a uma sessão remota (**Command + .** ).
+- Adição de um atalho do teclado para acessar as configurações do aplicativo no Centro de Conexão ( **Command + ,** ).
+- Adição de um atalho do teclado para atualizar todos os workspaces no Centro de Conexão ( **Command + R** ).
+- Conexão do atalho do teclado do sistema para Escape quando conectado a uma sessão remota ( **Command + .** ).
 - Correção de cenários em que o teclado na tela do Windows na sessão remota era muito pequeno.
 - Implementação do foco de teclado automático em todo o Centro de Conexão para tornar a entrada de dados mais contínua.
 - Pressionar **Enter** em uma solicitação de credenciais agora faz o prompt ser ignorado e o fluxo atual retomado.
@@ -171,7 +253,3 @@ Já faz mais de um ano desde a última atualização do Cliente de Área de Trab
 *Data da publicação: 28/03/2018*
 
 - Atualizações para solucionar a correção de criptografia Oracle CredSSP descrita em CVE-2018-0886.
-
-## <a name="how-to-report-issues"></a>Como relatar problemas
-
-Temos o compromisso de tornar este aplicativo o melhor possível e valorizamos seus comentários. Você pode relatar problemas navegando em **Configurações** > **Relatar um Problema** no cliente.
