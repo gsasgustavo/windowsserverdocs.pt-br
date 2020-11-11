@@ -6,20 +6,21 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: edffa7869aa1895a09e7007c375b8973f68e4eed
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: ebbbefebc420d83f8f74466698729c26395bdbec
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069898"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520499"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>Atualizar controladores de domínio para o Windows Server 2012 R2 e o Windows Server 2012
 
->Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Este tópico fornece informações básicas sobre Active Directory Domain Services no Windows Server 2012 R2 e no Windows Server 2012 e explica o processo de atualização dos controladores de domínio do Windows Server 2008 ou do Windows Server 2008 R2.
 
 ## <a name="domain-controller-upgrade-steps"></a><a name="BKMK_UpgradeWorkflow"></a>Etapas de atualização do controlador de domínio
+
 A maneira recomendada de atualizar um domínio é promover controladores de domínio que executam versões mais recentes do Windows Server e rebaixam controladores de domínio anteriores conforme necessário. Esse método é preferível para atualizar o sistema operacional de um controlador de domínio existente. Esta lista aborda as etapas gerais a serem seguidas antes de promover um controlador de domínio que executa uma versão mais recente do Windows Server:
 
 1. Verifique se o servidor de destino atende [aos requisitos do sistema](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)).
@@ -39,12 +40,12 @@ A maneira recomendada de atualizar um domínio é promover controladores de dom�
    |Ação de instalação|Requisitos de credenciais|
    |-----------------------|---------------------------|
    |Instalar uma nova floresta|Administrador local no servidor de destino|
-   |Instalar um novo domínio em uma floresta existente|Administradores Corporativos|
-   |Instalar um controlador de domínio adicional em um domínio existente|Administradores de Domínio|
+   |Instalar um novo domínio em uma floresta existente|Administrador corporativo|
+   |Instalar um controlador de domínio adicional em um domínio existente|Administradores do domínio|
    |Executar adprep/forestprep|Administradores de esquema, administradores corporativos e administradores do domínio|
-   |Executar adprep/domainprep|Administradores de Domínio|
-   |Executar adprep/domainprep/gpprep|Administradores de Domínio|
-   |Executar adprep/rodcprep|Administradores Corporativos|
+   |Executar adprep/domainprep|Administradores do domínio|
+   |Executar adprep/domainprep/gpprep|Administradores do domínio|
+   |Executar adprep/rodcprep|Administrador corporativo|
 
    Você pode delegar permissões de instalação do AD DS. Para obter mais informações, consulte as [tarefas de gerenciamento de instalação](/previous-versions/windows/it-pro/windows-server-2003/cc773327(v=ws.10)).
 
@@ -69,7 +70,7 @@ Como o Windows Update faz parte da Manutenção Automática no Windows 8 e Windo
 
 A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012 R2, com um link para informações mais detalhadas (quando disponíveis). Para obter uma explicação mais detalhada de alguns recursos, incluindo seus requisitos, consulte [Novidades no Active Directory no Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268294(v=ws.11)).
 
-|Recurso|Descrição|
+|Recurso|DESCRIÇÃO|
 |-----------|---------------|
 |[Ingresso no local](../../ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)|Permite que os operadores de informações ingressem com seus dispositivos pessoais para acessar os recursos e serviços da empresa.|
 |[Proxy de aplicativo Web](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))|Oferece acesso ao aplicativo Web usando um novo serviço de função de Acesso Remoto.|
@@ -88,7 +89,7 @@ A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012 R2, c
 
 A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012, com um link para informações mais detalhadas (quando disponíveis). Para obter uma explicação mais detalhada de alguns recursos, incluindo seus requisitos, consulte [What ' s New in Active Directory Domain Services (AD DS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831477(v=ws.11)).
 
-|Recurso|Descrição|
+|Recurso|DESCRIÇÃO|
 |-----------|---------------|
 |AD BA (ativação baseada no Active Directory); consulte [Visão Geral de Ativação de Volume](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11))|Simplifica a tarefa de configuração de distribuição e gerenciamento de licenças de software por volume.|
 |[Serviços de Federação do Active Directory (AD FS)](../../active-directory-federation-services.md)|Adiciona instalação de funções pelo Gerenciador do Servidor, configuração de confiança simplificada, gerenciamento de confiança automático, suporte ao protocolo SAML e muito mais.|
@@ -126,7 +127,7 @@ A tabela a seguir lista alguns exemplos de como definir essas configurações pa
 |**Gerenciado pelo WSUS**<p>-O uptais é instalado em diferentes horas/dias|Definir grupos de destino para diferentes grupos de máquinas que devem ser atualizados em conjunto<p>Usar as etapas acima para o cenário anterior<p>Definir datas limites diferentes para grupos de destino diferentes|
 |**Não gerenciado pelo WSUS-sem suporte para prazos finais**<p>-O escalonamento é instalado em momentos diferentes|**Política** : Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Chave do Registro:** Habilitar a chave do Registro discutida no artigo da Base de Dados de Conhecimento da Microsoft [2835627](https://support.microsoft.com/kb/2835627)<p>**Política:** Atraso aleatório na manutenção automática (Habilitado)<p>Defina **Atraso aleatório na manutenção regular** de PT6H para atraso aleatório de seis horas para obter o seguinte comportamento:<p>-As atualizações serão instaladas no tempo de manutenção configurado mais um atraso aleatório<p>-A reinicialização de cada máquina ocorrerá exatamente três dias depois<p>Como alternativa, defina um horário de manutenção diferente para cada grupo de máquinas|
 
-Para ver mais informações sobre por que a equipe de desenvolvimento do Windows implementou essas mudanças, consulte [Minimizing restarts after automatic updating in Windows Update (Minimizando as reinicializações depois de atualizações automáticas no Windows Update)](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).
+Para obter mais informações sobre por que a equipe de engenharia do Windows implementou essas alterações, consulte [como reduzir suas chances de ser solicitado a reiniciar o computador](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
 
 ## <a name="ad-ds-server-role-installation-changes"></a><a name="BKMK_InstallationChanges"></a>Alterações na instalação da função de servidor AD DS
 
@@ -148,9 +149,9 @@ Há algumas alterações relacionadas ao AD DS:
 - **Dcpromo.exe preterido**
    - O Dcpromo é preterido, embora no Windows Server 2012 apenas ele ainda possa ser executado com um arquivo de resposta ou parâmetros de linha de comando para dar às organizações tempo para fazer a transição da automação existente para as novas opções de instalação do Windows PowerShell.
 - **LMHash desabilitado em contas de usuário**
-  - Os padrões de segurança em modelos de segurança do Windows Server 2008, Windows Server 2008 R2 e Windows Server 2012 habilitam a política NoLMHash, desabilitada nos modelos de segurança dos controladores de domínio do Windows 2000 e Windows Server 2003. Desabilite a política NoLMHash para clientes que dependem de LMHash conforme necessário, utilizando as etapas no artigo KB [946405](https://support.microsoft.com/kb/946405).
+  - Os padrões de segurança em modelos de segurança do Windows Server 2008, Windows Server 2008 R2 e Windows Server 2012 habilitam a política NoLMHash, desabilitada nos modelos de segurança dos controladores de domínio do Windows 2000 e Windows Server 2003. Desabilite a política NoLMHash para clientes dependentes do LMHash conforme necessário, usando as etapas descritas na página [como impedir que o Windows armazene um hash do Gerenciador de LAN de sua senha em Active Directory e em bancos de dados Sam locais](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
-A partir do Windows Server 2008, os controladores de domínio também têm as seguintes configurações padrão seguras, em comparação com os controladores de domínio que executam o Windows Server 2003 ou o Windows 2000.
+A partir do Windows Server 2008, os controladores de domínio também têm as seguintes configurações padrão seguras, em comparação com os controladores de domínio que executam o Windows Server 2003 ou o Windows 2000:
 
 | Tipo ou política de criptografia | Padrão do Windows Server 2008 | Padrão do Windows Server 2012 e Windows Server 2008 R2 | Comentário |
 |--|--|--|--|
@@ -164,7 +165,7 @@ A partir do Windows Server 2008, os controladores de domínio também têm as se
 Os requisitos mínimos do sistema para o Windows Server 2012 estão listados na tabela a seguir. Para obter mais informações sobre requisitos de sistema e informações de pré-instalação, consulte [Instalando o Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). Não há requisitos de sistema adicionais para instalação de uma nova floresta do Active Directory, mas você deve adicionar memória suficiente para armazenar em cache o conteúdo do banco de dados do Active Directory, de modo a melhorar o desempenho de controladores de domínio, solicitações de cliente LDAP e aplicativos habilitados pelo Active Directory. Se estiver atualizando um controlador de domínio existente ou adicionando um novo controlador de domínio a uma floresta existente, examine a próxima seção para verificar se o servidor cumpre com os requisitos de espaço em disco.
 
 | Requisito | Valor |
-|--|--|
+| ---------- | ----- |
 | Processador | Processador de 1,4 Ghz e 64 bits |
 | RAM | 512 MB |
 | Requisitos de espaço livre no disco | 32 GB |
@@ -295,7 +296,7 @@ A tabela a seguir mostra aplicativos da Microsoft comuns integrados ao Active Di
 
 ## <a name="known-issues"></a><a name="BKMK_KnownIssues"></a>Problemas conhecidos
 
-A tabela a seguir apresenta problemas conhecidos relacionados à instalação do AD DS.
+A tabela a seguir lista os problemas conhecidos relacionados à instalação do AD DS:
 
 | Número e título do artigo da KB | Área tecnológica influenciada | Problema/descrição |
 |--|--|--|

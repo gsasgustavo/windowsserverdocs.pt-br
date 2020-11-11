@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 565e4da69466549538c380457269304c7f1cdd5a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a59e6e1d12844e809f5e4d9f85109c601dabfe26
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944916"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520489"
 ---
 # <a name="strings-and-localization-in-windows-admin-center"></a>Cadeias de caracteres e localização no centro de administração do Windows #
 
@@ -44,7 +44,7 @@ Para localização em outros idiomas, um arquivo String. resjson precisa ser cri
 | ------------- |-------------|
 | Čeština | cs-CZ |
 | Deutsch | de-DE |
-| Inglês | pt-BR |
+| Inglês | en-US |
 | Español | es-ES |
 | Français | fr-FR |
 | Magyar | hu-HU |

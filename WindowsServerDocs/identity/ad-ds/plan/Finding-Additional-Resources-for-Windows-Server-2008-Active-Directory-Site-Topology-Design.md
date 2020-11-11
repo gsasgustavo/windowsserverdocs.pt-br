@@ -6,12 +6,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b5edda407ce85ec8024f6cc1c9a6e9ec463e7618
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: d7342c7af0ed3c9045fe337162d0903977857177
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068558"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520479"
 ---
 # <a name="finding-additional-resources-for-windows-server-2008-active-directory-site-topology-design"></a>Localizar recursos adicionais de design de topologia de site do Active Directory do Windows Server 2008
 
@@ -46,8 +46,6 @@ Você pode encontrar a seguinte documentação sobre Active Directory Domain Ser
 - Para obter mais informações sobre como criar objetos de sub-rede, consulte [criar uma sub-rede](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770372(v=ws.11)).
 
 - Para obter mais informações sobre como usar o snap-in Active Directory sites e serviços para desabilitar a configuração **ponte de todos os links de site** , consulte [habilitar ou desabilitar pontes de link de site](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
-
-- Para obter informações sobre como gerenciar a replicação por meio de firewalls, consulte [Active Directory em redes segmentadas por firewalls](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e).
 
 - Para obter mais informações sobre os recursos do RODC (controlador de domínio somente leitura), consulte [AD DS: Read-Only controladores de domínio](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
 

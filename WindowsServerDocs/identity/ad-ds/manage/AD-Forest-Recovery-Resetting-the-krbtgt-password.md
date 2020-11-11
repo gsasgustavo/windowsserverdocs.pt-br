@@ -6,12 +6,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 3bd6c1d0-d316-4b03-b7b4-557d4537635c
-ms.openlocfilehash: 1c42ab160f0d467cab10edeea1a5284614401b3c
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 62416758d373423246ccb030ea6baf325515fb49
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070828"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520429"
 ---
 # <a name="ad-forest-recovery---resetting-the-krbtgt-password"></a>Recuperação de floresta do AD-redefinindo a senha krbtgt
 
@@ -20,21 +20,24 @@ ms.locfileid: "93070828"
 Use o procedimento a seguir para redefinir a senha krbtgt para o domínio. O procedimento a seguir aplica os DCs graváveis, mas não os RODCs (controladores de domínio somente leitura).
 
 > [!IMPORTANT]
-> Se você planeja recuperar os RODCs online durante a recuperação da floresta, não exclua as contas krbtgt para os RODCs. A conta krbtgt para um RODC é listada no formato krbtgt_ *número* .
+> Se você planeja recuperar os RODCs online durante a recuperação da floresta, não exclua as contas krbtgt para os RODCs. A conta krbtgt para um RODC é listada no formato krbtgt_ *número*.
 >
 > Se você usar um filtro de senha personalizado (como passfilt.dll) em um controlador de domínio, poderá receber um erro ao tentar redefinir a senha krbtgt. Para obter mais informações, incluindo uma solução alternativa, consulte o [artigo 2549833](https://support.microsoft.com/kb/2549833) da base de dados de conhecimento Microsoft ( https://support.microsoft.com/kb/2549833) .
 
 ## <a name="to-reset-the-krbtgt-password"></a>Para redefinir a senha krbtgt
 
-1. Clique em **Iniciar** , aponte para **painel de controle** , aponte para **ferramentas administrativas** e clique em **Active Directory usuários e computadores** .
-2. Clique em **Exibir** e em **Recursos Avançados** .
-3. Na árvore de console, clique duas vezes no contêiner de domínio e, em seguida, clique em **usuários** .
-4. No painel de detalhes, clique com o botão direito do mouse na conta de usuário **krbtgt** e clique em **Redefinir senha** .
+1. Clique em **Iniciar** , aponte para **painel de controle** , aponte para **ferramentas administrativas** e clique em **Active Directory usuários e computadores**.
+2. Clique em **Exibir** e em **Recursos Avançados**.
+3. Na árvore de console, clique duas vezes no contêiner de domínio e, em seguida, clique em **usuários**.
+4. No painel de detalhes, clique com o botão direito do mouse na conta de usuário **krbtgt** e clique em **Redefinir senha**.
    ![Redefinir senha](media/AD-Forest-Recovery-Resetting-the-krbtgt-password/resetpass1.png)
-5. Em **nova senha** , digite uma nova senha, digite a senha novamente em **Confirmar senha** e clique em **OK** . A senha que você especificar não é significativa porque o sistema irá gerar uma senha forte automaticamente independente da senha que você especificar.
+5. Em **nova senha** , digite uma nova senha, digite a senha novamente em **Confirmar senha** e clique em **OK**. A senha que você especificar não é significativa porque o sistema irá gerar uma senha forte automaticamente independente da senha que você especificar.
 
 > [!NOTE]
 > Você deve executar essa operação duas vezes. O histórico de senha da conta krbtgt é dois, o que significa que ele inclui as duas senhas mais recentes. Ao redefinir a senha duas vezes, você limpa efetivamente todas as senhas antigas do histórico, portanto, não há como o outro controlador de domínio será replicado com esse controlador de domínio usando uma senha antiga.
+
+> [!NOTE]
+> Ao redefinir a senha da conta de serviço do centro de distribuição de chaves duas vezes, um período de espera de 10 horas é necessário entre as redefinições.
 
 ## <a name="next-steps"></a>Próximas etapas
 
