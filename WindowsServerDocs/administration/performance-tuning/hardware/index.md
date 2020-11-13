@@ -5,12 +5,12 @@ ms.topic: landing-page
 ms.author: phstee
 author: phstee
 ms.date: 01/08/2018
-ms.openlocfilehash: bac2aa367cc9a8d736fd83f7aeed3e467aeddb54
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 43203e4ff1095cc06be970a46a1f500bfb25ab88
+ms.sourcegitcommit: a7fb96c0b1d186baeb29349befbbd6bd3b955813
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896741"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94522509"
 ---
 # <a name="server-hardware-performance-considerations"></a>Considerações sobre o desempenho de hardware
 
@@ -46,7 +46,7 @@ Quando o computador fica com pouca memória e precisa de mais imediatamente, o W
 Você pode otimizar a paginação usando as seguintes diretrizes para o posicionamento de arquivo de paginação:
 - Isole o arquivo de paginação em seu próprio dispositivo de armazenamento ou pelo menos verifique se ele não compartilha os mesmos dispositivos de armazenamento que outros arquivos acessados com frequência. Por exemplo, coloque o arquivo de paginação e os arquivos do sistema operacional em unidades de disco físico separadas.
 
-- Coloque o arquivo de paginação em uma unidade que não seja tolerante a falhas. Se o disco falhar, será muito provável que ocorra uma falha do sistema. Se você colocar o arquivo de paginação em uma unidade tolerante a falhas, lembre-se de que os sistemas tolerantes a falhas geralmente são mais lentos para gravar dados porque os gravam em vários locais.
+- Coloque o arquivo de paginação em uma unidade tolerante a falhas. Se o disco não tolerante a falhas falhar, será muito provável que ocorra uma falha do sistema. Se você colocar o arquivo de paginação em uma unidade tolerante a falhas, lembre-se de que os sistemas tolerantes a falhas geralmente são mais lentos para gravar dados porque os gravam em vários locais.
 
 - Use vários discos ou uma matriz de disco, se precisar de largura de banda de disco adicional para paginação. Não coloque vários arquivos de paginação em partições diferentes da mesma unidade de disco físico.
 
