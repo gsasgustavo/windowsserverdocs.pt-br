@@ -4,14 +4,14 @@ description: Problemas conhecidos e suporte de solução de problemas para o ser
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 10/23/2020
+ms.date: 11/12/2020
 ms.topic: article
-ms.openlocfilehash: 25d0c6666e0706b1c772957d9328db43ecfc5b18
-ms.sourcegitcommit: 1b214ca5030c77900f095d77c73cedc6381eb0e4
+ms.openlocfilehash: 41cfbc5b5a8f91e97af330243015ecc1fcf749f6
+ms.sourcegitcommit: 6a245fefdf958bfc0aeb69f7a887d11a07bdcd23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639039"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570321"
 ---
 # <a name="storage-migration-service-known-issues"></a>Problemas conhecidos do serviço de migração de armazenamento
 
@@ -653,7 +653,19 @@ Remote exception : a parameter cannot be found that matches parameter name 'Incl
 
 Para resolver, atualize a extensão de serviço de migração de armazenamento para pelo menos a versão 1.113.0 no centro de administração do Windows. A atualização deve aparecer automaticamente no feed e solicitar a instalação.
 
+## <a name="storage-migration-service-transfer-validation-returns-error-hresult-e_fail-has-been-returned-from-a-call-to-a-com-component"></a>A validação de transferência do serviço de migração de armazenamento retornou ' erro HRESULT E_FAIL foi retornado de uma chamada para um componente COM '
 
-## <a name="see-also"></a>Veja também
+Depois de instalar o [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7)de atualização cumulativa do Windows Server 2019 de novembro, algumas validações de transferência podem falhar com:
+
+```
+Error HRESULT E_FAIL has been returned from a call to a COM component
+```
+
+Isso não acontece necessariamente em todos os computadores de origem. Estamos trabalhando para diagnosticar esse problema. Como alternativa, procure uma atualização para a ferramenta de serviço de migração de armazenamento no centro de administração do Windows em breve. A atualização deve aparecer automaticamente no feed do centro de administração do Windows e solicitar a instalação e permitirá que você ignore esse erro e continue.
+
+> [!IMPORTANT]
+> Não desinstale o [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7). Essa atualização atualiza o banco de dados do serviço de migração de armazenamento e a remoção da atualização exigirá que você exclua o banco de dados.
+
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do serviço de migração de armazenamento](overview.md)

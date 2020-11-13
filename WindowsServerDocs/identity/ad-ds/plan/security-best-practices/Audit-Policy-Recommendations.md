@@ -1,17 +1,18 @@
 ---
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Recomendações de política de auditoria
+description: Aborda as configurações da política de auditoria padrão do Windows, as configurações de política de auditoria recomendadas e as recomendações mais agressivas da Microsoft para produtos de estação de trabalho e servidor.
 author: iainfoulds
 ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 54935edd51c7eb5ee351aa0a2c1582c8c85c4e46
-ms.sourcegitcommit: f25662b5840a75aae3b0b953acb11caecd4c2fbd
+ms.openlocfilehash: debb9cf5190c5ff08a2dfd5b9e83efc16c06169d
+ms.sourcegitcommit: 6a245fefdf958bfc0aeb69f7a887d11a07bdcd23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93295416"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570331"
 ---
 # <a name="audit-policy-recommendations"></a>Recomendações de política de auditoria
 
@@ -29,6 +30,7 @@ As recomendações são para computadores de classe empresarial, que a Microsoft
 As configurações de política de auditoria de linha de base a seguir são recomendadas para computadores de segurança normal que não são conhecidos em ativos, ataques bem-sucedidos por determinados adversários ou malware.
 
 ## <a name="recommended-audit-policies-by-operating-system"></a>Políticas de auditoria recomendadas por sistema operacional
+
 Esta seção contém tabelas que listam as recomendações de configuração de auditoria que se aplicam aos seguintes sistemas operacionais:
 
 - Windows Server 2016
@@ -43,30 +45,29 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 
 **Legenda das tabelas de política de auditoria**
 
-|**Anotações**|**Recomendação**|
-|:--:|---|
-|YES|Habilitar em cenários gerais|
-|Não|Não **habilitar em** cenários gerais|
-|IF|Habilitar, se necessário, para um cenário específico, ou se uma função ou recurso para o qual a auditoria é desejada estiver instalado no computador|
-|DC|Habilitar em controladores de domínio|
-|Ficará|Nenhuma recomendação|
+| **Notation** | **Recomendação** |
+| --- | --- |
+| YES | Habilitar em cenários gerais |
+| Não | Não **habilitar em** cenários gerais |
+| IF | Habilitar, se necessário, para um cenário específico, ou se uma função ou recurso para o qual a auditoria é desejada estiver instalado no computador |
+| DC | Habilitar em controladores de domínio |
+| Ficará | Nenhuma recomendação |
 
 **Recomendações de configurações de auditoria do Windows 10, do Windows 8 e do Windows 7**
 
 **Política de auditoria**
 
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Logon da conta** |  |  |  |
-| Auditoria da validação de credenciais | `No  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
-| Auditoria do serviço de autenticação Kerberos |  |  | `Yes  \|  Yes` |
-| Auditoria das operações do tíquete de serviço Kerberos |  |  | `Yes  \|  Yes` |
-| Auditoria de outros eventos de logon de conta |  |  | `Yes  \|  Yes` |
+| Auditoria da validação de credenciais | `No  \ | No` | `Yes  \ | No` | `Yes  \ | Yes` |
+| Auditoria do serviço de autenticação Kerberos |  |  | `Yes  \ | Yes` |
+| Auditoria das operações do tíquete de serviço Kerberos |  |  | `Yes  \ | Yes` |
+| Auditoria de outros eventos de logon de conta |  |  | `Yes  \ | Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
-| **Gerenciamento de Contas** |  |  |  |
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
+| **Gerenciamento de contas** |  |  |  |
 | Auditoria do gerenciamento de grupo de aplicativos |  |  |  |
 | Auditoria do gerenciamento da conta de computador |  | `Yes  \|  No` | `Yes  \|  Yes` |
 | Auditoria do gerenciamento do grupo de distribuição |  |  |  |
@@ -74,27 +75,24 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de gerenciamento do grupo de distribuição |  | `Yes  \|  No` | `Yes  \|  Yes` |
 | Auditoria de gerenciamento de conta de usuário | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acompanhamento detalhado** |  |  |  |
 | Auditoria da atividade DPAPI |  |  | `Yes  \|  Yes` |
 | Auditoria do processo de criação |  | `Yes  \|  No` | `Yes  \|  Yes` |
 | Auditoria do encerramento do processo |  |  |  |
 | Auditoria de eventos de RPC |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acesso ao DS** |  |  |  |
 | Auditoria de replicação detalhada do serviço de diretório |  |  |  |
 | Auditoria de acesso do serviço de diretório |  |  |  |
 | Auditoria de mudanças do serviço de diretório |  |  |  |
 | Auditoria de replicação do serviço de diretório |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Logon e logoff** |  |  |  |
 | Auditoria de bloqueio de conta | `Yes  \|  No` |  | `Yes  \|  No` |
 | Auditoria das declarações de dispositivo/usuário |  |  |  |
@@ -107,9 +105,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de outros eventos de logon/logoff |  |  |  |
 | Auditoria de logon especial | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acesso a objetos** |  |  |  |
 | Auditoria de aplicativo gerado |  |  |  |
 | Auditoria de serviços de certificação |  |  |  |
@@ -126,9 +123,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de SAM |  |  |  |
 | Auditoria do preparo da política de acesso central |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Alteração de política** |  |  |  |
 | Auditoria da mudança na política de auditoria | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria da mudança na política de autenticação | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
@@ -137,17 +133,15 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria da mudança na política de nível de regra MPSSVC |  |  | Sim |
 | Auditoria de outros eventos de mudança de política |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Uso de privilégios** |  |  |  |
 | Auditoria de Uso de Privilégio Não Importante |  |  |  |
 | Auditoria de outros eventos de uso de privilégios |  |  |  |
 | Auditoria do uso de privilégios confidenciais |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Sistema** |  |  |  |
 | Auditoria do driver IPsec |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria de outros eventos do sistema | `Yes  \|  Yes` |  |  |
@@ -155,9 +149,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria da extensão do sistema de segurança |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria da integridade do sistema | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Auditoria de acesso a objetos globais** |  |  |  |
 | Auditoria do driver IPsec |  |  |  |
 | Auditoria de outros eventos do sistema |  |  |  |
@@ -170,18 +163,17 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 
 **Recomendações de configurações de auditoria do Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 e Windows Server 2008**
 
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Logon da conta** |  |  |  |
 | Auditoria da validação de credenciais | `No  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria do serviço de autenticação Kerberos |  |  | `Yes  \|  Yes` |
 | Auditoria das operações do tíquete de serviço Kerberos |  |  | `Yes  \|  Yes` |
 | Auditoria de outros eventos de logon de conta |  |  | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
-| **Gerenciamento de Contas** |  |  |  |
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
+| **Gerenciamento de contas** |  |  |  |
 | Auditoria do gerenciamento de grupo de aplicativos |  |  |  |
 | Auditoria do gerenciamento da conta de computador |  | `Yes  \|  DC` | `Yes  \|  Yes` |
 | Auditoria do gerenciamento do grupo de distribuição |  |  |  |
@@ -189,27 +181,24 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de gerenciamento do grupo de distribuição |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria de gerenciamento de conta de usuário | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acompanhamento detalhado** |  |  |  |
 | Auditoria da atividade DPAPI |  |  | `Yes  \|  Yes` |
 | Auditoria do processo de criação |  | `Yes  \|  No` | `Yes  \|  Yes` |
 | Auditoria do encerramento do processo |  |  |  |
 | Auditoria de eventos de RPC |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acesso ao DS** |  |  |  |
 | Auditoria de replicação detalhada do serviço de diretório |  |  |  |
 | Auditoria de acesso do serviço de diretório |  | `DC  \|  DC` | `DC  \|  DC` |
 | Auditoria de mudanças do serviço de diretório |  | `DC  \|  DC` | `DC  \|  DC` |
 | Auditoria de replicação do serviço de diretório |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Logon e logoff** |  |  |  |
 | Auditoria de bloqueio de conta | `Yes  \|  No` |  | `Yes  \|  No` |
 | Auditoria das declarações de dispositivo/usuário |  |  |  |
@@ -222,9 +211,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de outros eventos de logon/logoff |  |  | `Yes  \|  Yes` |
 | Auditoria de logon especial | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Acesso a objetos** |  |  |  |
 | Auditoria de aplicativo gerado |  |  |  |
 | Auditoria de serviços de certificação |  |  |  |
@@ -241,9 +229,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria de SAM |  |  |  |
 | Auditoria do preparo da política de acesso central |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Alteração de política** |  |  |  |
 | Auditoria da mudança na política de auditoria | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria da mudança na política de autenticação | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
@@ -252,17 +239,15 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria da mudança na política de nível de regra MPSSVC |  |  | Sim |
 | Auditoria de outros eventos de mudança de política |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Uso de privilégios** |  |  |  |
 | Auditoria de Uso de Privilégio Não Importante |  |  |  |
 | Auditoria de outros eventos de uso de privilégios |  |  |  |
 | Auditoria do uso de privilégios confidenciais |  |  |  |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Sistema** |  |  |  |
 | Auditoria do driver IPsec |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria de outros eventos do sistema | `Yes  \|  Yes` |  |  |
@@ -270,9 +255,8 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria da extensão do sistema de segurança |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Auditoria da integridade do sistema | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 
-
-| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Falha de êxito | Recomendação de linha de base<p>Falha de êxito | Recomendação mais forte<p>Falha de êxito |
-|---|:--:|:--:|:--:|
+| Categoria ou subcategoria da política de auditoria | Padrão do Windows<p>Êxito | Failure | Recomendação de linha de base<p>Êxito | Failure | Recomendação mais forte<p>Êxito | Failure |
+| --- | --- | --- | --- |
 | **Auditoria de acesso a objetos globais** |  |  |  |
 | Auditoria do driver IPsec |  |  |  |
 | Auditoria de outros eventos do sistema |  |  |  |
@@ -281,11 +265,13 @@ Essas tabelas contêm a configuração padrão do Windows, as recomendações de
 | Auditoria da integridade do sistema |  |  |  |
 
 ## <a name="set-audit-policy-on-workstations-and-servers"></a>Definir política de auditoria em estações de trabalho e servidores
+
 Todos os planos de gerenciamento de log de eventos devem monitorar estações de trabalho e servidores. Um erro comum é monitorar apenas os servidores ou controladores de domínio. Como o ataque mal-intencionado geralmente ocorre em estações de trabalho, não o monitoramento de estações de trabalho está ignorando a melhor e mais antiga fonte de informações.
 
 Os administradores devem revisar e testar uma diretiva de auditoria de uma consideração antes da implementação em seu ambiente de produção.
 
 ## <a name="events-to-monitor"></a>Eventos a Monitorar
+
 Uma ID de evento perfeita para gerar um alerta de segurança deve conter os seguintes atributos:
 
 - Alta probabilidade de que a ocorrência indique atividade não autorizada
@@ -323,9 +309,10 @@ Um número Aberrant de logons com falha pode indicar um ataque de adivinhação 
 Para obter uma lista abrangente de eventos que você deve incluir ao monitorar sinais de comprometimento, consulte o [Apêndice L: eventos a serem monitorados](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md).
 
 ## <a name="active-directory-objects-and-attributes-to-monitor"></a>Active Directory objetos e atributos a serem monitorados
+
 A seguir estão as contas, os grupos e os atributos que você deve monitorar para ajudá-lo a detectar tentativas de comprometer sua instalação de Active Directory Domain Services.
 
-- Sistemas para desabilitar ou remover software antivírus e antimalware (reiniciar automaticamente a proteção quando ele é desabilitado manualmente)
+- Sistemas para desabilitar ou remover softwares antivírus e antimalware (reiniciar automaticamente a proteção quando ele é desabilitado manualmente)
 
 - Contas de administrador para alterações não autorizadas
 
@@ -346,6 +333,7 @@ Consulte o [Apêndice L: eventos para monitorar](../../../ad-ds/plan/Appendix-L-
 - Assistente de configuração de segurança interna para configurar o serviço, o registro, a auditoria e as configurações de firewall para reduzir a superfície de ataque do servidor. Use este assistente se você implementar servidores de salto como parte da sua estratégia de host administrativo.
 
 ## <a name="additional-information-for-monitoring-active-directory-domain-services"></a>Informações adicionais para monitoramento Active Directory Domain Services
+
 Examine os links a seguir para obter informações adicionais sobre o monitoramento AD DS:
 
 - A [auditoria de acesso a objetos globais é mágica](/archive/blogs/askds/global-object-access-auditing-is-magic) -fornece informações sobre como configurar e usar a configuração avançada da política de auditoria que foi adicionada ao Windows 7 e ao windows Server 2008 R2.
@@ -359,6 +347,7 @@ Examine os links a seguir para obter informações adicionais sobre o monitorame
 - [Guia passo a passo de AD DS auditoria](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) – descreve o novo recurso de auditoria de Active Directory Domain Services (AD DS) no Windows Server 2008. Ele também fornece procedimentos para implementar esse novo recurso.
 
 ## <a name="general-list-of-security-event-id-recommendation-criticalities"></a>Lista geral de Criticalidades de recomendação de ID de evento de segurança
+
 Todas as recomendações de ID de evento são acompanhadas por uma classificação de criticalidade da seguinte maneira:
 
 **Alta:** As IDs de evento com uma classificação de criticalidade alta devem ser sempre e imediatamente alertados e investigados.

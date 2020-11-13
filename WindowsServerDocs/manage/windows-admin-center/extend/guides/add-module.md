@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e7875f8aa2320d7292b314cb18f3e17894e76fa0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 06331c23730cfdbf1752961f7867b0bebf45cacb
+ms.sourcegitcommit: 01b3140f79f5614ce566e8036474feefafbeddc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945039"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94581410"
 ---
 # <a name="add-a-module-to-a-tool-extension"></a>Adicionar um módulo a uma extensão de ferramenta
 
@@ -31,10 +31,10 @@ Se você ainda não conhece a angulares, é altamente recomendável que você le
 * Mais informações sobre como gerar um novo componente no CLI angular: https://github.com/angular/angular-cli/wiki/generate-component
 
 
-Abra um prompt de comando, altere o diretório para \src\app em seu projeto e, em seguida, execute os seguintes comandos, substituindo ```{!ModuleName}``` pelo nome do módulo (espaços removidos):
+Abra um prompt de comando, altere o diretório para .\src\app em seu projeto e, em seguida, execute os seguintes comandos, substituindo ```{!ModuleName}``` pelo nome do módulo (espaços removidos):
 
 ```
-cd \src\app
+cd .\src\app
 ng generate module {!ModuleName}
 ng generate component {!ModuleName}
 ```
@@ -45,7 +45,7 @@ ng generate component {!ModuleName}
 
 Exemplo de uso:
 ```
-cd \src\app
+cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
 ```
@@ -155,7 +155,7 @@ public ngOnInit() {
 ```
 ### <a name="update-app-routingmodulets"></a>Atualizar app-Routing. Module. TS
 
-Abra ```app-routing.module.ts``` o arquivo e modifique o caminho padrão para que ele carregue o novo módulo que você acabou de criar.  Localize a entrada para ```path: ''``` e atualize ```loadChildren``` para carregar seu módulo em vez do módulo padrão:
+Abra ```app-routing.module.ts``` o arquivo e modifique o caminho padrão para que ele carregue o novo módulo que você acabou de criar.  Localize a entrada para ```path: ''``` e atualize  ```loadChildren``` para carregar seu módulo em vez do módulo padrão:
 
 | Valor | Explicação | Exemplo |
 | ----- | ----------- | ------- |

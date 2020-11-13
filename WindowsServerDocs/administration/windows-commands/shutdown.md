@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 12138ffda4a08f8ac902dbf7c838f0a36627d3cf
-ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
+ms.openlocfilehash: e8bd887796dd69645a4238fbbe9316ab6aba8b9b
+ms.sourcegitcommit: 6a245fefdf958bfc0aeb69f7a887d11a07bdcd23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91718303"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570291"
 ---
 # <a name="shutdown"></a>shutdown
 
@@ -21,7 +21,7 @@ Permite desligar ou reiniciar computadores locais ou remotos, um de cada vez.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<computername>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c "comment"]]
+shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -31,14 +31,19 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<computername>] [/t 
 | /i | Exibe a caixa de **desligamento remoto** . A opção **/i** deve ser o primeiro parâmetro após o comando. Se **/i** for especificado, todas as outras opções serão ignoradas. |
 | /l | Faz logoff do usuário atual imediatamente, sem período de tempo limite. Você não pode usar **/l** com **/m** ou **/t**. |
 | /s | Desliga o computador. |
+| /SG | Desliga o computador. Na próxima inicialização, se a **conexão de reinicialização automática** estiver habilitada, o dispositivo entrará e bloqueará automaticamente com base no último usuário interativo. Depois de entrar, ele reinicia todos os aplicativos registrados. |
 | /r | Reinicia o computador após o desligamento. |
-| /a | Anula um desligamento do sistema. Efetivo somente durante o período de tempo limite. Para usar o **/a**, você também deve usar a opção **/m** . |
-| /p | Desliga o computador local somente (não um computador remoto), sem nenhum período de tempo limite ou aviso. Você pode usar **/p** somente com **/d** ou **/f**. Se o computador não oferecer suporte à funcionalidade de desligamento, ele será desligado quando você usar **/p**, mas a potência para o computador permanecerá ativada. |
+| /g | Desliga o computador. Na próxima reinicialização, se a **conexão de reinicialização automática** estiver habilitada, o dispositivo entrará e bloqueará automaticamente com base no último usuário interativo. Depois de entrar, ele reinicia todos os aplicativos registrados. |
+| /a | Anula um desligamento do sistema. Efetivo somente durante o período de tempo limite. Para usar o **/a** , você também deve usar a opção **/m** . |
+| /p | Desliga o computador local somente (não um computador remoto), sem nenhum período de tempo limite ou aviso. Você pode usar **/p** somente com **/d** ou **/f**. Se o computador não oferecer suporte à funcionalidade de desligamento, ele será desligado quando você usar **/p** , mas a potência para o computador permanecerá ativada. |
 | /h | Coloca o computador local em hibernação, se a hibernação estiver habilitada. Você pode usar **/h** apenas com **/f**. |
+| híbrido | Desliga o dispositivo e o prepara para inicialização rápida. Essa opção deve ser usada com a opção **/s** . |
+| /fw | Combinar essa opção com uma opção de desligamento faz com que a próxima reinicialização vá para a interface de usuário do firmware. |
 | /e | Permite documentar o motivo do desligamento inesperado no computador de destino. |
+| /o | Vai para o menu **Opções de inicialização avançadas** e reinicia o dispositivo. Essa opção deve ser usada com a opção **/r** . |
 | /f | Força o fechamento de aplicativos em execução sem avisar os usuários.<br>**Cuidado:** Usar a opção **/f** pode resultar em perda de dados não salvos. |
 | opção `\\<computername>` | Especifica o computador de destino. Não pode ser usado com a opção **/l** . |
-| /t `<n>` | Define o período de tempo limite ou o atraso para *n* segundos antes de uma reinicialização ou desligamento. Isso faz com que um aviso seja exibido no console local. Você pode especificar 0-600 segundos. Se você não usar **/t**, o período de tempo limite será de 30 segundos, por padrão. |
+| /t `<xxx>` | Define o período de tempo limite antes do desligamento para *xxx* segundos. O intervalo válido é de 0-315360000 (10 anos), com um padrão de 30. Se o período de tempo limite for maior que 0, o parâmetro **/f** será implícito. |
 | /d `[p | u:]<XX>:<YY>` | Lista o motivo da reinicialização ou desligamento do sistema. Os valores de parâmetro com suporte são:<ul><li>**p** -indica que a reinicialização ou o desligamento está planejado.</li><li>**u** -indica que o motivo é definido pelo usuário.<p>**OBSERVAÇÃO**<br>Se **p** ou **u** não forem especificados, a reinicialização ou o desligamento não será planejado.</li><li>*XX* -especifica o número do motivo principal (um inteiro positivo, menor que 256).</li><li>*AA* Especifica o número do motivo secundário (um inteiro positivo, menor que 65536).</li></ul> |
 | /c `<comment>` | Permite que você explique detalhadamente a razão do desligamento. Você deve primeiro fornecer um motivo usando a opção **/d** e deve colocar seus comentários entre aspas. É possível usar até 511 caracteres. |
 | /? | Exibe a ajuda no prompt de comando, incluindo uma lista dos motivos principais e secundários definidos no computador local. |

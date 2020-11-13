@@ -6,12 +6,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/31/2019
-ms.openlocfilehash: 04776c46d321a7a5aef19edd2866637c26d79125
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: eb53a01d4b82bd800b6cc87d2f5d3c36bfa7ff85
+ms.sourcegitcommit: 01b3140f79f5614ce566e8036474feefafbeddc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766319"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94581430"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Como conectar o Windows Server aos serviços híbridos do Azure
 
@@ -47,7 +47,7 @@ Na ferramenta de serviços híbridos do Azure, é possível:
 - Aplicar políticas de governança a seus servidores locais por meio do Azure Policy usando o [Azure Arc para servidores](/azure/azure-arc/servers/overview)
 - Proteger seus servidores e obter proteção avançada contra ameaças com a [Central de Segurança do Azure](/azure/security-center/windows-admin-center-integration)
 - Conectar seus servidores locais com uma Rede Virtual do Azure com o [Adaptador de Rede do Azure](https://aka.ms/WACNetworkAdapter)
-- Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ## <a name="back-up-and-protect-your-on-premises-servers-and-vms"></a>Fazer backup e proteger seus servidores e VMs locais
 
@@ -81,7 +81,7 @@ Para saber mais, confira [Implantar uma testemunha de nuvem para um Cluster de F
 
 - **Conectar seus servidores locais a uma Rede Virtual do Azure com o [Adaptador de Rede do Azure](https://aka.ms/WACNetworkAdapter)** Deixe o Windows Admin Center simplificar a configuração de uma VPN ponto a site de um servidor local para uma rede virtual do Azure.
 
-- **Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)** O Windows Admin Center pode configurar uma VPN site a site e estender seus endereços IP locais para sua vNet do Azure a fim de permitir que você migre cargas de trabalho com mais facilidade para o Azure sem perder dependências em endereços IP.
+- **Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)** O Windows Admin Center pode configurar uma VPN site a site e estender seus endereços IP locais para sua vNet do Azure a fim de permitir que você migre cargas de trabalho com mais facilidade para o Azure sem perder dependências em endereços IP.
 
 ## <a name="centrally-manage-your-hybrid-environment-from-azure"></a>Gerenciar centralmente seu ambiente híbrido do Azure
 
@@ -115,7 +115,7 @@ Esta é a lista completa dos serviços do Azure que oferecem uma funcionalidade 
 - Aplicar políticas de governança a seus servidores locais por meio do Azure Policy usando o [Azure Arc para servidores](/azure/azure-arc/servers/overview)
 - Proteger seus servidores e obter proteção avançada contra ameaças com a [Central de Segurança do Azure](/azure/security-center/windows-admin-center-integration)
 - Conectar seus servidores locais com uma Rede Virtual do Azure com o [Adaptador de Rede do Azure](https://aka.ms/WACNetworkAdapter)
-- Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Fazer com que as VMs do Azure se pareçam com sua rede local com a [Rede Estendida do Azure](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ### <a name="services-for-clusters"></a>Serviços para clusters
 
@@ -130,7 +130,7 @@ Estes são os serviços do Azure que fornecem funcionalidade para clusters como 
 - **[Adicionar conexões de VM do Azure](manage-azure-vms.md) no Windows Admin Center** É possível usar o Windows Admin Center para gerenciar suas VMs do Azure, bem como seus computadores locais. Ao configurar o gateway do Windows Admin Center para se conectar à VNet do Azure, é possível gerenciar máquinas virtuais no Azure usando as ferramentas consistentes e simplificadas que o Windows Admin Center oferece.
 Para mais informações, confira [Configurar o Windows Admin Center para gerenciar as VMs no Azure](manage-azure-vms.md).
 
-- **Adicionar uma camada de segurança ao Windows Admin Center adicionando a [autenticação do ](https://azure.microsoft.com/services/active-directory/)Azure AD (Azure Active Directory)** É possível adicionar uma camada adicional de segurança ao Windows Admin Center exigindo que os usuários se autentiquem usando identidades do Azure AD (Active Directory) para acessar o gateway. A autenticação do Azure AD também permite que você aproveite os recursos de segurança do Azure AD, como acesso condicional e autenticação multifator.
+- **Adicionar uma camada de segurança ao Windows Admin Center adicionando a [autenticação do](https://azure.microsoft.com/services/active-directory/)Azure AD (Azure Active Directory)** É possível adicionar uma camada adicional de segurança ao Windows Admin Center exigindo que os usuários se autentiquem usando identidades do Azure AD (Active Directory) para acessar o gateway. A autenticação do Azure AD também permite que você aproveite os recursos de segurança do Azure AD, como acesso condicional e autenticação multifator.
 Para obter mais informações, consulte [Configurar autenticação do Azure AD para o Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
 
 - **Gerenciar recursos do Azure diretamente por meio do [Azure Cloud Shell](/azure/cloud-shell/overview) inserido no Windows Admin Center** Aproveite o Azure Cloud Shell para obter uma experiência do Bash ou do PowerShell no Windows Admin Center e ter acesso fácil às tarefas de gerenciamento do Azure.
