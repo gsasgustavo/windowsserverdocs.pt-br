@@ -1,15 +1,16 @@
 ---
 title: diskpart
 description: Artigo de referência do interpretador de comandos do DiskPart, que ajuda você a gerenciar as unidades do computador.
+ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 627f9254606b1ed70b198f6dd0096ccbff424c45
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 1d2f4cc814dad4313e7eb0925b60f44ec0348a30
+ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890924"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617195"
 ---
 # <a name="diskpart"></a>diskpart
 
@@ -23,13 +24,13 @@ Antes de usar os comandos do **DiskPart** , primeiro você deve listar e, em seg
 
 Você pode listar os objetos disponíveis e determinar o número ou a letra da unidade de um objeto usando:
 
-- `list disk`-Exibe todos os discos no computador.
+- `list disk` -Exibe todos os discos no computador.
 
-- `list volume`-Exibe todos os volumes no computador.
+- `list volume` -Exibe todos os volumes no computador.
 
-- `list partition`-Exibe as partições no disco que tem o foco no computador.
+- `list partition` -Exibe as partições no disco que tem o foco no computador.
 
-- `list vdisk`-Exibe todos os discos virtuais no computador.
+- `list vdisk` -Exibe todos os discos virtuais no computador.
 
 Depois de executar os comandos da **lista** , um asterisco (*) é exibido ao lado do objeto com foco.
 
@@ -41,7 +42,7 @@ Alguns comandos alteram o foco automaticamente. Por exemplo, quando você cria u
 
 Você só pode dar enfoque a uma partição no disco selecionado. Depois que uma partição tiver foco, o volume relacionado (se houver) também terá o foco. Após o foco de um volume, o disco e a partição relacionados também terão foco se o volume for mapeado para uma única partição específica. Se esse não for o caso, o foco no disco e na partição será perdido.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 Para iniciar o interpretador de comandos do DiskPart, no prompt de comando, digite:
 

@@ -1,22 +1,22 @@
 ---
 title: Gerenciador do Servidor
-description: Gerenciador do Servidor
-ms.topic: article
+description: Saiba mais sobre o console de gerenciamento do Windows Server que ajuda os profissionais de ti a provisionar e gerenciar servidores locais e remotos baseados no Windows de seus desktops, sem a necessidade de acesso físico aos servidores ou da necessidade de habilitar conexões de protocolo de Área de Trabalho Remota (rdP) para cada servidor.
+ms.topic: conceptual
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c02ba333fb37d150dae08fd83ec8883a83d3fdb5
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7c645698614f78520ed3540e154669a72e659bc1
+ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89627790"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617206"
 ---
 # <a name="server-manager"></a>Gerenciador do Servidor
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 O Gerenciador do Servidor é um console de gerenciamento do Windows Server que ajuda os profissionais de ti a provisionar e gerenciar servidores locais e remotos baseados no Windows a partir de seus desktops, sem a necessidade de acesso físico aos servidores ou a necessidade de habilitar conexões de protocolo de Área de Trabalho Remota (rdP) para cada servidor. Embora Gerenciador do Servidor esteja disponível no Windows Server 2008 R2 e no Windows Server 2008, o Gerenciador do Servidor foi atualizado no Windows Server 2012 para oferecer suporte ao gerenciamento remoto, multisservidor e ajudar a aumentar o número de servidores que um administrador pode gerenciar.
 
@@ -24,23 +24,26 @@ Em nossos testes, Gerenciador do Servidor no Windows Server 2016, no Windows Ser
 
 Este tópico e seus subtópicos fornecem informações sobre como usar recursos no console do Gerenciador do Servidor. Este tópico inclui as seções a seguir.
 
--   [Examinar as considerações iniciais e os requisitos do sistema](#review-initial-considerations-and-system-requirements)
+- [Examinar as considerações iniciais e os requisitos do sistema](#review-initial-considerations-and-system-requirements)
 
--   [Tarefas que você pode realizar no Gerenciador de Servidores](#tasks-that-you-can-perform-in-server-manager)
+- [Tarefas que você pode realizar no Gerenciador de Servidores](#tasks-that-you-can-perform-in-server-manager)
 
--   [iniciar Gerenciador do Servidor](#start-server-manager)
+- [Iniciar Gerenciador do Servidor](#start-server-manager)
 
--   [Reiniciar servidores remotos](#restart-remote-servers)
+- [Reiniciar servidores remotos](#restart-remote-servers)
 
--   [Exportar configurações do Gerenciador do Servidor para outros computadores](#export-server-manager-settings-to-other-computers)
+- [Exportar configurações do Gerenciador do Servidor para outros computadores](#export-server-manager-settings-to-other-computers)
 
 ## <a name="review-initial-considerations-and-system-requirements"></a>Examinar as considerações iniciais e os requisitos do sistema
+
 As seções a seguir listam algumas considerações iniciais que você precisa examinar, bem como os requisitos de hardware e software para Gerenciador do Servidor.
 
 ### <a name="hardware-requirements"></a>Requisitos de hardware
+
 O Gerenciador do Servidor é instalado por padrão com todas as edições do Windows Server 2016. Não existem requisitos de hardware adicionais para Gerenciador do Servidor.
 
 ### <a name="software-and-configuration-requirements"></a>Requisitos de software e configuração
+
 O Gerenciador do Servidor é instalado por padrão com todas as edições do Windows Server 2016. Você pode usar Gerenciador do Servidor no Windows Server 2016 para gerenciar [as opções de instalação do Server Core](https://go.microsoft.com/fwlink/p/?LinkID=241573) do windows Server 2016, do windows Server 2012 e do windows Server 2008 R2 que estão sendo executados em computadores remotos. Gerenciador do Servidor executa na opção de instalação Server Core do Windows Server 2016.
 
 O Gerenciador do Servidor é executado na interface gráfica mínima do servidor; ou seja, quando o recurso de shell gráfico do servidor não está instalado. O recurso de shell gráfico do servidor não é instalado por padrão no Windows Server 2016. Se você não estiver executando o shell gráfico do servidor, o console do Gerenciador do Servidor será executado, mas alguns aplicativos ou ferramentas disponíveis no console do não estarão disponíveis. Os navegadores da Internet não podem ser executados sem o shell gráfico do servidor, portanto, as páginas da Web e os aplicativos, como a ajuda HTML (a ajuda F1 do MMC, por exemplo) não podem ser abertos. Não é possível abrir caixas de diálogo para configurar a atualização automática do Windows e comentários quando o shell gráfico do servidor não está instalado; comandos que abrem essas caixas de diálogo no console do Gerenciador do Servidor são redirecionados para executar **sconfig. cmd**.
@@ -51,18 +54,19 @@ Para gerenciar servidores que executam versões anteriores ao Windows Server 201
 |----------|-----------|
 | Windows Server 2012 R2 ou Windows Server 2012 |-   [.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5,0](https://go.microsoft.com/fwlink/?LinkID=395058). O pacote de download do Windows Management Framework 5,0 atualiza os provedores de Instrumentação de Gerenciamento do Windows (WMI) no Windows Server 2012 R2 e no Windows Server 2012. Os provedores WMI atualizados permitem que Gerenciador do Servidor coletem informações sobre funções e recursos que estão instalados nos servidores gerenciados. Até que a atualização seja aplicada, os servidores que executam o Windows Server 2012 R2 ou o Windows Server 2012 têm um status de capacidade de gerenciamento **não acessível**.<br />-A atualização de desempenho associada ao [artigo 2682011 da base de dados de conhecimento](https://go.microsoft.com/fwlink/p/?LinkID=245487) não é mais necessária em servidores que executam o windows Server 2012 R2 ou o windows Server 2012.|
 | Windows Server 2008 R2 |-   [.NET Framework 4,5](https://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4,0](https://go.microsoft.com/fwlink/?LinkId=293881). O pacote de download do Windows Management Framework 4,0 atualiza os provedores de Instrumentação de Gerenciamento do Windows (WMI) no Windows Server 2008 R2. Os provedores WMI atualizados permitem que Gerenciador do Servidor coletem informações sobre funções e recursos que estão instalados nos servidores gerenciados. Até que a atualização seja aplicada, os servidores que executam o Windows Server 2008 R2 têm um status de capacidade de gerenciamento **não acessível**.<br />-A atualização de desempenho associada ao [artigo 2682011 da base de dados de conhecimento](https://go.microsoft.com/fwlink/p/?LinkID=245487) permite Gerenciador do servidor coletar dados de desempenho do Windows Server 2008 R2.|
-| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3,0](https://go.microsoft.com/fwlink/p/?LinkID=229019) O pacote de download do Windows Management Framework 3,0 atualiza os provedores de Instrumentação de Gerenciamento do Windows (WMI) no Windows Server 2008. Os provedores WMI atualizados permitem que Gerenciador do Servidor coletem informações sobre funções e recursos que estão instalados nos servidores gerenciados. Até que a atualização seja aplicada, os servidores que executam o Windows Server 2008 têm um status de capacidade de gerenciamento **não acessível-Verifique se as versões anteriores executam o Windows Management Framework 3,0**.<br />-A atualização de desempenho associada ao [artigo 2682011 da base de dados de conhecimento](https://go.microsoft.com/fwlink/p/?LinkID=245487) permite Gerenciador do servidor coletar dados de desempenho do Windows Server 2008.|
+| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />-   [Windows Management Framework 3,0](https://go.microsoft.com/fwlink/p/?LinkID=229019) O pacote de download do Windows Management Framework 3,0 atualiza os provedores de Instrumentação de Gerenciamento do Windows (WMI) no Windows Server 2008. Os provedores WMI atualizados permitem que Gerenciador do Servidor coletem informações sobre funções e recursos que estão instalados nos servidores gerenciados. Até que a atualização seja aplicada, os servidores que executam o Windows Server 2008 têm um status de capacidade de gerenciamento **não acessível-Verifique se as versões anteriores executam o Windows Management Framework 3,0**.<br />-A atualização de desempenho associada ao [artigo 2682011 da base de dados de conhecimento](https://go.microsoft.com/fwlink/p/?LinkID=245487) permite Gerenciador do servidor coletar dados de desempenho do Windows Server 2008.|
 
 #### <a name="manage-remote-computers-from-a-client-computer"></a>Gerenciar computadores remotos em um computador cliente
+
 O console do Gerenciador do Servidor está incluído no [ferramentas de administração de servidor remoto](https://go.microsoft.com/fwlink/?LinkID=404281) para Windows 10. Observe que quando o Ferramentas de Administração de Servidor Remoto é instalado em um computador cliente, não é possível gerenciar o computador local usando Gerenciador do Servidor; Gerenciador do Servidor não pode ser usado para gerenciar computadores ou dispositivos que estejam executando um sistema operacional cliente Windows. Você só pode usar Gerenciador do Servidor para gerenciar servidores baseados no Windows.
 
-|Sistema operacional de origem Gerenciador do Servidor|Destinado ao Windows Server 2016|Destinado ao Windows Server 2012 R2 |Destinado ao Windows Server 2012 |Destinado ao Windows Server 2008 R2 ou ao Windows Server 2008 |Direcionado no Windows Server 2003|
-|-------------------------------|--------------------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
-|Windows 10 ou Windows Server 2016|Suporte completo|Suporte completo|Suporte completo|Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos|Sem suporte|
-|Windows 8.1 ou Windows Server 2012 R2 |Sem suporte|Suporte completo|Suporte completo|Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos|Suporte limitado, somente status online e offline|
-|Windows 8 ou Windows Server 2012 |Sem suporte|Sem suporte|Suporte completo|Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos|Suporte limitado, somente status online e offline|
+| Sistema operacional de origem Gerenciador do Servidor | Destinado ao Windows Server 2016 | Destinado ao Windows Server 2012 R2 | Destinado ao Windows Server 2012 | Destinado ao Windows Server 2008 R2 ou ao Windows Server 2008 | Direcionado no Windows Server 2003 | Direcionado para Windows 10 Enterprise Multi-Session no Windows Virtual Desktop (WVD) |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Windows 10 ou Windows Server 2016 | Suporte completo | Suporte completo | Suporte completo | Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos | Sem suporte | Sem suporte |
+| Windows 8.1 ou Windows Server 2012 R2 | Sem suporte | Suporte completo| Suporte completo | Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos | Suporte limitado, somente status online e offline | Sem suporte |
+| Windows 8 ou Windows Server 2012 | Sem suporte | Sem suporte | Suporte completo | Depois de atender aos [Requisitos de software e configuração](#software-and-configuration-requirements), é possível executar a maioria das tarefas de gerenciamento, mas não a instalação ou desinstalação de funções ou recursos | Suporte limitado, somente status online e offline | Sem suporte |
 
-###### <a name="to-start-server-manager-on-a-client-computer"></a>Para iniciar o Gerenciador do Servidor em um computador cliente
+##### <a name="to-start-server-manager-on-a-client-computer"></a>Para iniciar o Gerenciador do Servidor em um computador cliente
 
 1.  Siga as instruções em [ferramentas de administração de servidor remoto](../../remote/remote-server-administration-tools.md) para instalar o ferramentas de administração de servidor remoto para Windows 10.
 
@@ -115,7 +119,7 @@ Para executar tarefas de gerenciamento em servidores remotos usando Gerenciador 
 
     se a habilitação do gerenciamento remoto falhar, consulte [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) no Microsoft TechNet para obter dicas de solução de problemas e práticas recomendadas.
 
-###### <a name="to-enable-server-manager-and-windows-powershell-remote-management-on-older-operating-systems"></a>Para habilitar o gerenciamento remoto do Gerenciador do Servidor e do Windows PowerShell em sistemas operacionais mais antigos
+##### <a name="to-enable-server-manager-and-windows-powershell-remote-management-on-older-operating-systems"></a>Para habilitar o gerenciamento remoto do Gerenciador do Servidor e do Windows PowerShell em sistemas operacionais mais antigos
 
 -   Execute uma delas.
 
@@ -124,6 +128,7 @@ Para executar tarefas de gerenciamento em servidores remotos usando Gerenciador 
     -   Para habilitar o gerenciamento remoto em servidores que executam o Windows Server 2008, consulte [habilitar e usar comandos remotos no Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
 ## <a name="tasks-that-you-can-perform-in-server-manager"></a>Tarefas que você pode realizar no Gerenciador de Servidores
+
 Gerenciador do Servidor torna a administração do servidor mais eficiente, permitindo que os administradores realizem tarefas na tabela a seguir usando uma única ferramenta. No Windows Server 2012 R2 e no Windows Server 2012, os usuários padrão de um servidor e os membros do grupo Administradores podem executar tarefas de gerenciamento no Gerenciador do Servidor, mas por padrão, os usuários padrão são impedidos de executar algumas tarefas, conforme mostrado na tabela a seguir.
 
 Os administradores podem usar dois cmdlets do Windows PowerShell no módulo cmdlet Gerenciador do Servidor, [Enable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205470.aspx) e [Disable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205468.aspx), para controlar ainda mais o acesso de usuário padrão a alguns dados adicionais. O cmdlet **Enable-ServerManagerStandardUserremoting** pode fornecer um ou mais usuários padrão, não administradores, acesso aos dados de inventário de eventos, serviços, contadores de desempenho e funções e recursos.
@@ -149,22 +154,23 @@ Os administradores podem usar dois cmdlets do Windows PowerShell no módulo cmdl
 > [!NOTE]
 > Gerenciador do Servidor não pode ser usado para adicionar funções e recursos a servidores que executam o Windows Server 2008 R2 ou o Windows Server 2008.
 
-## <a name="start-server-manager"></a>iniciar Gerenciador do Servidor
+## <a name="start-server-manager"></a>Iniciar o Gerenciador do Servidor
+
 O Gerenciador do Servidor é iniciado automaticamente por padrão em servidores que executam o Windows Server 2016 quando um membro do grupo Administradores faz logon em um servidor. Se você fechar Gerenciador do Servidor, reinicie-o de uma das maneiras a seguir. Esta seção também contém etapas para alterar o comportamento padrão e impedir que Gerenciador do Servidor sejam iniciadas automaticamente.
 
-#### <a name="to-start-server-manager-from-the-start-screen"></a>Para iniciar a Gerenciador do Servidor na tela inicial
+### <a name="to-start-server-manager-from-the-start-screen"></a>Para iniciar a Gerenciador do Servidor na tela inicial
 
 -   Na tela **Iniciar** do Windows, clique no bloco **Gerenciador do servidor** .
 
-#### <a name="to-start-server-manager-from-the-windows-desktop"></a>Para iniciar o Gerenciador do Servidor na área de trabalho do Windows
+### <a name="to-start-server-manager-from-the-windows-desktop"></a>Para iniciar o Gerenciador do Servidor na área de trabalho do Windows
 
 -   Na barra de tarefas do Windows, clique em **Gerenciador de Arquivos**.
 
-#### <a name="to-prevent-server-manager-from-starting-automatically"></a>Para impedir que o Gerenciador do Servidor seja iniciado automaticamente
+### <a name="to-prevent-server-manager-from-starting-automatically"></a>Para impedir que o Gerenciador do Servidor seja iniciado automaticamente
 
 1.  No console do Gerenciador do Servidor, no menu **gerenciar** , clique em **Propriedades de Gerenciador do servidor**.
 
-2.  Na caixa de diálogo **Propriedades do Gerenciador do Servidor**, marque a caixa de seleção **Não iniciar o Gerenciador do Servidor automaticamente no logon**. Clique em **OK**.
+2.  Na caixa de diálogo **Propriedades do Gerenciador do Servidor** , marque a caixa de seleção **Não iniciar o Gerenciador do Servidor automaticamente no logon**. Clique em **OK**.
 
 3.  Como alternativa, você pode impedir a inicialização automática de Gerenciador do Servidor habilitando a configuração de Política de Grupo, **não iniciar Gerenciador do servidor automaticamente no logon**. O caminho para essa configuração de política, no console do editor de Política de Grupo local, é o Computador\modelos Templates\System\Server Manager.
 
@@ -176,7 +182,7 @@ Você pode reiniciar um servidor remoto a partir do bloco **servidores** de uma 
 >
 > Se ocorrer uma atualização automática no Gerenciador do Servidor enquanto um servidor gerenciado estiver desligando, os erros de status de atualização e de capacidade de gerenciamento poderão ocorrer no servidor gerenciado, porque Gerenciador do Servidor não pode se conectar ao servidor remoto até que a reinicialização seja concluída.
 
-#### <a name="to-restart-remote-servers-in-server-manager"></a>Para reiniciar servidores remotos no Gerenciador do Servidor
+### <a name="to-restart-remote-servers-in-server-manager"></a>Para reiniciar servidores remotos no Gerenciador do Servidor
 
 1.  Abra uma função ou grupo de servidores home page em Gerenciador do Servidor.
 
@@ -185,11 +191,12 @@ Você pode reiniciar um servidor remoto a partir do bloco **servidores** de uma 
 3.  Clique com o botão direito do mouse nos servidores selecionados e clique em **Reiniciar Servidor**.
 
 ## <a name="export-server-manager-settings-to-other-computers"></a>Exportar configurações do Gerenciador do Servidor para outros computadores
+
 No Gerenciador do Servidor, sua lista de servidores gerenciados, alterações em Gerenciador do Servidor configurações do console e grupos personalizados que você criou são armazenados nos dois arquivos a seguir. Você pode reutilizar essas configurações em outros computadores que estejam executando a mesma versão do Gerenciador do Servidor (ou Windows 10 com o Ferramentas de Administração de Servidor Remoto instalado). Ferramentas de Administração de Servidor Remoto deve estar em execução em computadores baseados no cliente Windows para exportar configurações de Gerenciador do Servidor para esses computadores.
 
--   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
+-   %*AppData* % \Microsoft\Windows\ServerManager\Serverlist.xml
 
--   %% \Local\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID* de *AppData*%\6.2.0.0\user.config
+-   %% \Local\Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID* de *AppData* %\6.2.0.0\user.config
 
 > [!NOTE]
 > -   As credenciais Gerenciar como (ou alternativas) para servidores de seu pool de servidores não são armazenadas no perfil móvel. Os usuários do Gerenciador do servidor devem adicioná-los em cada computador do qual deseja gerenciar.
@@ -201,7 +208,7 @@ Você pode exportar Gerenciador do Servidor configurações, tornar Gerenciador 
 
 -   Para exportar configurações para outro computador em um grupo de trabalho, copie os dois arquivos anteriores para o mesmo local no computador do qual você deseja gerenciar usando Gerenciador do Servidor.
 
-#### <a name="to-export-server-manager-settings-to-other-domain-joined-computers"></a>Para exportar as configurações do Gerenciador do Servidor para outros computadores associados ao domínio
+### <a name="to-export-server-manager-settings-to-other-domain-joined-computers"></a>Para exportar as configurações do Gerenciador do Servidor para outros computadores associados ao domínio
 
 1.  Em usuários e computadores do Active Directory, abra a caixa de diálogo **Propriedades** de um usuário Gerenciador do servidor.
 
@@ -213,19 +220,16 @@ Você pode exportar Gerenciador do Servidor configurações, tornar Gerenciador 
 
     -   Em outras compilações, copie os dois arquivos a seguir do computador que está executando Gerenciador do Servidor para o compartilhamento de rede que faz parte do perfil móvel do usuário.
 
-        -   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
+        -   %*AppData* % \Microsoft\Windows\ServerManager\Serverlist.xml
 
-        -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+        -   %*LocalAppData* % \Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID* \6.2.0.0\user.config
 
 4.  Clique em **OK** para salvar suas alterações e fechar a caixa de diálogo **Propriedades**.
 
-#### <a name="to-export-server-manager-settings-to-computers-in-workgroups"></a>Para exportar as configurações do Gerenciador do Servidor para computadores em grupos de trabalho
+### <a name="to-export-server-manager-settings-to-computers-in-workgroups"></a>Para exportar as configurações do Gerenciador do Servidor para computadores em grupos de trabalho
 
 -   Em um computador do qual você deseja gerenciar servidores remotos, substitua os dois arquivos a seguir pelos mesmos arquivos de outro computador que esteja executando o Gerenciador do Servidor e que tenha as configurações desejadas.
 
-    -   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
+    -   %*AppData* % \Microsoft\Windows\ServerManager\Serverlist.xml
 
-    -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
-
-
+    -   %*LocalAppData* % \Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID* \6.2.0.0\user.config
