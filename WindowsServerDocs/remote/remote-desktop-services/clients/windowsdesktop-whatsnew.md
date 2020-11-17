@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/27/2020
+ms.date: 11/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f14d93176fd1bd7b97d90550701f79b55774297
-ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
+ms.openlocfilehash: b5ee2f76acad471533c615ef2e5c68e7f827dbf6
+ms.sourcegitcommit: 7420c7c2ef14154f27e5bb810e774783a594b8e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793603"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94497411"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Novidades no cliente da Área de Trabalho do Windows
 
@@ -25,7 +25,16 @@ O cliente pode ser configurado para diferentes [grupos de usuários](windowsdesk
 |Grupo de usuários |Última versão  |Versão mínima com suporte |
 |-----------|----------------|--------------------------|
 |Público     |1.2.1446        |1.2.945                   |
-|Participante do Programa Windows Insider    |1.2.1446        |1.2.945                   |
+|Participante do Programa Windows Insider    |1.2.1520        |1.2.945                   |
+
+## <a name="updates-for-version-121520-insider"></a>Atualizações para a versão 1.2.1520 (Insider)
+
+*Data da publicação: 10/11/2020*
+
+Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Foi criado um modo de exibição de lista para aplicativos remotos a fim de que nomes de aplicativos mais longos sejam legíveis.
+- Foi alterado o ícone que aparece quando uma atualização está disponível para o cliente.
 
 ## <a name="updates-for-version-121446"></a>Atualizações para a versão 1.2.1446
 
@@ -107,7 +116,7 @@ Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/b
 *Data da publicação: 28/04/2020*
 
 - Adição de novas opções de configurações de exibição para conexões da área de trabalho disponíveis ao clicar com o botão direito do mouse em um ícone de área de trabalho no Centro de Conexão.
-  - Agora há três opções de configuração de exibição: **Todas as exibições** , **Exibição única** e **Exibições selecionadas**.
+  - Agora há três opções de configuração de exibição: **Todas as exibições**, **Exibição única** e **Exibições selecionadas**.
   - Agora mostramos apenas configurações disponíveis quando uma configuração de exibição é selecionada.
   - No modo Exibição selecionada, uma nova opção **Maximizar para exibições atuais** permite que você altere dinamicamente as exibições usadas para a sessão sem se reconectar. Quando habilitada, a maximização da sessão a faz entrar em modo de tela inteira em todas as exibições abrangidas pela janela de sessão.
   - Adicionamos uma nova **Exibição única quando está em modo de janela** para todas as exibições e modos de exibição selecionados. A opção alterna sua sessão automaticamente para uma exibição única quando você sai do modo de tela inteira e retorna automaticamente para várias exibições quando você maximiza a janela.

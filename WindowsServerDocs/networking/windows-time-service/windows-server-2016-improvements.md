@@ -5,12 +5,12 @@ author: dahavey
 ms.author: dahavey
 ms.date: 10/17/2018
 ms.topic: article
-ms.openlocfilehash: f7593b085dd07694bf7d51d2712501bea612e9af
-ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
+ms.openlocfilehash: a09022cf1ad2929dfdffa244b86c211970b53aae
+ms.sourcegitcommit: a7fb96c0b1d186baeb29349befbbd6bd3b955813
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563396"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94522519"
 ---
 # <a name="time-accuracy-improvements-for-windows-server-2016"></a>Aprimoramentos de precisão de tempo para o Windows Server 2016
 
@@ -52,13 +52,13 @@ Veja a seguir uma descrição das alterações na configuração padrão entre o
 | |Frequência de votação|64 a 1.024 segundos|NA|Uma vez por semana|
 | |Frequência de Atualização do Relógio|Uma vez por segundo|NA|Uma vez por hora|
 |**Cliente Autônomo**||||
-| |Servidor de Horário|NA|time.windows.com|time.windows.com|
-| |Frequência de votação|NA|Uma vez por dia|Uma vez por semana|
-| |Frequência de Atualização do Relógio|NA|Uma vez por dia|Uma vez por semana|
+| |*Servidor de Horário*|NA|time.windows.com|time.windows.com|
+| |*Frequência de Sondagem*|NA|Uma vez por dia|Uma vez por semana|
+| |*Frequência de Atualização do Relógio*|NA|Uma vez por dia|Uma vez por hora|
 |**Controlador de Domínio**||||
-| |Servidor de Horário|Controlador de domínio primário/GTIMESERV|NA|Controlador de domínio primário/GTIMESERV|
-| |Frequência de votação|64 a 1.024 segundos|NA|1\.024 a 32.768 segundos|
-| |Frequência de Atualização do Relógio|Uma vez por dia|NA|Uma vez por semana|
+| |*Servidor de Horário*|Controlador de domínio primário/GTIMESERV|NA|Controlador de domínio primário/GTIMESERV|
+| |*Frequência de Sondagem*|64 a 1.024 segundos|NA|1\.024 a 32.768 segundos|
+| |*Frequência de Atualização do Relógio*|Uma vez por segundo|NA|Uma vez por hora|
 |**Servidor Membro do Domínio**||||
 | |Servidor de Horário|DC|NA|DC|
 | |Frequência de votação|64 a 1.024 segundos|NA|1\.024 a 32.768 segundos|
@@ -361,7 +361,7 @@ Além disso, como qualquer contador de desempenho, você pode monitorá-los remo
 ### <a name="windows-traceability-example"></a>Exemplo de rastreabilidade do Windows
 Em arquivos de log do w32tm, o ideal é validar dois tipos de informação. O primeiro é uma indicação de que o arquivo de log tem o relógio da condição no momento. Isso prova que o relógio estava sendo condicionado pelo Serviço de Horário do Windows no momento da controvérsia.
 
- 151802 20:18:32,9821765s – ClockDispln Discipline: *SKEW*TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307 151802 20:18:33,9898460s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41 151802 20:18:44,1090410s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:65 KPhO:38
+ 151802 20:18:32,9821765s – ClockDispln Discipline: *SKEW* TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307 151802 20:18:33,9898460s - ClockDispln Discipline: *SKEW* TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41 151802 20:18:44,1090410s - ClockDispln Discipline: *SKEW* TIME* - PhCRR:1 CR:156250 UI:100 phcT:65 KPhO:38
 
 O ponto principal é que você vê as mensagens prefixadas com ClockDispln Discipline, que é a prova de que o w32time está interagindo com o relógio do sistema.
 
