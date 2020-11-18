@@ -7,12 +7,12 @@ author: eldenchristensen
 ms.date: 10/08/2018
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
-ms.openlocfilehash: d3fd3e1c6ca9a7493ac0bcdc809f68fe22f8fa67
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1190028ce94b8ecb37d188e5571443f55d6e12d1
+ms.sourcegitcommit: 7f859d8ec86664fdedd05901ac3714f84e7868b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971083"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703772"
 ---
 # <a name="taking-a-storage-spaces-direct-server-offline-for-maintenance"></a>Colocando um servidor de Espaços de Armazenamento Diretos offline para manutenção
 
@@ -48,7 +48,7 @@ MyVolume3    Mirror                OK                Healthy      True          
 
 Verifique se a propriedade **HealthStatus** de cada volume (disco virtual) está **Íntegra**.
 
-Para fazer isso no Gerenciador de cluster de failover, vá para **Storage**  >  **discos**de armazenamento.
+Para fazer isso no Gerenciador de cluster de failover, vá para **Storage**  >  **discos** de armazenamento.
 
 Verifique se a coluna **Status** coluna de cada volume (disco virtual) mostra **Online**.
 
@@ -165,11 +165,11 @@ MyVolume3    Mirror                OK                Healthy      True          
 Agora é seguro pausar e reiniciar outros servidores no cluster.
 
 ## <a name="how-to-update-storage-spaces-direct-nodes-offline"></a>Como atualizar nós Espaços de Armazenamento Diretos offline
-Use as etapas a seguir para demarcar o sistema Espaços de Armazenamento Diretos rapidamente. Ele envolve o agendamento de uma janela de manutenção e o desligamento do sistema para aplicação de patches. Se houver uma atualização de segurança crítica que você precisa aplicar rapidamente ou talvez precise garantir que a aplicação de patch seja concluída na janela de manutenção, esse método pode ser para você. Esse processo abre o Espaços de Armazenamento Diretos cluster, o corrige e o coloca tudo novamente. A compensação é o tempo de inatividade para os recursos hospedados.
+Use as etapas a seguir para atualizar o sistema Espaços de Armazenamento Diretos rapidamente. Ele envolve agendar uma janela de manutenção e desativar o sistema para atualização. Se houver uma atualização de segurança crítica que você precisa aplicar rapidamente ou talvez precise garantir que a atualização seja concluída na janela de manutenção, esse método pode ser para você. Esse processo abre o cluster Espaços de Armazenamento Diretos, atualiza-o e o coloca tudo novamente. A compensação é o tempo de inatividade para os recursos hospedados.
 
 1. Planeje sua janela de manutenção.
 2. Coloque os discos virtuais offline.
-3. Interrompa o cluster para colocar o pool de armazenamento offline. Execute o cmdlet **Stop-cluster** ou use Gerenciador de cluster de failover para interromper o cluster.
+3. Interrompa o cluster para colocar o pool de armazenamento offline. Execute o cmdlet  **Stop-cluster** ou use Gerenciador de cluster de failover para interromper o cluster.
 4. Defina o serviço de cluster como **desabilitado** em Services. msc em cada nó. Isso impede que o serviço de cluster seja inicializado durante o patch.
 5. Aplique a atualização cumulativa do Windows Server e todas as atualizações necessárias da pilha de manutenção a todos os nós. (Você pode atualizar todos os nós ao mesmo tempo, não há necessidade de esperar, pois o cluster está inoperante).
 6. Reinicie os nós e verifique se tudo está correto.
