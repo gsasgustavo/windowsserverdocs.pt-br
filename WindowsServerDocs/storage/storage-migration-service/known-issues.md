@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 11/12/2020
 ms.topic: article
-ms.openlocfilehash: 84a531b1026215484619bc5bc9fbb3ce74899bea
-ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
+ms.openlocfilehash: bc23bdefe1f6b852dc057debd53e1a66c300f592
+ms.sourcegitcommit: adfc886dd7d3513820ac7569b68e50ee8bc51945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617186"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94785912"
 ---
 # <a name="storage-migration-service-known-issues"></a>Problemas conhecidos do serviço de migração de armazenamento
 
@@ -661,10 +661,10 @@ Depois de instalar o [KB4586793](https://support.microsoft.com/office/november-1
 Error HRESULT E_FAIL has been returned from a call to a COM component
 ```
 
-Isso não acontece necessariamente em todos os computadores de origem. Estamos trabalhando para diagnosticar esse problema. Como alternativa, instale a ferramenta de serviço de migração de armazenamento 1,115 ou posterior no centro de administração do Windows. A atualização deve aparecer automaticamente no feed do centro de administração do Windows e solicitar a instalação e permitirá que você ignore esse erro. Para workarond-lo:
+Isso não acontece necessariamente em todos os computadores de origem. Estamos trabalhando para diagnosticar esse problema. Como alternativa, instale a ferramenta de serviço de migração de armazenamento 1,115 ou posterior no centro de administração do Windows. A atualização deve aparecer automaticamente no feed do centro de administração do Windows e solicitar a instalação e permitirá que você ignore esse erro. Para contornar isso:
 
-1. Navegue até a etapa "ajustar configurações" da fase de transferência. 
-2. Habilitar "substituir validação de transferência"
+1. Navegue até a etapa "ajustar configurações" da fase de transferência.
+2. Habilite "substituir validação de transferência".
 3. Continue com sua transferência, sem executar "Validate" ou executando-a e ignorando o erro de E_FAIL.
 
 > [!IMPORTANT]
