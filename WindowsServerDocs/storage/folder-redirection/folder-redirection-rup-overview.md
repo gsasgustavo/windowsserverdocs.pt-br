@@ -67,7 +67,7 @@ Antes do Windows 8 e do Windows Server 2012, os usuários precisavam alternar en
 
 Com o modo Sempre Offline, os computadores nunca alternam para o modo Online quando a configuração de Política de Grupo **Configurar modo de vínculos lentos** está definida e o parâmetro de limite de **Latência** está definido como 1 milissegundo. As alterações são sincronizadas em segundo plano a cada 120 minutos, por padrão, mas a sincronização é configurável usando a configuração de Política de Grupo do **Configure Background Sync** .
 
-Para obter mais informações, consulte [Enable the Always Offline Mode to Provide Faster Access to Files](enable-always-offline.md).
+Para obter mais informações, consulte [Habilitar o modo Sempre Offline para acesso mais rápido aos arquivos](enable-always-offline.md).
 
 ## <a name="cost-aware-synchronization"></a>Sincronização com reconhecimento de custo
 
