@@ -109,6 +109,7 @@
 ## Serviço de Migração de Armazenamento
 ### [Visão geral](storage-migration-service/overview.md)
 ### [Migrar um servidor](storage-migration-service/migrate-data.md)
+### [Como funciona a substituição](storage-migration-service/cutover.md)
 ### [Perguntas frequentes (FAQ)](storage-migration-service/faq.md)
 ### [Problemas conhecidos](storage-migration-service/known-issues.md)
 
