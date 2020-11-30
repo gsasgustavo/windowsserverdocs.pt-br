@@ -6,12 +6,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 525db4b22e0408847e4a52659d06ecddf5b1df8f
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: aeb8161ec5250856cb932035cc1acc28a9e9baf6
+ms.sourcegitcommit: 6d720d4ddaf6362fad1ab04364563cfa6590e3af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078663"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96332086"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>Solucionar problemas Espaços de Armazenamento Diretos
 
@@ -231,7 +231,7 @@ Uma alteração introduzida em 8 de maio de 2018 para o Windows Server 2016, que
 
 ### <a name="shutdown-process-flow"></a>Desligar o fluxo do processo:
 
-1. Execute o cmdlet Get-VirtualDisk e verifique se o valor de HealthStatus está íntegro.
+1. Execute o cmdlet Get-VirtualDisk e certifique-se de que o valor HealthStatus seja íntegro.
 2. Dissipe o nó executando o seguinte cmdlet:
 
    ```powershell
@@ -375,7 +375,7 @@ Agora, se você executar **Get-PhysicalDisk** em qualquer um dos nós, verá tod
 ||Virtu MSFT... ||Íntegros| Offline| 100 GB| RAW|
 ||Virtu MSFT... ||Íntegros| Offline| 100 GB| RAW|
 
-## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>Mensagem de erro sobre "tipo de mídia sem suporte" quando você cria um cluster de Espaços de Armazenamento Diretos usando enable-ClusterS2D
+## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>Mensagem de erro sobre "tipo de mídia sem suporte" quando você cria um cluster de Espaços de Armazenamento Diretos usando Enable-ClusterS2D
 
 Você poderá ver erros semelhantes a este ao executar o cmdlet **Enable-ClusterS2D** :
 
@@ -395,7 +395,7 @@ O problema é com a placa de expansão SAS do HPE que está entre os discos e a 
 Você pode ver um problema em que um dispositivo Intel SSD DC série P4600 parece estar relatando um NGUID de 16 bytes semelhante para vários namespaces, como 0100000001000000E4D25C000014E214 ou 0100000001000000E4D25C0000EEE214 no exemplo abaixo.
 
 
-|               UniqueId               | deviceid | MediaType | BusType |               SerialNumber               |      tamanho      | canpool | FriendlyName | OperationalStatus |
+|               uniqueid               | deviceid | MediaType | BusType |               SerialNumber               |      tamanho      | canpool | FriendlyName | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
 |           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  Falso  |     HGST     |  HUH721010AL4200  |
 | EUI. 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  Verdadeiro   |    PROCESSADOR     |   SSDPE2KE016T7   |
@@ -415,6 +415,7 @@ Em um cluster Espaços de Armazenamento Diretos do Windows Server 2016, você po
 A "remoção do pool" é uma intenção definida quando **Remove-PhysicalDisk** é chamado, mas armazenado em integridade para manter o estado e permitir a recuperação se a operação de remoção falhar. Você pode alterar manualmente o OperationalStatus para íntegro com um dos seguintes métodos:
 
 - Remova o disco físico do pool e, em seguida, adicione-o novamente.
+- Import-Module Clear-PhysicalDiskHealthData.ps1
 - Execute o [ scriptClear-PhysicalDiskHealthData.ps1](https://go.microsoft.com/fwlink/?linkid=2034205) para desmarcar a intenção. (Disponível para download como um. Arquivo TXT. Você precisará salvá-lo como um. Arquivo PS1 antes de poder executá-lo.)
 
 Aqui estão alguns exemplos que mostram como executar o script:
