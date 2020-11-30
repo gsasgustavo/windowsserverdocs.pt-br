@@ -6,20 +6,22 @@ ms.author: billmath
 manager: femila
 ms.date: 04/24/2019
 ms.topic: article
-ms.openlocfilehash: 3b27d0e887cded0f6ced2935439f95c4de8b712a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cb95a3eb85132ee5d5f3b40536364ebd0f58b40a
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947401"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330458"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>Ferramenta de restauração rápida do AD FS
 
 ## <a name="overview"></a>Visão geral
+
 Hoje AD FS torna-se altamente disponível Configurando um farm de AD FS. Algumas organizações gostariam de uma maneira de ter um único servidor AD FS implantação, eliminando a necessidade de vários servidores AD FS e da infraestrutura de balanceamento de carga de rede, enquanto ainda tenho alguma garantia de que o serviço pode ser restaurado rapidamente se houver um problema.
 A nova AD FS ferramenta de restauração rápida fornece uma maneira de restaurar AD FS dados sem a necessidade de um backup completo e a restauração do sistema operacional ou do estado do sistema. Você pode usar a nova ferramenta para exportar AD FS configuração para o Azure ou para um local.  Em seguida, você pode aplicar os dados exportados a uma nova instalação do AD FS, recriando ou duplicando o ambiente de AD FS.
 
 ## <a name="scenarios"></a>Cenários
+
 A ferramenta de restauração rápida AD FS pode ser usada nos seguintes cenários:
 
 1. Restaure rapidamente AD FS funcionalidade após um problema
@@ -30,10 +32,11 @@ A ferramenta de restauração rápida AD FS pode ser usada nos seguintes cenári
     - Use a ferramenta para mover de uma configuração de farm baseada em SQL para o WID ou vice-versa.
 
 
->[!NOTE]
->Se você estiver usando a replicação de mesclagem do SQL ou grupos de disponibilidade AlwaysOn, a ferramenta de restauração rápida não terá suporte. É recomendável usar backups baseados em SQL e um backup do certificado SSL como uma alternativa.
+> [!NOTE]
+> Se você estiver usando a replicação de mesclagem do SQL ou grupos de disponibilidade AlwaysOn, a ferramenta de restauração rápida não terá suporte. É recomendável usar backups baseados em SQL e um backup do certificado SSL como uma alternativa.
 
 ## <a name="what-is-backed-up"></a>O que é feito backup
+
 A ferramenta faz backup da seguinte configuração de AD FS
 
 - Banco de dados de configuração AD FS (SQL ou WID)
@@ -43,6 +46,7 @@ A ferramenta faz backup da seguinte configuração de AD FS
 - Uma lista de provedores de autenticação personalizados, repositórios de atributos e relações de confiança do provedor de declarações locais que estão instalados.
 
 ## <a name="how-to-use-the-tool"></a>Como usar a ferramenta
+
 Primeiro, [Baixe](https://go.microsoft.com/fwlink/?LinkId=825646) e instale o MSI em seu servidor de AD FS.
 
 Execute o seguinte comando em um prompt do PowerShell:
@@ -51,8 +55,8 @@ Execute o seguinte comando em um prompt do PowerShell:
 import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecreationTool.dll'
 ```
 
->[!NOTE]
->Se você estiver usando o banco de dados integrado do Windows (WID), essa ferramenta precisará ser executada no servidor de AD FS primário.  Você pode usar o `Get-AdfsSyncProperties` cmdlet do PowerShell para determinar se o servidor no qual você está ou não é o servidor primário.
+> [!NOTE]
+> Se você estiver usando o banco de dados integrado do Windows (WID), essa ferramenta precisará ser executada no servidor de AD FS primário.  Você pode usar o `Get-AdfsSyncProperties` cmdlet do PowerShell para determinar se o servidor no qual você está ou não é o servidor primário.
 
 ### <a name="system-requirements"></a>Requisitos de sistema
 
@@ -61,6 +65,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 - A restauração deve ser feita em um servidor de AD FS da mesma versão que o backup e que usa a mesma conta de Active Directory que a conta de serviço do AD FS.
 
 ## <a name="create-a-backup"></a>Criar um backup
+
 Para criar um backup, use o cmdlet backup-ADFS. Esse cmdlet faz backup da configuração do AD FS, do banco de dados, dos certificados SSL, etc.
 
 O usuário deve ser pelo menos um administrador local para executar este cmdlet.
@@ -82,20 +87,21 @@ Conjuntos de parâmetros
 Para que o Azure seja usado, as credenciais de armazenamento do Azure devem ser passadas para o cmdlet. As credenciais de armazenamento contêm o nome da conta e a chave. Além disso, um nome de contêiner também deve ser passado. Se o contêiner não existir, ele será criado durante o backup.
 Para o sistema de arquivos a ser usado, um caminho de armazenamento deve ser fornecido. Nesse diretório, um novo diretório será criado para cada backup. Cada diretório criado conterá os arquivos de backup.
 
-- ** &lt; Cadeia de &gt; caracteres EncryptionPassword** -a senha que será usada para criptografar todos os arquivos de backup antes de armazená-los
+- **&lt; Cadeia de &gt; caracteres EncryptionPassword** -a senha que será usada para criptografar todos os arquivos de backup antes de armazená-los
 
-- **AzureConnectionCredentials &lt; PSCredential &gt; ** -o nome da conta e a chave da conta de armazenamento do Azure
+- **AzureConnectionCredentials &lt; PSCredential &gt;** -o nome da conta e a chave da conta de armazenamento do Azure
 
-- ** &lt; Cadeia de &gt; caracteres AzureStorageContainer** -o contêiner de armazenamento em que o backup será armazenado no Azure
+- **&lt; Cadeia de &gt; caracteres AzureStorageContainer** -o contêiner de armazenamento em que o backup será armazenado no Azure
 
-- ** &lt; Cadeia de &gt; caracteres StoragePath** -o local em que os backups serão armazenados
+- **&lt; Cadeia de &gt; caracteres StoragePath** -o local em que os backups serão armazenados
 
-- **ServiceAccountCredential &lt; PSCredential &gt; ** -especifica a conta de serviço que está sendo usada para o serviço AD FS em execução no momento. Esse parâmetro só será necessário se o usuário quiser fazer backup do DKM e não for um administrador de domínio ou não tiver acesso ao conteúdo do contêiner.
+- **ServiceAccountCredential &lt; PSCredential &gt;** -especifica a conta de serviço que está sendo usada para o serviço AD FS em execução no momento. Esse parâmetro só será necessário se o usuário quiser fazer backup do DKM e não for um administrador de domínio ou não tiver acesso ao conteúdo do contêiner.
 
-- **BackupComment &lt; String [] &gt; ** – uma cadeia de caracteres informativa sobre o backup que será exibida durante a restauração, semelhante ao conceito de nomenclatura do ponto de verificação do Hyper-V. O padrão é uma cadeia de caracteres vazia
+- **BackupComment &lt; String [] &gt;** – uma cadeia de caracteres informativa sobre o backup que será exibida durante a restauração, semelhante ao conceito de nomenclatura do ponto de verificação do Hyper-V. O padrão é uma cadeia de caracteres vazia
 
 
 ## <a name="backup-examples"></a>Exemplos de backup
+
 Veja a seguir exemplos de backup para usar a ferramenta de restauração rápida AD FS.
 
 ### <a name="backup-the-ad-fs-configuration-with-the-dkm-to-the-file-system-and-has-access-to-the-dkm-container-contents-either-domain-admin-or-delegated"></a>Fazer backup da configuração de AD FS, com DKM, para o sistema de arquivos e ter acesso ao conteúdo do contêiner DKM (administrador de domínio ou delegado)
@@ -123,14 +129,15 @@ Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testE
 ```
 
 ## <a name="restore-from-backup"></a>Restaurar do backup
+
 Para aplicar uma configuração criada usando backup-ADFS em uma nova instalação do AD FS, use o cmdlet Restore-ADFS.
 
 Esse cmdlet cria um novo farm de AD FS usando o cmdlet `Install-AdfsFarm` e restaura a configuração de AD FS, o banco de dados, os certificados, etc.  Se a função de AD FS não tiver sido instalada no servidor, o cmdlet irá instalá-lo.  O cmdlet verifica o local de restauração de backups existentes e solicita que o usuário escolha um backup apropriado com base na data/hora em que foi tirado e qualquer comentário de backup que o usuário pode ter anexado ao backup. Se houver várias configurações de AD FS com diferentes nomes de serviço de Federação, o usuário será solicitado a escolher primeiro a configuração apropriada de AD FS.
 O usuário deve ser administrador local e de domínio para executar este cmdlet.
 
 
->[!NOTE]
->Antes de usar a ferramenta de recuperação rápida AD FS, verifique se o servidor ingressou no domínio antes de restaurar o backup.
+> [!NOTE]
+> Antes de usar a ferramenta de recuperação rápida AD FS, verifique se o servidor ingressou no domínio antes de restaurar o backup.
 
 O cmdlet usa os seguintes parâmetros:
 
@@ -141,25 +148,25 @@ O cmdlet usa os seguintes parâmetros:
 - **Cadeia de &lt; caracteres &gt; storagetype** -o tipo de armazenamento que o usuário deseja usar.
  "FileSystem" indica que o usuário deseja armazená-lo em uma pasta localmente ou na rede "Azure" indica que o usuário deseja armazená-lo no contêiner de armazenamento do Azure
 
-- ** &lt; Cadeia de &gt; caracteres DecryptionPassword** -a senha que foi usada para criptografar todos os arquivos de backup
+- **&lt; Cadeia de &gt; caracteres DecryptionPassword** -a senha que foi usada para criptografar todos os arquivos de backup
 
-- **AzureConnectionCredentials &lt; PSCredential &gt; ** -o nome da conta e a chave da conta de armazenamento do Azure
+- **AzureConnectionCredentials &lt; PSCredential &gt;** -o nome da conta e a chave da conta de armazenamento do Azure
 
-- ** &lt; Cadeia de &gt; caracteres AzureStorageContainer** -o contêiner de armazenamento em que o backup será armazenado no Azure
+- **&lt; Cadeia de &gt; caracteres AzureStorageContainer** -o contêiner de armazenamento em que o backup será armazenado no Azure
 
-- ** &lt; Cadeia de &gt; caracteres StoragePath** -o local em que os backups serão armazenados
+- **&lt; Cadeia de &gt; caracteres StoragePath** -o local em que os backups serão armazenados
 
 - **Cadeia de &lt; caracteres &gt; adfsname** -o nome da Federação cujo backup foi feito e será restaurado. Se isso não for fornecido e houver apenas um nome de serviço de Federação, ele será usado. Se houver mais de um serviço de Federação do qual foi feito backup no local, o usuário será solicitado a escolher um dos serviços de Federação do backup.
 
-- **ServiceAccountCredential &lt; PSCredential &gt; ** -especifica a conta de serviço que será usada para o novo serviço de AD FS que está sendo restaurado
+- **ServiceAccountCredential &lt; PSCredential &gt;** -especifica a conta de serviço que será usada para o novo serviço de AD FS que está sendo restaurado
 
-- ** &lt; Cadeia de &gt; caracteres GROUPSERVICEACCOUNTIDENTIFIER** -o GMSA que o usuário deseja usar para o novo serviço de AD FS que está sendo restaurado. Por padrão, se nenhum for fornecido, o nome da conta de backup será usado se for GMSA, caso contrário, o usuário será solicitado a colocar uma conta de serviço
+- **&lt; Cadeia de &gt; caracteres GROUPSERVICEACCOUNTIDENTIFIER** -o GMSA que o usuário deseja usar para o novo serviço de AD FS que está sendo restaurado. Por padrão, se nenhum for fornecido, o nome da conta de backup será usado se for GMSA, caso contrário, o usuário será solicitado a colocar uma conta de serviço
 
-- ** &lt; Cadeia &gt; de dbconnectionstring** -se o usuário quiser usar um banco de forma diferente para a restauração, ele deverá passar a cadeia de conexão SQL ou digitar o wid para wid.
+- **&lt; Cadeia &gt; de dbconnectionstring** -se o usuário quiser usar um banco de forma diferente para a restauração, ele deverá passar a cadeia de conexão SQL ou digitar o wid para wid.
 
-- **Forçar &lt; bool &gt; ** – ignore os prompts que a ferramenta pode ter depois que o backup é escolhido
+- **Forçar &lt; bool &gt;** – ignore os prompts que a ferramenta pode ter depois que o backup é escolhido
 
-- **RestoreDKM &lt; bool &gt; ** -restaurar o contêiner DKM para o anúncio, deverá ser definido se for para um novo anúncio e o DKM tiver sido copiado inicialmente.
+- **RestoreDKM &lt; bool &gt;** -restaurar o contêiner DKM para o anúncio, deverá ser definido se for para um novo anúncio e o DKM tiver sido copiado inicialmente.
 
 ## <a name="restore-examples"></a>Exemplos de restauração
 
@@ -205,6 +212,7 @@ Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\test
 ```
 
 ## <a name="encryption-information"></a>Informações de criptografia
+
 Todos os dados de backup são criptografados antes de enviá-los para a nuvem ou armazená-los no sistema de arquivos.
 
 Cada documento criado como parte do backup é criptografado usando o AES-256. A senha passada para a ferramenta é usada como uma frase secreta para gerar uma nova senha usando a classe Rfc2898DeriveBytes.
@@ -212,77 +220,85 @@ Cada documento criado como parte do backup é criptografado usando o AES-256. A 
 RngCryptoServiceProvider é usado para gerar o Salt usado pelo AES e a classe Rfc2898DeriveBytes.
 
 ## <a name="log-files"></a>Arquivos de log
+
 Toda vez que um backup ou restauração é executado, um arquivo de log é criado. Eles podem ser encontrados no seguinte local:
 
-- **%localappdata%\ADFSRapidRecreationTool**
+- **%LOCALAPPDATA%\ADFSRapidRecreationTool**
 
->[!NOTE]
+> [!NOTE]
 > Ao executar uma restauração, um arquivo de PostRestore_Instructions pode ser criado contendo uma visão geral dos provedores de autenticação adicionais, repositórios de atributos e relações de confiança do provedor de declarações locais a serem instalados manualmente antes de iniciar o serviço de AD FS.
 
 ## <a name="version-release-history"></a>Histórico de Lançamento de Versão
 
 ### <a name="version-10823"></a>1.0.82.3 da versão
+
 Versão: abril de 2020
 
 **Problemas corrigidos:**
-
 
 - Suporte adicionado para certificados baseados em CNG
 
 
 ### <a name="version-10820"></a>1.0.82.0 da versão
+
 Versão: julho de 2019
 
 **Problemas corrigidos:**
-
 
 - Correção de bug para nomes de conta de serviço AD FS que contêm caracteres de escape LDAP
 
 
 ### <a name="version-10810"></a>Versão: 1.0.81.0
+
 Versão: abril de 2019
 
 **Problemas corrigidos:**
-
 
 - Correções de bugs para backup e restauração de certificado
 - Informações de rastreamento adicionais para o arquivo de log
 
 
 ### <a name="version-10750"></a>Versão: 1.0.75.0
+
 Versão: agosto de 2018
 
 **Problemas corrigidos:**
+
 * Atualize backup-ADFS ao usar a opção-BackupDKM.  A ferramenta determinará se o contexto atual tem acesso ao contêiner DKM.  Nesse caso, ele não exigirá privilégios de administrador de domínio ou credenciais de conta de serviço.  Isso permite que os backups automatizados ocorram sem fornecer credenciais explicitamente ou em execução como uma conta de administrador de domínio.
 
 ### <a name="version-10730"></a>Versão: 1.0.73.0
+
 Versão: agosto de 2018
 
 **Problemas corrigidos:**
+
 * Atualizar os algoritmos de criptografia para que o aplicativo seja compatível com FIPS
 
-    >[!NOTE]
+    > [!NOTE]
     > Os backups antigos não funcionarão com a nova versão devido a alterações nos algoritmos de criptografia de acordo com a conformidade com o FIPS
 
 * Adicionar suporte para clusters SQL que usam replicação de mesclagem
 
 ### <a name="version-10720"></a>Versão: 1.0.72.0
+
 Versão: julho de 2018
 
 **Problemas corrigidos:**
 
-   - Correção de bug: corrigiu o. Instalador do MSI para dar suporte a atualizações in-loco
+- Correção de bug: corrigiu o. Instalador do MSI para dar suporte a atualizações in-loco
 
 ### <a name="10180"></a>1.0.18.0
+
 Versão: julho de 2018
 
 **Problemas corrigidos:**
 
-   - Correção de bug: manipular senhas de conta de serviço que têm caracteres especiais nelas (por ex., ' & ')
-   - Correção de bug: falha na restauração porque o Microsoft.IdentityServer.Servicehost.exe.config está sendo usado por outro processo
+- Correção de bug: manipular senhas de conta de serviço que têm caracteres especiais nelas (por ex., ' & ')
+- Correção de bug: falha na restauração porque o Microsoft.IdentityServer.Servicehost.exe.config está sendo usado por outro processo
 
 
 ### <a name="1000"></a>1.0.0.0
+
 Lançamento: outubro de 2016
 
 Versão inicial do AD FS ferramenta de restauração rápida

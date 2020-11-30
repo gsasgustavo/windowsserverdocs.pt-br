@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8519d69c39cb86f10c66b3c28410a285ca06252d
-ms.sourcegitcommit: 14c9526b1c74821341d4b66de92adce9bee92f10
+ms.openlocfilehash: ae5c0af5f434b73b9b4590c2a5c53c9551b76b6c
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558273"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330398"
 ---
 # <a name="whats-new-in-the-web-client"></a>Novidades do cliente Web
 
@@ -29,7 +29,7 @@ Atualizamos regularmente o [cliente da Web da Área de Trabalho Remota](remote-d
 
 - Agora, os usuários podem mover o menu minimizado.
 - Suporte aprimorado para monitores 4K e ultra-amplos e correção de um problema em que a cópia de grandes quantidades de dados causava falhas em sessões.
-- Suporte aprimorado para usar um IME (Editor de Método de Entrada) na sessão remota. Para saber mais sobre como usar um IME (Editor de Método de Entrada) com o cliente Web, confira [Conectar-se à Área de Trabalho Virtual do Windows com o cliente Web](/azure/virtual-desktop/connect-web.md).
+- Suporte aprimorado para usar um IME (Editor de Método de Entrada) na sessão remota. Para saber mais sobre como usar um IME (Editor de Método de Entrada) com o cliente Web, confira [Conectar-se à Área de Trabalho Virtual do Windows com o cliente Web](https://docs.microsoft.com/azure/virtual-desktop/connect-web).
 - Alteração da interface do usuário da página **Todos os Recursos**.
 - Correção de várias falhas de sequência de conexão em que o cliente Web retornava um *erro de protocolo geral*.
 - Correção de problemas de entrada de teclado em que sequências de teclas específicas não eram manipuladas adequadamente.

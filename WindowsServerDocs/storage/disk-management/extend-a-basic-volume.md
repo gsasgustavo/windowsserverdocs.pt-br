@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: d0cd4c0c2bd6909c82ee39c97b58909e85aeef9f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 806bbb9027ddbe0fc245c279e3106f3b60eef3a4
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961610"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330438"
 ---
 # <a name="extend-a-basic-volume"></a>Estender um volume básico
 
@@ -57,7 +57,7 @@ Veja como estender um volume para o espaço vazio imediatamente após o volume n
    Resize-Partition -DriveLetter $drive_letter -Size $size.SizeMax
    ```
 
-## <a name="see-slso"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Resize-Partition](/powershell/module/storage/resize-partition)
 - [Diskpart extend](../../administration/windows-commands/extend.md)

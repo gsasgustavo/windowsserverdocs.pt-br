@@ -7,15 +7,15 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 07/23/2019
-ms.openlocfilehash: 55d08b426ace5cf6cd0dfc0a0928536bfb751124
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 754211824208e582382cb9c6ad196483c6506708
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077813"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330368"
 ---
 # <a name="manage-a-server-core-server"></a>Gerenciar um servidor Server Core
- 
+ 
 > Aplica-se a: Windows Server 2019, Windows Server 2016 e Windows Server (canal semestral)
 
 Você pode gerenciar um servidor Server Core das seguintes maneiras:
@@ -30,7 +30,7 @@ Você também pode adicionar hardware e gerenciar drivers localmente, desde que 
 
 Há algumas limitações e dicas importantes para ter em mente quando você trabalha com o Server Core:
 
-- Se você fechar todas as janelas de prompt de comando e quiser abrir uma nova janela de prompt de comando, poderá fazer isso no Gerenciador de tarefas. Pressione **Ctrl \+ ALT \+ delete**, clique em **iniciar Gerenciador de tarefas**, clique em **mais detalhes > arquivo > executar**e digite **cmd.exe**. (Digite **Powershell.exe** para abrir uma janela de comando do PowerShell.) Como alternativa, você pode sair e entrar novamente.
+- Se você fechar todas as janelas de prompt de comando e quiser abrir uma nova janela de prompt de comando, poderá fazer isso no Gerenciador de tarefas. Pressione **Ctrl \+ ALT \+ delete**, clique em **iniciar Gerenciador de tarefas**, clique em **mais detalhes > arquivo > executar** e digite **cmd.exe**. (Digite **Powershell.exe** para abrir uma janela de comando do PowerShell.) Como alternativa, você pode sair e entrar novamente.
 - Nenhum comando ou ferramenta que tente iniciar o Windows Explorer vai funcionar. Por exemplo, executar **Iniciar.** de um prompt de comando não funcionará.
 - Não há suporte para renderização HTML ou ajuda HTML no Server Core.
 - O Server Core dá suporte a Windows Installer no modo silencioso para que você possa instalar ferramentas e utilitários de Windows Installer arquivos. Ao instalar Windows Installer pacotes no Server Core, use a opção **/QB** para exibir a interface do usuário básica.
@@ -78,7 +78,7 @@ Para usar um snap-in do MMC para gerenciar um servidor Server Core que *não* se
 Para permitir que todos os snap-ins do MMC se conectem, execute o seguinte comando:
 
 ```PowerShell
-Enable-NetFirewallRule -DisplayGroup "Remote Administration"
+Enable-NetFirewallRule -DisplayGroup "Windows Remote Management"
 ```
 
 Para permitir que apenas snap-ins específicos do MMC se conectem, execute o seguinte:
@@ -105,7 +105,7 @@ Em que o *Ruler* é um dos seguintes, dependendo de qual snap-in você deseja co
 > Além disso, determinados snap-ins exigem configuração adicional para se conectarem através do Firewall do Windows:
 >
 > - Gerenciamento de Disco. Primeiro, você deve iniciar o VDS (Serviço de Disco Virtual) no computador Server Core. Você também deve configurar as regras de Gerenciamento de Disco adequadamente no computador que está executando o snap-in do MMC.
-> - Monitor de segurança IP. Primeiro, você deve habilitar o gerenciamento remoto deste snap-in. Para fazer isso, em um prompt de comando, digite **cscript \windows\system32\scregedit.wsf/im 1**
+> - Monitor de segurança IP. Primeiro, você deve habilitar o gerenciamento remoto deste snap-in. Para fazer isso, em um prompt de comando, digite **cscript c:\windows\system32\scregedit.wsf/im 1**
 > - Confiabilidade e Desempenho. O snap-in não requer nenhuma configuração adicional, mas, quando você usá-lo para monitorar um computador Server Core, só poderá monitorar os dados de desempenho. Dados de confiabilidade não estão disponíveis.
 
 ## <a name="managing-with-remote-desktop-services"></a>Gerenciando com o Serviços de Área de Trabalho Remota

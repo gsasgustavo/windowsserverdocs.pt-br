@@ -6,12 +6,12 @@ manager: femila
 ms.date: 04/09/2018
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: cf8a12957621ce86492cc4216c56d9a159f1ee5c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 683a9ce88c9809dfecf5669b41758187504634b9
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940562"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330508"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Atualizando para o AD FS no Windows Server 2016 por meio de um banco de dados WID
 
@@ -89,11 +89,11 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 
 ![atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
 
-7. Se você estiver atualizando um farm AD FS 2012 R2 para 2016 ou 2019, a atualização do farm exigirá que o esquema do AD esteja pelo menos no nível 85.  Para atualizar o esquema, com a mídia de instalação do Windows Server 2016, abra um prompt de comando e navegue até o diretório support\adprep. Execute o seguinte:`adprep /forestprep`
+7. Se você estiver atualizando um farm AD FS 2012 R2 para 2016 ou 2019, a atualização do farm exigirá que o esquema do AD esteja pelo menos no nível 85.  Para atualizar o esquema, com a mídia de instalação do Windows Server 2016, abra um prompt de comando e navegue até o diretório support\adprep. Execute o seguinte:  `adprep /forestprep`
 
 ![atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
-Depois que a execução for concluída`adprep/domainprep`
+Depois que a execução for concluída `adprep /domainprep`
 
 > [!NOTE]
 > Antes de executar a próxima etapa, verifique se o Windows Server está atualizado executando Windows Update de configurações. Continue esse processo até que não existam mais atualizações.
@@ -120,7 +120,7 @@ Invoke-AdfsFarmBehaviorLevelRaise
 
 ![atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
-11. Da mesma forma, você pode usar o cmdlet do PowerShell: `Get-AdfsFarmInformation` para mostrar o FBl atual.
+11. Da mesma forma, você pode usar o cmdlet do PowerShell:  `Get-AdfsFarmInformation` para mostrar o FBl atual.
 
 ![atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 

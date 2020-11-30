@@ -1,16 +1,16 @@
 ---
-title: Monitor de pacotes (Pktmon)
+title: Monitor de pacote (Pktmon)
 description: Este tópico fornece uma visão geral da ferramenta de diagnóstico de rede do monitor de pacotes (Pktmon).
 ms.topic: overview
 author: khdownie
 ms.author: v-kedow
 ms.date: 11/12/2020
-ms.openlocfilehash: 3db2bcf2719c3cfb5430d8feb8fcac1684578452
-ms.sourcegitcommit: 8808f871c8cf131f819ef5540286218bd425da96
+ms.openlocfilehash: cab9de79c1d53b505acb61020c71472365ded348
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632387"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330488"
 ---
 # <a name="packet-monitor-pktmon"></a>Pktmon do monitor de pacotes \(\)
 
@@ -44,21 +44,30 @@ O monitor de pacotes intercepta os pacotes em vários locais em toda a pilha de 
 
 </center>
 
+## <a name="best-practices"></a>Práticas Recomendadas
+
+Use essas práticas recomendadas para simplificar a análise de rede.
+
+- Verifique a ajuda da linha de comando para obter argumentos e funcionalidades (por exemplo, pktmon Start help).
+- Configure os filtros de pacote correspondentes ao seu cenário (pktmon filtro de adição).
+- Verifique os contadores de pacotes durante o experimento de exibição de alto nível (contadores de pktmon).
+- Examine o log para ver a análise detalhada (formato pktmon pktmon. ETL).
+
 ## <a name="functionality"></a>Funcionalidade
 
 A funcionalidade do monitor de pacotes evoluiu por meio de versões do Windows. A tabela a seguir mostra seus principais recursos e a versão correspondente do Windows.
 
-| Funcionalidade                                                                  | RS5 (17763) | 19H1 (18362) | Vibranium (19041) |
-|:---------------------------------------------------------------------------:|:-----------:|:------------:|:-----------------:|
-| Monitoramento e contagem de pacotes em vários locais ao longo da pilha de rede | &#x2611;    | &#x2611;     | &#x2611;          |
-| Detecção de pacotes Drop em vários locais de pilha                          | &#x2611;    | &#x2611;     | &#x2611;          |
-| Filtragem de pacotes em tempo de execução flexível                                           | &#x2611;    | &#x2611;     | &#x2611;          |
-| Suporte a encapsulamento                                                       | &#x2610;    | &#x2611;     | &#x2611;          |
-| Análise de rede baseada na análise de pacotes TcpDump                            | &#x2610;    | &#x2611;     | &#x2611;          |
-| Análise de metadados de pacote (OOB)                                              | &#x2610;    | &#x2610;     | &#x2611;          |
-| Monitoramento de pacotes na tela em tempo real                                       | &#x2610;    | &#x2610;     | &#x2611;          |
-| Registro em log na memória de alto volume                                               | &#x2610;    | &#x2610;     | &#x2611;          |
-| Suporte para o Wireshark e o formato de Monitor de Rede                                | &#x2610;    | &#x2610;     | &#x2611;          |
+| Funcionalidade                                                                  | V 1809 (B:17763) | V 1903 (B:18362) | V 2004 (B:19041) |
+|:---------------------------------------------------------------------------:|:----------------:|:----------------:|:----------------:|
+| Monitoramento e contagem de pacotes em vários locais ao longo da pilha de rede | &#x2611;         | &#x2611;         | &#x2611;         |
+| Detecção de pacotes Drop em vários locais de pilha                          | &#x2611;         | &#x2611;         | &#x2611;         |
+| Filtragem de pacotes em tempo de execução flexível                                           | &#x2611;         | &#x2611;         | &#x2611;         |
+| Suporte a encapsulamento                                                       | &#x2610;         | &#x2611;         | &#x2611;         |
+| Análise de rede baseada na análise de pacotes TcpDump                            | &#x2610;         | &#x2611;         | &#x2611;         |
+| Análise de metadados de pacote (OOB)                                              | &#x2610;         | &#x2610;         | &#x2611;         |
+| Monitoramento de pacotes na tela em tempo real                                       | &#x2610;         | &#x2610;         | &#x2611;         |
+| Registro em log na memória de alto volume                                               | &#x2610;         | &#x2610;         | &#x2611;         |
+| Suporte para o Wireshark e o formato de Monitor de Rede                                | &#x2610;         | &#x2610;         | &#x2611;         |
 
 >[!NOTE]
 >Azure Stack o HCI e os clientes do hub de Azure Stack devem esperar a funcionalidade vibranium.
@@ -67,19 +76,18 @@ A funcionalidade do monitor de pacotes evoluiu por meio de versões do Windows. 
 
 Abaixo estão algumas das limitações mais significativas do monitor de pacotes.
 
-- O suporte a mídia sem fio está disponível somente em builds de ferro
-- Nenhuma integração de firewall
-- Drop Reporting só está disponível para componentes integrados
+- Somente o tráfego Ethernet tem suporte por enquanto. O suporte a tráfego sem fio será adicionado em versões posteriores.
+- Os descartes de pacotes do firewall do Windows ainda não são visíveis por meio do monitor de pacotes. 
 
 ## <a name="get-started-with-packet-monitor"></a>Introdução ao monitor de pacotes
 
 Os recursos a seguir estão disponíveis para ajudá-lo a começar a usar o monitor de pacotes.
 
-### <a name="pktmon-command-syntax-and-formatting"></a>[Sintaxe e formatação do comando Pktmon](pktmon-syntax.md)
+### <a name="pktmon-command-syntax-and-formatting"></a>[Sintaxe e formatação do comando do Pktmon](pktmon-syntax.md)
 
 O monitor de pacotes está disponível na caixa por meio do comando pktmon.exe no sistema operacional vibranium (Build 19041). Você pode [usar este tópico](pktmon-syntax.md) para aprender a entender a sintaxe, os comandos, a formatação e a saída do pktmon.
 
-### <a name="packet-monitoring-extension-in-windows-admin-center"></a>[Extensão de monitoramento de pacotes no centro de administração do Windows](pktmon-wac-extension.md)
+### <a name="packet-monitoring-extension-in-windows-admin-center"></a>[Extensão de monitoramento de pacotes no Windows Admin Center](pktmon-wac-extension.md)
 
 A extensão de monitoramento de pacotes permite que você opere e consuma o monitor de pacotes por meio do centro de administração do Windows. A extensão ajuda você a diagnosticar sua rede capturando e exibindo o tráfego de rede por meio da pilha de rede em um log que é fácil de seguir e manipular. Você pode [usar este tópico](pktmon-wac-extension.md) para aprender a operar a ferramenta e a entender sua saída.
 
@@ -87,7 +95,7 @@ A extensão de monitoramento de pacotes permite que você opere e consuma o moni
 
 O diagnóstico de caminho de dados SDN é uma ferramenta dentro da extensão de monitoramento de SDN do centro de administração do Windows. A ferramenta automatiza capturas de pacotes baseadas em monitor de pacotes de acordo com vários cenários de SDN e apresenta a saída em uma única exibição que é fácil de seguir e manipular. Você pode [usar este tópico](pktmon-sdn-data-path-wac-extension.md) para aprender a operar a ferramenta e a entender sua saída.
 
-### <a name="microsoft-network-monitor-netmon-support"></a>[Suporte ao Monitor de Rede da Microsoft (Netmon)](pktmon-netmon-support.md)
+### <a name="microsoft-network-monitor-netmon-support"></a>[Suporte do Monitor de Rede da Microsoft (Netmon)](pktmon-netmon-support.md)
 
 O monitor de pacotes gera logs no formato ETL. Esses logs podem ser analisados usando o Monitor de Rede da Microsoft (Netmon) usando analisadores especiais. [Este tópico](pktmon-netmon-support.md) explica como analisar arquivos ETL gerados pelo monitor de pacotes no Netmon.
 
