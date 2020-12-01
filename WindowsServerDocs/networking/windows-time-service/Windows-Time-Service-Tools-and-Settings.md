@@ -2,15 +2,16 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Ferramentas e configurações do Serviço de Tempo do Windows
 author: Teresa-Motiv
+description: Descreve as configurações que estão disponíveis para o Serviço de Tempo do Windows (W32Time) e as ferramentas que você pode usar para definir essas configurações
 ms.author: v-tea
-ms.date: 02/24/2020
+ms.date: 11/20/2020
 ms.topic: article
-ms.openlocfilehash: 60aae8d96107b45ca3ef101780a3f1fec9c5f364
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 3a9f079160f3af2b175b16654ce5aa77b4dd323e
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766579"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330498"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Ferramentas e configurações do Serviço de Tempo do Windows
 
@@ -55,7 +56,7 @@ As tabelas a seguir descrevem os parâmetros que podem ser usados com o W32tm.ex
 |**w32tm /?** |Exibe a ajuda da linha de comando do W32tm |
 |**w32tm /register** |Registra o Serviço de Hora para ser executado como um serviço e adiciona as informações de configuração padrão ao Registro. |
 |**w32tm /unregister** |Cancela o registro do Serviço de Hora e remove todas as informações de configuração do Registro. |
-|**w32tm /monitor [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>]** |Monitora o Serviço de Hora do Windows.<p>**/domain**: especifica o domínio a ser monitorado. Se nenhum nome de domínio for especificado ou se a opção **/domain** nem a opção **/computers** for especificada, o domínio padrão será usado. Esta opção pode ser usada mais de uma vez.<p>**/computers**: monitora a lista de computadores fornecida. Os nomes de computador são separados por vírgulas, sem espaços. Se um nome for prefixado com um **\*** , ele será tratado como um PDC. Esta opção pode ser usada mais de uma vez.<p>**/threads**: especifica o número de computadores a serem analisados simultaneamente. O valor padrão é três. O intervalo permitido é de 1 a 50. |
+|**w32tm /monitor [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>]** |Monitora o Serviço de Hora do Windows.<p>**/domain**: especifica o domínio a ser monitorado. Se nenhum nome de domínio for especificado ou se a opção **/domain** nem a opção **/computers** for especificada, o domínio padrão será usado. Esta opção pode ser usada mais de uma vez.<p>**/computers**: monitora a lista de computadores fornecida. Os nomes de computador são separados por vírgulas, sem espaços. Se um nome for prefixado com um **\**_, ele será tratado como um controlador de domínio primário. Esta opção pode ser usada mais de uma vez.<p>_*/threads**: especifica o número de computadores a serem analisados simultaneamente. O valor padrão é três. O intervalo permitido é de 1 a 50. |
 |**w32tm /ntte \<NT *time epoch*>** |Converte uma hora do sistema do Windows NT (medida em intervalos de 10<sup>-7</sup> segundos começando à 0h de 1º de janeiro de 1601) em um formato legível. |
 |**w32tm /ntpte \<NTP *time epoch*>** |Converte uma hora do NTP (medida em intervalos de 2<sup>-32</sup> segundos começando à 0h de 1º de janeiro de 1900) em um formato legível. |
 |**w32tm /resync [/computer:\<*computer*>] [/nowait] [/rediscover] [/soft]** |Informa a um computador que ele deve ressincronizar seu relógio assim que possível, descartando todas as estatísticas de erro acumuladas.<p>**/computer:\<*computer*>** : especifica o computador que deve ser ressincronizado. Se não for especificado, o computador local será ressincronizado.<p>**/nowait**: não aguardar a ressincronização; retorno imediato. Caso contrário, aguardar a ressincronização ser concluída antes de retornar.<p>**/rediscover**: detecta novamente a configuração de rede e redescobre as fontes de rede e, em seguida, faz a ressincronização.<p>**/soft**: faz a ressincronização usando as estatísticas de erro existentes. Não é útil, fornecido para compatibilidade. |
@@ -75,8 +76,6 @@ Caso deseje definir o cliente local de Hora do Windows para apontar para dois se
 ```cmd
 w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfromflags:manual /update
 ```
-
-Para obter uma lista de servidores NTP válidos disponíveis na Internet para sincronização de hora externa, confira [Uma lista de servidores de horário do protocolo SNTP disponíveis na Internet](https://go.microsoft.com/fwlink/?linkid=60401).
 
 Caso deseje verificar a configuração do cliente de Hora do Windows em um computador cliente baseado no Windows que tenha um nome de host CONTOSOW1, execute o seguinte comando:
 
@@ -295,7 +294,7 @@ Nas tabelas a seguir, "Todas as versões" refere-se às versões do Windows que 
 | Entrada de registro | Versões | Descrição |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |Todas as versões |Indica que as combinações de modo não padrão são permitidas na sincronização entre pares. O valor padrão para membros do domínio é **1**. O valor padrão para clientes e servidores autônomos é **1**. |
-|**NtpServer** |Todas as versões |Especifica uma lista de pares delimitada por espaço da qual um computador obtém carimbos de data/hora, consistindo em um ou mais nomes DNS ou endereços IP por linha. Cada nome DNS ou endereço IP listado deve ser exclusivo. Os computadores conectados a um domínio devem sincronizar com uma fonte de horário mais confiável, como o horário oficial dos EUA.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive: Pra obter mais informações sobre esse modo, confira [Servidor de Hora do Windows: 3.3 Modos de operação](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Cliente</li></ul><br />Não há valor padrão para essa entrada do Registro em membros do domínio. O valor padrão em clientes e servidores autônomos é time.windows.com,0x1.<p>**Observação**<br />Para obter mais informações sobre os servidores NTP disponíveis, confira o KB 262680, [Uma lista de servidores de horário do protocolo SNTP disponíveis na Internet](https://support.microsoft.com/help/262680/a-list-of-the-simple-network-time-protocol-sntp-time-servers-that-are) |
+|**NtpServer** |Todas as versões |Especifica uma lista de pares delimitada por espaço da qual um computador obtém carimbos de data/hora, consistindo em um ou mais nomes DNS ou endereços IP por linha. Cada nome DNS ou endereço IP listado deve ser exclusivo. Os computadores conectados a um domínio devem sincronizar com uma fonte de horário mais confiável, como o horário oficial dos EUA.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive: Pra obter mais informações sobre esse modo, confira [Servidor de Hora do Windows: 3.3 Modos de operação](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Cliente</li></ul><br />Não há valor padrão para essa entrada do Registro em membros do domínio. O valor padrão em clientes e servidores autônomos é **time.windows.com,0x1**. |
 |**ServiceDll** |Todas as versões |Mantida pelo W32Time. Contém dados reservados usados pelo sistema operacional Windows. Qualquer alteração nessa configuração pode causar resultados imprevisíveis. A localização padrão para essa DLL em membros de domínio e clientes autônomos e servidores é %windir%\System32\W32Time.dll. |
 |**ServiceMain** |Todas as versões |Mantida pelo W32Time. Contém dados reservados usados pelo sistema operacional Windows. Qualquer alteração nessa configuração pode causar resultados imprevisíveis. O valor padrão em membros do domínio é **SvchostEntry_W32Time**. O valor padrão em clientes e servidores autônomos é **SvchostEntry_W32Time**. |
 |**Tipo** |Todas as versões |Indica de quais pares a sincronização será aceita:  <ul><li>**NoSync**. O serviço de horário não é sincronizado com outras fontes.</li><li>**NTP**. O serviço de horário é sincronizado dos servidores especificados no **NtpServer**. entrada do Registro.</li><li>**NT5DS**. O serviço de horário sincroniza da hierarquia de domínio.  </li><li>**AllSync**. O serviço de horário usa todos os mecanismos de sincronização disponíveis.  </li></ul>O valor padrão em membros do domínio é **NT5DS**. O valor padrão em clientes e servidores autônomos é **NTP**. |
