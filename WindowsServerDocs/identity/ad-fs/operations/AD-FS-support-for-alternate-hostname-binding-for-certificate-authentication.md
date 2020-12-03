@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0b361c99486f61a3aee4651a743eb83ab4127e40
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f5e38ad5b3bcf81774ae5d6ae8908d5103455385
+ms.sourcegitcommit: b47bed17c2b1c6b61e904b8deb374e2c60e692e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947389"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96526073"
 ---
 # <a name="ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication"></a>Suporte do AD FS para associação de nome de host alternativo para autenticação de certificado
 
@@ -31,7 +31,7 @@ Há duas maneiras de adicionar a associação de nome de host alternativo para a
 Da mesma forma, uma vez que AD FS no Windows Server 2016 foi implantado, você pode usar o cmdlet do PowerShell: Set-AdfsAlternateTlsClientBinding.
 
 ```powershell
-Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint '<thumbprint of cert>'
+Set-AdfsAlternateTlsClientBinding -Member ADFS1.contoso.com -Thumbprint '<thumbprint of cert>'
 ```
 
 Quando solicitado, clique em Sim para confirmar.  E isso deve ser.
