@@ -7,18 +7,18 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7516eea3d6edd013b3f507671e6b219da7dfd632
-ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
+ms.openlocfilehash: 4dd16c79291c50137039a80a230ba75ae1de8217
+ms.sourcegitcommit: 28b5ab74cb0b40539ccc1a83998d6391e87fe51f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91718363"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96614877"
 ---
 # <a name="wdsutil"></a>wdsutil
 
 > Aplica-se a: Windows Server (canal semestral), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-o WDSUTIL é um utilitário de linha de comando usado para gerenciar o servidor dos serviços de implantação do Windows. Para executar esses comandos, clique em **Iniciar**, clique com o botão direito do mouse em **prompt de comando**e clique em **Executar como administrador**.
+O WDSUTIL é um utilitário de linha de comando usado para gerenciar o servidor dos serviços de implantação do Windows. Para executar esses comandos, clique em **Iniciar**, clique com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador**.
 
 ## <a name="commands"></a>Comandos
 
