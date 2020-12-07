@@ -6,18 +6,18 @@ manager: dongill
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
-ms.openlocfilehash: b186f664411bde60351c949c0ca16e7b4d3bb40c
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: e7f41e134908d1d9dc7773cf5f1af91e1910089a
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766989"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755373"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>O que há de novo no armazenamento no Windows Server
 
 >Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server (canal semestral)
 
-Este tópico explica as funcionalidades novas e alteradas no armazenamento nas versões de canal semestral do Windows Server 2019, do Windows Server 2016 e do Windows Server.
+Este tópico explica as funcionalidades novas e alteradas no armazenamento nas versões de canal do Windows Server 2019, do Windows Server 2016 e do Windows Server Semi-Annual.
 
 ## <a name="whats-new-in-storage-in-windows-server-version-1903"></a>O que há de novo no armazenamento no Windows Server, versão 1903
 
@@ -65,7 +65,7 @@ O Serviço de Migração de Armazenamento é uma nova tecnologia que facilita a 
 
 ### <a name="storage-spaces-direct-windows-server-2019-only"></a><a id="storage-spaces-direct"></a>Espaços de Armazenamento Diretos (somente Windows Server 2019)
 
-Há uma série de aprimoramentos para Espaços de Armazenamento Diretos no Windows Server 2019 (Espaços de Armazenamento Diretos não está incluído no Windows Server, canal semestral):
+Há uma série de aprimoramentos para Espaços de Armazenamento Diretos no Windows Server 2019 (Espaços de Armazenamento Diretos não está incluído no Windows Server, Semi-Annual Channel):
 
 - **Eliminação de duplicação e compactação para volumes do ReFS**
 
@@ -81,7 +81,7 @@ Há uma série de aprimoramentos para Espaços de Armazenamento Diretos no Windo
 
 - **Clusters de dois servidores usando um pen drive como testemunha**
 
-    Use uma unidade flash USB de baixo custo conectada ao seu roteador para atuar como uma testemunha em clusters de dois servidores. Se um servidor ficar inativo e, em seguida, fazer backup, o cluster da unidade USB saberá qual servidor tem os dados mais atualizados. Para obter mais informações, consulte o [blog armazenamento na Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Use uma unidade flash USB de baixo custo conectada ao seu roteador para atuar como uma testemunha em clusters de dois servidores. Se um servidor ficar inativo e, em seguida, fazer backup, o cluster da unidade USB saberá qual servidor tem os dados mais atualizados. Para obter mais informações, consulte o [blog armazenamento na Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) e a [documentação sobre como implantar uma testemunha de compartilhamento de arquivos](../failover-clustering/file-share-witness.md#creating-a-file-share-witness-on-a-router-with-a-usb-device).
 
 - **Windows Admin Center**
 
@@ -107,7 +107,7 @@ Há uma série de aprimoramentos para Espaços de Armazenamento Diretos no Windo
 
     Isso permite que os administradores delimitem manualmente a alocação de volumes em Espaços de Armazenamento Diretos. Isso pode aumentar significativamente a tolerância a falhas sob determinadas condições, mas impõe algumas considerações e complexidade de gerenciamento adicionais. Para obter mais informações, consulte [delimitar a alocação de volumes](storage-spaces/delimit-volume-allocation.md).
 
-### <a name="storage-replica"></a><a name="storage-replica2019"></a>Réplica de Armazenamento
+### <a name="storage-replica"></a><a name="storage-replica2019"></a>Réplica de armazenamento
 
 Há várias melhorias na [réplica de armazenamento](storage-replica/storage-replica-overview.md) nesta versão:
 
@@ -162,7 +162,7 @@ O Windows Server, versão 1803 inclui a capacidade de impedir que o serviço do 
 
 ## <a name="whats-new-in-storage-in-windows-server-version-1709"></a>O que há de novo no armazenamento no Windows Server, versão 1709
 
-O Windows Server, versão 1709, é a primeira versão do Windows Server no canal semestral. O canal semestral é um benefício do Software Assurance e tem suporte total na produção por 18 meses, com uma nova versão a cada seis meses.
+O Windows Server, versão 1709, é a primeira versão do Windows Server no canal de Semi-Annual. O canal de Semi-Annual é um benefício do Software Assurance e tem suporte total na produção por 18 meses, com uma nova versão a cada seis meses.
 
 Para obter mais informações, consulte a [Visão geral do canal semestral do Windows Server](../get-started-19/servicing-channels-19.md).
 
@@ -248,7 +248,7 @@ Para obter mais informações, consulte [qualidade de serviço de armazenamento]
 ### <a name="data-deduplication"></a><a name="dedup"></a>Eliminação de duplicação de dados
 | Funcionalidade | Novo ou atualizado | Descrição |
 |---------------|----------------|-------------|
-| [Suporte a volumes grandes](data-deduplication/whats-new.md#large-volume-support) | Atualizado | Antes do Windows Server 2016, os volumes tinham que ser dimensionados especificamente para a variação esperada e tamanhos de volume acima de 10 TB não eram bons candidatos para eliminação de duplicação. No Windows Server 2016, a Eliminação de Duplicação de Dados dá suporte a tamanhos de volume de **até 64 TB**. |
+| [Suporte para grandes volumes](data-deduplication/whats-new.md#large-volume-support) | Atualizado | Antes do Windows Server 2016, os volumes tinham que ser dimensionados especificamente para a variação esperada e tamanhos de volume acima de 10 TB não eram bons candidatos para eliminação de duplicação. No Windows Server 2016, a Eliminação de Duplicação de Dados dá suporte a tamanhos de volume de **até 64 TB**. |
 | [Suporte para arquivos grandes](data-deduplication/whats-new.md#large-file-support) | Atualizado | Antes do Windows Server 2016, arquivos com tamanho próximo a 1 TB não eram bons candidatos para eliminação de duplicação. No Windows Server 2016, arquivos com **até 1 TB** têm suporte completo. |
 | [Suporte ao Nano Server](data-deduplication/whats-new.md#nano-server-support) | Novo | A Eliminação de Duplicação de Dados está disponível e tem suporte completo na nova opção de implantação do Nano Server para Windows Server 2016. |
 | [Suporte de backup simplificado](data-deduplication/whats-new.md#simple-backup-support) | Novo | No Windows Server 2012 R2, Aplicativos de Backup Virtualizado, como o [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), tinham suporte por meio de uma série de etapas de configuração manual. No Windows Server 2016, um novo "Backup" de tipo de uso padrão foi adicionado para implantação perfeita da Eliminação de Duplicação de Dados para aplicativos de backup virtualizado. |
