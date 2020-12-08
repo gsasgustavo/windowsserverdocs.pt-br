@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 02/15/2019
-ms.openlocfilehash: e5ea882347a0605d814682b50c2ec71e24047472
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 11cfe250bd08a04f1577a5537389885718a755a3
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766969"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787895"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Introdução ao centro de administração do Windows
 
@@ -42,7 +42,7 @@ No Microsoft Edge, quando você receber uma solicitação com esta caixa de diá
 
 3. Certifique-se de **que sempre permitir acesso** esteja selecionado e clique em **permitir**
 
-    ! Caixa de diálogo credencial necessária] (.. launch-cert-3.png/Media/)
+    ![Caixa de diálogo credencial necessária](../media/launch-cert-3.png)
 
 ## <a name="connecting-to-managed-nodes-and-clusters"></a>Conectando-se a nós e clusters gerenciados
 

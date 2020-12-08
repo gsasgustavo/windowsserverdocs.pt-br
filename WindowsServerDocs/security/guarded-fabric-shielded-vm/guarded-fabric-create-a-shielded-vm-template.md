@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/29/2019
-ms.openlocfilehash: c52581eda53c595c45fb906fabf8d147bdc0562f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 713f52a935f59ca1fea35ce386ab29adb4b64080
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996279"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788089"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Criar um disco de modelo de VM blindada do Windows
 
@@ -95,7 +95,7 @@ Se você usar o VMM, siga as etapas nas seções restantes neste tópico para in
 
 Se você usar o VMM, depois de criar um disco de modelo, você precisará copiá-lo para um compartilhamento de biblioteca do VMM para que os hosts possam baixar e usar o disco ao provisionar novas VMs. Use o procedimento a seguir para copiar o disco de modelo na biblioteca do VMM e, em seguida, atualizar a biblioteca.
 
-1. Copie o arquivo VHDX para a pasta de compartilhamento de biblioteca do VMM. Se você usou a configuração padrão do VMM, copie o disco do modelo para _ \\ <vmmserver> \MSSCVMMLibrary\VHDs_.
+1. Copie o arquivo VHDX para a pasta de compartilhamento de biblioteca do VMM. Se você usou a configuração padrão do VMM, copie o disco do modelo para _\\ <vmmserver> \MSSCVMMLibrary\VHDs_.
 
 2. Atualize o servidor de biblioteca. Abra o espaço de trabalho **biblioteca** , expanda **servidores de biblioteca**, clique com o botão direito do mouse no servidor de biblioteca que você deseja atualizar e clique em **Atualizar**.
 
@@ -138,8 +138,7 @@ Depois que o modelo é criado, os locatários podem usá-lo para criar novas má
 
 ## <a name="prepare-and-protect-the-vhdx-using-powershell"></a>Preparar e proteger o VHDX usando o PowerShell
 
-Como alternativa para executar o assistente de disco de modelo, você pode copiar o disco de modelo e o certificado para um computador que esteja executando o RSAT e executar [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
-) para iniciar o processo de assinatura.
+Como alternativa para executar o assistente de disco de modelo, você pode copiar o disco de modelo e o certificado para um computador que esteja executando o RSAT e executar [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) para iniciar o processo de assinatura.
 O exemplo a seguir usa as informações de nome e versão especificadas pelos parâmetros _TemplateName_ e _version_ .
 O VHDX que você fornecer ao `-Path` parâmetro será substituído pelo disco de modelo atualizado, portanto, certifique-se de fazer uma cópia antes de executar o comando.
 

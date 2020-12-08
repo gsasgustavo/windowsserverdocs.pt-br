@@ -5,12 +5,12 @@ ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.openlocfilehash: 5e8618853e28c6deef4a15e84361e339c70bf052
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 92ca0c028d1275bf2d884a7c89be6ae2b351b78f
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940330"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788143"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Configurar o Serviço Web de Registro de Certificado para renovação baseada em chave de certificados em uma porta personalizada
 
@@ -83,7 +83,7 @@ Você pode duplicar um modelo de computador existente e definir as seguintes con
 4. Publique o novo modelo na autoridade de certificação.
 
 > [!Note]
-> Verifique se as configurações de compatibilidade no modelo estão definidas para o **Windows Server 2012 R2** , pois há um problema conhecido em que os modelos não estarão visíveis se a compatibilidade estiver definida como Windows Server 2016 ou versão posterior. Para obter mais informações, consulte [não é possível selecionar modelos de certificado compatíveis com a AC do Windows server 2016 do Windows server 2016 ou servidores de CAS ou CEP baseados em versões posteriores ](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
+> Verifique se as configurações de compatibilidade no modelo estão definidas para o **Windows Server 2012 R2** , pois há um problema conhecido em que os modelos não estarão visíveis se a compatibilidade estiver definida como Windows Server 2016 ou versão posterior. Para obter mais informações, consulte [não é possível selecionar modelos de certificado compatíveis com a AC do Windows server 2016 do Windows server 2016 ou servidores de CAS ou CEP baseados em versões posteriores](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
 
 
 #### <a name="configure-the-cepces01-instance"></a>Configurar a instância de CEPCES01
@@ -101,7 +101,7 @@ Consulte os artigos a seguir para obter orientações passo a passo para habilit
 [Diretrizes de Serviço Web de Registro de Certificado](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!Note]
-> Certifique-se de que você não selecionou a opção "Habilitar renovação baseada em chave" se configurar as instâncias CEP e CES de autenticação de nome de usuário e senha.
+> Certifique-se de não selecionar a opção "Habilitar renovação de Key-Based" se configurar as instâncias CEP e CES de autenticação de nome de usuário e senha.
 
 **Método 2**
 
@@ -133,7 +133,7 @@ Esse comando instala o Serviço Web de Registro de Certificado (CES) para usar a
 Após uma instalação bem-sucedida, você espera ver a exibição a seguir no console do Gerenciador do Serviços de Informações da Internet (IIS).
 ![Gerenciador do IIS](media/certificate-enrollment-certificate-key-based-renewal-4.png)
 
-Em **site padrão**, selecione **ADPolicyProvider_CEP_UsernamePassword**e, em seguida, abra **configurações do aplicativo**. Observe a **ID** e o **URI**.
+Em **site padrão**, selecione **ADPolicyProvider_CEP_UsernamePassword** e, em seguida, abra **configurações do aplicativo**. Observe a **ID** e o **URI**.
 
 Você pode adicionar um **nome amigável** para o gerenciamento.
 
@@ -233,11 +233,11 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 #### <a name="configure-the-client-computer"></a>Configurar o computador cliente
 
-No computador cliente, configure as políticas de registro e a política de registro automático. Para fazer isso, execute estas etapas:
+No computador cliente, configure as políticas de registro e a política de registro automático. Para fazer isso, siga estas etapas:
 
-1. Selecione **Iniciar**  >  **execução**e digite **gpedit. msc**.
+1. Selecione **Iniciar**  >  **execução** e digite **gpedit. msc**.
 
-2. Vá para **configuração do computador**  >  **configurações do Windows**configurações  >  de**segurança**e clique em políticas de **chave pública**.
+2. Vá para **configuração do computador**  >  **configurações do Windows** configurações  >  de **segurança** e clique em políticas de **chave pública**.
 
 3. Habilite a **política de registro automático de cliente dos serviços de certificados** para corresponder às configurações na captura de tela a seguir.
    ![Política de grupo de certificados](media/certificate-enrollment-certificate-key-based-renewal-9.png)
@@ -248,7 +248,7 @@ No computador cliente, configure as políticas de registro e a política de regi
 
    b. Para **tipo de autenticação**, selecione **nome de usuário/senha**.
 
-   c. Defina uma prioridade de **10**e, em seguida, valide o servidor de políticas.
+   c. Defina uma prioridade de **10** e, em seguida, valide o servidor de políticas.
       ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
    > [!Note]
@@ -260,11 +260,11 @@ No computador cliente, configure as políticas de registro e a política de regi
    Selecione o modelo KBR e registre o certificado.
    ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
-6. Abra **gpedit. msc** novamente. Edite a **política de registro cliente de serviços de certificados – certificado**e adicione a política de registro de renovação baseada em chave:
+6. Abra **gpedit. msc** novamente. Edite a **política de registro cliente de serviços de certificados – certificado** e adicione a política de registro de renovação baseada em chave:
 
    a. Clique em **Adicionar**, insira o URI do CEP com o **certificado** que editamos no ADSI.
 
-   b. Defina uma prioridade de **1**e, em seguida, valide o servidor de políticas. Você será solicitado a autenticar e escolher o certificado que registramos inicialmente.
+   b. Defina uma prioridade de **1** e, em seguida, valide o servidor de políticas. Você será solicitado a autenticar e escolher o certificado que registramos inicialmente.
 
    ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-13.png)
 
@@ -275,11 +275,11 @@ No computador cliente, configure as políticas de registro e a política de regi
 
 Para garantir que a renovação automática esteja funcionando, verifique se a renovação manual funciona renovando o certificado com a mesma chave usando o MMC. Além disso, você deve ser solicitado a selecionar um certificado durante a renovação. Você pode escolher o certificado que registramos anteriormente. O prompt é esperado.
 
-Abra o repositório de certificados pessoais do computador e adicione a exibição "certificados arquivados". Para fazer isso, adicione o snap-in de conta do computador local a mmc.exe, realce **certificados (computador local)** clicando nele, clique em **Exibir** na **guia ação** à direita ou na parte superior do MMC, clique em **Opções de exibição**, selecione **certificados arquivados**e clique em **OK**.
+Abra o repositório de certificados pessoais do computador e adicione a exibição "certificados arquivados". Para fazer isso, adicione o snap-in de conta do computador local a mmc.exe, realce **certificados (computador local)** clicando nele, clique em **Exibir** na **guia ação** à direita ou na parte superior do MMC, clique em **Opções de exibição**, selecione **certificados arquivados** e clique em **OK**.
 
 ### <a name="method-1"></a>Método 1
 
-Execute o seguinte comando:
+Execute o comando a seguir:
 
 ```PowerShell
 certreq -machine -q -enroll -cert <thumbprint> renew
@@ -312,7 +312,7 @@ Após a conclusão do teste, reverta a configuração de hora para o valor origi
 
 [Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
 
-Consulte também
+Confira também
 
 [Fórum de Segurança do Windows Server](https://aka.ms/adcsforum)
 
