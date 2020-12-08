@@ -7,12 +7,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 04/04/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 109f60ec099606dfc031fc07a8f457287f8fb50d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a9cf5f32a2cffb52b56e619e42b22483e7cbe48a
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946429"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755383"
 ---
 # <a name="remote-desktop---allow-access-to-your-pc-from-outside-your-pcs-network"></a>Área de Trabalho Remota – Conceder acesso ao seu computador de fora da rede
 
@@ -45,7 +45,7 @@ O endereço IP do roteador pode ser alterado, o seu provedor de serviços de int
 
 Na maioria dos roteadores, você pode definir qual IP de origem ou rede de origem pode usar o mapeamento de porta. Assim, se souber que só vai se conectar no trabalho, você pode adicionar o endereço IP da rede do seu trabalho, o que permite que você evite abrir a porta para toda a internet pública. Se o host dessa conexão usar um endereço IP dinâmico, defina a restrição de origem para permitir o acesso de todo o intervalo desse provedor específico.
 
-Você também pode considerar a configuração de um [endereço IP estático](/windows-hardware/customize/mobile/mcsf/enable-static-ip) em seu computador para que o endereço IP interno não seja alterado. Se você fizer isso, então o encaminhamento de porta do roteador sempre indicará o endereço IP correto.
+Você também pode considerar a configuração de um endereço IP estático em seu computador para que o endereço IP interno não seja alterado. Se você fizer isso, então o encaminhamento de porta do roteador sempre indicará o endereço IP correto.
 
 
 ## <a name="use-a-vpn"></a>Usar uma VPN
