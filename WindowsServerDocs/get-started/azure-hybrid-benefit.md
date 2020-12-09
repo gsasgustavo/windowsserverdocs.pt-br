@@ -6,21 +6,20 @@ ms.topic: article
 author: eross-msft
 ms.author: chrisrin
 ms.localizationpriority: high
-ms.openlocfilehash: 7ad0b2e2d45a0bd74484c253cb0f92a7b5e491f3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a997f60d4b36d85a895dedd567560be4edcd4d98
+ms.sourcegitcommit: fa325ef993e62fba59de803d8998922db1cb1dc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972333"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96482577"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Benefício Híbrido do Azure para Windows Server
 
->Aplica-se a: Windows Server
+> Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## <a name="benefit-description-rules-and-use-cases"></a>Descrição, regras e casos de uso do benefício
 
-O Benefício Híbrido do Azure para Windows Server permite que você economize até 40% em VMs do Windows Server no Azure utilizando suas licenças do Windows Server local com o Software Assurance.  Com esse benefício, os clientes precisam apenas pagar os custos de infraestrutura da máquina virtual porque o licenciamento para o Windows Server está coberto pelos benefícios do Software Assurance.  O benefício é aplicável às edições Standard e Datacenter do Windows Server para as versões 2008R2, 2012, 2012R2 e 2016.  Esse benefício está disponível em todas as regiões e nuvens soberanas.
-
+O Benefício Híbrido do Azure para Windows Server permite que você economize até 40% em VMs do Windows Server no Azure utilizando suas licenças do Windows Server local com o Software Assurance.  Com esse benefício, os clientes precisam apenas pagar os custos de infraestrutura da máquina virtual porque o licenciamento para o Windows Server está coberto pelos benefícios do Software Assurance.  O benefício é aplicável às edições Standard e Datacenter do Windows Server para as versões Windows Server 2012 R2, Windows Server 2016 e Windows Server 2019. Esse benefício está disponível em todas as regiões e nuvens soberanas.
 
 ![imagem 1](media/ahb01.png)
 

@@ -5,20 +5,38 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/06/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b53046f493fca630b24f31818ae724403ffc3c53
-ms.sourcegitcommit: 5fc77b4325a18d8c22385d899b14fe724a662347
+ms.openlocfilehash: b9b811f3a0beb71461f868c61f0508566136a5d8
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361153"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563816"
 ---
 # <a name="whats-new-in-the-macos-client"></a>Novidades do cliente para macOS
 
 Atualizamos regularmente o [cliente da Área de Trabalho Remota para macOS](remote-desktop-mac.md), adicionando novos recursos e corrigindo problemas. Veja onde você encontrará as atualizações mais recentes.
 
 Caso tenha problemas, entre em contato conosco a qualquer momento navegando em **Ajuda** > **Relatar um Problema**.
+
+## <a name="updates-for-version-1050"></a>Atualizações para a versão 10.5.0
+
+*Data da publicação: 02/12/2020*
+
+É hora de outra atualização. Agradecemos a todos que relataram bugs e trabalharam conosco para diagnosticar e corrigir problemas. Nesta versão, fizemos as seguintes alterações:
+
+- Agora você pode editar as configurações de exibição, do dispositivo e de redirecionamento de pasta de conexões de PC publicadas.
+- As janelas de aplicativo remoto agora são reduzidas para a plataforma quando minimizadas.
+- Foi adicionada uma caixa de diálogo Informações de Conexão que exibe a largura de banda atual e o tempo de ida e volta.
+- Foi adicionado suporte para o consentimento do Gateway de Área de Trabalho Remota e mensagens de administrador.
+- Foi corrigido um problema em que um arquivo RDP especificando um valor de gatewayusagemethod de 0 ou 4 foi importado incorretamente.
+- A folha Editar Workspace agora mostra a hora exata em que o workspace foi atualizado pela última vez.
+- Foi removido o spew de rastreamento que era gerado durante o uso do parâmetro *--script*.
+- Foi resolvido um problema em que o cliente retornaria um erro 0x30000066 ao se conectar usando um servidor de Gateway de Área de Trabalho Remota.
+- Foi corrigido um problema em que seriam solicitadas repetidamente credenciais ao usuário se a Proteção Estendida para Autenticação estivesse definida no servidor.
+- Foram solucionados problemas de confiabilidade que os usuários identificaram por meio do relatório de falhas.
+- Foram solucionados vários erros de acessibilidade relacionados ao teclado e a VoiceOver.
 
 ## <a name="updates-for-version-1041"></a>Atualizações da versão 10.4.1
 
@@ -395,7 +413,7 @@ Há algumas semanas desde a última atualização, mas trabalhamos duro durante 
 - Agora é possível iniciar uma conexão ao pressionar ENTER em um bloco da área de trabalho.
 - Quando você estiver no modo de exibição de tela inteira, Cmd+M agora será mapeado corretamente para WIN+M.
 - As janelas Central de Conexão, Preferências e Sobre agora respondem a Cmd+M.
-- Agora é possível começar a descobrir feeds pressionando ENTER na página * *Adicionar Recursos Remotos*.
+- Agora é possível começar a descobrir feeds pressionando ENTER na página **Adicionar Recursos Remotos*.
 - Correção de um problema em que um novo feed de recursos remotos aparecia vazio no Connection Center até que você atualizasse.
 
 ## <a name="updates-for-version-1016"></a>Atualizações para a versão 10.1.6

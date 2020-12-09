@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: a9664d11e61d69faab87f351ae5f9915afd47f98
-ms.sourcegitcommit: 094482d0e7a8a9688790af06968d68f0294b78df
+ms.openlocfilehash: 076bc138620cb3babe2fbd08253577f3f740d976
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94550729"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755403"
 ---
 # <a name="securing-privileged-access"></a>Proteger o acesso privilegiado
 
@@ -99,7 +99,7 @@ Como medida de segurança inicial para os usuários com privilégios administrat
 
 ### <a name="4-identity-attack-detection"></a>4. Detecção de ataque de identidade
 
-A [ATP (Proteção Avançada contra Ameaças) do Azure](/azure-advanced-threat-protection/what-is-atp) é uma solução de segurança baseada em nuvem que identifica, detecta e ajuda você a investigar ameaças avançadas, identidades comprometidas e ações de um funcionário mal-intencionado direcionadas ao ambiente do Active Directory local.
+O [Microsoft Defender para Identidade](https://docs.microsoft.com/defender-for-identity/what-is) é uma solução de segurança baseada em nuvem que identifica, detecta e ajuda você a investigar ameaças avançadas, identidades comprometidas e ações de uma pessoa mal-intencionada da empresa direcionadas ao ambiente do Active Directory local.
 
 ## <a name="phase-2-significant-incremental-improvements"></a>Fase 2: Melhorias incrementais significativas
 
@@ -134,9 +134,9 @@ Habilitar o Credential Guard ajuda a proteger hashes de senha NTLM, tíquetes de
 
 Habilite a Proteção de Identidade do Microsoft Azure AD para relatar os usuários com credenciais vazadas para que você as corrija. O [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) pode ser utilizado para ajudar sua organização a proteger ambientes de nuvem e híbridos contra ameaças.
 
-### <a name="6-azure-atp-lateral-movement-paths"></a>6. Caminhos de movimento lateral do ATP do Azure
+### <a name="6-microsoft-defender-for-identity-lateral-movement-paths"></a>6. Caminhos de Movimento Lateral do Microsoft Defender para Identidade
 
-Verifique se os detentores de conta de acesso privilegiado estão usando a PAW apenas para administração, minimizando o risco de contas não privilegiadas comprometidas obterem acesso a uma conta privilegiada por meio de ataques de roubo de credenciais, como Pass-the-Hash ou Pass-The-Ticket. [Os LMPs (caminhos de movimento lateral](/azure-advanced-threat-protection/use-case-lateral-movement-path)) do ATP do Azure fornecem relatórios fáceis de entender para identificar em que locais contas privilegiadas podem estar suscetíveis a serem comprometidas.
+Verifique se os detentores de conta de acesso privilegiado estão usando a PAW apenas para administração, minimizando o risco de contas não privilegiadas comprometidas obterem acesso a uma conta privilegiada por meio de ataques de roubo de credenciais, como Pass-the-Hash ou Pass-The-Ticket. [Os LMPs (Caminhos de Movimento Lateral) do Microsoft Defender para Identidade](https://docs.microsoft.com/defender-for-identity/use-case-lateral-movement-path) fornecem relatórios fáceis de entender para identificar em que locais contas privilegiadas podem estar suscetíveis a serem comprometidas.
 
 ## <a name="phase-3-security-improvement-and-sustainment"></a>Fase 3: Melhoria e manutenção da segurança
 
@@ -158,7 +158,7 @@ Proteja suas cargas de trabalho de identidade incluindo Domínios, Controladores
 
 A integração do registro em log em uma ferramenta SIEM centralizada pode ajudar sua organização a analisar, detectar e responder a eventos de segurança. Os artigos [Como monitorar o Active Directory quanto a sinais de comprometimento](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) e [Apêndice L: eventos a serem monitorados](../ad-ds/plan/appendix-l--events-to-monitor.md) fornecem orientação sobre eventos que devem ser monitorados em seu ambiente.
 
-Isso faz parte do plano acima, porque, para agregar, criar e ajustar alertas em um SIEM (gerenciamento de evento e informações de segurança), são necessários analistas capacitados (ao contrário do ATP do Azure no plano de 30 dias, que inclui alertas prontos para uso).
+Isso faz parte do plano acima, porque, para agregar, criar e ajustar alertas em um SIEM (gerenciamento de evento e informações de segurança), são necessários analistas capacitados (ao contrário do Microsoft Defender para Identidade no plano de 30 dias, que inclui alertas prontos para uso).
 
 ### <a name="4-leaked-credentials---force-password-reset"></a>4. Credenciais vazadas – forçar redefinição de senha
 

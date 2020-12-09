@@ -5,18 +5,31 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 07/24/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 740d1ef70134269bb03be1c04143f0871c4aa400
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 19e2162caff3ee41fd7a96cf2b31a4f15dd13bbb
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961940"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563806"
 ---
 # <a name="whats-new-in-the-android-client"></a>Novidades do cliente para Android
 
 Atualizamos regularmente o [cliente da Área de Trabalho Remota para Android](remote-desktop-android.md), adicionando novos recursos e corrigindo problemas. Veja onde você encontrará as atualizações mais recentes.
+
+## <a name="updates-for-version-1008"></a>Atualizações para a versão 10.0.8
+
+*Data da publicação: 04/12/2020*
+
+- Agora o cliente dá suporte ao redirecionamento de microfone.
+- Nova interface do usuário para assinar workspaces e editá-los.
+- Foi limpa a interface do usuário existente em todo o cliente.
+- Foi corrigida a entrada do teclado Samsung DeX.
+- Foi resolvido um problema em que o cliente relatava um erro 0x5000007 ao se conectar usando um servidor de Gateway de Área de Trabalho Remota.
+- Foram solucionados vários problemas de confiabilidade identificados por usuários por meio do relatório de falhas.
+- A versão mínima necessária do Android agora é Android 6.
+- Foi corrigido um problema em que o cliente parava de responder ao salvar um arquivo para o armazenamento redirecionado.
 
 ## <a name="updates-for-version-1007"></a>Atualizações para a versão 10.0.7
 

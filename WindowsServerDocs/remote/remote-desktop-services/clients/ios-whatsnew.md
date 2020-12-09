@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/06/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: beb97113165127c50c815ccca8a667a1654215fa
-ms.sourcegitcommit: 5fc77b4325a18d8c22385d899b14fe724a662347
+ms.openlocfilehash: ab03feb27e2f03f8765cd42b8acaec6b61836d3b
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361163"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563826"
 ---
 # <a name="whats-new-in-the-ios-client"></a>Novidades do cliente para iOS
 
@@ -21,6 +21,21 @@ Atualizamos regularmente o [cliente da Área de Trabalho Remota para iOS](remote
 ## <a name="how-to-report-issues"></a>Como relatar problemas
 
 Temos o compromisso de tornar o cliente da Área de Trabalho Remota para iOS o melhor possível, por isso valorizamos seus comentários. Você pode relatar problemas em **Ajuda** > **Relatar um Problema**.
+
+## <a name="updates-for-version-1022"></a>Atualizações para a versão 10.2.2
+
+*Data da publicação: 23/11/2020*
+
+Nesta versão, resolvemos alguns bugs que afetavam os usuários que executavam o iOS 14 e o iPadOS 14.
+
+## <a name="updates-for-version-1021"></a>Atualizações para a versão 10.2.1
+
+*Data da publicação: 11/11/2020*
+
+É hora de uma atualização rápida. Nesta versão, fizemos as seguintes correções:
+
+- Foi adicionado suporte para dispositivos iPhone e iPad recém-lançados.
+- Foi resolvido um problema em que o cliente retornaria um erro 0x30000066 ao se conectar usando um servidor de Gateway de Área de Trabalho Remota.
 
 ## <a name="updates-for-version-1020"></a>Atualizações para a versão 10.2.0
 
@@ -150,9 +165,9 @@ Reunimos algumas correções de bug e atualizações de recurso para essa versã
 - Correção de um bug no reconhecedor de gesto que fazia o cliente ficar sem resposta quando se conectava a uma sessão remota.
 - Agora você pode entrar no modo Alternância de Aplicativos apenas deslizando o dedo para cima (exceto quando você está no modo Toque com a sessão estendida para a área do indicador Início).
 - O indicador Início agora ficará oculto automaticamente quando conectado a uma sessão remota e será exibido novamente quando você tocar na tela.
-- Adição de um atalho do teclado para acessar as configurações do aplicativo no Centro de Conexão ( **Command + ,** ).
-- Adição de um atalho do teclado para atualizar todos os workspaces no Centro de Conexão ( **Command + R** ).
-- Conexão do atalho do teclado do sistema para Escape quando conectado a uma sessão remota ( **Command + .** ).
+- Adição de um atalho do teclado para acessar as configurações do aplicativo no Centro de Conexão (**Command + ,** ).
+- Adição de um atalho do teclado para atualizar todos os workspaces no Centro de Conexão (**Command + R**).
+- Conexão do atalho do teclado do sistema para Escape quando conectado a uma sessão remota (**Command + .** ).
 - Correção de cenários em que o teclado na tela do Windows na sessão remota era muito pequeno.
 - Implementação do foco de teclado automático em todo o Centro de Conexão para tornar a entrada de dados mais contínua.
 - Pressionar **Enter** em uma solicitação de credenciais agora faz o prompt ser ignorado e o fluxo atual retomado.

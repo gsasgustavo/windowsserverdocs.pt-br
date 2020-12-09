@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/16/2019
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 12e2535092b2842cf23fcc573b417f7520e99504
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fe553c03e85f3cb68f76b1a8d27e1da93bf9d9a3
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961830"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563776"
 ---
 # <a name="windows-desktop-client-for-admins"></a>Cliente de Área de Trabalho do Windows para administradores
 
@@ -42,12 +42,14 @@ Esta seção descreve as novas opções de configuração para esse cliente.
 
 ### <a name="configure-update-notifications"></a>Configurar notificações de atualização
 
-Por padrão, o cliente o notifica você sempre que há uma atualização. Para desativar as notificações, defina as seguintes informações do Registro:
+Por padrão, o cliente notifica você sempre que há uma atualização e se atualiza automaticamente quando o cliente é fechado e não tem nenhuma conexão ativa. Mesmo sem conexões ativas, o processo msrdc.exe é executado em segundo plano para permitir que você se reconecte rapidamente quando reabrir o cliente. Você pode parar o msrdc.exe clicando com o botão direito do mouse no ícone da Área de Trabalho Virtual do Windows na área da bandeja do sistema e selecionando **Desconectar todas as sessões** no menu suspenso.
+
+Para desativar as notificações, defina as seguintes informações do Registro:
 
 - **Chave:** HKLM\Software\Microsoft\MSRDC\Policies
 - **Tipo:** REG_DWORD
 - **Nome:** AutomaticUpdates
-- **Dados:** 0 = desabilitar notificações. 1 = mostrar notificações.
+- **Dados:** 0 = desabilitar notificações. 1 = mostrar notificações. 2 = mostrar notificações e atualizar automaticamente no fechamento.
 
 ### <a name="configure-user-groups"></a>Configurar grupos de usuário
 
