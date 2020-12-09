@@ -7,12 +7,12 @@ ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 71152234b72a0557ca0d189896826d66c6ce0f49
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2bd72ec096d7c1301601848602a1d55e44ca5086
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996520"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866505"
 ---
 # <a name="manage-certificates-for-software-defined-networking"></a>Gerenciar certificados para rede definida pelo software
 
@@ -56,7 +56,7 @@ Ao criar \- certificados autoassinados, você pode usar as diretrizes a seguir.
 
 #### <a name="multiple-node"></a>Vários nós
 
-Você pode usar o comando [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) do Windows PowerShell para criar um \- certificado autoassinado.
+Você pode usar o comando [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) do Windows PowerShell para criar um \- certificado autoassinado.
 
 **Sintaxe**
 
@@ -72,7 +72,7 @@ New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryp
 
 #### <a name="single-node"></a>Nó único
 
-Você pode usar o comando [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) do Windows PowerShell para criar um \- certificado autoassinado.
+Você pode usar o comando [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) do Windows PowerShell para criar um \- certificado autoassinado.
 
 **Sintaxe**
 
@@ -114,16 +114,16 @@ Enquanto você estiver configurando um modelo de certificado na próxima etapa, 
 >[!NOTE]
 >Antes de executar esse procedimento, você deve examinar os requisitos de certificado e os modelos de certificado disponíveis no console de modelos de certificado. Você pode modificar um modelo existente ou criar uma duplicata de um modelo existente e, em seguida, modificar sua cópia do modelo. É recomendável criar uma cópia de um modelo existente.
 
-1. No servidor em que o AD CS está instalado, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **autoridade de certificação**. O MMC do console de gerenciamento Microsoft Management da autoridade de certificação \( \) é aberto.
-2. No MMC, clique duas vezes no nome da autoridade de certificação, clique com o botão direito do mouse em **modelos de certificado**e clique em **gerenciar**.
+1. No servidor em que o AD CS está instalado, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **autoridade de certificação**. O MMC do console de gerenciamento Microsoft Management da autoridade de certificação \( \) é aberto.
+2. No MMC, clique duas vezes no nome da autoridade de certificação, clique com o botão direito do mouse em **modelos de certificado** e clique em **gerenciar**.
 3. O console modelos de certificado é aberto. Todos os modelos de certificado são exibidos no painel de detalhes.
 4. No painel de detalhes, clique no modelo que você deseja duplicar.
 5.  Clique no menu **ação** e, em seguida, clique em **duplicar modelo**. A caixa de diálogo **Propriedades** do modelo é aberta.
 6.  Na caixa de diálogo **Propriedades** do modelo, na guia **nome da entidade** , clique em **fornecer na solicitação**. \(Essa configuração é necessária para certificados SSL do controlador de rede.\)
 7.  Na caixa de diálogo **Propriedades** do modelo, na guia **tratamento de solicitação** , certifique-se de que permitir que **a chave privada seja exportada** esteja selecionada. Verifique também se a **assinatura e** a finalidade da criptografia estão selecionadas.
-8.  Na caixa de diálogo **Propriedades** do modelo, na guia **extensões** , selecione **uso da chave**e clique em **Editar**.
+8.  Na caixa de diálogo **Propriedades** do modelo, na guia **extensões** , selecione **uso da chave** e clique em **Editar**.
 9.  Em **assinatura**, verifique se a **assinatura digital** está selecionada.
-10.  Na caixa de diálogo **Propriedades** do modelo, na guia **extensões** , selecione **políticas de aplicativo**e clique em **Editar**.
+10.  Na caixa de diálogo **Propriedades** do modelo, na guia **extensões** , selecione **políticas de aplicativo** e clique em **Editar**.
 11.  Em **políticas de aplicativo**, verifique se a **autenticação de cliente** e a **autenticação de servidor** estão listadas.
 12.  Salve a cópia do modelo de certificado com um nome exclusivo, como o **modelo de controlador de rede**.
 
@@ -135,7 +135,7 @@ Você pode usar o snap-in de certificados para solicitar certificados. Você pod
 
 1. Abra o snap-in de certificados para um computador.
 2. Na árvore de console, clique em **certificados \( computador \) local**. Selecione o repositório de certificados **pessoal** .
-3. No menu **ação** , aponte para * * todas as tarefas<strong>e, em seguida, clique em * * solicitar novo certificado</strong> para iniciar o assistente de registro de certificado. Clique em **Próximo**.
+3. No menu **ação** , aponte para * * todas as tarefas <strong>e, em seguida, clique em * * solicitar novo certificado</strong> para iniciar o assistente de registro de certificado. Clique em **Avançar**.
 4. Selecione o **configurado pela** política de registro de certificado de administrador e clique em **Avançar**.
 5. Selecione a **política de registro de Active Directory** \( com base no modelo de autoridade de certificação que você configurou na seção anterior \) .
 6. Expanda a seção **detalhes** e configure os itens a seguir.
@@ -155,7 +155,7 @@ Depois de criar um \- certificado autoassinado ou \- assinado por AC, você deve
 Em seguida, você deve copiar os dois arquivos exportados para as pastas **serverCertificate.CR** e **NCCertificate.CR** que você especificou no momento em que você importou o modelo de serviço NC.
 
 1. Abra o snap-in de certificados (certlm. msc) e localize o certificado no repositório de certificados pessoal do computador local.
-2. Clique com o botão direito \- do mouse no certificado, clique em **todas as tarefas**e clique em **Exportar**. O Assistente para Exportação de Certificados é aberto. Clique em **Próximo**.
+2. Clique com o botão direito \- do mouse no certificado, clique em **todas as tarefas** e clique em **Exportar**. O Assistente para Exportação de Certificados é aberto. Clique em **Avançar**.
 3. Selecione **Sim**, exportar a opção chave privada e clique em **Avançar**.
 4. Escolha **troca de informações pessoais-#12 PKCS (. PFX)** e aceite o padrão para **incluir todos os certificados no caminho de certificação** , se possível.
 5. Atribua os Usuários/Grupos e uma senha para o certificado que você está exportando, clique em **Avançar**.
@@ -174,7 +174,7 @@ A comunicação do controlador de rede com hosts e dispositivos SLB MUX usa cert
 
 Para a comunicação com os hosts Hyper-V em OVSDB, o controlador de rede precisa apresentar um certificado para os computadores host. Por padrão, o SCVMM escolhe o certificado SSL configurado no controlador de rede e o utiliza para comunicação Southbound com os hosts.
 
-Esse é o motivo pelo qual o certificado SSL deve ter a EKU de autenticação de cliente configurada. Esse certificado é configurado no recurso REST "servidores" (hosts Hyper-V são representados no controlador de rede como um recurso de servidor) e podem ser exibidos executando o comando **Get-NetworkControllerServer**do Windows PowerShell.
+Esse é o motivo pelo qual o certificado SSL deve ter a EKU de autenticação de cliente configurada. Esse certificado é configurado no recurso REST "servidores" (hosts Hyper-V são representados no controlador de rede como um recurso de servidor) e podem ser exibidos executando o comando **Get-NetworkControllerServer** do Windows PowerShell.
 
 Veja a seguir um exemplo parcial do recurso REST do servidor.
 
@@ -208,7 +208,7 @@ Se você estiver usando certificados baseados em AC para os hosts do Hyper-V, pr
 
 O software Load Balancer multiplexador \( MUX \) e o controlador de rede se comunicam pelo protocolo WCF, usando certificados para autenticação.
 
-Por padrão, o SCVMM escolhe o certificado SSL configurado no controlador de rede e o utiliza para a comunicação Southbound com os dispositivos Mux. Esse certificado é configurado no recurso REST "NetworkControllerLoadBalancerMux" e pode ser exibido executando o cmdlet **Get-NetworkControllerLoadBalancerMux**do PowerShell.
+Por padrão, o SCVMM escolhe o certificado SSL configurado no controlador de rede e o utiliza para a comunicação Southbound com os dispositivos Mux. Esse certificado é configurado no recurso REST "NetworkControllerLoadBalancerMux" e pode ser exibido executando o cmdlet **Get-NetworkControllerLoadBalancerMux** do PowerShell.
 
 Exemplo de recurso do MUX REST \( parcial \) :
 

@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 68127562525ead20726ee61322d077c1c9093d32
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f963e849f2ae23869431de30de983c02b87d4f9c
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994151"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865535"
 ---
 # <a name="network-policy-server-management-with-administration-tools"></a>Gerenciamento de Servidor de Políticas de Rede com Ferramentas de Administração
 
@@ -40,11 +40,11 @@ Para concluir este procedimento, é preciso ser um membro do grupo Administrador
 
 ### <a name="to-configure-the-local-nps-by-using-the-nps-console"></a>Para configurar o NPS local usando o console do NPS
 
-1. No Gerenciador do Servidor, clique em **Ferramentas**e, em seguida, clique em **Servidor de Políticas de Rede**. O console do NPS é aberto.
+1. No Gerenciador do Servidor, clique em **Ferramentas** e, em seguida, clique em **Servidor de Políticas de Rede**. O console do NPS é aberto.
 
-2. No console do NPS, clique em NPS \( local \) . No painel de detalhes, escolha **configuração padrão** ou **Configuração avançada**e siga um destes procedimentos com base na sua seleção:
+2. No console do NPS, clique em NPS \( local \) . No painel de detalhes, escolha **configuração padrão** ou **Configuração avançada** e siga um destes procedimentos com base na sua seleção:
     - Se você escolher **configuração padrão**, selecione um cenário na lista e siga as instruções para iniciar um assistente de configuração.
-    - Se você escolher **Configuração avançada**, clique na seta para expandir **as opções de configuração avançadas**e, em seguida, examine e configure as opções disponíveis com base na funcionalidade do NPS que você deseja-servidor RADIUS, proxy RADIUS ou ambos.
+    - Se você escolher **Configuração avançada**, clique na seta para expandir **as opções de configuração avançadas** e, em seguida, examine e configure as opções disponíveis com base na funcionalidade do NPS que você deseja-servidor RADIUS, proxy RADIUS ou ambos.
 
 ## <a name="manage-multiple-npss-by-using-the-nps-mmc-snap-in"></a>Gerenciar vários NPSs usando o snap-in do MMC do NPS \-
 
@@ -60,14 +60,14 @@ Para concluir este procedimento, é preciso ser um membro do grupo Administrador
 
 ### <a name="to-manage-multiple-npss-by-using-the-nps-snap-in"></a>Para gerenciar vários NPSs usando o snap-in do NPS \-
 
-1. Para abrir o MMC, execute o Windows PowerShell como administrador. No Windows PowerShell, digite **MMC**e pressione Enter. O Console de Gerenciamento Microsoft será aberto.
+1. Para abrir o MMC, execute o Windows PowerShell como administrador. No Windows PowerShell, digite **MMC** e pressione Enter. O Console de Gerenciamento Microsoft será aberto.
 2. No MMC, no menu **arquivo** , clique em **Adicionar/remover snap- \- in**. A caixa de diálogo **Adicionar ou remover snap \- ins** é aberta.
-3. Em **Adicionar ou remover snap- \- ins**, em **snap \- ins disponíveis**, role para baixo na lista, clique em **servidor de políticas de rede**e clique em **Adicionar**. A caixa de diálogo **Selecionar Computador** será aberta.
+3. Em **Adicionar ou remover snap- \- ins**, em **snap \- ins disponíveis**, role para baixo na lista, clique em **servidor de políticas de rede** e clique em **Adicionar**. A caixa de diálogo **Selecionar Computador** será aberta.
 4. Em **Selecionar computador**, verifique se **computador local \( o computador no qual esse console está sendo \) executado** está selecionado e clique em **OK**. O snap- \- in para o NPS local é adicionado à lista nos **snap- \- ins selecionados**.
 5. Em **Adicionar ou remover snap- \- ins**, em **snap \- ins disponíveis**, verifique se o **servidor de políticas de rede** ainda está selecionado e clique em **Adicionar**. A caixa de diálogo **Selecionar computador** é aberta novamente.
-6. Em **Selecionar computador**, clique em **outro computador**e digite o endereço IP ou o FQDN do nome de domínio totalmente qualificado \( \) do NPS remoto que você deseja gerenciar usando o snap-in do NPS \- . Opcionalmente, você pode clicar em **procurar** para examinar o diretório do computador que deseja adicionar. Clique em **OK**.
+6. Em **Selecionar computador**, clique em **outro computador** e digite o endereço IP ou o FQDN do nome de domínio totalmente qualificado \( \) do NPS remoto que você deseja gerenciar usando o snap-in do NPS \- . Opcionalmente, você pode clicar em **procurar** para examinar o diretório do computador que deseja adicionar. Clique em **OK**.
 7. Repita as etapas 5 e 6 para adicionar mais NPSs ao snap- \- in do NPS. Depois de adicionar todos os NPSs que você deseja gerenciar, clique em **OK**.
-8. Para salvar o snap-in do NPS para uso posterior, clique em **arquivo**e em **salvar**. Na caixa de diálogo **salvar como** , navegue até o local do disco rígido onde você deseja salvar o arquivo, digite um nome para o arquivo. msc do console de gerenciamento Microsoft \( \) e clique em **salvar**.
+8. Para salvar o snap-in do NPS para uso posterior, clique em **arquivo** e em **salvar**. Na caixa de diálogo **salvar como** , navegue até o local do disco rígido onde você deseja salvar o arquivo, digite um nome para o arquivo. msc do console de gerenciamento Microsoft \( \) e clique em **salvar**.
 
 ## <a name="manage-an-nps-by-using-remote-desktop-connection"></a>Gerenciar um NPS usando Conexão de Área de Trabalho Remota
 
@@ -90,15 +90,15 @@ Para concluir este procedimento, você deve ser um membro do grupo Administrador
     1. Se o valor da configuração **área de trabalho remota** estiver **habilitado**, você não precisará executar algumas das etapas neste procedimento. Pule para a etapa 4 para iniciar a configuração de Área de Trabalho Remota permissões de usuário.
     2. Se a configuração de **área de trabalho remota** estiver **desabilitada**, clique na palavra **desabilitada**. A caixa de diálogo **Propriedades do sistema** é aberta na guia **remoto** .
 2. Em **área de trabalho remota**, clique em **permitir conexões remotas com este computador**. A caixa de diálogo **conexão de área de trabalho remota** é aberta. Execute uma delas.
-    1. Para personalizar as conexões de rede que são permitidas, clique em **Firewall do Windows com segurança avançada**e defina as configurações que você deseja permitir.
+    1. Para personalizar as conexões de rede que são permitidas, clique em **Firewall do Windows com segurança avançada** e defina as configurações que você deseja permitir.
     2. Para habilitar Conexão de Área de Trabalho Remota para todas as conexões de rede no computador, clique em **OK**.
-3. Em **Propriedades do sistema**, em **área de trabalho remota**, decida se deseja habilitar **permitir conexões somente de computadores que executam o área de trabalho remota com autenticação no nível da rede**e faça sua seleção.
+3. Em **Propriedades do sistema**, em **área de trabalho remota**, decida se deseja habilitar **permitir conexões somente de computadores que executam o área de trabalho remota com autenticação no nível da rede** e faça sua seleção.
 4. Clique em **Selecionar Usuários**. A caixa de diálogo **área de trabalho remota usuários** é aberta.
-5. Em **área de trabalho remota usuários**, para conceder permissão a um usuário para se conectar remotamente ao NPS, clique em **Adicionar**e digite o nome de usuário da conta do usuário. Clique em **OK**.
+5. Em **área de trabalho remota usuários**, para conceder permissão a um usuário para se conectar remotamente ao NPS, clique em **Adicionar** e digite o nome de usuário da conta do usuário. Clique em **OK**.
 6. Repita a etapa 5 para cada usuário para quem você deseja conceder permissão de acesso remoto ao NPS. Quando você terminar de adicionar usuários, clique em **OK** para fechar a caixa de diálogo **área de trabalho remota usuários** e **OK** novamente para fechar a caixa de diálogo **Propriedades do sistema** .
-7. Para se conectar a um NPS remoto que você configurou usando as etapas anteriores, clique em **Iniciar**, role para baixo na lista alfabética e clique em **acessórios do Windows**e clique em **conexão de área de trabalho remota**. A caixa de diálogo **conexão de área de trabalho remota** é aberta.
+7. Para se conectar a um NPS remoto que você configurou usando as etapas anteriores, clique em **Iniciar**, role para baixo na lista alfabética e clique em **acessórios do Windows** e clique em **conexão de área de trabalho remota**. A caixa de diálogo **conexão de área de trabalho remota** é aberta.
 8. Na caixa de diálogo **conexão de área de trabalho remota** , em **computador**, digite o nome do NPS ou o endereço IP. Se preferir, clique em **Opções**, configure opções de conexão adicionais e, em seguida, clique em **salvar** para salvar a conexão para uso repetido.
-9. Clique em **conectar**e, quando solicitado, forneça as credenciais de conta de usuário para uma conta que tenha permissões para fazer logon no e configurar o NPS.
+9. Clique em **conectar** e, quando solicitado, forneça as credenciais de conta de usuário para uma conta que tenha permissões para fazer logon no e configurar o NPS.
 
 ## <a name="use-netsh-nps-commands-to-manage-an-nps"></a>Usar comandos netsh NPS para gerenciar um NPS
 
@@ -117,8 +117,8 @@ Para executar esse procedimento, você deve ser membro do grupo Administradores 
 ### <a name="to-enter-the-netsh-nps-context-on-an-nps"></a>Para inserir o contexto netsh NPS em um NPS
 
 1. Abra o prompt de comando ou o Windows PowerShell.
-2. Digite **netsh**e pressione Enter.
-3. Digite **NPS**e pressione Enter.
+2. Digite **netsh** e pressione Enter.
+3. Digite **NPS** e pressione Enter.
 4. Para exibir uma lista de comandos disponíveis, digite um ponto de interrogação \( ? \) e pressione Enter.
 
 
@@ -128,7 +128,7 @@ Para obter mais informações sobre comandos netsh NPS, consulte [comandos netsh
 
 Você pode usar comandos do Windows PowerShell para gerenciar o NPSs. Para obter mais informações, consulte os seguintes tópicos de referência de comando do Windows PowerShell.
 
-- [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/?view=win10-ps&viewFallbackFrom=winserverr2-ps). Você pode usar esses comandos netsh no Windows Server 2012 R2 ou em sistemas operacionais posteriores.
-- [Módulo do NPS](/powershell/module/nps/?view=win10-ps). Você pode usar esses comandos netsh no Windows Server 2016.
+- [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/). Você pode usar esses comandos netsh no Windows Server 2012 R2 ou em sistemas operacionais posteriores.
+- [Módulo do NPS](/powershell/module/nps/). Você pode usar esses comandos netsh no Windows Server 2016.
 
 Para obter mais informações sobre a administração do NPS, consulte [gerenciar o servidor de políticas de rede (NPS)](nps-manage-top.md).

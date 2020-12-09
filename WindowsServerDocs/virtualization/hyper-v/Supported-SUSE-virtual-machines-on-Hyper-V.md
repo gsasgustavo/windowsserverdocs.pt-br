@@ -6,12 +6,12 @@ ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: 92dd65669a537d619d9104378adae26c91878dca
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: cae0a1218badc9d3110a14c81f95ffa2a944702b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746731"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866382"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>Máquinas virtuais SUSE com suporte no Hyper-V
 
@@ -53,7 +53,7 @@ SLES12 + é de apenas 64 bits.
 |**[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||||||
 |Suporte ao kernel de PAE|2019, 2016, 2012 R2|N/D|N/D|N/D|N/D|N/D|&#10004;|&#10004;|
 |Configuração da lacuna de MMIO|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Memória Dinâmica-adição a quente|2019, 2016, 2012 R2|&#10004; observação 6|&#10004;observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; Observação 4, 5, 6|&#10004; Observação 4, 5, 6|
+|Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2|&#10004; observação 6|&#10004;observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; Observação 4, 5, 6|&#10004; Observação 4, 5, 6|
 |Memória Dinâmica-balões|2019, 2016, 2012 R2|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; Observação 4, 5, 6|&#10004; Observação 4, 5, 6|
 |Redimensionamento de memória de Runtime|2019, 2016|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6||||
 |**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
@@ -85,7 +85,7 @@ SLES12 + é de apenas 64 bits.
 
 5. O suporte à memória dinâmica só está disponível em máquinas virtuais de 64 bits.
 
-6. Se você estiver usando Memória Dinâmica nos sistemas operacionais Windows Server 2016 ou Windows Server 2012, especifique a **memória de inicialização**, a **memória mínima**e os parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). Não fazer isso pode levar a falhas de adição automática e talvez você não veja nenhum aumento de memória em um sistema operacional convidado.
+6. Se você estiver usando Memória Dinâmica nos sistemas operacionais Windows Server 2016 ou Windows Server 2012, especifique a **memória de inicialização**, a **memória mínima** e os parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). Não fazer isso pode levar a Hot-Add falhas e você pode não ver nenhum aumento de memória em um sistema operacional convidado.
 
 7. No Windows Server 2016 ou no Windows Server 2012 R2, a infraestrutura de par chave/valor pode não funcionar corretamente sem uma atualização de software do Linux. Entre em contato com seu fornecedor de distribuição para obter a atualização de software caso você veja problemas com esse recurso.
 
@@ -100,7 +100,7 @@ SLES12 + é de apenas 64 bits.
 
 ## <a name="see-also"></a>Consulte Também
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Máquinas virtuais CentOS e Red Hat Enterprise Linux com suporte no Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

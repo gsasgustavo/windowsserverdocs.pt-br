@@ -6,12 +6,12 @@ ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
 ms.author: vichen
 ms.date: 04/06/2020
-ms.openlocfilehash: 46372029bb31a8b76f564dca9851a8ce473240ea
-ms.sourcegitcommit: 82fe3e79ea14c51ae3c445d8fa3ed43843597314
+ms.openlocfilehash: 654af785cfdd9c3a5bd054c75d6712d547ada991
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098495"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866425"
 ---
 <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais CentOS e Red Hat Enterprise Linux com suporte no Hyper-V
 =========================================================================
@@ -140,7 +140,7 @@ Esta série tem apenas kernels de 64 bits.
 
 O kernel de 32 bits para esta série é habilitado para PAE. Não há suporte interno de LIS para RHEL/CentOS 6.0-6.3.
 
-| **Recurso**                                                                                                                              | **Versão do Windows Server** | **6.7-6.10**                                                        | **6.4-6.6**                                                         | **6.0-6.3**                                                         | **6,10, 6,9, 6,8** | **6,6, 6,7**       | **6.5**            | **6.4**             |
+| **Recurso**                                                                                                                              | **Versão do Windows Server** | **6.7-6.10**                                                        | **6.4-6.6**                                                         | **6.0-6.3**                                                         | **6,10, 6,9, 6,8** | **6,6, 6,7**       | **6,5**            | **6.4**             |
 |------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|--------------------|--------------------|--------------------|---------------------|
 | **Disponibilidade**                                                                                                                         |                            | [LIS 4,3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4,3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4,3](https://www.microsoft.com/download/details.aspx?id=55106) | Interno           | Interno           | Interno           | Interno            |
 | [Básico](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
@@ -258,7 +258,7 @@ Enquanto o download do Integration Services do Linux cria essa regra na instala�
 
 -   Os aplicativos que tendem a consumir toda a memória disponível em um sistema estão limitados a consumir até 80% da RAM disponível.
 
-1.  Se você estiver usando Memória Dinâmica em um sistema operacional Windows Server 2016 ou Windows Server 2012 R2, especifique a **memória de inicialização**, **memória mínima**e parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB).
+1.  Se você estiver usando Memória Dinâmica em um sistema operacional Windows Server 2016 ou Windows Server 2012 R2, especifique a **memória de inicialização**, **memória mínima** e parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB).
     Não fazer isso pode levar a falhas de adição automática e talvez você não veja nenhum aumento de memória em um sistema operacional convidado.
 
 2.  Determinadas distribuições, incluindo as que usam LIS 4,0 e 4,1, fornecem apenas suporte a balões e não oferecem suporte Hot-Add. Nesse cenário, o recurso de memória dinâmica pode ser usado definindo o parâmetro de memória de inicialização para um valor que é igual ao parâmetro de memória máxima. Isso resulta na Hot-Added da memória necessária para a máquina virtual no momento da inicialização e, depois, dependendo dos requisitos de memória do host, o Hyper-V pode alocar ou desalocar livremente a memória do convidado usando o balão. Configure a **memória de inicialização** e a **memória mínima** no ou acima do valor recomendado para a distribuição.
@@ -277,7 +277,7 @@ Enquanto o download do Integration Services do Linux cria essa regra na instala�
 
 Consulte Também
 
--   [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+-   [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 -   [Máquinas virtuais do Debian com suporte no Hyper-V](Supported-Debian-virtual-machines-on-Hyper-V.md)
 

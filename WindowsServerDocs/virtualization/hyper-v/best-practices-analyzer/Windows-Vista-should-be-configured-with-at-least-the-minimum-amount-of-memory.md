@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
 ms.date: 8/16/2016
-ms.openlocfilehash: d0ba0edaf57becfda16c5a55aab6e3f4c10febf9
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: dc69592d8b71c761c710fc55f7d3117164cb430f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90744072"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865805"
 ---
 # <a name="windows-vista-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>O Windows Vista deve ser configurado com pelo menos a quantidade mínima de memória
 
@@ -67,4 +67,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)

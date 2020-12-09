@@ -6,12 +6,12 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: a0c89dc706e0403816317d7664325bf82f261705
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 1bb5c6492896cfdaaf9446502e0eee36ef7dd46a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746031"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866135"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Criar uma opção virtual para máquinas virtuais Hyper-V
 
@@ -35,7 +35,7 @@ A rede de máquinas virtuais pode ser um assunto complexo. E há vários novos r
     |-------------------|---------------|
     |Externo|Dá acesso às máquinas virtuais a uma rede física para se comunicar com servidores e clientes em uma rede externa. Permite que as máquinas virtuais no mesmo servidor Hyper-V se comuniquem entre si.|
     |Interna|Permite a comunicação entre máquinas virtuais no mesmo servidor Hyper-V e entre as máquinas virtuais e o sistema operacional do host de gerenciamento.|
-    |Particular|Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado.|
+    |Privados|Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado.|
 
 4.  Selecione **criar comutador virtual**.
 
@@ -72,7 +72,7 @@ A rede de máquinas virtuais pode ser um assunto complexo. E há vários novos r
     Get-NetAdapter
     ```
 
-4.  Crie um comutador virtual usando o cmdlet [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch?view=win10-ps) . Por exemplo, para criar um comutador virtual externo chamado ExternalSwitch, usando o adaptador de rede Ethernet e com **permitir que o sistema operacional de gerenciamento compartilhe esse adaptador de rede** ativado, execute o comando a seguir.
+4.  Crie um comutador virtual usando o cmdlet [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch) . Por exemplo, para criar um comutador virtual externo chamado ExternalSwitch, usando o adaptador de rede Ethernet e com **permitir que o sistema operacional de gerenciamento compartilhe esse adaptador de rede** ativado, execute o comando a seguir.
 
     ```
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true

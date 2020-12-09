@@ -6,12 +6,12 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 01/17/2017
-ms.openlocfilehash: b02c30a612ef6aa1ed56e1c26e86c21a48b5b138
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: f006b20c023f009bc366da97b3f7982b985aa2c4
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746631"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865755"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>Usar a migração ao vivo sem clustering de failover para mover uma máquina virtual
 
@@ -56,7 +56,7 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
 Se você ainda não configurou a delegação restrita, deverá entrar no servidor de origem antes de poder mover uma máquina virtual. Se você não fizer isso, a tentativa de autenticação falhará, ocorrerá um erro e essa mensagem será exibida:
 
 "Falha na operação de migração da máquina virtual na origem da migração.
-Falha ao estabelecer uma conexão com o *nome do computador*host: nenhuma credencial está disponível no pacote de segurança 0x8009030E. "
+Falha ao estabelecer uma conexão com o *nome do computador* host: nenhuma credencial está disponível no pacote de segurança 0x8009030E. "
 
  Para corrigir esse problema, entre no servidor de origem e tente mover novamente. Para evitar ter que entrar em um servidor de origem antes de fazer uma migração ao vivo, configure a delegação restrita. Você precisará de credenciais de administrador de domínio para configurar a delegação restrita. Para obter instruções, consulte [Configurar hosts para migração dinâmica](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md).
 
@@ -73,7 +73,7 @@ Falha ao estabelecer uma conexão com o *nome do computador*host: nenhuma creden
 3. Verifique **migrar para um computador com uma versão de processador diferente**.
 4. Clique em **OK**.
 
-   Para usar o Windows PowerShell, use o cmdlet [set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor?view=win10-ps) :
+   Para usar o Windows PowerShell, use o cmdlet [set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) :
 
    ```
    PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true

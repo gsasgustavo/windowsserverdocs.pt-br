@@ -7,12 +7,12 @@ ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: 4e3ebcae7696d1b16930e50aacff4f0edc198ce7
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: 244f18baefa0be9b9b392682e48931e7d4e195b8
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330388"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865615"
 ---
 # <a name="deploy-a-software-defined-network-infrastructure-using-scripts"></a>Implantar uma infraestrutura de rede definida pelo software usando scripts
 
@@ -22,7 +22,7 @@ Neste tópico, você implanta uma infraestrutura de SDN (rede definida pelo soft
 
 Se você quiser que suas cargas de trabalho de locatário se comuniquem fora de suas redes virtuais, você pode configurar regras de NAT de SLB, túneis de gateway de site a site ou encaminhamento de camada 3 para rotear entre cargas de trabalho físicas e virtuais.
 
-Você também pode implantar uma infraestrutura SDN usando o Virtual Machine Manager (VMM). Para obter mais informações, consulte [Configurar uma infraestrutura de Sdn (rede definida pelo software) na malha do VMM](/system-center/vmm/deploy-sdn?view=sc-vmm-2019).
+Você também pode implantar uma infraestrutura SDN usando o Virtual Machine Manager (VMM). Para obter mais informações, consulte [Configurar uma infraestrutura de Sdn (rede definida pelo software) na malha do VMM](/system-center/vmm/deploy-sdn).
 
 ## <a name="pre-deployment"></a>Pré-implantação
 

@@ -6,17 +6,17 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.openlocfilehash: afe68493303ace2a9dd415964c41f8a635e3618b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cf293b6732a29a173050bcf90ed8cbec4e1d9ea4
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949990"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865775"
 ---
 # <a name="scenario-native-app-calling-web-api"></a>Cenário: API Web de chamada de aplicativo nativo
 >Aplica-se a: AD FS 2019 e posterior
 
-Saiba como criar um aplicativo nativo autenticando usuários com autenticação AD FS 2019 e adquirindo tokens usando a [biblioteca MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) para chamar APIs da Web.
+Saiba como criar um aplicativo nativo autenticando usuários com autenticação AD FS 2019 e adquirindo tokens usando a [biblioteca MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)  para chamar APIs da Web.
 
 Antes de ler este artigo, você deve estar familiarizado com os [conceitos de AD FS](../ad-fs-openid-connect-oauth-concepts.md) e o fluxo de concessão de código de [autorização](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md#authorization-code-grant-flow)
 
@@ -24,7 +24,7 @@ Antes de ler este artigo, você deve estar familiarizado com os [conceitos de AD
 
  ![Visão geral](media/adfs-msal-native-app-web-api/native1.png)
 
-Nesse fluxo, você adiciona autenticação ao seu aplicativo nativo (cliente público), que, portanto, pode conectar usuários e chamar uma API da Web. Para chamar uma API Web de um aplicativo nativo que assina usuários, você pode usar o método de aquisição de token [AcquireTokenInteractive](/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive?view=azure-dotnet#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) do MSAL. Para permitir essa interação, a MSAL aproveita um navegador da Web.
+Nesse fluxo, você adiciona autenticação ao seu aplicativo nativo (cliente público), que, portanto, pode conectar usuários e chamar uma API da Web. Para chamar uma API Web de um aplicativo nativo que assina usuários, você pode usar o método de aquisição de token [AcquireTokenInteractive](/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) do MSAL. Para permitir essa interação, a MSAL aproveita um navegador da Web.
 
 Para entender melhor como configurar um aplicativo nativo no ADFS para adquirir o token de acesso interativamente, vamos usar um exemplo disponível [aqui](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) e explicando as etapas de configuração de código e de registro do aplicativo.
 
@@ -40,15 +40,15 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
   1. Em **Gerenciamento de AD FS**, clique com o botão direito do mouse em **grupos de aplicativos** e selecione **Adicionar grupo de aplicativos**.
 
-  2. No assistente de grupo de aplicativos, para o **nome** , insira **NativeAppToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo nativo acessando um modelo de API Web** . Clique em **Próximo**.
+  2. No assistente de grupo de aplicativos, para o **nome** , insira **NativeAppToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo nativo acessando um modelo de API Web** . Clique em **Avançar**.
 
       ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native2.png)
 
-  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ClientID** no arquivo de **App.config** do aplicativo. Insira o seguinte para o **URI de redirecionamento:** https://ToDoListClient . Clique em **Adicionar**. Clique em **Próximo**.
+  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ClientID** no arquivo de **App.config** do aplicativo. Insira o seguinte para o **URI de redirecionamento:** https://ToDoListClient . Clique em **Adicionar**. Clique em **Avançar**.
 
      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native3.png)
 
-  4. Na tela configurar API da Web, insira o **identificador:** https://localhost:44321/ . Clique em **Adicionar**. Clique em **Próximo**. Esse valor será usado posteriormente nos arquivos de **App.config** e **Web.config** do aplicativo.
+  4. Na tela configurar API da Web, insira o **identificador:** https://localhost:44321/ . Clique em **Adicionar**. Clique em **Avançar**. Esse valor será usado posteriormente nos arquivos de **App.config** e **Web.config** do aplicativo.
 
      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native4.png)
 
@@ -64,7 +64,7 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
   8. Na tela concluir, clique em **fechar**.
 
-  9. Em gerenciamento de AD FS, clique em **grupos de aplicativos** e selecione grupo de aplicativos **NativeAppToWebApi** . Clique com o botão direito do mouse e selecione **Propriedades**.
+  9. Em gerenciamento de AD FS, clique em **grupos de aplicativos** e selecione grupo de aplicativos **NativeAppToWebApi**         . Clique com o botão direito do mouse e selecione **Propriedades**.
 
       ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native7.png)
 
@@ -104,7 +104,7 @@ Esta seção mostra como configurar um aplicativo nativo para o usuário de entr
 
  4. Abra o arquivo Web.config. Modifique o seguinte:
     - Ida: Audience-Insira o valor do **identificador** de #4 no registro do aplicativo na seção AD FS acima
-    - Ida: AdfsMetadataEndpoint-Enter`https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml`
+    - Ida: AdfsMetadataEndpoint-Enter `https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml`
 
       ![configuração de código](media/adfs-msal-native-app-web-api/native13.png)
 

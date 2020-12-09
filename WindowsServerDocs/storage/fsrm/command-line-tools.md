@@ -6,18 +6,18 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 0300e8fa6845c58e61b695546daf4116286d975f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 937045a4ed0803fd160d9f01d06ade6e73df2d97
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957513"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865965"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>Ferramentas de linha de comando do Gerenciador de Recursos de Servidor de Arquivos
 
 > Aplicável a: Windows Server (canal semestral), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-Gerenciador de recursos do servidor de arquivos instala o cmdlets do PowerShell [FileServerResourceManager](/powershell/module/fileserverresourcemanager/?view=win10-ps), bem como as ferramentas de linha de comando a seguir:
+Gerenciador de recursos do servidor de arquivos instala o cmdlets do PowerShell [FileServerResourceManager](/powershell/module/fileserverresourcemanager/), bem como as ferramentas de linha de comando a seguir:
 
 -   **Dirquota.exe**. Use para criar e gerenciar cotas, cotas de aplicação automática e modelos de cotas.
 -   **Filescrn.exe**. Use para criar e gerenciar triagens, modelos de triagem de arquivo, exceções de triagem de arquivo e grupos de arquivos.
@@ -25,9 +25,9 @@ Gerenciador de recursos do servidor de arquivos instala o cmdlets do PowerShell 
 
 Você pode usar essas ferramentas para gerenciar recursos de armazenamento em um computador local ou em um computador remoto. Para obter mais informações sobre essas ferramentas de linha de comando, consulte as referências a seguir:
 
--   **Dirquota**:<https://go.microsoft.com/fwlink/?LinkId=92741>
--   **Filescrn**:<https://go.microsoft.com/fwlink/?LinkId=92742>
--   **Storrept**:<https://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Dirquota**: <https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Filescrn**: <https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Storrept**: <https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]

@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6db855343ef037fb1e55925620f1842c7fdff98a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f746422ee05afc4f000693138c1f2efb3b7f70a9
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997133"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866115"
 ---
 # <a name="core-network-components"></a>Principais componentes de rede
 
@@ -133,7 +133,7 @@ O TCP/IP oferece utilitários TCP/IP básicos que permitem que computadores base
 
 -  Windows 7
 
--  Windows Server 2008
+-  Windows Server 2008
 
 - Windows Vista
 
@@ -222,7 +222,7 @@ Para obter mais informações, consulte [Planejando a implantação do DHCP1](#b
 Para cada servidor da rede principal, renomeie o computador e atribua e configure um endereço IPv4 estático e outras propriedades de TCP/IP para o computador.
 
 #### <a name="planning-naming-conventions-for-computers-and-devices"></a>Planejando convenções de nomenclatura para computadores e dispositivos
-Para manter a consistência em toda a rede, é uma boa ideia usar nomes consistentes para servidores, impressoras e outros dispositivos. Os nomes de computador podem ser usados para ajudar os usuários e administradores a identificar facilmente a finalidade e a localização do servidor, impressora ou outro dispositivo. Por exemplo, se você tiver três servidores DNS, um em São Francisco, um em Los Angeles e outro em Chicago, você poderá usar o número de local da *função de servidor*Convenção de nomenclatura - *location* - *number*:
+Para manter a consistência em toda a rede, é uma boa ideia usar nomes consistentes para servidores, impressoras e outros dispositivos. Os nomes de computador podem ser usados para ajudar os usuários e administradores a identificar facilmente a finalidade e a localização do servidor, impressora ou outro dispositivo. Por exemplo, se você tiver três servidores DNS, um em São Francisco, um em Los Angeles e outro em Chicago, você poderá usar o número de local da *função de servidor* Convenção de nomenclatura - *location* - *number*:
 
 - DNS-DEN-01. Este nome representa o servidor DNS em Denver, Colorado. Se os servidores DNS adicionais forem adicionados em Denver, o valor numérico no nome poderá ser incrementado, como no DNS-DEN-02 e no DNS-DEN-03.
 
@@ -282,7 +282,7 @@ Os itens de configuração de exemplo para o AD DS são fornecidos na tabela a s
 |Itens de configuração:|Valores de exemplo:|
 |------------------------|-------------------|
 |Nome DNS completo|Exemplos:<p>-corp.contoso.com<br />-example.com|
-|Nível funcional de floresta|-Windows Server 2008 <br />-Windows Server 2008 R2 <br />-Windows Server 2012 <br />-Windows Server 2012 R2 <br />-Windows Server 2016|
+|Nível funcional da floresta|-Windows Server 2008 <br />-Windows Server 2008 R2 <br />-Windows Server 2012 <br />-Windows Server 2012 R2 <br />-Windows Server 2016|
 |Local da pasta do Banco de Dados dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.|
 |Local da pasta dos arquivos de Log dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.|
 |Local da pasta do SYSVOL dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.|
@@ -480,7 +480,7 @@ Você pode usar os procedimentos neste tópico para configurar as propriedades d
 
 1.  Na barra de tarefas, clique com o botão direito do mouse no ícone Rede e clique em **Abrir a Central de Rede e Compartilhamento**.
 
-2.  Em **central de rede e compartilhamento**, clique em **alterar configurações do adaptador**. A pasta **Conexões de Rede** é aberta e exibe as conexões de rede disponíveis.
+2.  Em  **central de rede e compartilhamento**, clique em **alterar configurações do adaptador**. A pasta **Conexões de Rede** é aberta e exibe as conexões de rede disponíveis.
 
 3.  Em **Conexões de Rede**, clique com o botão direito do mouse na conexão que deseja configurar e clique em **Propriedades**. A caixa de diálogo **Propriedades** da conexão de rede é aberta.
 
@@ -499,7 +499,7 @@ Você pode usar os procedimentos neste tópico para configurar as propriedades d
 
 9. Em **Servidor DNS alternativo**, digite o endereço IP do seu servidor DNS alternativo, se houver. Se você planeja usar o computador local como um servidor DNS alternativo, digite o endereço IP do computador local.
 
-10. Clique em **OK**e então clique em **Fechar**.
+10. Clique em **OK** e então clique em **Fechar**.
 
 > [!NOTE]
 > Para obter informações sobre como configurar um endereço IP estático em computadores que executam outros sistemas operacionais da Microsoft, consulte o [Apêndice B-Configurando endereços IP estáticos](#BKMK_B).
@@ -548,8 +548,8 @@ Você pode usar os comandos a seguir para instalar e configurar o AD DS e o DNS.
 
 >[!NOTE]
 >Para obter mais informações sobre esses comandos do Windows PowerShell, consulte os tópicos de referência a seguir.
->- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
+>- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest)
 
 O mínimo necessário para executar este procedimento é ser membro do grupo **Administradores**.
 
@@ -561,9 +561,9 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
 
 Quando a instalação for concluída com êxito, a seguinte mensagem será exibida no Windows PowerShell.
 
-| Sucesso | Reinicialização necessária | Código de Saída |  Resultado do recurso |
+| Êxito | Reinicialização necessária | Código de Saída |  Resultado do recurso |
 |--|--|--|--|
-| verdadeiro | Não | Sucesso | {Active Directory Domain Services, grupo P... |
+| True | Não | Êxito | {Active Directory Domain Services, grupo P... |
 
 - No Windows PowerShell, digite o comando a seguir, substituindo o texto **Corp.contoso.com** pelo seu nome de domínio e, em seguida, pressione ENTER:
 
@@ -597,7 +597,7 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 Get-WindowsFeature
 ````
 
-Os resultados desse comando são exibidos no Windows PowerShell e devem ser semelhantes aos resultados na imagem abaixo. Para tecnologias instaladas, os colchetes à esquerda do nome da tecnologia contêm o caractere **X**e o valor do **estado de instalação** é **instalado**.
+Os resultados desse comando são exibidos no Windows PowerShell e devem ser semelhantes aos resultados na imagem abaixo. Para tecnologias instaladas, os colchetes à esquerda do nome da tecnologia contêm o caractere **X** e o valor do **estado de instalação** é **instalado**.
 
 ![Resultados do comando Get-WindowsFeature](../media/Core-Network-Guide/server-roles-installed.jpg)
 
@@ -612,21 +612,21 @@ Os resultados desse comando são exibidos no Windows PowerShell e devem ser seme
 
 3.  Em **Selecionar Tipo de Instalação**, verifique se **Instalação baseada em função ou recurso** está marcada e clique em **Avançar**.
 
-4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Próximo**.
+4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Avançar**.
 
-5.  Em **Selecionar funções de servidor**, em **Funções**, clique em **Serviços de Domínio Active Directory**. Em **Adicionar recursos que são necessários para Serviços de Domínio Active Directory**, clique em **Adicionar Recursos**. Clique em **Próximo**.
+5.  Em **Selecionar funções de servidor**, em **Funções**, clique em **Serviços de Domínio Active Directory**. Em **Adicionar recursos que são necessários para Serviços de Domínio Active Directory**, clique em **Adicionar Recursos**. Clique em **Avançar**.
 
 6.  Em **Selecionar recursos**, clique em **Avançar** e, em **Serviços de Domínio Active Directory**, analise as informações fornecidas e clique em **Avançar**.
 
 7.  Em **Confirmar seleções de instalação**, clique em **Instalar**. A página Progresso da instalação exibe o status durante o processo de instalação. Quando o processo é concluído, nos detalhes da mensagem, clique em **Promover este servidor a um controlador de domínio**. O Assistente de Configuração dos Serviços de Domínio Active Directory é aberto.
 
-8.  Em **Configuração de Implantação**, selecione **Adicionar uma nova floresta**. Em **Nome do domínio raiz**, digite o FQDN (nome de domínio totalmente qualificado do seu domínio. Por exemplo, se o FQDN for corp.contoso.com, digite **corp.contoso.com**. Clique em **Próximo**.
+8.  Em **Configuração de Implantação**, selecione **Adicionar uma nova floresta**. Em **Nome do domínio raiz**, digite o FQDN (nome de domínio totalmente qualificado do seu domínio. Por exemplo, se o FQDN for corp.contoso.com, digite **corp.contoso.com**. Clique em **Avançar**.
 
-9. Em **Opções do Controlador de Domínio**, em **Selecionar nível funcional da nova floresta e do domínio raiz**, selecione o nível funcional da floresta e o nível funcional do domínio que você deseja usar. Em **Especificar recursos do controlador de domínio**, verifique se as opções **Servidor do Sistema de Nomes de Domínio (DNS)** e **Catálogo Global (GC)** estão marcadas. Em **Senha** e **Confirmar senha**, digite a senha do DSRM (Modo de Restauração de Serviços de Diretório) que você deseja usar. Clique em **Próximo**.
+9. Em **Opções do Controlador de Domínio**, em **Selecionar nível funcional da nova floresta e do domínio raiz**, selecione o nível funcional da floresta e o nível funcional do domínio que você deseja usar. Em **Especificar recursos do controlador de domínio**, verifique se as opções **Servidor do Sistema de Nomes de Domínio (DNS)** e **Catálogo Global (GC)** estão marcadas. Em **Senha** e **Confirmar senha**, digite a senha do DSRM (Modo de Restauração de Serviços de Diretório) que você deseja usar. Clique em **Avançar**.
 
 10. Em **Opções do DNS**, clique em **Avançar**.
 
-11. Em **Opções Adicionais**, verifique o nome NetBIOS atribuído ao domínio e o altere quando necessário. Clique em **Próximo**.
+11. Em **Opções Adicionais**, verifique o nome NetBIOS atribuído ao domínio e o altere quando necessário. Clique em **Avançar**.
 
 12. Em **Caminhos**, em **Especificar o local do banco de dados do AD DS, arquivos de log e SYSVOL**, execute um destes procedimentos:
 
@@ -634,11 +634,11 @@ Os resultados desse comando são exibidos no Windows PowerShell e devem ser seme
 
     - Digite os locais de pasta que deseja usar para a **Pasta do banco de dados**, **Pasta dos arquivos de log** e **Pasta SYSVOL**.
 
-13. Clique em **Próximo**.
+13. Clique em **Avançar**.
 
 14. Em **Examinar Opções**, analise suas seleções.
 
-15. Se você deseja exportar as configurações para um script do Windows PowerShell, clique em **Exibir script**. O script é aberto no Bloco de Notas e você pode salvá-lo no local de pasta desejado. Clique em **Próximo**. Em **Verificação de Pré-Requisitos**, suas seleções são validadas. Quando a verificação for concluída, clique em **Instalar**. Quando o Windows solicitar, clique em **Fechar**. O servidor é reiniciado para concluir a instalação de AD DS e DNS.
+15. Se você deseja exportar as configurações para um script do Windows PowerShell, clique em **Exibir script**. O script é aberto no Bloco de Notas e você pode salvá-lo no local de pasta desejado. Clique em **Avançar**. Em **Verificação de Pré-Requisitos**, suas seleções são validadas. Quando a verificação for concluída, clique em **Instalar**. Quando o Windows solicitar, clique em **Fechar**. O servidor é reiniciado para concluir a instalação de AD DS e DNS.
 
 16. Para verificar a instalação bem-sucedida, exiba o console do Gerenciador do Servidor após a reinicialização do servidor. O AD DS e o DNS devem aparecer no painel esquerdo, como os itens destacados na imagem abaixo.
 
@@ -680,7 +680,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 7.  Modifique **Nome completo** para adicionar iniciais ou inverter a ordem do primeiro e do último nome.
 
-8.  Em **Nome de logon do usuário**, digite o nome de logon do usuário. Clique em **Próximo**.
+8.  Em **Nome de logon do usuário**, digite o nome de logon do usuário. Clique em **Avançar**.
 
 9. Em **Novo Objeto - Usuário**, em **Senha** e em **Confirmar senha**, digite a senha do usuário e selecione as opções de senha apropriadas.
 
@@ -732,19 +732,19 @@ O mínimo necessário para executar este procedimento é ser membro do grupo **A
 
 5.  Em **Tipo de Zona**, selecione **Zona primária**.
 
-6.  Se o servidor DNS for um controlador de domínio gravável, verifique se a opção **Armazenar a zona no Active Directory** está marcada. Clique em **Próximo**.
+6.  Se o servidor DNS for um controlador de domínio gravável, verifique se a opção **Armazenar a zona no Active Directory** está marcada. Clique em **Avançar**.
 
-7.  Em **Escopo de Replicação de Zona do Active Directory**, selecione **Para todos os servidores DNS sendo executados em controladores de domínio neste domínio**, a menos que você tenha um motivo específico para escolher uma opção diferente. Clique em **Próximo**.
+7.  Em **Escopo de Replicação de Zona do Active Directory**, selecione **Para todos os servidores DNS sendo executados em controladores de domínio neste domínio**, a menos que você tenha um motivo específico para escolher uma opção diferente. Clique em **Avançar**.
 
-8.  Na primeira página de **Nome da Zona de Pesquisa Inversa**, selecione **Zona de Pesquisa Inversa IPv4**. Clique em **Próximo**.
+8.  Na primeira página de **Nome da Zona de Pesquisa Inversa**, selecione **Zona de Pesquisa Inversa IPv4**. Clique em **Avançar**.
 
 9. Na segunda página de **Nome da Zona de Pesquisa Inversa**, selecione uma das seguintes opções:
 
     - Em **Identificação de rede**, digite a identificação de rede do seu intervalo de endereços IP. Por exemplo, se o intervalo de endereços IP for 10.0.0.1 a 10.0.0.254, digite **10.0.0**.
 
-    - Em **Nome da zona de pesquisa inversa**, seu nome da zona de pesquisa inversa IPv4 é adicionado automaticamente. Clique em **Próximo**.
+    - Em **Nome da zona de pesquisa inversa**, seu nome da zona de pesquisa inversa IPv4 é adicionado automaticamente. Clique em **Avançar**.
 
-10. Em **Atualização Dinâmica**, selecione o tipo de atualizações dinâmicas que serão permitidas. Clique em **Próximo**.
+10. Em **Atualização Dinâmica**, selecione o tipo de atualizações dinâmicas que serão permitidas. Clique em **Avançar**.
 
 11. Em **Concluindo o Assistente de Nova Zona**, verifique suas escolhas e clique em **Concluir**.
 
@@ -850,13 +850,13 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 3.  Em **Selecionar Tipo de Instalação**, verifique se **Instalação baseada em função ou recurso** está marcada e clique em **Avançar**.
 
-4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Próximo**.
+4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Avançar**.
 
-5.  Em **selecionar funções de servidor**, em **funções**, selecione **servidor DHCP**. Em **Adicionar recursos que são necessários para Servidor DHCP**, clique em **Adicionar Recursos**. Clique em **Próximo**.
+5.  Em **selecionar funções de servidor**, em **funções**, selecione **servidor DHCP**. Em **Adicionar recursos que são necessários para Servidor DHCP**, clique em **Adicionar Recursos**. Clique em **Avançar**.
 
 6.  Em **Selecionar recursos**, clique em **Avançar** e, em **Servidor DHCP**, analise as informações fornecidas e clique em **Avançar**.
 
-7.  Em **Confirmar seleções de instalação**, clique em **Reiniciar cada servidor de destino automaticamente, se necessário**. Na solicitação de confirmação dessa seleção, clique em **Sim** e em **Instalar**. A página **progresso da instalação** exibe o status durante o processo de instalação. Quando o processo for concluído, a mensagem "configuração necessária. A instalação bem-sucedida em *ComputerName*"é exibida, em que *ComputerName* é o nome do computador no qual você instalou o servidor DHCP. Na janela de mensagem, clique em **Configuração de DHCP concluída**. O Assistente de configuração pós-instalação do DHCP é aberto. Clique em **Próximo**.
+7.  Em **Confirmar seleções de instalação**, clique em **Reiniciar cada servidor de destino automaticamente, se necessário**. Na solicitação de confirmação dessa seleção, clique em **Sim** e em **Instalar**. A página **progresso da instalação** exibe o status durante o processo de instalação. Quando o processo for concluído, a mensagem "configuração necessária. A instalação bem-sucedida em *ComputerName*"é exibida, em que *ComputerName* é o nome do computador no qual você instalou o servidor DHCP. Na janela de mensagem, clique em **Configuração de DHCP concluída**. O Assistente de configuração pós-instalação do DHCP é aberto. Clique em **Avançar**.
 
 8.  Em **Autorização**, especifique as credenciais que deseja usar para autorizar o servidor DHCP nos Serviços de Domínio Active Directory e clique em **Confirmar**. Na conclusão da autorização, clique em **Fechar**.
 
@@ -871,7 +871,7 @@ A associação em **Administradores DHCP**, ou equivalente, é o requisito míni
 
 2.  No **DHCP**, expanda o nome do servidor. Por exemplo, se o nome do servidor DHCP for DHCP1.corp.contoso.com, clique na seta para baixo ao lado de **DHCP1.Corp.contoso.com**.
 
-3.  Abaixo do nome do servidor, clique com o botão direito do mouse em **IPv4**e clique em **novo escopo**. O Assistente para Novos Escopos é aberto.
+3.  Abaixo do nome do servidor, clique com o botão direito do mouse em **IPv4** e clique em **novo escopo**. O Assistente para Novos Escopos é aberto.
 
 4.  Em **Assistente para Novos Escopos**, clique em **Avançar**.
 
@@ -887,7 +887,7 @@ A associação em **Administradores DHCP**, ou equivalente, é o requisito míni
 
     3.  Se necessário, modifique os valores em **Comprimento** ou **Máscara de sub-rede**, de forma adequada para seu esquema de endereçamento.
 
-    4.  Clique em **Próximo**.
+    4.  Clique em **Avançar**.
 
 8.  Em **Adicionar Exclusões**, faça o seguinte:
 
@@ -919,7 +919,7 @@ A associação em **Administradores DHCP**, ou equivalente, é o requisito míni
 
 15. Em **Ativar Escopo**, selecione **Sim, desejo ativar este escopo agora**.
 
-16. Clique em **Avançar**e em **Concluir**.
+16. Clique em **Avançar** e em **Concluir**.
 
 > [!IMPORTANT]
 > Para criar novos escopos para sub-redes adicionais, repita o procedimento. Use um intervalo de endereços IP diferente para cada sub-rede que você planeja implantar e verifique se o encaminhamento de mensagem DHCP está habilitado em todos os roteadores que levam a outras sub-redes.
@@ -945,7 +945,7 @@ A associação em **Administradores DHCP**, ou equivalente, é o requisito míni
 
 4.  Em **nome do computador**, clique em **alterar**. A caixa de diálogo **Alterações de Nome/Domínio do Computador** será aberta.
 
-5.  Em **nome do computador/alterações de domínio** , em **membro de**, clique em **domínio**e digite o nome do domínio que você deseja unir. Por exemplo, se o nome do domínio for corp.contoso.com, digite **corp.contoso.com**.
+5.  Em **nome do computador/alterações de domínio** , em **membro de**, clique em **domínio** e digite o nome do domínio que você deseja unir. Por exemplo, se o nome do domínio for corp.contoso.com, digite **corp.contoso.com**.
 
 6.  Clique em **OK**. A caixa de diálogo **Segurança do Windows** será aberta.
 
@@ -959,13 +959,13 @@ A associação em **Administradores DHCP**, ou equivalente, é o requisito míni
 
 1.  Faça logon no computador com a conta de Administrador local.
 
-2.  Clique com o botão direito do mouse em **Iniciar**e clique em **sistema**. Será exibida a caixa de diálogo **Sistema**.
+2.  Clique com o botão direito do mouse em **Iniciar** e clique em **sistema**. Será exibida a caixa de diálogo **Sistema**.
 
 3.  Em **sistema**, clique em **Configurações avançadas do sistema**. A caixa de diálogo **Propriedades do Sistema** será aberta. Clique na guia **nome do computador** .
 
 4.  Em **nome do computador**, clique em **alterar**. A caixa de diálogo **Alterações de Nome/Domínio do Computador** será aberta.
 
-5.  Em **nome do computador/alterações de domínio** , em **membro de**, clique em **domínio**e digite o nome do domínio que você deseja unir. Por exemplo, se o nome do domínio for corp.contoso.com, digite **corp.contoso.com**.
+5.  Em **nome do computador/alterações de domínio** , em **membro de**, clique em **domínio** e digite o nome do domínio que você deseja unir. Por exemplo, se o nome do domínio for corp.contoso.com, digite **corp.contoso.com**.
 
 6.  Clique em **OK**. A caixa de diálogo **Segurança do Windows** será aberta.
 
@@ -1069,13 +1069,13 @@ Para concluir este procedimento, você deve ser um membro do grupo **Administrad
 
 3.  Em **Selecionar Tipo de Instalação**, verifique se **Instalação baseada em função ou recurso** está marcada e clique em **Avançar**.
 
-4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Próximo**.
+4.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Avançar**.
 
-5.  Em **selecionar funções de servidor**, em **funções**, selecione **serviços de acesso e política de rede**. Uma caixa de diálogo será aberta perguntando se ele deve adicionar recursos necessários para serviços de acesso e política de rede. Clique em **Adicionar Recursos**e depois em **Avançar**.
+5.  Em **selecionar funções de servidor**, em **funções**, selecione **serviços de acesso e política de rede**. Uma caixa de diálogo será aberta perguntando se ele deve adicionar recursos necessários para serviços de acesso e política de rede. Clique em **Adicionar Recursos** e depois em **Avançar**.
 
 6.  Em **Selecionar recursos**, clique em **Avançar** e, em **Serviços de Acesso e Política de Rede**, analise as informações fornecidas e clique em **Avançar**.
 
-7.  Em **Selecionar serviços de função**, clique em **Servidor de Políticas de Rede**.  Em **Adicionar recursos que são necessários para Servidor de Políticas de Rede**, clique em **Adicionar Recursos**. Clique em **Próximo**.
+7.  Em **Selecionar serviços de função**, clique em **Servidor de Políticas de Rede**.  Em **Adicionar recursos que são necessários para Servidor de Políticas de Rede**, clique em **Adicionar Recursos**. Clique em **Avançar**.
 
 8.  Em **Confirmar seleções de instalação**, clique em **Reiniciar cada servidor de destino automaticamente, se necessário**. Na solicitação de confirmação dessa seleção, clique em **Sim** e em **Instalar**. A página Progresso da instalação exibe o status durante o processo de instalação. Quando o processo for concluído, a mensagem "a instalação foi bem-sucedida em *ComputerName*" será exibida, em que *ComputerName* é o nome do computador no qual você instalou o servidor de políticas de rede. Clique em **fechar**
 
@@ -1146,7 +1146,7 @@ Para concluir este procedimento, é preciso ser um membro do grupo **Administrad
 
 4.  Na página **selecionar servidor de destino** , verifique se o computador local está selecionado e clique em **Avançar**.
 
-5.  Na página **selecionar funções de servidor** , role para e selecione **servidor Web (IIS)**. A caixa de diálogo **Adicionar recursos necessários para o servidor Web (IIS)** é aberta. Clique em **Adicionar Recursos**e depois em **Avançar**.
+5.  Na página **selecionar funções de servidor** , role para e selecione **servidor Web (IIS)**. A caixa de diálogo **Adicionar recursos necessários para o servidor Web (IIS)** é aberta. Clique em **Adicionar Recursos** e depois em **Avançar**.
 
 6.  Clique em **Avançar** até ter aceitado todas as configurações padrão do servidor Web e clique em **Instalar**.
 
@@ -1196,7 +1196,7 @@ A associação a **Administradores** ou equivalente é o requisito mínimo para 
 
 ##### <a name="to-rename-computers-running-windows-server-2008-r2-and-windows-7"></a>Para renomear os computadores que executam o Windows Server 2008 R2 e o Windows 7
 
-1.  Clique em **Iniciar**, clique com botão direito do **computador**e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
+1.  Clique em **Iniciar**, clique com botão direito do **computador** e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
 
 2.  Em **Nome do computador, domínio e configurações de grupo de trabalho**, clique em **Alterar configurações**. A caixa de diálogo **Propriedades do Sistema** será aberta.
 
@@ -1214,7 +1214,7 @@ A associação a **Administradores** ou equivalente é o requisito mínimo para 
 
 ##### <a name="to-rename-computers-running-windows-server-2008-and-windows-vista"></a>Para renomear os computadores executando o Windows Server 2008 e o Windows Vista
 
-1.  Clique em **Iniciar**, clique com botão direito do **computador**e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
+1.  Clique em **Iniciar**, clique com botão direito do **computador** e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
 
 2.  Em **Nome do computador, domínio e configurações de grupo de trabalho**, clique em **Alterar configurações**. A caixa de diálogo **Propriedades do Sistema** será aberta.
 
@@ -1232,7 +1232,7 @@ Este tópico fornece procedimentos para configurar endereços IP estáticos em c
 
 - [Windows Server 2008 R2](#bkmk_R2Cng_WS08R2IP)
 
-- [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
+- [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
 
 ### <a name="windows-server-2008-r2"></a><a name="bkmk_R2Cng_WS08R2IP"></a>Windows Server 2008 R2
 A associação em **Administradores**, ou equivalente, é o requisito mínimo para executar este procedimento.
@@ -1261,7 +1261,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 10. Em **Servidor DNS alternativo**, digite o endereço IP do seu servidor DNS alternativo, se houver. Se você planeja usar o computador local como um servidor DNS alternativo, digite o endereço IP do computador local.
 
-11. Clique em **OK**e então clique em **Fechar**.
+11. Clique em **OK** e então clique em **Fechar**.
 
 ### <a name="windows-server-2008"></a><a name="bkmk_NetFndtn_Pln_CfgStatic08"></a>Windows Server 2008
 A associação a **Administradores** ou equivalente é o requisito mínimo para a execução destes procedimentos.
@@ -1288,7 +1288,7 @@ A associação a **Administradores** ou equivalente é o requisito mínimo para 
 
 10. Em **Servidor DNS alternativo**, digite o endereço IP do seu servidor DNS alternativo, se houver. Se você planeja usar o computador local como um servidor DNS alternativo, digite o endereço IP do computador local.
 
-11. Clique em **OK**e então clique em **Fechar**.
+11. Clique em **OK** e então clique em **Fechar**.
 
 ## <a name="appendix-c---joining-computers-to-the-domain"></a><a name="BKMK_C"></a>Apêndice C – unindo computadores ao domínio
 Você pode usar esses procedimentos para unir computadores que executam o Windows Server 2008 R2, Windows 7, Windows Server 2008 e Windows Vista ao domínio.
@@ -1307,7 +1307,7 @@ O requisito mínimo para executar este procedimento é a associação ao grupo *
 
 1.  Faça logon no computador com a conta de Administrador local.
 
-2.  Clique em **Iniciar**, clique com botão direito do **computador**e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
+2.  Clique em **Iniciar**, clique com botão direito do **computador** e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
 
 3.  Em **Nome do computador, domínio e configurações de grupo de trabalho**, clique em **Alterar configurações**. A caixa de diálogo **Propriedades do Sistema** será aberta.
 
@@ -1333,7 +1333,7 @@ O requisito mínimo para executar este procedimento é a associação ao grupo *
 
 1.  Faça logon no computador com a conta de Administrador local.
 
-2.  Clique em **Iniciar**, clique com botão direito do **computador**e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
+2.  Clique em **Iniciar**, clique com botão direito do **computador** e clique em **Propriedades**. Será exibida a caixa de diálogo **Sistema**.
 
 3.  Em **Nome do computador, domínio e configurações de grupo de trabalho**, clique em **Alterar configurações**. A caixa de diálogo **Propriedades do Sistema** será aberta.
 
@@ -1433,7 +1433,7 @@ Itens de configuração para o procedimento de implantação da Rede Principal d
 |Itens de configuração|Valores de exemplo|Valores|
 |-----------------------|------------------|----------|
 |Nome DNS completo|corp.contoso.com||
-|Nível funcional de floresta|Windows Server 2003||
+|Nível funcional da floresta|Windows Server 2003||
 |Local da pasta do banco de dados dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.||
 |Local da pasta dos arquivos de log dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.||
 |Local da pasta do SYSVOL dos Serviços de Domínio Active Directory|E:\Configuration\\<p>Ou aceite o local padrão.||
@@ -1508,7 +1508,7 @@ Os itens de configuração do procedimento de implantação da Rede Principal do
 |Descrição do escopo|Sub-rede principal do escritório 2||
 |(intervalo de endereços IP)<p>Endereço IP inicial|10.0.1.1||
 |(intervalo de endereços IP)<p>Endereço IP final|10.0.1.254||
-|Tamanho|8||
+|Comprimento|8||
 |Máscara de sub-rede|255.255.255.0||
 |Endereço IP Inicial (intervalo de exclusão)|10.0.1.1||
 |Endereço IP final do intervalo de exclusão|10.0.1.15||

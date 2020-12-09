@@ -7,12 +7,12 @@ ms.author: rickman
 manager: stevelee
 ms.topic: article
 ms.date: 07/14/2020
-ms.openlocfilehash: 38d0ae70e0b6e70e87cc962ec5776d4ffb950fe5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b92e1fa6906298b3f78476d105f963d6f51f6b82
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995604"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866145"
 ---
 # <a name="deploy-graphics-devices-using-remotefx-vgpu"></a>Implantar dispositivos gráficos usando um vGPU do RemoteFX
 
@@ -61,8 +61,8 @@ Você pode usar a interface do usuário do Gerenciador do Hyper-V ou cmdlets do 
 #### <a name="configure-remotefx-vgpu-with-hyper-v-manager"></a>Configurar vGPU RemoteFX com o Gerenciador do Hyper-V
 
 1. Pare a VM se ela estiver em execução no momento.
-2. Abra o Gerenciador do Hyper-V, navegue até **configurações da VM**e, em seguida, selecione **adicionar hardware**.
-3. Selecione **adaptador gráfico 3D RemoteFX**e, em seguida, selecione **Adicionar**.
+2. Abra o Gerenciador do Hyper-V, navegue até **configurações da VM** e, em seguida, selecione **adicionar hardware**.
+3. Selecione **adaptador gráfico 3D RemoteFX** e, em seguida, selecione **Adicionar**.
 4. Defina o número máximo de monitores, a resolução máxima do monitor e a memória de vídeo dedicada ou deixe os valores padrão.
 
    > [!NOTE]
@@ -75,10 +75,10 @@ Você pode usar a interface do usuário do Gerenciador do Hyper-V ou cmdlets do 
 
 Use os seguintes cmdlets do PowerShell para adicionar, revisar e configurar o adaptador:
 
-- [Add-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
-- [Set-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
+- [Add-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter)
+- [Get-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter)
+- [Set-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter)
+- [Get-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter)
 
 ## <a name="monitor-performance"></a>Monitorar desempenho
 

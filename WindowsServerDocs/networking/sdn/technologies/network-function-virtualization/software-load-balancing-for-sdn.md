@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 43591a1cca143037e9abe555321276cb0f83263b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1dc52e6b2bebf66f6a80e846481ec3f1656db443
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995506"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866485"
 ---
 # <a name="software-load-balancing-slb-for-sdn"></a>\(SLB \) de balanceamento de carga de software para Sdn
 
@@ -150,7 +150,7 @@ O agente de host SLB escuta atualizações de política SLB do controlador de re
 ### <a name="sdn-enabled-hyper-v-virtual-switch"></a>Comutador virtual Hyper-V habilitado para SDN
 Para que um comutador virtual seja compatível com o SLB, você deve usar os comandos do Gerenciador de comutador virtual do Hyper-V ou do Windows PowerShell para criar o comutador e, em seguida, deve habilitar o VFP (plataforma de filtragem virtual) para o comutador virtual.
 
-Para obter informações sobre como habilitar o VFP em comutadores virtuais, consulte os comandos do Windows PowerShell [Get-VMSystemSwitchExtension](/powershell/module/hyper-v/get-vmsystemswitchextension?view=win10-ps) e [Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?f=255&MSPPError=-2147217396&view=win10-ps).
+Para obter informações sobre como habilitar o VFP em comutadores virtuais, consulte os comandos do Windows PowerShell [Get-VMSystemSwitchExtension](/powershell/module/hyper-v/get-vmsystemswitchextension) e [Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?f=255&MSPPError=-2147217396).
 
 O comutador virtual Hyper-V habilitado para SDN executa as seguintes ações para SLB.
 

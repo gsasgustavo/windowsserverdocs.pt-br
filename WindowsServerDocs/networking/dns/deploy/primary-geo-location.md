@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9a1abc00bd8683c716563159aac889a98f364f87
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 36089433b9168e8c49e443b77317c29366c6b9e5
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996873"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866515"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers"></a>Usar política de DNS para gerenciamento de tráfego baseado em localização geográfica com servidores primários
 
@@ -20,7 +20,7 @@ ms.locfileid: "87996873"
 Você pode usar este tópico para saber como configurar a política DNS para permitir que servidores DNS primários respondam a consultas de cliente DNS com base na localização geográfica do cliente e do recurso ao qual o cliente está tentando se conectar, fornecendo ao cliente o endereço IP do recurso mais próximo.
 
 >[!IMPORTANT]
->Este cenário ilustra como implantar a política DNS para o gerenciamento de tráfego baseado na localização geográfica quando você estiver usando somente servidores DNS primários. Você também pode realizar o gerenciamento de tráfego baseado na localização geográfica quando tiver servidores DNS primários e secundários. Se você tiver uma implantação primária-secundária, primeiro conclua as etapas neste tópico e, em seguida, conclua as etapas fornecidas no tópico [usar a política DNS para o gerenciamento de tráfego baseado na localização geográfica com as implantações primárias secundárias](primary-secondary-geo-location.md).
+>Este cenário ilustra como implantar a política DNS para o gerenciamento de tráfego baseado na localização geográfica quando você estiver usando somente servidores DNS primários. Você também pode realizar o gerenciamento de tráfego baseado na localização geográfica quando tiver servidores DNS primários e secundários. Se você tiver uma implantação primária-secundária, primeiro conclua as etapas neste tópico e, em seguida, conclua as etapas que são fornecidas no tópico [usar política DNS para gerenciamento de tráfego baseado em Geo-Location com implantações de Primary-Secondary](primary-secondary-geo-location.md).
 
 Com as novas políticas de DNS, você pode criar uma política DNS que permite que o servidor DNS responda a uma consulta de cliente solicitando o endereço IP de um servidor Web. As instâncias do servidor Web podem estar localizadas em data centers diferentes em locais físicos diferentes. O DNS pode avaliar os locais do cliente e do servidor Web e, em seguida, responder à solicitação do cliente, fornecendo ao cliente um endereço IP do servidor Web para um servidor Web localizado fisicamente mais próximo do cliente.
 
@@ -52,7 +52,7 @@ Para garantir que os clientes do woodgrove.com tenham uma experiência responsiv
 
 A ilustração a seguir descreve esse cenário.
 
-![Exemplo de gerenciamento de tráfego baseado na localização geográfica](../../media/DNS-Policy-Geo1/dns_policy_geo1.png)
+![Exemplo de gerenciamento de tráfego baseado em Geo-Location](../../media/DNS-Policy-Geo1/dns_policy_geo1.png)
 
 ##  <a name="how-the-dns-name-resolution-process-works"></a><a name="bkmk_works"></a>Como funciona o processo de resolução de nomes DNS
 
@@ -67,7 +67,7 @@ Nesse cenário, o servidor DNS autoritativo geralmente vê a solicitação de re
 >[!NOTE]
 >As políticas de DNS utilizam o IP do remetente no pacote UDP/TCP que contém a consulta DNS. Se a consulta atingir o servidor primário por meio de vários saltos resolvedor/LDNS, a política considerará apenas o IP do último resolvedor do qual o servidor DNS recebe a consulta.
 
-##  <a name="how-to-configure-dns-policy-for-geo-location-based-query-responses"></a><a name="bkmk_config"></a>Como configurar a política DNS para respostas de consulta com base na localização geográfica
+##  <a name="how-to-configure-dns-policy-for-geo-location-based-query-responses"></a><a name="bkmk_config"></a>Como configurar a política DNS para respostas de consulta baseadas em Geo-Location
 Para configurar a política DNS para respostas de consulta baseadas em localização geográfica, você deve executar as etapas a seguir.
 
 1. [Criar as sub-redes do cliente DNS](#bkmk_subnets)
@@ -96,7 +96,7 @@ Add-DnsServerClientSubnet -Name "USSubnet" -IPv4Subnet "192.0.0.0/24"
 Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet).
 
 ### <a name="create-zone-scopes"></a><a name="bkmk_scopes"></a>Criar escopos de zona
 Depois que as sub-redes de cliente são configuradas, você deve particionar a zona cujo tráfego você deseja redirecionar em dois escopos de zona diferentes, um escopo para cada uma das sub-redes de cliente DNS que você configurou.
@@ -115,7 +115,7 @@ Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "USZoneScope"
 Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "EuropeZoneScope"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope).
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>Adicionar registros aos escopos de zona
 Agora você deve adicionar os registros que representam o host do servidor Web nos escopos de duas zonas.
@@ -138,7 +138,7 @@ Add-DnsServerResourceRecord -ZoneName "woodgrove.com" -A -Name "www" -IPv4Addres
 
 O parâmetro **ZoneScope** não é incluído quando você adiciona um registro no escopo padrão. Isso é o mesmo que adicionar registros a uma zona DNS padrão.
 
-Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### <a name="create-the-policies"></a><a name="bkmk_policies"></a>Criar as políticas
 Depois de criar as sub-redes, as partições (escopos de zona) e adicionar registros, você deve criar políticas que conectam as sub-redes e as partições, de modo que quando uma consulta vier de uma origem em uma das sub-redes de cliente DNS, a resposta de consulta será retornada do escopo correto da zona. Nenhuma política é necessária para mapear o escopo de zona padrão.
@@ -150,7 +150,7 @@ Add-DnsServerQueryResolutionPolicy -Name "USPolicy" -Action ALLOW -ClientSubnet 
 Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName "woodgrove.com"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Agora, o servidor DNS é configurado com as políticas de DNS necessárias para redirecionar o tráfego com base na localização geográfica.
 

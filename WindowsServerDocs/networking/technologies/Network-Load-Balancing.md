@@ -7,12 +7,12 @@ ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 4417748504a0458396cd02e965547c2573f2c44f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2edcd046958854698fbcc61d96f2716a26de3367
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990082"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866265"
 ---
 # <a name="network-load-balancing"></a>Network Load Balancing
 
@@ -141,7 +141,7 @@ Install-WindowsFeature NLB -IncludeManagementTools
 
 Após a conclusão da instalação, não é necessário reiniciar o computador.
 
-Para obter mais informações, consulte [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
+Para obter mais informações, consulte [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).
 
 ### <a name="network-load-balancing-manager"></a>Gerenciador de balanceamento de carga de rede
 Para abrir o Gerenciador de Balanceamento de Carga de Rede em um Gerenciador do Servidor, clique em **Ferramentas** e depois clique em **Gerenciador de Balanceamento de Carga de Rede**.
@@ -152,7 +152,7 @@ A tabela a seguir fornece links para informações adicionais sobre o recurso NL
 |Tipo de conteúdo|Referências|
 |----------------|--------------|
 |Implantação|[Guia de implantação de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)) &#124; configurar o [balanceamento de carga de rede com serviços de terminal](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771300(v=ws.10))|
-|Operações|[Gerenciar clusters de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753954(v=ws.10)) &#124; [definir parâmetros de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731619(v=ws.10)) &#124; [controlar hosts em clusters de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770870(v=ws.10))|
+|Operations|[Gerenciar clusters de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753954(v=ws.10)) &#124; [definir parâmetros de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731619(v=ws.10)) &#124; [controlar hosts em clusters de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770870(v=ws.10))|
 |Solução de problemas|[Solucionando problemas de clusters de balanceamento de carga de rede](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732592(v=ws.10)) &#124; [eventos e erros de cluster NLB](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731678(v=ws.10))|
 |Ferramentas e configurações|[Cmdlets do Windows PowerShell para Balanceamento de Carga de Rede](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
 |Recursos da comunidade|[Fórum de \( clustering de alta disponibilidade \)](https://go.microsoft.com/fwlink/p/?LinkId=230641)

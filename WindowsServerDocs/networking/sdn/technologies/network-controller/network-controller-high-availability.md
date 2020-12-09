@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 838ce8dfc11cb08b20349f121405991fcbe00270
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f266ac90478bb25a540ad3a3b88a5c096fe2de87
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991339"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866475"
 ---
 # <a name="network-controller-high-availability"></a>Alta disponibilidade do controlador de rede
 
@@ -60,7 +60,7 @@ Como o controlador de rede é o núcleo de uma rede de datacenter, ele deve ser 
 
 ### <a name="persistent-storage"></a>Armazenamento persistente
 
-O aplicativo do controlador de rede tem grandes requisitos de armazenamento para sua configuração e estado. O aplicativo também deve ser utilizável entre interrupções planejadas e não planejadas. Para essa finalidade, Service Fabric fornece um repositório de chave-valor de \( KVS \) que é um repositório replicado, transacional e persistente.
+O aplicativo do controlador de rede tem grandes requisitos de armazenamento para sua configuração e estado. O aplicativo também deve ser utilizável entre interrupções planejadas e não planejadas. Para essa finalidade, Service Fabric fornece um armazenamento de Key-Value \( KVS \) que é um repositório replicado, transacional e persistente.
 
 ### <a name="modularity"></a>Modularidade
 
@@ -78,7 +78,7 @@ A modularidade de Service Fabric usa esquemas de modelo de serviço para maximiz
 
 ## <a name="network-controller-deployment-options"></a>Opções de implantação do controlador de rede
 
-Para implantar o controlador de rede usando \( o System Center Virtual Machine Manager VMM \) , consulte [configurar um controlador de rede Sdn na malha do VMM](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
+Para implantar o controlador de rede usando \( o System Center Virtual Machine Manager VMM \) , consulte [configurar um controlador de rede Sdn na malha do VMM](/system-center/vmm/sdn-controller).
 
 Para implantar o controlador de rede usando scripts, consulte [implantar uma infraestrutura de rede definida pelo software usando scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

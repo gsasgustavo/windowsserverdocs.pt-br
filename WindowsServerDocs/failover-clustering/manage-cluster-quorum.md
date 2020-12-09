@@ -7,12 +7,12 @@ ms.author: jgerend
 manager: lizross
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ff6b6cfa6f8af87310970d9adab10d5df14c90d
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.openlocfilehash: cf4b9a5196c6cf92d4f075d25e03ab719b341422
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083687"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865720"
 ---
 # <a name="configure-and-manage-quorum"></a>Configurar e gerenciar o quorum
 
@@ -81,7 +81,7 @@ No Windows Server 2012, como uma opção de configuração de quorum avançada, 
 
 Com o gerenciamento de quorum dinâmico, também é possível que um cluster seja executado no último nó de cluster sobrevivente. Pelo ajuste dinâmico do requisito de maioria de quorum, o cluster pode sustentar desligamentos de nó sequenciais para um único nó.
 
-O voto dinâmico atribuído ao cluster de um nó pode ser verificado com a propriedade comum **DynamicWeight** do nó de cluster usando o cmdlet [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode?view=win10-ps) do Windows PowerShell. Um valor de 0 indica que o nó não tem um voto de quorum. Um valor de 1 indica que o nó tem um voto de quorum.
+O voto dinâmico atribuído ao cluster de um nó pode ser verificado com a propriedade comum **DynamicWeight** do nó de cluster usando o cmdlet [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) do Windows PowerShell. Um valor de 0 indica que o nó não tem um voto de quorum. Um valor de 1 indica que o nó tem um voto de quorum.
 
 A atribuição de voto para todos os nós de cluster pode ser verificada usando o teste de validação **Validar Quorum de Cluster**.
 
@@ -94,7 +94,7 @@ A atribuição de voto para todos os nós de cluster pode ser verificada usando 
 
 ## <a name="general-recommendations-for-quorum-configuration"></a>Recomendações gerais para configuração de quorum
 
-O software do cluster configura automaticamente o quorum para um novo cluster, de acordo com o número de nós configurado e a disponibilidade de armazenamento compartilhado. Essa geralmente é a configuração de quorum mais apropriada para esse cluster. Entretanto, é uma boa ideia examinar a configuração de quorum depois de criar o cluster, e antes de colocá-lo em produção. Para exibir a configuração de quorum de cluster detalhada, você pode usar o assistente para validar uma configuração ou o cmdlet [Test-cluster](/powershell/module/failoverclusters/test-cluster?view=win10-ps) do Windows PowerShell, para executar o teste de **configuração de quorum de validação** . No Gerenciador de Cluster de Failover, a configuração de quorum básica é exibida nas informações de resumo do cluster selecionado ou você pode examinar as informações sobre os recursos de quorum que o retorna quando você executa o cmdlet [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) do Windows PowerShell.
+O software do cluster configura automaticamente o quorum para um novo cluster, de acordo com o número de nós configurado e a disponibilidade de armazenamento compartilhado. Essa geralmente é a configuração de quorum mais apropriada para esse cluster. Entretanto, é uma boa ideia examinar a configuração de quorum depois de criar o cluster, e antes de colocá-lo em produção. Para exibir a configuração de quorum de cluster detalhada, você pode usar o assistente para validar uma configuração ou o cmdlet [Test-cluster](/powershell/module/failoverclusters/test-cluster) do Windows PowerShell, para executar o teste de **configuração de quorum de validação** . No Gerenciador de Cluster de Failover, a configuração de quorum básica é exibida nas informações de resumo do cluster selecionado ou você pode examinar as informações sobre os recursos de quorum que o retorna quando você executa o cmdlet [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) do Windows PowerShell.
 
 A qualquer momento, você pode executar o teste **Validar Configuração de Quorum** para validar que a configuração de quorum é ideal para seu cluster. A saída do teste indica se uma alteração na configuração de quorum é recomendada e as configurações que são ideais. Se uma alteração for recomendada, você poderá usar o Assistente para Configurar Quorum do Cluster para aplicar as configurações recomendadas.
 
@@ -124,11 +124,11 @@ A associação no grupo local **Administradores** em cada servidor com cluster, 
 ### <a name="change-the-quorum-configuration-in-a-failover-cluster-by-using-failover-cluster-manager"></a>Alterar a configuração de quorum em um cluster de failover usando Gerenciador de Cluster de Failover
 
 1. No Gerenciador de Cluster de Failover, selecione ou especifique o cluster que deseja alterar.
-2. Com o cluster selecionado, em **ações**, selecione **mais ações**e, em seguida, selecione **definir configurações de quorum do cluster**. O Assistente para Configurar Quorum do Cluster aparece. Selecione **Avançar**.
+2. Com o cluster selecionado, em **ações**, selecione **mais ações** e, em seguida, selecione **definir configurações de quorum do cluster**. O Assistente para Configurar Quorum do Cluster aparece. Selecione **Avançar**.
 3. Na página **Selecionar Opção de Configuração de Quorum**, selecione uma das três opções de configuração e conclua as etapas para essa opção. Antes de configurar o quorum, você pode examinar suas escolhas. Para obter mais informações sobre as opções, consulte [noções básicas sobre quorum](#understanding-quorum), anteriormente neste tópico.
 
     - Para permitir que o cluster redefina automaticamente as configurações de quorum ideais para sua configuração de cluster atual, selecione **usar configuração de quorum padrão** e conclua o assistente.
-    - Para adicionar ou alterar a testemunha de quorum, selecione **selecionar a testemunha de quorum**e, em seguida, conclua as etapas a seguir. Para obter informações e considerações sobre configurar uma testemunha de quorum, consulte [Configuração de testemunha](#witness-configuration) anteriormente neste tópico.
+    - Para adicionar ou alterar a testemunha de quorum, selecione **selecionar a testemunha de quorum** e, em seguida, conclua as etapas a seguir. Para obter informações e considerações sobre configurar uma testemunha de quorum, consulte [Configuração de testemunha](#witness-configuration) anteriormente neste tópico.
 
       1. Na página **Selecionar Testemunha de Quorum**, selecione uma opção para configurar uma testemunha de disco ou uma testemunha de compartilhamento de arquivos. O assistente indica as opções de seleção de testemunha recomendadas para seu cluster.
 
@@ -141,7 +141,7 @@ A associação no grupo local **Administradores** em cada servidor com cluster, 
           > [!NOTE]
           > Essa opção está disponível no Windows Server 2016 e superior.
 
-    - Para definir as configurações de gerenciamento de quorum e adicionar ou alterar a testemunha de quorum, selecione **configuração de quorum avançada**e conclua as etapas a seguir. Para obter informações e considerações sobre as configurações de quorum avançadas, consulte [Atribuição de voto de nó](#node-vote-assignment) e [Gerenciamento dinâmico de quorum](#dynamic-quorum-management) anteriormente neste tópico.
+    - Para definir as configurações de gerenciamento de quorum e adicionar ou alterar a testemunha de quorum, selecione **configuração de quorum avançada** e conclua as etapas a seguir. Para obter informações e considerações sobre as configurações de quorum avançadas, consulte [Atribuição de voto de nó](#node-vote-assignment) e [Gerenciamento dinâmico de quorum](#dynamic-quorum-management) anteriormente neste tópico.
 
       1. Na página **Selecionar Configuração de Votação**, selecione uma opção para atribuir votos aos nós. Por padrão, todos os nós são atribuídos a um voto. Entretanto, para determinados cenários, você pode atribuir votos somente a um subconjunto de nós.
 
@@ -165,14 +165,14 @@ A associação no grupo local **Administradores** em cada servidor com cluster, 
 
 4. Selecione **Avançar**. Confirme suas seleções na página de confirmação exibida e selecione **Avançar**.
 
-Depois que o assistente for executado e a página **Resumo** for exibida, se você quiser exibir um relatório das tarefas executadas pelo assistente, selecione **Exibir relatório**. O relatório mais recente permanecerá na pasta <em>raizdosistema</em>** \\ cluster \\ reports** com o nome **QuorumConfiguration. mht**.
+Depois que o assistente for executado e a página **Resumo** for exibida, se você quiser exibir um relatório das tarefas executadas pelo assistente, selecione **Exibir relatório**. O relatório mais recente permanecerá na pasta <em>raizdosistema</em>**\\ cluster \\ reports** com o nome **QuorumConfiguration. mht**.
 
 > [!NOTE]
 > Depois de configurar o quorum do cluster, recomendamos que você execute o teste **Validar Configuração de Quorum** para verificar as configurações de quorum atualizadas.
 
 ### <a name="windows-powershell-equivalent-commands"></a>Comandos equivalentes do Windows PowerShell
 
-Os exemplos a seguir mostram como usar o cmdlet [set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) e outros cmdlets do Windows PowerShell para configurar o quorum do cluster.
+Os exemplos a seguir mostram como usar o cmdlet [set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum) e outros cmdlets do Windows PowerShell para configurar o quorum do cluster.
 
 O exemplo a seguir altera a configuração de quorum no cluster *CONTOSO-FC1* para uma configuração simples de maioria dos nós sem testemunha de quorum.
 
@@ -186,7 +186,7 @@ O exemplo a seguir altera a configuração de quorum no cluster local para uma m
 Set-ClusterQuorum -NodeAndDiskMajority "Cluster Disk 2"
 ```
 
-O exemplo a seguir altera a configuração de quorum no cluster local para uma maioria dos nós com configuração de testemunha. O recurso de compartilhamento de arquivos chamado * \\ \\ contoso-FS \\ FSW* é configurado como uma testemunha de compartilhamento de arquivos.
+O exemplo a seguir altera a configuração de quorum no cluster local para uma maioria dos nós com configuração de testemunha. O recurso de compartilhamento de arquivos chamado *\\ \\ contoso-FS \\ FSW* é configurado como uma testemunha de compartilhamento de arquivos.
 
 ```PowerShell
 Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
@@ -321,5 +321,5 @@ A tabela a seguir resume considerações e recomendações para essa configuraç
 ## <a name="more-information"></a>Mais informações
 
 * [Clustering de failover](./failover-clustering-overview.md)
-* [Failover Clusters Cmdlets in Windows PowerShell (Cmdlets do Windows PowerShell de Clusters de Failover)](/powershell/module/failoverclusters/?view=win10-ps)
+* [Failover Clusters Cmdlets in Windows PowerShell (Cmdlets do Windows PowerShell de Clusters de Failover)](/powershell/module/failoverclusters/)
 * [Noções básicas sobre quorum de cluster e pool](../storage/storage-spaces/understand-quorum.md)

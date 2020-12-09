@@ -6,12 +6,12 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9732be4cb0f9301e7011075a663f5499bcf8a277
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2ca7e336b0949e6dbc0bf1359e463f01605e38bf
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993973"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865576"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>Gerenciar a ponte do Data Center (DCB)
 
@@ -172,7 +172,7 @@ You can then use the **Get-NetQosTrafficClass** command to view settings.
 
 Depois de remover uma classe de tráfego, o valor de 802.1 p mapeado para essa classe de tráfego é remapeado para a classe de tráfego padrão. Qualquer largura de banda reservada para uma classe de tráfego é retornada para a alocação de classe de tráfego padrão quando a classe de tráfego é removida.
 
-## <a name="per-network-interface-policies"></a>Políticas de interface por rede
+## <a name="per-network-interface-policies"></a>Políticas de interface de Per-Network
 
 Todos os exemplos acima definem as políticas globais. Veja a seguir exemplos de como você pode definir e obter políticas por NIC.
 
@@ -464,10 +464,10 @@ Há comandos DCB do Windows PowerShell para o Windows Server 2016 e o Windows Se
 
 O tópico a seguir para o Windows Server 2016 fornece descrições e sintaxe de cmdlets do Windows PowerShell para toda a ponte de data center \( DCB a \) qualidade dos \( \) \- cmdlets específicos de QoS de serviço. Ela lista os cmdlets em ordem alfabética com base no verbo no início do cmdlet.
 
-- [Módulo DcbQoS](/powershell/module/dcbqos/?view=win10-ps)
+- [Módulo DcbQoS](/powershell/module/dcbqos/)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>Comandos do Windows PowerShell para DCB do Windows Server 2012 R2
 
 O tópico a seguir para o Windows Server 2012 R2 fornece descrições e sintaxe de cmdlets do Windows PowerShell para toda a ponte de data center \( DCB a \) qualidade dos \( \) \- cmdlets específicos de QoS de serviço. Ela lista os cmdlets em ordem alfabética com base no verbo no início do cmdlet.
 
-- [Cmdlets de Qualidade de Serviço (QoS) de Ponte de Datacenter no Windows PowerShell](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+- [Cmdlets de Qualidade de Serviço (QoS) de Ponte de Datacenter no Windows PowerShell](/powershell/module/dcbqos/)

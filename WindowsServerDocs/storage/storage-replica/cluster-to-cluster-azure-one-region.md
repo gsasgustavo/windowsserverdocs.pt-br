@@ -6,12 +6,12 @@ ms.author: arduppal
 ms.date: 04/26/2019
 ms.topic: article
 manager: mchad
-ms.openlocfilehash: d5c200d649bfa62314eca26cee3f5fe8601895c3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 329650a599d9092818bf6923375c03a8d5996825
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950480"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866175"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Cluster para réplica de armazenamento de cluster na mesma região no Azure
 
@@ -130,7 +130,7 @@ Parte dois
 
 16. Execute [testes de validação de cluster](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) antes de passar para a próxima etapa.
 
-17. Inicie o Windows PowerShell e use o cmdlet [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) para determinar se você atende a todos os requisitos de Réplica de Armazenamento. Você pode usar o cmdlet em um modo somente de requisitos para um teste rápido, bem como um modo de avaliação de desempenho de execução longa.
+17. Inicie o Windows PowerShell e use o cmdlet [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) para determinar se você atende a todos os requisitos de Réplica de Armazenamento. Você pode usar o cmdlet em um modo somente de requisitos para um teste rápido, bem como um modo de avaliação de desempenho de execução longa.
 
 18. Configure a réplica de armazenamento de cluster para cluster.
 
@@ -149,14 +149,14 @@ Parte dois
 
 19. Crie SRPartnership para os clusters:</ol>
 
-    - Para **SRAZC1**de cluster.
+    - Para **SRAZC1** de cluster.
     - Local do volume:-c:\ClusterStorage\DataDisk1
     - Local do log:-g:
     - Para **SRAZC2** de cluster
     - Local do volume:-c:\ClusterStorage\DataDisk2
     - Local do log:-g:
 
-Execute o seguinte comando:
+Execute o comando a seguir:
 
 ```PowerShell
 

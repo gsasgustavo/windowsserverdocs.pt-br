@@ -6,12 +6,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: Este tópico descreve o namespaces do DFS, que é um serviço de função no Windows Serve que permite que você agrupe pastas compartilhadas localizadas em diferentes servidores em um ou mais namespaces estruturados logicamente.
-ms.openlocfilehash: cc29d4bbb73a3255497b89a438c2f3962fd07751
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5f2ab44b902d5ed1d27be9eb14bda8f003387f52
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989383"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865995"
 ---
 # <a name="dfs-namespaces-overview"></a>Visão geral de Namespaces DFS
 
@@ -30,7 +30,7 @@ Aqui está uma descrição dos elementos que compõem um namespace DFS:
 
 Este tópico discute como instalar o DFS, o que há de novo e onde encontrar informações de avaliação e implantação.
 
-Você pode administrar namespaces usando Gerenciamento DFS, o [Cmdlets de Namespace de DFS (DFSN) no Windows PowerShell](/powershell/module/dfsn/?view=win10-ps), o **DfsUtil** comando ou scripts que chamam o WMI.
+Você pode administrar namespaces usando Gerenciamento DFS, o [Cmdlets de Namespace de DFS (DFSN) no Windows PowerShell](/powershell/module/dfsn/), o **DfsUtil** comando ou scripts que chamam o WMI.
 
 ## <a name="server-requirements-and-limits"></a>Requisitos e limites de servidor
 
@@ -49,7 +49,7 @@ Servidores que executam os seguintes sistemas operacionais podem hospedar vário
 
 Servidores que executam os seguintes sistemas operacionais podem hospedar um único namespace autônomo:
 
-- Windows Server 2008 R2 Standard
+- Windows Server 2008 R2 Standard
 
 A tabela a seguir descreve os fatores adicionais a serem considerados ao escolher servidores para hospedar um namespace.
 
@@ -67,7 +67,7 @@ Instale os namespaces do DFS usando o [centro de administração do Windows](../
 
 ### <a name="to-install-dfs-by-using-server-manager"></a>Para instalar DFS usando o Gerenciador do Servidor
 
-1. Abra o Gerenciador do Servidor, clique em **Gerenciar**e em **Adicionar Funções e Recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
+1. Abra o Gerenciador do Servidor, clique em **Gerenciar** e em **Adicionar Funções e Recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
 
 2. Na página **Seleção de Servidor** , selecione o servidor no VHD (disco rígido virtual) de uma máquina virtual offline na qual deseja instalar o DFS.
 
@@ -75,7 +75,7 @@ Instale os namespaces do DFS usando o [centro de administração do Windows](../
 
     - Para instalar o serviço de Namespaces de DFS, o **funções de servidor** página, selecione **Namespaces DFS**.
 
-    - Para instalar apenas as Ferramentas de Gerenciamento de DFS, na página **Recursos** , expanda **Ferramentas de Administração do Servidor Remoto**, **Ferramentas de Administração de Funções**, expanda **Ferramentas de Serviços de Arquivo**e selecione **Ferramentas de Gerenciamento de DFS**.
+    - Para instalar apenas as Ferramentas de Gerenciamento de DFS, na página **Recursos** , expanda **Ferramentas de Administração do Servidor Remoto**, **Ferramentas de Administração de Funções**, expanda **Ferramentas de Serviços de Arquivo** e selecione **Ferramentas de Gerenciamento de DFS**.
 
          **Ferramentas de Gerenciamento de DFS** instala o snap-in Gerenciamento de DFS, o módulo de Namespaces do DFS para Windows PowerShell e as ferramentas de linha de comando, mas não instala servidos de DFS no servidor.
 

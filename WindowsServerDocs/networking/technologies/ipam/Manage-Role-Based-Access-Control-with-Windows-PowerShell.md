@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 61daa0e76fdd5f8db5d81a9709d3bc8ee31c78e2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 99859a1e9f43baa969475628e743975c78ef8bff
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997581"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866465"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Gerenciar controle de acesso baseado em função com o Windows PowerShell
 
@@ -20,7 +20,7 @@ ms.locfileid: "87997581"
 Você pode usar este tópico para aprender a usar o IPAM para gerenciar o controle de acesso baseado em função com o Windows PowerShell.
 
 >[!NOTE]
->Para a referência de comando do IPAM do Windows PowerShell, consulte os [cmdlets IpamServer no Windows PowerShell](/powershell/module/ipamserver/?view=win10-ps).
+>Para a referência de comando do IPAM do Windows PowerShell, consulte os [cmdlets IpamServer no Windows PowerShell](/powershell/module/ipamserver/).
 
 Os novos comandos do IPAM do Windows PowerShell fornecem a capacidade de recuperar e alterar os escopos de acesso de objetos DNS e DHCP. A tabela a seguir ilustra o comando correto a ser usado para cada objeto IPAM.
 

@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 05daf36ebf875269906b0c287204e4ff131a678e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 31fdb8921bcb896cb009dcd4d67d57c6c503efa6
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996945"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865605"
 ---
 # <a name="whats-new-in-dns-server-in-windows-server"></a>O que há de novo no servidor DNS no Windows Server
 
@@ -32,7 +32,7 @@ No Windows Server 2016, o servidor DNS oferece suporte aprimorado nas seguintes 
 
 ## <a name="dns-policies"></a>Políticas de DNS
 
-Você pode usar a política DNS para gerenciamento de tráfego baseado em localização geográfica, respostas de DNS inteligente com base na hora do dia, para gerenciar um único servidor DNS configurado para implantação de divisão \- Brain, aplicação de filtros em consultas DNS e muito mais. Os itens a seguir fornecem mais detalhes sobre esses recursos.
+Você pode usar a política DNS para gerenciamento de tráfego baseado em Geo-Location, respostas de DNS inteligente com base na hora do dia, para gerenciar um único servidor DNS configurado para implantação de divisão \- Brain, aplicação de filtros em consultas DNS e muito mais. Os itens a seguir fornecem mais detalhes sobre esses recursos.
 
 -   **Balanceamento de carga do aplicativo.** Quando você implantou várias instâncias de um aplicativo em locais diferentes, você pode usar a política DNS para balancear a carga de tráfego entre as diferentes instâncias de aplicativo, alocando dinamicamente a carga de tráfego para o aplicativo.
 
@@ -69,7 +69,7 @@ Você pode definir configurações de RRL para controlar como responder a solici
 
 -   **Sub-redes de lista branca**. Esta é uma lista de sub-redes a serem excluídas das configurações de RRL.
 
--   **Interfaces de servidor de lista**de permissões. Esta é uma lista de interfaces do servidor DNS a ser excluída das configurações de RRL.
+-   **Interfaces de servidor de lista** de permissões. Esta é uma lista de interfaces do servidor DNS a ser excluída das configurações de RRL.
 
 ## <a name="dane-support"></a>Suporte ao SUNDANÊS
 
@@ -145,8 +145,8 @@ Os novos cmdlets e parâmetros do Windows PowerShell a seguir são introduzidos 
 
 Para obter mais informações, consulte os seguintes tópicos de referência de comando do Windows Server 2016 do Windows PowerShell.
 
-- [Módulo DnsServer](/powershell/module/dnsserver/?view=win10-ps)
-- [Módulo DnsClient](/powershell/module/dnsclient/?view=win10-ps)
+- [Módulo DnsServer](/powershell/module/dnsserver/)
+- [Módulo DnsClient](/powershell/module/dnsclient/)
 
 ## <a name="additional-references"></a>Referências adicionais
 

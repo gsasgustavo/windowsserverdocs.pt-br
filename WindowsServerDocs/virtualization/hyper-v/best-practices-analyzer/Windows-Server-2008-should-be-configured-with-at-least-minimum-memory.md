@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b5065a3f-364d-4aa9-8703-eafa7a46b575
 ms.date: 8/16/2016
-ms.openlocfilehash: ab991826d185d46ad1cc15db15d0306f6cf3848b
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 24fae758171c8bd21a913d09fafb0f25ed2a6b60
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745431"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865865"
 ---
 # <a name="windows-server-2008-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>O Windows Server 2008 deve ser configurado com pelo menos a quantidade mínima de memória
 
@@ -67,4 +67,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)

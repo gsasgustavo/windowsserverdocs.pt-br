@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.openlocfilehash: 87ba92facff58c43e6ee6427407e29c0892d6228
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ab4ec06fdf0af2c3d88a1404255fe697a4d45d8a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958864"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866365"
 ---
 # <a name="scenario-web-app-server-app-calling-web-api"></a>Cenário: aplicativo Web (aplicativo de servidor) chamando API Web
 >Aplica-se a: AD FS 2019 e posterior
@@ -24,7 +24,7 @@ Antes de ler este artigo, você deve estar familiarizado com os [conceitos de AD
 
 ![Visão geral da API Web de chamada de aplicativo Web](media/adfs-msal-web-app-web-api/webapp1.png)
 
-Nesse fluxo, você adiciona autenticação ao seu aplicativo Web (aplicativo de servidor), que, portanto, pode conectar usuários e chamar uma API da Web. No aplicativo Web, para chamar a API Web, use o método de aquisição de token [AcquireTokenByAuthorizationCode](/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) da MSAL. Você usará o fluxo de código de autorização, armazenando o token adquirido no cache de token. Em seguida, o controlador adquirirá tokens silenciosamente do cache sempre que necessário. A MSAL atualiza o token, se necessário.
+Nesse fluxo, você adiciona autenticação ao seu aplicativo Web (aplicativo de servidor), que, portanto, pode conectar usuários e chamar uma API da Web. No aplicativo Web, para chamar a API Web, use o método de aquisição de token [AcquireTokenByAuthorizationCode](/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder) da MSAL. Você usará o fluxo de código de autorização, armazenando o token adquirido no cache de token. Em seguida, o controlador adquirirá tokens silenciosamente do cache sempre que necessário. A MSAL atualiza o token, se necessário.
 
 Aplicativos Web que chamam APIs da Web:
 
@@ -45,19 +45,19 @@ Para entender melhor como registrar um aplicativo Web no ADFS e configurá-lo pa
 Esta seção mostra como registrar o aplicativo Web como um cliente confidencial e uma API Web como uma terceira parte confiável (RP) no AD FS.
 
   1. Em gerenciamento de AD FS, clique com o botão direito do mouse em **grupos de aplicativos** e selecione **Adicionar grupo de aplicativos**.
-  2. No assistente de grupo de aplicativos, para o **nome** , insira **WebAppToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo de servidor acessando um modelo de API Web** . Clique em **Próximo**.
+  2. No assistente de grupo de aplicativos, para o **nome** , insira **WebAppToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo de servidor acessando um modelo de API Web** . Clique em **Avançar**.
 
       ![Adicionar grupo de aplicativos](media/adfs-msal-web-app-web-api/webapp2.png)
 
-  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ida: ClientID** no arquivo de **Web.config** de aplicativos. Insira o seguinte para o **URI de redirecionamento:**  -  https://localhost:44326 . Clique em Adicionar. Clique em **Próximo**.
+  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ida: ClientID** no arquivo de **Web.config** de aplicativos. Insira o seguinte para o **URI de redirecionamento:**  -  https://localhost:44326 . Clique em Adicionar. Clique em **Avançar**.
 
       ![Adicionar grupo de aplicativos](media/adfs-msal-web-app-web-api/webapp3.png)
 
-  4. Na tela configurar credenciais do aplicativo, faça um check-in **gerar um segredo compartilhado** e copie o segredo. Isso será usado posteriormente como o valor de **ida: ClientSecret** no arquivo de **Web.config** de aplicativos. Clique em **Próximo**.
+  4. Na tela configurar credenciais do aplicativo, faça um check-in **gerar um segredo compartilhado** e copie o segredo. Isso será usado posteriormente como o valor de **ida: ClientSecret** no arquivo de **Web.config** de aplicativos. Clique em **Avançar**.
 
       ![Adicionar grupo de aplicativos](media/adfs-msal-web-app-web-api/webapp4.png)
 
-  5. Na tela configurar API da Web, insira o **identificador:** https://webapi . Clique em **Adicionar**. Clique em **Próximo**. Esse valor será usado posteriormente para **ida: GraphResourceId** no arquivo de **Web.config** de aplicativos.
+  5. Na tela configurar API da Web, insira o **identificador:** https://webapi . Clique em **Adicionar**. Clique em **Avançar**. Esse valor será usado posteriormente para **ida: GraphResourceId** no arquivo de **Web.config** de aplicativos.
 
       ![Adicionar grupo de aplicativos](media/adfs-msal-web-app-web-api/webapp5.png)
 

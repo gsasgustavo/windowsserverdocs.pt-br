@@ -1,20 +1,20 @@
 ---
 ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
-title: Opções avançadas de atualização com suporte a cluster e atualização de perfis de execução
-description: Como configurar opções avançadas e atualizar perfis de execução para a atualização com suporte a cluster (CAU)
+title: Cluster-Aware atualizar opções avançadas e atualizar perfis de execução
+description: Como configurar opções avançadas e atualizar perfis de execução para a atualização de Cluster-Aware (CAU)
 ms.topic: article
 manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 08/06/2018
-ms.openlocfilehash: f5f81edbe1c7eab772d1c4b1bbe90695fa725f8c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2d3975dacc37551b11cda1c8d88fe5cde9dc6424
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990898"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866295"
 ---
-# <a name="cluster-aware-updating-advanced-options-and-updating-run-profiles"></a>Opções avançadas de atualização com suporte a cluster e atualização de perfis de execução
+# <a name="cluster-aware-updating-advanced-options-and-updating-run-profiles"></a>Cluster-Aware atualizar opções avançadas e atualizar perfis de execução
 
 > Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
 
@@ -29,7 +29,7 @@ As opções que você especifica ao solicitar uma execução de atualização us
 A tabela a seguir lista as opções que podem ser definidas em uma Execução de Atualização da CAU.
 
 > [!NOTE]
-> Para definir a opção PreUpdateScript ou PostUpdateScript, verifique se o Windows PowerShell e o .NET Framework 4,6 ou 4,5 estão instalados e se a comunicação remota do PowerShell está habilitada em cada nó no cluster. Para obter mais informações, consulte Configurar os nós para gerenciamento remoto em [requisitos e práticas recomendadas para atualização com suporte a cluster](cluster-aware-updating-requirements.md).
+> Para definir a opção PreUpdateScript ou PostUpdateScript, verifique se o Windows PowerShell e o .NET Framework 4,6 ou 4,5 estão instalados e se a comunicação remota do PowerShell está habilitada em cada nó no cluster. Para obter mais informações, consulte Configurar os nós para gerenciamento remoto em [requisitos e práticas recomendadas para atualização de Cluster-Aware](cluster-aware-updating-requirements.md).
 
 
 |Opção|Valor padrão|Detalhes|
@@ -40,13 +40,13 @@ A tabela a seguir lista as opções que podem ser definidas em uma Execução de
 |**MaxFailedNodes**|Para a maioria dos clusters, um número inteiro que corresponde a aproximadamente um terço do número de nós do cluster|O número máximo de nós em que a atualização pode falhar devido a falhas nos nós ou interrupção do Serviço de cluster. Se um ou mais nós falharem, a Execução de Atualização será interrompida.<p>O intervalo válido de valores é de 0 a 1, menor do que número de nós do cluster.|
 |**RequireAllNodesOnline**|Nenhum|Especifica se todos os nós devem estar online e acessíveis antes de começar a atualização.|
 |**RebootTimeoutMinutes**|15|Tempo em minutos durante o qual a CAU permitirá a reinicialização de um nó (caso seja necessária uma reinicialização) e a inicialização de todos os serviços de início automático. Se o processo de reinicialização não for concluído dentro desse período, a execução da atualização nesse nó será marcada como com falha.|
-|**PreUpdateScript**|Nenhum|O caminho e o nome de arquivo para um script do PowerShell a ser executado em cada nó antes do início da atualização e antes que o nó seja colocado no modo de manutenção. A extensão de nome de arquivo deve ser **. ps1**e o comprimento total do caminho mais o nome de arquivo não deve exceder 260 caracteres. Como prática recomendada, o script deve estar localizado em um disco, no armazenamento de cluster, ou em um compartilhamento de arquivos de rede com alta disponibilidade, para garantir que estará sempre acessível em todos os nós do cluster. Se o script estiver localizado em um compartilhamento de arquivos de rede, configure o compartilhamento de arquivos com a permissão de leitura para o grupo Todos e restrinja o acesso para gravação para impedir que usuários não autorizados falsifiquem os arquivos.<p> Se você especificar um script de pré-atualização, verifique se algumas configurações, como limites de tempo (por exemplo, **StopAfter**), estão configuradas para que o script seja executado com êxito. Esses limites abrangem todo o processo de execução de scripts e instalação de atualizações, não apenas o processo de instalação de atualizações.|
+|**PreUpdateScript**|Nenhum|O caminho e o nome de arquivo para um script do PowerShell a ser executado em cada nó antes do início da atualização e antes que o nó seja colocado no modo de manutenção. A extensão de nome de arquivo deve ser **. ps1** e o comprimento total do caminho mais o nome de arquivo não deve exceder 260 caracteres. Como prática recomendada, o script deve estar localizado em um disco, no armazenamento de cluster, ou em um compartilhamento de arquivos de rede com alta disponibilidade, para garantir que estará sempre acessível em todos os nós do cluster. Se o script estiver localizado em um compartilhamento de arquivos de rede, configure o compartilhamento de arquivos com a permissão de leitura para o grupo Todos e restrinja o acesso para gravação para impedir que usuários não autorizados falsifiquem os arquivos.<p> Se você especificar um script de pré-atualização, verifique se algumas configurações, como limites de tempo (por exemplo, **StopAfter**), estão configuradas para que o script seja executado com êxito. Esses limites abrangem todo o processo de execução de scripts e instalação de atualizações, não apenas o processo de instalação de atualizações.|
 |**PostUpdateScript**|Nenhum|O caminho e o nome de arquivo para um script do PowerShell a ser executado após a conclusão da atualização (depois que o nó sair do modo de manutenção). A extensão de nome de arquivo deve ser **. ps1** e o comprimento total do caminho mais o nome de arquivo não deve exceder 260 caracteres. Como prática recomendada, o script deve estar localizado em um disco, no armazenamento de cluster, ou em um compartilhamento de arquivos de rede com alta disponibilidade, para garantir que estará sempre acessível em todos os nós do cluster. Se o script estiver localizado em um compartilhamento de arquivos de rede, configure o compartilhamento de arquivos com a permissão de leitura para o grupo Todos e restrinja o acesso para gravação para impedir que usuários não autorizados falsifiquem os arquivos.<p> Se você especificar um script de pós-atualização, verifique se algumas configurações, como limites de tempo (por exemplo, **StopAfter**), estão configuradas para que o script seja executado com êxito. Esses limites abrangem todo o processo de execução de scripts e instalação de atualizações, não apenas o processo de instalação de atualizações.|
 |**ConfigurationName**|Essa configuração só terá efeito se você executar scripts.<p> Se você especificar um script de pré-atualização ou um script de pós-atualização, mas não especificar um **ConfigurationName**, a configuração de sessão padrão para o PowerShell (Microsoft. PowerShell) será usada.|Especifica a configuração de sessão do PowerShell que define a sessão na qual os scripts (especificados por **PreUpdateScript** e **PostUpdateScript**) são executados e podem limitar os comandos que podem ser executados.|
-|**CauPluginName**|**Microsoft.WindowsUpdatePlugin**|Plug-in no qual você configura a Atualização com Suporte a Cluster a ser usada para visualizar atualizações ou executar uma Execução de Atualização. Para obter mais informações, consulte [como funcionam os plug-ins de atualização com suporte a cluster](cluster-aware-updating-plug-ins.md).|
-|**CauPluginArguments**|Nenhum|Um conjunto de pares (argumentos) *nome=valor* do plug-in para atualização a ser usado, por exemplo:<p>**Domínio = domínio. local**<p>Esses pares *nome=valor* devem ser significativos para o plug-in especificado em **CauPluginName**.<p>Para especificar um argumento usando a interface do usuário da CAU, digite o *name* (nome), pressione a tecla Tab e digite o *value* (valor) correspondente. Pressione a tecla TAB novamente para fornecer o próximo argumento. Cada *nome* e *valor* é automaticamente separado por um sinal de igual (=). Vários pares são separados automaticamente por ponto e vírgula.<p>Para o plug-in padrão **Microsoft. WindowsUpdatePlugin** , nenhum argumento é necessário. Entretanto, é possível especificar um argumento opcional; por exemplo, para definir um consulta padrão do Windows Update Agent para filtrar o conjunto de atualizações a ser aplicado pelo plug-in. Para um *nome*, use **QueryString**e, para um *valor*, coloque a consulta completa entre aspas.<p> Para obter mais informações, consulte [como funcionam os plug-ins de atualização com suporte a cluster](cluster-aware-updating-plug-ins.md).|
+|**CauPluginName**|**Microsoft.WindowsUpdatePlugin**|Plug-in no qual você configura a Atualização com Suporte a Cluster a ser usada para visualizar atualizações ou executar uma Execução de Atualização. Para obter mais informações, consulte [como Cluster-Aware atualizar plug-ins funcionam](cluster-aware-updating-plug-ins.md).|
+|**CauPluginArguments**|Nenhum|Um conjunto de pares (argumentos) *nome=valor* do plug-in para atualização a ser usado, por exemplo:<p>**Domínio = domínio. local**<p>Esses pares *nome=valor* devem ser significativos para o plug-in especificado em **CauPluginName**.<p>Para especificar um argumento usando a interface do usuário da CAU, digite o *name* (nome), pressione a tecla Tab e digite o *value* (valor) correspondente. Pressione a tecla TAB novamente para fornecer o próximo argumento. Cada *nome* e *valor* é automaticamente separado por um sinal de igual (=). Vários pares são separados automaticamente por ponto e vírgula.<p>Para o plug-in padrão **Microsoft. WindowsUpdatePlugin** , nenhum argumento é necessário. Entretanto, é possível especificar um argumento opcional; por exemplo, para definir um consulta padrão do Windows Update Agent para filtrar o conjunto de atualizações a ser aplicado pelo plug-in. Para um *nome*, use **QueryString** e, para um *valor*, coloque a consulta completa entre aspas.<p> Para obter mais informações, consulte [como Cluster-Aware atualizar plug-ins funcionam](cluster-aware-updating-plug-ins.md).|
 
-##  <a name="options-that-you-specify-when-you-request-an-updating-run"></a><a name="BKMK_runtime"></a>Opções que você especifica ao solicitar uma execução de atualização
+##  <a name="options-that-you-specify-when-you-request-an-updating-run"></a><a name="BKMK_runtime"></a> Opções que você especifica ao solicitar uma execução de atualização
  A tabela a seguir lista opções (que não aquelas em um Perfil de Execução de Atualização) que você pode especificar ao solicitar uma Execução de Atualização. Para obter informações sobre as opções que podem ser definidas em um Perfil de Execução de Atualização, consulte a tabela anterior.
 
 |Opção|Valor padrão|Detalhes|
@@ -55,7 +55,7 @@ A tabela a seguir lista as opções que podem ser definidas em uma Execução de
 |**Credencial**|Credenciais atuais da conta|Credenciais administrativas do cluster de destino no qual realizar a Execução de Atualização. Talvez você já tenha as credenciais necessárias se iniciar a interface do usuário da CAU (ou abrir uma sessão do PowerShell, se você estiver usando os cmdlets do PowerShell da CAU) de uma conta que tenha direitos de administrador e permissões no cluster.|
 |**NodeOrder**|Por padrão, a CAU é iniciada com o nó que contém o menor número de funções clusterizadas; depois, avança para o nó com o segundo menor número de funções e assim por diante.|Nomes dos nós do cluster na ordem em que precisam ser atualizados (se possível).|
 
-##  <a name="use-updating-run-profiles"></a><a name="BKMK_profile"></a>Usar perfis de execução de atualização
+##  <a name="use-updating-run-profiles"></a><a name="BKMK_profile"></a> Usar perfis de execução de atualização
  Cada Execução de Atualização pode ser associada a um Perfil de Execução de Atualização específico. O perfil de execução de atualização padrão é armazenado na pasta *%windir%\Cluster* Se você estiver usando a interface do usuário da CAU no modo de atualização remota, poderá especificar um perfil de execução de atualização no momento em que aplicar as atualizações ou usar o perfil de execução de atualização padrão. Se você estiver usando a CAU no modo de autoatualização, poderá importar as configurações de um perfil de execução de atualização especificado ao configurar as opções de autoatualização. Nos dois casos, é possível substituir os valores exibidos para as opções de Execução de Atualização, de acordo com as suas necessidades. Se quiser, você poderá salvar as opções de Execução de Atualização como um Perfil de Execução de Atualização, usando o mesmo nome de arquivo ou um diferente. Na próxima vez que aplicar atualizações ou configurar opções de autoatualização, a CAU selecionará automaticamente o Perfil de Execução de Atualização escolhido antes.
 
  Você pode modificar um perfil de execução de atualização existente ou criar um novo selecionando **criar ou modificar perfil de execução de atualização** na interface do usuário da cau.
@@ -68,7 +68,7 @@ Aqui estão algumas observações importantes sobre o uso de perfis de execuçã
 
 ### <a name="windows-powershell-equivalent-commands"></a>Comandos equivalentes do Windows PowerShell
 
- Você pode importar as configurações de um perfil de execução de atualização ao executar o cmdlet **Invoke-CauRun**, **Add-CauClusterRole**ou **set-CauClusterRole** .
+ Você pode importar as configurações de um perfil de execução de atualização ao executar o cmdlet **Invoke-CauRun**, **Add-CauClusterRole** ou **set-CauClusterRole** .
 
  O exemplo a seguir realiza uma verificação e uma Execução de Atualização completa no cluster denominado *CONTOSO-FC1* usando as opções de Execução de Atualização especificadas em *C:\Windows\Cluster\DefaultParameters.xml*. Os valores padrão são usados para o restante dos parâmetros de cmdlet.
 
@@ -85,4 +85,4 @@ Invoke-CauRun –ClusterName CONTOSO-FC1 @MyRunProfile
 
 -   [Atualização com suporte a cluster](cluster-aware-updating.md)
 
--   [Cmdlets de atualização com suporte a cluster no Windows PowerShell](/powershell/module/clusterawareupdating/?view=win10-ps)
+-   [Cmdlets de atualização com suporte a cluster no Windows PowerShell](/powershell/module/clusterawareupdating/)

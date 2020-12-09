@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 27ceace93c42ccabdb2db0208c6e3dabce41e1b0
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5f789904903838e838e5de0c8de78266055fbcd6
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766809"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866495"
 ---
 # <a name="network-controller"></a>Controlador de rede
 
@@ -28,7 +28,7 @@ Usando o Controlador de Rede, você pode automatizar a configuração da infraes
 > - [Implantar controlador de rede usando o Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 > - [Instalar a função de servidor do Controlador de Rede usando o Gerenciador do Servidor](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [Etapas pós-implantação para o controlador de rede](post-deploy-steps-nc.md)
-> - [Cmdlets do controlador de rede](/powershell/module/networkcontroller/?view=win10-ps)
+> - [Cmdlets do controlador de rede](/powershell/module/networkcontroller/)
 
 ## <a name="network-controller-overview"></a><a name="bkmk_overview"></a>Visão geral do Controlador de Rede
 
@@ -37,7 +37,7 @@ O controlador de rede é uma função de servidor altamente disponível e escalo
 Você pode implantar o controlador de rede em ambientes de domínio e fora do domínio. Em ambientes de domínio, o controlador de rede autentica usuários e dispositivos de rede usando o Kerberos; em ambientes que não são de domínio, você deve implantar certificados para autenticação.
 
 >[!IMPORTANT]
->Não implante a função de servidor do controlador de rede em hosts físicos. Para implantar o controlador de rede, você deve instalar a função de servidor do controlador de rede em uma VM de máquina virtual do Hyper-V \( \) instalada em um host do Hyper-v. Depois de ter instalado o controlador de rede em VMs em três \- hosts Hyper-v diferentes, você deve habilitar os \- hosts Hyper v para o Sdn de rede definido pelo software \( \) adicionando os hosts ao controlador de rede usando o comando **New-NetworkControllerServer**do Windows PowerShell. Ao fazer isso, você está permitindo que o software SDN Load Balancer funcione. Para obter mais informações, consulte [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
+>Não implante a função de servidor do controlador de rede em hosts físicos. Para implantar o controlador de rede, você deve instalar a função de servidor do controlador de rede em uma VM de máquina virtual do Hyper-V \( \) instalada em um host do Hyper-v. Depois de ter instalado o controlador de rede em VMs em três \- hosts Hyper-v diferentes, você deve habilitar os \- hosts Hyper v para o Sdn de rede definido pelo software \( \) adicionando os hosts ao controlador de rede usando o comando **New-NetworkControllerServer** do Windows PowerShell. Ao fazer isso, você está permitindo que o software SDN Load Balancer funcione. Para obter mais informações, consulte [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
 
 O Controlador de Rede se comunica com os dispositivos, os serviços e os componentes de rede usando a API Southbound. Com a API Southbound, o Controlador de Rede pode descobrir dispositivos de rede, detectar configurações de serviço e reunir todas as informações que você precisa sobre a rede. Além disso, a API Southbound fornece ao Controlador de Rede um caminho para enviar informações à infraestrutura de rede, como as alterações de configuração que você fez.
 
@@ -126,7 +126,7 @@ Para obter mais informações sobre o gateway RAS, consulte [Gateway de RAS para
 
 ## <a name="network-controller-deployment-options"></a>Opções de implantação do controlador de rede
 
-Para implantar o controlador de rede usando \( o System Center Virtual Machine Manager VMM \) , consulte [configurar um controlador de rede Sdn na malha do VMM](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
+Para implantar o controlador de rede usando \( o System Center Virtual Machine Manager VMM \) , consulte [configurar um controlador de rede Sdn na malha do VMM](/system-center/vmm/sdn-controller).
 
 Para implantar o controlador de rede usando scripts, consulte [implantar uma infraestrutura de rede definida pelo software usando scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

@@ -6,12 +6,12 @@ ms.author: jiwool
 ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
-ms.openlocfilehash: 7e2c287666115b9a81c6ab5585187f26dad7a5e3
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: bc49260471394ab1efd342fa51b8649b680b2851
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746461"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865795"
 ---
 # <a name="create-hyper-v-vhd-set-files"></a>Criar arquivos de conjunto de VHD do Hyper-V
 Os arquivos do conjunto VHD são um novo modelo de disco virtual compartilhado para clusters convidados no Windows Server 2016. Os arquivos de conjunto de VHD dão suporte ao redimensionamento online de discos virtuais compartilhados, dão suporte à réplica do Hyper-V e podem ser incluídos em pontos de verificação consistentes com o aplicativo.
@@ -33,7 +33,7 @@ O Hyper-V trata de todos os aspectos do gerenciamento das cadeias de pontos de v
 
 ## <a name="create-a-vhd-set-file-from-windows-powershell"></a>Criar um arquivo de conjunto de VHD do Windows PowerShell
 
-Use o cmdlet [New-VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps) , com o tipo de arquivo. VHDS no caminho do arquivo. Este exemplo cria um arquivo de conjunto VHD chamado base. VHDs com 10 gigabytes de tamanho.
+Use o cmdlet [New-VHD](/powershell/module/hyper-v/new-vhd) , com o tipo de arquivo. VHDS no caminho do arquivo. Este exemplo cria um arquivo de conjunto VHD chamado base. VHDs com 10 gigabytes de tamanho.
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB

@@ -6,12 +6,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
-ms.openlocfilehash: 22c200012e0e655c14fd68a514e795b7d3f3ec26
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 574171b8e5569b2041492a95ebfe146cfd487523
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938732"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865785"
 ---
 # <a name="setup-geographic-redundancy-with-sql-server-replication"></a>Configurar a redundância geográfica com o Replicação do SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "87938732"
 Se você estiver usando SQL Server como seu banco de dados de configuração do AD FS, poderá configurar \- a redundância geográfica para seu farm de AD FS usando a replicação SQL Server. \-A redundância geográfica replica dados entre dois sites distantes geograficamente para que os aplicativos possam mudar de um site para outro. Dessa forma, em caso de falha de um site, você ainda pode ter todos os dados de configuração disponíveis no segundo site. Para obter mais informações, consulte a "seção SQL Server de redundância geográfica" no [farm de servidores de Federação usando SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
-Instalar e configurar um farm do SQL Server. Para obter mais informações, consulte [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/). Na SQL Server inicial, verifique se o serviço SQL Server Agent está em execução e definido como início automático.
+Instalar e configurar um farm do SQL Server. Para obter mais informações, confira [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/). Na SQL Server inicial, verifique se o serviço SQL Server Agent está em execução e definido como início automático.
 
 ## <a name="create-the-second-replica-sql-server-for-geo-redundancy"></a>Criar a segunda \( \) SQL Server de réplica para \- redundância geográfica
 
@@ -71,7 +71,7 @@ Instalar e configurar um farm do SQL Server. Para obter mais informações, cons
 7. Em **tipos de assinante**, escolha **SQL Server 2008 ou posterior** e clique em **Avançar**.
    ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql13.png) </br>
 
-8. Na página de **artigos** , selecione o nó **tabelas** para selecionar todas as tabelas e, em seguida, ** \- desmarque sincronizar** tabela de sincronização \( esta não deve ser replicada\)</br>
+8. Na página de **artigos** , selecione o nó **tabelas** para selecionar todas as tabelas e, em seguida, **\- desmarque sincronizar** tabela de sincronização \( esta não deve ser replicada\)</br>
    ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql14.png) </br>
 
 9. Na página **artigos** , selecione o nó **funções definidas pelo usuário** para selecionar todas as funções definidas pelo usuário e clique em **Avançar**.
@@ -86,7 +86,7 @@ Instalar e configurar um farm do SQL Server. Para obter mais informações, cons
     ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql18.png) </br>
     Talvez seja necessário criar uma conta de domínio para o SQL Agent. Use as etapas em [Configurar logon do SQL para a conta de domínio contoso \\ SQLAgent](Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md#sqlagent) para criar o logon do SQL para esse novo usuário do AD e atribuir permissões específicas.
 
-13. Na página **segurança do agente** , clique em **configurações de segurança** e insira a \/ senha de nome de usuário de uma conta de domínio \( não um GMSA \) criado para o SQL Agent e clique em **OK**.  Clique em **Próximo**.
+13. Na página **segurança do agente** , clique em **configurações de segurança** e insira a \/ senha de nome de usuário de uma conta de domínio \( não um GMSA \) criado para o SQL Agent e clique em **OK**.  Clique em **Avançar**.
     ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql19.png) </br>
 
 14. Na página **ações do assistente** , clique em **Avançar**.
@@ -113,7 +113,7 @@ Certifique-se de que você criou as configurações do Publicador na SQL Server 
    ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql26.png) </br>
 
 4. Na página **local do agente de mesclagem** , selecione **executar cada agente em seu assinante \( \) assinaturas pull** \( do padrão \) e clique em **Avançar**.
-   ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> Isso, juntamente com o tipo de assinatura abaixo, determina a lógica de resolução de conflitos. \(Para obter mais informações, consulte [detectar e resolver conflitos de replicação de mesclagem](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15). </br>
+   ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> Isso, juntamente com o tipo de assinatura abaixo, determina a lógica de resolução de conflitos. \(Para obter mais informações, consulte [detectar e resolver conflitos de replicação de mesclagem](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution). </br>
 
 5. Na página **assinantes** , selecione **AdfsConfigurationV3** como o banco de dados do assinante e clique em **Avançar**.
    ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql28.png) </br>
@@ -129,7 +129,7 @@ Certifique-se de que você criou as configurações do Publicador na SQL Server 
 
 9. Em **tipo de assinatura**, escolha **cliente** e clique em **Avançar**.
 
-   As implicações disso estão documentadas [aqui](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15) e [aqui](/sql/relational-databases/replication/subscribe-to-publications?view=sql-server-ver15).  Essencialmente, pegamos a resolução de conflitos simples de "primeiro para o Publicador" e não precisamos republicar para outros assinantes.
+   As implicações disso estão documentadas [aqui](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution) e [aqui](/sql/relational-databases/replication/subscribe-to-publications).  Essencialmente, pegamos a resolução de conflitos simples de "primeiro para o Publicador" e não precisamos republicar para outros assinantes.
    ![Configurar a redundância geográfica](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql33.png) </br>
 
 10. Na página **ações do assistente** , verifique se **a opção criar a assinatura** está marcada e clique em **Avançar**.
@@ -157,7 +157,7 @@ Certifique-se de que você criou as configurações do Publicador na SQL Server 
 
 1.  Crie um novo logon no primário e na réplica SQL Server chamada CONTOSO \\ SQLAgent \( o nome do novo usuário de domínio criado e configurado na página **segurança do agente** nos procedimentos acima.\)
 
-2.  Em SQL Server, \- clique com o botão direito do mouse no logon que você criou e selecione Propriedades e, na guia **mapeamento de usuário** , mapeie esse logon para bancos de dados **AdfsConfiguration** e **AdfsArtifact** com as funções Public e DB \_ genevaservice. Mapeie também o logon para o banco de dados de distribuição e adicione a \_ função de proprietário DB para as tabelas de distribuição e adfsconfiguration.  Faça isso conforme aplicável no SQL Server primário e de réplica. Para obter mais informações, consulte [Replication Agent Security Model](/sql/relational-databases/replication/security/replication-agent-security-model?view=sql-server-ver15).
+2.  Em SQL Server, \- clique com o botão direito do mouse no logon que você criou e selecione Propriedades e, na guia **mapeamento de usuário** , mapeie esse logon para bancos de dados **AdfsConfiguration** e **AdfsArtifact** com as funções Public e DB \_ genevaservice. Mapeie também o logon para o banco de dados de distribuição e adicione a \_ função de proprietário DB para as tabelas de distribuição e adfsconfiguration.  Faça isso conforme aplicável no SQL Server primário e de réplica. Para obter mais informações, consulte [Replication Agent Security Model](/sql/relational-databases/replication/security/replication-agent-security-model).
 
 3.  Conceda à conta de domínio correspondente permissões de leitura e gravação no compartilhamento configurado como distribuidor.  Verifique se você definiu as permissões de leitura e gravação nas permissões de compartilhamento e nas permissões de arquivo local.
 

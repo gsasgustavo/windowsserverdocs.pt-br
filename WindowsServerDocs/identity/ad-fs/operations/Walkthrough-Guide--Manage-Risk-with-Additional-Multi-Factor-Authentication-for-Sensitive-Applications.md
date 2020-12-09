@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f651f60b5ba9e871a88a2df15d87b6819e851642
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1dc0b0c278577e7318ead6b4e3ebba04b21c8a9c
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956283"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866275"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>Guia Passo a passo: gerencie riscos com Multi-Factor Authentication adicional para aplicativos confidenciais
 
@@ -134,7 +134,7 @@ Conclua os procedimentos a seguir para baixar, configurar e selecionar a **auten
 
     3.  **Diretório** -o locatário do Windows Azure Active Directory ao qual o provedor de autenticação multifator está associado. Isso é opcional, já que o provedor não precisa estar ligado ao Active Directory do Windows Azure durante a proteção de aplicativos no local.
 
-7.  Depois de clicar em criar, o provedor de Multi-Factor Authentication será criado e você verá uma mensagem dizendo:  Provedor de Multi-Factor Authentication criado com sucesso.  Clique em **OK**.
+7.  Depois de clicar em criar, o provedor de Multi-Factor Authentication será criado e você verá uma mensagem dizendo:  Provedor de Multi-Factor Authentication criado com sucesso.  Clique em **Ok**.
 
 Em seguida, é preciso baixar o Servidor de Autenticação Multifator do Microsoft Azure. É possível fazer isso inicializando o portal de autenticação multifator do Windows Azure através do portal do Windows Azure.
 
@@ -193,7 +193,7 @@ Agora você está pronto para iniciar o Servidor de Autenticação Multifator do
 9. Para configurar a Autenticação Multifator do Windows Azure como método de autenticação adicional, no Console de Gerenciamento do AD FS, navegue até o nó **Políticas de autenticação** e, na seção **Autenticação Multifator**, clique no link **Editar** ao lado da sub-seção **Configurações Globais**. Na janela **Editar Política de Autenticação Global**, selecione **Autenticação Multifator** como um método de autenticação adicional e clique em **OK**.
 
     > [!NOTE]
-    > Você pode personalizar o nome e a descrição do método de autenticação multifator do Windows Azure, bem como qualquer método de autenticação configurado de terceiros, como aparece na interface de usuário do AD FS, executando o **Set-AdfsAuthenticationProviderWebContent** cmdlet. Para obter mais informações, consulte[https://technet.microsoft.com/library/dn479401.aspx](/powershell/module/adfs/set-adfsauthenticationproviderwebcontent?view=win10-ps)
+    > Você pode personalizar o nome e a descrição do método de autenticação multifator do Windows Azure, bem como qualquer método de autenticação configurado de terceiros, como aparece na interface de usuário do AD FS, executando o **Set-AdfsAuthenticationProviderWebContent** cmdlet. Para obter mais informações, consulte [https://technet.microsoft.com/library/dn479401.aspx](/powershell/module/adfs/set-adfsauthenticationproviderwebcontent)
 
 ### <a name="set-up-mfa-policy"></a><a name="BKMK_6"></a>Configurar a política da MFA
 Para habilitar a MFA, é preciso configurar a política da MFA no servidor de federação. Nestas instruções, por nossa política de MFA, a conta de **Robert Hatley** é necessária para passar a MFA porque ela pertence ao grupo **financeiro** que você configurou em [Configurar o ambiente de laboratório para AD FS no Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
@@ -206,7 +206,7 @@ Para habilitar a MFA, é preciso configurar a política da MFA no servidor de fe
 
 2.  Na página **Ações** ou clicando com o botão direito do mouse em **claimapp**, selecione **Editar Autenticação de Multifator Personalizada**.
 
-3.  Na janela **Editar Objeto de Confiança da Terceira Parte Confiável para claimapp**, clique no botão **Adicionar**, ao lado da lista **Usuários/Grupos**. Digite **Finance** como o nome do seu grupo do AD que você criou em [Configurar o ambiente de laboratório para AD FS no Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)e clique em **verificar nomes**e, quando o nome for resolvido, clique em **OK**.
+3.  Na janela **Editar Objeto de Confiança da Terceira Parte Confiável para claimapp**, clique no botão **Adicionar**, ao lado da lista **Usuários/Grupos**. Digite **Finance** como o nome do seu grupo do AD que você criou em [Configurar o ambiente de laboratório para AD FS no Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)e clique em **verificar nomes** e, quando o nome for resolvido, clique em **OK**.
 
 4.  Clique em **OK** na janela **Editar Objeto de Confiança da Terceira Parte Confiável para claimapp**.
 

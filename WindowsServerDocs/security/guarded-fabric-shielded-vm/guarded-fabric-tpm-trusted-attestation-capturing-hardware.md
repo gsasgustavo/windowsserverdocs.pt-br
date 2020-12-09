@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 04/01/2019
-ms.openlocfilehash: c1d169147c6b09c8a238163a961c192e3e483728
-ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
+ms.openlocfilehash: 8ce4528ec7e8143c6f9af977079eed1cf8cc3940
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155953"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865655"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>Autorizar hosts protegidos usando atestado baseado em TPM
 
@@ -80,7 +80,7 @@ A partir do Windows Server versão 1709, as políticas de integridade de código
 
 É recomendável que você primeiro crie a política CI no modo de auditoria (log) para ver se está faltando alguma coisa e, em seguida, impor a política para cargas de trabalho de produção do host.
 
-Se você usar o cmdlet [New-CIPolicy](/powershell/module/configci/new-cipolicy?view=win10-ps) para gerar sua própria política de integridade de código, será necessário decidir os níveis de regra a serem usados.
+Se você usar o cmdlet [New-CIPolicy](/powershell/module/configci/new-cipolicy) para gerar sua própria política de integridade de código, será necessário decidir os níveis de regra a serem usados.
 Recomendamos um nível primário do **Publicador** com fallback para **hash**, que permite que a maioria dos softwares assinados digitalmente sejam atualizados sem alterar a política de CI.
 Novos softwares escritos pelo mesmo editor também podem ser instalados no servidor sem alterar a política de CI.
 Os executáveis que não forem assinados digitalmente serão codificados – as atualizações nesses arquivos exigirão que você crie uma nova política de CI.
@@ -101,7 +101,7 @@ Para obter mais informações sobre os níveis de regra de política de CI dispo
 
 3.  Aplique a política CI ao seu host de referência:
 
-    1.  Execute o comando a seguir para configurar o computador para usar sua política de CI. Você também pode implantar a política CI com [política de grupo](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) ou [System Center Virtual Machine Manager](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+    1.  Execute o comando a seguir para configurar o computador para usar sua política de CI. Você também pode implantar a política CI com [política de grupo](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) ou [System Center Virtual Machine Manager](/system-center/vmm/guarded-deploy-host#manage-and-deploy-code-integrity-policies-with-vmm).
 
         ```powershell
         Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }

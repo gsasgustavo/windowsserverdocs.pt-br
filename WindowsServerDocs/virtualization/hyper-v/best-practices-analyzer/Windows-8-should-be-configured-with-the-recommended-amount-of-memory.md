@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0c739e7c-4403-4eff-9e69-213ba1ab7336
 ms.date: 10/03/2016
-ms.openlocfilehash: c01da3f447ea5109d5912e84b0ba03ecabc50c63
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: c8c38f5603926ae4042a30c34a4ccd9ebc43fc7c
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745791"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866015"
 ---
 # <a name="windows-8-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows 8 deve ser configurado com a quantidade recomendada de memória
 
@@ -64,4 +64,4 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)

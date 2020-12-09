@@ -7,12 +7,12 @@ ms.author: johnmar
 ms.date: 01/30/2019
 description: Este artigo descreve o cenário de conjuntos de clusters
 ms.localizationpriority: medium
-ms.openlocfilehash: b5b3f36cbc6627b13d2bba678cc1aeec02e57d81
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: edef2a8585a773069eb4b7f36ee607926e78b60c
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961160"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865935"
 ---
 # <a name="cluster-sets"></a>Conjuntos de cluster
 
@@ -40,7 +40,7 @@ O seguinte fornece um resumo rápido de cada um dos elementos na imagem acima:
 
 **Cluster de gerenciamento**
 
-O cluster de gerenciamento em um conjunto de clusters é um cluster de failover que hospeda o plano de gerenciamento altamente disponível de todo o conjunto de clusters e o Servidor de Arquivos de Escalabilidade Horizontal de referência (namespace de conjunto de cluster) de armazenamento unificado (SOFS). Um cluster de gerenciamento é logicamente dissociado de clusters de membros que executam as cargas de trabalho da máquina virtual. Isso torna o plano de gerenciamento do conjunto de clusters resiliente a quaisquer falhas localizadas em todo o cluster, por exemplo, a perda da potência de um cluster membro.
+O cluster de gerenciamento em um conjunto de clusters é um cluster de failover que hospeda o plano de gerenciamento altamente disponível de todo o conjunto de clusters e o servidor de arquivos de referência do namespace de armazenamento unificado (namespace de conjunto de cluster) Scale-Out (SOFS). Um cluster de gerenciamento é logicamente dissociado de clusters de membros que executam as cargas de trabalho da máquina virtual. Isso torna o plano de gerenciamento do conjunto de clusters resiliente a quaisquer falhas localizadas em todo o cluster, por exemplo, a perda da potência de um cluster membro.
 
 **Cluster de membros**
 
@@ -48,15 +48,15 @@ Um cluster de membros em um conjunto de clusters é normalmente um cluster hiper
 
 **SOFS de referência do namespace do conjunto de clusters**
 
-Uma referência de namespace de conjunto de clusters (namespace de conjunto de cluster) SOFS é uma Servidor de Arquivos de Escalabilidade Horizontal em que cada compartilhamento SMB no namespace do conjunto de clusters SOFS é um compartilhamento de referência – do tipo ' SimpleReferral ' recentemente introduzido no Windows Server 2019. Essa referência permite que clientes do protocolo SMB acessem o compartilhamento SMB de destino hospedado no SOFS do cluster de membros. O SOFS de referência do namespace do conjunto de clusters é um mecanismo de referência leve e, dessa forma, não participa do caminho de e/s. As referências de SMB são armazenadas em cache de forma perpétua em cada um dos nós de cliente e o namespace de conjuntos de clusters é atualizado dinamicamente automaticamente essas referências, conforme necessário.
+Uma referência de namespace de conjunto de clusters (namespace de conjunto de cluster) SOFS é um servidor de arquivos Scale-Out em que cada compartilhamento SMB no namespace do conjunto de clusters SOFS é um compartilhamento de referência – do tipo ' SimpleReferral ' recentemente introduzido no Windows Server 2019. Essa referência permite que clientes do protocolo SMB acessem o compartilhamento SMB de destino hospedado no SOFS do cluster de membros. O SOFS de referência do namespace do conjunto de clusters é um mecanismo de referência leve e, dessa forma, não participa do caminho de e/s. As referências de SMB são armazenadas em cache de forma perpétua em cada um dos nós de cliente e o namespace de conjuntos de clusters é atualizado dinamicamente automaticamente essas referências, conforme necessário.
 
 **Mestre de conjunto de clusters**
 
-Em um conjunto de clusters, a comunicação entre os clusters de membros é acoplada livremente e é coordenada por um novo recurso de cluster chamado "conjunto de cluster mestre" (CS-Master). Como qualquer outro recurso de cluster, o CS-Master é altamente disponível e resiliente a falhas de cluster de membros individuais e/ou falhas de nó de cluster de gerenciamento. Por meio de um novo provedor WMI de conjunto de clusters, CS-Master fornece o ponto de extremidade de gerenciamento para todas as interações de gerenciabilidade do conjunto
+Em um conjunto de clusters, a comunicação entre os clusters de membros é acoplada livremente e é coordenada por um novo recurso de cluster chamado "conjunto de cluster mestre" (CS-Master). Como qualquer outro recurso de cluster, CS-Master é altamente disponível e resiliente a falhas de cluster de membros individuais e/ou falhas de nó de cluster de gerenciamento. Através de um novo provedor WMI de conjunto de clusters, CS-Master fornece o ponto de extremidade de gerenciamento para todas as interações de gerenciabilidade de conjunto de cluster
 
 **Trabalho do conjunto de clusters**
 
-Em uma implantação de conjunto de clusters, o CS-Master interage com um novo recurso de cluster nos clusters de membros chamado "conjunto de trabalho do cluster" (CS-Worker). CS-Worker atua como a única ligação no cluster para orquestrar as interações de cluster local conforme solicitado pelo CS-Master. Exemplos dessas interações incluem o posicionamento da máquina virtual e o inventário de recursos locais do cluster. Há apenas uma instância CS-Worker para cada um dos clusters de membro em um conjunto de clusters.
+Em uma implantação de conjunto de clusters, o CS-Master interage com um novo recurso de cluster nos clusters de membros chamado "conjunto de trabalho do cluster" (CS-Worker). CS-Worker atua como a única ligação no cluster para orquestrar as interações de cluster local conforme solicitado pelo CS-Master. Exemplos dessas interações incluem o posicionamento da máquina virtual e o inventário de recursos locais do cluster. Há apenas uma instância de CS-Worker para cada um dos clusters de membro em um conjunto de clusters.
 
 **Domínio de falha**
 
@@ -77,7 +77,7 @@ Os conjuntos de clusters permitem o clustering de vários clusters em conjunto p
 3. Adicione nós de computação adicionais com unidades ao cluster atual. Isso nos leva de volta à opção 1 que precisa ser considerada.
 4. Comprar um novo cluster inteiro
 
-É aí que os conjuntos de clusters fornecem o benefício do dimensionamento. Se eu adicionar meus clusters a um conjunto de cluster, posso aproveitar o armazenamento ou a memória que pode estar disponível em outro cluster sem nenhuma compra adicional. De uma perspectiva de resiliência, a adição de nós adicionais a uma Espaços de Armazenamento Diretos não fornecerá votos adicionais para o quorum. Como mencionado [aqui](drive-symmetry-considerations.md), um cluster espaços de armazenamento diretos pode sobreviver à perda de dois nós antes de ficar inativo. Se você tiver um cluster de HCI de 4 nós, os 3 nós ficarão inativos levarão todo o cluster. Se você tiver um cluster de 8 nós, 3 nós desaparecerão o cluster inteiro. Com conjuntos de clusters que têm dois clusters de HCI de 4 nós no conjunto, 2 nós em um HCI ficam inativos e um nó no outro HCI fica inativo, ambos os clusters permanecem ativos. É melhor criar um grande cluster de Espaços de Armazenamento Diretos de 16 nós ou dividi-lo em quatro clusters de 4 nós e usar conjuntos de clusters?  Ter quatro clusters de 4 nós com conjuntos de clusters oferece a mesma escala, mas maior resiliência no fato de que vários nós de computação podem ficar inativos (inesperadamente ou para manutenção) e a produção permanece.
+É aí que os conjuntos de clusters fornecem o benefício do dimensionamento. Se eu adicionar meus clusters a um conjunto de cluster, posso aproveitar o armazenamento ou a memória que pode estar disponível em outro cluster sem nenhuma compra adicional. De uma perspectiva de resiliência, a adição de nós adicionais a uma Espaços de Armazenamento Diretos não fornecerá votos adicionais para o quorum. Como mencionado [aqui](drive-symmetry-considerations.md), um cluster espaços de armazenamento diretos pode sobreviver à perda de dois nós antes de ficar inativo. Se você tiver um cluster de HCI de 4 nós, os 3 nós ficarão inativos levarão todo o cluster. Se você tiver um cluster de 8 nós, 3 nós desaparecerão o cluster inteiro. Com conjuntos de clusters que têm clusters de HCI de 2 4 nós no conjunto, 2 nós em um HCI ficam inativos e um nó no outro HCI fica inativo, ambos os clusters permanecem ativos. É melhor criar um grande cluster de Espaços de Armazenamento Diretos de 16 nós ou dividi-lo em clusters de 4 4 nós e usar conjuntos de cluster?  Ter clusters de 4 4 nós com conjuntos de clusters oferece a mesma escala, mas maior resiliência no fato de que vários nós de computação podem ficar inativos (inesperadamente ou para manutenção) e a produção permanece.
 
 ## <a name="considerations-for-deploying-cluster-sets"></a>Considerações sobre a implantação de conjuntos de clusters
 
@@ -95,7 +95,7 @@ Há alguns outros itens a serem considerados onde um SDDC maior pode alterar sua
 
 ## <a name="scale-out-file-server-and-cluster-sets"></a>Servidor de arquivos de escalabilidade horizontal e conjuntos de cluster
 
-No Windows Server 2019, há uma nova função de servidor de arquivos de escalabilidade horizontal chamada Servidor de Arquivos de Escalabilidade Horizontal de infraestrutura (SOFS).
+No Windows Server 2019, há uma nova função de servidor de arquivos de escalabilidade horizontal chamada servidor de arquivos de Scale-Out de infraestrutura (SOFS).
 
 As seguintes considerações se aplicam a uma função de infraestrutura SOFS:
 
@@ -270,7 +270,7 @@ No entanto, o processo ainda não foi concluído, pois o caminho para a máquina
 
 Por exemplo: um cluster existente é adicionado e tem máquinas virtuais pré-configuradas que residem no Volume Compartilhado Clusterizado local (CSV). O caminho para o VHDX seria algo semelhante a "C:\ClusterStorage\Volume1\MYVM\Virtual Hard Disks\MYVM.vhdx". Uma migração de armazenamento precisaria ser realizada, pois os caminhos CSV são por design local para um único cluster de membro e, portanto, não estarão acessíveis para a máquina virtual quando forem migrados ao vivo entre clusters de membros.
 
-Neste exemplo, CLUSTER3 foi adicionado ao conjunto de clusters usando Add-ClusterSetMember com a infraestrutura Servidor de Arquivos de Escalabilidade Horizontal como SOFS-CLUSTER3. Para mover a configuração de máquina virtual e o armazenamento, o comando é:
+Neste exemplo, CLUSTER3 foi adicionado ao conjunto de clusters usando Add-ClusterSetMember com a infraestrutura Scale-Out servidor de arquivos como SOFS-CLUSTER3. Para mover a configuração de máquina virtual e o armazenamento, o comando é:
 
 ```PowerShell
 Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
@@ -285,7 +285,7 @@ WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualM
 
 Esse aviso pode ser ignorado, pois o aviso é "nenhuma alteração na configuração de armazenamento da função de máquina virtual foi detectada". O motivo do aviso como o local físico real não é alterado; somente os caminhos de configuração.
 
-Para obter mais informações sobre o move-VMStorage, consulte este [link](/powershell/module/hyper-v/move-vmstorage?view=win10-ps).
+Para obter mais informações sobre o move-VMStorage, consulte este [link](/powershell/module/hyper-v/move-vmstorage).
 
 A migração ao vivo de uma máquina virtual entre diferentes clusters de conjuntos de clusters não é a mesma do passado. Em cenários que não são de conjunto de clusters, as etapas seriam:
 
@@ -323,7 +323,7 @@ New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -Member
 New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "This is my second fault domain"
 ```
 
-Para garantir que eles foram criados com êxito, o Get-ClusterSetFaultDomain pode ser executado com sua saída mostrada.
+Para garantir que eles foram criados com êxito, Get-ClusterSetFaultDomain pode ser executado com sua saída mostrada.
 
 ```PowerShell
 PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
@@ -374,7 +374,7 @@ Por exemplo, o comando para remover o cluster CLUSTER1 dos conjuntos de clusters
 Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 ```
 
-## <a name="frequently-asked-questions-faq"></a>Perguntas frequentes
+## <a name="frequently-asked-questions-faq"></a>Perguntas frequentes (FAQ)
 
 **Pergunta:** No meu conjunto de clusters, estou limitado a usar apenas clusters hiperconvergentes? <br>
 **Resposta:** Não. Você pode misturar Espaços de Armazenamento Diretos com clusters tradicionais.

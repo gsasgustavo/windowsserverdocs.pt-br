@@ -6,12 +6,12 @@ author: JasonGerend
 ms.author: jgerend
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4758cc67c1dd5dc77ecacf1a8229d59f27eac60e
-ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
+ms.openlocfilehash: 9f31780480f2887747f80550d69792cacd5fd61a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91716874"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865915"
 ---
 # <a name="deploy-storage-spaces-on-a-stand-alone-server"></a>Implantar espaços de armazenamento em um servidor autônomo
 
@@ -21,7 +21,7 @@ Este tópico descreve como implantar espaços de armazenamento em um servidor au
 
 Para criar um espaço de armazenamento, você deve primeiramente criar um ou mais pools de armazenamento. Um pool de armazenamento é uma coleção de discos físicos. Um pool de armazenamento permite a agregação de armazenamento, expansão da capacidade elástica e administração delegada.
 
-Em um pool de armazenamento, você pode criar um ou mais discos virtuais. Esses discos virtuais também são chamados de *espaços de armazenamento*. Um espaço de armazenamento aparece no sistema operacional do Windows como um disco regular, a partir do qual é possível criar volumes formatados. Ao criar um disco virtual por meio da interface de usuário de Serviços de Arquivo e Armazenamento, você pode configurar o tipo de resiliência (simples, espelho ou paridade), o tipo de provisionamento (dinâmico ou fixo) e o tamanho. Com o Windows PowerShell, você pode definir parâmetros adicionais, como o número de colunas, o valor de intercalação e quais discos físicos devem ser usados no pool. Para obter informações sobre esses parâmetros adicionais, consulte [New-VirtualDisk](/powershell/module/storage/new-virtualdisk?view=win10-ps) e o [Windows Server Storage forum](/answers/topics/windows-server-storage.html).
+Em um pool de armazenamento, você pode criar um ou mais discos virtuais. Esses discos virtuais também são chamados de *espaços de armazenamento*. Um espaço de armazenamento aparece no sistema operacional do Windows como um disco regular, a partir do qual é possível criar volumes formatados. Ao criar um disco virtual por meio da interface de usuário de Serviços de Arquivo e Armazenamento, você pode configurar o tipo de resiliência (simples, espelho ou paridade), o tipo de provisionamento (dinâmico ou fixo) e o tamanho. Com o Windows PowerShell, você pode definir parâmetros adicionais, como o número de colunas, o valor de intercalação e quais discos físicos devem ser usados no pool. Para obter informações sobre esses parâmetros adicionais, consulte [New-VirtualDisk](/powershell/module/storage/new-virtualdisk) e o [Windows Server Storage forum](/answers/topics/windows-server-storage.html).
 
 > [!NOTE]
 > Você não pode usar um espaço de armazenamento para hospedar o sistema operacional Windows.
@@ -152,7 +152,7 @@ Em seguida, você deverá criar um ou mais discos virtuais no pool de armazename
 
      Com o provisionamento dinâmico, o espaço é alocado conforme a necessidade. Isso otimiza o uso do armazenamento disponível. Contudo, como isso permite a alocação excessiva do armazenamento, é necessário monitorar atentamente quanto espaço em disco está disponível.
 
-   - **Fixado**
+   - **Fixo**
 
      Com o provisionamento fixo, a capacidade de armazenamento é alocada imediatamente, no momento da criação do disco virtual. Portanto o provisionamento fixo usa espaço do pool de armazenamento igual ao tamanho do disco virtual.
 
@@ -161,13 +161,13 @@ Em seguida, você deverá criar um ou mais discos virtuais no pool de armazename
 
 9. Na página **Especificar o tamanho do disco virtual**, execute o seguinte procedimento:
 
-    Se você selecionou provisionamento dinâmico na etapa anterior, na caixa Tamanho do **disco virtual** , insira um tamanho de disco virtual, selecione as unidades (**MB**, **GB**ou **TB**) e, em seguida, selecione **Avançar**.
+    Se você selecionou provisionamento dinâmico na etapa anterior, na caixa Tamanho do **disco virtual** , insira um tamanho de disco virtual, selecione as unidades (**MB**, **GB** ou **TB**) e, em seguida, selecione **Avançar**.
 
     Se você tiver selecionado provisionamento fixo na etapa anterior, selecione uma das seguintes opções:
 
       - **Especificar tamanho**
 
-        Para especificar um tamanho, insira um valor na caixa **tamanho do disco virtual** e, em seguida, selecione as unidades (**MB**, **GB**ou **TB**).
+        Para especificar um tamanho, insira um valor na caixa **tamanho do disco virtual** e, em seguida, selecione as unidades (**MB**, **GB** ou **TB**).
 
         Se você usar outro layout de armazenamento que não o simples, o disco virtual usará mais espaço livre do que o tamanho especificado. Para evitar um potencial erro no qual o tamanho do volume excede o espaço livre do pool de armazenamento, marque a caixa de seleção **Criar o maior disco virtual possível, até o tamanho especificado**.
 
@@ -229,7 +229,7 @@ Em seguida, você deve criar um volume para o disco virtual. Você pode atribuir
 
     2. Na área **disco** , selecione o disco virtual no qual você deseja criar o volume.
 
-4. Na página **especificar o tamanho do volume** , insira um tamanho de volume, especifique as unidades (**MB**, **GB**ou **TB**) e, em seguida, selecione **Avançar**.
+4. Na página **especificar o tamanho do volume** , insira um tamanho de volume, especifique as unidades (**MB**, **GB** ou **TB**) e, em seguida, selecione **Avançar**.
 
 5. Na página **atribuir a uma letra da unidade ou pasta** , configure a opção desejada e, em seguida, selecione **Avançar**.
 
@@ -264,6 +264,6 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 ## <a name="additional-information"></a>Informações adicionais
 
 - [Espaços de armazenamento](overview.md)
-- [Cmdlets de armazenamento no Windows PowerShell](/powershell/module/storage/index?view=win10-ps)
+- [Cmdlets de armazenamento no Windows PowerShell](/powershell/module/storage/index)
 - [Implantar Espaços de Armazenamento clusterizados](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Fórum de armazenamento do Windows Server](/answers/topics/windows-server-storage.html)

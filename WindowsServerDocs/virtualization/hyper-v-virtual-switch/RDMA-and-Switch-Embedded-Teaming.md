@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 54d3ecbf752ce806a14d16088476bbb270e28271
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9b8d1470b3e146625d794697231291c1f8156402
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989134"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866185"
 ---
 # <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>\( \) Conjunto de agrupamentos RDMA e Comutador incorporado de acesso remoto direto à memória \(\)
 
@@ -260,13 +260,13 @@ As opções para definir o modo de distribuição de balanceamento de carga de e
 As VMs estão conectadas a uma porta no comutador virtual Hyper-V. Ao usar o modo de porta do Hyper-V para o SET Teams, a porta do comutador virtual do Hyper-V e o endereço MAC associado são usados para dividir o tráfego de rede entre os membros da equipe do conjunto.
 
 > [!NOTE]
-> Quando você usa SET em conjunto com o pacote direto, a opção de modo de agrupamento é **independente** e a **porta Hyper-V** do modo de balanceamento de carga é necessária.
+> Quando você usa SET em conjunto com o pacote direto, a opção de modo de agrupamento é  **independente** e a **porta Hyper-V** do modo de balanceamento de carga é necessária.
 
 Como a opção adjacente sempre vê um endereço MAC específico em uma determinada porta, o comutador distribui a carga de entrada (o tráfego da mudança para o host) para a porta na qual o endereço MAC está localizado. Isso é particularmente útil quando as filas de máquina virtual (VMQs) são usadas, porque uma fila pode ser colocada na NIC específica em que se espera que o tráfego chegue.
 
 No entanto, se o host tiver apenas algumas VMs, esse modo poderá não ser granular o suficiente para alcançar uma distribuição bem balanceada. Esse modo também limitará sempre uma única VM (ou seja, o tráfego de uma única porta de comutador) para a largura de banda disponível em uma única interface.
 
-**Dinâmicos**
+**Dinâmico**
 
 Esse modo de balanceamento de carga oferece as seguintes vantagens.
 
@@ -346,7 +346,7 @@ Para obter informações sobre como criar uma equipe de conjunto usando o VMM, c
 
 Você deve criar uma equipe de conjunto ao mesmo tempo em que cria o comutador virtual do Hyper-V usando o comando **New-VMSwitch** do Windows PowerShell.
 
-Ao criar o comutador virtual do Hyper-V, você deve incluir o novo parâmetro **EnableEmbeddedTeaming** na sintaxe do comando. No exemplo a seguir, uma opção do Hyper-V chamada **TeamedvSwitch** com o agrupamento incorporado e dois membros iniciais da equipe é criada.
+Ao criar o comutador virtual do Hyper-V, você deve incluir o novo parâmetro **EnableEmbeddedTeaming** na sintaxe do comando. No exemplo a seguir, uma opção do Hyper-V chamada  **TeamedvSwitch** com o agrupamento incorporado e dois membros iniciais da equipe é criada.
 
 ```
 New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2" -EnableEmbeddedTeaming $true
@@ -374,7 +374,7 @@ Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
 
 ### <a name="removing-a-set-team"></a>Removendo uma equipe de conjunto
 
-Você pode remover uma equipe de conjunto apenas removendo o comutador virtual do Hyper-V que contém a equipe definida.  Use o tópico [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch?view=win10-ps) para obter informações sobre como remover o comutador virtual Hyper-V. O exemplo a seguir remove um comutador virtual chamado **SETvSwitch**.
+Você pode remover uma equipe de conjunto apenas removendo o comutador virtual do Hyper-V que contém a equipe definida.  Use o tópico [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch) para obter informações sobre como remover o comutador virtual Hyper-V. O exemplo a seguir remove um comutador virtual chamado **SETvSwitch**.
 
 ```
 Remove-VMSwitch "SETvSwitch"

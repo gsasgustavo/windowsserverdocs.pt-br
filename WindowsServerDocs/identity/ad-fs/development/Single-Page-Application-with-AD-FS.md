@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/13/2018
 ms.topic: article
-ms.openlocfilehash: c615bd6426098e00854e873d3e1eb2cfbfaa0734
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9e26d558755b0ae37ac07fb21ff42360693e4303
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970933"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865705"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Criar um aplicativo Web de página única usando OAuth e ADAL.JS com o AD FS 2016 ou posterior
 
@@ -35,7 +35,7 @@ Ao usar um aplicativo de página única, o usuário navega para um local inicial
 Se a ADAL vir um gatilho para autenticação, ela usará as informações fornecidas pelo aplicativo e direcionará a autenticação para seu AD FS STS.  O aplicativo de página única, que é registrado como um cliente público no AD FS, é configurado automaticamente para o fluxo de concessão implícita. A solicitação de autorização resulta em um token de ID que é retornado para o aplicativo por meio de um #fragment. Chamadas adicionais para o WebAPI de back-end terão esse token de ID como o token de portador no cabeçalho para obter acesso ao WebAPI.
 
 ## <a name="setting-up-the-development-box"></a>Configurando a caixa de desenvolvimento
-O passo a passo usa o Visual Studio 2015. O projeto usa a biblioteca do ADAL JS. Para saber mais sobre a ADAL, leia [biblioteca de autenticação do Active Directory .net.](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
+O passo a passo usa o Visual Studio 2015. O projeto usa a biblioteca do ADAL JS. Para saber mais sobre a ADAL, leia [biblioteca de autenticação do Active Directory .net.](/dotnet/api/microsoft.identitymodel.clients.activedirectory)
 
 ## <a name="setting-up-the-environment"></a>Configurando o ambiente
 Neste tutorial, usaremos uma configuração básica de:
@@ -80,7 +80,7 @@ No exemplo, o WebAPI está configurado para escutar em https://localhost:44326/ 
 
     ![Criar novo grupo de aplicativos](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
-2. No **aplicativo nativo**da próxima página, forneça o identificador do cliente do aplicativo e o URI de redirecionamento, conforme mostrado abaixo
+2. No **aplicativo nativo** da próxima página, forneça o identificador do cliente do aplicativo e o URI de redirecionamento, conforme mostrado abaixo
 
     ![Criar novo grupo de aplicativos](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
@@ -111,7 +111,7 @@ Abra o arquivo **app.js** e altere a definição de **tadalProvider.ini** para:
 
 |Configuração|Descrição|
 |--------|--------|
-|instance|A URL do STS, por exemplo,https://fs.contoso.com/|
+|instance|A URL do STS, por exemplo, https://fs.contoso.com/|
 |locatário|Mantenha-o como ' ADFS '|
 |clientID|Essa é a ID do cliente que você especificou ao configurar o cliente público para seu aplicativo de página única|
 

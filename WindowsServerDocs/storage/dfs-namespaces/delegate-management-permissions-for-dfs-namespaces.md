@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: a986c47416de79c9ff24d9104a2fa599dd5f8640
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6ea41c53bd52758312ee16849d5a7a16c55c07ef
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954783"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866445"
 ---
 # <a name="delegate-management-permissions-for-dfs-namespaces"></a>Delegar permissões de gerenciamento para Namespaces DFS
 
@@ -21,11 +21,11 @@ A tabela a seguir descreve os grupos que podem realizar tarefas básicas de name
 
 |Tarefa | Grupos que podem executar essa tarefa por padrão | Método de delegação |
 |---|---|---|
-|Criar um novo namespace baseado em domínio|Grupo de administradores de domínio no domínio em que o namespace está configurado|Clique com o botão direito no nó **Namespaces**, na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012). Você também deve adicionar o usuário ao grupo local Administradores no servidor de namespace.|
-|Adicionar servidores de namespace para um namespace baseado em domínio|Grupo de administradores de domínio no domínio em que o namespace está configurado| Clique com o botão direito no namespace baseado em domínio na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012). Você também deve adicionar o usuário ao grupo local Administradores no servidor de namespace a ser adicionado.|
+|Criar um novo namespace baseado em domínio|Grupo de administradores de domínio no domínio em que o namespace está configurado|Clique com o botão direito no nó **Namespaces**, na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012). Você também deve adicionar o usuário ao grupo local Administradores no servidor de namespace.|
+|Adicionar servidores de namespace para um namespace baseado em domínio|Grupo de administradores de domínio no domínio em que o namespace está configurado| Clique com o botão direito no namespace baseado em domínio na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012). Você também deve adicionar o usuário ao grupo local Administradores no servidor de namespace a ser adicionado.|
 |Gerenciar um novo namespace baseado em domínio|Grupo local de administradores em cada servidor de namespace| Clique com o botão direito no namespace baseado em domínio na árvore de console e depois clique em **Delegar permissões de gerenciamento**. |
 |Criar um namespace autônomo|Grupo local de administradores no servidor do namespace| Adicione o usuário ao grupo local Administradores no servidor de namespace. |
-|Gerenciar um namespace autônomo*|Grupo local de administradores no servidor do namespace| Clique com o botão direito no namespace autônomo na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot?view=win10-ps). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012).|
+|Gerenciar um namespace autônomo*|Grupo local de administradores no servidor do namespace| Clique com o botão direito no namespace autônomo na árvore de console e depois clique em **Delegar permissões de gerenciamento**. Ou use o [Set-DfsnRoot GrantAdminAccounts](/powershell/module/dfsn/set-dfsnroot) e [Set-DfsnRoot RevokeAdminAccounts](/powershell/module/dfsn/set-dfsnroot). Cmdlets do Windows PowerShell (apresentados no Windows Server 2012).|
 |Criar um grupo de replicação ou habilitar a replicação DFS em uma pasta|Grupo de administradores de domínio no domínio em que o namespace está configurado| Clique com o botão direito no nó Replicação, na árvore de console e depois clique em **Delegar permissões de gerenciamento**. |
 
 <br />

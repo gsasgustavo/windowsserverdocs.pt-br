@@ -6,12 +6,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
-ms.openlocfilehash: fef394aaef059ec83303c903ca5e548f002775c0
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 3da3a66a6d414c5e80b5f84dc14c5e739a7f788a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069068"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866335"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Instalar uma nova floresta do Active Directory usando a CLI do Azure
 
@@ -34,7 +34,7 @@ AD DS pode ser executado em uma VM (máquina virtual) do Azure da mesma maneira 
 
 ## <a name="build-the-test-environment"></a>Criar o ambiente de teste
 
-Usamos o [portal do Azure](https://portal.azure.com) e [CLI do Azure](/cli/azure/overview?view=azure-cli-latest) para criar o ambiente.
+Usamos o [portal do Azure](https://portal.azure.com) e [CLI do Azure](/cli/azure/overview) para criar o ambiente.
 
 A CLI do Azure é usada para criar e gerenciar recursos do Azure da linha de comando ou em scripts. Este tutorial detalha o uso do CLI do Azure para implantar máquinas virtuais que executam o Windows Server 2019. Após a conclusão da implantação, nós nos conectamos aos servidores e instalamos AD DS.
 
@@ -44,7 +44,7 @@ Se você não tiver uma assinatura do Azure, [crie uma conta gratuita](https://a
 
 O script a seguir automatiza o processo de criação de duas VMs do Windows Server 2019, com a finalidade de criar controladores de domínio para uma nova floresta Active Directory no Azure. Um administrador pode modificar as variáveis abaixo para atender às suas necessidades e, em seguida, concluir, como uma operação. O script cria o grupo de recursos necessário, o grupo de segurança de rede com uma regra de tráfego para Área de Trabalho Remota, rede virtual e sub-rede e grupo de disponibilidade. As VMs são, cada uma, compiladas com um disco de dados de 20 GB com cache desabilitado para AD DS ser instalado no.
 
-O script abaixo pode ser executado diretamente do portal do Azure. Se você optar por instalar e usar a CLI localmente, este guia de início rápido exigirá a execução da CLI do Azure versão 2.0.4 ou posterior. Execute `az --version` para encontrar a versão. Se você precisa instalar ou atualizar, consulte [Instalar a CLI 2.0 do Azure](/cli/azure/install-azure-cli?view=azure-cli-latest).
+O script abaixo pode ser executado diretamente do portal do Azure. Se você optar por instalar e usar a CLI localmente, este guia de início rápido exigirá a execução da CLI do Azure versão 2.0.4 ou posterior. Execute `az --version` para encontrar a versão. Se você precisa instalar ou atualizar, consulte [Instalar a CLI 2.0 do Azure](/cli/azure/install-azure-cli).
 
 | Nome da variável | Finalidade |
 | :---: | :--- |
@@ -160,7 +160,7 @@ Informações sobre como estender uma rede local para o Azure podem ser encontra
 
 ## <a name="configure-the-vms-and-install-active-directory-domain-services"></a>Configurar as VMs e instalar Active Directory Domain Services
 
-Depois que o script for concluído, navegue até o [portal do Azure](https://portal.azure.com)e, em seguida, **máquinas virtuais** .
+Depois que o script for concluído, navegue até o [portal do Azure](https://portal.azure.com)e, em seguida, **máquinas virtuais**.
 
 ### <a name="configure-the-first-domain-controller"></a>Configurar o primeiro controlador de domínio
 
@@ -235,7 +235,7 @@ Para remover o ambiente, quando você tiver concluído o teste, o grupo de recur
 
 ### <a name="remove-using-the-azure-portal"></a>Remover usando o portal do Azure
 
-No portal do Azure, navegue até **grupos de recursos** e escolha o grupo de recursos que criamos (neste exemplo ADonAzureVMs) e, em seguida, selecione **excluir grupo de recursos** . O processo solicita confirmação antes de excluir todos os recursos contidos no grupo de recursos.
+No portal do Azure, navegue até **grupos de recursos** e escolha o grupo de recursos que criamos (neste exemplo ADonAzureVMs) e, em seguida, selecione **excluir grupo de recursos**. O processo solicita confirmação antes de excluir todos os recursos contidos no grupo de recursos.
 
 ### <a name="remove-using-the-azure-cli"></a>Remover usando o CLI do Azure
 

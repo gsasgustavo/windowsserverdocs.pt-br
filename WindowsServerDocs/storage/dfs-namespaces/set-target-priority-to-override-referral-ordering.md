@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 04a295b8f6249521c809770af2c85fdce5dd54b4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f562a39d6b89ab117f6c3d8b274c03e5810f58c3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971213"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866205"
 ---
 # <a name="set-target-priority-to-override-referral-ordering"></a>Definir a prioridade de destino para sobrepor a ordem de referência
 
@@ -51,7 +51,7 @@ Para definir a prioridade no destino de uma pasta, use o seguinte procedimento:
 4.  Na guia **Avançado**, clique em **Substituir ordenação de referências** e, em seguida, clique na prioridade desejada.
 
 > [!NOTE]
-> Para definir prioridades de alvo usando Windows PowerShell, use o [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlets com os parâmetros **ReferralPriorityClass** e **ReferralPriorityRank**. Esses cmdlets foram introduzidos no Windows Server 2012.
+> Para definir prioridades de alvo usando Windows PowerShell, use o [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlets com os parâmetros **ReferralPriorityClass** e **ReferralPriorityRank**. Esses cmdlets foram introduzidos no Windows Server 2012.
 
 ## <a name="additional-references"></a>Referências adicionais
 

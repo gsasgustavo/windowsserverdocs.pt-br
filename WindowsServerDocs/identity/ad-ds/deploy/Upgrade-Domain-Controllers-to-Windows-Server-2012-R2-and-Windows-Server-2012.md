@@ -6,12 +6,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: ebbbefebc420d83f8f74466698729c26395bdbec
-ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
+ms.openlocfilehash: be94260946c696eed060b9b2d85f5042ed737a1f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520499"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866345"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>Atualizar controladores de domínio para o Windows Server 2012 R2 e o Windows Server 2012
 
@@ -70,7 +70,7 @@ Como o Windows Update faz parte da Manutenção Automática no Windows 8 e Windo
 
 A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012 R2, com um link para informações mais detalhadas (quando disponíveis). Para obter uma explicação mais detalhada de alguns recursos, incluindo seus requisitos, consulte [Novidades no Active Directory no Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268294(v=ws.11)).
 
-|Recurso|DESCRIÇÃO|
+|Recurso|Descrição|
 |-----------|---------------|
 |[Ingresso no local](../../ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)|Permite que os operadores de informações ingressem com seus dispositivos pessoais para acessar os recursos e serviços da empresa.|
 |[Proxy de aplicativo Web](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))|Oferece acesso ao aplicativo Web usando um novo serviço de função de Acesso Remoto.|
@@ -89,7 +89,7 @@ A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012 R2, c
 
 A tabela a seguir resume os novos recursos do AD DS no Windows Server 2012, com um link para informações mais detalhadas (quando disponíveis). Para obter uma explicação mais detalhada de alguns recursos, incluindo seus requisitos, consulte [What ' s New in Active Directory Domain Services (AD DS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831477(v=ws.11)).
 
-|Recurso|DESCRIÇÃO|
+|Recurso|Descrição|
 |-----------|---------------|
 |AD BA (ativação baseada no Active Directory); consulte [Visão Geral de Ativação de Volume](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11))|Simplifica a tarefa de configuração de distribuição e gerenciamento de licenças de software por volume.|
 |[Serviços de Federação do Active Directory (AD FS)](../../active-directory-federation-services.md)|Adiciona instalação de funções pelo Gerenciador do Servidor, configuração de confiança simplificada, gerenciamento de confiança automático, suporte ao protocolo SAML e muito mais.|
@@ -123,9 +123,9 @@ A tabela a seguir lista alguns exemplos de como definir essas configurações pa
 |||
 |-|-|
 |**Cenário**|**Configuração (ões) recomendada (s)**|
-|**Gerenciado pelo WSUS**<p>-Instalar atualizações uma vez por semana<br />-Reinicializar sexta-feiras em 23h|Configurar as máquinas para instalação automática, impedir a reinicialização automática até a hora desejada<p>**Política** : Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Política** : sem reinicialização automática com usuários conectados (desabilitado)<p>**Datas limites de WSUS** : definido para sextas-feitas às 23h|
+|**Gerenciado pelo WSUS**<p>-Instalar atualizações uma vez por semana<br />-Reinicializar sexta-feiras em 23h|Configurar as máquinas para instalação automática, impedir a reinicialização automática até a hora desejada<p>**Política**: Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Política**: sem reinicialização automática com usuários conectados (desabilitado)<p>**Datas limites de WSUS**: definido para sextas-feitas às 23h|
 |**Gerenciado pelo WSUS**<p>-O uptais é instalado em diferentes horas/dias|Definir grupos de destino para diferentes grupos de máquinas que devem ser atualizados em conjunto<p>Usar as etapas acima para o cenário anterior<p>Definir datas limites diferentes para grupos de destino diferentes|
-|**Não gerenciado pelo WSUS-sem suporte para prazos finais**<p>-O escalonamento é instalado em momentos diferentes|**Política** : Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Chave do Registro:** Habilitar a chave do Registro discutida no artigo da Base de Dados de Conhecimento da Microsoft [2835627](https://support.microsoft.com/kb/2835627)<p>**Política:** Atraso aleatório na manutenção automática (Habilitado)<p>Defina **Atraso aleatório na manutenção regular** de PT6H para atraso aleatório de seis horas para obter o seguinte comportamento:<p>-As atualizações serão instaladas no tempo de manutenção configurado mais um atraso aleatório<p>-A reinicialização de cada máquina ocorrerá exatamente três dias depois<p>Como alternativa, defina um horário de manutenção diferente para cada grupo de máquinas|
+|**Não gerenciado pelo WSUS-sem suporte para prazos finais**<p>-O escalonamento é instalado em momentos diferentes|**Política**: Configurar as atualizações automáticas (Habilitado)<p>Configurar a atualização automática: 4-baixar automaticamente e agendar a instalação<p>**Chave do Registro:** Habilitar a chave do Registro discutida no artigo da Base de Dados de Conhecimento da Microsoft [2835627](https://support.microsoft.com/kb/2835627)<p>**Política:** Atraso aleatório na manutenção automática (Habilitado)<p>Defina **Atraso aleatório na manutenção regular** de PT6H para atraso aleatório de seis horas para obter o seguinte comportamento:<p>-As atualizações serão instaladas no tempo de manutenção configurado mais um atraso aleatório<p>-A reinicialização de cada máquina ocorrerá exatamente três dias depois<p>Como alternativa, defina um horário de manutenção diferente para cada grupo de máquinas|
 
 Para obter mais informações sobre por que a equipe de engenharia do Windows implementou essas alterações, consulte [como reduzir suas chances de ser solicitado a reiniciar o computador](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
 
@@ -224,7 +224,7 @@ Os controladores de domínio do Windows 2000 devem ser removidos antes da adiç�
 4. Instale controladores de domínio que executem o Windows Server 2012.
 5. Remova controladores de domínio que executam versões anteriores do Windows Server.
 
-O novo nível funcional de domínio do Windows Server 2012 permite um novo recurso: o **suporte do KDC para declarações, autenticação composta e** política de modelo administrativo do KDC de proteção de Kerberos tem duas configurações ( **sempre fornecer declarações** e **falhas de solicitações de autenticação não protegidas** ) que exigem o nível funcional de domínio do Windows Server 2012.
+O novo nível funcional de domínio do Windows Server 2012 permite um novo recurso: o **suporte do KDC para declarações, autenticação composta e** política de modelo administrativo do KDC de proteção de Kerberos tem duas configurações (**sempre fornecer declarações** e **falhas de solicitações de autenticação não protegidas**) que exigem o nível funcional de domínio do Windows Server 2012.
 
 O nível funcional de floresta do Windows Server 2012 não fornece novos recursos, mas garante que qualquer novo domínio criado na floresta operará automaticamente no nível funcional de domínio do Windows Server 2012. O nível funcional de domínio do Windows Server 2012 não fornece outros recursos novos além do suporte do KDC para declarações, autenticação composta e proteção Kerberos. Mas garante que qualquer controlador de domínio no domínio execute o Windows Server 2012. Para obter mais informações sobre outros recursos que estão disponíveis em diferentes níveis funcionais, consulte [Noções básicas sobre níveis funcionais dos AD DS (Serviços de Domínio do Active Directory)](../active-directory-functional-levels.md).
 
@@ -287,7 +287,7 @@ A tabela a seguir mostra aplicativos da Microsoft comuns integrados ao Active Di
 |Forefront Threat Management Gateway (TMG)|A execução do TMG é possível somente no Windows Server 2008 e Windows Server 2008 R2. Para obter mais informações, consulte [Requisitos de sistema para o Forefront TMG](/previous-versions/tn-archive/dd896981(v=technet.10)).|
 |Windows Server Update Services|Esta versão do WSUS já oferece suporte para computadores baseados em Windows 8 ou computadores baseados em Windows Server 2012 como clientes.|
 |Windows Server Update Services 3.0|Atualização do artigo [2734608](https://support.microsoft.com/kb/2734608) do KB permite que servidores que executam o Windows Server Update Services (WSUS) 3,0 SP2 forneçam atualizações para computadores que executam o Windows 8 ou o windows Server 2012: **Observação:** os clientes com ambientes autônomos do wsus 3,0 SP2 ou Configuration Manager 2007 ambientes do Windows Server Service Pack 2 com o WSUS 3,0 SP2 exigem o [2734608](https://support.microsoft.com/kb/2734608) para gerenciar corretamente computadores baseados no Windows 8 ou computadores baseados no Microsoft Azure|
-|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites?view=exchserver-2019)|As edições Standard e Datacenter do Windows Server 2012 oferecem suporte às seguintes funções: mestre de esquema, servidor de catálogo global, controlador de domínio, caixa de correio e função de servidor Acesso para Cliente<p>Nível funcional de floresta: Windows Server 2003 ou mais recente<p>Fonte: Requisitos do sistema do Exchange 2013|
+|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites)|As edições Standard e Datacenter do Windows Server 2012 oferecem suporte às seguintes funções: mestre de esquema, servidor de catálogo global, controlador de domínio, caixa de correio e função de servidor Acesso para Cliente<p>Nível funcional de floresta: Windows Server 2003 ou mais recente<p>Fonte: Requisitos do sistema do Exchange 2013|
 |Exchange 2010|[Fonte: Exchange 2010 Service Pack 3](https://techcommunity.microsoft.com/t5/exchange-team-blog/bg-p/Exchange)<p>O Exchange 2010 com Service Pack 3 pode ser instalado em servidores membros do Windows Server 2012.<p>Os[Requisitos de sistema do Exchange 2010](/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141)) listam o mestre de esquema mais recente com suporte, o catálogo global e o controlador de domínio como Windows Server 2008 R2.<p>Nível funcional de floresta: Windows Server 2003 ou mais recente|
 |SQL Server 2012|Fonte: Base de dados de conheicimento [2681562](https://support.microsoft.com/kb/2681562)<p>O SQL Server 2012 RTM conta com suporte no Windows Server 2012.|
 |SQL Server 2008 R2|Fonte: Base de dados de conheicimento [2681562](https://support.microsoft.com/kb/2681562)<p>Requer o SQL Server 2008 R2 com Service Pack 1 ou posterior para instalação no Windows Server 2012.|

@@ -6,12 +6,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 06/05/2020
-ms.openlocfilehash: 7c1029f31abe70b09bddc83f928ee492be18ef2b
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: e4cf39e9c96a92df3962fa1a8fc2493c3022d898
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746391"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866405"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais Oracle Linux com suporte no Hyper-V
 
@@ -62,13 +62,13 @@ Nesta seção:
 |       **[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |
 |       Suporte ao kernel de PAE  | 2019, 2016, 2012 R2 |  N/D |
 |       Configuração da lacuna de MMIO  | 2019, 2016, 2012 R2 | &#10004; |
-|       Memória Dinâmica-adição a quente | 2019, 2016, 2012 R2  | Observação de &#10004; 7, 8, 9 |
+|       Memória Dinâmica-Hot-Add | 2019, 2016, 2012 R2  | Observação de &#10004; 7, 8, 9 |
 |       Memória Dinâmica-balões | 2019, 2016, 2012 R2 | Observação de &#10004; 7, 8, 9 |
 |       Redimensionamento de memória de Runtime | 2019, 2016  | &#10004;  |
 |       **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
 |       Dispositivo de vídeo específico do Hyper-V | 2019, 2016, 2012 R2 | &#10004;   |
 |       **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | |
-|       Par chave-valor  | 2019, 2016, 2012 R2 | &#10004;   |
+|       Key-Value emparelhar  | 2019, 2016, 2012 R2 | &#10004;   |
 |       Interrupção não mascarável | 2019, 2016, 2012 R2 | &#10004;  |
 |       Cópia de arquivo do host para o convidado | 2019, 2016, 2012 R2 | &#10004;  |
 |       comando lsvmbus | 2019, 2016, 2012 R2 | &#10004;  |
@@ -775,7 +775,7 @@ Configuração da lacuna de MMIO
 <tr height="50px">
 <td width="20%">
 
-Adição automática de Memória Dinâmica
+Memória Dinâmica Hot-Add
 </td>
 <td width="20%">
 
@@ -1289,13 +1289,13 @@ Esta série tem apenas kernels de 64 bits.
 |       **[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |  |
 |       Suporte ao kernel de PAE  | 2019, 2016, 2012 R2 |  N/D | N/D
 |       Configuração da lacuna de MMIO  | 2019, 2016, 2012 R2 | &#10004; | &#10004;  |
-|       Memória Dinâmica-adição a quente | 2019, 2016, 2012 R2  | Nota de &#10004; 6, 8, 9 | Nota de &#10004; 6, 8, 9 |
+|       Memória Dinâmica-Hot-Add | 2019, 2016, 2012 R2  | Nota de &#10004; 6, 8, 9 | Nota de &#10004; 6, 8, 9 |
 |       Memória Dinâmica-balões | 2019, 2016, 2012 R2 | Nota de &#10004; 6, 8, 9 | Nota de &#10004; 6, 8, 9 |
 |       Redimensionamento de memória de Runtime | 2019, 2016  |  | |
 |       **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | | |
 |       Dispositivo de vídeo específico do Hyper-V | 2019, 2016, 2012 R2 | &#10004;   | &#10004; |
 |       **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | | |
-|       Par chave-valor  | 2019, 2016, 2012 R2 | Observação de &#10004; 10, 11   | Observação de &#10004; 10, 11  |
+|       Key-Value emparelhar  | 2019, 2016, 2012 R2 | Observação de &#10004; 10, 11   | Observação de &#10004; 10, 11  |
 |       Interrupção não mascarável | 2019, 2016, 2012 R2 | &#10004;  | &#10004; |
 |       Cópia de arquivo do host para o convidado | 2019, 2016, 2012 R2 | &#10004;  | &#10004; |
 |       comando lsvmbus | 2019, 2016, 2012 R2 | &#10004;  | &#10004; |
@@ -1321,7 +1321,7 @@ Esta série tem apenas kernels de 64 bits.
 
 6. O suporte à memória dinâmica só está disponível em máquinas virtuais de 64 bits.
 
-7. O suporte de adição automática não está habilitado por padrão nesta distribuição. Para habilitar o suporte de adição automática, você precisa adicionar uma regra udev em/etc/udev/rules.d/da seguinte maneira:
+7. O suporte a Hot-Add não está habilitado por padrão nesta distribuição. Para habilitar Hot-Add suporte, você precisa adicionar uma regra udev em/etc/udev/rules.d/da seguinte maneira:
 
    1. Crie um arquivo **/etc/udev/rules.d/100-Balloon.Rules**. Você pode usar qualquer outro nome desejado para o arquivo.
 
@@ -1337,7 +1337,7 @@ Esta série tem apenas kernels de 64 bits.
 
    * Os aplicativos que tendem a consumir toda a memória disponível em um sistema estão limitados a consumir até 80% da RAM disponível.
 
-9. Se você estiver usando Memória Dinâmica em um sistema operacional Windows Server 2016 ou Windows Server 2012 R2, especifique a **memória de inicialização**, **memória mínima**e parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). Não fazer isso pode levar a falhas de adição automática e talvez você não veja nenhum aumento de memória em um sistema operacional convidado.
+9. Se você estiver usando Memória Dinâmica em um sistema operacional Windows Server 2016 ou Windows Server 2012 R2, especifique a **memória de inicialização**, **memória mínima** e parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). Não fazer isso pode levar a falhas de adição automática e talvez você não veja nenhum aumento de memória em um sistema operacional convidado.
 
 10. Para habilitar a infraestrutura de par chave/valor (KVP), instale o pacote RPM do hypervkvpd ou do HyperV-daemons do seu Oracle Linux ISO. Como alternativa, o pacote pode ser instalado diretamente de repositórios Oracle Linux yum.
 
@@ -1354,7 +1354,7 @@ Esta série tem apenas kernels de 64 bits.
 
 Consulte Também
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Máquinas virtuais CentOS e Red Hat Enterprise Linux com suporte no Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

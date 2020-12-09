@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b383a3c9-3ab6-442e-abd8-0942a32b60f8
 ms.date: 8/16/2016
-ms.openlocfilehash: 92dd8bcc0a65b7eee4d042e1be8bcec39b8256bc
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 8b4b51f1e143fa3e1879cc008aae30423e775a0d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745412"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865845"
 ---
 # <a name="windows-server-2012-r2-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows Server 2012 R2 deve ser configurado com a quantidade recomendada de memória
 
@@ -64,4 +64,4 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)

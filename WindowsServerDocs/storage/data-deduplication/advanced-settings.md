@@ -6,12 +6,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: b8410cb5804e8cbac3ce03e575c2f33c2bc61388
-ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
+ms.openlocfilehash: 84d90e8c1de81498cbc832c8cf068e2ac339ac97
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91716863"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866195"
 ---
 # <a name="advanced-data-deduplication-settings"></a>Configurações avançadas de Eliminação de Duplicação de Dados
 
@@ -24,10 +24,10 @@ Os [planos de trabalho de Eliminação de Duplicação de Dados padrão](underst
 
 ### <a name="changing-a-data-deduplication-schedule"></a><a id="modifying-job-schedules-change-schedule"></a>Alterar um plano de Eliminação de Duplicação de Dados
 Os trabalhos de Eliminação de Duplicação de Dados são programados pelo Agendador de Tarefas do Windows e podem ser exibidos e editados lá no caminho Microsoft\Windows\Deduplication. A Eliminação de Duplicação de Dados inclui vários cmdlets que facilitam o agendamento.
-* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule?view=win10-ps) mostra os trabalhos agendados atuais.
-* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule?view=win10-ps) Cria um novo trabalho agendado.
-* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule?view=win10-ps) modifica um trabalho agendado existente.
-* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule?view=win10-ps) Remove um trabalho agendado.
+* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule) mostra os trabalhos agendados atuais.
+* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule) Cria um novo trabalho agendado.
+* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule) modifica um trabalho agendado existente.
+* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule) Remove um trabalho agendado.
 
 O motivo mais comum para alterar quando executar trabalhos de Eliminação de Duplicação de Dados é garantir que os trabalhos sejam executados durante fora do horário comercial. O exemplo de passo a passo a seguir mostra como modificar o plano de Eliminação de Duplicação de Dados para um cenário em que *tudo corre bem*: um host hiperconvergido do Hyper-V que fica ocioso nos fins de semana e depois das 19h durante a semana. Para alterar a agenda, execute os cmdlets do PowerShell a seguir em um contexto de Administrador.
 
@@ -74,7 +74,7 @@ Você pode alternar as seguintes configurações para trabalhos de Eliminação 
     </thead>
     <tbody>
         <tr>
-            <td>Tipo</td>
+            <td>Type</td>
             <td>O tipo do trabalho que deve ser agendado</td>
             <td>
                 <ul>
@@ -124,7 +124,7 @@ Você pode alternar as seguintes configurações para trabalhos de Eliminação 
             <td>Para impedir que um trabalho seja executado em uma carga&#39;s horas não ociosas</td>
         </tr>
         <tr>
-            <td>Habilitada</td>
+            <td>habilitado</td>
             <td>Se o trabalho será executado ou não</td>
             <td>Verdadeiro/Falso</td>
             <td>Para desabilitar um trabalho sem removê-lo</td>

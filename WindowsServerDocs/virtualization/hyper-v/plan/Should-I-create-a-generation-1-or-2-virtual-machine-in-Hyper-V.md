@@ -6,12 +6,12 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 12/05/2016
-ms.openlocfilehash: f9cdb144e7edacf8a1be0f2d98509517adf5c87e
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 19416bbb8800f12d37d3fdd28760082eb8ea523d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746591"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866005"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>Devo criar uma máquina virtual de geração 1 ou 2 no Hyper-V?
 
@@ -59,7 +59,7 @@ A tabela a seguir mostra quais versões de 64 bits do Windows você pode usar co
 | Windows Server 2012 R2 |&#10004;|&#10004;|
 | Windows Server 2012 |&#10004;|&#10004;|
 |Windows Server 2008 R2|&#10004;| &#10006;|
-|Windows Server 2008|&#10004;| &#10006;|
+|Windows Server 2008|&#10004;| &#10006;|
 |Windows 10|&#10004;|&#10004;|
 |Windows 8.1|&#10004;|&#10004;|
 |Windows 8|&#10004;|&#10004;|
@@ -219,7 +219,7 @@ Aqui estão algumas dicas adicionais sobre como usar máquinas virtuais de gera�
 
 ### <a name="use-ipv6-instead-of-ipv4"></a>Usar IPv6 em vez de IPv4
 
-Por padrão, máquinas virtuais da 2ª geração usam IPv4. Para usar o IPv6 em vez disso, execute o cmdlet [set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) do Windows PowerShell. Por exemplo, o comando a seguir define o protocolo preferencial como IPv6 para uma máquina virtual chamada TestVM:
+Por padrão, máquinas virtuais da 2ª geração usam IPv4. Para usar o IPv6 em vez disso, execute o cmdlet [set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) do Windows PowerShell. Por exemplo, o comando a seguir define o protocolo preferencial como IPv6 para uma máquina virtual chamada TestVM:
 
 ```powershell
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6
@@ -231,13 +231,13 @@ As portas COM não estão disponíveis em máquinas virtuais de geração 2 até
 
 Para adicionar uma porta COM:
 
-1. Desabilite a Inicialização Segura. A depuração de kernel não é compatível com a inicialização segura. Verifique se a máquina virtual está em um estado desligado e, em seguida, use o cmdlet [set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) . Por exemplo, o comando a seguir desabilita a inicialização segura na máquina virtual TestVM:
+1. Desabilite a Inicialização Segura. A depuração de kernel não é compatível com a inicialização segura. Verifique se a máquina virtual está em um estado desligado e, em seguida, use o cmdlet [set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) . Por exemplo, o comando a seguir desabilita a inicialização segura na máquina virtual TestVM:
 
     ```powershell
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off
     ```
 
-2. Adicione uma porta COM. Use o cmdlet [set-VMComPort](/powershell/module/hyper-v/set-vmcomport?view=win10-ps) para fazer isso. Por exemplo, o comando a seguir configura a primeira porta COM na máquina virtual, TestVM, para se conectar ao pipe nomeado, TestPipe, no computador local:
+2. Adicione uma porta COM. Use o cmdlet [set-VMComPort](/powershell/module/hyper-v/set-vmcomport) para fazer isso. Por exemplo, o comando a seguir configura a primeira porta COM na máquina virtual, TestVM, para se conectar ao pipe nomeado, TestPipe, no computador local:
 
     ```powershell
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe

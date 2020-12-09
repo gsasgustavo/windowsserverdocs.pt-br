@@ -6,12 +6,12 @@ ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 9/30/2016
-ms.openlocfilehash: 98a7dbdfa0bb89ba8c857e171b513c00ba297896
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: aa192a9447bdcc49f3943534b53a3523e905f1c8
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746061"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866165"
 ---
 # <a name="set-up-hosts-for-live-migration-without-failover-clustering"></a>Configurar hosts para migração ao vivo sem clustering de failover
 
@@ -41,7 +41,7 @@ Considere como você deseja configurar o seguinte:
       O CredSPP requer a entrada em busca de situações que podem não ser óbvias. Por exemplo, se você entrar no TestServer01 para mover uma máquina virtual para TestServer02 e, em seguida, desejar mover a máquina virtual de volta para o TestServer01, você precisará entrar no TestServer02 antes de tentar mover a máquina virtual de volta para TestServer01. Se você não fizer isso, a tentativa de autenticação falhará, ocorrerá um erro e a seguinte mensagem será exibida:
 
       "Falha na operação de migração da máquina virtual na origem da migração.
-      Falha ao estabelecer uma conexão com o *nome do computador*host: nenhuma credencial está disponível no pacote de segurança 0x8009030E. "
+      Falha ao estabelecer uma conexão com o *nome do computador* host: nenhuma credencial está disponível no pacote de segurança 0x8009030E. "
 
 -   **Desempenho**: faz sentido configurar as opções de desempenho? Essas opções podem reduzir o uso da rede e da CPU, bem como fazer com que as migrações ao vivo se tornem mais rápidas. Considere seus requisitos e sua infraestrutura e teste diferentes configurações para ajudá-lo a decidir. As opções são descritas no final da etapa 2.
 
@@ -111,7 +111,7 @@ Esta etapa inclui a escolha de opções para autenticação e rede. Como prátic
 
 ### <a name="use-windows-powershell-to-set-up-the-source-and-destination-computers-for-live-migration"></a>Usar o Windows PowerShell para configurar os computadores de origem e de destino para a migração ao vivo
 
-Três cmdlets estão disponíveis para configurar a migração ao vivo em hosts não clusterizados: [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration?view=win10-ps), [set-VMMigrationNetwork](/powershell/module/hyper-v/set-vmmigrationnetwork?view=win10-ps)e [set-VMHost](/powershell/module/hyper-v/set-vmhost?view=win10-ps). Este exemplo usa todos os três e faz o seguinte:
+Três cmdlets estão disponíveis para configurar a migração ao vivo em hosts não clusterizados: [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration), [set-VMMigrationNetwork](/powershell/module/hyper-v/set-vmmigrationnetwork)e [set-VMHost](/powershell/module/hyper-v/set-vmhost). Este exemplo usa todos os três e faz o seguinte:
   - Configura a migração dinâmica no host local
   - Permite o tráfego de migração de entrada somente em uma rede específica
   - Escolhe o Kerberos como o protocolo de autenticação

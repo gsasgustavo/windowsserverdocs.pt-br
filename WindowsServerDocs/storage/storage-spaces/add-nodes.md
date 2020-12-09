@@ -8,12 +8,12 @@ author: cosmosdarwin
 ms.date: 11/06/2017
 description: Como adicionar servidores ou unidades a um cluster Espaços de Armazenamento Diretos
 ms.localizationpriority: medium
-ms.openlocfilehash: b9a26d3ac982cccf4471f3a3e03bfdae55b55eed
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8e2d032086336207b48d9d12e30c491ec27bcfc0
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961060"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865945"
 ---
 # <a name="adding-servers-or-drives-to-storage-spaces-direct"></a>Adicionando servidores ou unidades a Espaços de Armazenamento Diretos
 
@@ -21,7 +21,7 @@ ms.locfileid: "87961060"
 
 Este tópico descreve como adicionar servidores ou unidades a Espaços de Armazenamento Diretos.
 
-## <a name="adding-servers"></a><a name="adding-servers"></a>Adicionando servidores
+## <a name="adding-servers"></a><a name="adding-servers"></a> Adicionando servidores
 
 A adição de servidores, geralmente chamada de expansão horizontal, adiciona capacidade de armazenamento e pode melhorar o desempenho e a eficiência do armazenamento. Se sua implantação for hiperconvergente, adicionar servidores também fornecerá mais recursos de computação para sua carga de trabalho.
 
@@ -128,7 +128,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedund
 New-StorageTier -StoragePoolFriendlyName S2D* -MediaType HDD -PhysicalDiskRedundancy 2 -ResiliencySettingName Parity -FriendlyName Capacity
 ```
 
-É isso! Agora você está pronto para criar volumes de paridade acelerada por espelho referenciando esses modelos de camada.
+Pronto! Agora você está pronto para criar volumes de paridade acelerada por espelho referenciando esses modelos de camada.
 
 #### <a name="example"></a>Exemplo
 
@@ -164,7 +164,7 @@ Se sua implantação usar a tolerância a falhas em chassi ou rack, você dever�
 
 3. Adicione o servidor ao cluster conforme descrito em [Adicionando servidores](#adding-servers). Quando o novo servidor ingressa no cluster, ele é automaticamente associado (usando seu nome) ao domínio de falha do espaço reservado.
 
-## <a name="adding-drives"></a><a name="adding-drives"></a>Adicionando unidades
+## <a name="adding-drives"></a><a name="adding-drives"></a> Adicionando unidades
 
 A adição de unidades, também conhecida como expansão vertical, adiciona capacidade de armazenamento e pode melhorar o desempenho. Se você tiver slots disponíveis, você poderá adicionar unidades a cada servidor para expandir a capacidade de armazenamento sem adicionar servidores. Você pode adicionar unidades de cache ou de capacidade independentemente a qualquer momento.
 
@@ -198,7 +198,7 @@ A otimização usa dois trabalhos – um chamado *Optimize* e outro chamado *reb
 Get-StorageJob
 ```
 
-Você pode otimizar manualmente um pool de armazenamento com o cmdlet [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool?view=win10-ps) . Este é um exemplo:
+Você pode otimizar manualmente um pool de armazenamento com o cmdlet [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool) . Este é um exemplo:
 
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool

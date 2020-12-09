@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.openlocfilehash: 0fd18a7a5e75320533cf8195b507808740b4e1f8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a8d3bb8c7094316dc8b54430137cac0c4fa7c75e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965113"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866415"
 ---
 # <a name="scenario-web-api-calling-web-api-on-behalf-of-scenario"></a>Cenário: API Web chamando a API da Web (em nome do cenário)
 > Aplica-se a: AD FS 2019 e posterior
@@ -24,7 +24,7 @@ Antes de ler este artigo, você deve estar familiarizado com os [conceitos de AD
 
 
 - Um cliente (aplicativo Web)-não representado no diagrama abaixo – chama uma API Web protegida e fornece um token de portador JWT em seu cabeçalho http "Authorization".
-- A API Web protegida valida o token e usa o método MSAL [AcquireTokenOnBehalfOf](/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync?view=azure-dotnet#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_)   para solicitar (de AD FS) outro token para que ele possa, por sua vez, chamar uma segunda API da Web (chamada de API da Web downstream) em nome do usuário.
+- A API Web protegida valida o token e usa o método MSAL [AcquireTokenOnBehalfOf](/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_)   para solicitar (de AD FS) outro token para que ele possa, por sua vez, chamar uma segunda API da Web (chamada de API da Web downstream) em nome do usuário.
 - A API Web protegida usa esse token para chamar uma API downstream. Ele também pode chamar AcquireTokenSilentlater para solicitar tokens para outras APIs de downstream (mas ainda em nome do mesmo usuário).O AcquireTokenSilent atualiza o token quando necessário.
 
      ![visão geral](media/adfs-msal-web-api-web-api/webapi1.png)
@@ -43,15 +43,15 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
   1. Em gerenciamento de AD FS, clique com o botão direito do mouse em **grupos de aplicativos** e selecione **Adicionar grupo de aplicativos**.
 
-  2. No assistente de grupo de aplicativos, para o **nome** , insira **WebApiToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo nativo acessando um modelo de API Web** . Clique em **Próximo**.
+  2. No assistente de grupo de aplicativos, para o **nome** , insira **WebApiToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo nativo acessando um modelo de API Web** . Clique em **Avançar**.
 
       ![Registro do Aplicativo](media/adfs-msal-web-api-web-api/webapi2.png)
 
-  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ClientID** no arquivo de **App.config** do aplicativo. Insira o seguinte para o **URI de redirecionamento:**  -  https://ToDoListClient . Clique em **Adicionar**. Clique em **Próximo**.
+  3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ClientID** no arquivo de **App.config** do aplicativo. Insira o seguinte para o **URI de redirecionamento:**  -  https://ToDoListClient . Clique em **Adicionar**. Clique em **Avançar**.
 
       ![Registro do Aplicativo](media/adfs-msal-web-api-web-api/webapi3.png)
 
-  4. Na tela configurar API da Web, insira o **identificador:** https://localhost:44321/ . Clique em **Adicionar**. Clique em **Próximo**. Esse valor será usado posteriormente nos arquivos de **App.config** e **Web.Config** do aplicativo.
+  4. Na tela configurar API da Web, insira o **identificador:** https://localhost:44321/ . Clique em **Adicionar**. Clique em **Avançar**. Esse valor será usado posteriormente nos arquivos de **App.config** e **Web.Config** do aplicativo.
 
       ![Registro do Aplicativo](media/adfs-msal-web-api-web-api/webapi4.png)
 
@@ -59,7 +59,7 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
       ![Registro do Aplicativo](media/adfs-msal-web-api-web-api/webapi5.png)
 
-  6. Na tela configurar permissões de aplicativo, selecione **OpenID** e **user_impersonation**. Clique em **Próximo**.
+  6. Na tela configurar permissões de aplicativo, selecione **OpenID** e **user_impersonation**. Clique em **Avançar**.
 
       ![Registro do Aplicativo](media/adfs-msal-web-api-web-api/webapi6.png)
 

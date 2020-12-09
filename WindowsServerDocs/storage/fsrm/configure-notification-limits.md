@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 969c950d3a925afac400d128ac21ed0923f07ffa
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 625fb9c6a36717e57f3c6fd6da696b8df07fe8c3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950650"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866055"
 ---
 # <a name="configure-notification-limits"></a>Configurar limites de notificação
 
@@ -37,7 +37,7 @@ Um limite de 60 minutos padrão é definido para cada tipo de notificação, mas
 3.  Clique em **OK**.
 
 > [!Note]
-> Para personalizar limites de tempo que são associados com notificações de uma cota ou triagem de arquivo específico, você pode usar as ferramentas de linha de comando do Gerenciador de Recursos de Servidor de Arquivos **Dirquota.exe** e **Filescrn.exe**, ou uso o cmdlets do [Gerenciador de Recursos de Servidor de Arquivos](/powershell/module/fileserverresourcemanager/?view=win10-ps).
+> Para personalizar limites de tempo que são associados com notificações de uma cota ou triagem de arquivo específico, você pode usar as ferramentas de linha de comando do Gerenciador de Recursos de Servidor de Arquivos **Dirquota.exe** e **Filescrn.exe**, ou uso o cmdlets do [Gerenciador de Recursos de Servidor de Arquivos](/powershell/module/fileserverresourcemanager/).
 
 ## <a name="additional-references"></a>Referências adicionais
 

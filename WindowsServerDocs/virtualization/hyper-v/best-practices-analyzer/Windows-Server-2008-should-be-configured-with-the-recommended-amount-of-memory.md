@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a98a8594-603b-487a-8739-78887c568e57
 ms.date: 8/16/2016
-ms.openlocfilehash: 1dc343c19dc02fdf5dc0408db70649290025e2d2
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: d712ca14527fec503d8767ac08e608fdf325cfe9
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746181"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865855"
 ---
 # <a name="windows-server-2008-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows Server 2008 deve ser configurado com a quantidade recomendada de memória
 
@@ -67,4 +67,4 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
