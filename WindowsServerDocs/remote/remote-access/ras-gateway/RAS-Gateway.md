@@ -7,12 +7,12 @@ ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
 ms.author: lizross
 author: eross-msft
 ms.date: 05/23/2018
-ms.openlocfilehash: 7ea0c7fab5ef605ae4cb92c01a235154e7e8f9b3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9e8dfd54fc919fa857ad360eb86baf47f8c3e274
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939867"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865205"
 ---
 # <a name="ras-gateway"></a>Gateway de RAS
 
@@ -122,9 +122,9 @@ A seguir estão os cenários de implantação recomendados para o gateway de RAS
 ## <a name="ras-gateway-management-tools"></a><a name="bkmk_manage"></a>Ferramentas de gerenciamento de gateway RAS
 A seguir estão as ferramentas de gerenciamento para o gateway de RAS.
 
--   No Windows Server 2016, para implantar um roteador de gateway de RAS, você deve usar comandos do Windows PowerShell. Para obter mais informações, consulte [cmdlets de acesso remoto](/powershell/module/remoteaccess) para windows Server 2016 e Windows 10.
+-   No Windows Server 2016, para implantar um roteador de gateway de RAS, você deve usar comandos do Windows PowerShell. Para obter mais informações, consulte  [cmdlets de acesso remoto](/powershell/module/remoteaccess) para windows Server 2016 e Windows 10.
 
--   No System Center 2012 R2 Virtual Machine Manager (VMM), o gateway RAS é chamado de gateway do Windows Server. Um conjunto limitado de opções de configuração de Border Gateway Protocol (BGP) está disponível na interface de software do VMM, incluindo o **endereço IP de BGP local** e os **números de sistema autônomo (ASN)**, **lista de endereços IP de pares de BGP**e **valores de ASN**. No entanto, você pode usar os comandos BGP do Windows PowerShell de Acesso Remoto para configurar todos os outros recursos do Gateway do Windows Server. Para obter mais informações, consulte [Virtual Machine Manager (VMM)](/system-center/vmm/overview?view=sc-vmm-2019) e [cmdlets de acesso remoto](/system-center/vmm/overview?view=sc-vmm-2019) para Windows Server 2016 e Windows 10.
+-   No System Center 2012 R2 Virtual Machine Manager (VMM), o gateway RAS é chamado de gateway do Windows Server. Um conjunto limitado de opções de configuração de Border Gateway Protocol (BGP) está disponível na interface de software do VMM, incluindo o **endereço IP de BGP local** e os **números de sistema autônomo (ASN)**, **lista de endereços IP de pares de BGP** e **valores de ASN**. No entanto, você pode usar os comandos BGP do Windows PowerShell de Acesso Remoto para configurar todos os outros recursos do Gateway do Windows Server. Para obter mais informações, consulte  [Virtual Machine Manager (VMM)](/system-center/vmm/overview) e [cmdlets de acesso remoto](/system-center/vmm/overview) para Windows Server 2016 e Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Alta disponibilidade do gateway de RAS](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)

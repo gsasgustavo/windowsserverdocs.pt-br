@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e8b19df2313bd0f3f6599aae8a23a18233f469e7
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5e9187fd549f9982ab8d0bea5ffa9b45d6e1e3c7
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766919"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865275"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-deployment"></a>Usar a política DNS para a implantação de DNS de divisão \- Brain
 
@@ -20,7 +20,7 @@ ms.locfileid: "90766919"
 Você pode usar este tópico para aprender a configurar a política DNS no Windows Server &reg; 2016 para implantações de DNS de divisão-Brain, em que há duas versões de uma única zona-uma para os usuários internos na intranet da sua organização e outra para os usuários externos, que normalmente são usuários na Internet.
 
 >[!NOTE]
->Para obter informações sobre como usar a política DNS para a implantação de DNS de divisão \- Brain com Active Directory zonas DNS integrado, consulte [usar a política DNS para DNS de divisão-brain no Active Directory](dns-sb-with-ad.md).
+>Para obter informações sobre como usar a política DNS para a implantação de DNS de divisão \- Brain com Active Directory zonas DNS integrado, consulte [usar a política dns para Split-Brain DNS no Active Directory](dns-sb-with-ad.md).
 
 Anteriormente, esse cenário exigia que os administradores de DNS mantenham dois servidores DNS diferentes, cada um fornecendo serviços a cada conjunto de usuários, interno e externo. Se apenas alguns registros dentro da zona tiverem sido reduzidos \- ou se ambas as instâncias da zona (internas e externas) tiverem sido delegadas para o mesmo domínio pai, isso se tornaria um enigma de gerenciamento.
 
@@ -28,16 +28,16 @@ Outro cenário de configuração para implantação de divisão-Brain é o contr
 
 Este tópico inclui as seções a seguir.
 
-- [Exemplo de implantação de divisão-Brain do DNS](#bkmk_sbexample)
+- [Exemplo de implantação de Split-Brain de DNS](#bkmk_sbexample)
 - [Exemplo de controle de recursão seletiva de DNS](#bkmk_recursion)
 
-## <a name="example-of-dns-split-brain-deployment"></a><a name="bkmk_sbexample"></a>Exemplo de implantação de divisão-Brain do DNS
+## <a name="example-of-dns-split-brain-deployment"></a><a name="bkmk_sbexample"></a>Exemplo de implantação de Split-Brain de DNS
 Veja a seguir um exemplo de como você pode usar a política de DNS para realizar o cenário descrito anteriormente de DNS de divisão-cérebro.
 
 Esta seção contém os seguintes tópicos.
 
-- [Como funciona a implantação de divisão-Brain do DNS](#bkmk_sbhow)
-- [Como configurar a implantação de divisão-Brain do DNS](#bkmk_sbconfigure)
+- [Como funciona a implantação do DNS Split-Brain](#bkmk_sbhow)
+- [Como configurar a implantação de Split-Brain de DNS](#bkmk_sbconfigure)
 
 Este exemplo usa uma empresa fictícia, contoso, que mantém um site de carreira em www.career.contoso.com.
 
@@ -51,9 +51,9 @@ Usando políticas DNS essas zonas agora podem ser hospedadas no mesmo servidor D
 
 A ilustração a seguir descreve esse cenário.
 
-![Implantação de DNS de divisão-Brain](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)
+![Split-Brain implantação de DNS](../../media/DNS-Split-Brain/Dns-Split-Brain-01.jpg)
 
-## <a name="how-dns-split-brain-deployment-works"></a><a name="bkmk_sbhow"></a>Como funciona a implantação de divisão-Brain do DNS
+## <a name="how-dns-split-brain-deployment-works"></a><a name="bkmk_sbhow"></a>Como funciona a implantação do DNS Split-Brain
 
 Quando o servidor DNS é configurado com as políticas de DNS necessárias, cada solicitação de resolução de nome é avaliada em relação às políticas no servidor DNS.
 
@@ -63,8 +63,8 @@ Se a interface do servidor na qual a consulta é recebida corresponde a qualquer
 
 Portanto, em nosso exemplo, as consultas DNS para www.career.contoso.com recebidas no IP privado (10.0.0.56) recebem uma resposta DNS que contém um endereço IP interno; e as consultas DNS que são recebidas na interface de rede pública recebem uma resposta DNS que contém o endereço IP público no escopo de zona padrão (isso é o mesmo que a resolução de consulta normal).
 
-## <a name="how-to-configure-dns-split-brain-deployment"></a><a name="bkmk_sbconfigure"></a>Como configurar a implantação de divisão-Brain do DNS
-Para configurar a implantação de divisão-Brain do DNS usando a política DNS, você deve usar as etapas a seguir.
+## <a name="how-to-configure-dns-split-brain-deployment"></a><a name="bkmk_sbconfigure"></a>Como configurar a implantação de Split-Brain de DNS
+Para configurar a implantação de Split-Brain de DNS usando a política DNS, você deve usar as etapas a seguir.
 
 - [Criar os escopos de zona](#bkmk_zscopes)
 - [Adicionar registros aos escopos de zona](#bkmk_records)
@@ -86,7 +86,7 @@ Você pode usar o seguinte comando de exemplo para particionar o escopo de zona 
 
 `Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
-Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>Adicionar registros aos escopos de zona
 
@@ -103,14 +103,14 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39” -ZoneScope "internal"
 `
 
-Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>Criar as políticas de DNS
 
 Depois de identificar as interfaces de servidor para a rede externa e a rede interna e criar os escopos de zona, você deverá criar políticas de DNS que conectem os escopos de zona interna e externa.
 
 >[!NOTE]
->Este exemplo usa a interface de servidor como os critérios para diferenciar entre os clientes internos e externos. Outro método para diferenciar entre clientes externos e internos é usar sub-redes de cliente como um critério. Se você puder identificar as sub-redes às quais os clientes internos pertencem, você pode configurar a política DNS para diferenciar com base na sub-rede do cliente. Para obter informações sobre como configurar o gerenciamento de tráfego usando critérios de sub-rede do cliente, consulte [usar a política DNS para o gerenciamento de tráfego baseado na localização geográfica com servidores primários](./primary-geo-location.md).
+>Este exemplo usa a interface de servidor como os critérios para diferenciar entre os clientes internos e externos. Outro método para diferenciar entre clientes externos e internos é usar sub-redes de cliente como um critério. Se você puder identificar as sub-redes às quais os clientes internos pertencem, você pode configurar a política DNS para diferenciar com base na sub-rede do cliente. Para obter informações sobre como configurar o gerenciamento de tráfego usando critérios de sub-rede do cliente, consulte [usar a política DNS para o gerenciamento de tráfego baseado em Geo-Location com servidores primários](./primary-geo-location.md).
 
 Quando o servidor DNS recebe uma consulta na interface privada, a resposta de consulta DNS é retornada do escopo da zona interna.
 
@@ -121,7 +121,7 @@ No comando de exemplo a seguir, 10.0.0.56 é o endereço IP na interface de rede
 
 `Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com`
 
-Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 ## <a name="example-of-dns-selective-recursion-control"></a><a name="bkmk_recursion"></a>Exemplo de controle de recursão seletiva de DNS
 
@@ -183,7 +183,7 @@ Set-DnsServerRecursionScope -Name . -EnableRecursion $False
 Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
 ```
 
-Para obter mais informações, consulte [Add-DnsServerRecursionScope](/powershell/module/dnsserver/add-dnsserverrecursionscope?view=win10-ps)
+Para obter mais informações, consulte [Add-DnsServerRecursionScope](/powershell/module/dnsserver/add-dnsserverrecursionscope)
 
 #### <a name="create-dns-recursion-policies"></a><a name="bkmk_recpolicy"></a>Criar políticas de recursão de DNS
 
@@ -199,7 +199,7 @@ Você pode usar o comando de exemplo a seguir para configurar políticas de recu
 Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP "EQ,10.0.0.39"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Agora o servidor DNS está configurado com as políticas de DNS necessárias para um servidor de nome de divisão ou um servidor DNS com controle de recursão seletiva habilitado para clientes internos.
 

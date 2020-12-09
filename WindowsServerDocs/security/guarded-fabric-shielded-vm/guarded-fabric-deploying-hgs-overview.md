@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 8fb0bb3596635a7879b7fff784ced977043f1d5c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4267acb6058a1e39ed42e986f195f8f9d4c8d17b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996423"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864145"
 ---
 # <a name="deploying-the-host-guardian-service"></a>Implantando o serviço guardião de host
 
@@ -36,14 +36,14 @@ A tabela a seguir divide as tarefas para implantar uma malha protegida e criar V
 | 5- [verificar pré-requisitos de host (chave)](guarded-fabric-guarded-host-prerequisites.md#host-key-attestation) e [verificar pré-requisitos de host (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation) | ![Etapa 5, verificar a chave de pré-requisito do host e o TPM de pré-requisito do host](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
 | 6- [criar chave de host (chave)](guarded-fabric-create-host-key.md) e[coletar informações do host (TPM)](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md) | ![Etapa 6, criar chave de host e coletar informações do host](../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png) |
 | 7- [Configurar o HgS com informações do host](guarded-fabric-add-host-information-to-hgs.md) | ![Etapa 7, adicionar informações do host ao HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png) |
-| 8- [confirmar que os hosts podem atestar](guarded-fabric-confirm-hosts-can-attest-successfully.md) | ![Etapa 8, confirmar que o host pode atestar](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
-| 9- [Configurar o VMM (opcional)](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019) | ![Etapa 9, configurar o VMM (opcional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
+| 8-  [confirmar que os hosts podem atestar](guarded-fabric-confirm-hosts-can-attest-successfully.md) | ![Etapa 8, confirmar que o host pode atestar](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
+| 9- [Configurar o VMM (opcional)](/system-center/vmm/deploy-guarded-host-fabric) | ![Etapa 9, configurar o VMM (opcional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
 | 10- [criar discos de modelo](guarded-fabric-create-a-shielded-vm-template.md) | ![Etapa 10, criar discos de modelo](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png) |
 | 11- [criar um disco auxiliar de blindagem de VM para o VMM (opcional)](guarded-fabric-vm-shielding-helper-vhd.md) | ![Etapa 11, criar um disco de ajuda de blindagem de VM para o VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png) |
 | 12- [configurar pacote do Microsoft Azure (opcional)](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Etapa 12, configurar Pacote do Microsoft Azure (opcional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png) |
 | 13- [criar arquivo de dados de blindagem](guarded-fabric-tenant-creates-shielding-data.md) | ![Etapa 13, criar um arquivo de dados de blindagem](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png) |
 | 14- [criar VMs blindadas usando pacote do Microsoft Azure](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Etapa 14, criar VMs blindadas usando Pacote do Microsoft Azure](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
-| 15- [criar VMs blindadas usando o VMM](/system-center/vmm/guarded-deploy-vm?view=sc-vmm-2019) | ![Etapa 15, criar VMs blindadas usando o VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
+| 15- [criar VMs blindadas usando o VMM](/system-center/vmm/guarded-deploy-vm) | ![Etapa 15, criar VMs blindadas usando o VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
 
 ## <a name="additional-references"></a>Referências adicionais
 

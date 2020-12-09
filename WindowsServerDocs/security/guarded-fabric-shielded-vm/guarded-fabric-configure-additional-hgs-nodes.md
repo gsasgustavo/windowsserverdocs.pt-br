@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 16a8ada942f4fcae80085058c92a14bd33ed6e79
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 97e3860d96fe87414fba9d4965bfde62208c01be
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997196"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864815"
 ---
 # <a name="configure-additional-hgs-nodes"></a>Configurar nós adicionais do HGS
 
@@ -67,7 +67,7 @@ Certifique-se de que cada nó adicional:
 ## <a name="existing-bastion-forest-with-pfx-certificates"></a>Floresta de bastiões existente com certificados PFX
 
 1. Unir o nó ao domínio existente
-2. Conceda aos direitos de computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
+2. Conceder aos direitos do computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
 3. Inicializar o servidor HGS
 
 ### <a name="join-the-node-to-the-existing-domain"></a>Unir o nó ao domínio existente
@@ -75,7 +75,7 @@ Certifique-se de que cada nó adicional:
 1. Verifique se pelo menos uma NIC no nó está configurada para usar o servidor DNS em seu primeiro servidor HGS.
 2. Ingresse o novo nó HGS no mesmo domínio que o seu primeiro nó HGS.
 
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Conceda aos direitos de computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Conceder aos direitos do computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
 
 [!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)]
 
@@ -86,7 +86,7 @@ Certifique-se de que cada nó adicional:
 ## <a name="existing-bastion-forest-with-certificate-thumbprints"></a>Floresta de bastiões existente com impressões digitais de certificado
 
 1. Unir o nó ao domínio existente
-2. Conceda aos direitos de computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
+2. Conceder aos direitos do computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
 3. Inicializar o servidor HGS
 4. Instalar as chaves privadas para os certificados
 
@@ -95,7 +95,7 @@ Certifique-se de que cada nó adicional:
 1. Verifique se pelo menos uma NIC no nó está configurada para usar o servidor DNS em seu primeiro servidor HGS.
 2. Ingresse o novo nó HGS no mesmo domínio que o seu primeiro nó HGS.
 
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Conceda aos direitos de computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Conceder aos direitos do computador para recuperar a senha do gMSA e executar Install-ADServiceAccount
 
 [!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)]
 
@@ -115,7 +115,7 @@ Se você quiser proteger pontos de extremidade HGS com um certificado SSL, dever
 Os certificados SSL *não são* replicados pelo HgS e não precisam usar as mesmas chaves para cada nó (ou seja, você pode ter diferentes certificados SSL para cada nó).
 
 Ao solicitar um certificado SSL, certifique-se de que o nome de domínio totalmente qualificado do cluster (como mostrado na saída de `Get-HgsServer` ) seja o nome comum da entidade do certificado ou incluído como um nome DNS alternativo da entidade.
-Depois de obter um certificado de sua autoridade de certificação, você pode configurar o HGS para usá-lo com [set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps).
+Depois de obter um certificado de sua autoridade de certificação, você pode configurar o HGS para usá-lo com [set-HgsServer](/powershell/module/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"

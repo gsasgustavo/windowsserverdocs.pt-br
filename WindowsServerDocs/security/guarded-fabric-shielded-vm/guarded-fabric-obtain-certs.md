@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 43762e34e2987473954e3f9408ddd6e74b0de3cb
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: c6f20ebdf2bedd74af98e075ccf6f6ff60f96767
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330358"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864155"
 ---
 # <a name="obtain-certificates-for-hgs"></a>Obter certificados para HGS
 
@@ -91,7 +91,7 @@ Nome da entidade             | O endereço que os clientes HGS (ou seja, hosts p
 Nome alternativo da entidade | Se você estiver usando um nome DNS diferente para acessar seu cluster HGS (por exemplo, se estiver atrás de um balanceador de carga ou se estiver usando endereços diferentes para um subconjunto de nós em topologia complexa), certifique-se de incluir esses nomes DNS no campo SAN da solicitação de certificado. Observe que, se a extensão SAN for populada, o nome da entidade será ignorado e, portanto, a SAN deverá incluir todos os valores, incluindo aquele que você normalmente colocaria no nome da entidade.
 
 As opções para especificar esse certificado ao inicializar o servidor HGS são cobertas em [Configurar o primeiro nó HgS](guarded-fabric-initialize-hgs.md).
-Você também pode adicionar ou alterar o certificado SSL em um momento posterior usando o cmdlet [set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) .
+Você também pode adicionar ou alterar o certificado SSL em um momento posterior usando o cmdlet [set-HgsServer](/powershell/module/hgsserver/set-hgsserver) .
 
 ## <a name="next-step"></a>Próxima etapa
 

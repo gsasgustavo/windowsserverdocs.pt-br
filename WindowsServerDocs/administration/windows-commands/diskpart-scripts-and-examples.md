@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 820b83ab9c6c70c24c10c16678da9bf90892135f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 51ebd58874e2bf56c391fe7ec9a6d257ab5a0567
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89635146"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864205"
 ---
 # <a name="diskpart-scripts-and-examples"></a>scripts e exemplos do DiskPart
 
@@ -59,4 +59,4 @@ diskpart /s scriptname.txt > logfile.txt
 
 - [Exemplo: configurar partições de disco rígido com base em BIOS/MBR usando o Windows PE e o DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
-- [Cmdlets de armazenamento no Windows PowerShell](/powershell/module/storage/?view=win10-ps)
+- [Cmdlets de armazenamento no Windows PowerShell](/powershell/module/storage/)

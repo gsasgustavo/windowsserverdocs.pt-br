@@ -6,19 +6,19 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/29/2019
-ms.openlocfilehash: 713f52a935f59ca1fea35ce386ab29adb4b64080
-ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
+ms.openlocfilehash: 43d03727195e942c68e5ec3a982ddc6b7f756dbc
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788089"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864425"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Criar um disco de modelo de VM blindada do Windows
 
 >Aplica-se a: Windows Server (canal semestral), Windows Server 2016, Windows Server 2019
 
 
-Assim como acontece com as VMs regulares, você pode criar um modelo de VM (por exemplo, um [modelo de VM no Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates?view=sc-vmm-2019)) para tornar mais fácil para os locatários e administradores implantar novas VMs na malha usando um disco de modelo. Como as VMs blindadas são ativos sensíveis à segurança, há etapas adicionais para criar um modelo de VM que dá suporte à blindagem. Este tópico aborda as etapas para criar um disco de modelo blindado e um modelo de VM no VMM.
+Assim como acontece com as VMs regulares, você pode criar um modelo de VM (por exemplo, um [modelo de VM no Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates)) para tornar mais fácil para os locatários e administradores implantar novas VMs na malha usando um disco de modelo. Como as VMs blindadas são ativos sensíveis à segurança, há etapas adicionais para criar um modelo de VM que dá suporte à blindagem. Este tópico aborda as etapas para criar um disco de modelo blindado e um modelo de VM no VMM.
 
 Para entender como este tópico se encaixa no processo geral de implantação de VMs blindadas, consulte [as etapas de configuração do provedor de serviço de hospedagem para hosts protegidos e VMs blindadas](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
@@ -138,7 +138,7 @@ Depois que o modelo é criado, os locatários podem usá-lo para criar novas má
 
 ## <a name="prepare-and-protect-the-vhdx-using-powershell"></a>Preparar e proteger o VHDX usando o PowerShell
 
-Como alternativa para executar o assistente de disco de modelo, você pode copiar o disco de modelo e o certificado para um computador que esteja executando o RSAT e executar [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) para iniciar o processo de assinatura.
+Como alternativa para executar o assistente de disco de modelo, você pode copiar o disco de modelo e o certificado para um computador que esteja executando o RSAT e executar [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) para iniciar o processo de assinatura.
 O exemplo a seguir usa as informações de nome e versão especificadas pelos parâmetros _TemplateName_ e _version_ .
 O VHDX que você fornecer ao `-Path` parâmetro será substituído pelo disco de modelo atualizado, portanto, certifique-se de fazer uma cópia antes de executar o comando.
 

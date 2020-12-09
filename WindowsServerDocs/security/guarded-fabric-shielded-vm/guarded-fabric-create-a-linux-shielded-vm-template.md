@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: fca3faca236a2fc5162d7a50ef02acad9b508226
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 46afeba5e8e00c6c37935d9e123d8ddaab5e835d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996312"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864405"
 ---
 # <a name="create-a-linux-shielded-vm-template-disk"></a>Criar um disco de modelo de VM blindada Linux
 
@@ -189,7 +189,7 @@ O VHDX que você fornecer ao `-Path` parâmetro será substituído pelo disco de
 
 > [!IMPORTANT]
 > O Ferramentas de Administração de Servidor Remoto disponível no Windows Server 2016 ou Windows 10 não pode ser usado para preparar um disco de modelo de VM blindada do Linux.
-> Use apenas o cmdlet [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) disponível no Windows Server, versão 1709 ou o ferramentas de administração de servidor remoto disponível no windows Server 2019 para preparar um disco de modelo de VM blindada do Linux.
+> Use apenas o cmdlet [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) disponível no Windows Server, versão 1709 ou o ferramentas de administração de servidor remoto disponível no windows Server 2019 para preparar um disco de modelo de VM blindada do Linux.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below

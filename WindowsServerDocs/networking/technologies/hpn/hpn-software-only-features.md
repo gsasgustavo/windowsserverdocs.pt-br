@@ -7,25 +7,25 @@ manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/20/2018
-ms.openlocfilehash: 94b7a4b87a74c24acc97289516f6835be9b90ef7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: ec4867b0c2ca760babd2b07062c9b8ee3d73e8f7
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990313"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864875"
 ---
 # <a name="software-only-so-features-and-technologies"></a>Somente software (SO) recursos e tecnologias
 Os recursos somente de software são implementados como parte do sistema operacional e são independentes das NIC (s) subjacentes. Às vezes, esses recursos exigem algum ajuste da NIC para uma operação ideal. Exemplos disso incluem recursos do Hyper-v, como vmQoS (qualidade de serviço) de máquina virtual, ACLs (listas de controle de acesso) e recursos não Hyper-V como agrupamento NIC.
 
 ## <a name="access-control-lists-acls"></a>ACLs (Listas de Controle de Acesso)
 
-Um recurso do Hyper-V e do SDNv1 para gerenciar a segurança de uma VM. Esse recurso se aplica à pilha Hyper-V não virtualizada e à pilha HVNv1. Você pode gerenciar ACLs de comutador Hyper-V por meio de cmdlets do PowerShell [Add-VMNetworkAdapterAcl](/powershell/module/hyper-v/add-vmnetworkadapteracl?view=win10-ps) e [Remove-VMNetworkAdapterAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) .
+Um recurso do Hyper-V e do SDNv1 para gerenciar a segurança de uma VM. Esse recurso se aplica à pilha Hyper-V não virtualizada e à pilha HVNv1. Você pode gerenciar ACLs de comutador Hyper-V por meio de cmdlets do PowerShell [Add-VMNetworkAdapterAcl](/powershell/module/hyper-v/add-vmnetworkadapteracl) e [Remove-VMNetworkAdapterAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) .
 
 ## <a name="extended-acls"></a>ACLs estendidas
 
 ACLs estendidas do comutador virtual do Hyper-V permitem que você configure as ACLs de porta estendida do comutador virtual do Hyper-v para fornecer proteção de firewall e impor políticas de segurança para as VMs de locatário em data centers. Como as ACLs de porta são configuradas no comutador virtual do Hyper-V em vez de nas VMs, o administrador pode gerenciar políticas de segurança para todos os locatários em um ambiente multilocatário.
 
-Você pode gerenciar ACLs estendidas do comutador Hyper-V por meio dos cmdlets do PowerShell [Add-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=win10-ps) e [Remove-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) .
+Você pode gerenciar ACLs estendidas do comutador Hyper-V por meio dos cmdlets do PowerShell [Add-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl) e [Remove-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) .
 
 >[!TIP]
 >Esse recurso se aplica à pilha HNVv1. Para ACLs na pilha SDN, consulte ACLs de rede definida pelo software SDN) abaixo.
@@ -69,9 +69,9 @@ A qualidade de serviço da máquina virtual é um recurso do Hyper-V que permite
 
 vmQoS pode definir limites de saída e reservas de saída. Você deve determinar o modo de reserva de saída (peso relativo ou largura de banda absoluta) antes de criar o comutador do Hyper-V.
 
--  Determine o modo de reserva de saída com o parâmetro – MinimumBandwidthMode do cmdlet do PowerShell New-VMSwitch.
+-  Determine o modo de reserva de saída com o parâmetro – MinimumBandwidthMode do cmdlet New-VMSwitch PowerShell.
 
--  Defina o valor do limite de saída com o parâmetro – MaximumBandwidth no cmdlet Set-VMNetworkAdapter do PowerShell.
+-  Defina o valor do limite de saída com o parâmetro – MaximumBandwidth no cmdlet Set-VMNetworkAdapter PowerShell.
 
 -  Defina o valor da reserva de saída com um dos seguintes parâmetros do cmdlet Set VMNetworkAdapter PowerShell:
 

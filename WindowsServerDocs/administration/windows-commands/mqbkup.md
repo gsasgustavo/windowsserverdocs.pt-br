@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 293138a35400613faacb3988add652ec17c97783
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 90eabbcaa878f65a6df087d6eaeded6c279eb039
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640591"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865005"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -71,4 +71,4 @@ mqbkup /r c:\msmqbkup
 
 - [Chave da sintaxe de linha de comando](command-line-syntax-key.md)
 
-- [Referência do PowerShell do MSMQ](/powershell/module/msmq/?view=win10-ps)
+- [Referência do PowerShell do MSMQ](/powershell/module/msmq/)

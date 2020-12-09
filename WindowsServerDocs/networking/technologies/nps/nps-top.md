@@ -7,12 +7,12 @@ ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: lizross
 author: eross-msft
 ms.date: 06/20/2018
-ms.openlocfilehash: 04498a73c04df8f9bce091c8ba583c323f28bbf1
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 815bc9d01f8e5e8b85cfeecb9beb70963b18d14f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990410"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865475"
 ---
 # <a name="network-policy-server-nps"></a>NPS (Servidor de Políticas de Rede)
 
@@ -27,9 +27,9 @@ Você pode usar este tópico para obter uma visão geral do servidor de polític
 > - [Planejar Servidor de Políticas de Rede](nps-plan-top.md)
 > - [Implantar o Servidor de Políticas de Rede](nps-deploy.md)
 > - [Gerenciar o Servidor de Políticas de Rede](nps-manage-top.md)
-> - [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/?view=win10-ps) para windows Server 2016 e Windows 10
-> - [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/?view=win10-ps) para windows Server 2012 R2 e Windows 8.1
-> - [Cmdlets do NPS no Windows PowerShell](/powershell/module/nps/?view=win10-ps) para windows Server 2012 e Windows 8
+> - [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/) para windows Server 2016 e Windows 10
+> - [Cmdlets do servidor de diretivas de rede (NPS) no Windows PowerShell](/powershell/module/nps/) para windows Server 2012 R2 e Windows 8.1
+> - [Cmdlets do NPS no Windows PowerShell](/powershell/module/nps/) para windows Server 2012 e Windows 8
 
 O Servidor de Políticas de Rede (NPS) permite que você crie e aplique políticas de acesso de rede em toda a organização para autenticação e autorização de solicitações de conexão.
 

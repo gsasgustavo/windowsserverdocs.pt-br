@@ -6,12 +6,12 @@ ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
-ms.openlocfilehash: cb1b712e62b3b77def304526c7b65fd5187b56d5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f0658434f8a14080b56efa5cacbd20ebeb11438d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939355"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864789"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Réplica de armazenamento de cluster para Cluster cruzar região no Azure
 
@@ -27,7 +27,7 @@ Assista ao vídeo abaixo para obter um passo a passo completo do processo.
 > Todos os exemplos referenciados são específicos para a ilustração acima.
 
 
-1. No portal do Azure, crie [grupos de recursos](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) em duas regiões diferentes.
+1. No portal do Azure, crie [grupos de recursos](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup)  em duas regiões diferentes.
 
     Por exemplo, **Sr-AZ2AZ** no **oeste dos EUA 2** e **SR-AZCROSS** no **Oeste EUA Central**, conforme mostrado acima.
 
@@ -36,12 +36,12 @@ Assista ao vídeo abaixo para obter um passo a passo completo do processo.
     - Conjunto de disponibilidade (**azcross-as**) em (**Sr-azcross**)
 
 3. Criar duas redes virtuais
-   - Crie a [rede virtual](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-vnet**) no primeiro grupo de recursos (**Sr-az2az**), tendo uma sub-rede e uma sub-rede de gateway.
-   - Crie a [rede virtual](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**azcross-VNET**) no segundo grupo de recursos (**Sr-azcross**), tendo uma sub-rede e uma sub-rede de gateway.
+   - Crie a [rede virtual](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)  (**az2az-vnet**) no primeiro grupo de recursos (**Sr-az2az**), tendo uma sub-rede e uma sub-rede de gateway.
+   - Crie a [rede virtual](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)  (**azcross-VNET**) no segundo grupo de recursos (**Sr-azcross**), tendo uma sub-rede e uma sub-rede de gateway.
 
 4. Criar dois grupos de segurança de rede
    - Crie o [grupo de segurança de rede](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) no primeiro grupo de recursos (**Sr-az2az**).
-   - Crie o [grupo de segurança de rede](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**azcross-NSG**) no segundo grupo de recursos (**Sr-azcross**).
+   - Crie o [grupo de segurança de rede](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) no segundo grupo de recursos (**Sr-azcross**).
 
    Adicione uma regra de segurança de entrada para RDP: 3389 a ambos os grupos de segurança de rede. Você pode optar por remover essa regra depois de concluir a configuração.
 
@@ -163,7 +163,7 @@ Assista ao vídeo abaixo para obter um passo a passo completo do processo.
 
 14. Executar [testes de validação de cluster](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) antes de passar para a próxima etapa
 
-15. Inicie o Windows PowerShell e use o cmdlet [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) para determinar se você atende a todos os requisitos de Réplica de Armazenamento. Você pode usar o cmdlet em um modo somente de requisitos para um teste rápido, assim como um modo de avaliação de desempenho de execução longa.
+15. Inicie o Windows PowerShell e use o cmdlet [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) para determinar se você atende a todos os requisitos de Réplica de Armazenamento. Você pode usar o cmdlet em um modo somente de requisitos para um teste rápido, assim como um modo de avaliação de desempenho de execução longa.
 
 16. Configure a réplica de armazenamento de cluster para cluster.
     Conceder acesso de um cluster para outro cluster em ambas as direções:
@@ -178,7 +178,7 @@ Assista ao vídeo abaixo para obter um passo a passo completo do processo.
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
     ```
 
-17. Crie a parceria de SR para os dois clusters:</ol>
+17. Crie SR-Partnership para os dois clusters:</ol>
 
     - Para **SRAZC1** de cluster
       - Local do volume:-c:\ClusterStorage\DataDisk1

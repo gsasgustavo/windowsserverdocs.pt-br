@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1e2db53f28ff5262778b36b8a5cb91e6062ca9c0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 296369e50c4bd58f5e6db980e8caede055016420
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995704"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865103"
 ---
 # <a name="hyper-v-virtual-switch"></a>Comutador Virtual Hyper-V
 
@@ -26,7 +26,7 @@ Você também pode se conectar a redes virtuais no servidor que está executando
 >
 > - [Gerenciar o comutador virtual do Hyper-V](Manage-Hyper-V-Virtual-Switch.md)
 > - [Acesso Remoto Direto à Memória (RDMA) e Agrupamento incorporado de comutador (SET)](RDMA-and-Switch-Embedded-Teaming.md)
-> - [Cmdlets de equipe do comutador de rede no Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
+> - [Cmdlets de equipe do comutador de rede no Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam)
 > - [O que há de novo no VMM 2016](/system-center/vmm/whats-new#networking)
 > - [Configurar a malha de rede do VMM](/system-center/vmm/manage-networks)
 > - [Fórum do Hyper-V](/answers/topics/windows-server-hyper-v.html)

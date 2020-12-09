@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 40381a08c22c8b559fbf2b7da8e8151e91c77718
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5aa8b0f93a98e9cbf142476e6b05056d9a47eefd
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995363"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864805"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>Solução de problemas usando a ferramenta de diagnóstico de malha protegida
 
@@ -19,7 +19,7 @@ ms.locfileid: "87995363"
 
 Este tópico descreve o uso da ferramenta de diagnóstico de malha protegida para identificar e corrigir falhas comuns na implantação, configuração e operação contínua da infraestrutura de malha protegida. Isso inclui o serviço de guardião de host (HGS), todos os hosts protegidos e serviços de suporte, como DNS e Active Directory. A ferramenta de diagnóstico pode ser usada para executar uma primeira passagem na triagem de uma malha protegida com falha, fornecendo aos administradores um ponto de partida para resolver interrupções e identificar ativos configurados incorretamente. A ferramenta não é uma substituição por um sólido entendimento da operação de uma malha protegida e serve apenas para verificar rapidamente os problemas mais comuns encontrados durante as operações cotidianas.
 
-A documentação completa dos cmdlets usados neste artigo pode ser encontrada na referência do [módulo HgsDiagnostics](/powershell/module/hgsdiagnostics/?view=win10-ps).
+A documentação completa dos cmdlets usados neste artigo pode ser encontrada na referência do [módulo HgsDiagnostics](/powershell/module/hgsdiagnostics/).
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 
@@ -73,7 +73,7 @@ O diagnóstico fornecerá resultados em um formato hierárquico que mostra quais
 
 ## <a name="targeting-diagnostics"></a>Direcionamento de diagnóstico
 
-`Get-HgsTrace`Opera com destinos de rastreamento.  Um destino de rastreamento é um objeto que corresponde a um nó HGS ou a um host protegido dentro de uma malha protegida.  Pode ser pensado como uma extensão para um `PSSession` que inclui informações necessárias apenas por diagnósticos, como a função do host na malha.  Os destinos podem ser gerados implicitamente (por exemplo, diagnóstico local ou manual) ou explicitamente com o `New-HgsTraceTarget` comando.
+`Get-HgsTrace` Opera com destinos de rastreamento.  Um destino de rastreamento é um objeto que corresponde a um nó HGS ou a um host protegido dentro de uma malha protegida.  Pode ser pensado como uma extensão para um `PSSession` que inclui informações necessárias apenas por diagnósticos, como a função do host na malha.  Os destinos podem ser gerados implicitamente (por exemplo, diagnóstico local ou manual) ou explicitamente com o `New-HgsTraceTarget` comando.
 
 ### <a name="local-diagnosis"></a>Diagnóstico local
 
@@ -94,7 +94,7 @@ New-HgsTraceTarget -Local | Get-HgsTrace
 ```
 
 > [!TIP]
-> `Get-HgsTrace`pode aceitar destinos por meio do pipeline ou diretamente por meio do `-Target` parâmetro.  Não há nenhuma diferença entre as duas operações.
+> `Get-HgsTrace` pode aceitar destinos por meio do pipeline ou diretamente por meio do `-Target` parâmetro.  Não há nenhuma diferença entre as duas operações.
 
 ### <a name="remote-diagnosis-using-trace-targets"></a>Diagnóstico remoto usando destinos de rastreamento
 

@@ -5,12 +5,12 @@ ms.topic: article
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 09/28/2016
-ms.openlocfilehash: 2e7eecbf68a8b08caae2851bce45673ebb09bcef
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 5a18aad091314543dece0c0270935be020f6810b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745921"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864555"
 ---
 # <a name="plan-for-hyper-v-scalability-in-windows-server-2016-and-windows-server-2019"></a>Planejar a escalabilidade do Hyper-V no Windows Server 2016 e no Windows Server 2019
 
@@ -21,7 +21,7 @@ Este artigo fornece detalhes sobre a configuração máxima de componentes que v
 Os máximos de memória e processadores lógicos são os maiores aumentos do Windows Server 2012, em resposta a solicitações para dar suporte a cenários mais novos, como aprendizado de máquina e análise de dados. O blog do Windows Server publicou recentemente os resultados de desempenho de uma máquina virtual com 5,5 terabytes de memória e 128 processadores virtuais que executam 4 TB de banco de dados na memória. O desempenho foi maior que 95% do desempenho de um servidor físico. Para obter detalhes, consulte [desempenho da VM em grande escala do Windows Server 2016 Hyper-V para processamento de transações na memória](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Outros números são semelhantes aos que se aplicam ao Windows Server 2012. \(Os máximos para o Windows Server 2012 R2 eram os mesmos do Windows Server 2012.\)
 
 > [!NOTE]
-> Para obter informações sobre o System Center Virtual Machine Manager (VMM), consulte [Virtual Machine Manager](/system-center/vmm/overview?view=sc-vmm-2019). O VMM é um produto da Microsoft para o gerenciamento de um data center virtualizado que é vendido separadamente.
+> Para obter informações sobre o System Center Virtual Machine Manager (VMM), consulte [Virtual Machine Manager](/system-center/vmm/overview). O VMM é um produto da Microsoft para o gerenciamento de um data center virtualizado que é vendido separadamente.
 
 ## <a name="maximums-for-virtual-machines"></a>Máximo de máquinas virtuais
 Esses máximos se aplicam a cada máquina virtual. Nem todos os componentes estão disponíveis em ambas as gerações de máquinas virtuais. Para obter uma comparação das gerações, consulte [devo criar uma máquina virtual de geração 1 ou 2 no Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
@@ -30,10 +30,10 @@ Esses máximos se aplicam a cada máquina virtual. Nem todos os componentes est�
 |-------------|-----------|---------|
 |Pontos de verificação|50|O número real pode ser menor, dependendo do armazenamento disponível. Cada ponto de verificação é armazenado como um arquivo. avhd que usa o armazenamento físico.|
 |Memória|12 TB para a geração 2; <br>1 TB para a geração 1|Analise os requisitos do sistema operacional específico para determinar os valores mínimos e recomendados.|
-|Portas seriais (COM)|2|Nenhum.|
+|Portas seriais (COM)|2|nenhuma.|
 |Tamanho dos discos físicos conectados diretamente a uma máquina virtual|Varia|O tamanho máximo é determinado pelo sistema operacional convidado.|
 |Adaptadores do Fibre Channel Virtual|4|Como melhor prática, recomendamos que você conecte cada adaptador do Fibre Channel virtual a um SAN virtual diferente.|
-|Dispositivos de disquete virtuais|1 unidade de disquete|Nenhum.|
+|Dispositivos de disquete virtuais|1 unidade de disquete|nenhuma.|
 |Capacidade do disco rígido virtual|64 TB para o formato VHDX;<br>2040 GB para formato VHD|Cada disco rígido virtual é armazenado em mídia física como um arquivo .vhdx ou .vhd, dependendo do formato usado pelo disco rígido virtual.|
 |Discos IDE virtuais|4|O disco de inicialização (às vezes chamado de disco de inicialização) deve ser conectado a um dos dispositivos IDE. O disco de inicialização pode ser um disco rígido virtual ou um disco físico conectado diretamente a uma máquina virtual.|
 |Processadores virtuais|240 para geração 2;<br>64 para geração 1;<br>320 disponível para o sistema operacional do host (partição raiz)|O número de processadores virtuais com suporte em um sistema operacional convidado pode ser menor. Para obter detalhes, consulte as informações publicadas para o sistema operacional específico.|
@@ -46,16 +46,16 @@ Esses máximos se aplicam a cada host Hyper-V.
 
 |Componente|Máximo|Observações|
 |-------------|-----------|---------|
-|Processadores lógicos|512|Ambos devem ser habilitados no firmware:<p>-Virtualização assistida por hardware<br />-DEP (prevenção de execução de dados) imposta por hardware<p>O sistema operacional do host (partição raiz) verá apenas OS processadores lógicos máximos 320|  
-|Memória|24 TB|Nenhum.|
+|Processadores lógicos|512|Ambos devem ser habilitados no firmware:<p>-Virtualização assistida por hardware<br />-DEP (prevenção de execução de dados) imposta por hardware<p>O sistema operacional do host (partição raiz) verá apenas OS processadores lógicos máximos 320|  
+|Memória|24 TB|nenhuma.|
 |Equipes de adaptador de rede (Agrupamento NIC)|Nenhum limite imposto pelo Hyper-V.|Para obter detalhes, consulte [agrupamento NIC](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|
-|Adaptadores de rede físicos|Nenhum limite imposto pelo Hyper-V.|Nenhum.|
-|Máquinas virtuais em execução por servidor|1024|Nenhum.|
+|Adaptadores de rede físicos|Nenhum limite imposto pelo Hyper-V.|nenhuma.|
+|Máquinas virtuais em execução por servidor|1024|nenhuma.|
 |Armazenamento|Limitado pelo que é suportado pelo sistema operacional do host. Nenhum limite imposto pelo Hyper-V.|**Observação:** A Microsoft dá suporte ao NAS (armazenamento conectado à rede) ao usar o SMB 3,0. Não há suporte para armazenamento baseado em NFS.|
 |Portas de comutador de rede virtual por servidor|Varia; nenhum limite imposto pelo Hyper-V.|O limite prático depende dos recursos computacionais disponíveis.|
-|Processadores virtuais por processador lógico|Nenhuma razão imposta pelo Hyper-V.|Nenhum.|
-|Processadores virtuais por servidor|2.048|Nenhum.|
-|Redes SAN (redes de área de armazenamento) virtuais|Nenhum limite imposto pelo Hyper-V.|Nenhum.|
+|Processadores virtuais por processador lógico|Nenhuma razão imposta pelo Hyper-V.|nenhuma.|
+|Processadores virtuais por servidor|2.048|nenhuma.|
+|Redes SAN (redes de área de armazenamento) virtuais|Nenhum limite imposto pelo Hyper-V.|nenhuma.|
 |Comutadores virtuais|Varia; nenhum limite imposto pelo Hyper-V.|O limite prático depende dos recursos computacionais disponíveis.|
 
 ## <a name="failover-clusters-and-hyper-v"></a>Clusters de Failover e Hyper-V

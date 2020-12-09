@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: c3f17320432d44a84be05040e23e7af30995c969
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 001e0fe38c27e6331a5b2b38d76cd193bfb184f1
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997554"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864841"
 ---
 # <a name="guarded-fabric-and-shielded-vms"></a>Malha protegida e VMs blindadas
 
@@ -38,7 +38,7 @@ Uma das metas mais importantes de fornecer um ambiente hospedado é garantir a s
 
 ## <a name="deployment-topics"></a>Tópicos de implantação
 
-- [Guia de implantação](guarded-fabric-deploying-hgs-overview.md)
+- [Guia de Implantação](guarded-fabric-deploying-hgs-overview.md)
     - [Início rápido](guarded-fabric-deployment-overview.md)
     - [Implantar o HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
     - [Implantar hosts protegidos](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
@@ -46,7 +46,7 @@ Uma das metas mais importantes de fornecer um ambiente hospedado é garantir a s
         - [Implantar um host protegido usando o modo AD](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
         - [Implantar um host protegido usando o modo TPM](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
         - [Confirmar que os hosts protegidos podem atestar](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-        - [VMs blindadas – provedor de serviços de hospedagem implanta hosts protegidos no VMM](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019)
+        - [VMs blindadas – provedor de serviços de hospedagem implanta hosts protegidos no VMM](/system-center/vmm/guarded-deploy-host)
     - [Implantar VMs blindadas](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
         - [Criar um modelo de VM blindado](guarded-fabric-create-a-shielded-vm-template.md)
         - [Preparar um VHD do auxiliar de blindagem de VM](guarded-fabric-vm-shielding-helper-vhd.md)

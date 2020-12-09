@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: c9d1237caeb5838d1e95d00ec9afab9eeb436fd4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 20cb04f17aae3fb92394f0ddf4d67fb887e70714
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995475"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864135"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>VMs blindadas para locatários – criando dados de blindagem para definir uma VM blindada
 
@@ -103,7 +103,7 @@ Ao usar cadeias de caracteres de substituição, é importante garantir que as c
 Além disso, observe que as cadeias de caracteres de substituição relacionadas à rede em direção ao final da tabela só serão usadas se você estiver aproveitando os pools de endereços IP estáticos do VMM. Seu provedor de serviços de hospedagem deve ser capaz de informá-lo se essas cadeias de substituição forem necessárias. Para obter mais informações sobre endereços IP estáticos em modelos do VMM, consulte o seguinte na documentação do VMM:
 
 - [Diretrizes para pools de endereços IP](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools)
-- [Configurar pools de endereços IP estáticos na malha VMM](/system-center/vmm/network-pool?view=sc-vmm-2019)
+- [Configurar pools de endereços IP estáticos na malha VMM](/system-center/vmm/network-pool)
 
 Por fim, é importante observar que o processo de implantação de VM blindada criptografará apenas a unidade do sistema operacional. Se você implantar uma VM blindada com uma ou mais unidades de dados, é altamente recomendável que você adicione um comando autônomo ou Política de Grupo configuração no domínio do locatário para criptografar automaticamente as unidades de dados.
 
@@ -198,7 +198,7 @@ Execute o assistente de arquivo de dados de blindagem para criar um arquivo de d
 
 6. Na página **valores de especialização** , clique em **procurar** para selecionar o arquivo de unattend.xml que será usado para especializar suas VMs.
 
-    Use o botão **Adicionar** na parte inferior para adicionar arquivos adicionais ao PDK que são necessários durante o processo de especialização. Por exemplo, se o arquivo autônomo estiver instalando um certificado RDP na VM (conforme descrito em [gerar um arquivo de resposta usando a função New-ShieldingDataAnswerFile](guarded-fabric-sample-unattend-xml-file.md)), você deverá adicionar o arquivo PFX do certificado RDP e o script RDPCertificateConfig.ps1 aqui. Observe que todos os arquivos que você especificar aqui serão automaticamente copiados para C: \\ temp \\ na VM que é criada. O arquivo autônomo deve esperar que os arquivos estejam nessa pasta ao fazer referência a eles por caminho.
+    Use o botão **Adicionar** na parte inferior para adicionar arquivos adicionais ao PDK que são necessários durante o processo de especialização. Por exemplo, se o arquivo autônomo estiver instalando um certificado RDP na VM (conforme descrito em [gerar um arquivo de resposta usando a função New-ShieldingDataAnswerFile](guarded-fabric-sample-unattend-xml-file.md)), você deverá adicionar o arquivo PFX do certificado RDP e o script de RDPCertificateConfig.ps1 aqui. Observe que todos os arquivos que você especificar aqui serão automaticamente copiados para C: \\ temp \\ na VM que é criada. O arquivo autônomo deve esperar que os arquivos estejam nessa pasta ao fazer referência a eles por caminho.
 
 7. Examine suas seleções na próxima página e clique em **gerar**.
 
@@ -206,10 +206,10 @@ Execute o assistente de arquivo de dados de blindagem para criar um arquivo de d
 
 ## <a name="create-a-shielding-data-file-and-add-guardians-using-powershell"></a>Criar um arquivo de dados de blindagem e adicionar guardiões usando o PowerShell
 
-Como alternativa ao assistente de arquivo de dados de blindagem, você pode executar [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) para criar um arquivo de dados de blindagem.
+Como alternativa ao assistente de arquivo de dados de blindagem, você pode executar [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile) para criar um arquivo de dados de blindagem.
 
 Todos os arquivos de dados de blindagem precisam ser configurados com o proprietário correto e os certificados do guardião para autorizar que suas VMs blindadas sejam executadas em uma malha protegida.
-Você pode verificar se você tem qualquer guardião instalado localmente executando [Get-HgsGuardian](/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Os guardiões de proprietário têm chaves privadas, enquanto os guardiões do seu datacenter normalmente não o fazem.
+Você pode verificar se você tem qualquer guardião instalado localmente executando [Get-HgsGuardian](/powershell/module/hgsclient/get-hgsguardian). Os guardiões de proprietário têm chaves privadas, enquanto os guardiões do seu datacenter normalmente não o fazem.
 
 Se você precisar criar um guardião proprietário, execute o seguinte comando:
 
@@ -242,7 +242,7 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 ```
 
 > [!TIP]
-> Se você estiver usando um certificado RDP personalizado, chaves SSH ou outros arquivos que precisam ser incluídos com o arquivo de dados de blindagem, use o `-OtherFile` parâmetro para incluí-los. Você pode fornecer uma lista separada por vírgulas de caminhos de arquivo, como`-OtherFile "C:\source\myRDPCert.pfx", "C:\source\RDPCertificateConfig.ps1"`
+> Se você estiver usando um certificado RDP personalizado, chaves SSH ou outros arquivos que precisam ser incluídos com o arquivo de dados de blindagem, use o `-OtherFile` parâmetro para incluí-los. Você pode fornecer uma lista separada por vírgulas de caminhos de arquivo, como `-OtherFile "C:\source\myRDPCert.pfx", "C:\source\RDPCertificateConfig.ps1"`
 
 No comando acima, o guardião chamado "proprietário" (obtido de Get-HgsGuardian) poderá alterar a configuração de segurança da VM no futuro, enquanto "o datacenter do leste dos EUA" pode executar a VM, mas não alterar suas configurações.
 Se você tiver mais de um guardião, separe os nomes dos Guardiões com vírgulas como `'EAST-US Datacenter', 'EMEA Datacenter'` .
@@ -251,7 +251,7 @@ O nome do disco e o certificado de autenticação devem corresponder exatamente 
 Você pode confiar em mais de um disco de modelo fornecendo uma lista separada por vírgulas de qualificadores de ID de volume para o `-VolumeIDQualifier` parâmetro.
 Por fim, se você tiver outros arquivos que precisam acompanhar o arquivo de resposta com a VM, use o `-OtherFile` parâmetro e forneça uma lista separada por vírgulas de caminhos de arquivo.
 
-Consulte a documentação do cmdlet para [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) e [New-VolumeIDQualifier](/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) para saber mais sobre maneiras adicionais de configurar o arquivo de dados de blindagem.
+Consulte a documentação do cmdlet para [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile) e [New-VolumeIDQualifier](/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier) para saber mais sobre maneiras adicionais de configurar o arquivo de dados de blindagem.
 
 ## <a name="additional-references"></a>Referências adicionais
 

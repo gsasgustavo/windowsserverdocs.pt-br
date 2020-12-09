@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.openlocfilehash: c313754b315b48982342fe2797d1ed766ce354a9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b080f45d36d26ed566eacc5ae1ad84d98dd45d48
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965163"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864755"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Crie um aplicativo de várias camadas usando OBO (em nome de) usando o OAuth com o AD FS 2016 ou posterior
 
@@ -48,7 +48,7 @@ WebAPIOBO | API Web de back-end usada pelo ToDoService para executar a operaçã
 
 ## <a name="setting-up-the-development-box"></a>Configurando a caixa de desenvolvimento
 
-O passo a passo usa o Visual Studio 2015. O projeto usa intensamente o Biblioteca de Autenticação do Active Directory (ADAL). Para saber mais sobre a ADAL, leia [biblioteca de autenticação do Active Directory .net](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
+O passo a passo usa o Visual Studio 2015. O projeto usa intensamente o Biblioteca de Autenticação do Active Directory (ADAL). Para saber mais sobre a ADAL, leia [biblioteca de autenticação do Active Directory .net](/dotnet/api/microsoft.identitymodel.clients.activedirectory)
 
 O exemplo também usa o SQL LocalDB v 11.0. Instale o SQL LocalDB antes de trabalhar no exemplo.
 
@@ -281,12 +281,12 @@ Continue com o restante do assistente, como quando configuramos o ToDoListServic
 
 | Chave | Valor |
 |:-|:-|
-| Ida: público | ID do ToDoListService conforme fornecido para AD FS ao configurar o WebAPI do ToDoListService, por exemplo,https://localhost:44321/ |
-| Ida: ClientID | ID do ToDoListService conforme fornecido para AD FS ao configurar o WebAPI do ToDoListService, por exemplo,<https://localhost:44321/> </br>**É muito importante que o ida: Audience e Ida: ClientID correspondam um ao outro** |
+| Ida: público | ID do ToDoListService conforme fornecido para AD FS ao configurar o WebAPI do ToDoListService, por exemplo, https://localhost:44321/ |
+| Ida: ClientID | ID do ToDoListService conforme fornecido para AD FS ao configurar o WebAPI do ToDoListService, por exemplo, <https://localhost:44321/> </br>**É muito importante que o ida: Audience e Ida: ClientID correspondam um ao outro** |
 | ida:ClientSecret | Esse é o segredo que AD FS gerado quando você estava Configurando o cliente ToDoListService no AD FS |
-| Ida: AdfsMetadataEndpoint | Essa é a URL para seus metadados de AD FS, por exemplo,https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml |
-| Ida: OBOWebAPIBase | Esse é o endereço base que usaremos para chamar a API de back-end, por exemplo,https://localhost:44300 |
-| ida:Authority | Esta é a URL para seu serviço de AD FS, exemplohttps://fs.anandmsft.com/adfs/ |
+| Ida: AdfsMetadataEndpoint | Essa é a URL para seus metadados de AD FS, por exemplo, https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml |
+| Ida: OBOWebAPIBase | Esse é o endereço base que usaremos para chamar a API de back-end, por exemplo, https://localhost:44300 |
+| ida:Authority | Esta é a URL para seu serviço de AD FS, exemplo https://fs.anandmsft.com/adfs/ |
 
 Todas as outras chaves ida: XXXXXXX no nó **appSettings** podem ser comentadas ou excluídas
 

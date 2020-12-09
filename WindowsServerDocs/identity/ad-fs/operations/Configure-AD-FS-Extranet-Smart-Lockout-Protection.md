@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.openlocfilehash: 707eeda20dda1297a168ae4a0597566a25593221
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a5ce41597c7cb25202be61f47c640d3f749568b4
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962660"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864535"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>Bloqueio de Extranet do AD FS e Extranet Smart Lockout
 
@@ -69,8 +69,8 @@ O valor "UnknownLockout" será igual a true quando a conta for bloqueada. Isso s
 
 Se nenhuma redefinição ocorrer, a conta será permitida uma única tentativa de senha no AD para cada janela de observação. A conta voltará ao estado bloqueado após essa tentativa e a janela de observação será reiniciada. O valor de badPwdCount só será redefinido automaticamente após um logon de senha bem-sucedido.
 
-### <a name="log-only-mode-versus-enforce-mode"></a>Modo somente de log versus modo ' impor '
-A tabela AccountActivity é populada durante o modo ' somente log ' e o modo ' impor '. Se o modo ' somente log ' for ignorado e ESL for movido diretamente para o modo ' impor ' sem o período de espera recomendado, os IPs familiares dos usuários não serão conhecidos pelo ADFS. Nesse caso, ESL se comportaria como ' ADBadPasswordCounter ', potencialmente bloqueando o tráfego de usuários legítimos se a conta de usuário estiver sob um ataque de força bruta ativo. Se o modo ' somente log ' for ignorado e o usuário inserir um estado bloqueado com "UnknownLockout" = TRUE e tentar entrar com uma senha de boa qualidade de um IP que não esteja na lista de IPs "familiar", ele não poderá se conectar. O modo somente de log é recomendado por 3-7 dias para evitar esse cenário. Se as contas estiverem ativamente sob ataque, no mínimo 24 horas do modo ' somente log ' serão necessárias para evitar bloqueios para usuários legítimos.
+### <a name="log-only-mode-versus-enforce-mode"></a>Modo de Log-Only versus ' impor '
+A tabela AccountActivity é populada durante o modo ' somente log ' e o modo ' impor '. Se o modo ' somente log ' for ignorado e ESL for movido diretamente para o modo ' impor ' sem o período de espera recomendado, os IPs familiares dos usuários não serão conhecidos pelo ADFS. Nesse caso, ESL se comportaria como ' ADBadPasswordCounter ', potencialmente bloqueando o tráfego de usuários legítimos se a conta de usuário estiver sob um ataque de força bruta ativo. Se o modo ' somente log ' for ignorado e o usuário inserir um estado bloqueado com "UnknownLockout" = TRUE e tentar entrar com uma senha de boa qualidade de um IP que não esteja na lista de IPs "familiar", ele não poderá se conectar. O modo de Log-Only é recomendado por 3-7 dias para evitar esse cenário. Se as contas estiverem ativamente sob ataque, no mínimo 24 horas do modo ' somente log ' serão necessárias para evitar bloqueios para usuários legítimos.
 
 ## <a name="extranet-smart-lockout-configuration"></a>Configuração de bloqueio inteligente da extranet
 
@@ -142,7 +142,7 @@ A tabela AccountActivity é populada durante o modo ' somente log ' e o modo ' i
 Esse recurso usa os logs de auditoria de segurança, portanto, a auditoria deve ser habilitada em AD FS, bem como a política local em todos os servidores de AD FS.
 
 ### <a name="configuration-instructions"></a>Instruções de configuração
-O bloqueio inteligente de extranet usa a propriedade **ExtranetLockoutEnabled**do ADFS. Essa propriedade foi usada anteriormente para controlar "bloqueio de software de extranet" no servidor 2012R2. Se o bloqueio flexível de extranet tiver sido habilitado, para exibir a configuração da propriedade atual, execute ` Get-AdfsProperties` .
+O bloqueio inteligente de extranet usa a propriedade **ExtranetLockoutEnabled** do ADFS. Essa propriedade foi usada anteriormente para controlar "bloqueio de software de extranet" no servidor 2012R2. Se o bloqueio flexível de extranet tiver sido habilitado, para exibir a configuração da propriedade atual, execute ` Get-AdfsProperties` .
 
 ### <a name="configuration-recommendations"></a>Recomendações de configuração
 Ao configurar o bloqueio inteligente da extranet, siga as práticas recomendadas para definir limites:
@@ -164,7 +164,7 @@ Para definir essa propriedade, execute:
 ``` powershell
 Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
 ```
-### <a name="enable-log-only-mode"></a>Habilitar o modo somente de log
+### <a name="enable-log-only-mode"></a>Habilitar modo de Log-Only
 
 No modo somente log, AD FS popula os usuários com informações de localização familiares e grava eventos de auditoria de segurança, mas não bloqueia nenhuma solicitação. Esse modo é usado para validar que o bloqueio inteligente está em execução e para permitir que AD FS "Aprenda" locais familiares para os usuários antes de habilitar o modo "impor". Como AD FS aprende, ele armazena a atividade de logon por usuário (seja no modo somente log ou no modo impor).
 Defina o comportamento de bloqueio como somente log executando o cmdlet a seguir.
@@ -173,7 +173,7 @@ Defina o comportamento de bloqueio como somente log executando o cmdlet a seguir
 
 O modo somente log destina-se a ser um estado temporário para que o sistema possa aprender o comportamento de logon antes de introduzir a imposição de bloqueio com o comportamento de bloqueio inteligente. A duração recomendada para o modo somente de log é de 3-7 dias. Se as contas estiverem ativamente sob ataque, o modo somente de log deverá ser executado por um mínimo de 24 horas.
 
-No AD FS 2016, se o comportamento do 2012R2 ' extranet Soft Lock ' for habilitado antes de habilitar o bloqueio inteligente da extranet, o modo somente de log desabilitará o comportamento ' extranet Soft Lock '. AD FS bloqueio inteligente não bloqueará os usuários no modo somente de log. No entanto, o AD local pode bloquear o usuário com base na configuração do AD. Examine as políticas de bloqueio do AD para saber como o AD local pode bloquear os usuários.
+No AD FS 2016, se o comportamento do 2012R2 "extranet Soft Lock" for habilitado antes de habilitar o bloqueio inteligente da extranet, o modo de Log-Only desabilitará o comportamento "bloqueio soft de extranet". AD FS bloqueio inteligente não bloqueará os usuários no modo de Log-Only. No entanto, o AD local pode bloquear o usuário com base na configuração do AD. Examine as políticas de bloqueio do AD para saber como o AD local pode bloquear os usuários.
 
 No AD FS 2019, uma vantagem adicional é poder habilitar o modo somente de log para bloqueio inteligente e, ao mesmo tempo, continuar a impor o comportamento de bloqueio flexível anterior usando o PowerShell abaixo.
 
@@ -224,7 +224,7 @@ Esse comportamento pode ser substituído passando o parâmetro-Server.
 
 `Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”`
 
-- Redefinir-ADFSAccountLockout
+- Reset-ADFSAccountLockout
 
   Redefine o contador de bloqueios para uma conta de usuário para cada local familiar (badPwdCountFamiliar) ou contadores de local desconhecidos (badPwdCountUnfamiliar). Ao redefinir um contador, o valor "FamiliarLockout" ou "UnfamiliarLockout" será atualizado, pois o contador de redefinição será menor que o limite.
 
@@ -291,6 +291,6 @@ R: com o ESL habilitado, AD FS rastreia a atividade da conta e os locais conheci
 ## <a name="additional-references"></a>Referências adicionais
 [Práticas recomendadas para proteger Serviços de Federação do Active Directory (AD FS)](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-Adfsproperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+[Set-Adfsproperties](/powershell/module/adfs/set-adfsproperties)
 
 [Operações do AD FS](../ad-fs-operations.md)

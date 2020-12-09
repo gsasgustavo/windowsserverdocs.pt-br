@@ -6,12 +6,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/29/2020
-ms.openlocfilehash: cc59a9c45a1dee797196c8a12550945d3d834cd7
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 40064ac11b9e6d27ea864ba286278179a2ebd4bf
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746571"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864016"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Máquinas virtuais Ubuntu com suporte no Hyper-V
 
@@ -49,7 +49,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |**[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||
 |Suporte ao kernel de PAE|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Configuração da lacuna de MMIO|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Memória Dinâmica-adição a quente|2019, 2016, 2012 R2|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|
+|Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|
 |Memória Dinâmica-balões|2019, 2016, 2012 R2|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|
 |Redimensionamento de memória de Runtime|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
@@ -91,7 +91,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 
    * Os aplicativos que tendem a consumir toda a memória disponível em um sistema estão limitados a consumir até 80% da RAM disponível.
 
-8. Se você estiver usando Memória Dinâmica nos sistemas operacionais Windows Server 2019, Windows Server 2016 ou Windows Server 2012/2012 R2, especifique a **memória de inicialização**, a **memória mínima**e os parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). Não fazer isso pode levar a falhas de adição automática e talvez você não veja nenhum aumento de memória em um sistema operacional convidado.
+8. Se você estiver usando Memória Dinâmica nos sistemas operacionais Windows Server 2019, Windows Server 2016 ou Windows Server 2012/2012 R2, especifique a **memória de inicialização**, a **memória mínima** e os parâmetros de **memória máxima** em múltiplos de 128 megabytes (MB). A falha em fazer isso pode levar a Hot-Add falhas, e você poderá não ver nenhum aumento de memória em um sistema operacional convidado.
 
 9. No Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2, a infraestrutura de par chave/valor pode não funcionar corretamente sem uma atualização de software do Linux. Entre em contato com seu fornecedor de distribuição para obter a atualização de software caso você veja problemas com esse recurso.
 
@@ -143,6 +143,6 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 
 * [Práticas recomendadas para executar o Linux no Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Ubuntu 14, 4 em uma VM de geração 2-blog de virtualização de Ben Armstrong](/archive/blogs/virtual_pc_guy/ubuntu-14-04-in-a-generation-2-vm)

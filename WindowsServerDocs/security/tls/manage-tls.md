@@ -6,12 +6,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: 8f5f18452c158b2e1c8d14173d80193465ead17f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: a6af172f515345a18bbd16f37b8007302ffbab70
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994798"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864026"
 ---
 # <a name="manage-transport-layer-security-tls"></a>Gerenciar o protocolo TLS
 
@@ -33,8 +33,8 @@ As alterações na ordem do conjunto de criptografia TLS entrarão em vigor na p
 
 Você pode usar a ordem do conjunto de codificação SSL Política de Grupo configurações para configurar a ordem padrão do conjunto de codificação TLS.
 
-1. No console de gerenciamento de política de grupo, vá para **configuração do computador**  >  **modelos administrativos**  >  definições de configuração de SSL de**rede**  >  **SSL Configuration Settings**.
-2. Clique duas vezes em **ordem do pacote de criptografia SSL**e, em seguida, clique na opção **habilitado** .
+1. No console de gerenciamento de política de grupo, vá para **configuração do computador**  >  **modelos administrativos**  >  definições de configuração de SSL de **rede**  >  **SSL Configuration Settings**.
+2. Clique duas vezes em **ordem do pacote de criptografia SSL** e, em seguida, clique na opção **habilitado** .
 3. Clique com o botão direito do mouse na caixa **conjuntos de criptografia SSL** e selecione **selecionar tudo** no menu pop-up.
 
    ![Configuração da Política de Grupo](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
@@ -56,7 +56,7 @@ O CSP de política do Windows 10 dá suporte à configuração dos conjuntos de 
 
 ### <a name="configuring-tls-cipher-suite-order-by-using-tls-powershell-cmdlets"></a>Configurando a ordem do conjunto de codificação TLS usando cmdlets do PowerShell do TLS
 
-O módulo do PowerShell do TLS dá suporte à obtenção da lista ordenada de conjuntos de criptografia TLS, à desabilitação de um pacote de codificação e à habilitação de um pacote de codificação. Consulte o [módulo TLS](/powershell/module/tls/?view=win10-ps) para obter mais informações.
+O módulo do PowerShell do TLS dá suporte à obtenção da lista ordenada de conjuntos de criptografia TLS, à desabilitação de um pacote de codificação e à habilitação de um pacote de codificação. Consulte o [módulo TLS](/powershell/module/tls/) para obter mais informações.
 
 ## <a name="configuring-tls-ecc-curve-order"></a>Configurando a ordem de curva do TLS ECC
 
@@ -119,8 +119,8 @@ O processo de distribuição de uma curva é:
 
 1. No Windows 10 e no Windows Server 2016, use **certutil.exe** para adicionar uma nova curva nomeada registrada ao Windows.
 2. No mesmo computador, abra o Console de Gerenciamento de Política de Grupo (GPMC), crie um novo objeto de Política de Grupo e edite-o.
-3. Navegar para **configuração do computador | Preferências | Configurações do Windows | Registro**.  Clique com o botão direito do mouse em **registro**. Passe o mouse sobre **novo** e selecione **item de coleta**. Renomeie o item de coleta para corresponder ao nome da curva. Você criará um item de coleção de registro para cada chave do registro em *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters*.
-4. Configure a coleção de registro de preferência de Política de Grupo recém-criada adicionando um novo **item de registro** para cada valor de registro listado em *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters \[ curvename]*.
+3. Navegar para **configuração do computador | Preferências | Configurações do Windows | Registro**.  Clique com o botão direito do mouse em **registro**. Passe o mouse sobre **novo** e selecione **item de coleta**. Renomeie o item de coleta para corresponder ao nome da curva. Você criará um item de coleção de registro para cada chave do registro em *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters*.
+4. Configure a coleção de registro de preferência de Política de Grupo recém-criada adicionando um novo **item de registro** para cada valor de registro listado em *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[ curvename]*.
 5. Implante o objeto de Política de Grupo que contém Política de Grupo item de coleção do registro em computadores com Windows 10 e Windows Server 2016 que devem receber as novas curvas nomeadas.
 
     ![Distribuir curvas de GPP](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)

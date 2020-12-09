@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
 ms.date: 8/16/2016
-ms.openlocfilehash: b6099410d4d5e043387594022e8bb376d5fb52f7
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 00312413c8da02ce5221767667ecd941f0095776
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746671"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865155"
 ---
 # <a name="the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions"></a>a extensão do comutador virtual WFP deve ser habilitada se for exigida pelas extensões de terceiros
 
@@ -52,4 +52,4 @@ Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filterin
 ```
 
 ## <a name="see-also"></a>Consulte Também
-[Habilitar-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?view=win10-ps)
+[Habilitar-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension)

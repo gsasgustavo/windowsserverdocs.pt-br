@@ -5,12 +5,12 @@ ms.topic: article
 ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: a7779b882fe6a704dcf12819ad91042c20381eba
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 450bd8ea2b28491bdeb7adce271649b19665fa44
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077213"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864375"
 ---
 # <a name="hyper-v-configuration"></a>Configuração do Hyper-V
 
@@ -30,7 +30,7 @@ As considerações de hardware para servidores que executam o Hyper-V geralmente
 
     O servidor físico requer memória suficiente para as partições raiz e filho. A partição raiz requer memória para executar e/SS com eficiência em nome das máquinas virtuais e operações como um instantâneo de máquina virtual. O Hyper-V garante que memória suficiente esteja disponível para a partição raiz e permite que a memória restante seja atribuída a partições filho. As partições filho devem ser dimensionadas com base nas necessidades da carga esperada para cada máquina virtual.
 
--   **Armazenamento**
+-   **Storage**
 
     O hardware de armazenamento deve ter largura de banda de e/s suficiente e capacidade para atender às necessidades atuais e futuras das máquinas virtuais que o servidor físico hospeda. Considere esses requisitos ao selecionar os controladores de armazenamento e os discos e escolher a configuração de RAID. Colocar máquinas virtuais com cargas de trabalho com grande volume de disco em discos físicos diferentes provavelmente melhorará o desempenho geral. Por exemplo, se quatro máquinas virtuais compartilharem um único disco e a utilizarem ativamente, cada máquina virtual poderá produzir apenas 25% da largura de banda do disco.
 
@@ -44,7 +44,7 @@ As técnicas de gerenciamento de energia do servidor vêm com um custo, especial
 
 O Windows Server usa a virtualização em uma ampla variedade de cenários. De um servidor IIS levemente carregado a um SQL Server de ocupação moderada, em um host de nuvem com o Hyper-V executando centenas de máquinas virtuais por servidor. Cada um desses cenários pode ter requisitos de hardware, software e desempenho exclusivos. Por padrão, o Windows Server usa e recomenda o plano de energia **equilibrado** que permite a conservação de energia, dimensionando o desempenho do processador com base na utilização da CPU.
 
-Com o plano de energia **equilibrado** , os mais altos Estados de energia (e as latências de resposta mais baixas em cargas de trabalho de locatário) são aplicados somente quando o host físico está relativamente ocupado. Se você valor de uma resposta determinística e de baixa latência para todas as cargas de trabalho de locatário, considere alternar do plano de energia **equilibrado** padrão para o plano de energia de **alto desempenho** . O plano de energia de **alto desempenho** executará os processadores em plena velocidade o tempo todo, desabilitando efetivamente a alternância baseada em demanda juntamente com outras técnicas de gerenciamento de energia e otimizando o desempenho em relação à economia de energia.
+Com o plano de energia **equilibrado** , os mais altos Estados de energia (e as latências de resposta mais baixas em cargas de trabalho de locatário) são aplicados somente quando o host físico está relativamente ocupado. Se você valor de uma resposta determinística e de baixa latência para todas as cargas de trabalho de locatário, considere alternar do plano de energia **equilibrado** padrão para o plano de energia de **alto desempenho** . O plano de energia de **alto desempenho** executará os processadores em plena velocidade o tempo todo, desabilitando com eficiência Demand-Based trocando com outras técnicas de gerenciamento de energia e otimizando o desempenho em torno de economia de energia.
 
 Para os clientes que estão satisfeitos com a economia de custos com a redução do número de servidores físicos e desejam garantir que eles atinjam o desempenho máximo para suas cargas de trabalho virtualizadas, você deve considerar o uso do plano de energia de **alto desempenho** .
 
@@ -56,7 +56,7 @@ Para obter recomendações adicionais e informações sobre como aproveitar os p
 
 O Windows Server 2016 recurso a opção de instalação Server Core. O Server Core oferece um ambiente mínimo para hospedar um conjunto selecionado de funções de servidor, incluindo o Hyper-V. Ele apresenta uma superfície de disco menor para o sistema operacional do host, além de um ataque menor e uma área de manutenção. Portanto, é altamente recomendável que os servidores de virtualização do Hyper-V usem a opção de instalação Server Core.
 
-Uma instalação do Server Core oferece uma janela de console somente quando o usuário está conectado, mas o Hyper-V expõe recursos de gerenciamento remoto, incluindo o [Windows PowerShell](/powershell/module/hyper-v/?view=win10-ps) para que os administradores possam gerenciá-lo remotamente.
+Uma instalação do Server Core oferece uma janela de console somente quando o usuário está conectado, mas o Hyper-V expõe recursos de gerenciamento remoto, incluindo o [Windows PowerShell](/powershell/module/hyper-v/) para que os administradores possam gerenciá-lo remotamente.
 
 ## <a name="dedicated-server-role"></a>Função de servidor dedicada
 
@@ -80,7 +80,7 @@ Você deve sempre medir o uso da CPU do sistema físico usando os contadores de 
 
 - **Processador lógico do hipervisor Hyper-V ( \* ) \\ % tempo de execução do hipervisor** o tempo gasto em execução dentro do hipervisor
 
-- **Processador virtual da raiz do hipervisor do Hyper-V ( \* ) \\ \\ *** mede o uso da CPU da partição raiz
+- **Processador virtual da raiz do hipervisor do Hyper-V ( \* ) \\ \\*** mede o uso da CPU da partição raiz
 
 - **Processador virtual do hipervisor do Hyper- \* V \\ \\ ()*** mede o uso da CPU de partições de convidado
 

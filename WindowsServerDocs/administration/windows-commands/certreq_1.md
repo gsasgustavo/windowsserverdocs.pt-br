@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f2cdc1123595dae9c0c72bcdc77c2f55382c760
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c5b82b490abb5564392be3a26db5c47a5a372f6e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89629939"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864276"
 ---
 # <a name="certreq"></a>certreq
 
@@ -119,7 +119,7 @@ Essa área do arquivo INF é obrigatória para qualquer novo modelo de solicita�
 | EncryptionLength | Comprimento do algoritmo de criptografia a ser usado. | Qualquer comprimento permitido pelo EncryptionAlgorithm especificado. | `EncryptionLength = 128` |
 | ProviderName | O nome do provedor é o nome de exibição do CSP. | Se você não souber o nome do provedor do CSP que está usando, execute `certutil –csplist` de uma linha de comando. O comando exibirá os nomes de todos os CSPs disponíveis no sistema local | `ProviderName = Microsoft RSA SChannel Cryptographic Provider` |
 | ProviderType | O tipo de provedor é usado para selecionar provedores específicos com base no recurso de algoritmo específico, como RSA Full. | Se você não souber o tipo de provedor do CSP que está usando, execute `certutil –csplist` de um prompt de linha de comando. O comando exibirá o tipo de provedor de todos os CSPs disponíveis no sistema local. | `ProviderType = 1` |
-| RenewalCert | Se precisar renovar um certificado que existe no sistema em que a solicitação de certificado é gerada, você deve especificar seu hash de certificado como o valor para essa chave. | O hash de certificado de qualquer certificado disponível no computador em que a solicitação de certificado é criada. Se você não souber o hash de certificado, use o snap-in do MMC de certificados e examine o certificado que deve ser renovado. Abra as propriedades do certificado e veja o `Thumbprint` atributo do certificado. A renovação de certificado requer um `PKCS#7` ou um `CMC` formato de solicitação. | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
+| RenewalCert | Se precisar renovar um certificado que existe no sistema em que a solicitação de certificado é gerada, você deve especificar seu hash de certificado como o valor para essa chave. | O hash de certificado de qualquer certificado disponível no computador em que a solicitação de certificado é criada. Se você não souber o hash do certificado, use o Snap-In do MMC de certificados e examine o certificado que deve ser renovado. Abra as propriedades do certificado e veja o `Thumbprint` atributo do certificado. A renovação de certificado requer um `PKCS#7` ou um `CMC` formato de solicitação. | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
 | RequesterName | Faz com que a solicitação se registre em nome de outra solicitação de usuário. A solicitação também deve ser assinada com um certificado de agente de registro ou a autoridade de certificação rejeitará a solicitação. Use a `-cert` opção para especificar o certificado do agente de registro. O nome do solicitante pode ser especificado para solicitações de certificado se o `RequestType` for definido como `PKCS#7` ou `CMC` . Se o `RequestType` for definido como `PKCS#10` , essa chave será ignorada. O `Requestername` só pode ser definido como parte da solicitação. Você não pode manipular o `Requestername` em uma solicitação pendente. | `Domain\User` | `Requestername = Contoso\BSmith` |
 | RequestType | Determina o padrão usado para gerar e enviar a solicitação de certificado. | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul>**Dica:** Essa opção indica um certificado autoassinado ou emitido por conta própria. Ele não gera uma solicitação, mas sim um novo certificado e, em seguida, instala o certificado. Auto-assinado é o padrão. Especifique um certificado de assinatura usando a opção – CERT para criar um certificado autoemitido que não tenha assinatura automática. | `RequestType = CMC` |
 | SecurityDescriptor | Contém as informações de segurança associadas a objetos protegíveis. Para a maioria dos objetos protegíveis, você pode especificar o descritor de segurança de um objeto na chamada de função que cria o objeto. Cadeias de caracteres baseadas na [linguagem de definição do descritor de segurança](/windows/win32/secauthz/security-descriptor-definition-language).<p>**Dica:** Isso é relevante apenas para chaves de cartão não inteligente de contexto de computador. | `SecurityDescriptor = D:P(A;;GA;;;SY)(A;;GA;;;BA)` |
@@ -172,7 +172,7 @@ Esta seção é opcional.
 > [!NOTE]
 > `SubjectNameFlags` permite que o arquivo INF especifique quais campos de extensão de **assunto** e **SubjectAltName** devem ser preenchidos automaticamente pelo Certreq com base no usuário atual ou nas propriedades do computador atual: nome DNS, UPN e assim por diante. O uso do modelo literal significa que os sinalizadores de nome do modelo são usados. Isso permite que um único arquivo INF seja usado em vários contextos para gerar solicitações com informações de assunto específicas do contexto.
 >
-> `X500NameFlags` Especifica os sinalizadores a serem passados diretamente para a `CertStrToName` API quando o `Subject INF keys` valor é convertido em um **nome**diferenciado de ASN. 1 codificado.
+> `X500NameFlags` Especifica os sinalizadores a serem passados diretamente para a `CertStrToName` API quando o `Subject INF keys` valor é convertido em um **nome** diferenciado de ASN. 1 codificado.
 
 #### <a name="example"></a>Exemplo
 
@@ -339,7 +339,7 @@ Os artigos a seguir contêm exemplos de uso de Certreq:
 
 - [Como criar um certificado SSL do servidor Web manualmente](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Registro de certificado para o agente de System Center Operations Manager](/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
+- [Registro de certificado para o agente de System Center Operations Manager](/system-center/scom/plan-planning-agent-deployment)
 
 - [Visão geral dos Serviços de Certificados do Active Directory](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 

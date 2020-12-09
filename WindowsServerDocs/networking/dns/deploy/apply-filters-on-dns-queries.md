@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 79e0a0c0e99c49fc251d8aebc3fc76e68603e45c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4f309a304e4457b27eec0ae41d581c5a7bf9bd50
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996919"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865335"
 ---
 # <a name="use-dns-policy-for-applying-filters-on-dns-queries"></a>Usar a Política de DNS para a aplicação de filtros em consultas DNS
 
@@ -25,7 +25,7 @@ Por exemplo, você pode configurar a política DNS com a lista de blocos de filt
 
 Outro exemplo é criar uma lista de permissões de filtro de consulta que permita que apenas um conjunto específico de clientes resolva determinados nomes.
 
-## <a name="query-filter-criteria"></a><a name="bkmk_criteria"></a>Critérios de filtro de consulta
+## <a name="query-filter-criteria"></a><a name="bkmk_criteria"></a> Critérios de filtro de consulta
 Você pode criar filtros de consulta com qualquer combinação lógica (e/ou/não) dos critérios a seguir.
 
 |Nome|Descrição|
@@ -41,7 +41,7 @@ Você pode criar filtros de consulta com qualquer combinação lógica (e/ou/nã
 Os exemplos a seguir mostram como criar filtros para a política DNS que bloqueiam ou permitem consultas de resolução de nomes DNS.
 
 >[!NOTE]
->Os comandos de exemplo neste tópico usam o comando do Windows PowerShell **Add-DnsServerQueryResolutionPolicy**. Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+>Os comandos de exemplo neste tópico usam o comando do Windows PowerShell **Add-DnsServerQueryResolutionPolicy**. Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 ## <a name="block-queries-from-a-domain"></a><a name="bkmk_block1"></a>Bloquear consultas de um domínio
 

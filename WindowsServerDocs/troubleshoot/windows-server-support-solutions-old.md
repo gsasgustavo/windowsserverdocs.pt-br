@@ -6,12 +6,12 @@ ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: ba9654fd60534e53211d65cfd2006320cea20383
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7bc533063c52af2087d822a428458ba8efab94fc
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997277"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864665"
 ---
 # <a name="top-support-solutions-for-windows-server-2016"></a>Principais soluções de suporte do Windows Server 2016
 
@@ -46,7 +46,7 @@ Essas são as principais soluções do Suporte da Microsoft para a maioria dos p
 ## <a name="solutions-related-to-dcpromo-and-installing-domain-controllers"></a>Soluções relacionados à DCPromo e à instalação de controladores de domínio
 - [Requisitos de porta do Active Directory e do Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
 - [Active Directory portas de firewall – vamos tentar tornar isso simples](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
-- [Suporte ao Exchange Server para Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019)
+- [Suporte ao Exchange Server para Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix)
 - [Uso de Ntdsutil.exe para transferir ou executar funções FSMO de um controlador de domínio.](https://support.microsoft.com/kb/255504)
 - [Solução de problemas de implantação de controlador de domínio](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)
 - [Solução de problemas do Assistente de instalação do Active Directory](/previous-versions/windows/it-pro/windows-2000-server/bb727058(v=technet.10))

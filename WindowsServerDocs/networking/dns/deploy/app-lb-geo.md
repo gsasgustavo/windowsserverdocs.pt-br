@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 00195c4993f3e5bef9688adbfd09f62f908b6276
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5f250a2ca008ab11177338d71c69d7c5b54086d3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996939"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865365"
 ---
 # <a name="use-dns-policy-for-application-load-balancing-with-geo-location-awareness"></a>Usar a Política de DNS para balanceamento de aplicativo com reconhecimento de localização geográfica
 
@@ -36,7 +36,7 @@ Os administradores de DNS também desejam que todas as consultas de outros locai
 
 Nas próximas seções, você pode aprender a atingir metas semelhantes às dos administradores de DNS da Contoso em sua própria rede.
 
-## <a name="how-to-configure-application-load-balancing-with-geo-location-awareness"></a>Como configurar o balanceamento de carga de aplicativo com reconhecimento de localização geográfica
+## <a name="how-to-configure-application-load-balancing-with-geo-location-awareness"></a>Como configurar o balanceamento de carga de aplicativo com reconhecimento de Geo-Location
 
 As seções a seguir mostram como configurar a política DNS para balanceamento de carga de aplicativo com reconhecimento de localização geográfica.
 
@@ -58,7 +58,7 @@ Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet 192.0.0.0/24,182.0.0
 Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet 141.1.0.0/24,151.1.0.0/24
 ```
 
-Para obter mais informações, consulte [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet).
 
 ### <a name="create-the-zone-scopes"></a><a name="bkmk_zscopes2"></a>Criar os escopos de zona
 
@@ -82,7 +82,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScop
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AmsterdamZoneScope"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+Para obter mais informações, consulte [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records2"></a>Adicionar registros aos escopos de zona
 
@@ -95,7 +95,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
 ```
 
-Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### <a name="create-the-dns-policies"></a><a name="bkmk_policies2"></a>Criar as políticas de DNS
 
@@ -115,7 +115,7 @@ Add-DnsServerQueryResolutionPolicy -Name "EuropeLBPolicy" -Action ALLOW -ClientS
 Add-DnsServerQueryResolutionPolicy -Name "WorldWidePolicy" -Action ALLOW -FQDN "eq,*.contoso.com" -ZoneScope "SeattleZoneScope,1;ChicagoZoneScope,1; TexasZoneScope,1;DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 3
 ```
 
-Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+Para obter mais informações, consulte [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Agora você criou com êxito uma política de DNS que fornece balanceamento de carga de aplicativo entre servidores Web localizados em cinco data centers diferentes em vários continentes.
 

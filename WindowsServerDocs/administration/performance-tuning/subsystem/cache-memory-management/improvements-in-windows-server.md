@@ -5,12 +5,12 @@ ms.topic: article
 ms.author: pavel
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 799598223812f5992db0354780424f7da13033ea
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 31cc9f964ac7ea2d95d5240376ea2ce7fb46fcee
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078003"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864325"
 ---
 # <a name="cache-and-memory-manager-improvements"></a>Aprimoramentos do Gerenciador de memória e cache
 
@@ -18,7 +18,7 @@ Este tópico descreve o Gerenciador de cache e aprimoramentos do Gerenciador de 
 
 ## <a name="cache-manager-improvements-in-windows-server-2016"></a>Aprimoramentos do Gerenciador de cache no Windows Server 2016
 O Gerenciador de cache também adicionou suporte para leituras reais comsíncronas em cache.
-Isso poderia potencialmente melhorar o desempenho de um aplicativo se ele depender muito de leituras em cache assíncronas.Embora a maioria dos sistemas de filebox tenha suporte para leituras em cache assíncronos por um tempo, muitas vezes houve limitações de desempenho devido a várias opções de design relacionadas à manipulação de filas de trabalho internas de pools de threads e de sistemas de cache.Com suporte do kernel-adequado, o Gerenciador de cache agora oculta todas as complexidades do pool de threads e do gerenciamento da fila de trabalho dos sistemas de File, tornando-a mais eficiente no tratamento de leituras armazenadas em cache assíncronas. O Gerenciador de cache tem um conjunto de estruturas de dados de controle para cada um dos níveis de aninhamento de VHD (máximo de suporte do sistema) para maximizar o paralelismo.
+Isso poderia potencialmente melhorar o desempenho de um aplicativo se ele depender muito de leituras em cache assíncronas.  Embora a maioria dos sistemas de filebox tenha suporte para leituras em cache assíncronos por um tempo, muitas vezes houve limitações de desempenho devido a várias opções de design relacionadas à manipulação de filas de trabalho internas de pools de threads e de sistemas de cache.  Com suporte do kernel-adequado, o Gerenciador de cache agora oculta todas as complexidades do pool de threads e do gerenciamento da fila de trabalho dos sistemas de File, tornando-a mais eficiente no tratamento de leituras armazenadas em cache assíncronas. O Gerenciador de cache tem um conjunto de estruturas de dados de controle para cada um dos níveis de aninhamento de VHD (máximo de suporte do sistema) para maximizar o paralelismo.
 
 
 ## <a name="cache-manager-improvements-in-windows-server-2012"></a>Aprimoramentos do Gerenciador de cache no Windows Server 2012
@@ -33,4 +33,4 @@ Aqui estão alguns exemplos de funções de servidor em que a combinação de p�
 
 -   Microsoft SQL Servers que são configurados para usar AWE ou páginas grandes (a maior parte da memória é privada, mas não paginável)
 
-A combinação de páginas está desabilitada por padrão, mas pode ser habilitada usando o cmdlet [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent?view=win10-ps) do Windows PowerShell. A combinação de páginas foi adicionada no Windows Server 2012.
+A combinação de páginas está desabilitada por padrão, mas pode ser habilitada usando o cmdlet [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent) do Windows PowerShell. A combinação de páginas foi adicionada no Windows Server 2012.

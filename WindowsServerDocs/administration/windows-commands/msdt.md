@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3e2a28ce747df9223e609392ab46abe2e947bb92
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0270039fcbc9f99ff2569635ddd75918baed783e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640613"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865405"
 ---
 # <a name="msdt"></a>msdt
 
@@ -29,7 +29,7 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | /ID `<packagename>` | Especifica qual pacote de diagnóstico deve ser executado. Para obter uma lista de pacotes disponíveis, consulte [pacotes de solução de problemas disponíveis](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs). |
-| /Path `<directory|.diagpkg file|.diagcfg file>` | Especifica o caminho completo para um pacote de diagnóstico. Se você especificar um diretório, o diretório deverá conter um pacote de diagnóstico. Você não pode usar o parâmetro **/path** em conjunto com os parâmetros * */ID * *, **/DCI**ou **/cab** . |                                                                                   |
+| /Path `<directory|.diagpkg file|.diagcfg file>` | Especifica o caminho completo para um pacote de diagnóstico. Se você especificar um diretório, o diretório deverá conter um pacote de diagnóstico. Você não pode usar o parâmetro **/path** em conjunto com os parâmetros * */ID * *, **/DCI** ou **/cab** . |                                                                                   |
 | /dci `<passkey>` | Popula o campo de chave de acesso. Esse parâmetro só é usado quando um provedor de suporte forneceu uma chave de acesso. |
 | /DT `<directory>` | Exibe o histórico de solução de problemas no diretório especificado. Os resultados de diagnóstico são armazenados nos diretórios **%LocalAppData%\Diagnostics** ou **%LocalAppData%\ElevatedDiagnostics** do usuário. |
 | /af `<answerfile>` | Especifica um arquivo de resposta em formato XML que contém respostas a uma ou mais interações de diagnóstico. |
@@ -56,4 +56,4 @@ Os pacotes de solução de problemas compreendem um conjunto de causas raiz, cad
 
 - [Pacotes de solução de problemas disponíveis](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
 
-- [Referência do PowerShell do TroubleshootingPack](/powershell/module/troubleshootingpack/?view=win10-ps)
+- [Referência do PowerShell do TroubleshootingPack](/powershell/module/troubleshootingpack/)

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 018d6b465386aaa83aeca9c42756b85f1385a171
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2f7602e99e550e993b916e603dad33724b3b0570
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962911"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865035"
 ---
 # <a name="deploying-a-federation-server-farm"></a>Implantação de um farm de servidores de federação
 
@@ -22,7 +22,7 @@ Para implantar um farm de servidores de federação, conclua as tarefas desta li
 |Tarefa|Referência|
 |--------|-------------|
 |Examine os conceitos e considerações importantes ao se preparar para implantar Serviços de Federação do Active Directory (AD FS) \( AD FS \) . **Observação**:|![Implantando o](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Guia de design do farm de servidores federados AD FS no Windows server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<p>![Implantando o farm de servidores federados](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[entendendo os principais conceitos de AD FS](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)|
-||Se você decidir usar o Microsoft SQL Server como repositório de configuração do AD FS, certifique-se de implantar uma instância funcional do SQL Server.|Aviso de [SQL Server](/sql/sql-server/?view=sql-server-ver15) **:** no Windows Server 2012 R2, se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012.|
+||Se você decidir usar o Microsoft SQL Server como repositório de configuração do AD FS, certifique-se de implantar uma instância funcional do SQL Server.|Aviso de [SQL Server](/sql/sql-server/) **:** no Windows Server 2012 R2, se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012.|
 |Una seu computador a um domínio do Active Directory.|![Implantando o farm de servidores federados](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[ingressar um computador em um domínio](Join-a-Computer-to-a-Domain.md)|
 |Registre um \( certificado SSL de camada \) de soquete seguro para AD FS.|![Implantando o farm](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[de servidores federados registrar um certificado SSL para AD FS](Enroll-an-SSL-Certificate-for-AD-FS.md)|
 |Instale o serviço de função do AD FS.|![Implantando o farm de servidores federados,](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Instale o serviço de função AD FS](Install-the-AD-FS-Role-Service.md)|

@@ -7,12 +7,12 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: 089d6437bd8c246bae3da5898870ea9cdd442656
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 2cdddf706d03aa5b1aa1239b58fd4d8a9f4beed2
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077863"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864315"
 ---
 # <a name="administer-a-server-core-server"></a>Administrar um servidor Server Core
 
@@ -40,7 +40,7 @@ Para definir um endereço IP estático, faça o seguinte:
    New-NetIPaddress -InterfaceIndex 12 -IPAddress 192.0.2.2 -PrefixLength 24 -DefaultGateway 192.0.2.1
    ```
 
-   em que:
+   onde:
    - **InterfaceIndex** é o valor de **IfIndex** da etapa 2. (Em nosso exemplo, 12)
    - **IPAddress** é o endereço IP estático que você deseja definir. (Em nosso exemplo, 191.0.2.2)
    - **PrefixLength** é o comprimento do prefixo (outra forma de máscara de sub-rede) para o endereço IP que você está definindo. (Para nosso exemplo, 24)
@@ -51,7 +51,7 @@ Para definir um endereço IP estático, faça o seguinte:
    Set-DNSClientServerAddress –InterfaceIndex 12 -ServerAddresses 192.0.2.4
    ```
 
-   em que:
+   onde:
    - **InterfaceIndex** é o valor de IfIndex da etapa 2.
    - **ServerAddresses** é o endereço IP do seu servidor DNS.
 5. Para adicionar vários servidores DNS, execute o seguinte cmdlet:
@@ -79,12 +79,12 @@ Use os cmdlets a seguir para ingressar um computador em um domínio.
 Use as etapas a seguir para renomear o servidor.
 
 1. Determine o nome atual do servidor com o comando **hostname** ou **ipconfig** .
-2. Execute **Rename-Computer-ComputerName \<new_name\> **.
+2. Execute **Rename-Computer-ComputerName \<new_name\>**.
 3. Reinicie o computador.
 
 ### <a name="activate-the-server"></a>Ativar o servidor
 
-Execute **slmgr. vbs – ipk \<productkey\> **. Em seguida, execute **slmgr. vbs – ato**. Se a ativação for realizada com sucesso, você não receberá uma mensagem.
+Execute **slmgr.vbs – ipk \<productkey\>**. Em seguida, execute **slmgr.vbs – ato**. Se a ativação for realizada com sucesso, você não receberá uma mensagem.
 
 > [!NOTE]
 > Você também pode ativar o servidor por telefone, usando um [servidor kms (serviço de gerenciamento de chaves)](../../get-started/server-2016-activation.md)ou remotamente. Para ativar remotamente, execute o seguinte cmdlet em um computador remoto:
@@ -95,7 +95,7 @@ Execute **slmgr. vbs – ipk \<productkey\> **. Em seguida, execute **slmgr. vbs
 
 ### <a name="configure-windows-firewall"></a>Configurar o firewall do Windows
 
-Você pode configurar o Firewall do Windows localmente no computador Server Core usando cmdlets e scripts do Windows PowerShell. Consulte [NetSecurity](/powershell/module/netsecurity/?view=win10-ps) para os cmdlets que você pode usar para configurar o Firewall do Windows.
+Você pode configurar o Firewall do Windows localmente no computador Server Core usando cmdlets e scripts do Windows PowerShell. Consulte [NetSecurity](/powershell/module/netsecurity/) para os cmdlets que você pode usar para configurar o Firewall do Windows.
 
 ### <a name="enable-windows-powershell-remoting"></a>Habilitar a comunicação remota do Windows PowerShell
 
@@ -126,9 +126,9 @@ Use as informações de referência a seguir para executar tarefas administrativ
 |                 Alterar para um endereço IP estático                 | **ipconfig/all** <br>Registre as informações relevantes ou Redirecione-as para um arquivo de texto (**ipconfig/all >ipconfig.txt**).<br>**netsh interface IPv4 mostrar interfaces**<br>Verifique se há uma lista de interfaces.<br>**netsh interface ipv4 set endereço \<Name ID from interface list\> origem = estático endereço = \<preferred IP address\> Gateway =\<gateway address\>**<br>Execute **ipconfig/all** para verificar se o DHCP habilitado está definido como **não**. |
 |                   Defina um endereço DNS estático.                   |   <strong>netsh interface ipv4 add dnsserver name = \<name or ID of the network interface card\> endereço = \<IP address of the primary DNS server\> índice = 1 <br></strong>netsh interface ipv4 add dnsserver name = \<name of secondary DNS server\> endereço = \<IP address of the secondary DNS server\> índice = 2\*\* <br> Repita conforme apropriado para adicionar mais servidores.<br>Execute **ipconfig/all** para verificar se os endereços estão corretos.   |
 | Alterar para um endereço IP fornecido pelo DHCP de um endereço IP estático |                                                                                                                                      **netsh interface ipv4 set endereço name = \<IP address of local system\> Source = DHCP** <br>Execute **ipconfig/all** para verificar se o DHCP habilitado está definido como **Sim**.                                                                                                                                      |
-|                      Inserir uma chave do produto                      |                                                                                                                                                                                                   **slmgr. vbs – ipk \<product key\>**                                                                                                                                                                                                    |
-|                  Ativar o servidor localmente                  |                                                                                                                                                                                                           **slmgr. vbs-ato**                                                                                                                                                                                                            |
-|                 Ativar o servidor remotamente                  |                                            **cscript slmgr. vbs – ipk \<product key\>\<server name\>\<username\>\<password\>** <br>**cscript slmgr. vbs-ato \<servername\> \<username\>\<password\>** <br>Obtenha o GUID do computador executando **cscript slmgr. vbs-did** <br> Executar **cscript slmgr. vbs-DLI \<GUID\> ** <br>Verifique se o status da licença está definido como **licenciado (ativado)**.                                             |
+|                      Inserir uma chave do produto                      |                                                                                                                                                                                                   **slmgr.vbs – ipk \<product key\>**                                                                                                                                                                                                    |
+|                  Ativar o servidor localmente                  |                                                                                                                                                                                                           **slmgr.vbs-ato**                                                                                                                                                                                                            |
+|                 Ativar o servidor remotamente                  |                                            **cscript slmgr.vbs – ipk \<product key\>\<server name\>\<username\>\<password\>** <br>**cscript slmgr.vbs-ato \<servername\> \<username\>\<password\>** <br>Obtenha o GUID do computador executando **cscript slmgr.vbs-did** <br> Executar **cscript slmgr.vbs-DLI \<GUID\>** <br>Verifique se o status da licença está definido como **licenciado (ativado)**.                                             |
 
 ### <a name="networking-and-firewall"></a>Rede e firewall
 
@@ -165,8 +165,8 @@ Use as informações de referência a seguir para executar tarefas administrativ
 |                               Tarefa                               |                                                                                                                                                                                                             Comando                                                                                                                                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                    Listar os serviços em execução                     |                                                                                                                                                                                                  **sc query** ou **net start**                                                                                                                                                                                                   |
-|                         Iniciar um serviço                          |                                                                                                                                                                                 **início \<service name\> do SC** ou **net start \<service name\> **                                                                                                                                                                                  |
-|                          Parar um serviço                          |                                                                                                                                                                                  **sc stop \<service name\> ** ou **net stop \<service name\> **                                                                                                                                                                                   |
+|                         Iniciar um serviço                          |                                                                                                                                                                                 **início \<service name\> do SC** ou **net start \<service name\>**                                                                                                                                                                                  |
+|                          Parar um serviço                          |                                                                                                                                                                                  **sc stop \<service name\>** ou **net stop \<service name\>**                                                                                                                                                                                   |
 | Recuperar uma lista de aplicativos em execução e processos associados |                                                                                                                                                                                                           **tasklist**                                                                                                                                                                                                           |
 |                        Iniciar o Gerenciador de Tarefas                        |                                                                                                                                                                                                           **taskmgr**                                                                                                                                                                                                            |
 |    Criar e gerenciar logs de desempenho e sessão de rastreamento de eventos    | Para criar um contador, rastreamento, coleta de dados de configuração ou API: **logman criar** <br>Para consultar as propriedades do coletor de dados: **consulta logman** <br>Para iniciar ou parar a coleta de dados: **logman start \| Stop** <br>Para excluir um coletor: **logman Delete** <br> Para atualizar as propriedades de um coletor: **atualização de logman** <br>Para importar um conjunto de coletores de dados de um arquivo XML ou exportá-lo para um arquivo XML: **logman Import \| Export** |
@@ -201,4 +201,4 @@ Use as informações de referência a seguir para executar tarefas administrativ
 |Tarefa|Comando|
 |----|-------|
 |Adicionar um driver para um novo dispositivo de hardware|Copie o driver para uma pasta em% HomeDrive% \\ \<driver folder\> . Execute **PnPUtil-i-a% HomeDrive% \\ \<driver folder\> \\ \<driver\> . inf**|
-|Remover um driver para um dispositivo de hardware|Para obter uma lista de Drivers carregados, execute **sc query Type = driver**. Em seguida, execute **SC Delete \<service_name\> **|
+|Remover um driver para um dispositivo de hardware|Para obter uma lista de Drivers carregados, execute **sc query Type = driver**. Em seguida, execute **SC Delete \<service_name\>**|
