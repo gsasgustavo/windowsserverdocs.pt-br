@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9b0b23b6058655baf599ed66877228b39eb807f9
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5dee105eaf14c92145e1fe70fe4627d37b2baa82
+ms.sourcegitcommit: b0c73df80d7b4ff0c332d77e0cc07f7e6e061600
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993928"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925561"
 ---
 # <a name="whats-new-in-dhcp"></a>Novidades no DHCP
 
@@ -28,6 +28,10 @@ As seções a seguir fornecem informações sobre novos recursos e alterações 
 O cliente DHCP no Windows 10 foi atualizado na atualização de 10 de maio de 2020 (também conhecida como Windows 10, versão 2004). Quando você estiver executando um cliente Windows e se conectar à Internet por meio de um telefone Android conectado, a conexão deverá ser marcada como "limitada". Anteriormente, as conexões foram marcadas como ilimitadas. Observe que nem todos os telefones com compartilhamento de Internet do Android serão detectados como limitados, e algumas outras redes também poderão aparecer como limitadas.
 
 Além disso, o nome tradicional do fornecedor do cliente foi atualizado para alguns dispositivos baseados no Windows. Esse valor costumava ser simplesmente MSFT 5,0. Alguns dispositivos agora aparecerão como MSFT 5,0 XBOX.
+
+## <a name="new-dhcp-client-side-features-in-the-windows-10-april-2018-update"></a>Novos recursos do lado do cliente DHCP na atualização de abril de 2018 do Windows 10
+
+O cliente DHCP no Windows 10 foi atualizado na atualização do Windows de abril de 2018 (também conhecida como Windows 10, versão 1803) para ler e aplicar a opção 119, a opção de pesquisa de domínio, do servidor DHCP ao qual seu sistema se conecta. A opção de pesquisa de domínio fornece sufixos DNS para pesquisas de DNS de nomes curtos. A opção de DHCP 119 é especificada em [RFC 3397](https://tools.ietf.org/html/rfc3397).
 
 ## <a name="dhcp-subnet-selection-options"></a>Opções de seleção de sub-rede DHCP
 
@@ -52,7 +56,7 @@ O suporte a NAP foi introduzido na função de servidor DHCP com o Windows Serve
 
 |Sistema operacional|Suporte a NAP|
 |--------------------|---------------|
-| Windows Server 2008 |Com suporte|
+| Windows Server 2008 |Com suporte|
 | Windows Server 2008 R2 |Com suporte|
 | Windows Server 2012 |Com suporte|
 | Windows Server 2012 R2 |Com suporte|
