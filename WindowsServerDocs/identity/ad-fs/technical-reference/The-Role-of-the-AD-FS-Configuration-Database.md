@@ -6,15 +6,15 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3143d4ccb05539d0374b6aea9096758e8f8b8960
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 86799d8cb2b6031105f7f4a86d6a29846c9bb8dc
+ms.sourcegitcommit: 03048411c07c1a1d0c8bb0b2a60c1c17c9987314
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937919"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96938996"
 ---
 # <a name="the-role-of-the-ad-fs-configuration-database"></a>A função do banco de dados de configuração do AD FS
-O banco de dados de configuração do AD FS armazena todos os dados de configuração que representam uma única instância do Serviços de Federação do Active Directory (AD FS) \( AD FS \) \( ou seja, o serviço de Federação \) . O banco de dados de configuração do AD FS define o conjunto de parâmetros que um Serviço de Federação requer para identificar parceiros, certificados, repositórios de atributo, declarações e diversos dados sobre essas entidades associadas. Você pode armazenar esses dados de configuração em um banco de dado Microsoft SQL Server &reg; ou no recurso wid do banco de dados interno do Windows \( \) que está incluído no Windows Server &reg; 2008, no Windows Server 2008 R2 e no Windows Server &reg; 2012.
+O banco de dados de configuração do AD FS armazena todos os dados de configuração que representam uma única instância do Serviços de Federação do Active Directory (AD FS) \( AD FS \) \( ou seja, o serviço de Federação \) . O banco de dados de configuração do AD FS define o conjunto de parâmetros que um Serviço de Federação requer para identificar parceiros, certificados, repositórios de atributo, declarações e diversos dados sobre essas entidades associadas. Você pode armazenar esses dados de configuração em um banco de dado Microsoft SQL Server &reg; ou no recurso wid do banco de dados interno do Windows \( \) que está incluído no Windows Server 2012 ou superior.
 
 > [!NOTE]
 > Todo o conteúdo do banco de dados de configuração do AD FS pode ser armazenado em uma instância do WID ou do banco de dados do SQL, mas não em ambas. Isso significa que não é possível ter alguns servidores de federação usando o WID e outros usando um banco de dados do SQL Server para a mesma instância do banco de dados de configuração do AD FS.
@@ -32,7 +32,7 @@ Você pode criar o banco de dados de configuração do AD FS usando o WID como o
 
 -   Adicionar um servidor de federação a um farm de servidores de federação
 
-Se você selecionar a \- opção autônoma, o wid será usado para armazenar uma única instância do banco de dados de configuração de AD FS. Esta instância não poderá ser compartilhada entre diversos servidores de federação. Ele destina-se somente a ambientes de laboratório de teste. Para obter mais informações sobre a \- opção de servidor de federação autônoma ou como configurar uma, consulte [servidor de Federação autônomo usando wid](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg982486(v=ws.11)) ou [criar um servidor de Federação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913579(v=ws.11))autônomo.
+Se você selecionar a \- opção autônoma, o wid será usado para armazenar uma única instância do banco de dados de configuração de AD FS. Esta instância não poderá ser compartilhada entre diversos servidores de federação. Ele destina-se somente a ambientes de laboratório de teste. Para obter mais informações sobre a \- opção de servidor de federação autônoma ou como configurar uma, consulte [servidor de Federação autônomo usando wid](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg982486(v=ws.11)) ou [criar um Stand-Alone servidor de Federação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913579(v=ws.11)).
 
 Se você selecionar a opção de primeiro servidor de federação em um farm de servidores de federação, o WID será configurado visando a escalabilidade para permitir que servidores de federação adicionais sejam adicionados ao farm posteriormente. Para ver mais informações sobre como implantar um farm no WID ou como configurá-lo, consulte [Farm de servidores de federação usando o WID](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg982492(v=ws.11)) ou [Criar o primeiro servidor de federação em um farm de servidores de federação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807070(v=ws.11))
 
@@ -45,15 +45,13 @@ Se você selecionar a opção de adicionar um servidor de federação, o WID ser
 Esta seção descreve os conceitos mais importantes que mostram como o farm de servidores de federação do WID replica os dados entre os servidores de federação primários e secundários. .
 
 #### <a name="primary-federation-server"></a>Servidor de federação primário
-Um servidor de Federação primário é um computador executando o Windows Server 2008, o Windows Server 2008 R2 ou o Windows Server &reg; 2012 que foi configurado na função de servidor de Federação com o assistente de configuração do servidor de federação AD FS e que tem uma cópia de leitura/gravação do banco de dados de configuração do AD FS. O servidor de Federação primário sempre é criado quando você usa o assistente de configuração do servidor de Federação AD FS e seleciona a opção para criar um novo Serviço de Federação e tornar esse computador o primeiro servidor de Federação no farm. Todos os demais servidores de federação deste farm, também chamados de servidores de federação secundários, deverão sincronizar as alterações realizadas no servidor primário para uma cópia do banco de dados de configuração do AD FS armazenado localmente.
+Um servidor de Federação primário é um computador executando o Windows Server 2012 ou superior que foi configurado com a função de servidor de Federação usando o assistente de configuração do servidor de Federação AD FS e que tem uma cópia de leitura/gravação do banco de dados de configuração do AD FS. O servidor de Federação primário sempre é criado quando você usa o assistente de configuração do servidor de Federação AD FS e seleciona a opção para criar um novo Serviço de Federação e tornar esse computador o primeiro servidor de Federação no farm. Todos os demais servidores de federação deste farm, também chamados de servidores de federação secundários, deverão sincronizar as alterações realizadas no servidor primário para uma cópia do banco de dados de configuração do AD FS armazenado localmente.
 
 #### <a name="secondary-federation-servers"></a>Servidores de federação secundários
 Os servidores de Federação secundários armazenam uma cópia do banco de dados de configuração do AD FS do servidor de Federação primário, mas essas cópias são \- somente leitura. Os servidores de federação secundários conectam-se e sincronizam os dados com o servidor de federação primário no farm sondando-o em intervalos regulares para verificar se os dados foram alterados. Os servidores de Federação secundários existem para fornecer tolerância a falhas para o servidor de Federação primário enquanto atuam para balancear a carga de \- solicitações de acesso feitas em sites diferentes em todo o ambiente de rede.
 
-> [!NOTE]
-> Se o servidor de federação primário ficar inativo e offline, todos os servidores de federação secundários continuarão a processar as solicitações normalmente. Contudo, nenhuma alteração poderá ser realizada no Serviço de Federação até que o servidor primário seja restaurado. Você também pode nominar um servidor de federação secundário para tornar-se o primário usando o Windows PowerShell. Para obter mais informações, consulte a [Administração do AD FS com o Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
 
-#### <a name="how-the-adfs-configuration-database-is-synchronized"></a>Como o banco de dados de configuração do AD FS é sincronizado?
+#### <a name="how-the-ad-fs-configuration-database-is-synchronized"></a>Como o banco de dados de configuração do AD FS é sincronizado?
 Devido à função importante que o banco de dados de configuração AD FS desempenha, ele é disponibilizado em todos os servidores de Federação na rede para fornecer tolerância a falhas e recursos de balanceamento de carga \- ao processar solicitações \( quando os balanceadores de carga de rede \- são usados \) . Contudo, para que os servidores de federação secundária possuam esta capacidade, o banco de dados de configuração do AD FS armazenado no servidor de federação primário deve ser sincronizado.
 
 Ao adicionar um servidor de federação ao farm, o novo computador que será um servidor de federação secundário conecta-se ao servidor de federação primário para replicar a cópia do banco de dados de configuração do AD FS. A partir deste ponto, o novo servidor de federação continua a obter atualizações do servidor de federação primário regularmente, como mostrado na ilustração a seguir.
@@ -66,6 +64,48 @@ O processo de sincronização do WID também dá suporte a transferências incre
 
 > [!NOTE]
 > Há suporte para a migração de um banco de dados de configuração do AD FS do WID para uma instância do SQL Server. Para obter mais informações sobre como fazer isso, consulte [AD FS: migrar seu banco de dados de configuração de AD FS para SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) no site do TechNet wiki.
+
+### <a name="how-to-managed-the-ad-fs-synchronization-properties"></a>Como gerenciar as propriedades de sincronização de AD FS
+Esta seção descreve como exibir e editar o AD FS proerties de sincronização do banco de dados de configuração.
+.
+
+O cmdlet **Get-ADFSSyncProperties** Obtém as propriedades de sincronização para o banco de dados de configuração de Serviços de Federação do Active Directory (AD FS) (AD FS).
+
+```
+PS C:\> Get-ADFSSyncProperties
+```
+No servidor de AD FS primário, esse cmdlet mostrará apenas que a função é o computador primário. Em um membro secundário, ele mostrará o restante da configuração, incluindo o nome de domínio totalmente quallified da última sincronização do computador primário, o status e a hora da última sincronização, a duração da sondagem, o ComputerName primário configurado atualmente, a porta do computador primário e a função do computador secundário. 
+
+O cmdlet **set-ADFSSyncProperties** modifica a frequência de sincronização para o banco de dados de configuração de Serviços de Federação do Active Directory (AD FS) (AD FS).
+O cmdlet também especifica qual servidor de Federação é o servidor primário no farm de servidores de Federação. 
+
+> [!NOTE]
+> Se o servidor de federação primário ficar inativo e offline, todos os servidores de federação secundários continuarão a processar as solicitações normalmente. Contudo, nenhuma alteração poderá ser realizada no Serviço de Federação até que o servidor primário seja restaurado. Você também pode nominar um servidor de federação secundário para tornar-se o primário usando o Windows PowerShell. Se for indicado um novo servidor primário, os servidores restantes deverão ser modificados para refletir o novo servidor primário. Ter dois primários com um farm WID afetará a capacidade do farm e terá o passibility de perder dados.
+
+#### <a name="modify-the-poll-duration-for-a-farm"></a>Modificar a duração da sondagem de um farm
+```
+PS C:\> Set-AdfsSyncProperties -PollDuration 3600 -PrimaryComputerName "FederationServerPrimary"
+```
+
+Esse comando modifica a sincronização do banco de dados para 3600 segundos.
+O comando faz a alteração para o servidor de Federação primário.
+
+####  <a name="change-a-server-from-secondary-to-primary"></a>Alterar um servidor de secundário para primário
+```
+PS C:\> Set-AdfsSyncProperties -Role "PrimaryComputer"
+```
+
+Esse comando altera um servidor de AD FS em um farm WID de secundário para primário.
+
+#### <a name="change-a-primary-server-to-a-secondary-server"></a>Alterar um servidor primário para um servidor secundário
+```
+PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
+```
+
+Esse comando altera um servidor de AD FS primário em um farm WID para um servidor secundário. Você deve especificar o nome de domínio totalmente qualificado do servidor primário. Não fazendo isso, talvez nem todo o servidor de AD FS secundário seja sincronizado corretamente. Observação: o servidor primário deve estar acessível via HTTP na porta 80 do servidor secundário.
+
+Para obter mais informações, consulte: [set-AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+
 
 ## <a name="using-sql-server-to-store-the-ad-fs-configuration-database"></a>Usando o SQL Server para armazenar o banco de dados de configuração do AD FS
 Você pode criar o banco de dados de configuração do AD FS usando uma única instância de banco de dados SQL Server como a loja usando a ferramenta de linha de comando Fsconfig.exe \- . Usar um banco de dados do SQL Server como banco de dados de configuração do AD FS oferece as seguintes vantagens em comparação com o WID:
@@ -91,9 +131,8 @@ Security Assertion Markup Language \( \) resolução de artefato SAML é um pont
 > Se você for um administrador em uma organização de parceiro de conta, certifique-se de atribuir ou associar um certificado SSL, que se encadeia a um certificado raiz de um membro do programa de certificado raiz do Windows, para o site da Web passivo da Federação em sites do IIS \( <ComputerName> \\ \\ site da Web padrão \\ ADFS \\ ls \) em todos os servidores de Federação de conta no farm. Isso é importante para evitar que os servidores de federação de recurso tenham que adicionar manualmente o certificado de SSL ao repositório de certificados de Computadores locais de pessoas confiáveis ou evitar que não seja possível resolver o artefato publicado na sua organização.
 
 ### <a name="samlws---federation-token-replay-detection"></a>Detecção de reprodução de token SAML/WS-Federation
-O termo *reprodução de token* refere-se ao ato pelo qual um cliente navegador em uma organização do parceiro de conta tenta enviar o mesmo token recebido de um servidor de federação de conta múltiplas vezes para autenticar-se a um servidor de federação de recurso.Isso ocorre quando um usuário clica no botão **Voltar** do navegador para tentar reenviar a página de autenticação.
+O termo *reprodução de token* refere-se ao ato pelo qual um cliente navegador em uma organização do parceiro de conta tenta enviar o mesmo token recebido de um servidor de federação de conta múltiplas vezes para autenticar-se a um servidor de federação de recurso.  Isso ocorre quando um usuário clica no botão **Voltar** do navegador para tentar reenviar a página de autenticação.
 
 O AD FS oferece um recurso chamado de *detecção de reprodução de token* com o qual solicitações múltiplas usando o mesmo token são detectadas e descartadas. Quando esse recurso é habilitado, a detecção de reprodução de token protege a integridade das solicitações de autenticação tanto no \- perfil passivo do WS Federation quanto no perfil de webs do SAML, garantindo que o mesmo token nunca seja usado mais de uma vez. Este recurso deve ser habilitado em situações nas quais a segurança é uma grande preocupação, como ao usar quiosques.
 
-No exemplo do quiosque, um usuário pode sair de todos os sites da web e depois um usuário mal-intencionado pode tentar usar o histórico de navegação para reenviar a página de autenticação federada carregada pelo usuário anterior.Este recurso minimiza esta preocupação ao armazenar informações adicionais sobre cada autenticação realizada com êxito por uma organização do parceiro de conta para detectar reproduções posteriores do token e evitar tentativas múltiplas de autenticação bem-sucedida.
-
+No exemplo do quiosque, um usuário pode sair de todos os sites da web e depois um usuário mal-intencionado pode tentar usar o histórico de navegação para reenviar a página de autenticação federada carregada pelo usuário anterior. Este recurso minimiza esta preocupação ao armazenar informações adicionais sobre cada autenticação realizada com êxito por uma organização do parceiro de conta para detectar reproduções posteriores do token e evitar tentativas múltiplas de autenticação bem-sucedida.

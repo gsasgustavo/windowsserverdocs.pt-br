@@ -1,35 +1,35 @@
 ---
-title: Solução de problemas AD FS-logon iniciado pelo IDP
+title: Solução de problemas de AD FS-Idp-Initiated logon
 description: Este documento descreve como solucionar problemas da página de logon do AD FS.
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.openlocfilehash: 4eb39b697b3dd31dc0a6e3581bdb33437b462197
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8ab9497a2c6711c638010c66b9a7c7dd8066876f
+ms.sourcegitcommit: 03048411c07c1a1d0c8bb0b2a60c1c17c9987314
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969703"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96938966"
 ---
-# <a name="ad-fs-troubleshooting---idp-initiated-sign-on"></a>Solução de problemas AD FS-logon iniciado pelo IDP
+# <a name="ad-fs-troubleshooting---idp-initiated-sign-on"></a>Solução de problemas de AD FS-Idp-Initiated logon
 A página de logon AD FS pode ser usada para testar se a autenticação está funcionando ou não.  Isso é feito navegando até a página e entrando.  Além disso, podemos usar a página de entrada para verificar se todas as partes confiáveis SAML 2,0 estão listadas.
 
-## <a name="enable-the-idp-initiated-sign-on-page"></a>Habilitar a página de logon iniciada pelo IDP
+## <a name="enable-the-idp-initiated-sign-on-page"></a>Habilitar a página de logon Idp-Initiated
 Por padrão, AD FS no Windows 2016 não tem a página de logon habilitada.  Para habilitá-lo, você pode usar o comando Set-Adfsproperties do PowerShell.  Use o procedimento a seguir para habilitar a página:
 
 1.  Abrir o Windows PowerShell
-2.  Insira: `Get-AdfsProperties` e pressione Enter
+2.  Insira:  `Get-AdfsProperties` e pressione Enter
 3.  Verifique se **EnableIdpInitiatedSignonPage** está definido como false ![ false](media/ad-fs-tshoot-initiatedsignon/idp2.png)
-4.  No PowerShell, digite:`Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`
-5.  Você não verá uma confirmação, portanto, digite Get-Adfsproperties novamente e verifique se **EnableIdpInitatedSignonPage** está definido como true.
+4.  No PowerShell, digite:  `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`
+5.  Você não verá uma confirmação, portanto, insira Get-AdfsProperties novamente e verifique se **EnableIdpInitatedSignonPage** está definido como true.
 ![Verdadeiro](media/ad-fs-tshoot-initiatedsignon/idp4.png)
 
 ## <a name="test-authentication"></a>Testar autenticação
-Use o procedimento a seguir para testar AD FS autenticação com a página de logon iniciada pelo IDP.
+Use o procedimento a seguir para testar AD FS autenticação com a página de logon do Idp-Initiated.
 
-1.  Abra um navegador da Web e navegue até a página de logon do IDP.  Exemplo: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+1.  Abra um navegador da Web e navegue até a página de logon do IDP.  Exemplo: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
 2.  Você deve ser solicitado a entrar.  Insira suas credenciais.
 ![Logon](media/ad-fs-tshoot-initiatedsignon/idp5.png)
 3.  Se isso tiver sido bem-sucedido, você deverá estar conectado.
@@ -45,7 +45,7 @@ Você pode testar a experiência de logon contínuo, certificando-se de que a UR
 2.  Insira sua URL e clique em Adicionar.  Clique em Fechar.
 ![Adicionar URL](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 1.  Clique em OK.  Clique em OK.  Isso deve fechar as opções da Internet.
-2.  Abra um navegador da Web e navegue até a página de logon do IDP.  Exemplo: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+2.  Abra um navegador da Web e navegue até a página de logon do IDP.  Exemplo: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
 3.  Clique no botão entrar.  Você deve entrar automaticamente e não será solicitado a fornecer as credenciais.
 ![Contínuo](media/ad-fs-tshoot-initiatedsignon/idp6.png)
 
