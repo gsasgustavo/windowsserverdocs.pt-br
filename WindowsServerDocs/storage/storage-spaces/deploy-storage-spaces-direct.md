@@ -5,15 +5,15 @@ ms.author: stevenek
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 09/09/2020
+ms.date: 12/09/2020
 description: Instruções passo a passo para implantar o armazenamento definido pelo software com o Espaços de Armazenamento Diretos no Windows Server como infraestrutura de hiperconvergente ou uma infraestrutura convergida (também conhecida como desagregada).
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ff6b1cf017405d90ae7e27d1d5853286a78b89
-ms.sourcegitcommit: c56e74743e5ad24b28ae81668668113d598047c6
+ms.openlocfilehash: 649d9154e08dcde0752447d2b8a290dce9dc15d2
+ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987306"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96997843"
 ---
 # <a name="deploy-storage-spaces-direct"></a>Implantar espaços de armazenamento diretos
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987306"
 Este tópico fornece instruções passo a passo para implantar [espaços de armazenamento diretos](storage-spaces-direct-overview.md) no Windows Server. Para implantar Espaços de Armazenamento Diretos como parte do Azure Stack HCI, consulte [qual é o processo de implantação para Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
-> Deseja adquirir uma infraestrutura com hiperconvergente? A Microsoft recomenda a compra de um hardware/software validado Azure Stack solução de HCI de nossos parceiros. Essas soluções são projetadas, montadas e validadas em relação à nossa arquitetura de referência para garantir a compatibilidade e a confiabilidade, para que você comece a trabalhar rapidamente. Para examinar um catálogo de soluções de hardware/software que funcionam com o HCI Azure Stack, consulte o [Catálogo de hci Azure Stack](https://azure.microsoft.com/products/azure-stack/hci/catalog/).
+> Deseja adquirir uma infraestrutura com hiperconvergente? A Microsoft recomenda a compra de um hardware/software validado Azure Stack solução de HCI de nossos parceiros. Essas soluções são projetadas, montadas e validadas em relação à nossa arquitetura de referência para garantir a compatibilidade e a confiabilidade, para que você comece a trabalhar rapidamente. Para examinar um catálogo de soluções de hardware/software que funcionam com o HCI Azure Stack, consulte o [Catálogo de hci Azure Stack](https://aka.ms/azurestackhcicatalog).
 
 > [!Tip]
 > Você pode usar máquinas virtuais do Hyper-V, incluindo no Microsoft Azure, para [avaliar espaços de armazenamento diretos sem hardware](storage-spaces-direct-in-vm.md). Você também pode querer examinar os convenientes [scripts de implantação do Windows Server Rapid Lab](https://aka.ms/wslab), que usaremos para fins de treinamento.
@@ -299,7 +299,7 @@ A próxima etapa na configuração dos serviços de cluster para o servidor de a
 
 #### <a name="to-create-a-scale-out-file-server-role-by-using-server-manager"></a>Para criar uma função de servidor de arquivos Scale-Out usando Gerenciador do Servidor
 
-1. Em Gerenciador de Cluster de Failover, selecione o cluster, vá para **funções**e clique em **Configurar função...**.<br>O assistente de alta disponibilidade é exibido.
+1. Em Gerenciador de Cluster de Failover, selecione o cluster, vá para **funções** e clique em **Configurar função...**.<br>O assistente de alta disponibilidade é exibido.
 2. Na página **selecionar função** , clique em **servidor de arquivos**.
 3. Na página **tipo de servidor de arquivos** , clique em **servidor de arquivos de escalabilidade horizontal para dados de aplicativo**.
 4. Na página **ponto de acesso para cliente** , digite um nome para o servidor de arquivos de Scale-Out.

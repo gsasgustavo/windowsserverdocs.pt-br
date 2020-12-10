@@ -1,17 +1,18 @@
 ---
 ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: A função do banco de dados de configuração do AD FS
+description: Saiba mais sobre a função do banco de dados de configuração do para armazenar todas as informações de configuração que representam uma única instância do AD FS.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 86799d8cb2b6031105f7f4a86d6a29846c9bb8dc
-ms.sourcegitcommit: 03048411c07c1a1d0c8bb0b2a60c1c17c9987314
+ms.openlocfilehash: 7adcd3a62ff85167172fcd856a3214fb51d9bd0b
+ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96938996"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96997833"
 ---
 # <a name="the-role-of-the-ad-fs-configuration-database"></a>A função do banco de dados de configuração do AD FS
 O banco de dados de configuração do AD FS armazena todos os dados de configuração que representam uma única instância do Serviços de Federação do Active Directory (AD FS) \( AD FS \) \( ou seja, o serviço de Federação \) . O banco de dados de configuração do AD FS define o conjunto de parâmetros que um Serviço de Federação requer para identificar parceiros, certificados, repositórios de atributo, declarações e diversos dados sobre essas entidades associadas. Você pode armazenar esses dados de configuração em um banco de dado Microsoft SQL Server &reg; ou no recurso wid do banco de dados interno do Windows \( \) que está incluído no Windows Server 2012 ou superior.
@@ -74,10 +75,10 @@ O cmdlet **Get-ADFSSyncProperties** Obtém as propriedades de sincronização pa
 ```
 PS C:\> Get-ADFSSyncProperties
 ```
-No servidor de AD FS primário, esse cmdlet mostrará apenas que a função é o computador primário. Em um membro secundário, ele mostrará o restante da configuração, incluindo o nome de domínio totalmente quallified da última sincronização do computador primário, o status e a hora da última sincronização, a duração da sondagem, o ComputerName primário configurado atualmente, a porta do computador primário e a função do computador secundário. 
+No servidor de AD FS primário, esse cmdlet mostrará apenas que a função é o computador primário. Em um membro secundário, ele mostrará o restante da configuração, incluindo o nome de domínio totalmente quallified da última sincronização do computador primário, o status e a hora da última sincronização, a duração da sondagem, o ComputerName primário configurado atualmente, a porta do computador primário e a função do computador secundário.
 
 O cmdlet **set-ADFSSyncProperties** modifica a frequência de sincronização para o banco de dados de configuração de Serviços de Federação do Active Directory (AD FS) (AD FS).
-O cmdlet também especifica qual servidor de Federação é o servidor primário no farm de servidores de Federação. 
+O cmdlet também especifica qual servidor de Federação é o servidor primário no farm de servidores de Federação.
 
 > [!NOTE]
 > Se o servidor de federação primário ficar inativo e offline, todos os servidores de federação secundários continuarão a processar as solicitações normalmente. Contudo, nenhuma alteração poderá ser realizada no Serviço de Federação até que o servidor primário seja restaurado. Você também pode nominar um servidor de federação secundário para tornar-se o primário usando o Windows PowerShell. Se for indicado um novo servidor primário, os servidores restantes deverão ser modificados para refletir o novo servidor primário. Ter dois primários com um farm WID afetará a capacidade do farm e terá o passibility de perder dados.
@@ -102,9 +103,10 @@ Esse comando altera um servidor de AD FS em um farm WID de secundário para prim
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-Esse comando altera um servidor de AD FS primário em um farm WID para um servidor secundário. Você deve especificar o nome de domínio totalmente qualificado do servidor primário. Não fazendo isso, talvez nem todo o servidor de AD FS secundário seja sincronizado corretamente. Observação: o servidor primário deve estar acessível via HTTP na porta 80 do servidor secundário.
+Esse comando altera um servidor de AD FS primário em um farm WID para um servidor secundário. Você deve especificar o nome de domínio totalmente qualificado do servidor primário. Não fazendo isso, talvez nem todo o servidor de AD FS secundário seja sincronizado corretamente.
+Observação: o servidor primário deve estar acessível via HTTP na porta 80 do servidor secundário.
 
-Para obter mais informações, consulte: [set-AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+Para obter mais informações, consulte: [set-AdfsSyncProperties](https://docs.microsoft.com/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
 
 
 ## <a name="using-sql-server-to-store-the-ad-fs-configuration-database"></a>Usando o SQL Server para armazenar o banco de dados de configuração do AD FS
