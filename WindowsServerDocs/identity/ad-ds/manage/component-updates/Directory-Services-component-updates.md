@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: atualizações de componentes de serviços de diretório'
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Atualizações de componentes dos Serviços de Diretório
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 85095e1b75ca5c2ae781ffddbeed43e5bb3a3864
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: a5836f3dda9615a449c89fe130798566e7481906
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070758"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049654"
 ---
 # <a name="directory-services-component-updates"></a>Atualizações de componentes dos Serviços de Diretório
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.
@@ -55,7 +56,7 @@ Com o lançamento, há novos níveis funcionais de domínio e floresta:
 
 1.  Proteções no lado do DC para *usuários protegidos*
 
-    *Usuários protegidos* que se autenticam em um domínio do Windows Server 2012 R2 **não podem mais** :
+    *Usuários protegidos* que se autenticam em um domínio do Windows Server 2012 R2 **não podem mais**:
 
     -   Autenticar-se com a autenticação NTLM
 
@@ -112,7 +113,7 @@ Nova criação de domínio em uma floresta existente
 ### <a name="adprep"></a>A
 Não há nenhuma nova operação de floresta ou domínio nesta versão.
 
-Esses arquivos. ldf contêm alterações de esquema para o **serviço de registro de dispositivo** .
+Esses arquivos. ldf contêm alterações de esquema para o **serviço de registro de dispositivo**.
 
 1.  Sch59
 
@@ -269,9 +270,9 @@ Log Record Bytes Generated: 0
 
 1.  Abra LDP.exe e conecte-se e associe-se a um controlador de domínio.
 
-2.  No menu **Opções** , clique em **controles** .
+2.  No menu **Opções** , clique em **controles**.
 
-3.  Na caixa de diálogo controles, expanda o menu suspenso **carregar predefinido** , clique em **Pesquisar estatísticas** e clique em **OK** .
+3.  Na caixa de diálogo controles, expanda o menu suspenso **carregar predefinido** , clique em **Pesquisar estatísticas** e clique em **OK**.
 
     ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
@@ -279,7 +280,7 @@ Log Record Bytes Generated: 0
 
 5.  Na caixa de diálogo Pesquisar, selecione o botão **Opções** .
 
-6.  Verifique se a caixa de seleção **estendida** está marcada na caixa de diálogo opções de pesquisa e selecione **OK** .
+6.  Verifique se a caixa de seleção **estendida** está marcada na caixa de diálogo opções de pesquisa e selecione **OK**.
 
     ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
 

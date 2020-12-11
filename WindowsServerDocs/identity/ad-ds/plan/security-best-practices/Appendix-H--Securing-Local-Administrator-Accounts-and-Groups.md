@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice H: Protegendo contas e grupos de administrador local'
 ms.assetid: ea015cbc-dea9-4c72-a9d8-d6c826d07608
 title: Apêndice H-protegendo contas e grupos de administrador local
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: aaf1557ccfa12c017139c29d48c6f7661abd5584
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: e6c7a8e99f14e0c93b77cd7440d9d83029ef4eca
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330468"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049674"
 ---
 # <a name="appendix-h-securing-local-administrator-accounts-and-groups"></a>Apêndice H: Proteger contas e grupos de administrador local
 

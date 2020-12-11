@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: AD FS operações'
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: Operações do AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3fb672d9557e7f10245e8c29ea1585cf9f4aadf9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 84a8b2cef4bc9741d782e49c0909ef7beec9c15c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953183"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048674"
 ---
 # <a name="ad-fs-operations"></a>Operações do AD FS
 
@@ -75,7 +76,7 @@ Este documento contém uma lista de todas as operações de documentação para 
 - [Configurar o AD FS para enviar declarações de expiração de senha](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 - [Configurar a autenticação baseada em formulários de intranet para dispositivos que não são compatíveis com a WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
 
-## <a name="other"></a>Outros
+## <a name="other"></a>Outro
 - [Ingresso no Local de Trabalho em qualquer dispositivo de SSO e autenticação de dois fatores contínua em aplicativos da empresa](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Gerenciar riscos com Autenticação Multifator adicional para aplicativos confidenciais](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Gerenciar risco com o Controle de Acesso Condicional](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)

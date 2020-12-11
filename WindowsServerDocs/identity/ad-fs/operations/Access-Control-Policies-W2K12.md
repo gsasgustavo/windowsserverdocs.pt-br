@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: políticas de controle de acesso no Windows Server 2012 R2 e no Windows Server 2012 AD FS'
 ms.assetid: 5728847d-dcef-4694-9080-d63bfb1fe24b
 title: Políticas de controle de acesso no AD FS no Windows Server 2012 R2
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 06/05/2018
 ms.topic: article
-ms.openlocfilehash: b09c9da43d25d7921f7687475c154540ec9d2907
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: da683cec35c7cf43f5fbf5b29ed7441fadf0b218
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947315"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048664"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Políticas de controle de acesso no Windows Server 2012 R2 e no Windows Server 2012 AD FS
 
@@ -63,20 +64,20 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 ## <a name="enabling-client-access-policy"></a>Habilitando a política de acesso do cliente
  Para habilitar a política de acesso do cliente no AD FS no Windows Server 2012 R2, você deve atualizar a terceira parte confiável da plataforma de identidade Microsoft Office 365. Escolha um dos cenários de exemplo abaixo para configurar as regras de declaração na relação de confiança de terceira parte confiável da **plataforma de identidade Microsoft Office 365** que melhor atende às necessidades da sua organização.
 
-###  <a name="scenario-1-block-all-external-access-to-office-365"></a><a name="scenario1"></a>Cenário 1: bloquear todo o acesso externo ao Office 365
+###  <a name="scenario-1-block-all-external-access-to-office-365"></a><a name="scenario1"></a> Cenário 1: bloquear todo o acesso externo ao Office 365
  Esse cenário de política de acesso de cliente permite o acesso de todos os clientes internos e bloqueia todos os clientes externos com base no endereço IP do cliente externo. Você pode usar os procedimentos a seguir para adicionar as regras de autorização de emissão corretas à relação de confiança de terceira parte confiável do Office 365 para o cenário escolhido.
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365"></a>Para criar regras para bloquear todo o acesso externo ao Office 365
 
-1.  Em **Gerenciador do servidor**, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
 2.  Na árvore de console, em **relações do AD FS\Trust**, clique em relações de confiança de terceira parte **confiável**, clique com o botão direito do mouse na relação de confiança da **plataforma de identidade Microsoft Office 365** e clique em **Editar regras de declaração**.
 
 3.  Na caixa de diálogo **Editar regras de declaração** , selecione a guia **regras de autorização de emissão** e clique em **Adicionar regra** para iniciar o assistente de regra de declaração.
 
-4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
-5.  Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver alguma declaração de IP fora do intervalo desejado, negar". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua o valor acima por "x-MS-Forwarded-Client-IP" por uma expressão de IP válida):`c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
+5.  Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver alguma declaração de IP fora do intervalo desejado, negar". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua o valor acima por "x-MS-Forwarded-Client-IP" por uma expressão de IP válida): `c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
 6.  Clique em **Concluir**. Verifique se a nova regra aparece na lista regras de autorização de emissão antes da regra padrão **permitir acesso a todos os usuários** (a regra de negação terá precedência, mesmo que apareça anteriormente na lista).  Se você não tiver a regra de acesso de permissão padrão, poderá adicionar uma no final da lista usando o idioma da regra de declaração da seguinte maneira:  </br>
 
     `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true"); `
@@ -85,18 +86,18 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
      ![Regras de Autorização de Emissão](media/Access-Control-Policies-W2K12/clientaccess1.png "ADFS_Client_Access_1")
 
-###  <a name="scenario-2-block-all-external-access-to-office-365-except-exchange-activesync"></a><a name="scenario2"></a>Cenário 2: bloquear todo o acesso externo ao Office 365, exceto o Exchange ActiveSync
+###  <a name="scenario-2-block-all-external-access-to-office-365-except-exchange-activesync"></a><a name="scenario2"></a> Cenário 2: bloquear todo o acesso externo ao Office 365, exceto o Exchange ActiveSync
  O exemplo a seguir permite o acesso a todos os aplicativos do Office 365, incluindo o Exchange Online, de clientes internos, incluindo o Outlook. Ele bloqueia o acesso de clientes que residem fora da rede corporativa, conforme indicado pelo endereço IP do cliente, exceto para clientes do Exchange ActiveSync, como Smart Phones.
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-exchange-activesync"></a>Para criar regras para bloquear todo o acesso externo ao Office 365, exceto o Exchange ActiveSync
 
-1.  Em **Gerenciador do servidor**, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
 2.  Na árvore de console, em **relações do AD FS\Trust**, clique em relações de confiança de terceira parte **confiável**, clique com o botão direito do mouse na relação de confiança da **plataforma de identidade Microsoft Office 365** e clique em **Editar regras de declaração**.
 
 3.  Na caixa de diálogo **Editar regras de declaração** , selecione a guia **regras de autorização de emissão** e clique em **Adicionar regra** para iniciar o assistente de regra de declaração.
 
-4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 5.  Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver alguma declaração de IP fora do intervalo desejado, emita a declaração ipoutsiderange". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua o valor acima por "x-MS-Forwarded-Client-IP" por uma expressão de IP válida):
 
@@ -106,7 +107,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 7.  Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-8.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+8.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 9. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome para exibição dessa regra, por exemplo, "se houver um IP fora do intervalo desejado e houver uma declaração não EAS x-MS-Client-Application, negar". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:
 
@@ -118,7 +119,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 11. Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-12. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+12. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 13. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "verificar se a declaração do aplicativo existe". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:
 
@@ -130,7 +131,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 15. Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-16. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+16. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 17. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo "negar usuários com ipoutsiderange verdadeiro e falha do aplicativo". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:
 
@@ -148,17 +149,17 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
     ![Regras de Autorização de Emissão](media/Access-Control-Policies-W2K12/clientaccess2.png )
 
-###  <a name="scenario-3-block-all-external-access-to-office-365-except-browser-based-applications"></a><a name="scenario3"></a>Cenário 3: bloquear todo o acesso externo ao Office 365, exceto aplicativos baseados em navegador
+###  <a name="scenario-3-block-all-external-access-to-office-365-except-browser-based-applications"></a><a name="scenario3"></a> Cenário 3: bloquear todo o acesso externo ao Office 365, exceto aplicativos baseados em navegador
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-browser-based-applications"></a>Para criar regras para bloquear todo o acesso externo ao Office 365, exceto aplicativos baseados em navegador
 
-1.  Em **Gerenciador do servidor**, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
 2.  Na árvore de console, em **relações do AD FS\Trust**, clique em relações de confiança de terceira parte **confiável**, clique com o botão direito do mouse na relação de confiança da **plataforma de identidade Microsoft Office 365** e clique em **Editar regras de declaração**.
 
 3.  Na caixa de diálogo **Editar regras de declaração** , selecione a guia **regras de autorização de emissão** e clique em **Adicionar regra** para iniciar o assistente de regra de declaração.
 
-4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 5.  Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver alguma declaração de IP fora do intervalo desejado, emita a declaração ipoutsiderange". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua o valor acima por "x-MS-Forwarded-Client-IP" por uma expressão de IP válida):
 
@@ -170,7 +171,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 2.  Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-3.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+3.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 4. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver um IP fora do intervalo desejado e o ponto de extremidade não for/adfs/ls, negar". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:
 
@@ -186,18 +187,18 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
     ![Emissão](media/Access-Control-Policies-W2K12/clientaccess3.png)
 
-###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a>Cenário 4: bloquear todo o acesso externo ao Office 365, exceto para grupos de Active Directory designados
+###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a> Cenário 4: bloquear todo o acesso externo ao Office 365, exceto para grupos de Active Directory designados
  O exemplo a seguir habilita o acesso de clientes internos com base no endereço IP. Ele bloqueia o acesso de clientes que residem fora da rede corporativa que têm um endereço IP de cliente externo, exceto aqueles indivíduos em um grupo de Active Directory especificado. Use as etapas a seguir para adicionar as regras de autorização de emissão corretas para a terceira parte confiável da **plataforma de identidade Microsoft Office 365** usando o assistente de regra de declaração:
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a>Para criar regras para bloquear todo o acesso externo ao Office 365, exceto para grupos de Active Directory designados
 
-1.  Em **Gerenciador do servidor**, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
 2.  Na árvore de console, em **relações do AD FS\Trust**, clique em relações de confiança de terceira parte **confiável**, clique com o botão direito do mouse na relação de confiança da **plataforma de identidade Microsoft Office 365** e clique em **Editar regras de declaração**.
 
 3.  Na caixa de diálogo **Editar regras de declaração** , selecione a guia **regras de autorização de emissão** e clique em **Adicionar regra** para iniciar o assistente de regra de declaração.
 
-4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+4.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 5.  Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome de exibição para essa regra, por exemplo, "se houver alguma declaração de IP fora do intervalo desejado, emita a declaração ipoutsiderange." Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua o valor acima por "x-MS-Forwarded-Client-IP" por uma expressão de IP válida):
 
@@ -209,7 +210,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 7. Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-8. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+8. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 9. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome para exibição dessa regra, por exemplo, "verificar SID do grupo". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração (substitua "GroupId" pelo Sid real do grupo do AD que você está usando):
 
@@ -221,7 +222,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 11. Em seguida, na caixa de diálogo **Editar regras de declaração** , na guia **regras de autorização de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra de declaração novamente.
 
-12. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada**e clique em **Avançar**.
+12. Na página **selecionar modelo de regra** , em **modelo de regra de declaração,** selecione **enviar declarações usando uma regra personalizada** e clique em **Avançar**.
 
 13. Na página **Configurar regra** , em **nome da regra de declaração**, digite o nome para exibição dessa regra, por exemplo "negar usuários com ipoutsiderange true e GroupId falha". Em **regra personalizada**, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:
 
@@ -239,7 +240,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
      ![Emissão](media/Access-Control-Policies-W2K12/clientaccess4.png)
 
-##  <a name="building-the-ip-address-range-expression"></a><a name="buildingip"></a>Criando a expressão de intervalo de endereços IP
+##  <a name="building-the-ip-address-range-expression"></a><a name="buildingip"></a> Criando a expressão de intervalo de endereços IP
  A declaração x-MS-encaminhar-Client-IP é populada a partir de um cabeçalho HTTP atualmente definido somente pelo Exchange Online, que popula o cabeçalho ao passar a solicitação de autenticação para AD FS. O valor da declaração pode ser um dos seguintes:
 
 > [!NOTE]
@@ -307,7 +308,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
  AD FS no Windows Server 2012 R2 fornece informações de contexto de solicitação usando os seguintes tipos de declaração:
 
 ### <a name="x-ms-forwarded-client-ip"></a>X-MS-encaminhar-Client-IP
- Tipo de declaração:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
+ Tipo de declaração: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
 
  Essa declaração de AD FS representa uma "melhor tentativa" ao garantir o endereço IP do usuário (por exemplo, o cliente Outlook) fazendo a solicitação. Essa declaração pode conter vários endereços IP, incluindo o endereço de cada proxy que encaminhou a solicitação.  Essa declaração é preenchida a partir de um HTTP. O valor da declaração pode ser um dos seguintes:
 
@@ -329,7 +330,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 > Atualmente, o Exchange Online dá suporte apenas a endereços IPV4; Ele não dá suporte a endereços IPV6.
 
 ### <a name="x-ms-client-application"></a>X-MS-cliente-aplicativo
- Tipo de declaração:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
+ Tipo de declaração: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
  Essa declaração de AD FS representa o protocolo usado pelo cliente final, que corresponde livremente ao aplicativo que está sendo usado.  Essa declaração é populada a partir de um cabeçalho HTTP que atualmente só é definido pelo Exchange Online, que popula o cabeçalho ao passar a solicitação de autenticação para AD FS. Dependendo do aplicativo, o valor dessa declaração será um dos seguintes:
 
@@ -356,7 +357,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
     - Microsoft. Exchange. IMAP
 
 ### <a name="x-ms-client-user-agent"></a>X-MS-Client-User-Agent
- Tipo de declaração:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+ Tipo de declaração: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
  Essa declaração de AD FS fornece uma cadeia de caracteres para representar o tipo de dispositivo que o cliente está usando para acessar o serviço. Isso pode ser usado quando os clientes desejarem impedir o acesso a determinados dispositivos (como tipos específicos de Smart Phone).  Os valores de exemplo para essa declaração incluem (mas não estão limitados a) os valores abaixo.
 
@@ -379,19 +380,19 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
   Também é possível que esse valor esteja vazio.
 
 ### <a name="x-ms-proxy"></a>X-MS-proxy
- Tipo de declaração:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+ Tipo de declaração: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
  Essa declaração de AD FS indica que a solicitação passou pelo proxy de aplicativo Web.  Essa declaração é preenchida pelo proxy de aplicativo Web, que popula o cabeçalho ao passar a solicitação de autenticação para o back-end Serviço de Federação. AD FS, em seguida, converte-o em uma declaração.
 
  O valor da declaração é o nome DNS do proxy de aplicativo Web que passou na solicitação.
 
 ### <a name="insidecorporatenetwork"></a>InsideCorporateNetwork
- Tipo de declaração:`https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`
+ Tipo de declaração: `https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`
 
  Semelhante ao tipo de declaração x-MS-proxy acima, esse tipo de declaração indica se a solicitação passou pelo proxy de aplicativo Web. Ao contrário de x-MS-proxy, insidecorporatenetwork é um valor booliano com true indicando uma solicitação diretamente para o serviço de Federação de dentro da rede corporativa.
 
 ### <a name="x-ms-endpoint-absolute-path-active-vs-passive"></a>X-MS-Endpoint-Absolute-Path (ativo vs passivo)
- Tipo de declaração:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+ Tipo de declaração: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
  Esse tipo de declaração pode ser usado para determinar solicitações originadas de clientes "ativos" (ricos) versus clientes "passivos" (baseados em navegador da Web). Isso permite que solicitações externas de aplicativos baseados em navegador, como o Outlook Acesso via Web, o SharePoint Online ou o portal do Office 365, sejam permitidas enquanto as solicitações originadas de clientes avançados, como o Microsoft Outlook, são bloqueadas.
 

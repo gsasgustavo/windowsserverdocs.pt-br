@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice I: Criando contas de gerenciamento para contas e grupos protegidos no Active Directory'
 ms.assetid: 13fe87d9-75cf-45bc-a954-ef75d4423839
 title: Apêndice I-criando contas de gerenciamento para contas e grupos protegidos no Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 85c738a34f70f1912ff97b853166e720b1b0d435
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 40088473ead7b594e832b68d80d01cef876011b2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070878"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049604"
 ---
 # <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>Apêndice I: Criar o gerenciamento de contas para contas e grupos protegidos no Active Directory
 
@@ -49,7 +50,7 @@ As contas de gerenciamento devem ter suas senhas redefinidas a cada uso e devem 
 
 Para criar um grupo para habilitar e desabilitar contas de gerenciamento, execute as seguintes etapas:
 
-1.  Na estrutura da UO em que você estará hospedando as contas de gerenciamento, clique com o botão direito do mouse na UO em que você deseja criar o grupo, clique em **novo** e em **grupo** .
+1.  Na estrutura da UO em que você estará hospedando as contas de gerenciamento, clique com o botão direito do mouse na UO em que você deseja criar o grupo, clique em **novo** e em **grupo**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)
 
@@ -57,7 +58,7 @@ Para criar um grupo para habilitar e desabilitar contas de gerenciamento, execut
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)
 
-3.  Clique com o botão direito do mouse no grupo que você acabou de criar, clique em **Propriedades** e clique na guia **objeto** . Na caixa de diálogo **propriedade de objeto** do grupo, selecione **proteger objeto contra exclusão acidental** , o que não apenas impedirá que usuários autorizados de outra forma excluam o grupo, mas também de movê-lo para outra UO, a menos que o atributo seja primeiro desmarcado.
+3.  Clique com o botão direito do mouse no grupo que você acabou de criar, clique em **Propriedades** e clique na guia **objeto** . Na caixa de diálogo **propriedade de objeto** do grupo, selecione **proteger objeto contra exclusão acidental**, o que não apenas impedirá que usuários autorizados de outra forma excluam o grupo, mas também de movê-lo para outra UO, a menos que o atributo seja primeiro desmarcado.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)
 
@@ -68,11 +69,11 @@ Para criar um grupo para habilitar e desabilitar contas de gerenciamento, execut
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_118.png)
 
-5.  Se você ainda não tiver feito isso, no console **Active Directory usuários e computadores** , clique em **Exibir** e selecione **recursos avançados** . Clique com o botão direito do mouse no grupo que você acabou de criar, clique em **Propriedades** e clique na guia **segurança** . Na guia **segurança** , clique em **avançado** .
+5.  Se você ainda não tiver feito isso, no console **Active Directory usuários e computadores** , clique em **Exibir** e selecione **recursos avançados**. Clique com o botão direito do mouse no grupo que você acabou de criar, clique em **Propriedades** e clique na guia **segurança** . Na guia **segurança** , clique em **avançado**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_119.png)
 
-6.  Na caixa de diálogo **configurações de segurança avançadas para [grupo]** , clique em **desabilitar herança** . Quando solicitado, clique em **converter permissões herdadas em permissões explícitas neste objeto** e clique em **OK** para retornar à caixa de diálogo **segurança** do grupo.
+6.  Na caixa de diálogo **configurações de segurança avançadas para [grupo]** , clique em **desabilitar herança**. Quando solicitado, clique em **converter permissões herdadas em permissões explícitas neste objeto** e clique em **OK** para retornar à caixa de diálogo **segurança** do grupo.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_120.png)
 
@@ -82,9 +83,9 @@ Para criar um grupo para habilitar e desabilitar contas de gerenciamento, execut
 
     -   SYSTEM
 
-    -   Administradores de Domínio
+    -   Administradores do domínio
 
-    -   Administradores Corporativos
+    -   Administrador corporativo
 
     -   Administradores
 
@@ -116,23 +117,23 @@ Para criar as contas de gerenciamento, execute as seguintes etapas:
 
 2. Inicie **Active Directory usuários e computadores** e navegue até a UO em que você criará a conta de gerenciamento.
 
-3. Clique com o botão direito do mouse na UO e clique em **novo** e em **usuário** .
+3. Clique com o botão direito do mouse na UO e clique em **novo** e em **usuário**.
 
-4. Na caixa de diálogo **novo objeto – usuário** , insira as informações de nomenclatura desejadas para a conta e clique em **Avançar** .
+4. Na caixa de diálogo **novo objeto – usuário** , insira as informações de nomenclatura desejadas para a conta e clique em **Avançar**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_122.png)
 
-5. Forneça uma senha inicial para a conta de usuário, desmarque o **usuário deve alterar a senha no próximo logon** , selecione o **usuário não pode alterar a senha** e a **conta está desabilitada** e clique em **Avançar** .
+5. Forneça uma senha inicial para a conta de usuário, desmarque o **usuário deve alterar a senha no próximo logon**, selecione o **usuário não pode alterar a senha** e a **conta está desabilitada** e clique em **Avançar**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_123.png)
 
-6. Verifique se os detalhes da conta estão corretos e clique em **concluir** .
+6. Verifique se os detalhes da conta estão corretos e clique em **concluir**.
 
-7. Clique com o botão direito do mouse no objeto de usuário que você acabou de criar e clique em **Propriedades** .
+7. Clique com o botão direito do mouse no objeto de usuário que você acabou de criar e clique em **Propriedades**.
 
-8. Clique na guia **Conta** .
+8. Clique na guia **Conta**.
 
-9. No campo **Opções de conta** , selecione o sinalizador a **conta é confidencial e não pode ser delegado** , selecione **essa conta dá suporte à criptografia Kerberos AES 128 bits** e/ou a **seguinte conta dá suporte ao sinalizador de criptografia Kerberos AES 256** e clique em **OK** .
+9. No campo **Opções de conta** , selecione o sinalizador a **conta é confidencial e não pode ser delegado** , selecione **essa conta dá suporte à criptografia Kerberos AES 128 bits** e/ou a **seguinte conta dá suporte ao sinalizador de criptografia Kerberos AES 256** e clique em **OK**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_124.png)
 
@@ -145,7 +146,7 @@ Para criar as contas de gerenciamento, execute as seguintes etapas:
    >
    > Essas configurações têm suporte apenas em computadores que executam o Windows Server 2012, Windows Server 2008 R2, Windows 8 ou Windows 7.
 
-10. Na guia **objeto** , selecione **proteger objeto contra exclusão acidental** . Isso não apenas impedirá que o objeto seja excluído (mesmo por usuários autorizados), mas impedirá que ele seja movido para uma UO diferente em sua hierarquia de AD DS, a menos que a caixa de seleção seja desmarcada primeiro por um usuário com permissão para alterar o atributo.
+10. Na guia **objeto** , selecione **proteger objeto contra exclusão acidental**. Isso não apenas impedirá que o objeto seja excluído (mesmo por usuários autorizados), mas impedirá que ele seja movido para uma UO diferente em sua hierarquia de AD DS, a menos que a caixa de seleção seja desmarcada primeiro por um usuário com permissão para alterar o atributo.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)
 
@@ -168,7 +169,7 @@ Para criar as contas de gerenciamento, execute as seguintes etapas:
 
 15. Clique na guia **discar** .
 
-16. No campo **permissão de acesso à rede** , selecione **negar acesso** . Essa conta nunca deve precisar se conectar por meio de uma conexão remota.
+16. No campo **permissão de acesso à rede** , selecione **negar acesso**. Essa conta nunca deve precisar se conectar por meio de uma conexão remota.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)
 
@@ -177,19 +178,19 @@ Para criar as contas de gerenciamento, execute as seguintes etapas:
     >
     > Embora a senha da conta deva ser redefinida após cada uso e a conta seja desabilitada, a implementação dessa configuração não tem um efeito deletério na conta e pode ajudar em situações em que um administrador se esqueça de redefinir a senha da conta e desabilitá-la.
 
-17. Clique na guia **Membro de** .
+17. Clique na guia **Membro de**.
 
-18. Clique em **Adicionar** .
+18. Clique em **Adicionar**.
 
-19. Digite **grupo de replicação de senha do RODC negado** na caixa de diálogo **Selecionar usuários, contatos, computadores** e clique em **verificar nomes** . Quando o nome do grupo for sublinhado no seletor de objetos, clique em **OK** e verifique se a conta agora é membro dos dois grupos exibidos na captura de tela a seguir. Não adicione a conta a nenhum grupo protegido.
+19. Digite **grupo de replicação de senha do RODC negado** na caixa de diálogo **Selecionar usuários, contatos, computadores** e clique em **verificar nomes**. Quando o nome do grupo for sublinhado no seletor de objetos, clique em **OK** e verifique se a conta agora é membro dos dois grupos exibidos na captura de tela a seguir. Não adicione a conta a nenhum grupo protegido.
 
-20. Clique em **OK** .
+20. Clique em **OK**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)
 
-21. Clique na guia **segurança** e clique em **avançado** .
+21. Clique na guia **segurança** e clique em **avançado**.
 
-22. Na caixa de diálogo **configurações de segurança avançadas** , clique em **desabilitar herança** e copie as permissões herdadas como permissões explícitas e clique em **Adicionar** .
+22. Na caixa de diálogo **configurações de segurança avançadas** , clique em **desabilitar herança** e copie as permissões herdadas como permissões explícitas e clique em **Adicionar**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)
 
@@ -197,15 +198,15 @@ Para criar as contas de gerenciamento, execute as seguintes etapas:
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)
 
-24. Role até a parte superior da caixa de diálogo **entrada de permissão** . Verifique se a lista suspensa **tipo** está definida como **permitir** e, na lista suspensa **aplica-se a** , selecione **este objeto somente** .
+24. Role até a parte superior da caixa de diálogo **entrada de permissão** . Verifique se a lista suspensa **tipo** está definida como **permitir** e, na lista suspensa **aplica-se a** , selecione **este objeto somente**.
 
-25. No campo **permissões** , selecione **ler todas as propriedades** , **permissões de leitura** e **Redefinir senha** .
+25. No campo **permissões** , selecione **ler todas as propriedades**, **permissões de leitura** e **Redefinir senha**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)
 
-26. No campo **Propriedades** , selecione **ler userAccountControl** e **gravar userAccountControl** .
+26. No campo **Propriedades** , selecione **ler userAccountControl** e **gravar userAccountControl**.
 
-27. Clique em **OK** , **OK** novamente na caixa de diálogo **configurações de segurança avançadas** .
+27. Clique em **OK**, **OK** novamente na caixa de diálogo **configurações de segurança avançadas** .
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)
 
@@ -252,18 +253,18 @@ Nesse caso, você concederá as contas de gerenciamento recém-criadas para perm
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)
 
-2. Abra um prompt de comando com privilégios elevados clicando com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador** .
+2. Abra um prompt de comando com privilégios elevados clicando com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)
 
-3. Quando for solicitado a aprovar a elevação, clique em **Sim** .
+3. Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)
 
    > [!NOTE]
    > Para obter mais informações sobre elevação e controle de conta de usuário (UAC) no Windows, consulte [processos e interações do UAC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) no site do TechNet.
 
-4. No prompt de comando, digite (substituindo suas informações específicas de domínio) **Dsacls [nome diferenciado do objeto AdminSDHolder em seu domínio]/g [UPN da conta de gerenciamento]: RPWP; membro** .
+4. No prompt de comando, digite (substituindo suas informações específicas de domínio) **Dsacls [nome diferenciado do objeto AdminSDHolder em seu domínio]/g [UPN da conta de gerenciamento]: RPWP; membro**.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)
 
@@ -281,19 +282,19 @@ Nesse caso, você concederá as contas de gerenciamento recém-criadas para perm
 
    - Member é o nome da propriedade (atributo) na qual as permissões serão definidas
 
-   Para obter mais informações sobre o uso de **Dsacls** , digite Dsacls sem nenhum parâmetro em um prompt de comando.
+   Para obter mais informações sobre o uso de **Dsacls**, digite Dsacls sem nenhum parâmetro em um prompt de comando.
 
    Se você tiver criado várias contas de gerenciamento para o domínio, deverá executar o comando Dsacls para cada conta. Depois de concluir a configuração de ACL no objeto AdminSDHolder, você deve forçar a execução de SDProp ou aguardar até que sua execução agendada seja concluída. Para obter informações sobre como forçar a execução de SDProp, consulte "executando SDProp manualmente" no [Apêndice C: contas e grupos protegidos no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).
 
    Quando SDProp tiver sido executado, você poderá verificar se as alterações feitas no objeto AdminSDHolder foram aplicadas a grupos protegidos no domínio. Não é possível verificar isso exibindo a ACL no objeto AdminSDHolder pelos motivos descritos anteriormente, mas você pode verificar se as permissões foram aplicadas exibindo as ACLs em grupos protegidos.
 
-5. Em **Active Directory usuários e computadores** , verifique se você habilitou os **recursos avançados** . Para fazer isso, clique em **Exibir** , localize o grupo **Admins** . do domínio, clique com o botão direito do mouse no grupo e clique em **Propriedades** .
+5. Em **Active Directory usuários e computadores**, verifique se você habilitou os **recursos avançados**. Para fazer isso, clique em **Exibir**, localize o grupo **Admins** . do domínio, clique com o botão direito do mouse no grupo e clique em **Propriedades**.
 
 6. Clique na guia **segurança** e clique em **avançado** para abrir a caixa de diálogo **configurações de segurança avançadas para admins** . do domínio.
 
    ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)
 
-7. Selecione **permitir Ace para a conta de gerenciamento** e clique em **Editar** . Verifique se a conta recebeu apenas as permissões **ler Membros** e **gravar Membros** no grupo da e clique em **OK** .
+7. Selecione **permitir Ace para a conta de gerenciamento** e clique em **Editar**. Verifique se a conta recebeu apenas as permissões **ler Membros** e **gravar Membros** no grupo da e clique em **OK**.
 
 8. Clique em **OK** na caixa de diálogo **configurações de segurança avançadas** e clique em **OK** novamente para fechar a caixa de diálogo de Propriedade do grupo da.
 
@@ -318,7 +319,7 @@ Agora que você criou e configurou contas de gerenciamento que podem modificar a
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_142.gif)
 
-2.  Abra **Active Directory usuários e computadores** , clique com o botão direito do mouse na conta de gerenciamento e clique em **habilitar conta** .
+2.  Abra **Active Directory usuários e computadores**, clique com o botão direito do mouse na conta de gerenciamento e clique em **habilitar conta**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_143.gif)
 
@@ -326,11 +327,11 @@ Agora que você criou e configurou contas de gerenciamento que podem modificar a
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_144.gif)
 
-4.  Em seguida, redefina a senha na conta de gerenciamento. Para fazer isso, clique com o botão direito do mouse na conta novamente e clique em **Redefinir senha** .
+4.  Em seguida, redefina a senha na conta de gerenciamento. Para fazer isso, clique com o botão direito do mouse na conta novamente e clique em **Redefinir senha**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_145.gif)
 
-5.  Digite uma nova senha para a conta nos campos **nova senha** e **Confirmar senha** e clique em **OK** .
+5.  Digite uma nova senha para a conta nos campos **nova senha** e **Confirmar senha** e clique em **OK**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_146.gif)
 
@@ -340,7 +341,7 @@ Agora que você criou e configurou contas de gerenciamento que podem modificar a
 
 7.  Agora, tente modificar as propriedades adicionais da conta de gerenciamento. Clique com o botão direito do mouse na conta e clique em **Propriedades** e clique na guia **controle remoto** .
 
-8.  Selecione **habilitar controle remoto** e clique em **aplicar** . A operação deve falhar e uma mensagem de erro de **acesso negado** deve ser exibida.
+8.  Selecione **habilitar controle remoto** e clique em **aplicar**. A operação deve falhar e uma mensagem de erro de **acesso negado** deve ser exibida.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_148.gif)
 
@@ -348,7 +349,7 @@ Agora que você criou e configurou contas de gerenciamento que podem modificar a
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_149.gif)
 
-10. Tente adicionar o grupo de gerenciamento a um grupo protegido, como o grupo DA. Quando você clica em **OK** , uma mensagem deve ser exibida, informando que você não tem permissões para modificar o grupo.
+10. Tente adicionar o grupo de gerenciamento a um grupo protegido, como o grupo DA. Quando você clica em **OK**, uma mensagem deve ser exibida, informando que você não tem permissões para modificar o grupo.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_150.gif)
 
@@ -365,17 +366,17 @@ Agora que você habilitou uma ou mais contas que podem alterar a associação de
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_151.gif)
 
-2.  Inicie **Active Directory usuários e computadores** e localize o **grupo Admins** . do domínio.
+2.  Inicie **Active Directory usuários e computadores** e localize o **grupo Admins**. do domínio.
 
-3.  Clique com o botão direito do mouse no grupo **Admins** . do domínio e clique em **Propriedades** .
+3.  Clique com o botão direito do mouse no grupo **Admins** . do domínio e clique em **Propriedades**.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_152.gif)
 
-4.  Nas **Propriedades admins** . do domínio, clique na guia **Membros** e **clique em** adicionar. Insira o nome de uma conta que receberá privilégios de administradores de domínio temporários e clique em **verificar nomes** . Quando o nome da conta for sublinhado, clique em **OK** para retornar à guia **Membros** .
+4.  Nas **Propriedades admins**. do domínio, clique na guia **Membros** e **clique em** adicionar. Insira o nome de uma conta que receberá privilégios de administradores de domínio temporários e clique em **verificar nomes**. Quando o nome da conta for sublinhado, clique em **OK** para retornar à guia **Membros** .
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_153.gif)
 
-5.  Na guia **Membros** da caixa de diálogo **Propriedades de admins** . do domínio, clique em **aplicar** . Depois de clicar em **aplicar** , a conta deverá permanecer como um membro do grupo da e você não deverá receber mensagens de erro.
+5.  Na guia **Membros** da caixa de diálogo **Propriedades de admins** . do domínio, clique em **aplicar**. Depois de clicar em **aplicar**, a conta deverá permanecer como um membro do grupo da e você não deverá receber mensagens de erro.
 
     ![Criando contas de gerenciamento](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_154.gif)
 

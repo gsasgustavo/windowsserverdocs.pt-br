@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar pastas de trabalho com o AD FS e o proxy de aplicativo Web: etapa 1, configurar AD FS'
 title: Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web - Etapa 1, Configurar o AD FS
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: f9cb2a47b4478e440b6f9491358a2de4822912cb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0cb9e88455a6c7c1b3d917a8ad839d7f7217a6a3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965833"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048574"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web: Etapa 1, Configurar o AD FS
 
@@ -111,7 +112,7 @@ Para instalar o AD FS, siga estas etapas:
 
 2.  Na página **Funções de Servidor**, selecione a função **Serviços de Federação do Active Directory** e clique em **Avançar**.
 
-3.  Na página **Serviços de Federação do Active Directory (AD FS)**, você verá uma mensagem informando que a função Proxy de aplicativo Web não pode ser instalada no mesmo computador do AD FS. Clique em **Próximo**.
+3.  Na página **Serviços de Federação do Active Directory (AD FS)**, você verá uma mensagem informando que a função Proxy de aplicativo Web não pode ser instalada no mesmo computador do AD FS. Clique em **Avançar**.
 
 4.  Clique em **Instalar** na página de confirmação.
 
@@ -136,16 +137,16 @@ Para configurar o AD FS usando o Gerenciador do Servidor, siga estas etapas:
 
 4.  Na página **Especificar Propriedades do Serviço**, insira o nome da entidade do certificado SSL a ser usado na comunicação do AD FS. No exemplo de teste, esse serviço é **blueadfs.contoso.com**.
 
-5.  Insira o nome do serviço de federação. No exemplo de teste, esse serviço é **blueadfs.contoso.com**. Clique em **Próximo**.
+5.  Insira o nome do serviço de federação. No exemplo de teste, esse serviço é **blueadfs.contoso.com**. Clique em **Avançar**.
 
     > [!NOTE]
     > O nome do serviço de federação não deve usar o nome de um servidor existente no ambiente. Se você usar o nome de um servidor existente, a instalação do AD FS falhará e deverá ser reiniciada.
 
-6.  Na página **Especificar Conta de Serviço**, insira o nome que você deseja atribuir à conta de serviço gerenciado. No exemplo de teste, selecione **Criar uma Conta de Serviço Gerenciado de Grupo** ,e em **Nome da Conta**, insira **ADFSService**. Clique em **Próximo**.
+6.  Na página **Especificar Conta de Serviço**, insira o nome que você deseja atribuir à conta de serviço gerenciado. No exemplo de teste, selecione **Criar uma Conta de Serviço Gerenciado de Grupo** ,e em **Nome da Conta**, insira **ADFSService**. Clique em **Avançar**.
 
-7.  Na página **especificar banco de dados de configuração** , selecione **criar um banco de dados neste servidor usando o banco de dados interno do Windows**e clique em **Avançar**.
+7.  Na página **especificar banco de dados de configuração** , selecione **criar um banco de dados neste servidor usando o banco de dados interno do Windows** e clique em **Avançar**.
 
-8.  A página **Examinar Opções** mostra uma visão geral das opções que você selecionou. Clique em **Próximo**.
+8.  A página **Examinar Opções** mostra uma visão geral das opções que você selecionou. Clique em **Avançar**.
 
 9. A página **Verificações de Pré-requisitos** indica se todas as verificações de pré-requisitos passaram no teste. Se houver problemas, clique em **Configurar**.
 
@@ -175,7 +176,7 @@ Após configurar o AD FS, você deve configurar um farm AD FS usando a conta de 
 Para configurar um farm do AD FS:
 
 ```powershell
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1 
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop
 ```

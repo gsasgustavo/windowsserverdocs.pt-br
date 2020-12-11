@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: compreendendo a eliminação de duplicação de dados'
 ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Noções básicas da eliminação de duplicação de dados
 ms.topic: article
@@ -6,12 +7,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: e3a58889d42020d939981e2d10eda450e5860642
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: eac0cf9b658ddc4e0676ed53c48b12e62d617d6f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936249"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050064"
 ---
 # <a name="understanding-data-deduplication"></a>Noções básicas da eliminação de duplicação de dados
 
@@ -56,7 +57,7 @@ Os tipos de uso a seguir fornecem uma configuração razoável de Eliminação d
 | <a id="usage-type-hyperv"></a>Hyper-V | Servidores de VDI (Virtual Desktop Infrastructure) | <ul><li>Otimização em segundo plano</li><li>Política de otimização padrão:<ul><li>Idade mínima do arquivo = 3 dias</li><li>Otimizar arquivos em uso = Sim</li><li>Otimizar arquivos parciais = Sim</li></ul></li><li>Ajustes "nos bastidores" para interoperabilidade do Hyper-V</li></ul> |
 | <a id="usage-type-backup"></a>Backup | Aplicativos de backup virtualizados, como o [Microsoft Data Protection Manager (DPM)](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) | <ul><li>Otimização da prioridade</li><li>Política de otimização padrão:<ul><li>Idade mínima do arquivo = 0 dias</li><li>Otimizar arquivos em uso = Sim</li><li>Otimizar arquivos parciais = Não</li></ul></li><li>Ajustes "nos bastidores" para interoperabilidade com soluções de DPM ou semelhantes a DPM</li></ul> |
 
-## <a name="jobs"></a><a id="job-info"></a>Trabalhos
+## <a name="jobs"></a><a id="job-info"></a>Sejam
 A Eliminação de Duplicação de Dados usa uma estratégia de pós-processamento para otimizar e manter a eficiência do espaço de um volume.
 
 | Nome do trabalho | Descrições do trabalho | Cronograma padrão |
@@ -80,7 +81,7 @@ A Eliminação de Duplicação de Dados usa uma estratégia de pós-processament
 | <a id="dedup-term-in-policy"></a>Política de otimização | A política de otimização especifica os arquivos que devem ser considerados para Eliminação de Duplicação de Dados. Por exemplo, os arquivos poderão ser considerados fora da política se forem totalmente novos, estiverem abertos, em um determinado caminho no volume ou se forem de um determinado tipo de arquivo. |
 | <a id="dedup-term-reparse-point"></a>Ponto de nova análise | Um [ponto de nova análise](/windows/win32/fileio/reparse-points) é uma marca especial que notifica o sistema de arquivos para passar a e/s para um filtro do sistema de arquivos especificado. Quando o fluxo de arquivos do arquivo tiver sido otimizado, a Eliminação de Duplicação de Dados substitui o fluxo de arquivos por um ponto de nova análise, que permite à Eliminação de Duplicação de Dados preservar a semântica de acesso nesse arquivo. |
 | <a id="dedup-term-volume"></a>Volume | Um volume é uma construção do Windows para uma unidade de armazenamento lógico que pode abranger vários dispositivos de armazenamento físicos em um ou mais servidores. A Eliminação de duplicação é habilitada de acordo com o volume. |
-| <a id="dedup-term-workload"></a>Pico | Uma carga de trabalho é um aplicativo executado no Windows Server. Entre os exemplos de carga de trabalho de exemplo estão o servidor de arquivos de finalidade geral, Hyper-V e o SQL Server. |
+| <a id="dedup-term-workload"></a>Carga de trabalho | Uma carga de trabalho é um aplicativo executado no Windows Server. Entre os exemplos de carga de trabalho de exemplo estão o servidor de arquivos de finalidade geral, Hyper-V e o SQL Server. |
 
 > [!Warning]
 > A menos que seja indicado pela Equipe de suporte autorizada da Microsoft, não tente modificar manualmente o repositório de partes. Isso pode resultar em corrupção ou perda de dados.

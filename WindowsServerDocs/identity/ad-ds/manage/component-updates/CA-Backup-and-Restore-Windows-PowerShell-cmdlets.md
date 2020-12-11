@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: backup de CA e restauração de cmdlets do Windows PowerShell'
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: Cmdlets do Windows PowerShell de backup e restauração de AC
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1a36e72858e5ea2ae95cc0f1730e5906b3c85866
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: f6db1828b52a2987ee3df9f1028a66db4536c0a8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070728"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049464"
 ---
 # <a name="ca-backup-and-restore-windows-powershell-cmdlets"></a>Cmdlets do Windows PowerShell de backup e restauração de AC
 
 > Aplica-se a: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 >
-> **Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+> **Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 >
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: instalar uma nova floresta de Active Directory do Windows Server 2012 (nível 200)'
 ms.assetid: b3d6fb87-c4d4-451c-b3de-a53d2402d295
 title: Instalar uma nova floresta do Active Directory do Windows Server 2012 (nível 200)
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7ce07ae26c87e2f50cbbe76a8e59e54aa01937ce
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: cf52b257dc91cb5dc2bd7ad6097ea95bd0e7a8b0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071028"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049574"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>Instalar uma nova floresta do Active Directory do Windows Server 2012 (nível 200)
 
@@ -130,7 +131,7 @@ Isso lhe oferece três maneiras de adicionar servidores ao pool para uso ou agru
 
 -   Importação (usa uma lista de arquivos de texto de servidores separados por CR/LF)
 
-Clique em **Localizar Agora** para retornar uma lista de servidores desse mesmo domínio Active Directory ao qual o computador se integrou, clique em um ou mais nomes de servidor da lista de servidores. Clique na seta para a direita para adicionar os servidores à lista **Selecionados** . Use a caixa de diálogo **Adicionar Servidores** para adicionar servidores selecionados aos grupos de função do painel. Ou clique em **Gerenciar** e em **Criar Grupo de Servidores** , ou clique em **Criar Grupo de Servidores** no painel **Bem-vindo ao Gerenciador do Servidor** para criar grupos de servidores personalizados.
+Clique em **Localizar Agora** para retornar uma lista de servidores desse mesmo domínio Active Directory ao qual o computador se integrou, clique em um ou mais nomes de servidor da lista de servidores. Clique na seta para a direita para adicionar os servidores à lista **Selecionados**. Use a caixa de diálogo **Adicionar Servidores** para adicionar servidores selecionados aos grupos de função do painel. Ou clique em **Gerenciar** e em **Criar Grupo de Servidores**, ou clique em **Criar Grupo de Servidores** no painel **Bem-vindo ao Gerenciador do Servidor** para criar grupos de servidores personalizados.
 
 > [!NOTE]
 > O procedimento Adicionar Servidores não confirma se um servidor está online ou é acessível. Entretanto, todos os servidores inacessíveis serão sinalizados no modo de exibição Capacidade de Gerenciamento do Gerenciador do Servidor, na próxima atualização.
@@ -139,22 +140,22 @@ Você pode instalar funções remotamente em qualquer computador do Windows Serv
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/tADDS_SMI_TR_AddRolesFeatures.png)
 
-Não pode gerenciar integralmente servidores que executam sistemas operacionais anteriores ao Windows Server 2012. A seleção **Adicionar Funções e Recursos** está executando o módulo ServerManager do Windows PowerShell **Install-WindowsFeature** .
+Não pode gerenciar integralmente servidores que executam sistemas operacionais anteriores ao Windows Server 2012. A seleção **Adicionar Funções e Recursos** está executando o módulo ServerManager do Windows PowerShell **Install-WindowsFeature**.
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_AddADDSToAnotherServer.png)
 
-Você também pode usar o Painel do Gerenciador do Servidor em um controlador de domínio existente para selecionar a instalação do AD DS do servidor remoto com a função já pré-selecionada, clicando com o botão direito do mouse e selecionando o bloco do painel AD DS e selecionando **Adicionar AD DS a Outro Servidor** . O **Install-WindowsFeature AD-Domain-Services** está sendo invocado.
+Você também pode usar o Painel do Gerenciador do Servidor em um controlador de domínio existente para selecionar a instalação do AD DS do servidor remoto com a função já pré-selecionada, clicando com o botão direito do mouse e selecionando o bloco do painel AD DS e selecionando **Adicionar AD DS a Outro Servidor**. O **Install-WindowsFeature AD-Domain-Services** está sendo invocado.
 
-O computador em que você está executando o Gerenciador do Servidor entra em pool automaticamente. Para instalar a função AD DS aqui, simplesmente clique no menu **Gerenciar** e clique em **Adicionar Funções e Recursos** .
+O computador em que você está executando o Gerenciador do Servidor entra em pool automaticamente. Para instalar a função AD DS aqui, simplesmente clique no menu **Gerenciar** e clique em **Adicionar Funções e Recursos**.
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ManageAddRoles.png)
 
 #### <a name="installation-type"></a>Tipo de Instalação
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)
 
-A caixa de diálogo **Tipo de Instalação** fornece uma opção que não dá suporte para Serviços de Domínio Active Directory: a **Instalação baseada em cenário de Serviços de Área de Trabalho Remota** . Essa opção permite apenas Serviço de Área de Trabalho Remota em uma carga de trabalho distribuída em vários servidores. Se você selecioná-la, o, AD DS não poderá instalar.
+A caixa de diálogo **Tipo de Instalação** fornece uma opção que não dá suporte para Serviços de Domínio Active Directory: a **Instalação baseada em cenário de Serviços de Área de Trabalho Remota**. Essa opção permite apenas Serviço de Área de Trabalho Remota em uma carga de trabalho distribuída em vários servidores. Se você selecioná-la, o, AD DS não poderá instalar.
 
-Sempre deixe a seleção padrão marcada quando instalar o AD DS: **Instalação baseada em função ou recurso** .
+Sempre deixe a seleção padrão marcada quando instalar o AD DS: **Instalação baseada em função ou recurso**.
 
 #### <a name="server-selection"></a>Seleção do servidor
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectDestinationServer.png)
@@ -168,7 +169,7 @@ Além disso, você pode selecionar arquivos VHD do Hyper-V offline com o sistema
 
 Selecione a função **Serviços de Domínio Active Directory** se pretende promover um controlador de domínio. Todos os recursos de administração do Active Directory e serviços necessários são instalados automaticamente, mesmo se foram parte de outra função ou se não aparecerem selecionados na interface do Gerenciador do Servidor.
 
-O Gerenciador do Servidor também apresenta uma caixa de diálogo informativa que mostra quais recursos de gerenciamento essa função instala implicitamente; isso se equivale ao argumento **-IncludeManagementTools** .
+O Gerenciador do Servidor também apresenta uma caixa de diálogo informativa que mostra quais recursos de gerenciamento essa função instala implicitamente; isso se equivale ao argumento **-IncludeManagementTools**.
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_AddFeaturesDialog.gif)
 
@@ -186,7 +187,7 @@ A caixa de diálogo **Serviços de Domínio Active Directory** fornece informaç
 
 A caixa de diálogo **Confirmação** é o ponto de verificação final antes da instalação da função iniciar. Ela apresenta uma opção para reiniciar o computador como necessária após a instalação da função, mas a instalação do AD DS não requer uma reinicialização.
 
-Clicando em **Instalar** , você confirma que está pronto para começar a instalação da função. Você não pode cancelar a instalação de uma função depois de iniciá-la.
+Clicando em **Instalar**, você confirma que está pronto para começar a instalação da função. Você não pode cancelar a instalação de uma função depois de iniciá-la.
 
 #### <a name="results"></a>Resultados
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Results.png)
@@ -210,9 +211,9 @@ Verificar os resultados da instalação ainda é uma melhor prática. Se você f
 #### <a name="promote-to-domain-controller"></a>Promover o controlador de domínio
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Promote.png)
 
-No final da instalação da função AD DS, você pode continuar com a configuração usando o link **Promover este servidor a um controlador de domínio** . Isso é necessário para tornar o servidor um controlador de domínio, mas não é necessário para executar o assistente de configuração imediatamente. Por exemplo, você pode desejar somente provisionar servidores com binários do AD DS antes de enviá-los para outras filiais para configuração posterior. Adicionar a função AD DS antes da remessa, permite que você ganhe tempo quando eles chegarem em seu destino. Você também pode seguir as melhores práticas de não manter um controlador de domínio offline durante dias ou semanas. Finalmente, isso permite que você atualize componentes antes da promoção do controlador de domínio, evitando pelo menos uma reinicialização posterior.
+No final da instalação da função AD DS, você pode continuar com a configuração usando o link **Promover este servidor a um controlador de domínio**. Isso é necessário para tornar o servidor um controlador de domínio, mas não é necessário para executar o assistente de configuração imediatamente. Por exemplo, você pode desejar somente provisionar servidores com binários do AD DS antes de enviá-los para outras filiais para configuração posterior. Adicionar a função AD DS antes da remessa, permite que você ganhe tempo quando eles chegarem em seu destino. Você também pode seguir as melhores práticas de não manter um controlador de domínio offline durante dias ou semanas. Finalmente, isso permite que você atualize componentes antes da promoção do controlador de domínio, evitando pelo menos uma reinicialização posterior.
 
-Selecionar esse link posteriormente invoca os cmdlets ADDSDeployment: **install-addsforest** , **install-addsdomain** ou **install-addsdomaincontroller** .
+Selecionar esse link posteriormente invoca os cmdlets ADDSDeployment: **install-addsforest**, **install-addsdomain** ou **install-addsdomaincontroller**.
 
 ### <a name="uninstallingdisabling"></a>Desinstalando/Desabilitando
 Você remove a função AD DS como qualquer outra função, independentemente se você promoveu o servidor para um controlador de domínio. Entretanto, ao remover a função AD DS é necessário reiniciar para concluir.
@@ -232,9 +233,9 @@ O diagrama a seguir ilustra o processo de configuração dos Serviços de Domín
 #### <a name="deployment-configuration"></a>Configuração de Implantação
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_AddNewForest.png)
 
-O Gerenciador do Servidor começa toda a promoção do controlador de domínio com a página **Configuração de Implantação** . As demais opções e campos exigidos mudam nessa página e nas páginas subsequentes, dependendo da operação de implantação selecionada.
+O Gerenciador do Servidor começa toda a promoção do controlador de domínio com a página **Configuração de Implantação**. As demais opções e campos exigidos mudam nessa página e nas páginas subsequentes, dependendo da operação de implantação selecionada.
 
-Para criar uma nova floresta do Active Directory, clique em **Adicionar uma nova floresta** . Você deve fornecer um nome de domínio raiz válido; o nome não pode conter apenas uma palavra (por exemplo, o nome deve ter *contoso.com* ou similar e não apenas *contoso* ) e deve usar requisitos de nomenclatura de domínio DNS permitidos.
+Para criar uma nova floresta do Active Directory, clique em **Adicionar uma nova floresta**. Você deve fornecer um nome de domínio raiz válido; o nome não pode conter apenas uma palavra (por exemplo, o nome deve ter *contoso.com* ou similar e não apenas *contoso*) e deve usar requisitos de nomenclatura de domínio DNS permitidos.
 
 Para obter mais informações sobre nomes de domínio válidos, veja o artigo KB [Convenções de nomenclatura no Active Directory para computadores, domínios, sites e OUs](https://support.microsoft.com/kb/909264).
 
@@ -261,14 +262,14 @@ A **Senha do Modo de Restauração dos Serviços de Diretório** deve atender à
 
 A página **Opções de DNS** permite que você configure a delegação DNS e forneça credenciais administrativas de DNS alternativas.
 
-Não é possível configurar opções DNS ou delegação no Assistente de Configuração de Serviços de Domínio Active Directory quando instalar um novo Domínio Raiz de Floresta do Active Directory em que você selecionou **Servidor DNS** na página **Opções de Controlador de Domínio** . A opção **Criar delegação DNS** está disponível quando criar uma nova zona DNS de raiz de floresta em uma infraestrutura de servidor DNS existente. Essa opção habilita você a fornecer credenciais administrativas DNS alternativas que possuem direitos para atualizar a zona DNS.
+Não é possível configurar opções DNS ou delegação no Assistente de Configuração de Serviços de Domínio Active Directory quando instalar um novo Domínio Raiz de Floresta do Active Directory em que você selecionou **Servidor DNS** na página **Opções de Controlador de Domínio**. A opção **Criar delegação DNS** está disponível quando criar uma nova zona DNS de raiz de floresta em uma infraestrutura de servidor DNS existente. Essa opção habilita você a fornecer credenciais administrativas DNS alternativas que possuem direitos para atualizar a zona DNS.
 
 Para saber se você precisa criar uma delegação de DNS, consulte [Noções básicas de delegação de zona](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)).
 
 #### <a name="additional-options"></a>Opções adicionais
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestAdditionalOptions.png)
 
-A página **Opções Adicionais** mostra o nome NetBIOS do domínio e permite que você o substitua. Por padrão, o nome de domínio NetBIOS corresponde ao rótulo mais à esquerda do nome de domínio totalmente qualificado fornecido na página **Configuração de Implantação** . Por exemplo, se você forneceu o nome de domínio totalmente qualificado corp.contoso.com, o nome de domínio padrão do NetBIOS é CORP.
+A página **Opções Adicionais** mostra o nome NetBIOS do domínio e permite que você o substitua. Por padrão, o nome de domínio NetBIOS corresponde ao rótulo mais à esquerda do nome de domínio totalmente qualificado fornecido na página **Configuração de Implantação**. Por exemplo, se você forneceu o nome de domínio totalmente qualificado corp.contoso.com, o nome de domínio padrão do NetBIOS é CORP.
 
 Se o nome tiver 15 caracteres ou menos e não entrar em conflito com outro nome NetBIOS, ele ficará inalterado. Se ocorrer conflito com outro nome NetBIOS, um número será acrescentado ao nome. Se o nome tiver mais de 15 caracteres, o assistente fornecerá uma sugestão truncada exclusiva. Em ambos os casos, o assistente primeiro valida o nome que ainda não está em uso por meio de uma consulta WINS e difusão de NetBIOS.
 
@@ -284,7 +285,7 @@ A página **Rotas** permite substituir os locais de pasta padrão do banco de da
 
 A página **Examinar Opções** permite que você valide suas configurações e verifique se elas cumprem os requisitos, antes de iniciar a instalação. Esta não é a última oportunidade de interromper a instalação ao usar o Gerenciador do Servidor. Essa página simplesmente permite que você confirme suas configurações antes de continuar a configuração.
 
-A página **Opções de revisão** do Gerenciador do Servidor também oferece um botão **Exibir Script** para criar um arquivo de texto Unicode contendo a configuração atual de ADDSDeployment como um script simples do Windows PowerShell. Isso permite que você use a interface gráfica do Gerenciador do Servidor como um estúdio de implantação do Windows PowerShell. Use o Assistente de Configuração dos Serviços de Domínio do Active Directory para configurar opções, exportar a configuração e então cancelar o assistente. Esse processo cria um exemplo válido e sintaticamente correto para modificações adicionais ou uso direto. Por exemplo: 
+A página **Opções de revisão** do Gerenciador do Servidor também oferece um botão **Exibir Script** para criar um arquivo de texto Unicode contendo a configuração atual de ADDSDeployment como um script simples do Windows PowerShell. Isso permite que você use a interface gráfica do Gerenciador do Servidor como um estúdio de implantação do Windows PowerShell. Use o Assistente de Configuração dos Serviços de Domínio do Active Directory para configurar opções, exportar a configuração e então cancelar o assistente. Esse processo cria um exemplo válido e sintaticamente correto para modificações adicionais ou uso direto. Por exemplo:
 
 ```powershell
 #
@@ -350,7 +351,7 @@ A figura a seguir ilustra o processo de instalação da função dos Serviços d
 
 | Cmdlet ServerManager | Argumentos (os argumentos em **Negrito** são necessários. Os argumentos em *Itálico* podem ser especificados usando o Windows PowerShell ou o Assistente de Configuração do AD DS.) |
 |--|--|
-| Install-WindowsFeature/Add-WindowsFeature | ***-Nome** _<p>_ -Restart *<p>* -IncludeAllSubFeature *<p>* -IncludeManagementTools *<p> <p> -Source* -ComputerName *<p> -Credential <p> - <p> logPath* -VHD *<p>* -ConfigurationFilePath * |
+| Install-WindowsFeature/Add-WindowsFeature | ***-Nome** _<p>_ -Restart *<p>* -IncludeAllSubFeature *<p>* -IncludeManagementTools *<p> <p> -Source*-ComputerName *<p> -Credential <p> - <p> logPath*-VHD *<p>* -ConfigurationFilePath * |
 
 > [!NOTE]
 > Embora não necessário, o argumento **-IncludeManagementTools** é altamente recomendado ao instalar binários de função AD DS
@@ -363,7 +364,7 @@ Use **Get-Command** para expor os aliases e cmdlets em ServerManager.
 Get-Command -module ServerManager
 ```
 
-Por exemplo: 
+Por exemplo:
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSGetCommand.png)
 
@@ -373,13 +374,13 @@ Para adicionar a função de Serviços de Domínio Active Directory, simplesment
 Install-WindowsFeature -name AD-Domain-Services
 ```
 
-Se você deseja que as ferramentas de gerenciamento do AD DS sejam instaladas - e isso é muito recomendado - forneça o argumento **-IncludeManagementTools** :
+Se você deseja que as ferramentas de gerenciamento do AD DS sejam instaladas - e isso é muito recomendado - forneça o argumento **-IncludeManagementTools**:
 
 ```powershell
 Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
 ```
 
-Por exemplo: 
+Por exemplo:
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
 
@@ -395,7 +396,7 @@ Como **Get-WindowsFeature** não possui um mecanismo de filtragem, você deve us
 Get-WindowsFeature | where-object <options>
 ```
 
-Por exemplo, para localizar todos os recursos que contêm "Active Dir" em sua propriedade **Nome de Exibição** , use:
+Por exemplo, para localizar todos os recursos que contêm "Active Dir" em sua propriedade **Nome de Exibição**, use:
 
 ```powershell
 Get-WindowsFeature | where displayname -like "*active dir*"
@@ -413,7 +414,7 @@ Observe também que o Windows PowerShell 3.0 simplificou significativamente os a
 Get-WindowsFeature | where {$_.displayname - like "*active dir*"}
 ```
 
-Usando o pipeline do Windows PowerShell, você pode criar resultados legíveis. Por exemplo: 
+Usando o pipeline do Windows PowerShell, você pode criar resultados legíveis. Por exemplo:
 
 ```powershell
 Install-WindowsFeature | Format-List
@@ -437,11 +438,11 @@ Para instalar uma nova floresta do Active Directory utilizando o módulo ADDSDep
 Install-addsforest
 ```
 
-O cmdlet **Install-AddsForest** só tem duas fases (verificação e instalação de pré-requisito). As duas figuras abaixo mostram a fase de instalação com os argumentos mínimos exigidos de **-domainname** .
+O cmdlet **Install-AddsForest** só tem duas fases (verificação e instalação de pré-requisito). As duas figuras abaixo mostram a fase de instalação com os argumentos mínimos exigidos de **-domainname**.
 
 | Cmdlet ADDSDeployment | Argumentos (os argumentos em **Negrito** são necessários. Os argumentos em *Itálico* podem ser especificados usando o Windows PowerShell ou o Assistente de Configuração do AD DS.) |
 |--|--|
-| install-addsforest | -Confirm<p>*-CreateDNSDelegation*<p>*-DatabasePath*<p>*-DomainMode*<p>***-Nome_do_domínio** _<p>_ *_-DomainNetBIOSName_* _<p>_ -DNSDelegationCredential *<p>* -ForestMode *<p> -Force <p>* -InstallDNS *<p>* -logPath *<p> -NoDnsOnNetwork <p> -NoRebootOnCompletion <p>* -SafeModeAdministratorPassword *<p> -SkipAutoConfigureDNS <p> -SkipPreChecks <p>* -SYSVOLPath *<p>* -WhatIf * |
+| install-addsforest | -Confirm<p>*-CreateDNSDelegation*<p>*-DatabasePath*<p>*-DomainMode*<p>***-Nome_do_domínio** _<p>_ *_-DomainNetBIOSName_* _<p>_ -DNSDelegationCredential *<p>* -ForestMode *<p> -Force <p>*-InstallDNS *<p>* -logPath *<p> -NoDnsOnNetwork <p> -NoRebootOnCompletion <p>*-SafeModeAdministratorPassword *<p> -SkipAutoConfigureDNS <p> -SkipPreChecks <p>*-SYSVOLPath *<p>* -WhatIf * |
 
 > [!NOTE]
 > O argumento **-DomainNetBIOSName** será exigido se você quiser alterar o nome de 15 caracteres gerado automaticamente com base no prefixo de nome de domínio DNS ou se o nome exceder 15 caracteres.
@@ -466,7 +467,7 @@ Os argumentos **Install-ADDSForest** seguirão os mesmos padrões do Gerenciador
 
 A operação do argumento **SafeModeAdministratorPassword** é especial:
 
--   Se *nenhum argumento for especificado* , o cmdlet solicitará que você insira e confirme uma senha mascarada. Este é o uso preferencial ao executar o cmdlet interativamente.
+-   Se *nenhum argumento for especificado*, o cmdlet solicitará que você insira e confirme uma senha mascarada. Este é o uso preferencial ao executar o cmdlet interativamente.
 
     Por exemplo, para criar uma nova floresta denominada corp.contoso.com e ser solicitado a digitar e confirmar uma senha mascarada:
 
@@ -474,7 +475,7 @@ A operação do argumento **SafeModeAdministratorPassword** é especial:
     Install-ADDSForest "DomainName corp.contoso.com
     ```
 
--   Se especificado *com um valor* , esse valor deverá ser uma cadeia de caracteres segura. Este não é o uso preferencial ao executar o cmdlet interativamente.
+-   Se especificado *com um valor*, esse valor deverá ser uma cadeia de caracteres segura. Este não é o uso preferencial ao executar o cmdlet interativamente.
 
 Por exemplo, você pode solicitar manualmente uma senha usando o cmdlet **Read-Host** para solicitar ao usuário uma cadeia de caracteres segura:
 
@@ -491,7 +492,7 @@ Você também pode fornecer uma cadeia de caracteres segura como uma variável d
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
 ```
 
-Finalmente, você pode armazenar a senha ofuscada em um arquivo e depois reutilizá-la mais tarde, sem a senha com texto não criptografado aparecendo. Por exemplo: 
+Finalmente, você pode armazenar a senha ofuscada em um arquivo e depois reutilizá-la mais tarde, sem a senha com texto não criptografado aparecendo. Por exemplo:
 
 ```powershell
 $file = "c:\pw.txt"
@@ -538,7 +539,7 @@ Os argumentos de cmdlet ADDSDeployment de **Caminhos** do Gerenciador do Servido
 
 Use o argumento **Whatif** opcional com o cmdlet **Install-ADDSForest** para examinar as informações da configuração. Isso permite que você veja os valores explícitos e implícitos de argumento de um cmdlet.
 
-Por exemplo: 
+Por exemplo:
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSPaths.png)
 
@@ -557,7 +558,7 @@ Observe que, assim como o Gerenciador do Servidor, o **Install-ADDSForest** lemb
 
 ![Instalar uma nova floresta](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallProgress.png)
 
-Para aceitar o prompt de reinicialização automática, use os argumentos **-force** ou **-confirm:$false** com qualquer cmdlet ADDSDeployment do Windows PowerShell. Para evitar que o servidor reinicie automaticamente no final da promoção, use o argumento **-norebootoncompletion** .
+Para aceitar o prompt de reinicialização automática, use os argumentos **-force** ou **-confirm:$false** com qualquer cmdlet ADDSDeployment do Windows PowerShell. Para evitar que o servidor reinicie automaticamente no final da promoção, use o argumento **-norebootoncompletion**.
 
 > [!WARNING]
 > Não é recomendável substituir a reinicialização. O controlador de domínio deve reiniciar para funcionar corretamente.

@@ -5,12 +5,12 @@ ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 1d2f4cc814dad4313e7eb0925b60f44ec0348a30
-ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
+ms.openlocfilehash: 3bdb980754fedefebddfb33b998b37b621c3505a
+ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617195"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091280"
 ---
 # <a name="diskpart"></a>diskpart
 
@@ -80,7 +80,7 @@ Você pode executar os seguintes comandos no interpretador de comandos do DiskPa
 | [format](format.md) | Formata um disco para aceitar arquivos do Windows. |
 | [gpt](gpt.md) | Atribui os atributos GPT à partição com foco em discos básicos da tabela de partição GUID (GPT). |
 | [help](help.md) | Exibe uma lista de comandos disponíveis ou informações de ajuda detalhadas sobre um comando especificado. |
-| [import](import.md) | Importa um grupo de discos externos para o grupo de discos do computador local. |
+| [import](import_1.md) | Importa um grupo de discos externos para o grupo de discos do computador local. |
 | [inactive](inactive.md) | Marca a partição do sistema ou a partição de inicialização com foco como inativa em discos básicos de MBR (registro mestre de inicialização). |
 | [list](list.md) | Exibe uma lista de discos, de partições em um disco, de volumes em um disco ou de VHDs (discos rígidos virtuais). |
 | [merge vdisk](merge-vdisk.md) | Mescla um VHD (disco rígido virtual) diferencial com seu VHD pai correspondente. |

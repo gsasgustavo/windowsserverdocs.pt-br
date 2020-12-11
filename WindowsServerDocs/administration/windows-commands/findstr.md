@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 65223132d4577a5e90929073cb964851f1ab67ce
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 5fe0f2a5dfd51f3b7689db7b3ad6a38938428a01
+ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89637553"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091260"
 ---
 # <a name="findstr"></a>findstr
 
@@ -47,7 +47,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 | /d`<dirlist>` | Pesquisa a lista de diretórios especificada. Cada diretório deve ser separado com um ponto e vírgula (;), por exemplo `dir1;dir2;dir3` . |
 | SRDF`<colorattribute>` | Especifica os atributos de cor com dois dígitos hexadecimais. Digite `color /?` para obter informações adicionais. |
 | `<strings>` | Especifica o texto a ser pesquisado em *nome de arquivo*. Obrigatórios. |
-| `[\<drive>:][<path>]<filename>[ ...]` | Especifica o local e arquivo ou arquivos a serem pesquisados. É necessário pelo menos um nome de arquivo. |
+| `[\<drive>:][<path>]<filename>[...]` | Especifica o local e arquivo ou arquivos a serem pesquisados. É necessário pelo menos um nome de arquivo. |
 | /? | Exibe a ajuda no prompt de comando. |
 
 #### <a name="remarks"></a>Comentários
@@ -60,20 +60,20 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 
   - Um meta-caractere é um símbolo com significado especial (um operador ou delimitador) na sintaxe de expressão regular.
 
-    Os meta-caracteres aceitos são:
+    Os metacaracteres aceitos são:
 
     | Meta-caractere | Valor |
     | -------------- | ----- |
-    | `.` | **Curinga** -qualquer caractere |
-    | `*` | **REPEAT** -zero ou mais ocorrências da classe ou caractere anterior. |
-    | `^` | **Posição da linha inicial** – início da linha. |
-    | `$` | **Posição da linha final** -fim da linha. |
-    | `[class]` | **Classe de caractere** -qualquer caractere em um conjunto. |
-    | `[^class]` | **Classe inversa** -qualquer caractere que não esteja em um conjunto. |
-    | `[x-y]` | **Intervalo** -todos os caracteres dentro do intervalo especificado. |
-    | `\x` | **Escape** -uso literal de um caractere de meta. |
-    | `<string` | **Iniciando posição do Word** -início da palavra. |
-    | `string>` | **Posição da palavra final** -fim da palavra. |
+    | `.`            | **Curinga** -qualquer caractere |
+    | `*`            | **REPEAT** -zero ou mais ocorrências da classe ou caractere anterior. |
+    | `^`            | **Posição da linha inicial** – início da linha. |
+    | `$`            | **Posição da linha final** -fim da linha. |
+    | `[class]`      | **Classe de caractere** -qualquer caractere em um conjunto. |
+    | `[^class]`     | **Classe inversa** -qualquer caractere que não esteja em um conjunto. |
+    | `[x-y]`        | **Intervalo** -todos os caracteres dentro do intervalo especificado. |
+    | `\x`           | **Escape** -uso literal de um caractere de meta. |
+    | `\<string`     | **Iniciando posição do Word** -início da palavra. |
+    | `string\>`     | **Posição da palavra final** -fim da palavra. |
 
     Os caracteres especiais na sintaxe de expressão regular têm o máximo de energia ao usá-los juntos. Por exemplo, use a combinação do caractere curinga ( `.` ) e o caractere REPEAT ( `*` ) para corresponder a qualquer cadeia de caracteres: `.*`
 
@@ -115,7 +115,7 @@ Para localizar todas as ocorrências de linhas que começam com *for* e são pre
 findstr /b /n /r /c:^ *FOR *.bas
 ```
 
-Para listar os arquivos exatos que você deseja pesquisar em um arquivo de texto, use os critérios de pesquisa no arquivo *stringlist.txt*, para pesquisar os arquivos listados em *filelist.txt*e, em seguida, para armazenar os resultados no arquivo *Results. out*, digite:
+Para listar os arquivos exatos que você deseja pesquisar em um arquivo de texto, use os critérios de pesquisa no arquivo *stringlist.txt*, para pesquisar os arquivos listados em *filelist.txt* e, em seguida, para armazenar os resultados no arquivo *Results. out*, digite:
 
 ```
 findstr /g:stringlist.txt /f:filelist.txt > results.out
@@ -124,13 +124,13 @@ findstr /g:stringlist.txt /f:filelist.txt > results.out
 Para listar cada arquivo que contém a palavra *Computer* no diretório atual e todos os subdiretórios, independentemente do caso, digite:
 
 ```
-findstr /s /i /m <computer> *.*
+findstr /s /i /m \<computer\> *.*
 ```
 
 Para listar todos os arquivos que contêm o computador do Word e as outras palavras que começam com comp, (como elogio e competir), digite:
 
 ```
-findstr /s /i /m <comp.* *.*
+findstr /s /i /m \<comp.* *.*
 ```
 
 ## <a name="additional-references"></a>Referências adicionais

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: importar um certificado de autenticação de servidor para o site padrão'
 ms.assetid: e1f2ce2d-b24f-4ccd-8add-9e69419fc6c1
 title: Importar um Certificado de Autenticação de Servidor para o site padrão
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 94202e8dc60bc64a46f6cb7a9195b43b82bc66c9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 390e7dcaf3277d092509a15b6c3c60363454ab7d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972193"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048414"
 ---
 # <a name="import-a-server-authentication-certificate-to-the-default-web-site"></a>Importar um Certificado de Autenticação de Servidor para o site padrão
 
@@ -28,7 +29,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-import-a-server-authentication-certificate-to-the-default-web-site"></a>Para importar um certificado de autenticação de servidor no Site Padrão
 
-1.  Na tela **Iniciar** , digite**serviços de informações da Internet \( \) Gerenciador do IIS**e pressione Enter.
+1.  Na tela **Iniciar** , digite **serviços de informações da Internet \( \) Gerenciador do IIS** e pressione Enter.
 
 2.  Na árvore de console, clique em **ComputerName**.
 

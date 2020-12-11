@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: o que há de novo no Active Directory Domain Services para o Windows Server 2016'
 ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
 title: O que há de novo no Active Directory Domain Services no Windows Server 2016
 ms.author: joflore
@@ -6,12 +7,12 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 727e3dde99c0c2e7d4aa8999a91a2b913d9a314b
-ms.sourcegitcommit: 1808ce451b9e37ec1110bd684e1b0d3812fc77e0
+ms.openlocfilehash: d13e4f64d0e73d9066bf0c614e8c653b94a6db1e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91772396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050054"
 ---
 # <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Novidades no Active Directory Domain Services para Windows Server 2016
 
@@ -77,7 +78,7 @@ Benefícios:
 
 Para obter mais informações, consulte [introdução ao gerenciamento de dispositivos no Azure Active Directory](/azure/active-directory/devices/overview).
 
-## <a name="windows-hello-for-business"></a>Windows Hello for Business
+## <a name="windows-hello-for-business"></a>Windows Hello para Empresas
 
 O Windows Hello para empresas é uma abordagem de autenticação baseada em chave que as organizações e os consumidores, que vão além das senhas. Essa forma de autenticação depende de violações, roubos e credenciais resistentes a Phish.
 

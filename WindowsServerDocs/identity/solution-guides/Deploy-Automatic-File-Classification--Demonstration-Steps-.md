@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar a classificação automática de arquivos (etapas de demonstração)'
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 19c2ddbdc7ae00c32147023b2204efface9c4727
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 218fd28153631828dcb1ee076bda379de61a725b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952878"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048554"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Deploy Automatic File Classification (Demonstration Steps)
 
@@ -53,7 +54,7 @@ As propriedades dos recursos Impacto e Informações de Identificação Pessoal 
 
 5.  Clique com o botão direito do mouse em **Informações de Identificação Pessoal** e em **Habilitar**.
 
-![guias de solução](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -71,7 +72,7 @@ Uma regra de classificação de conteúdo de cadeia de caracteres analisa um arq
 
 1.  Entre no servidor de arquivos como membro do grupo de segurança Administradores.
 
-2.  No prompt de comando do Windows PowerShell, digite **Update-FsrmClassificationPropertyDefinition** e pressione ENTER. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
+2.  No prompt de comando do Windows PowerShell, digite _ *Update-FsrmClassificationPropertyDefinition** e pressione Enter. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
 
 3.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
 
@@ -104,7 +105,7 @@ Uma regra de classificação de conteúdo de cadeia de caracteres analisa um arq
 
 13. Na guia **Tipo de Avaliação**, marque a caixa de seleção **Reavaliar os valores de propriedade existentes**, clique em **Substituir o valor existente** e clique em **OK**.
 
-![guias de solução](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -124,7 +125,7 @@ Uma regra de expressão regular analisa um arquivo em busca de um padrão corres
 
 1.  Entre no servidor de arquivos como um membro do grupo de segurança Administradores.
 
-2.  No prompt de comando do Windows PowerShell, digite **Update-FsrmClassificationPropertyDefinition** e pressione ENTER. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
+2.  No prompt de comando do Windows PowerShell, digite _ * Update-FsrmClassificationPropertyDefinition * * e pressione ENTER. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
 
 3.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
 
@@ -152,7 +153,7 @@ Uma regra de expressão regular analisa um arquivo em busca de um padrão corres
 
 12. Na guia **Tipo de Avaliação**, marque a caixa de seleção **Reavaliar os valores de propriedade existentes**, clique em **Substituir o valor existente** e clique em **OK**.
 
-![guias de solução](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -167,7 +168,7 @@ Você pode verificar se os arquivos foram devidamente classificados ao ver as pr
 
 1.  No servidor de arquivos, execute as regras de classificação usando o Gerenciador de Recursos de Servidor de Arquivos.
 
-    1.  Clique em **Gerenciamento de Classificação**, clique com o botão direito do mouse em **Regras de Classificação** e clique em **Executar a Classificação com Todas as Regras Agora**.
+    1.  Clique em _ * gerenciamento de classificação * *, clique com o botão direito do mouse em **regras de classificação** e clique em **executar classificação com todas as regras agora**.
 
     2.  Clique na opção **Aguardar a conclusão da classificação** e em **OK**.
 
@@ -181,7 +182,7 @@ Você pode verificar se os arquivos foram devidamente classificados ao ver as pr
 
 4.  Clique na guia **Classificação** e verifique se o arquivo foi classificado corretamente.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   [Cenário: aprofunde-se em seus dados por meio da classificação](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)
 
