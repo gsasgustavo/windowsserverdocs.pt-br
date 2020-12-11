@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: a função do pipeline de declarações'
 ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: A função do pipeline de declaração
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 81398a65fdfc510f8d4d3c125b77cc76fa6a8787
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3925351c6b625a52ace096f71f790e7056beb3c2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937755"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050464"
 ---
 # <a name="the-role-of-the-claims-pipeline"></a>A função do pipeline de declaração
 O pipeline de declarações no Serviços de Federação do Active Directory (AD FS) \( AD FS \) representa o caminho que as declarações devem seguir no serviço de Federação antes que possam ser emitidas. O Serviço de Federação gerencia todo o \- \- processo de ponta a ponta de declarações de fluxo por meio de vários estágios do pipeline de declarações, que também inclui o processamento de regras de declaração pelo mecanismo de regra de declaração.

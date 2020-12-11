@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar uma regra de declaração de transformação'
 ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: Quando usar uma regra de declaração de transformação
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3d39a4763eebe3e2fa28252c785a3b4d87e60143
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 81ee02105f2369caa6dd10835eb9856a92d79b8f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958734"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050414"
 ---
 # <a name="when-to-use-a-transform-claim-rule"></a>Quando usar uma regra de declaração de transformação
 Você pode usar essa regra em Serviços de Federação do Active Directory (AD FS) \( AD FS \) quando precisar mapear um tipo de declaração de entrada para um tipo de declaração de saída e, em seguida, aplicar uma ação que determinará qual saída deve ocorrer com base nos valores originados na declaração de entrada. Quando você usa essa regra, passa ou transforma declarações que correspondem à lógica da regra a seguir, com base em uma das opções configuradas na regra, conforme descrito na tabela abaixo:

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre o: guia de implantação do Windows Server AD FS'
 ms.assetid: 38816b32-84bd-4b19-9ab8-a05ec838a156
 title: Guia de Implantação do AD FS do Windows Server 2016 e 2012 R2
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3a1a66f3b3098aa042d16e6f869eb0234945d26d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cc48e715339123fdf6e67fc2ec5ede6b9f83c497
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940840"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049004"
 ---
 # <a name="windows-server-ad-fs-deployment-guide"></a>Guia de implantação do Windows Server AD FS
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar pastas de trabalho com o AD FS e o proxy de aplicativo Web: etapa 4, configurar proxy de aplicativo Web'
 title: Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web - Etapa 4, Configurar o Proxy de aplicativo Web
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/24/2017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: 0b7748332d8760db24010a04d0ecf3a5094bcda6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8a44359e257024b9ba74ee16684a1e4226891594
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965823"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049144"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web: Etapa 4, Configurar o Proxy de aplicativo Web
 
@@ -41,7 +42,7 @@ Como você está instalando os certificados autoassinados que não podem ser ras
 
 Para instalar os certificados, siga estas etapas:
 
-1.  Clique em **Iniciar**e em **Executar**.
+1.  Clique em **Iniciar** e em **Executar**.
 
 2.  Digite **MMC**.
 
@@ -99,7 +100,7 @@ Para configurar o Proxy de aplicativo Web, siga estas etapas:
 
 4.  Insira as credenciais de uma conta de administrador local nos servidores de federação. Não insira as credenciais de domínio (por exemplo, contoso\administrador), mas as credenciais locais (por exemplo, administrador).
 
-5.  Na página **Certificado de Proxy do AD FS**, selecione o certificado do AD FS importado anteriormente. No caso de teste, esse certificado é **blueadfs.contoso.com**. Clique em **Próximo**.
+5.  Na página **Certificado de Proxy do AD FS**, selecione o certificado do AD FS importado anteriormente. No caso de teste, esse certificado é **blueadfs.contoso.com**. Clique em **Avançar**.
 
 6.  A página de confirmação mostra o comando do Windows PowerShell que será executado para configurar o serviço. Clique em **Configurar**.
 
@@ -112,7 +113,7 @@ A próxima etapa é publicar um aplicativo Web que disponibilizará Pastas de Tr
 
 3. Em **Tarefas**, clique em **Publicar**. O Assistente para Publicar Novos Aplicativos é aberto.
 
-4. Na página de Boas-vindas, clique em **Avançar**.
+4. Na página Bem-vindo , clique em **Avançar**.
 
 5. Na página **Pré-autenticação**, selecione **Serviços de Federação do Active Directory (AD FS)** e clique em **Avançar**.
 
@@ -136,11 +137,11 @@ A próxima etapa é publicar um aplicativo Web que disponibilizará Pastas de Tr
 
    Nome: **WorkFolders**
 
-   URL externa:**https://workfolders.contoso.com**
+   URL externa: **https://workfolders.contoso.com**
 
    Certificado externo: **o certificado de Pastas de Trabalho instalado anteriormente**
 
-   URL do servidor de back-end:**https://workfolders.contoso.com**
+   URL do servidor de back-end: **https://workfolders.contoso.com**
 
 9. A página de confirmação mostra o comando do Windows PowerShell que será executado para publicar o aplicativo. Clique em **Publicar**.
 

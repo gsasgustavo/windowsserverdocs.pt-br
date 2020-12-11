@@ -1,17 +1,18 @@
 ---
 title: Configurar a redundância geográfica com o Replicação do SQL Server
+description: 'Saiba mais sobre: configurar a redundância geográfica com o Replicação do SQL Server'
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
-ms.openlocfilehash: 574171b8e5569b2041492a95ebfe146cfd487523
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: dd666023e7b53af72f63edf1750321317e08f527
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865785"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049234"
 ---
 # <a name="setup-geographic-redundancy-with-sql-server-replication"></a>Configurar a redundância geográfica com o Replicação do SQL Server
 

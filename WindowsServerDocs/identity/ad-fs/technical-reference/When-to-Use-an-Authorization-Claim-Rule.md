@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar uma regra de declaração de autorização'
 ms.assetid: b734cbcb-342c-4a28-8ab5-b9cd990bb1c2
 title: Quando usar uma regra de declaração de autorização
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 690ae558f625ca3a4c5878be229d950902f7f5e2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5e576fb3ef1122eade6b1cbe5c201a0d43d5dece
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958694"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050374"
 ---
 # <a name="when-to-use-an-authorization-claim-rule"></a>Quando usar uma regra de declaração de autorização
 Você pode usar essa regra em Serviços de Federação do Active Directory (AD FS) \( AD FS \) quando precisar obter um tipo de declaração de entrada e aplicar uma ação que determinará se um usuário terá o acesso permitido ou negado com base no valor especificado na regra. Quando você usa essa regra, você passa ou transforma quaisquer declarações que correspondem à lógica da regra a seguir, com base em uma das opções configuradas na regra:

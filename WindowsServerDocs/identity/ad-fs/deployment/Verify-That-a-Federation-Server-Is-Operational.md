@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Verifique se um servidor de Federação está funcionando'
 ms.assetid: ad61c586-ba8a-4534-8824-b45994d60c6b
 title: Verificar se um servidor de federação está funcionando
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: d33c4d6b7c674e8a1029f47eb4cfffdfc2d61f7e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1940f07343466307226e7f956b63146fb29d0ad4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969723"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049044"
 ---
 # <a name="verify-that-a-federation-server-is-operational"></a>Verificar se um servidor de federação está funcionando
 
@@ -40,7 +41,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 2.  Na tela **Iniciar**, digite **Visualizador de Evento** e pressione ENTER.
 
-3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos**e, em seguida, clique em **admin**.
+3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos** e, em seguida, clique em **admin**.
 
 4.  Na coluna **ID do evento** , procure a ID do evento 100. Se o servidor de Federação estiver configurado corretamente, você verá um novo evento — no log do aplicativo de Visualizador de Eventos — com a ID de evento 100. Esse evento verifica se o servidor de Federação foi capaz de se comunicar com êxito com o Serviço de Federação.
 

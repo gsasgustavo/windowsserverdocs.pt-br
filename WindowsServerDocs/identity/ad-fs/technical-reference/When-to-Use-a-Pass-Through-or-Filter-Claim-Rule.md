@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar uma regra de passagem ou de declaração de filtro'
 ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: Quando usar uma regra de declaração de passagem ou filtro
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 897fa2962d4192b5eb22d87c6d59e5fe51704b38
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f7b33c485e4bf640dbf2f158ee25f54ddc62dbb9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956303"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050444"
 ---
 # <a name="when-to-use-a-pass-through-or-filter-claim-rule"></a>Quando usar uma regra de declaração de passagem ou filtro
 Você pode usar essa regra em Serviços de Federação do Active Directory (AD FS) \( AD FS \) quando precisar usar um tipo de declaração de entrada específico e, em seguida, aplicar uma ação que determinará qual saída deve ocorrer com base nos valores na declaração de entrada. Quando você usa essa regra, passa ou filtra quaisquer declarações que correspondem à lógica de regra na tabela a seguir, com base em uma das opções configuradas na regra.
@@ -85,7 +86,7 @@ Uma regra de filtragem simples filtraria declarações com base em uma das propr
 c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"]  => issue(claim  = c);
 ```
 
-Os filtros podem ser logicamente e \- Ed juntos. Por exemplo, a regra a seguir aceitará todas as \- declarações de email com valorjohndoe@fabrikam.com:
+Os filtros podem ser logicamente e \- Ed juntos. Por exemplo, a regra a seguir aceitará todas as \- declarações de email com valor johndoe@fabrikam.com:
 
 ```
 c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", value == "johndoe@fabrikam.com "]  => issue(claim  = c);
@@ -97,9 +98,9 @@ Nos exemplos acima, os filtros usaram sempre um operador de igualdade. A linguag
 
 -   \!\=\-não é igual a \( maiúsculas e \- minúsculas\)
 
--   \=~\-correspondência de expressão regular
+-   \=~\- correspondência de expressão regular
 
--   \!~ \-expressão regular sem \- correspondência
+-   \!~ \- expressão regular sem \- correspondência
 
 Por exemplo, a regra a seguir aceitará todas as \- declarações de email não emitidas pelo servidor de federação local que têm um sufixo de Boeing.com:
 

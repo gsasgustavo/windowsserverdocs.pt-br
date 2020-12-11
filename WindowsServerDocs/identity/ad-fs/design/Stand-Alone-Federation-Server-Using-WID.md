@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Stand-Alone servidor de Federação usando o WID'
 ms.assetid: 33b80a3f-67f3-4da7-ac4a-7fd2232fbd5d
 title: Servidor de federação autônomo usando WID
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 760612e3163e4e862ba9beae94597f2a2356687c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2bb6425d77da8e39f35a84df19d1fd19c12a55f9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049374"
 ---
 # <a name="stand-alone-federation-server-using-wid"></a>Servidor de federação autônomo usando WID
 

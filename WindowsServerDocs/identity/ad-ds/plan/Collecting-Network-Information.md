@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: coleta de informações de rede'
 ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Coletar informações de rede
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 2c1c5362d6bbcb9beed6e35c55dced3f0a30d839
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: fd712651f1f024d8731ed5cebba98374e0cb5d9a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068938"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050014"
 ---
 # <a name="collecting-network-information"></a>Coletar informações de rede
 

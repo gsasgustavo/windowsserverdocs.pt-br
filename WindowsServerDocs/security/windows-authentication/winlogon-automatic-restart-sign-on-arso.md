@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Sign-On de reinicialização automática do Winlogon (ARSO)'
 title: ARSO (Logon de Reinicialização Automática) de Winlogon
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
@@ -6,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 450c57fae13dc4a970c047cceb356a8fab227066
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4a9aec72bd91bc28975dea1c9ba6c28cbb512c6c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638736"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050214"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>ARSO (Logon de Reinicialização Automática) de Winlogon
 
@@ -86,7 +87,7 @@ Se você desabilitar essa configuração de política, o dispositivo não armaze
 
 **Editor do Registro**
 
-|Nome do valor|Type|Dados|
+|Nome do valor|Tipo|Dados|
 |-------|----|----|
 |DisableAutomaticRestartSignOn|DWORD|0<p>**Exemplo:**<p>0 (habilitado)<p>1 (desabilitado)|
 
@@ -140,4 +141,4 @@ O horário de logon e os controles dos pais podem proibir a criação de uma nov
 
 |Termo|Definição|
 |----|-------|
-|Autologon|O logon automático é um recurso que está presente no Windows para várias versões.  É um recurso documentado do Windows que até mesmo tem ferramentas como o logon automático para Windows v 3.01 * [http:/technet. Microsoft. com/Sysinternals/bb963905. aspx](/sysinternals/downloads/autologon)*<p>Ele permite que um único usuário do dispositivo se conecte automaticamente sem inserir as credenciais. As credenciais são configuradas e armazenadas no registro como um segredo de LSA criptografado.|
+|Autologon|O logon automático é um recurso que está presente no Windows para várias versões.  É um recurso documentado do Windows que até mesmo tem ferramentas como o logon automático para Windows v 3.01 *[http:/technet. Microsoft. com/Sysinternals/bb963905. aspx](/sysinternals/downloads/autologon)*<p>Ele permite que um único usuário do dispositivo se conecte automaticamente sem inserir as credenciais. As credenciais são configuradas e armazenadas no registro como um segredo de LSA criptografado.|

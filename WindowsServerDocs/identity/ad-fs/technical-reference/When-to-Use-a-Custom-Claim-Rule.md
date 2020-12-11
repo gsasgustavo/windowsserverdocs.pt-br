@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar uma regra de declaração personalizada'
 ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: Quando usar uma regra de declaração personalizada
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d98898f67ff51045e2bdd4bbaea58af8a438f9b1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 589944065bd713524be6d503eaa07e62f72bddb0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937635"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050434"
 ---
 # <a name="when-to-use-a-custom-claim-rule"></a>Quando usar uma regra de declaração personalizada
 Você escreve uma regra de declaração personalizada no Serviços de Federação do Active Directory (AD FS) \( AD FS \) usando o idioma da regra de declaração, que é a estrutura que o mecanismo de emissão de declarações usa para gerar, transformar, passar e filtrar as declarações programaticamente. Usando uma regra personalizada, você pode criar regras com lógica mais complexa do que um modelo de regra padrão. Considere o uso de uma regra personalizada quando quiser:

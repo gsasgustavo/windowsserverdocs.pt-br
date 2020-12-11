@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: a função do mecanismo de declarações'
 ms.assetid: 8b15d44e-e4e6-4510-aa91-cc7ec7161b0a
 title: A função do mecanismo de declaração
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f7f33dc2931856aaf0e430aa3a65d03d30038325
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1be762cefabdc40050e7656ec29033778b92bbf6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937861"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050484"
 ---
 # <a name="the-role-of-the-claims-engine"></a>A função do mecanismo de declaração
 Em seu nível mais alto, o mecanismo de declarações no Serviços de Federação do Active Directory (AD FS) \( AD FS \) é um \- mecanismo baseado em regras que é dedicado a servir e processar solicitações de declaração para o serviço de Federação. O mecanismo de declarações é a única entidade no serviço de federação que é responsável por executar cada um dos conjuntos de regras em todas as relações de confiança federadas que você configurou e por entregar o resultado ao pipeline de declarações.

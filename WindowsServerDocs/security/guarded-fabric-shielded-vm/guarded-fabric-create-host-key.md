@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma chave de host e adicioná-la ao HGS'
 title: Criar uma chave de host e adicioná-la ao HGS
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 4572c6424f018d711a18d5ee763b00a253a73529
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0e6f7374c47204d86674b75ad453ee1067d09e82
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961600"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049794"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>Criar uma chave de host e adicioná-la ao HGS
 

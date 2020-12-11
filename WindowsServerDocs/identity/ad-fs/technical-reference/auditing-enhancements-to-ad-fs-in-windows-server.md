@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: aprimoramentos de auditoria para AD FS no Windows Server 2016'
 ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Aprimoramentos de auditoria para o AD FS no Windows Server 2016
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 10/25/2017
 ms.topic: article
-ms.openlocfilehash: 4aacc4d3f3ea132a85da1108064ec1f44e2a6eac
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1281ce03b291748b093ea491f54e6e7924e03cde
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050394"
 ---
 # <a name="auditing-enhancements-to-ad-fs-in-windows-server-2016"></a>Aprimoramentos de auditoria para o AD FS no Windows Server 2016
 
@@ -20,19 +21,19 @@ Atualmente, no AD FS para Windows Server 2012 R2, há inúmeros eventos de audit
 Com o lançamento do AD FS no Windows Server 2016, a auditoria tornou-se mais simplificada e menos detalhada.
 
 ## <a name="auditing-levels-in-ad-fs-for-windows-server-2016"></a>Níveis de auditoria no AD FS para Windows Server 2016
-Por padrão, AD FS no Windows Server 2016 tem auditoria básica habilitada.  Com a auditoria básica, os administradores verão 5 ou menos eventos para uma única solicitação.  Isso marca uma diminuição significativa no número de eventos que os administradores precisam examinar para ver uma única solicitação.   O nível de auditoria pode ser gerado ou reduzido usando o cmdlt do PowerShell: Set-Adfsproperties-AuditLevel.  A tabela a seguir explica os níveis de auditoria disponíveis.
+Por padrão, AD FS no Windows Server 2016 tem auditoria básica habilitada.  Com a auditoria básica, os administradores verão 5 ou menos eventos para uma única solicitação.  Isso marca uma diminuição significativa no número de eventos que os administradores precisam examinar para ver uma única solicitação.   O nível de auditoria pode ser gerado ou reduzido usando o cmdlt do PowerShell: Set-AdfsProperties-AuditLevel.  A tabela a seguir explica os níveis de auditoria disponíveis.
 
 | Nível de Auditoria | Sintaxe do PowerShell | Descrição |
 |--|--|--|
-| Nenhum | Set-Adfsproperties-AuditLevel None | A auditoria está desabilitada e nenhum evento será registrado. |
-| Básico (padrão) | Set-Adfsproperties-AuditLevel básico | Não mais de 5 eventos serão registrados em log para uma única solicitação |
-| Detalhado | Set-Adfsproperties-AuditLevel Verbose | Todos os eventos serão registrados em log.  Isso registrará uma quantidade significativa de informações por solicitação. |
+| Nenhum | Set-AdfsProperties-AuditLevel None | A auditoria está desabilitada e nenhum evento será registrado. |
+| Básico (padrão) | Set-AdfsProperties-AuditLevel básico | Não mais de 5 eventos serão registrados em log para uma única solicitação |
+| Detalhado | Set-AdfsProperties-AuditLevel detalhado | Todos os eventos serão registrados em log.  Isso registrará uma quantidade significativa de informações por solicitação. |
 
 Para exibir o nível de auditoria atual, você pode usar o PowerShell cmdlt: Get-Adfsproperties.
 
 ![Aprimoramentos de auditoria](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)
 
-O nível de auditoria pode ser gerado ou reduzido usando o cmdlt do PowerShell: Set-Adfsproperties-AuditLevel.
+O nível de auditoria pode ser gerado ou reduzido usando o cmdlt do PowerShell: Set-AdfsProperties-AuditLevel.
 
 ![Aprimoramentos de auditoria](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar a resolução de nomes para um proxy de servidor de Federação em uma zona DNS que serve apenas para a rede de perímetro'
 ms.assetid: b7109e46-b66e-4c5c-8b87-a6611d68415a
 title: Configurar resolução de nomes para um servidor de proxy em uma zona DNS que atende apenas a rede de perímetro
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: ed30d26225894fd12fbb007d9c1463de15af64dc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 186ee4df7f1ca8df3ed7aa91da5963e268e06097
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938414"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050274"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>Configurar resolução de nomes para um servidor de proxy em uma zona DNS que atende apenas a rede de perímetro
 
@@ -52,9 +53,9 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 #### <a name="to-add-a-host-a-resource-record-to-perimeter-dns-for-a-federation-server-proxy"></a>Para adicionar um host \( um \) registro de recurso ao DNS de perímetro para um proxy de servidor de Federação
 
-1.  Em um servidor DNS para a rede de perímetro, abra o snap- \- in DNS. Clique em **Iniciar**, aponte para **Ferramentas administrativas**e clique em **DNS**.
+1.  Em um servidor DNS para a rede de perímetro, abra o snap- \- in DNS. Clique em **Iniciar**, aponte para **Ferramentas administrativas** e clique em **DNS**.
 
-2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \) **.
+2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \)**.
 
 3.  Em **nome**, digite apenas o nome do computador do servidor de Federação. Por exemplo, para o nome de domínio totalmente qualificado \( FQDN \) FS.fabrikam.com, digite **FS**.
 

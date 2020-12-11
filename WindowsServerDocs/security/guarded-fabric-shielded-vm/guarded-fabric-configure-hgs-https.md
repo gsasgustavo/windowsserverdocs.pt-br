@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: configurar o HGS para comunicações HTTPS'
 title: Configurar o HGS para comunicações HTTPS
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 4e708b61bd629b5b784926338b1aee122e2ecbee
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c28500d236625410961ef1ee3012001c1d277714
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966153"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049884"
 ---
 # <a name="configure-hgs-for-https-communications"></a>Configurar o HGS para comunicações HTTPS
 

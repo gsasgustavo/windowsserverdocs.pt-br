@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice G: protegendo grupos de administradores no Active Directory'
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Apêndice G-protegendo grupos de administradores no Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f3901a3283c37d29d0ba48d36badcde421ba1f45
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 04debd028e1f881fae4caa62f2f51c3f02f48904
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070008"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049164"
 ---
 # <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>Apêndice G: Proteger grupos de administradores no Active Directory
 
@@ -27,7 +28,7 @@ Para o grupo Administradores em cada domínio na floresta:
 
 1.  Remova todos os membros do grupo Administradores, com a possível exceção da conta de administrador interno para o domínio, desde que ele tenha sido protegido, conforme descrito no [Apêndice D: Protegendo contas de administrador de Built-In no Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
 
-2.  Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo BA deve ser adicionado aos seguintes direitos de usuário em Computer \ Diretivas \ \ **políticas \ Atribuição de direitos de usuário** :
+2.  Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo BA deve ser adicionado aos seguintes direitos de usuário em Computer \ Diretivas \ \ **políticas \ Atribuição de direitos de usuário**:
 
     -   Negar acesso a este computador pela rede
 
@@ -47,7 +48,7 @@ Para o grupo Administradores em cada domínio na floresta:
 
 #### <a name="step-by-step-instructions-for-removing-all-members-from-the-administrators-group"></a>Instruções passo a passo para remover todos os membros do grupo de administradores
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e em **Active Directory usuários e computadores** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e em **Active Directory usuários e computadores**.
 
 2.  Para remover todos os membros do grupo Administradores, execute as seguintes etapas:
 
@@ -55,17 +56,17 @@ Para o grupo Administradores em cada domínio na floresta:
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_79.gif)
 
-    2.  Selecione um membro do grupo, clique em **remover** , em **Sim** e em **OK** .
+    2.  Selecione um membro do grupo, clique em **remover**, em **Sim** e em **OK**.
 
 3.  Repita a etapa 2 até que todos os membros do grupo Administradores tenham sido removidos.
 
 #### <a name="step-by-step-instructions-to-secure-administrators-groups-in-active-directory"></a>Instruções detalhadas para proteger grupos de administradores no Active Directory
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e clique em **Gerenciamento de política de grupo** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e clique em **Gerenciamento de política de grupo**.
 
 2.  Na árvore de console, expanda &lt; floresta &gt; \Domains \\ &lt; domínio &gt; e, em seguida, **política de grupo objetos** (em que &lt; floresta &gt; é o nome da floresta e &lt; domínio &gt; é o nome do domínio no qual você deseja definir o política de grupo).
 
-3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo** .
+3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)
 
@@ -73,19 +74,19 @@ Para o grupo Administradores em cada domínio na floresta:
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
 
-5.  No painel de detalhes, clique com o botão direito do mouse **<GPO Name>** e clique em **Editar** .
+5.  No painel de detalhes, clique com o botão direito do mouse **<GPO Name>** e clique em **Editar**.
 
-6.  Navegue até **computador \ \ Diretivas** \ \ políticas e clique em **atribuição de direitos de usuário** .
+6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)
 
 7.  Configure os direitos de usuário para impedir que os membros do grupo administradores acessem servidores membros e estações de trabalho na rede fazendo o seguinte:
 
-    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **Administradores** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **Administradores**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_83.gif)
 
@@ -93,11 +94,11 @@ Para o grupo Administradores em cada domínio na floresta:
 
 8.  Configure os direitos de usuário para impedir que os membros do grupo Administradores façam logon como um trabalho em lotes fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **Administradores** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **Administradores**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_84.gif)
 
@@ -105,27 +106,27 @@ Para o grupo Administradores em cada domínio na floresta:
 
 9. Configure os direitos de usuário para impedir que os membros do grupo Administradores façam logon como um serviço fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon como um serviço** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon como um serviço** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **Administradores** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **Administradores**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_85.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
-10. Para sair **Editor de gerenciamento de política de grupo** , clique em **arquivo** e em **sair** .
+10. Para sair **Editor de gerenciamento de política de grupo**, clique em **arquivo** e em **sair**.
 
-11. No **Gerenciamento de política de grupo** , VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
+11. No **Gerenciamento de política de grupo**, VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
 
     1.  Navegue até a &lt; floresta &gt;> \\ &lt; domínio \Domains &gt; (em que &lt; floresta &gt; é o nome da floresta e &lt; domínio &gt; é o nome do domínio no qual você deseja definir a política de grupo).
 
-    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente** .
+    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)
 
-    3.  Selecione o GPO que você acabou de criar e clique em **OK** .
+    3.  Selecione o GPO que você acabou de criar e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)
 
@@ -145,11 +146,11 @@ Para o grupo Administradores em cada domínio na floresta:
 
 #### <a name="step-by-step-instructions-to-grant-user-rights-to-the-administrators-group"></a>Instruções passo a passo para conceder direitos de usuário ao grupo de administradores
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e clique em **Gerenciamento de política de grupo** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e clique em **Gerenciamento de política de grupo**.
 
 2.  Na árvore de console, expanda <Forest> \Domains \\ <Domain> e, em seguida, **política de grupo objetos** (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja definir o política de grupo).
 
-3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo** .
+3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)
 
@@ -157,19 +158,19 @@ Para o grupo Administradores em cada domínio na floresta:
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
 
-5.  No painel de detalhes, clique com o botão direito do mouse **<GPO Name>** e clique em **Editar** .
+5.  No painel de detalhes, clique com o botão direito do mouse **<GPO Name>** e clique em **Editar**.
 
-6.  Navegue até **computador \ \ Diretivas** \ \ políticas e clique em **atribuição de direitos de usuário** .
+6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_91.gif)
 
 7.  Configure os direitos de usuário para permitir que os membros do grupo administradores acessem os controladores de domínio pela rede fazendo o seguinte:
 
-    1.  Clique duas vezes em **acesso a este computador da rede** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **acesso a este computador da rede** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    3.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_92.gif)
 
@@ -177,11 +178,11 @@ Para o grupo Administradores em cada domínio na floresta:
 
 8.  Configure os direitos de usuário para permitir que os membros do grupo Administradores façam logon localmente fazendo o seguinte:
 
-    1.  Clique duas vezes em **Permitir logon localmente** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Permitir logon localmente** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **Administradores** , clique em verificar **nomes** e clique em **OK** .
+    3.  Digite **Administradores**, clique em verificar **nomes** e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_93.gif)
 
@@ -189,27 +190,27 @@ Para o grupo Administradores em cada domínio na floresta:
 
 9. Configure os direitos de usuário para permitir que os membros do grupo Administradores façam logon por meio de Serviços de Área de Trabalho Remota fazendo o seguinte:
 
-    1.  Clique duas vezes em **Permitir logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Permitir logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **Administradores** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **Administradores**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_94.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
-10. Para sair **Editor de gerenciamento de política de grupo** , clique em **arquivo** e em **sair** .
+10. Para sair **Editor de gerenciamento de política de grupo**, clique em **arquivo** e em **sair**.
 
-11. No **Gerenciamento de política de grupo** , VINCULE o GPO à UO Controladores de domínio fazendo o seguinte:
+11. No **Gerenciamento de política de grupo**, VINCULE o GPO à UO Controladores de domínio fazendo o seguinte:
 
     1.  Navegue até <Forest> \Domains \\ <Domain> (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja definir a política de grupo).
 
-    2.  Clique com o botão direito do mouse na UO Controladores de domínio e clique em **vincular um GPO existente** .
+    2.  Clique com o botão direito do mouse na UO Controladores de domínio e clique em **vincular um GPO existente**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)
 
-    3.  Selecione o GPO que você acabou de criar e clique em **OK** .
+    3.  Selecione o GPO que você acabou de criar e clique em **OK**.
 
         ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)
 
@@ -220,15 +221,15 @@ De qualquer servidor membro ou estação de trabalho que não seja afetada pelas
 
 1.  Faça logon localmente usando uma conta que seja membro do grupo Administradores.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **prompt de comando** , clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
+3.  Na caixa de **pesquisa** , digite **prompt de comando**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
 
-4.  Quando for solicitado a aprovar a elevação, clique em **Sim** .
+4.  Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
     ![proteger grupos de administradores](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)
 
-5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $** , em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
+5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $**, em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
 
 6.  A captura de tela a seguir mostra a mensagem de erro que deve aparecer.
 
@@ -239,50 +240,50 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 ###### <a name="create-a-batch-file"></a>Criar um arquivo em lotes
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas** .
+2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas**.
 
-3.  No **bloco de notas** , digite **dir c:** .
+3.  No **bloco de notas**, digite **dir c:**.
 
-4.  Clique em **arquivo** e em **salvar como** .
+4.  Clique em **arquivo** e em **salvar como**.
 
 5.  No campo **nome do arquivo** , digite **<Filename> . bat** (em que <Filename> é o nome do novo arquivo em lotes).
 
 ###### <a name="schedule-a-task"></a>Agendar uma tarefa
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas** .
+2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas**.
 
     > [!NOTE]
     > Em computadores que executam o Windows 8, na caixa de pesquisa, digite agendar tarefas e clique em agendar tarefas.
 
-3.  Clique em **ação** e clique em **criar tarefa** .
+3.  Clique em **ação** e clique em **criar tarefa**.
 
 4.  Na caixa de diálogo **criar tarefa** , digite **<Task Name>** (em que <Task Name> é o nome da nova tarefa).
 
-5.  Clique na guia **ações** e clique em **novo** .
+5.  Clique na guia **ações** e clique em **novo**.
 
-6.  No campo **ação** , selecione **Iniciar um programa** .
+6.  No campo **ação** , selecione **Iniciar um programa**.
 
-7.  No campo **programa/script** , clique em **procurar** , localize e selecione o arquivo em lotes criado na seção **criar um arquivo em lotes** e clique em **abrir** .
+7.  No campo **programa/script** , clique em **procurar**, localize e selecione o arquivo em lotes criado na seção **criar um arquivo em lotes** e clique em **abrir**.
 
-8.  Clique em **OK** .
+8.  Clique em **OK**.
 
-9. Clique na guia **Geral** .
+9. Clique na guia **Geral**.
 
-10. No campo **Opções de segurança** , clique em **Alterar usuário ou grupo** .
+10. No campo **Opções de segurança** , clique em **Alterar usuário ou grupo**.
 
-11. Digite o nome de uma conta que seja membro do grupo Administradores, clique em **verificar nomes** e clique em **OK** .
+11. Digite o nome de uma conta que seja membro do grupo Administradores, clique em **verificar nomes** e clique em **OK**.
 
-12. Selecione **executar se o usuário estiver registrado em Onor** e não **armazenar a senha** . A tarefa só terá acesso aos recursos do computador local.
+12. Selecione **executar se o usuário estiver registrado em Onor** e não **armazenar a senha**. A tarefa só terá acesso aos recursos do computador local.
 
-13. Clique em **OK** .
+13. Clique em **OK**.
 
 14. Uma caixa de diálogo deve ser exibida, solicitando credenciais de conta de usuário para executar a tarefa.
 
-15. Depois de inserir a senha, clique em **OK** .
+15. Depois de inserir a senha, clique em **OK**.
 
 16. Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
@@ -292,23 +293,23 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  No campo **fazer logon como** , selecione **esta conta** .
+6.  No campo **fazer logon como** , selecione **esta conta**.
 
-7.  Clique em **procurar** , digite o nome de uma conta que seja membro do grupo Administradores, clique em **verificar nomes** e clique em **OK** .
+7.  Clique em **procurar**, digite o nome de uma conta que seja membro do grupo Administradores, clique em **verificar nomes** e clique em **OK**.
 
-8.  Nos campos **senha** e **Confirmar senha** , digite a senha da conta selecionada e clique em **OK** .
+8.  Nos campos **senha** e **Confirmar senha** , digite a senha da conta selecionada e clique em **OK**.
 
 9. Clique em **OK** mais três vezes.
 
-10. Clique com o botão direito do mouse em **spooler de impressão** e clique em **reiniciar** .
+10. Clique com o botão direito do mouse em **spooler de impressão** e clique em **reiniciar**.
 
 11. Quando o serviço for reiniciado, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
@@ -318,12 +319,12 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  No campo **fazer logon como** , clique em conta **sistema local** e clique em **OK** .
+6.  No campo **fazer logon como** , clique em conta **sistema local** e clique em **OK**.

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar o acesso condicional local usando dispositivos registrados'
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configurar acesso condicional com base em dispositivo no local
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.openlocfilehash: 2306c5ad57b7714c10076a5bb11f6cae5bb7f92d
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5b840243a7f17dc65db5d3c0605c3e5a321352f2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766879"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049714"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Configurar o acesso condicional local usando dispositivos registrados
 
@@ -208,7 +209,7 @@ Para obter informações sobre como habilitar o Windows 10 com o Microsoft Passp
 Para habilitar o registro automático de MDM de dispositivos registrados para que você possa usar a declaração IsCompliant em sua política de controle de acesso, siga as etapas [aqui.](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
 
 ## <a name="troubleshooting"></a>Solução de problemas
-1.  Se você receber um erro em reclamações `Initialize-ADDeviceRegistration` sobre um objeto já existente no estado incorreto, como "o objeto do serviço DRS foi encontrado sem todos os atributos necessários", você poderá ter executado Azure ad Connect comandos do PowerShell anteriormente e ter uma configuração parcial no AD DS.  Tente excluir manualmente os objetos em **CN = Configuração de registro de dispositivo, CN = Serviços, CN = Configuração, DC = &lt; domínio &gt; ** e tente novamente.
+1.  Se você receber um erro em reclamações `Initialize-ADDeviceRegistration` sobre um objeto já existente no estado incorreto, como "o objeto do serviço DRS foi encontrado sem todos os atributos necessários", você poderá ter executado Azure ad Connect comandos do PowerShell anteriormente e ter uma configuração parcial no AD DS.  Tente excluir manualmente os objetos em **CN = Configuração de registro de dispositivo, CN = Serviços, CN = Configuração, DC = &lt; domínio &gt;** e tente novamente.
 2.  Para clientes ingressados no domínio do Windows 10
     1. Para verificar se a autenticação do dispositivo está funcionando, entre no cliente ingressado no domínio como uma conta de usuário de teste. Para disparar o provisionamento rapidamente, bloqueie e desbloqueie a área de trabalho pelo menos uma vez.
     2. Instruções para verificar o link de credenciais de chave STK no objeto AD DS (a sincronização ainda precisa ser executada duas vezes?)

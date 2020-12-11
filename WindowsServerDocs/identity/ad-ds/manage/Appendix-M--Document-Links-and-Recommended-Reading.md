@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice M: links de documentos e leitura recomendada'
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: Apêndice M-links de documentos e leitura recomendada
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3840f99023320629968aa3fc18ffbfa807853fea
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 5c9deb86238b64c9d2e6c0d689b725fac0cb0c91
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068989"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049524"
 ---
 # <a name="appendix-m-document-links-and-recommended-reading"></a>Apêndice M: Links de documentos e leitura recomendada
 

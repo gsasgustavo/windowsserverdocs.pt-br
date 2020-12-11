@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Criando um design de ponte de link de site'
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: Criar um design de link de site
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 190ded76c03c9f38edb0a2a0400a04b3adc69179
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 77d2d4e426dc0f0f41d95ce2e51e9079d4d82027
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069114"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050224"
 ---
 # <a name="creating-a-site-link-bridge-design"></a>Criar um design de link de site
 
@@ -21,7 +22,7 @@ Uma ponte de link de site conecta dois ou mais links de site e habilita a transi
 
 Por padrão, todos os links de site são transitivos. Recomendamos que você mantenha a transitividade habilitada não alterando o valor padrão de **ponte de todos os links de site** (habilitado por padrão). No entanto, será necessário desabilitar a **ponte de todos os links de site** e concluir um design de ponte de link de site se:
 
-- Sua rede IP não está totalmente roteada. Quando você desabilita a **ponte de todos os links de site** , todos os links de site são considerados intransitivos e você pode criar e configurar objetos de ponte de link de site para modelar o comportamento de roteamento real de sua rede.
+- Sua rede IP não está totalmente roteada. Quando você desabilita a **ponte de todos os links de site**, todos os links de site são considerados intransitivos e você pode criar e configurar objetos de ponte de link de site para modelar o comportamento de roteamento real de sua rede.
 - Você precisa controlar o fluxo de replicação das alterações feitas no Active Directory Domain Services (AD DS). Ao desabilitar a **ponte de todos os links de site** para o transporte de IP do link de site e configurar uma ponte de link de site, a ponte de link de site se tornará o equivalente a uma rede não conjunta. Todos os links de site na ponte de link de site podem rotear transitivamente, mas eles não são roteados para fora da ponte de link de site.
 
 Para obter mais informações sobre como usar o snap-in Active Directory sites e serviços para desabilitar a configuração **ponte de todos os links de site** , consulte o artigo [habilitar ou desabilitar pontes de link de site](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).

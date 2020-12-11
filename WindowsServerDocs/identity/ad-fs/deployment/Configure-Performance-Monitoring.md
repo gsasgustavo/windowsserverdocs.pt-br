@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar o monitoramento de desempenho'
 ms.assetid: 67d8a8d7-2fbd-4ed7-bb41-75769f942024
 title: Configurar monitoramento de desempenho
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: bf6038fe5aec1bda815921c074b0c89d69732999
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 46b842b367e38b37c895f7c384e92155887547ed
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938402"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050254"
 ---
 # <a name="configure-performance-monitoring"></a>Configurar monitoramento de desempenho
 
@@ -20,13 +21,13 @@ O AD FS inclui seus próprios contadores de desempenho dedicados para ajudá-lo 
 
 #### <a name="to-configure-performance-monitoring-for-ad-fs-using-performance-monitor"></a>Para configurar o monitoramento de desempenho para AD FS usando o monitor de desempenho
 
-1. Na tela **Iniciar** , digite **Monitor de desempenho**e pressione Enter.
+1. Na tela **Iniciar** , digite **Monitor de desempenho** e pressione Enter.
 
-2. Na árvore de console, expanda **conjuntos de coletores de dados**, clique com o botão direito do mouse \- em **definido pelo usuário**, aponte para **novo**e clique em conjunto do **coletor de dados**.
+2. Na árvore de console, expanda **conjuntos de coletores de dados**, clique com o botão direito do mouse \- em **definido pelo usuário**, aponte para **novo** e clique em conjunto do **coletor de dados**.
 
    O assistente para criar novo conjunto de coletores de dados é exibido.
 
-3. Em **criar novo conjunto de coletores de dados**, para **nome** , digite um nome para o novo conjunto de coletores de dados, como \( "AD FS desempenho" \) **Next** ** \( \) **, clique em criar manualmente e em Avançar.
+3. Em **criar novo conjunto de coletores de dados**, para **nome** , digite um nome para o novo conjunto de coletores de dados, como \( "AD FS desempenho" \)  **\( \)**, clique em criar manualmente e em Avançar.
 
 4. Para o tipo de dados a ser incluído, verifique se **criar logs de dados** está selecionado e, em seguida, clique nas caixas de seleção para os seguintes tipos de dados: **contador de desempenho**, dados de rastreamento de **eventos**, informações de **configuração do sistema**.
 
@@ -40,7 +41,7 @@ O AD FS inclui seus próprios contadores de desempenho dedicados para ajudá-lo 
 
 8. Quando for solicitado a especificar o local para salvar os dados de desempenho, você poderá aceitar o local padrão \( **% systemdrive% \\ PerfLogs \\ \\ admin** _<conjunto de \_ coletores de dados \_>_ e clicar em **Avançar**.
 
-9. Quando for solicitado a criar o conjunto de coletores de dados, selecione **salvar e fechar**e clique em **concluir**.
+9. Quando for solicitado a criar o conjunto de coletores de dados, selecione **salvar e fechar** e clique em **concluir**.
 
     O novo conjunto de coletores de dados aparece na árvore de console no nó **definido pelo usuário** .
 

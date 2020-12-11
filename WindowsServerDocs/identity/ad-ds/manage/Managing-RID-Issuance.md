@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Gerenciando a emissão de RID'
 ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
 title: Gerenciar emissão de RIDs
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 548a060945338d39aa6ef9e604371874e91bb9b1
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 1acf51705b112d2a1d3409b08532f0f5355c5403
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067748"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049514"
 ---
 # <a name="managing-rid-issuance"></a>Gerenciar emissão de RIDs
 
@@ -82,7 +83,7 @@ Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"
 
 ```
 
-Se você aumentar o pool RID global, o pool disponível mudará para 2.147.483.647 em vez do padrão 1.073.741.823. Por exemplo: 
+Se você aumentar o pool RID global, o pool disponível mudará para 2.147.483.647 em vez do padrão 1.073.741.823. Por exemplo:
 
 ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)
 
@@ -103,27 +104,27 @@ Para desbloquear o pool RID para o 31º<sup></sup> bit depois de receber o alert
 
 2. Execute LDP.exe
 
-3. Clique no menu **Conexão** , em **Conectar** no Mestre RID do Windows Server 2012 na porta 389, e em **Associar** como um administrador de domínio.
+3. Clique no menu **Conexão**, em **Conectar** no Mestre RID do Windows Server 2012 na porta 389, e em **Associar** como um administrador de domínio.
 
-4. Clique no menu **Procurar** e em **Modificar** .
+4. Clique no menu **Procurar** e em **Modificar**.
 
 5. Verifique se **DN** está em branco.
 
-6. Em **Editar atributo de entrada** , digite:
+6. Em **Editar atributo de entrada**, digite:
 
     ```
     SidCompatibilityVersion
     ```
 
-1. Em **Valores** , digite:
+1. Em **Valores**, digite:
 
     ```
     1
     ```
 
-2. Verifique se **Adicionar** está selecionado em **Operação** e clique em **Enter** . Isso atualiza a **Lista de Entrada** .
+2. Verifique se **Adicionar** está selecionado em **Operação** e clique em **Enter**. Isso atualiza a **Lista de Entrada**.
 
-3. Selecione as opções **Síncrono** e **Estendido** , e clique em **Executar** .
+3. Selecione as opções **Síncrono** e **Estendido**, e clique em **Executar**.
 
     ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)
 
@@ -149,9 +150,9 @@ Esse limite máximo é embutido em códigos a dez por cento restante do espaço 
 
 - Para domínios com um espaço de RID de 31 bits desbloqueado, o ponto de gatilho é 2<sup>31</sup>-1 * 0,90 = 1.932.735.282 RIDs (ou 214.748.365 RIDs restantes).
 
-Quando disparado, o mestre RID define o atributo do Active Directory **msDS-RIDPoolAllocationEnabled** (nome comum **ms-DS-RID-Pool-Allocation-Enabled** ) como FALSE no objeto:
+Quando disparado, o mestre RID define o atributo do Active Directory **msDS-RIDPoolAllocationEnabled** (nome comum **ms-DS-RID-Pool-Allocation-Enabled**) como FALSE no objeto:
 
-CN = Gerenciador de RID $, CN = sistema, DC = *<domain>*
+CN = Gerenciador de RID $, CN = sistema, DC =*<domain>*
 
 Isso grava o evento 16657 e impede a emissão de bloco RID em todos os controladores de domínios. Os controladores de domínio continuam consumindo os pools RID pendentes, já emitidos a eles.
 
@@ -164,11 +165,11 @@ Para remover o bloqueio depois de atingir o limite máximo artificial, execute a
 
 2. Execute LDP.exe.
 
-3. Clique no menu **Conexão** , em *Conectar* no Mestre RID do Windows Server 2012 na porta 389, e em **Associar** como um administrador de domínio.
+3. Clique no menu **Conexão**, em *Conectar* no Mestre RID do Windows Server 2012 na porta 389, e em **Associar** como um administrador de domínio.
 
-4. Clique no menu **Exibir** , em **Árvore** , e, em **DN de Base** , selecione o próprio contexto de nomeação de domínios do Mestre RID. Clique em **OK** .
+4. Clique no menu **Exibir**, em **Árvore**, e, em **DN de Base**, selecione o próprio contexto de nomeação de domínios do Mestre RID. Clique em **OK**.
 
-5. No painel de navegação, faça drill down no contêiner **CN=System** e clique no objeto **CN=RID Manager$** . Clique com o botão direito do mouse nisso e clique em **Modificar** .
+5. No painel de navegação, faça drill down no contêiner **CN=System** e clique no objeto **CN=RID Manager$**. Clique com o botão direito do mouse nisso e clique em **Modificar**.
 
 6. Em Editar Atributo de Entrada, digite:
 
@@ -176,15 +177,15 @@ Para remover o bloqueio depois de atingir o limite máximo artificial, execute a
     MsDS-RidPoolAllocationEnabled
     ```
 
-7. Em **Valores** , digite (em maiúsculas):
+7. Em **Valores**, digite (em maiúsculas):
 
     ```
     TRUE
     ```
 
-8. Selecione **Substituir** em **Operação** e clique em **Enter** . Isso atualiza a **Lista de Entrada** .
+8. Selecione **Substituir** em **Operação** e clique em **Enter**. Isso atualiza a **Lista de Entrada**.
 
-9. Habilite as opções **Síncrono** e **Estendido** , e clique em **Executar** :
+9. Habilite as opções **Síncrono** e **Estendido**, e clique em **Executar**:
 
     ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)
 
@@ -254,42 +255,42 @@ As novas mensagens a seguir são registradas em log no log de eventos do sistema
 | ID do evento | 16653 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Aviso |
+| Severity | Aviso |
 | Mensagem | Um tamanho de pool para identificadores de conta (RIDs) que foi configurado por um Administrador é maior do que o máximo com suporte. O valor máximo de %1 será usado quando o controlador de domínio for o mestre RID.<p>Para obter mais informações, consulte [Limite de tamanho de bloco RID](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_RIDBlockMaxSize). |
 | Notas e resolução | O valor máximo para o Tamanho de Bloco RID agora é 15.000 decimal (3A98 hexadecimal). Um controlador de domínio não pode solicitar mais de 15.000 RIDs. Esse evento efetua registros em log a cada inicialização, até que o valor seja definido como um valor nesse máximo ou abaixo dele. |
 
 | ID do evento | 16654 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Informativo |
+| Severity | Informativo |
 | Mensagem | Um pool de RIDs (identificadores de conta) foi invalidado. Isso pode ocorrer nos seguintes casos previstos:<p>1. um controlador de domínio é restaurado do backup.<p>2. um controlador de domínio em execução em uma máquina virtual é restaurado do instantâneo.<p>3. um administrador invalidou manualmente o pool.<p>Consulte https://go.microsoft.com/fwlink/?LinkId=226247 para obter mais informações. |
 | Notas e resolução | Se esse evento for inesperado, contate todos os administradores do domínio e determine quais deles executou a ação. O log de eventos dos Serviços de Diretório também contém mais informações sobre quando uma dessas etapas foi executada. |
 
 | ID do evento | 16655 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Informativo |
+| Severity | Informativo |
 | Mensagem | O máximo global para identificadores de conta (RIDs) foi aumentado para %1. |
 | Notas e resolução | Se esse evento for inesperado, contate todos os administradores do domínio e determine quais deles executou a ação. Esse evento registra o aumento do tamanho do pool RID geral além do padrão de 2<sup>30</sup>e não ocorrerá automaticamente; somente por ação administrativa. |
 
 | ID do evento | 16656 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Aviso |
+| Severity | Aviso |
 | Mensagem | O máximo global para identificadores de conta (RIDs) foi aumentado para %1. |
 | Notas e resolução | Ação necessária! Um pool de identificador de conta (RID) foi alocado a esse controlador de domínio. O valor do pool indica que esse domínio consumiu uma parte considerável do total de identificadores de conta disponíveis.<p>Um mecanismo de proteção será ativado quando o domínio atingir o seguinte limite da conta total disponível-identificadores restantes: %1. O mecanismo de proteção impedirá a criação de conta até que você reabilite manualmente a alocação de identificador de conta no controlador de domínio de mestre RID.<p>Consulte https://go.microsoft.com/fwlink/?LinkId=228610 para obter mais informações. |
 
 | ID do evento | 16657 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Erro |
+| Severity | Erro |
 | Mensagem | Ação necessária! Esse domínio consumiu uma parte considerável do total de identificadores de conta (RIDs) disponíveis. Um mecanismo de proteção foi ativado porque a conta total disponível-os identificadores restantes é menor que: X% [argumento de teto artificial].<p>O mecanismo de proteção impede a criação de conta até que você reabilite manualmente a alocação de identificador de conta no controlador de domínio de mestre RID.<p>É extremamente importante que certos diagnósticos sejam executados antes da criação de conta ser reabilitada, para assegurar que esse domínio não esteja consumindo identificadores de conta a uma taxa anormalmente alta. Todo problema identificado deve ser resolvido antes da criação da conta ser reabilitada.<p>Falha em diagnosticar e corrigir qualquer problema subjacente que resulte em uma taxa anormalmente alta de consumo do identificador de conta pode levar ao esgotamento de identificadores de conta no domínio. Depois disso, a criação da conta ficará permanentemente desabilitada nesse domínio.<p>Consulte https://go.microsoft.com/fwlink/?LinkId=228610 para obter mais informações. |
 | Notas e resolução | Contate todos os administradores de domínio e informe-os de que mais nenhuma entidade de segurança poderá ser criada nesse domínio até que essa proteção seja substituída. Para obter mais informações sobre como substituir a proteção e provavelmente aumentar o pool RID geral, consulte [Desbloqueio de tamanho de espaço de RID global](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock). |
 
 | ID do evento | 16658 |
 |--|--|
 | Fonte | Directory-Services-SAM |
-| Gravidade | Aviso |
+| Severity | Aviso |
 | Mensagem | Esse evento é uma atualização periódica na quantidade total restante de identificadores de conta (RIDs) disponíveis. O número de identificadores de conta restantes é aproximadamente: %1.<p>Os identificadores de conta são usados conforme as contas são criadas, quando eles estão esgotados nenhuma conta nova pode ser criada no domínio.<p>Consulte https://go.microsoft.com/fwlink/?LinkId=228745 para obter mais informações. |
 | Notas e resolução | Contate todos os administradores de domínio e informe-os que o consumo de RID ultrapassou o marco principal; determine se esse comportamento é esperado ou não examinando os padrões de criação de objeto de confiança de segurança. Presenciar esse evento seria muito incomum, pois isso significaria que pelo menos ~100 milhões de RIDS foram alocados. |
 

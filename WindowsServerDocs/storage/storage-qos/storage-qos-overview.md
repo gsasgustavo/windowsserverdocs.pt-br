@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: qualidade de serviço de armazenamento'
 title: Qualidade de serviço do armazenamento
 manager: dongill
 ms.author: JGerend
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
 ms.date: 10/10/2016
-ms.openlocfilehash: ced2fe051f0595e8333aa2704889cc88ec1304ac
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f4cb836cd76933b400e472d10adfeda47b717c0b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994723"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050384"
 ---
 # <a name="storage-quality-of-service"></a>Qualidade de serviço do armazenamento
 
@@ -69,7 +70,7 @@ Quando há mudanças nas políticas de QoS de armazenamento ou nas demandas de d
 |Termo|Descrição|
 |--------|---------------|
 |IOPs normalizados|Todo o uso do armazenamento é medido em "IOPs normalizados".  Essa é uma contagem das operações de entrada/saída de armazenamento por segundo.  Qualquer E/S que tiver 8 KB ou menos é considerada como um E/S normalizada.  Qualquer E/S que tiver mais de 8 KB é tratada como várias E/S normalizadas. Por exemplo, uma solicitação de 256 KB é tratada como 32 IOPs normalizados.<p>O Windows Server 2016 inclui a capacidade de especificar o tamanho usado para normalizar a E/S.  No cluster de armazenamento, o tamanho normalizado pode ser especificado e ficar em vigor no cluster de cálculos de normalização amplo.  O padrão permanece 8 KB.|
-|Flow|Cada identificador de arquivo aberto por um servidor do Hyper-V em um arquivo VHD ou VHDX é considerado um "fluxo". Se uma máquina virtual tiver dois discos rígidos virtuais anexados, ela terá 1 fluxo para o cluster de servidor de arquivo por arquivo. Se um VHDX for compartilhado com várias máquinas virtuais, ele terá 1 fluxo por máquina virtual.|
+|Fluxo|Cada identificador de arquivo aberto por um servidor do Hyper-V em um arquivo VHD ou VHDX é considerado um "fluxo". Se uma máquina virtual tiver dois discos rígidos virtuais anexados, ela terá 1 fluxo para o cluster de servidor de arquivo por arquivo. Se um VHDX for compartilhado com várias máquinas virtuais, ele terá 1 fluxo por máquina virtual.|
 |InitiatorName|Nome da máquina virtual que é relatada para o Servidor de Arquivos de Escalabilidade Horizontal para cada fluxo.|
 |InitiatorID|Um identificador correspondente à ID da máquina virtual.  Isso sempre pode ser usado para identificar exclusivamente as máquinas virtuais de fluxos individuais, mesmo se as máquinas virtuais tiverem o mesmo InitiatorName.|
 |Política|As políticas de QoS de armazenamento são armazenadas no banco de dados do cluster e têm as seguintes propriedades: PolicyId, MinimumIOPS, MaximumIOPS, ParentPolicy e PolicyType.|
@@ -384,7 +385,7 @@ IsDeleted                     : False
 ```
 
 ### <a name="query-for-storage-qos-policies"></a>Consultar as políticas de QoS de armazenamento
-`Get-StorageQosPolicy`lista todas as políticas configuradas e seu status em um Servidor de Arquivos de Escalabilidade Horizontal.
+`Get-StorageQosPolicy` lista todas as políticas configuradas e seu status em um servidor de arquivos Scale-Out.
 
 ```PowerShell
 PS C:\> Get-StorageQosPolicy

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: erro de replicação 1753 não há mais pontos de extremidade disponíveis no mapeador de pontos'
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: Erro de replicação 1753 Não há mais pontos de extremidade disponíveis do mapeador de ponto de extremidade
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 94e63d439217c21c1634e7f1b685267ad98178b4
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 359e5c39667f29deb03b8587e94e777a23232c5c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067668"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049484"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>Erro de replicação 1753 Não há mais pontos de extremidade disponíveis do mapeador de ponto de extremidade
 
@@ -284,9 +285,9 @@ F# SRC    DEST    Operation
 11 x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
 ```
 
-No quadro **10** , o DC de destino consulta o mapeador de ponto de extremidade DCS de origem pela porta 135 para o Active Directory UUID de classe de serviço de replicação E351...
+No quadro **10**, o DC de destino consulta o mapeador de ponto de extremidade DCS de origem pela porta 135 para o Active Directory UUID de classe de serviço de replicação E351...
 
-No quadro **11** , o DC de origem, nesse caso, um computador membro que ainda não hospeda a função de controlador de domínio e, portanto, não registrou o E351... O UUID para o serviço de replicação com seu EPM local responde com o erro simbólico EP_S_NOT_REGISTERED que mapeia para o erro decimal 1753, erro hexadecimal 0x6d9 e erro amigável "não há mais pontos de extremidade disponíveis no mapeador de Endpoint".
+No quadro **11**, o DC de origem, nesse caso, um computador membro que ainda não hospeda a função de controlador de domínio e, portanto, não registrou o E351... O UUID para o serviço de replicação com seu EPM local responde com o erro simbólico EP_S_NOT_REGISTERED que mapeia para o erro decimal 1753, erro hexadecimal 0x6d9 e erro amigável "não há mais pontos de extremidade disponíveis no mapeador de Endpoint".
 
 Posteriormente, o computador membro com o endereço IP x. x. 1.2 é promovido como uma réplica "MayberryDC" no domínio contoso.com. Novamente, o comando **replicate Now** é usado para disparar a replicação, mas esse tempo falha com o erro na tela "o nome principal de destino está incorreto". O computador cujo adaptador de rede é atribuído o endereço IP x. x. 1.2 é um controlador de domínio, atualmente é inicializado no modo normal e registrou o E351... UUID do serviço de replicação com seu EPM local, mas ele não possui o nome ou a identidade de segurança de DC2 e não pode descriptografar a solicitação Kerberos do DC1 para que a solicitação agora falhe com o erro "o nome da entidade de destino está incorreto". O erro é mapeado para erro decimal-2146893022/erro hexadecimal 0x80090322.
 

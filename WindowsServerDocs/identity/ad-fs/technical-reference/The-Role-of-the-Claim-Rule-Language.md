@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: a função do idioma da regra de declaração'
 title: A função da linguagem da regra de declaração
 author: billmath
 ms.author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 07/07/2017
 ms.topic: article
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
-ms.openlocfilehash: c54319c67a879645975d6aeac21078c25160c2c4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 41b5950994de588c1697334ffc72474a618c6a1b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937795"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050474"
 ---
 # <a name="the-role-of-the-claim-rule-language"></a>A função da linguagem da regra de declaração
 O idioma da regra de declaração de Serviços de Federação do Active Directory (AD FS) (AD FS) atua como o bloco de construção administrativo para o comportamento de declarações de entrada e saída, enquanto o mecanismo de declarações atua como mecanismo de processamento para a lógica no idioma da regra de declaração que define a regra personalizada. Para obter mais informações sobre como todas as regras são processadas pelo mecanismo de declarações, consulte [a função do mecanismo de declarações](The-Role-of-the-Claims-Engine.md).

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: solução de problemas de hosts protegidos'
 title: Solucionando problemas de hosts protegidos
 ms.topic: article
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: d226f4fdc9b34b97b24b970b3198bd4164b3a309
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4a9d38e2e702610bb1a6905cdc198d3b4e708d6e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995275"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049244"
 ---
 # <a name="troubleshooting-guarded-hosts"></a>Solucionando problemas de hosts protegidos
 
@@ -53,7 +54,7 @@ Aprovado                    | O host passou por atestado.
 TransientError            | A última tentativa de atestado falhou devido a uma rede, serviço ou outro erro temporário. Repita a última operação.
 TpmError                  | O host não pôde concluir sua última tentativa de atestado devido a um erro com o TPM. Consulte os logs do TPM para obter mais informações.
 UnauthorizedHost          | O host não passou no atestado porque não foi autorizado a executar VMs blindadas. Verifique se o host pertence a um grupo de segurança confiável pelo HGS para executar VMs blindadas.
-Unknown (desconhecido)                   | O host ainda não tentou atestar com o HGS.
+Unknown                   | O host ainda não tentou atestar com o HGS.
 
 Quando **AttestationStatus** é relatado como **InsecureHostConfiguration**, um ou mais motivos serão preenchidos no campo **AttestationSubStatus** .
 A tabela a seguir explica os possíveis valores para AttestationSubStatus e dicas sobre como resolver o problema.

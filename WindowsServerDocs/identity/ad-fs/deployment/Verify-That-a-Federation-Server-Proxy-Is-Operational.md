@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Verifique se um proxy do servidor de Federação está operacional'
 ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: Verificar se um proxy do servidor de federação está funcionando
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 4550934c56b4406ea7aff9b90509a205014dd95d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 80671525bd403e003460437a30c96e1e44efe174
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940955"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049024"
 ---
 # <a name="verify-that-a-federation-server-proxy-is-operational"></a>Verificar se um proxy do servidor de federação está funcionando
 
@@ -27,11 +28,11 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  Faça logon no proxy do servidor de Federação como administrador.
 
-2.  Na tela **Iniciar** , digite**Visualizador de eventos**e pressione Enter.
+2.  Na tela **Iniciar** , digite **Visualizador de eventos** e pressione Enter.
 
-3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos**e, em seguida, clique em **admin**.
+3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos** e, em seguida, clique em **admin**.
 
-4.  Na coluna **ID do Evento**, procure o ID de evento 198.
+4.  Na coluna **ID do evento** , procure a ID do evento 198.
 
     Se o proxy do servidor de Federação estiver configurado corretamente, você verá um novo evento no log do aplicativo de Visualizador de Eventos, com a ID de evento 198. Este evento verifica se o serviço proxy do servidor de Federação foi iniciado com êxito e agora está online.
 

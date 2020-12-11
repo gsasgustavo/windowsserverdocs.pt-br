@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar pastas de trabalho com o AD FS e o proxy de aplicativo Web: etapa 3, configurar pastas de trabalho'
 title: Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web - Etapa 3, Configurar Pastas de Trabalho
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
-ms.openlocfilehash: 784b4467fccaefc2911c501d49ac4c1cd9196c67
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2c85e0fc34fcbd735a79c8c768dbee70ff5e2e8d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049154"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-3-set-up-work-folders"></a>Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web: Etapa 3, Configurar Pastas de Trabalho
 
@@ -66,7 +67,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name workfolders -CName  -
 ### <a name="install-the-ad-fs-certificate"></a>Instalar o certificado do AD FS
 Instale o certificado do AD FS criado durante a configuração do AD FS no repositório de certificados do computador local, executando estas etapas:
 
-1.  Clique em **Iniciar**e em **Executar**.
+1.  Clique em **Iniciar** e em **Executar**.
 
 2.  Digite **MMC**.
 
@@ -155,7 +156,7 @@ Para instalar a função de Pastas de Trabalho, siga estas etapas:
 ## <a name="configure-work-folders"></a>Configurar pastas de trabalho
 Para configurar Pastas de Trabalho, siga estas etapas:
 
-1.  Abra o **Gerenciador do Servidor**.
+1.  Abra o **Server Manager**.
 
 2.  Selecione **Serviços de Arquivo e Armazenamento** e, em seguida, selecione **Pastas de Trabalho**.
 
@@ -167,11 +168,11 @@ Para configurar Pastas de Trabalho, siga estas etapas:
 
 5.  Na página **Usar Estrutura de Pasta**, selecione **Alias de usuário** e clique em **Avançar**.
 
-6.  Na página **Nome de Compartilhamento de Sincronização**, insira o nome para o compartilhamento de sincronização. No exemplo de teste, esse nome é **WorkFolders**. Clique em **Próximo**.
+6.  Na página **Nome de Compartilhamento de Sincronização**, insira o nome para o compartilhamento de sincronização. No exemplo de teste, esse nome é **WorkFolders**. Clique em **Avançar**.
 
-7.  Na página **Acesso à Sincronização**, adicione os usuários ou os grupos que terão acesso ao novo compartilhamento de sincronização. No exemplo de teste, conceda acesso a todos os usuários do domínio. Clique em **Próximo**.
+7.  Na página **Acesso à Sincronização**, adicione os usuários ou os grupos que terão acesso ao novo compartilhamento de sincronização. No exemplo de teste, conceda acesso a todos os usuários do domínio. Clique em **Avançar**.
 
-8.  Na página **Políticas de Segurança do Computador**, selecione **Criptografar pastas de trabalho** e **Automatically lock page and require a password**. Clique em **Próximo**.
+8.  Na página **Políticas de Segurança do Computador**, selecione **Criptografar pastas de trabalho** e **Automatically lock page and require a password**. Clique em **Avançar**.
 
 9. Na página **Confirmação**, clique em **Criar** para concluir o processo de configuração.
 
@@ -197,7 +198,7 @@ $subject = "workfolders.contoso.com"
 Try
 {
 #In case there are multiple certificates with the same subject, get the latest version
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
 $Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY"
 $Command | netsh
@@ -240,9 +241,9 @@ Exit
 ### <a name="set-up-ad-fs-authentication"></a>Configurar a autenticação do AD FS
 Para configurar Pastas de Trabalho para usar a autenticação do AD FS, siga estas etapas:
 
-1.  Abra o **Gerenciador do Servidor**.
+1.  Abra o **Server Manager**.
 
-2.  Clique em **Servidores**e selecione o servidor de Pastas de Trabalho na lista.
+2.  Clique em **Servidores** e selecione o servidor de Pastas de Trabalho na lista.
 
 3.  Clique com o botão direito do mouse no servidor e clique em **Configurações de Pastas de Trabalho**.
 

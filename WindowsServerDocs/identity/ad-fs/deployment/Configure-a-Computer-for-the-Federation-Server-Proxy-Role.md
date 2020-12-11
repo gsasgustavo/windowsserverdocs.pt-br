@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar um computador para a função de proxy do servidor de Federação'
 ms.assetid: a2f23877-30a7-439f-817d-387da9e00e86
 title: Configurar um computador para a função de proxy do servidor de federação
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 06bccb135963d5b5bc754e895843a4d75153c120
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0643f976ae7556c6a5c99e7cd117108a1b143b67
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963117"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050244"
 ---
 # <a name="configure-a-computer-for-the-federation-server-proxy-role"></a>Configurar um computador para a função de proxy do servidor de federação
 
@@ -28,7 +29,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  Ha duas maneiras para iniciar o Assistente de Configuração do Servidor de Federação AD FS. Para iniciar o assistente, tome uma das seguintes ações:
 
-    -   Na tela **Iniciar** , digite**AD FS assistente de configuração de proxy do servidor de Federação**e pressione Enter.
+    -   Na tela **Iniciar** , digite **AD FS assistente de configuração de proxy do servidor de Federação** e pressione Enter.
 
     -   A qualquer momento depois que o assistente de instalação for concluído, abra o Windows Explorer, navegue até a pasta **C: \\ Windows \\ ADFS** e clique duas vezes \- em **FspConfigWizard.exe**.
 
@@ -44,7 +45,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 6.  Na página **Pronto para Aplicar as Configurações**, verificar os detalhes. Se as configurações parecem estar certas, clique em **Próximo** para começar configurar este computador com estas configurações de proxy.
 
-7.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar** para sair do assistente.
+7.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar**  para sair do assistente.
 
     Não há nenhum snap-in do MMC do console de gerenciamento Microsoft \( \) \- a ser usado para administrar os proxies do servidor de Federação. Para definir as configurações para cada um dos proxies do servidor de Federação em sua organização, use os cmdlets do Windows PowerShell.
 
@@ -81,7 +82,7 @@ Por padrão, o serviço proxy do servidor de Federação é configurado para usa
 
     ```
     <securityTokenService samlProtocolEndpoint="https://sts1.contoso.com:444/adfs/services/trust/samlprotocol/proxycertificatetransport"
-          wsTrustEndpoint="https://sts1.contoso.com:444/adfs/services/trust/proxycertificatetransport" />
+          wsTrustEndpoint="https://sts1.contoso.com:444/adfs/services/trust/proxycertificatetransport" />
     ```
 
 4.  Adicione a conta de usuário do serviço de proxy do servidor de Federação à ACL da lista de controle \( \) de acesso para as URLs de ponto de extremidade relacionadas. Por exemplo, se o número da porta for 1234 e a conta de usuário usada para executar o serviço proxy de servidor do AD FSfederation em for a \- conta de serviço de rede interna, digite o seguinte comando no prompt de comando:

@@ -1,17 +1,18 @@
 ---
 title: Implantando o serviço guardião de host
+description: 'Saiba mais sobre: Implantando o serviço guardião de host'
 ms.topic: article
 ms.assetid: 310b63d9-5ac7-4961-98ef-103af45d706a
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 4267acb6058a1e39ed42e986f195f8f9d4c8d17b
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: a6a885661107c4e16b495f845ee28677dd5bbba4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864145"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049834"
 ---
 # <a name="deploying-the-host-guardian-service"></a>Implantando o serviço guardião de host
 
@@ -27,7 +28,7 @@ Uma das metas mais importantes de fornecer um ambiente hospedado é garantir a s
 
 A tabela a seguir divide as tarefas para implantar uma malha protegida e criar VMs blindadas de acordo com diferentes funções de administrador. Observe que quando o administrador do HGS configura o HGS com hosts Hyper-V autorizados, um administrador de malha coletará e fornecerá informações de identificação sobre os hosts ao mesmo tempo.
 
-| Etapa e link para o conteúdo | Image |
+| Etapa e link para o conteúdo | Imagem |
 |--|--|--|
 | 1- [verificar os pré-requisitos do HgS](guarded-fabric-prepare-for-hgs.md) | ![Etapa 1, verificar os pré-requisitos](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
 | 2- [Configurar o primeiro nó HgS](guarded-fabric-choose-where-to-install-hgs.md) | ![Etapa 2, configurar o primeiro nó HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png) |

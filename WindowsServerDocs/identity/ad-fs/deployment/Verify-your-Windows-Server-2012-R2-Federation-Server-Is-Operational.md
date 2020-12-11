@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Verifique se o servidor de Federação do Windows Server 2012 R2 está funcionando'
 ms.assetid: 1115d276-00f6-4c23-9278-eedcc31295d8
 title: Verifique se o servidor de Federação do Windows Server 2012 R2 está funcionando
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 82cad5a13478986208f5f19d1905290fb0097655
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dd7585af83b5070122755cdaeffbea3feb4f4f0f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940860"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049034"
 ---
 # <a name="verify-your-windows-server-2012-r2-federation-server-is-operational"></a>Verifique se o servidor de Federação do Windows Server 2012 R2 está funcionando
 
@@ -39,9 +40,9 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  Inicie sessão no novo servidor de federação como um administrador.
 
-2.  Na tela **Iniciar** , digite**Visualizador de eventos**e pressione Enter.
+2.  Na tela **Iniciar** , digite **Visualizador de eventos** e pressione Enter.
 
-3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos**e, em seguida, clique em **admin**.
+3.  No painel de detalhes, clique duas vezes \- em **logs de aplicativos e serviços**, clique duas vezes \- em **AD FS eventos** e, em seguida, clique em **admin**.
 
 4.  Na coluna **ID do evento** , procure a ID do evento 100. Se o servidor de Federação estiver configurado corretamente, você verá um novo evento — no log do aplicativo de Visualizador de Eventos — com a ID de evento 100. Esse evento verifica se o servidor de Federação foi capaz de se comunicar com êxito com o Serviço de Federação.
 

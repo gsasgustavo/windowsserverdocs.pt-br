@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: instalar o HGS em uma nova floresta'
 title: Instalar o HGS em uma nova floresta
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: c18c14435c93d08c98b1a765fd820294a273a575
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 934efb699dd1c9f37219606ebc7f1b748f61eb18
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939540"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049724"
 ---
 # <a name="install-hgs-in-a-new-forest"></a>Instalar o HGS em uma nova floresta
 

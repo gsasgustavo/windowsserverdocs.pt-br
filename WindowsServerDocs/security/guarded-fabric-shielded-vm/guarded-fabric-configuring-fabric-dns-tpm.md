@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: próxima etapa'
 title: Configurar o DNS de malha para hosts protegidos (TPM)
 ms.topic: article
 ms.assetid: 074b6d09-f16e-49bf-b88a-377139d35067
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 4ecaa1690bf5a589b25748d4ef924d69e32b3fa9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b6f22abbf4086690ee4c1c616572f7addb68dd88
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966083"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049854"
 ---
 # <a name="next-step"></a>Próxima etapa
 

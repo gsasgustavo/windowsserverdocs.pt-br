@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar pastas de trabalho com o AD FS e o proxy de aplicativo Web: etapa 5, configurar clientes'
 title: Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web - Etapa 5, Configurar clientes
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
-ms.openlocfilehash: fd8015b1a72477c00fda0c3483bbdd6504ff86b8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 904d5868c4f242ff00b86d0824fa9e58692db621
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965813"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049134"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-5-set-up-clients"></a>Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web: Etapa 5, Configurar clientes
 
@@ -40,7 +41,7 @@ Como você está instalando os certificados autoassinados que não podem ser ras
 
 Para instalar os certificados, siga estas etapas:
 
-1.  Clique em **Iniciar**e em **Executar**.
+1.  Clique em **Iniciar** e em **Executar**.
 
 2.  Digite **MMC**.
 
@@ -81,9 +82,9 @@ Para configurar Pastas de Trabalho no computador cliente, siga estas etapas:
 
 4. Se o usuário estiver conectado à rede corporativa, a autenticação será executada pela Autenticação Integrada do Windows. Se o usuário não estiver conectado à rede corporativa, a autenticação será realizada pelo AD FS (OAuth), e o usuário será solicitado a inserir as credenciais. Insira suas credenciais e clique em **OK**.
 
-5. Quando a autenticação estiver concluída, a página **Apresentando Pastas de Trabalho** será exibida, na qual você poderá alterar o local do diretório de Pastas de Trabalho, se desejar. Clique em **Próximo**.
+5. Quando a autenticação estiver concluída, a página **Apresentando Pastas de Trabalho** será exibida, na qual você poderá alterar o local do diretório de Pastas de Trabalho, se desejar. Clique em **Avançar**.
 
-6. A página **Políticas de Segurança** lista as políticas de segurança configuradas para Pastas de Trabalho. Clique em **Próximo**.
+6. A página **Políticas de Segurança** lista as políticas de segurança configuradas para Pastas de Trabalho. Clique em **Avançar**.
 
 7. Será exibida uma mensagem informando que Pastas de Trabalho iniciou a sincronização com o computador. Clique em **fechar**
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar uma regra enviar atributos LDAP como declarações'
 ms.assetid: 606f4196-b579-4806-a462-3abd4d93e87c
 title: Quando usar uma regra Enviar Atributos LDAP como Declarações
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 4ba491f9fa0bee4a92cba8667ff0cf28cf7e8e52
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a82d308647dedcad531f7437fe6af568651e3bc0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958714"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050404"
 ---
 # <a name="when-to-use-a-send-ldap-attributes-as-claims-rule"></a>Quando usar uma regra Enviar Atributos LDAP como Declarações
 Você pode usar essa regra em Serviços de Federação do Active Directory (AD FS) \( AD FS \) quando desejar emitir declarações de saída que contenham valores reais de atributo LDAP do protocolo de acesso de diretório Lightweight \( \) , que existem em um repositório de atributos e, em seguida, associar um tipo de declaração a cada um dos atributos LDAP. Para obter mais informações sobre repositórios de atributos, consulte [a função de repositórios de atributos](The-Role-of-Attribute-Stores.md).
@@ -60,7 +61,7 @@ Se a consulta para Active Directory, AD DS ou Active Directory Lightweight Direc
 
 Os exemplos a seguir são fornecidos para ajudá-lo a entender algumas das várias maneiras que você pode construir uma regra personalizada usando a linguagem da regra de declaração para consultar e extrair dados em um repositório de atributos.
 
-### <a name="example-how-to-query-an-adlds-attribute-store-and-return-a-specified-value"></a>Exemplo: como consultar um repositório de atributos do AD LDS e retornar um valor especificado
+### <a name="example-how-to-query-an-ad-lds-attribute-store-and-return-a-specified-value"></a>Exemplo: como consultar um repositório de atributos do AD LDS e retornar um valor especificado
 Os parâmetros devem ser separados por ponto e vírgula. O primeiro parâmetro é o filtro LDAP. Os parâmetros subsequentes são os atributos para retornar em quaisquer objetos correspondentes.
 
 O exemplo a seguir mostra como pesquisar um usuário pelo atributo **sAMAccountName** e emitir uma \- declaração de endereço de email, usando o valor do atributo mail do usuário:
@@ -85,7 +86,7 @@ c1:[Type == " http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 => issue(store = "AD LDS ", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname"), query = "(&(mail={0})(title={1}));displayname", param = c1.Value, param = c2.Value);
 ```
 
-### <a name="example-how-to-query-an-activedirectory-attribute-store-and-return-a-specified-value"></a>Exemplo: como consultar um repositório de atributos do Active Directory e retornar um valor especificado
+### <a name="example-how-to-query-an-active-directory-attribute-store-and-return-a-specified-value"></a>Exemplo: como consultar um repositório de atributos do Active Directory e retornar um valor especificado
 A consulta Active Directory deve incluir o nome do usuário \( com o nome de domínio \) como o parâmetro final para que o repositório de atributos Active Directory possa consultar o domínio correto. Caso contrário, a mesma sintaxe tem suporte.
 
 O exemplo a seguir mostra como pesquisar um usuário pelo atributo **sAMAccountName** em seu domínio e, em seguida, retornar o atributo **mail**:
@@ -95,7 +96,7 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsacco
 => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"), query = "sAMAccountName={0};mail;{1}", param = regexreplace(c.Value, "(?<domain>[^\\]+)\\(?<user>.+)", "${user}"), param = c.Value);
 ```
 
-### <a name="example-how-to-query-an-activedirectory-attribute-store-based-on-the-value-of-an-incoming-claim"></a>Exemplo: como consultar um repositório de atributos do Active Directory com base no valor de uma declaração de entrada
+### <a name="example-how-to-query-an-active-directory-attribute-store-based-on-the-value-of-an-incoming-claim"></a>Exemplo: como consultar um repositório de atributos do Active Directory com base no valor de uma declaração de entrada
 
 ```
 c:[Type == "http://test/name"]
@@ -118,7 +119,7 @@ A consulta anterior é composta pelas três partes a seguir:
 
 -   Domínio do Active Directory: você especifica a última parte da consulta somente quando o repositório de atributos é o Active Directory. \(Não é necessário quando você consulta outros repositórios de atributos. \) Essa parte da consulta é usada para especificar a conta de usuário no formato nome de domínio \\ . O repositório de atributos do Active Directory usa a parte do domínio para determinar o controlador de domínio apropriado ao qual se conectar e executar a consulta e solicitar os atributos.
 
-### <a name="example-how-to-use-two-custom-rules-to-extract-the-manager-e-mail-from-an-attribute-in-activedirectory"></a>Exemplo: como usar duas regras personalizadas para extrair o gerente e o \- email de um atributo no Active Directory
+### <a name="example-how-to-use-two-custom-rules-to-extract-the-manager-e-mail-from-an-attribute-in-active-directory"></a>Exemplo: como usar duas regras personalizadas para extrair o gerente e o \- email de um atributo no Active Directory
 As duas regras personalizadas a seguir, quando usadas em conjunto na ordem mostrada abaixo, consultam Active Directory para o atributo **Manager** da regra de conta de usuário \( 1 \) e, em seguida, usam esse atributo para consultar a conta de usuário do gerente para a regra de atributo de **email** \( 2 \) . Por fim, o atributo de **email** é emitido como uma declaração "ManagerEmail". Em resumo, a regra 1 consulta Active Directory e passa o resultado da consulta para a regra 2, que, em seguida, extrai os valores do gerente e de \- email.
 
 Por exemplo, quando essas regras terminam de executar, é emitida uma declaração que contém o \- endereço de email do gerente para um usuário no domínio corp.fabrikam.com.

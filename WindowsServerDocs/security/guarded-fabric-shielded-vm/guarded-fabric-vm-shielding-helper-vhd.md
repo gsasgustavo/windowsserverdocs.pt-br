@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: VMs blindadas-preparando um VHD auxiliar de blindagem de VM'
 title: VMs blindadas-preparando um VHD auxiliar de blindagem de VM
 ms.topic: article
 ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 2c6a74b3dd18465534a662e6c1afa37ac197aca6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 79c28bb51abb0bd05a4302f392d8be288b9899d5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943986"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049104"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>VMs blindadas-preparando um VHD auxiliar de blindagem de VM
 

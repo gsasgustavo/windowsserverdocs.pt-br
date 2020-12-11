@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: recursos para verificar se a replicação está funcionando'
 title: Recuperação de floresta do AD – verificar replicação
 ms.author: daveba
 author: iainfoulds
@@ -6,18 +7,18 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
-ms.openlocfilehash: 6f08871e3ffa27f3bfc063c5962437ae65f8f667
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 8ae4dca67398d9604ef471d0a571bafe105b86f3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070778"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049554"
 ---
 # <a name="resources-to-verify-replication-is-working"></a>Recursos para verificar se a replicação está funcionando
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 e 2012 R2, Windows Server 2008 e 2008 R2
 
-Depois de ter restaurado ou reinstalado todos os DCs, você pode verificar se AD DS e o SYSVOL são recuperados e replicados corretamente usando **repadmin/replsum** , que é executado em qualquer versão do Windows Server.
+Depois de ter restaurado ou reinstalado todos os DCs, você pode verificar se AD DS e o SYSVOL são recuperados e replicados corretamente usando **repadmin/replsum**, que é executado em qualquer versão do Windows Server.
 
 > [!TIP]
 > Você também pode baixar e executar a [ferramenta de status de replicação do Active Directory](https://www.microsoft.com/download/details.aspx?id=30005) (ADReplStatus), uma ferramenta gratuita que monitora o status de replicação de DCS e relata erros. O ADReplStatus requer o .NET Framework 4, que será instalado se ainda não estiver presente.
