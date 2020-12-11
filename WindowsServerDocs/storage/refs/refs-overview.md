@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: visão geral do ReFS (sistema de arquivos resiliente)'
 title: Visão geral do ReFS (Sistema de Arquivos Resiliente)
 ms.author: gawatu
 manager: mchad
 ms.topic: article
 author: gawatu
 ms.date: 06/29/2019
-ms.openlocfilehash: 65ae84f354f535ba94a7331680234b3ad32d230d
-ms.sourcegitcommit: 92e46b11154bab929e2c622d759ef62ec264c4e6
+ms.openlocfilehash: 5f220f766c0d41049e254a57dabab302561d0eab
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734744"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045214"
 ---
 # <a name="resilient-file-system-refs-overview"></a>Visão geral do ReFS (Sistema de Arquivos Resiliente)
 
@@ -33,7 +34,7 @@ O ReFS introduz novos recursos que podem detectar precisamente danos e também c
 
 Além de fornecer melhorias em resiliência, o ReFS apresenta novos recursos para cargas de trabalho sensíveis ao desempenho e virtualizadas. Otimização de camada em tempo real, clonagem de blocos e VDL esparso são bons exemplos dos recursos em evolução do ReFS, que foram desenvolvidos para dar suporte a cargas de trabalho dinâmicas e diversificadas:
 
-- **[Paridade com aceleração de espelho](./mirror-accelerated-parity.md)** : a paridade com aceleração de espelho oferece alto desempenho e também armazenamento eficiente de capacidade para seus dados.
+- **[Paridade com aceleração de espelho](./mirror-accelerated-parity.md)**: a paridade com aceleração de espelho oferece alto desempenho e também armazenamento eficiente de capacidade para seus dados.
 
     - Para oferecer alto desempenho e capacidade de armazenamento eficiente, o ReFS divide um volume em dois grupos lógicos de armazenamento, conhecidos como faixas. Essas camadas podem ter seus próprios tipos de unidade e resiliência, permitindo que cada camada se otimize para desempenho ou capacidade. Alguns exemplos de configurações incluem:
 
@@ -106,7 +107,7 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 
 ## <a name="feature-comparison"></a>Comparação de recursos
 
-### <a name="limits"></a>limites
+### <a name="limits"></a>Limites
 
 | Recurso       | ReFS                                        | NTFS |
 |----------------|------------------------------------------------|-----------------------|
@@ -123,7 +124,7 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 |---------------------------|------------------|-----------------------|
 | Criptografia de BitLocker | Sim | Sim |
 | Eliminação de duplicação de dados | Sim<sup>1</sup> | Sim |
-| Suporte para CSV (Volume Compartilhado Clusterizado) | Sim<sup>2</sup> <sup>4</sup> | Sim |
+| Suporte para CSV (Volume Compartilhado Clusterizado) | Sim<sup>2</sup> <sup>4</sup> | Yes |
 | Links virtuais | Sim | Sim |
 | Suporte para cluster de failover | Sim | Sim |
 | Listas de controle de acesso | Sim | Sim |
@@ -150,7 +151,7 @@ A implantação de ReFS como um destino de backup é mais adequada para aplicati
 |---------------------------|------------------|-----------------------|
 | Clone de blocos | Sim | Não |
 | VDL Esparso | Sim | Não |
-| Paridade acelerada por espelho| Sim (em Espaços de Armazenamento Diretos) | Não |
+| Paridade acelerada por espelho| Sim (em Espaços de Armazenamento Diretos) | No |
 
 #### <a name="the-following-features-are-unavailable-on-refs-at-this-time"></a>Os seguintes recursos não estão disponíveis em ReFS no momento:
 

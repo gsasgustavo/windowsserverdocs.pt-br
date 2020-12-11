@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Configurar AD FS para enviar declarações de expiração de senha'
 ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
 title: Configurar o AD FS para enviar solicitações de expiração de senha
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e53c33f1fef30570db46cf658bd1481343e846cd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d043f86486d0f3370a310ec12cf1d0dfd937795b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962540"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046704"
 ---
 # <a name="configure-ad-fs-to-send-password-expiry-claims"></a>Configurar o AD FS para enviar solicitações de expiração de senha
 

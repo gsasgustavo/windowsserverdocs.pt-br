@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar Access-Denied assistência (etapas de demonstração)'
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9c942b950c2f800fed89f14cc05a8715d9790f28
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fc6c452a37c6e86872bf4f53ba0279c8185548d4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952888"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048334"
 ---
 # <a name="deploy-access-denied-assistance-demonstration-steps"></a>Deploy Access-Denied Assistance (Demonstration Steps)
 
@@ -67,7 +68,7 @@ Você pode configurar a assistência para acesso negado para o domínio usando a
 
     3.  Deixe as configurações padrão restantes.
 
-![guias de solução](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -89,7 +90,7 @@ Você também pode configurar a assistência para acesso negado individualmente 
 
 #### <a name="to-configure-access-denied-assistance-by-using-file-server-resource-manager"></a>Para configurar a assistência para acesso negado usando o Gerenciador de Recursos de Servidor de Arquivos
 
-1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
+1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. Em Gerenciador do Servidor, clique em _ * ferramentas * * e, em seguida, clique em **Gerenciador de recursos de servidor de arquivos**.
 
 2.  Clique com o botão direito do mouse em **Gerenciador de Recursos de Servidor de Arquivos (Local)** e em **Configurar Opções**.
 
@@ -115,7 +116,7 @@ Você também pode configurar a assistência para acesso negado individualmente 
 
 8.  Clique em **OK**.
 
-![guias de solução](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -129,7 +130,7 @@ Depois de configurar a assistência para acesso negado, você deve habilitá-la 
 
 #### <a name="to-configure-access-denied-assistance-for-all-file-types-by-using-group-policy"></a>Para configurar a assistência para acesso negado para todos os tipos de arquivos usando a Política de Grupo
 
-1.  Abra Gerenciamento de Política de Grupo. No Gerenciador do Servidor, clique em **Ferramentas** e depois em **Gerenciamento de Política de Grupo**.
+1.  Abra Gerenciamento de Política de Grupo. Em Gerenciador do Servidor, clique em _ * ferramentas * * e, em seguida, clique em **Gerenciamento de política de grupo**.
 
 2.  Clique com o botão direito do mouse na Política de Grupo apropriada e clique em **Editar**.
 
@@ -139,7 +140,7 @@ Depois de configurar a assistência para acesso negado, você deve habilitá-la 
 
 5.  Clique em **Habilitado** e em **OK**.
 
-![guias de solução](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -154,7 +155,7 @@ Você também pode especificar uma mensagem de acesso negado separada para cada 
 
 #### <a name="to-specify-a-separate-access-denied-message-for-a-shared-folder-by-using-file-server-resource-manager"></a>Para especificar uma mensagem de acesso negado separada para uma pasta compartilhada usando o Gerenciador de Recursos de Servidor de Arquivos
 
-1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
+1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. Em Gerenciador do Servidor, clique em _ * ferramentas * * e, em seguida, clique em **Gerenciador de recursos de servidor de arquivos**.
 
 2.  Expanda o **Gerenciador de Recursos de Servidor de Arquivos (Local)** e depois clique em **Gerenciamento de Classificação**.
 
@@ -176,9 +177,9 @@ Você também pode especificar uma mensagem de acesso negado separada para cada 
 
     -   **[Email do proprietário dos dados]** A lista de destinatários de email do proprietário dos dados.
 
-7.  Clique em **OK**e então clique em **Fechar**.
+7.  Clique em **OK** e então clique em **Fechar**.
 
-![guias de solução](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -191,7 +192,7 @@ Você deve definir as configurações de notificação por email em cada servido
 
 [Execute essa etapa usando o Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)
 
-1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
+1.  Abra o Gerenciador de Recursos de Servidor de Arquivos. Em Gerenciador do Servidor, clique em _ * ferramentas * * e, em seguida, clique em **Gerenciador de recursos de servidor de arquivos**.
 
 2.  Clique com o botão direito do mouse em **Gerenciador de Recursos de Servidor de Arquivos (Local)** e em **Configurar Opções**.
 
@@ -207,7 +208,7 @@ Você deve definir as configurações de notificação por email em cada servido
 
 6.  Clique em **OK**.
 
-![guias de solução](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -216,12 +217,12 @@ set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com"
 ```
 
 ## <a name="step-3-verify-that-access-denied-assistance-is-configured-correctly"></a><a name="BKMK_3"></a>Etapa 3: Verificar se a assistência para acesso negado está configurada corretamente
-Você pode verificar se a assistência com acesso negado está configurada corretamente, tendo um usuário que está executando o Windows 8, tentar acessar um compartilhamento ou um arquivo nesse compartilhamento ao qual eles não têm acesso. Quando a mensagem de acesso negado aparecer, o usuário deverá ver um botão **Solicitar Assistência**. Depois de clicar no botão Solicitar Assistência, o usuário pode especificar um motivo para o acesso e, em seguida, enviar um email para o proprietário da pasta ou o administrador do servidor de arquivos. O proprietário da pasta ou o administrador do servidor de arquivos pode verificar se o email chegou e se contém os elementos adequados.
+Você pode verificar se a assistência com acesso negado está configurada corretamente, tendo um usuário que está executando o Windows 8, tentar acessar um compartilhamento ou um arquivo nesse compartilhamento ao qual eles não têm acesso. Quando a mensagem acesso negado for exibida, o usuário deverá ver um botão _ *solicitar assistência**. Depois de clicar no botão Solicitar Assistência, o usuário pode especificar um motivo para o acesso e, em seguida, enviar um email para o proprietário da pasta ou o administrador do servidor de arquivos. O proprietário da pasta ou o administrador do servidor de arquivos pode verificar se o email chegou e se contém os elementos adequados.
 
 > [!IMPORTANT]
 > Se você quiser verificar a assistência com acesso negado tendo um usuário que esteja executando o Windows Server 2012, você deve instalar a experiência desktop antes de se conectar ao compartilhamento de arquivos.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   [Cenário: assistência para acesso negado](Scenario--Access-Denied-Assistance.md)
 

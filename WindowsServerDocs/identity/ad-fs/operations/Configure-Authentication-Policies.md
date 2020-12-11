@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar políticas de autenticação'
 ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configurar políticas de autenticação
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 25a20cc55d6add3ed36561d6034ad90c428ea065
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4b3564afacf23096b3e76e528015b0e1f155a324
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964823"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045494"
 ---
 # <a name="configure-authentication-policies"></a>Configurar políticas de autenticação
 
@@ -37,7 +38,7 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 
 2.  Em AD FS snap \- in, clique em **políticas de autenticação**.
 
-3.  Na seção **autenticação primária** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação**e selecionar **Editar Autenticação global primária**ou, no painel **ações** , selecionar **Editar Autenticação global primária**.
+3.  Na seção **autenticação primária** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação** e selecionar **Editar Autenticação global primária** ou, no painel **ações** , selecionar **Editar Autenticação global primária**.
 ![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy1.png)
 
 4.  Na janela **Editar política de autenticação global** , na guia **primário** , você pode definir as seguintes configurações como parte da política de autenticação global:
@@ -51,14 +52,14 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  No AD FS snap \- in, clique em **políticas de autenticação** \\ **por confiança de terceira parte confiável**e clique na confiança da terceira parte confiável para a qual você deseja configurar políticas de autenticação.
+2.  No AD FS snap \- in, clique em **políticas de autenticação** \\ **por confiança de terceira parte confiável** e clique na confiança da terceira parte confiável para a qual você deseja configurar políticas de autenticação.
 
-3.  \-Clique com o botão direito do mouse na terceira parte confiável para a qual você deseja configurar as políticas de autenticação e selecione **Editar Autenticação primária personalizada**ou, no painel **ações** , selecione **Editar Autenticação primária personalizada**.
+3.  \-Clique com o botão direito do mouse na terceira parte confiável para a qual você deseja configurar as políticas de autenticação e selecione **Editar Autenticação primária personalizada** ou, no painel **ações** , selecione **Editar Autenticação primária personalizada**.
 ![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy5.png)
 
 4.  Na janela **Editar política de autenticação para <\_ nome de \_ confiança \_ de terceira parte confiável>** , na guia **primária** , você pode definir a seguinte configuração como parte da política de autenticação de confiança de terceira parte **confiável** :
 
-    -   Se os usuários precisam fornecer suas credenciais a cada vez ao entrar \- por meio do, os **usuários precisam fornecer suas credenciais a cada \- ** vez na caixa de seleção entrar.
+    -   Se os usuários precisam fornecer suas credenciais a cada vez ao entrar \- por meio do, os **usuários precisam fornecer suas credenciais a cada \-** vez na caixa de seleção entrar.
 ![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy6.png)
 
 ## <a name="to-configure-multi-factor-authentication-globally"></a>Para configurar a autenticação multifator globalmente
@@ -67,12 +68,12 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 
 2.  Em AD FS snap \- in, clique em **políticas de autenticação**.
 
-3.  Na seção ** \- autenticação multifator** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação**e selecionar **Editar \- autenticação multifator global**ou, no painel **ações** , selecionar **Editar \- autenticação multifator global**.
+3.  Na seção **\- autenticação multifator** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação** e selecionar **Editar \- autenticação multifator global** ou, no painel **ações** , selecionar **Editar \- autenticação multifator global**.
 ![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy8.png)
 
 4.  Na janela **Editar política de autenticação global** , na guia **vários \- fatores** , você pode definir as seguintes configurações como parte da \- política de autenticação multifator global:
 
-    -   Configurações ou condições para MFA por meio de opções disponíveis nas seções ** \/ grupos de usuários**, **dispositivos**e **locais** .
+    -   Configurações ou condições para MFA por meio de opções disponíveis nas seções **\/ grupos de usuários**, **dispositivos** e **locais** .
 
     -   Para habilitar a MFA para qualquer uma dessas configurações, você deve selecionar pelo menos um método de autenticação adicional. A **autenticação de certificado** é a opção padrão disponível. Você também pode configurar outros métodos de autenticação adicionais personalizados, por exemplo, autenticação ativa do Windows Azure. Para obter mais informações, consulte [Guia de instruções: gerenciar riscos com autenticação multifator adicional para aplicativos confidenciais](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
@@ -84,13 +85,13 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  No AD FS snap \- in, clique em **políticas de autenticação** \\ **por confiança de terceira parte confiável**e clique na confiança da terceira parte confiável para a qual você deseja configurar a MFA.
+2.  No AD FS snap \- in, clique em **políticas de autenticação** \\ **por confiança de terceira parte confiável** e clique na confiança da terceira parte confiável para a qual você deseja configurar a MFA.
 
-3.  \-Clique com o botão direito do mouse na terceira parte confiável para a qual você deseja configurar a MFA e, em seguida, selecione **Editar \- autenticação multifator personalizada**ou, no painel **ações** , selecione **Editar \- autenticação multifator personalizada**.
+3.  \-Clique com o botão direito do mouse na terceira parte confiável para a qual você deseja configurar a MFA e, em seguida, selecione **Editar \- autenticação multifator personalizada** ou, no painel **ações** , selecione **Editar \- autenticação multifator personalizada**.
 
 4.  Na janela **Editar política de autenticação para <\_ nome de \_ confiança \_ de terceira parte confiável>** , na guia **vários \- fatores** , você pode definir as seguintes configurações como parte da política de autenticação de confiança de terceira parte \- confiável:
 
-    -   Configurações ou condições para MFA por meio de opções disponíveis nas seções ** \/ grupos de usuários**, **dispositivos**e **locais** .
+    -   Configurações ou condições para MFA por meio de opções disponíveis nas seções **\/ grupos de usuários**, **dispositivos** e **locais** .
 
 ## <a name="configure-authentication-policies-via-windows-powershell"></a>Configurar políticas de autenticação por meio do Windows PowerShell
 O Windows PowerShell permite maior flexibilidade no uso de vários fatores de controle de acesso e do mecanismo de autenticação que estão disponíveis em AD FS no Windows Server 2012 R2 para configurar políticas de autenticação e regras de autorização que são necessárias para implementar o verdadeiro acesso condicional para seus AD FS \- recursos protegidos.
@@ -150,7 +151,7 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 > [!NOTE]
-> Certifique-se de substituir o * \_>SID do grupo de<* pelo valor do SID do seu grupo do AD.
+> Certifique-se de substituir o *\_>SID do grupo de<* pelo valor do SID do seu grupo do AD.
 
 ### <a name="to-configure-mfa-globally-based-on-users-location"></a>Para configurar o MFA globalmente com base no local do usuário
 
@@ -208,7 +209,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
 ~~~
 
 > [!NOTE]
-> Certifique-se de substituir o * \_>SID do grupo de<* pelo valor do SID do grupo e *<true \_ ou \_ false>* por `true` ou `false` , que depende de sua condição de regra específica que se baseia em se a solicitação de acesso é proveniente da extranet ou da intranet.
+> Certifique-se de substituir o *\_>SID do grupo de<* pelo valor do SID do grupo e *<true \_ ou \_ false>* por `true` ou `false` , que depende de sua condição de regra específica que se baseia em se a solicitação de acesso é proveniente da extranet ou da intranet.
 
 ### <a name="to-grant-access-to-an-application-based-on-user-data-via-windows-powershell"></a>Para conceder acesso a um aplicativo com base nos dados do usuário por meio do Windows PowerShell
 
@@ -231,7 +232,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
    ```
 
 > [!NOTE]
-> > Certifique-se de substituir o * \_>SID do grupo de<* pelo valor do SID do seu grupo do AD.
+> > Certifique-se de substituir o *\_>SID do grupo de<* pelo valor do SID do seu grupo do AD.
 
 ### <a name="to-grant-access-to-an-application-that-is-secured-by-ad-fs-only-if-this-users-identity-was-validated-with-mfa"></a>Para conceder acesso a um aplicativo protegido por AD FS somente se a identidade desse usuário tiver sido validada com MFA
 

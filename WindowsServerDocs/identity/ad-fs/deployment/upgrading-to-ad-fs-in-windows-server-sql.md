@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Atualizando para o AD FS no Windows Server 2016 com SQL Server'
 title: Atualizando para o AD FS no Windows Server 2016 com SQL Server
 author: billmath
 manager: mtillman
@@ -6,12 +7,12 @@ ms.date: 04/11/2018
 ms.topic: article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.author: billmath
-ms.openlocfilehash: 434ee97a352ad30caef83e495a387583da1f955b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6c1638ee628491371409f15d7450df7b77872f7d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940554"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046134"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Atualizando para o AD FS no Windows Server 2016 com SQL Server
 
@@ -52,7 +53,7 @@ Para o diagrama arquitetônico a seguir mostra a configuração que foi usada pa
 
 2.  Usando o assistente de configuração do AD FS, ingresse o novo servidor do Windows Server 2016 no farm de AD FS existente.  Na tela de **boas-vindas** , clique em **Avançar**.
  ![Ingressar no farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
-3.  Na tela **conectar ao Active Directory Domain Services** , s**pecificar uma conta de administrador** com permissões para executar a configuração dos serviços de Federação e clique em **Avançar**.
+3.  Na tela **conectar ao Active Directory Domain Services** , s **pecificar uma conta de administrador** com permissões para executar a configuração dos serviços de Federação e clique em **Avançar**.
 4.  Na tela **especificar farm** , insira o nome do SQL Server e da instância e clique em **Avançar**.
 ![Ingressar no farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  Na tela **especificar certificado SSL** , especifique o certificado e clique em **Avançar**.
@@ -66,7 +67,7 @@ Para o diagrama arquitetônico a seguir mostra a configuração que foi usada pa
 #### <a name="remove-the-windows-server-2012-r2-ad-fs-server"></a>Remover o Windows Server 2012 R2 AD FS Server
 
 >[!NOTE]
->Você não precisa definir o servidor de AD FS primário usando Set-AdfsSyncProperties-role ao usar o SQL como o banco de dados.  Isso ocorre porque todos os nós são considerados primários nessa configuração.
+>Você não precisa definir o servidor de AD FS primário usando a função Set-AdfsSyncProperties ao usar o SQL como o banco de dados.  Isso ocorre porque todos os nós são considerados primários nessa configuração.
 
 1.  No Windows Server 2012 R2 AD FS Server em Gerenciador do Servidor use **remover funções e recursos** em **gerenciar**.
 ![Remover servidor](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
@@ -103,7 +104,7 @@ Antes desta etapa, você precisa garantir que forestprep e DomainPrep tenham sid
     ```powershell
     Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
     ```
-3. Verifique a configuração de WAP executando o commmandlet Get-WebApplicationProxyConfiguration. O ConnectedServersName refletirá a execução do servidor do comando anterior.
+3. Verifique a configuração de WAP executando o Get-WebApplicationProxyConfiguration commmandlet. O ConnectedServersName refletirá a execução do servidor do comando anterior.
     ```powershell
     Get-WebApplicationProxyConfiguration
     ```
@@ -111,4 +112,4 @@ Antes desta etapa, você precisa garantir que forestprep e DomainPrep tenham sid
     ```powershell
     Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
     ```
-5. Verifique se o ConfigurationVersion foi atualizado com o comando Get-WebApplicationProxyConfiguration do PowerShell.
+5. Verifique se o ConfigurationVersion foi atualizado com o comando Get-WebApplicationProxyConfiguration PowerShell.

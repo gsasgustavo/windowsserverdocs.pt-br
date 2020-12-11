@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: quando usar a delegação de identidade'
 ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: Quando usar a delegação de identidade
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f10ee03f7c9ca5e875c64bddfb427200072d9dca
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a2d3987e4051ad4248381e9a425b2d728755eb55
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962740"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044964"
 ---
 # <a name="when-to-use-identity-delegation"></a>Quando usar a delegação de identidade
 

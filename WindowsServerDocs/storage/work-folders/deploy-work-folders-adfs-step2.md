@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar pastas de trabalho com o AD FS e o proxy de aplicativo Web: etapa 2, AD FS trabalho de pós-configuração'
 title: Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web - Etapa 2, Trabalho de pós-configuração do AD FS
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 84ff335514b4b9251ffa1518b613120f3b3e2869
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a830297b0adc8eb3ea0badb605570593933be918
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946189"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045364"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Implantar Pastas de Trabalho com o AD FS e o Proxy de aplicativo Web: Etapa 2, Trabalho de pós-configuração do AD FS
 
@@ -102,7 +103,7 @@ Para configurar o objeto de confiança de terceira parte confiável:
 
 7.  Na página **Configurar URL**, clique em **Avançar**.
 
-8. Na página **Configurar identificadores** , adicione o seguinte identificador: `https://windows-server-work-folders/V1` . Esse identificador é um valor embutido em código usado pelas Pastas de Trabalho e enviado pelo serviço Pastas de Trabalho quando ele está se comunicando com o AD FS. Clique em **Próximo**.
+8. Na página **Configurar identificadores** , adicione o seguinte identificador: `https://windows-server-work-folders/V1` . Esse identificador é um valor embutido em código usado pelas Pastas de Trabalho e enviado pelo serviço Pastas de Trabalho quando ele está se comunicando com o AD FS. Clique em **Avançar**.
 
 9. Na página Escolher Política de Controle de Acesso, selecione **Permitir Todos** e clique em **Avançar**.
 
@@ -149,10 +150,10 @@ Depois que o objeto de confiança de terceira parte confiável tiver sido config
 Para definir essas opções, use os seguintes comandos:
 
 ```powershell
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false
 Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -AutoupdateEnabled $true
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
 Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile
 ```
 
@@ -182,7 +183,7 @@ Em seguida, exporte o certificado autoassinado do AD FS para que ele possa ser i
 
 Para exportar o certificado, siga estas etapas:
 
-1.  Clique em **Iniciar**e em **Executar**.
+1.  Clique em **Iniciar** e em **Executar**.
 
 2.  Digite **MMC**.
 
@@ -204,7 +205,7 @@ Para exportar o certificado, siga estas etapas:
 
 11. Na página **Formato do Arquivo de Exportação**, deixe as opções padrão selecionadas e clique em **Avançar**.
 
-12. Crie uma senha para o certificado. Esta é a senha que você usará mais tarde quando importar o certificado para outros dispositivos. Clique em **Próximo**.
+12. Crie uma senha para o certificado. Esta é a senha que você usará mais tarde quando importar o certificado para outros dispositivos. Clique em **Avançar**.
 
 13. Insira um local e o nome para o certificado e clique em **Concluir**.
 
@@ -214,7 +215,7 @@ A instalação do certificado será abordada posteriormente no procedimento de i
 
 Você deve dar permissão à conta de serviço do AD FS para acessar a chave privada do novo certificado. Você precisará conceder essa permissão novamente ao substituir o certificado de comunicação depois que ele expirar. Para conceder permissão, siga estas etapas:
 
-1.  Clique em **Iniciar**e em **Executar**.
+1.  Clique em **Iniciar** e em **Executar**.
 
 2.  Digite **MMC**.
 
@@ -240,7 +241,7 @@ Você deve dar permissão à conta de serviço do AD FS para acessar a chave pri
 
 13. Na janela **Permissões**, atribua pelo menos permissões de leitura à conta e clique em **OK**.
 
-Se você não tiver a opção de gerenciar chaves privadas, talvez seja necessário executar o seguinte comando:`certutil -repairstore my *`
+Se você não tiver a opção de gerenciar chaves privadas, talvez seja necessário executar o seguinte comando: `certutil -repairstore my *`
 
 ## <a name="verify-that-ad-fs-is-operational"></a>Verificar se AD FS está operacional
 

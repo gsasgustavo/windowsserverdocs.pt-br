@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice B: Configurando o ambiente de teste'
 ms.assetid: 82918181-525d-4e93-af96-957dac6aedb6
 title: Apêndice B Configurando o ambiente de teste
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fee963cf2a39ded3a17c75032c684b32ad43c5a0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e15a3ccb7da0f2418d7b9c64f2534cd2165584a6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952921"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048404"
 ---
 # <a name="appendix-b-setting-up-the-test-environment"></a>Apêndice B: configuração do ambiente de teste
 
@@ -48,11 +49,11 @@ Você precisará criar as seguintes máquinas virtuais para testar os cenários 
 
 As senhas das máquinas virtuais deverão ser as seguintes:
 
--   BUILTIN\Administratorpass@word1
+-   BUILTIN\Administrator pass@word1
 
--   Contoso\Administratorpass@word1
+-   Contoso\Administrator pass@word1
 
--   Todas as outras contas:pass@word1
+-   Todas as outras contas: pass@word1
 
 ## <a name="build-the-test-lab-virtual-machines"></a>Criar as máquinas virtuais do laboratório de teste
 
@@ -161,13 +162,13 @@ Crie os seguintes usuários usando o Centro Administrativo do Active Directory.
 4. Crie os usuários a seguir com os atributos indicados:
 
 
-   |       Usuário       |  Nome de Usuário  |     Endereço de email      | department |      Agrupar       | País/Região |
+   |       Usuário       |  Nome de Usuário  |     Endereço de email      | department |      Grupo       | País/Região |
    |------------------|------------|------------------------|------------|------------------|----------------|
-   | Myriam Delesalle | MDelesalle | MDelesalle@contoso.com |  Finance   |                  |       EUA       |
-   |    Miles Reid    |   MReid    |   MReid@contoso.com    |  Finance   |   FinanceAdmin   |       EUA       |
-   |   Esther Valle   |   EValle   |   EValle@contoso.com   | Operações | FinanceException |       EUA       |
-   |   Maira Wenzel   |  MWenzel   |  MWenzel@contoso.com   |     HR     |                  |       EUA       |
-   |     Jeff Low     |    JLow    |    JLow@contoso.com    |     HR     |                  |       EUA       |
+   | Myriam Delesalle | MDelesalle | MDelesalle@contoso.com |  Finance   |                  |       US       |
+   |    Miles Reid    |   MReid    |   MReid@contoso.com    |  Finance   |   FinanceAdmin   |       US       |
+   |   Esther Valle   |   EValle   |   EValle@contoso.com   | Operações | FinanceException |       US       |
+   |   Maira Wenzel   |  MWenzel   |  MWenzel@contoso.com   |     HR     |                  |       US       |
+   |     Jeff Low     |    JLow    |    JLow@contoso.com    |     HR     |                  |       US       |
    |    Servidor RMS    |    rms     |    rms@contoso.com     |            |                  |                |
 
    Para obter mais informações sobre como criar grupos de segurança, consulte [Criar um novo grupo](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd861305(v=ws.11)) no site do Windows Server.
@@ -325,11 +326,11 @@ Adicione o AD RMS e todos os recursos necessários pelo Gerenciador do Servidor.
     > [!NOTE]
     > É recomendado usar o Banco de Dados Interno do Windows em ambientes de teste porque ele não dá suporte a mais de um servidor no cluster do AD RMS. Implantações de produção devem usar um servidor de banco de dados separado.
 
-19. Na tela **conta de serviço** , em **conta de usuário do domínio**, clique em **especificar** e especifique o nome de usuário (**contoso\rms**) e a senha ( <strong>pass@word1</strong> ) e clique em **OK**e em **Avançar**.
+19. Na tela **conta de serviço** , em **conta de usuário do domínio**, clique em **especificar** e especifique o nome de usuário (**contoso\rms**) e a senha ( <strong>pass@word1</strong> ) e clique em **OK** e em **Avançar**.
 
 20. Na tela **Modo Criptográfico**, clique em **Modo Criptográfico 2**.
 
-21. Na tela **Armazenamento de Chave do Cluster **, clique em **Avançar**.
+21. Na tela **Armazenamento de Chave do Cluster**, clique em **Avançar**.
 
 22. Na tela **senha da chave do cluster** , nas caixas **senha** e **Confirmar senha** , digite <strong>pass@word1</strong> e clique em **Avançar**.
 
@@ -526,7 +527,7 @@ Configure o Microsoft Exchange Server neste computador. Para obter mais informa�
 
    - Servidor de email de saída: O endereço IP estático do SRV1
 
-   - Nome de usuário:fileadmin@contoso.com
+   - Nome de usuário: fileadmin@contoso.com
 
    - Lembrar a senha: Selecionar
 
@@ -631,7 +632,7 @@ Nesta etapa, você criará a relação de confiança entre os sites da Adatum Co
 
 5.  Na página **Tipo de Relação de Confiança**, clique em **Relação de Confiança da Floresta** e em **Avançar**.
 
-6.  Na página **Direção da Relação de Confiança**, clique em**Bidirecional**.
+6.  Na página **Direção da Relação de Confiança**, clique em **Bidirecional**.
 
 7.  Na página **Lados da Relação de Confiança**, clique em **Neste domínio e no domínio especificado** e depois clique em **Avançar**.
 
@@ -736,7 +737,7 @@ Crie o usuário Jeff Low com a senha <strong>pass@word1</strong> e atribua o atr
 
 1. No painel esquerdo do Centro Administrativo do Active Directory, clique em **Modo de Exibição de Árvore**. No painel esquerdo, clique em **Controle de Acesso Dinâmico** e clique em **Regras de Acesso Central**.
 
-2. Clique com o botão direito em **Regras de Acesso Central**, em **Nova** e depois em**Regra de Acesso Central**.
+2. Clique com o botão direito em **Regras de Acesso Central**, em **Nova** e depois em **Regra de Acesso Central**.
 
 3. No campo **Nome**, digite **RegradeAcessoparaFuncionáriosAdatum**.
 
@@ -748,7 +749,7 @@ Crie o usuário Jeff Low com a senha <strong>pass@word1</strong> e atribua o atr
 
 7. Clique em **OK** três vezes para concluir e voltar ao Centro Administrativo do Active Directory.
 
-   ![guias de solução](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+   ![guias de solução ](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
    O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -779,7 +780,7 @@ Crie o usuário Jeff Low com a senha <strong>pass@word1</strong> e atribua o atr
 
 ##### <a name="to-apply-the-central-access-policy-across-file-servers-through-group-policy"></a>Para aplicar a política de acesso central aos servidores do arquivo por meio da Política de Grupo
 
-1.  Na tela **Iniciar**, digite **Ferramentas Administrativas** e na barra **Pesquisar**, clique em **Configurações**. Nos resultados de **Configurações**, clique em **Ferramentas Administrativas**. Abra o Console de Gerenciamento de Política de Grupo na pasta **Ferramentas Administrativas**.
+1.  Na tela _ *Iniciar**, digite **Ferramentas administrativas** e, na barra de **pesquisa** , clique em **configurações**. Nos resultados de **Configurações**, clique em **Ferramentas Administrativas**. Abra o Console de Gerenciamento de Política de Grupo na pasta **Ferramentas Administrativas**.
 
     > [!TIP]
     > Se a configuração **Mostrar Ferramentas Administrativas** estiver desabilitada, a pasta Ferramentas Administrativas e seus conteúdos não aparecerão nos resultados de **Configurações**.
@@ -797,7 +798,7 @@ Crie o usuário Jeff Low com a senha <strong>pass@word1</strong> e atribua o atr
 
 2.  Navegue e selecione Contoso da seguinte maneira: Group Policy Management\Forest: contoso.com\Domains\contoso.com.
 
-3.  Clique com o botão direito do mouse na política**GPOdeAcessodaDatum** e selecione **Editar**.
+3.  Clique com o botão direito do mouse na política **GPOdeAcessodaDatum** e selecione **Editar**.
 
 4.  No Editor de Gerenciamento de Política de Grupo, clique em **Configuração do Computador**, expanda **Políticas**, expanda **Configurações do Windows** e clique em **Configurações de Segurança**.
 
@@ -825,10 +826,10 @@ Crie um novo volume NTFS no FILE1 e crie a seguinte pasta: D:\Ganhos.
 
 4. Abra o Windows Explorer e navegue para D:\GANHOS. Clique com o botão direito do mouse na pasta **Ganhos** e clique em **Propriedades**.
 
-5. Clique na guia **classificação** . Selecione **empresa**e, em seguida, selecione **adatum** no campo **valor** .
+5. Clique na guia **classificação** . Selecione **empresa** e, em seguida, selecione **adatum** no campo **valor** .
 
 6. Clique em **Alterar**, selecione **Política de Acesso Somente para Adatum** no menu suspenso e clique em **Aplicar**.
 
-7. Clique na guia **segurança** , clique em **avançado**e, em seguida, clique na guia **política central** . Você deve ver o **AdatumEmployeeAccessRule** listado. Você pode expandir o item para ver todas as permissões definidas ao criar a regra no Active Directory.
+7. Clique na guia **segurança** , clique em **avançado** e, em seguida, clique na guia **política central** . Você deve ver o **AdatumEmployeeAccessRule** listado. Você pode expandir o item para ver todas as permissões definidas ao criar a regra no Active Directory.
 
 8. Clique em **OK** para retornar ao Windows Explorer.

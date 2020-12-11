@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: requisitos de certificado para servidores de Federação'
 ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: Requisitos de certificado para servidores de federação
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fcf78fa6242c10d469320ce3803da94134576c8b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c9b769588d4dcb0d77f15143247151b20f0dc934
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954362"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044774"
 ---
 # <a name="certificate-requirements-for-federation-servers"></a>Requisitos de certificado para servidores de federação
 
@@ -22,7 +23,7 @@ Em qualquer Serviços de Federação do Active Directory (AD FS) \( design de AD
 |Certificado de autenticação de tokens \-|Um certificado de autenticação de token \- é um certificado X509. Os servidores de Federação usam \/ pares de chave privada pública associados para assinar digitalmente todos os tokens de segurança que eles produzem. Isso inclui a assinatura de metadados de federação publicados e solicitações de resolução de artefato.<p>Você pode ter vários certificados de autenticação de tokens \- configurados no snap-in de gerenciamento de AD FS \- para permitir a substituição de certificado quando um certificado está perto de expirar. Por padrão, todos os certificados na lista são publicados, mas somente o certificado de autenticação de token primário \- é usado pelo AD FS para assinar tokens. Todos os certificados que você selecionar devem ter uma chave privada correspondente.<p>Para mais informações, consulte [Certificados de autenticação de tokens](Token-Signing-Certificates.md) e [Adicionar um certificado de autenticação de token](../../ad-fs/deployment/Add-a-Token-Signing-Certificate.md).|
 |Certificado de comunicação de serviço|Os servidores de Federação usam um certificado de autenticação de servidor, também conhecido como comunicação de serviço para Windows Communication Foundation \( segurança de mensagem do WCF \) . Por padrão, esse é o mesmo certificado que um servidor de Federação usa como o \( certificado protocolo SSL SSL \) no serviços de informações da Internet \( IIS \) . **Observação:** O snap in de gerenciamento de AD FS \- no refere-se aos certificados de autenticação de servidor para servidores de Federação como certificados de comunicação de serviço.<p>Para obter mais informações, consulte [certificados de comunicações de serviço](Service-Communications-Certificates.md) e [definir um certificado de comunicações de serviço](../../ad-fs/deployment/Set-a-Service-Communications-Certificate.md).<p>Como o certificado de comunicação do serviço deve ser confiável por computadores cliente, recomendamos que você use um certificado assinado por uma autoridade de certificação \( confiável \) . Todos os certificados que você selecionar devem ter uma chave privada correspondente.|
 |Protocolo SSL \( \) certificado SSL|Os servidores de federação usam um certificado SSL para proteger o tráfego de serviços Web para comunicação SSL com os clientes Web e com proxies de servidor de federação.<p>Como o certificado SSL deve ser confiável para os computadores cliente, recomendamos que você use um certificado assinado por uma AC confiável. Todos os certificados que você selecionar devem ter uma chave privada correspondente.|
-|\-Certificado de descriptografia de token|Esse certificado é usado para descriptografar tokens recebidos por esse servidor de Federação.<p>Você pode ter vários certificados de descriptografia. Isso possibilita que um servidor de Federação de recursos seja capaz de descriptografar tokens emitidos com um certificado mais antigo depois que um novo certificado é definido como o certificado de descriptografia primário. Todos os certificados podem ser usados para descriptografia, mas apenas o certificado de descriptografia de token primário \- é realmente publicado em metadados de Federação. Todos os certificados que você selecionar devem ter uma chave privada correspondente.<p>Para obter mais informações, consulte [Adicionar um certificado de descriptografia de token](../../ad-fs/deployment/Add-a-Token-Decrypting-Certificate.md).|
+|\-Certificado de descriptografia de token|Esse certificado é usado para descriptografar tokens recebidos por esse servidor de Federação.<p>Você pode ter vários certificados de descriptografia. Isso possibilita que um servidor de Federação de recursos seja capaz de descriptografar tokens emitidos com um certificado mais antigo depois que um novo certificado é definido como o certificado de descriptografia primário. Todos os certificados podem ser usados para descriptografia, mas apenas o certificado de descriptografia de token primário \- é realmente publicado em metadados de Federação. Todos os certificados que você selecionar devem ter uma chave privada correspondente.<p>Para obter mais informações, consulte [Adicionar um certificado de Token-Decrypting](../../ad-fs/deployment/Add-a-Token-Decrypting-Certificate.md).|
 
 Você pode solicitar e instalar um certificado SSL ou um certificado de comunicação de serviço solicitando um certificado de comunicação de serviço por meio do snap-in MMC do console de gerenciamento Microsoft \( \) \- para IIS. Para obter mais informações gerais sobre como usar certificados SSL, consulte [iis 7,0: Configurando protocolo SSL no iis 7,0](https://go.microsoft.com/fwlink/?LinkID=108544) e [IIS 7,0: Configurando certificados de servidor no IIS 7,0](https://go.microsoft.com/fwlink/?LinkID=108545) .
 

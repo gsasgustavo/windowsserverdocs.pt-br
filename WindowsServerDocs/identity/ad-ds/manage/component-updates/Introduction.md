@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: introdução'
 ms.assetid: 84754c23-f039-4de4-a378-853942e662df
 title: Introdução
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e9df8c913db5c25b53abd1f4fd8aad1c4dbe2e54
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 9f022f30b977fee15d7d20ba3f9330806a3570a4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070658"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048814"
 ---
 # <a name="introduction"></a>Introdução
 
@@ -32,8 +33,8 @@ A tabela a seguir fornece um guia para as convenções de nomenclatura usadas ne
 | --- | --- | --- |
 |Active Directory-cada domínio|Administrador|Conta de administrador interna|
 |Active Directory-cada domínio|Administradores|Grupo de administradores internos (BA)|
-|Active Directory-cada domínio|Administradores de Domínio|Grupo de administradores de domínio (DA)|
-|Active Directory-domínio raiz da floresta|Administradores Corporativos|Grupo de administração de empresa (EA)|
+|Active Directory-cada domínio|Administradores do domínio|Grupo de administradores de domínio (DA)|
+|Active Directory-domínio raiz da floresta|Administrador corporativo|Grupo de administração de empresa (EA)|
 |Banco de dados SAM (Gerenciador de contas de segurança) do computador local em computadores que executam o Windows Server e estações de trabalho que não são controladores de domínio|Administrador|Conta de administrador local|
 |Banco de dados SAM (Gerenciador de contas de segurança) do computador local em computadores que executam o Windows Server e estações de trabalho que não são controladores de domínio|Administradores|Grupo de administradores locais|
 

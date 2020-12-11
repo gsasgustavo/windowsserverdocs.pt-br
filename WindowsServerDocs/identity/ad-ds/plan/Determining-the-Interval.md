@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: determinando o intervalo'
 ms.assetid: 96a6749c-6c9f-4f2f-ad0a-51272d282ace
 title: Determinando o intervalo
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0ad2e92bb0d1264d6e651ae5f5a676a210ad8811
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: d4a9095e82c878de8338b9926f5c2da606c859f0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069178"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048184"
 ---
 # <a name="determining-the-interval"></a>Determinando o intervalo
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma regra para permitir ou negar usuários com base em uma declaração de entrada'
 ms.assetid: 3d770385-9834-4ebe-b66c-b684e0245971
 title: Criar uma regra para permitir ou negar usuários com base em uma declaração de entrada
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c6d0d1b2d91b4b0983dbe8169e094403bb2c732a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5c88f4ae94002f436cedae74fa32211f701e270e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048194"
 ---
 # <a name="create-a-rule-to-permit-or-deny-users-based-on-an-incoming-claim"></a>Criar uma regra para permitir ou negar usuários com base em uma declaração de entrada
 
@@ -40,7 +41,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 5. No **Editor de regras**, em usuários, coloque um check-in **com declarações específicas na solicitação** e clique no sublinhado **específico** na parte inferior.
 ![Criar regra](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny6.PNG)
 
-6. Na tela **selecionar declarações** , clique no botão de opção **declarações** , selecione o **tipo de declaração**, o **operador**e o **valor da declaração** e clique em **OK**.
+6. Na tela **selecionar declarações** , clique no botão de opção **declarações** , selecione o **tipo de declaração**, o **operador** e o **valor da declaração** e clique em **OK**.
 ![Criar regra](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny7.PNG)
 
 7.  No **Editor de regras** , clique em **OK**.  Na tela **Adicionar política de controle de acesso** , clique em **OK**.
@@ -70,7 +71,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 5. No **Editor de regras**, verifique se todos estão selecionados e **, em exceção** , coloque um check-in **com declarações específicas na solicitação** e clique no sublinhado **específico** na parte inferior.
 ![Criar regra](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny10.PNG)
 
-6. Na tela **selecionar declarações** , clique no botão de opção **declarações** , selecione o **tipo de declaração**, o **operador**e o **valor da declaração** e clique em **OK**.
+6. Na tela **selecionar declarações** , clique no botão de opção **declarações** , selecione o **tipo de declaração**, o **operador** e o **valor da declaração** e clique em **OK**.
 ![Criar regra](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny11.PNG)
 
 7.  No **Editor de regras** , clique em **OK**.  Na tela **Adicionar política de controle de acesso** , clique em **OK**.

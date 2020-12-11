@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: adicionar um certificado de Token-Decrypting'
 ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: Adicionar um certificado de descriptografia de tokens
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 0c6e2fc3913a6a483d71441a5e2aa1f0aabb7cbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 86f45f534567b88ad07c1334c0536ebcfe05524e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947627"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047884"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>Adicionar um certificado de descriptografia de tokens
 
@@ -26,9 +27,9 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-add-a-token-decrypting-certificate"></a>Para adicionar um \- certificado de descriptografia de token
 
-1.  Na tela **Iniciar** , digite**Gerenciamento de AD FS**e pressione Enter.
+1.  Na tela **Iniciar** , digite **Gerenciamento de AD FS** e pressione Enter.
 
-2.  Na árvore de console, clique duas vezes \- em **serviço**e, em seguida, clique em **certificados**.
+2.  Na árvore de console, clique duas vezes \- em **serviço** e, em seguida, clique em **certificados**.
 
 3.  No painel **ações** , clique no link **Adicionar \- certificado de descriptografia de token** .
 

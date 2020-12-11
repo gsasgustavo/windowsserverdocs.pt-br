@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Serviço de Integridade no Windows Server'
 title: Serviço de Integridade no Windows Server
 manager: eldenc
 ms.author: cosdar
@@ -6,12 +7,12 @@ ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 02/09/2018
-ms.openlocfilehash: 69bf8d66fdd3e7fac4066791d0521173484a894f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 486234923a9eff0c185249701b4f9ee28c752e24
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953412"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047724"
 ---
 # <a name="health-service-in-windows-server"></a>Serviço de Integridade no Windows Server
 

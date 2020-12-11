@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: Publicando aplicativos usando AD FS pré-autenticação'
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publicar aplicativos usando a Pré-autenticação do AD FS
 ms.author: kgremban
 author: eross-msft
 ms.date: 07/13/2016
 ms.topic: article
-ms.openlocfilehash: e90b1995e5322bb0e1632df6b5947da0fc1b0244
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 774e621d1cc6a6449c758673a6bb1424ae3f2f17
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939817"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044924"
 ---
 # <a name="publishing-applications-using-ad-fs-preauthentication"></a>Publicar aplicativos usando a Pré-autenticação do AD FS
 
@@ -96,7 +97,7 @@ Este procedimento descreve como publicar um aplicativo baseado em declarações,
 
 ### <a name="to-publish-a-claims-based-application"></a>Para publicar um aplicativo baseado em declarações
 
-1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web**e, no painel **tarefas** , clique em **publicar**.
+1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web** e, no painel **tarefas** , clique em **publicar**.
 
 2.  No **Assistente para Publicar Novo Aplicativo**, na página de **Boas-vindas**, clique em **Avançar**.
 
@@ -176,7 +177,7 @@ Este procedimento descreve como publicar um aplicativo que usa a autenticação 
 
 #### <a name="to-publish-a-non-claims-based-application"></a>Para publicar um aplicativo que não é baseado em declarações
 
-1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web**e, no painel **tarefas** , clique em **publicar**.
+1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web** e, no painel **tarefas** , clique em **publicar**.
 
 2.  No **Assistente para Publicar Novo Aplicativo**, na página de **Boas-vindas**, clique em **Avançar**.
 
@@ -279,7 +280,7 @@ O procedimento a seguir explica como publicar aplicativos HTTP básicos.
 
 #### <a name="to-publish-an-http-basic-application"></a>Para publicar um aplicativo HTTP básico
 
-1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web**e, no painel **tarefas** , clique em **publicar**.
+1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web** e, no painel **tarefas** , clique em **publicar**.
 
 2.  No **Assistente para Publicar Novo Aplicativo**, na página de **Boas-vindas**, clique em **Avançar**.
 
@@ -384,7 +385,7 @@ Este procedimento descreve como publicar um aplicativo para OAuth2. Esse tipo de
 
 #### <a name="to-publish-an-oauth2-app"></a>Para publicar um aplicativo OAuth2
 
-1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web**e, no painel **tarefas** , clique em **publicar**.
+1.  No servidor proxy de aplicativo Web, no console de gerenciamento de acesso remoto, no painel de **navegação** , clique em **proxy de aplicativo Web** e, no painel **tarefas** , clique em **publicar**.
 
 2.  No **Assistente para Publicar Novo Aplicativo**, na página de **Boas-vindas**, clique em **Avançar**.
 
@@ -436,7 +437,7 @@ Add-WebApplicationProxyApplication
     -UseOAuthAuthentication
 ```
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   [Como solucionar problemas de proxy de aplicativo Web](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))
 

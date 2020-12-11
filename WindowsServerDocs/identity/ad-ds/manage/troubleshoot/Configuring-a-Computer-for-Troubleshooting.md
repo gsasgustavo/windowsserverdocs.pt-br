@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Configurando um computador para solução de problemas'
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configurar um computador para solução de problemas
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: f340cd9608eec21110efe7d10e936c5320d6e303
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: fe1d3a187efb5a73268a00e99178e6a37d81f950
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070458"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046344"
 ---
 # <a name="configuring-a-computer-for-troubleshooting"></a>Configurar um computador para solução de problemas
 
@@ -39,9 +40,9 @@ O monitor de confiabilidade e desempenho também inclui o monitor de confiabilid
 
 ### <a name="set-logging-levels"></a>Definir os níveis de registros em log
 
-Se as informações recebidas no log do serviço de diretório Visualizador de Eventos não forem suficientes para solução de problemas, aumente os níveis de log usando a entrada de registro apropriada no **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics** .
+Se as informações recebidas no log do serviço de diretório Visualizador de Eventos não forem suficientes para solução de problemas, aumente os níveis de log usando a entrada de registro apropriada no **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics**.
 
-Por padrão, os níveis de log para todas as entradas são definidos como **0** , que fornece a quantidade mínima de informações. O nível de log mais alto é **5** . O aumento do nível de uma entrada faz com que eventos adicionais sejam registrados no log de eventos do serviço de diretório.
+Por padrão, os níveis de log para todas as entradas são definidos como **0**, que fornece a quantidade mínima de informações. O nível de log mais alto é **5**. O aumento do nível de uma entrada faz com que eventos adicionais sejam registrados no log de eventos do serviço de diretório.
 
 Use o procedimento a seguir para alterar o nível de log para uma entrada de diagnóstico. A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo exigido para concluir este procedimento.
 
@@ -51,8 +52,8 @@ Use o procedimento a seguir para alterar o nível de log para uma entrada de dia
 
 Para alterar o nível de log para uma entrada de diagnóstico
 
-1. Clique em **Iniciar**  >  **execução** > digite **regedit** > clique em **OK** .
+1. Clique em **Iniciar**  >  **execução** > digite **regedit** > clique em **OK**.
 2. Navegue até a entrada para a qual você deseja definir o logon.
    * EXEMPLO: HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSDiagnostics
-3. Clique duas vezes na entrada e, em **base** , clique em **decimal** .
-4. Em **valor** , digite um inteiro de **0** a **5** e, em seguida, clique em **OK** .
+3. Clique duas vezes na entrada e, em **base**, clique em **decimal**.
+4. Em **valor**, digite um inteiro de **0** a **5** e, em seguida, clique em **OK**.

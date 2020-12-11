@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: o que há de novo na instalação e remoção de Active Directory Domain Services'
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: Novidades na instalação e na remoção dos Serviços de Domínio Active Directory
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: a16d4ab1a831eb4f057e3802ad644a13a234805b
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: b21233a72cc7e2587a95e0fdb19fa0b71cb6f311
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069908"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045934"
 ---
 # <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Novidades na instalação e na remoção dos Serviços de Domínio Active Directory
 
@@ -165,7 +166,7 @@ Esta seção lista alguns dos problemas conhecidos que afetam AD DS instalação
 
    A mensagem de erro apresentada nesse caso é a seguinte:
 
-   Não é possível se conectar ao controlador de domínio de origem de replicação *nome do controlador de domínio de origem* . (Exceção: Longonfailure: nome se usuário desconhecido ou senha incorreta)
+   Não é possível se conectar ao controlador de domínio de origem de replicação *nome do controlador de domínio de origem*. (Exceção: Longonfailure: nome se usuário desconhecido ou senha incorreta)
 
    Se você ingressar o servidor de destino no domínio e depois executar a instalação usando um cartão inteligente, a instalação terá êxito.
 

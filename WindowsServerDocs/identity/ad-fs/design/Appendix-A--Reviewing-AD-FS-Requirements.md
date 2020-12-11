@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice A: revisando requisitos de AD FS'
 ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
 title: Apêndice A-revisando requisitos de AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ad3184dbe43cfa108aa1b178421102880b3ef4d7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e59d13f4a7df9f8ed829ac76cb8675e74f7d7938
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994987"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047864"
 ---
 # <a name="appendix-a-reviewing-ad-fs-requirements"></a>Apêndice A: examinando requisitos do AD FS
 
@@ -26,7 +27,7 @@ Os requisitos de hardware mínimos e recomendados a seguir se aplicam ao servido
 |Requisito de hardware|Requisito mínimo|Requisito recomendado|
 |------------------------|-----------------------|---------------------------|
 |Velocidade da CPU|Um núcleo, 1 GHz (gigahertz)|Quatro núcleos, 2 GHz|
-|RAM|1 GB|4 GB|
+|RAM|1 GB|4 GB|
 |Espaço em disco|50 MB|100 MB|
 
 ## <a name="software-requirements"></a>Requisitos de software
@@ -112,7 +113,7 @@ AD FS exige que pelo menos um repositório de atributos seja usado para autentic
 
 Os requisitos de repositório de atributos dependem de sua organização estar agindo como parceiro de conta (hospedando os usuários federados) ou parceiro de recurso (hospedando o aplicativo federado).
 
-### <a name="adds"></a>AD DS
+### <a name="ad-ds"></a>AD DS
 Para que AD FS operem com êxito, os controladores de domínio na organização do parceiro de conta ou na organização do parceiro de recurso devem estar executando o Windows Server 2003 SP1, o Windows Server 2003 R2, o Windows Server 2008 ou o Windows Server 2012.
 
 Quando o AD FS é instalado e configurado em um computador ingressado em domínio, o repositório de contas de usuário do Active Directory desse domínio é disponibilizado como um repositório de atributos selecionável.

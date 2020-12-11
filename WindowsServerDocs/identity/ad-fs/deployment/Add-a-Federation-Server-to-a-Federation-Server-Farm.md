@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: adicionar um servidor de Federação a um farm de servidores de Federação'
 ms.assetid: 6ecf8d85-cd61-4c87-add8-00a679a6e3ff
 title: Adicionar um servidor de federação a um farm de servidores de federação
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 0b814a791b510cc32b496cabf272dedfd307caac
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7ef9e7343aa3d687232e67dc0fb4b45b237c0fea
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947674"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047954"
 ---
 # <a name="add-a-federation-server-to-a-federation-server-farm"></a>Adicionar um servidor de federação a um farm de servidores de federação
 
@@ -47,7 +48,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 5.  Na página **Pronto para Aplicar as Configurações**, verificar os detalhes. Se as configurações parecem estar certas, clique em **Próximo** para começar configurar o AD FS com estas configurações.
 
-6.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar** para sair do assistente.
+6.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar**  para sair do assistente.
 
 ## <a name="additional-references"></a>Referências adicionais
 [Lista de verificação: Como configurar um servidor de federação](Checklist--Setting-Up-a-Federation-Server.md)

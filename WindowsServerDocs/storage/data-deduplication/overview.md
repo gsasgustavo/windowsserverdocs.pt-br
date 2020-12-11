@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: visão geral da eliminação de duplicação de dados'
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Visão geral de eliminação de duplicação de dados
 ms.topic: article
@@ -6,12 +7,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 05/09/2017
-ms.openlocfilehash: 8959cde3254db31f077ae276ad72899a12f09feb
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: f8ab5916a3e0172471708a1847cd729115538e22
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766839"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046274"
 ---
 # <a name="data-deduplication-overview"></a>Visão geral de eliminação de duplicação de dados
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Implantando proxies de servidor de Federação'
 ms.assetid: 222e9f93-7c41-4527-8a98-8f7fbc7a58af
 title: Implantando proxies de servidor de Federação no AD FS para Windows Server 2012 R2
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 762a2f06ed7fa64c8d5f844ed4902d1ea9d44056
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6554cd206c459d5b0eacb8bf375d5fcd132c8530
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962860"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048884"
 ---
 # <a name="deploying-federation-server-proxies"></a>Implantação de proxies de servidores de federação
 

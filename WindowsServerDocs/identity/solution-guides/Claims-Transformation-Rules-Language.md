@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: linguagem de regras de transformação de declarações'
 ms.assetid: e831f781-3c45-4d44-b411-160d121d1324
 title: Linguagem de regras de transformação de declarações
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c4b35c738e275456929b7f90fec9be605876a4e6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: af3387464cb2fc0d923a22b9dfac211b6c499c6b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952899"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048354"
 ---
 # <a name="claims-transformation-rules-language"></a>Linguagem de regras de transformação de declarações
 
@@ -150,7 +151,7 @@ Veja a seguir uma sintaxe especial para regras:
     C1:[] => Issule (claim = C1);
     ```
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>Considerações de segurança
 **Declarações que entram em uma floresta**
 
 As declarações apresentadas por entidades de entrada para uma floresta precisam ser cuidadosamente inspecionadas para garantir que permitimos ou emitimos apenas as declarações corretas. As declarações inadequadas podem comprometer a segurança da floresta, e essa deve ser uma das principais considerações ao criar políticas de transformação para declarações que entram em uma floresta.
@@ -292,7 +293,7 @@ Esta seção ilustra alguns exemplos de regras que são escritas com sintaxe inc
 ## <a name="language-terminals"></a><a name="BKMK_LT"></a>Terminais de idioma
 A tabela a seguir lista o conjunto completo de cadeias de caracteres de terminal e os terminais de idioma associados que são usados no idioma das regras de transformação de declarações. Essas definições usam cadeias de caracteres UTF-16 que não diferenciam maiúsculas de minúsculas.
 
-|String|Terminal|
+|Cadeia de caracteres|Terminal|
 |----------|------------|
 |"=>"|DIZ|
 |";"|PONTO E vírgula|

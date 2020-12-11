@@ -1,17 +1,18 @@
 ---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Farm de servidores de federação usando SQL Server
+description: 'Saiba mais sobre: farm de servidores de Federação AD FS herdados usando SQL Server'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d283cc3ed8b848ba705a4e7773c1cd0861da1095
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 781c3d99fdd063d094b85032e1ccaca0860cba9a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864621"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046984"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-sql-server"></a>Farm de servidores de Federação AD FS herdados usando SQL Server
 
@@ -158,4 +159,3 @@ Para obter instruções mais detalhadas sobre como configurar AD FS para usar um
 ## <a name="see-also"></a>Consulte Também
 [Planejar sua topologia](Plan-Your-AD-FS-Deployment-Topology.md) 
  de implantação do AD FS [Guia de design de AD FS no Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
-

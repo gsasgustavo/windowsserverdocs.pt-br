@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: redes de cluster de vários canais e várias NICs simplificadas do SMB'
 ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: SMB Multichannel simplificado e redes de cluster de várias NICs
 ms.topic: article
 author: RobHindman
 ms.author: robhind
 ms.date: 09/15/2016
-ms.openlocfilehash: 1abaf439a25e5175aba7290c0600c0f5b56db0d4
-ms.sourcegitcommit: 6c53a7d37b4884212469c38dc97c192cd767e49b
+ms.openlocfilehash: 537c5339505a57992c702d343bf9e130ced8d185
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94919378"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047234"
 ---
 # <a name="simplified-smb-multichannel-and-multi-nic-cluster-networks"></a>SMB Multichannel simplificado e redes de cluster de várias NICs
 

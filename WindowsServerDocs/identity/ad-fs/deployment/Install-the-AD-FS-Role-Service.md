@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: instalar o serviço de função de AD FS'
 ms.assetid: c28a1b8b-5bec-4eed-8c95-a1a29cfc957c
 title: Instalar o serviço de função do AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 435634e7b6edfc110c7bd208d727b974804eb236
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9891d87e6e2388885e16bdd05883958710c1b2ff
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972173"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048394"
 ---
 # <a name="install-the-ad-fs-role-service"></a>Instalar o serviço de função do AD FS
 
@@ -25,7 +26,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 2.  Na página **Antes de começar** , clique em **Avançar**.
 
-3.  Na página **Selecionar tipo de instalação** , clique em instalação baseada em **função \- ou \- recurso**e, em seguida, clique em **Avançar**.
+3.  Na página **Selecionar tipo de instalação** , clique em instalação baseada em **função \- ou \- recurso** e, em seguida, clique em **Avançar**.
 
 4.  Na página **Selecionar servidor de destino**, clique em **Selecionar um servidor no pool de servidor**, verifique se o computador de destino está selecionado e clique em **Avançar**.
 
@@ -33,7 +34,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 6.  Na página **Selecionar recursos**, clique em **Avançar**. Os pré-requisitos necessários são preselecionados para você. Você não precisa selecionar nenhum outro recurso.
 
-7.  Na página **Active Directory Serviço de Federação \( AD FS \) ** , clique em **Avançar**.
+7.  Na página **Active Directory Serviço de Federação \( AD FS \)** , clique em **Avançar**.
 
 8.  Depois de verificar a informação na página **Confirmar seleções de instalação**, clique em **Instalar**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: lista de verificação: Configurando a organização do parceiro de recurso'
 ms.assetid: 80d50a9f-428e-40fe-b6b3-9837fd9a3efc
 title: Lista de verificação-Configurando a organização do parceiro de recurso
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 33b216bef2e06bdc4283fafbf06770c8de8b4700
-ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
+ms.openlocfilehash: e418a22624d55d3517fffa3328588fcac67acbfb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91716907"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047774"
 ---
 # <a name="checklist-configuring-the-resource-partner-organization"></a>Lista de verificação: Configurando a organização do parceiro de recurso
 

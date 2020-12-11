@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: a função de declarações'
 ms.assetid: 22f53391-8c6a-4873-a1f4-08b4760ea621
 title: A função das declarações
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: eb41b8168024a231282716e5edd0bc59554d7da6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 853689a601f8729fb79091cb1bd7c7c45652f480
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937819"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045284"
 ---
 # <a name="the-role-of-claims"></a>A função das declarações
 
@@ -61,8 +62,8 @@ Um tipo de declaração fornece o contexto para o valor da declaração. Geralme
 |UPN|O \( UPN do nome principal \) do usuário|http: \/ \/schemas.xmlsoap.org \/ WS \/ 2005 \/ 05 \/ declaração de identidade \/ \/ UPN|
 |Nome comum|O nome comum do usuário|http: \/ \/schemas.xmlSOAP.org \/ Claims \/ Common|
 |Endereço de email do AD FS 1. x \-|O \- endereço de email e do usuário ao interoperar com AD FS 1,1 ou ADFS 1,0|http: \/ \/schemas.xml\/ EmailAddress de declarações SOAP.org \/|
-|Agrupar|Um grupo do qual o usuário é membro|http: \/ \/schemas.xml\/ grupo de declarações SOAP.org \/|
-|AD FS 1.x UPN|O UPN do usuário ao interagir com AD FS 1.1 ou ADFS 1.0|http: \/ \/schemas.xml\/ UPN de declarações SOAP.org \/|
+|Grupo|Um grupo do qual o usuário é membro|http: \/ \/schemas.xml\/ grupo de declarações SOAP.org \/|
+|AD FS 1.x UPN|O UPN do usuário ao interagir com AD FS 1.1 ou ADFS 1.0|http: \/ \/schemas.xml\/ UPN de declarações SOAP.org \/|
 |Função|Uma função que o usuário tenha|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ \/ função de declarações de identidade \/|
 |Sobrenome|O sobrenome do usuário|http: \/ \/schemas.xmlsoap.org \/ WS \/ 2005 \/ 05 \/ declarações de identidade \/ \/ sobrenome|
 |PPID|O identificador privado do usuário|http: \/ \/schemas.xmlsoap.org \/ WS \/ 2005 \/ 05 \/ declarações de identidade \/ \/ privatepersonalidentifier|
@@ -74,7 +75,7 @@ Um tipo de declaração fornece o contexto para o valor da declaração. Geralme
 |SID de grupo|O SID de grupo do usuário|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ Identity \/ Claims \/ GroupId|
 |SID de grupo primário|O SID de grupo primário do usuário|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ declarações de identidade \/ \/ primarygroupsid|
 |SID primário|O SID primário do usuário|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ declarações de identidade \/ \/ PrimarySid|
-|Nome da conta Windows|O nome da conta de domínio do usuário na forma de\<domain\>\\\<user\>|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ declarações de identidade \/ \/ windowsaccountname|
+|Nome da conta Windows|O nome da conta de domínio do usuário na forma de \<domain\>\\\<user\>|http: \/ \/ schemas.microsoft.com \/ WS \/ 2008 \/ 06 \/ declarações de identidade \/ \/ windowsaccountname|
 
 ## <a name="what-are-claim-descriptions"></a>O que são descrições de declaração?
 

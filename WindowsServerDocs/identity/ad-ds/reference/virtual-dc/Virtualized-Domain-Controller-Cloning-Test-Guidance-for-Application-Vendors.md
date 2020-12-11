@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: diretrizes de teste de clonagem do controlador de domínio virtualizado para fornecedores de aplicativos'
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Diretrizes do teste de clonagem do controlador de domínio virtualizado para fornecedores de aplicativos
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 03272c7dc3afaccac9fb48d591f4f17d84bcccd4
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 328bef8456a5b6d4955bf03463bb4a6fecf2201e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070908"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045074"
 ---
 # <a name="virtualized-domain-controller-cloning-test-guidance-for-application-vendors"></a>Diretrizes do teste de clonagem do controlador de domínio virtualizado para fornecedores de aplicativos
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: início rápido para implantação de malha protegida'
 title: Início rápido para implantação de malha protegida
 ms.topic: article
 ms.assetid: e060e052-39a0-4154-90bb-b97cc6dde68e
@@ -6,12 +7,12 @@ manager: dongill
 author: justinha
 ms.author: justinha
 ms.date: 01/30/2019
-ms.openlocfilehash: 35e95204e076c0e0c96eb1669ff267b87ba7242a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 0f91d156797fdac9e7c724d663fdcc6485c77903
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996326"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047464"
 ---
 # <a name="quick-start-for-guarded-fabric-deployment"></a>Início rápido para implantação de malha protegida
 
@@ -81,9 +82,9 @@ Os hosts do Hyper-V precisam executar o Windows Server 2016 Datacenter Edition o
 Em seguida, instale a função de servidor HGS e implante-a como um cluster de três nós, como o exemplo de relecloud.com na imagem a seguir.
 Isso requer três cmdlets do PowerShell:
 
-- Para adicionar a função HGS, use`Install-WindowsFeature`
-- Para instalar o HGS, use`Install-HgsServer`
-- Para inicializar o HGS com o modo escolhido de atestado, use`Initialize-HgsServer`
+- Para adicionar a função HGS, use `Install-WindowsFeature`
+- Para instalar o HGS, use `Install-HgsServer`
+- Para inicializar o HGS com o modo escolhido de atestado, use `Initialize-HgsServer`
 
 Se os servidores Hyper-V existentes não atenderem aos pré-requisitos do modo TPM (por exemplo, se não tiverem o TPM 2,0), você poderá inicializar o HGS usando o atestado baseado em administrador (modo AD), que exige uma confiança Active Directory com o domínio de malha.
 
@@ -110,7 +111,7 @@ Em outras palavras, as etapas rigorosas de validação usadas para o modo TPM n�
 Para o modo TPM, são necessárias três coisas:
 
 1.    Uma _chave de endosso pública_ (ou _EKPUB_) do TPM 2,0 em cada e em cada host do Hyper-V. Para capturar o EKpub, use `Get-PlatformIdentifier` .
-2.    Uma _linha de base de hardware_. Se cada um dos seus hosts Hyper-V for idêntico, uma única linha de base será tudo de que você precisa.Se não forem, você precisará de uma para cada classe de hardware. A linha de base está na forma de um arquivo de log do grupo de computação confiável ou TCGlog. O TCGlog contém tudo o que o host fez, do firmware UEFI, por meio do kernel, até onde o host é totalmente inicializado. Para capturar a linha de base de hardware, instale a função Hyper-V e o recurso de suporte do Hyper-V do guardião de host e use `Get-HgsAttestationBaselinePolicy` .
+2.    Uma _linha de base de hardware_. Se cada um dos seus hosts Hyper-V for idêntico, uma única linha de base será tudo de que você precisa. Se não forem, você precisará de uma para cada classe de hardware. A linha de base está na forma de um arquivo de log do grupo de computação confiável ou TCGlog. O TCGlog contém tudo o que o host fez, do firmware UEFI, por meio do kernel, até onde o host é totalmente inicializado. Para capturar a linha de base de hardware, instale a função Hyper-V e o recurso de suporte do Hyper-V do guardião de host e use `Get-HgsAttestationBaselinePolicy` .
 3.    Uma _política de integridade de código_. Se cada um dos hosts do Hyper-V for idêntico, uma única política de CI será tudo de que você precisa. Se não forem, você precisará de uma para cada classe de hardware. O Windows Server 2016 e o Windows 10 têm uma nova forma de imposição de políticas de CI, chamada _política HVAC (integridade de código imposta) do hipervisor_. O política HVAC fornece uma forte imposição e garante que um host só tenha permissão para executar binários que um administrador confiável permitiu a execução. Essas instruções são encapsuladas em uma política de CI que é adicionada ao HGS. O HGS mede a política de CI de cada host antes que tenha permissão para executar VMs blindadas. Para capturar uma política de CI, use `New-CIPolicy` . A política deve então ser convertida em seu formato binário usando `ConvertFrom-CIPolicy` .
 
 ![Extrair identidades, linha de base e política de CI](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-three-extract-identity-baseline-ci-policy.png)
@@ -120,9 +121,7 @@ Agora você pode criar um disco de modelo de VM blindada e um arquivo de dados d
 
 ## <a name="step-4-create-a-template-for-shielded-vms"></a>Etapa 4: criar um modelo para VMs blindadas
 
-Um modelo de VM blindada protege os discos de modelo criando uma assinatura do disco em um ponto de confiança conhecido no tempo. 
-Se o disco de modelo for posteriormente infectado por malware, sua assinatura será diferente do modelo original que será detectado pelo processo de provisionamento de VM blindado seguro. 
-Os discos de modelo blindado são criados pela execução do **Assistente de criação de disco de modelo blindado** ou `Protect-TemplateDisk` em um disco de modelo normal.
+Um modelo de VM blindada protege os discos de modelo criando uma assinatura do disco em um ponto de confiança conhecido no tempo. Se o disco de modelo for posteriormente infectado por malware, sua assinatura será diferente do modelo original que será detectado pelo processo de provisionamento de VM blindado seguro. Os discos de modelo blindado são criados pela execução do **Assistente de criação de disco de modelo blindado** ou `Protect-TemplateDisk` em um disco de modelo normal.
 
 Cada um está incluído com o recurso **ferramentas de VM blindada** no [ferramentas de administração de servidor remoto para Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 Depois de baixar o RSAT, execute este comando para instalar o recurso de **ferramentas de VM blindada** :

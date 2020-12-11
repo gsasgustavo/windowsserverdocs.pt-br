@@ -1,17 +1,18 @@
 ---
 ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
 title: Implantando um farm de servidores de Federação para o Windows Server 2012 R2 AD FS
+description: 'Saiba mais sobre: Implantando um farm de servidores de Federação'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2f7602e99e550e993b916e603dad33724b3b0570
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: ae1a7f99a466d3a3a24c803d0dacf5537143b324
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865035"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048854"
 ---
 # <a name="deploying-a-federation-server-farm"></a>Implantação de um farm de servidores de federação
 
@@ -36,4 +37,3 @@ Para implantar um farm de servidores de federação, conclua as tarefas desta li
 [Implantação do AD FS](../../ad-fs/AD-FS-Deployment.md)
 
 [Guia de Implantação do AD FS do Windows Server 2012 R2](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
-

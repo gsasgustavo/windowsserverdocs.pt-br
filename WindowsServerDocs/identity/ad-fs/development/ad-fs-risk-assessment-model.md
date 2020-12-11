@@ -1,16 +1,17 @@
 ---
 title: Criar Plug-ins com o Modelo de Avaliação de Risco do AD FS 2019
+description: 'Saiba mais sobre: criar plug-ins com o modelo de avaliação de risco AD FS 2019'
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/05/2020
 ms.topic: article
-ms.openlocfilehash: ece40ea47c78c1d45cf55ff9daec551d940276e1
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 2c1d05450869d558d1991da2f95b72bcaeca7462
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865145"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047814"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Criar Plug-ins com o Modelo de Avaliação de Risco do AD FS 2019
 
@@ -215,8 +216,8 @@ A classe inclui métodos e propriedades a seguir.
 |[OnAuthenticationPipelineUnload](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload) |Void|Chamado por AD FS quando o plug-in é descarregado de seu pipeline|
 |[OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate)| Void|Chamado por AD FS na atualização de configuração |
 |**Propriedade** |**Tipo** |**Definição**|
-|[Nome_do_Fornecedor](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname)|String |Obtém o nome do fornecedor que possui o plug-in|
-|[ModuleIdentifier](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier)|String |Obtém o identificador do plug-in|
+|[Nome_do_Fornecedor](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname)|Cadeia de caracteres |Obtém o nome do fornecedor que possui o plug-in|
+|[ModuleIdentifier](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier)|Cadeia de caracteres |Obtém o identificador do plug-in|
 
 Em nosso plug-in de exemplo, estamos usando os métodos [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload) e [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate) para ler os IPs predefinidos do AD FS DB. [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload) é chamado quando o plug-in é registrado com AD FS enquanto [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate) é chamado quando o. csv é importado usando o `Import-AdfsThreatDetectionModuleConfiguration` cmdlet.
 

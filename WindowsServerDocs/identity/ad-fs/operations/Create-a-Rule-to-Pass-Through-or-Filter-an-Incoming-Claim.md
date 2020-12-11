@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma regra para passar ou filtrar uma declaração de entrada'
 ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: Criar uma regra para passar ou filtrar uma declaração de entrada
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a72be27746e64fb38c04d30a4dcef9b009257e0a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 235d2bf0572e2b84536d09a1bf9784d635db3ad5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967297"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048214"
 ---
 # <a name="create-a-rule-to-pass-through-or-filter-an-incoming-claim"></a>Criar uma regra para passar ou filtrar uma declaração de entrada
 
@@ -25,7 +26,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS**, clique em **relações de confiança**de terceira parte confiável.
+2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
@@ -87,7 +88,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em ** \\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável**e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
+2.  Na árvore de console, em **\\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)

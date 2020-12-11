@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: solução de problemas de replicação Active Directory'
 ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Solucionar problemas de replicação do Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: aef89bb1d57aff57b90f0eaeed67832f8778ba8c
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 7b095dc75d18af2a03f7d6a95d4865bc6e975097
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068958"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046324"
 ---
 # <a name="troubleshooting-active-directory-replication-problems"></a>Solucionar problemas de replicação do Active Directory
 
@@ -159,7 +160,7 @@ Para identificar Active Directory problemas de replicação, use o comando <syst
 | --- | --- | --- |
 |O tempo desde a última replicação com este servidor excedeu a vida útil da marca de exclusão.|Um controlador de domínio apresentou falha na replicação de entrada com o controlador de domínio de origem nomeado longo o suficiente para que uma exclusão tenha sido marcada para exclusão, replicada e coletada por lixo de AD DS.|ID do evento 2042: faz muito tempo que esta máquina replicou|
 |Não há vizinhos de entrada.|Se nenhum item aparecer na seção "vizinhos de entrada" da saída gerada pelo repadmin/showrepl, o controlador de domínio não conseguirá estabelecer links de replicação com outro controlador de domínio.|Corrigir problemas de conectividade de replicação (ID do evento 1925)|
-|Acesso negado.|Existe um link de replicação entre dois controladores de domínio, mas a replicação não pode ser executada corretamente como resultado de uma falha de autenticação.|Corrigir problemas de segurança de replicação|
+|O acesso foi negado.|Existe um link de replicação entre dois controladores de domínio, mas a replicação não pode ser executada corretamente como resultado de uma falha de autenticação.|Corrigir problemas de segurança de replicação|
 |Última tentativa em <data/hora> falhou com o "o nome da conta de destino está incorreto".|Esse problema pode estar relacionado a problemas de conectividade, DNS ou autenticação. Se esse for um erro DNS, o controlador de domínio local não poderá resolver o nome DNS baseado em GUID (identificador global exclusivo) de seu parceiro de replicação.|Corrigindo problemas de pesquisa de DNS de replicação (IDs de evento 1925, 2087, 2088) corrigindo problemas de segurança de replicação corrigindo problemas de conectividade de replicação (ID do evento 1925)|
 |Erro de LDAP 49.|A conta do computador do controlador de domínio pode não ser sincronizada com o centro de distribuição de chaves (KDC).|Corrigir problemas de segurança de replicação|
 |Não é possível abrir a conexão LDAP com o host local|A ferramenta de administração não pôde contatar o AD DS.|Corrigir problemas de pesquisa de DNS de replicação (ID do evento 1925, 2087, 2088)|

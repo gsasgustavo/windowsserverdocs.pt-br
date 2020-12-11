@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Configurando a ID de logon alternativa'
 ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configurar a ID de logon alternativa
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.openlocfilehash: 549ba062a30ce3b2d1a9f06d60357c0199766d84
-ms.sourcegitcommit: c6e2e545100bbbc4864088fd0d103bafc147fcbb
+ms.openlocfilehash: 93bca831222700f12cccd2ae6aef60ca189197b9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88785058"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048844"
 ---
 # <a name="configuring-alternate-login-id"></a>Configurar a ID de logon alternativa
 
@@ -117,11 +118,11 @@ O Windows versão 1709 e superior atualizaram a lógica de autenticação para m
 ##### <a name="step-3-configure-registry-for-impacted-users-using-group-policy"></a>Etapa 3. Configurar o registro para usuários afetados usando a política de grupo
 Os aplicativos do Office dependem das informações enviadas pelo administrador de diretório para identificar o ambiente de ID alternativo. As seguintes chaves do registro precisam ser configuradas para ajudar os aplicativos do Office a autenticar o usuário com uma ID alternativa sem mostrar prompts extras
 
-|RegKey a adicionar|Nome de dados RegKey, tipo e valor|Windows 7/8|Windows 10|Description|
+|RegKey a adicionar|Nome de dados RegKey, tipo e valor|Windows 7/8|Windows 10|Descrição|
 |-----|-----|-----|-----|-----|
-|HKEY_CURRENT_USER \Software\Microsoft\AuthN|LoginHint</br>REG_SZ</br>contoso.com|Obrigatório|Obrigatório|O valor dessa RegKey é um nome de domínio personalizado verificado no locatário da organização. Por exemplo, a Contoso Corp pode fornecer um valor de Contoso.com nessa RegKey se Contoso.com for um dos nomes de domínio personalizado verificados no Contoso.onmicrosoft.com de locatário.|
-HKEY_CURRENT_USER \Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Necessário para o Outlook 2016 ProPlus|Necessário para o Outlook 2016 ProPlus|O valor dessa RegKey pode ser 1/0 para indicar ao aplicativo do Outlook se ele deve envolver a lógica de autenticação de ID alternativo aprimorada.|
-HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|Obrigatório|Obrigatório|Essa RegKey pode ser usada para definir o STS como uma zona confiável nas configurações da Internet. A implantação padrão do ADFS recomenda adicionar o namespace do ADFS à zona da intranet local para o Internet Explorer|
+|HKEY_CURRENT_USER\Software\Microsoft\AuthN|LoginHint</br>REG_SZ</br>contoso.com|Obrigatório|Obrigatório|O valor dessa RegKey é um nome de domínio personalizado verificado no locatário da organização. Por exemplo, a Contoso Corp pode fornecer um valor de Contoso.com nessa RegKey se Contoso.com for um dos nomes de domínio personalizado verificados no Contoso.onmicrosoft.com de locatário.|
+HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Necessário para o Outlook 2016 ProPlus|Necessário para o Outlook 2016 ProPlus|O valor dessa RegKey pode ser 1/0 para indicar ao aplicativo do Outlook se ele deve envolver a lógica de autenticação de ID alternativo aprimorada.|
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|Obrigatório|Obrigatório|Essa RegKey pode ser usada para definir o STS como uma zona confiável nas configurações da Internet. A implantação padrão do ADFS recomenda adicionar o namespace do ADFS à zona da intranet local para o Internet Explorer|
 
 ## <a name="new-authentication-flow-after-additional-configuration"></a>Novo fluxo de autenticação após configuração adicional
 

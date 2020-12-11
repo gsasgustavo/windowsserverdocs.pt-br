@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: como URIs são usados em AD FS'
 ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: Como URIs são usados no AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 25f017da1d450484110dd43b3bc8cb25cbe06afb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 236f75152c64cf841ce1196415d6f95e92a252ca
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937943"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045334"
 ---
 # <a name="how-uris-are-used-in-ad-fs"></a>Como URIs são usados no AD FS
 Um \( URI \) de Uniform Resource Identifier é uma cadeia de caracteres que é usada como um identificador exclusivo.  No AD FS, os URIs são usados para identificar os endereços de rede do parceiro e objetos de configuração.  Quando usado para identificar os endereços de rede do parceiro, o URI é sempre uma URL.  Quando usado para identificar objetos de configuração, o URI pode ser uma URL ou um URN.  Para obter mais informações sobre URIs, consulte [RFC 2396](https://go.microsoft.com/fwlink/?LinkId=48289) e [RFC 3986](https://go.microsoft.com/fwlink/?LinkId=90453).
@@ -36,7 +37,7 @@ A tabela a seguir descreve os identificadores mais manipulados pelos administrad
 |Tipo de declaração|Esse identificador é usado para definir o tipo de declaração.  Ele é usado por esse Serviço de Federação, provedores de declarações e terceiras partes confiáveis ao enviar e receber declarações.|Quando o Serviço de Federação recebe declarações de um provedor de declarações, as regras de declaração associadas à confiança do provedor de declarações correspondente permitem que o administrador compare os tipos de declaração e processe as declarações.  As regras de declaração associadas a um objeto de confiança de terceira parte confiável também permitem que o administrador compare os tipos de declaração das declarações que vem das regras de confiança do provedor de declarações e decida quais declarações emitir.|
 
 ## <a name="uri-prefix-matching-for-relying-party-identifiers"></a>Correspondência de prefixo do URI para identificadores de terceira parte confiável
-A sintaxe de caminho de um URI é organizada hierarquicamente e delimitada por todos os caracteres " \/ " ou todos ":".Portanto, o caminho pode ser dividido em seções de caminho com base no caractere de delimitação.Quando a correspondência de prefixo, cada seção deve ser uma correspondência completa de acordo com as regras de correspondência que \( essas regras regem a capitalização de correspondências \) . Para obter mais informações sobre regras de correspondência, consulte a RFC mencionada acima.
+A sintaxe de caminho de um URI é organizada hierarquicamente e delimitada por todos os caracteres " \/ " ou todos ":".  Portanto, o caminho pode ser dividido em seções de caminho com base no caractere de delimitação.  Quando a correspondência de prefixo, cada seção deve ser uma correspondência completa de acordo com as regras de correspondência que \( essas regras regem a capitalização de correspondências \) . Para obter mais informações sobre regras de correspondência, consulte a RFC mencionada acima.
 
 Quando uma terceira parte confiável é identificada em uma solicitação ao serviço de federação, o AD FS usa a lógica de correspondência de prefixo para determinar se há um objeto de confiança de terceira parte confiável correspondentes no banco de dados de configuração do AD FS.
 

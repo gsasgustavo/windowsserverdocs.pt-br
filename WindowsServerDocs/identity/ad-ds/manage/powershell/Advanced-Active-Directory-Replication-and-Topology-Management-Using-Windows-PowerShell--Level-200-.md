@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: replicação avançada de Active Directory e gerenciamento de topologia usando o Windows PowerShell (nível 200)'
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 74ceedfb48d4c885d41ca9b8688718c6f8c817ed
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: ecd4db8b4fdbda926cd6a65101c241c6282ebf98
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070958"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046554"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 
@@ -78,7 +79,7 @@ Para obter uma lista completa de todos os cmdlets do Active Directory para Windo
 Get-command -module ActiveDirectory
 ```
 
-Para obter uma lista completa de todos os argumentos de cmdlets do Active Directory para Windows PowerShell, consulte a ajuda. Por exemplo: 
+Para obter uma lista completa de todos os argumentos de cmdlets do Active Directory para Windows PowerShell, consulte a ajuda. Por exemplo:
 
 ```
 Get-help New-ADReplicationSite
@@ -90,7 +91,7 @@ Usar o cmdlet `Update-Help` para baixar e instalar arquivos de ajuda
 ### <a name="replication-and-metadata"></a><a name="BKMK_Repl"></a>Replicação e metadados
 Repadmin.exe valida a integridade e consistência de replicação do Active Directory. Repadmin.exe oferece opções simples de manipulação de dados – alguns argumentos dão suporte a saídas CSV, por exemplo – mas a automação geralmente exigia a análise por meio de saídas de arquivo de texto. O módulo Active Directory para o Windows PowerShell é a primeira tentativa de oferecer uma opção que permite o controle real sobre os dados retornados. Antes disso, era necessário criar scripts ou usar ferramentas de terceiros.
 
-Além disso, os seguintes cmdlets implementam um novo conjunto de parâmetros de **Target** , **Scope** e **EnumerationServer** :
+Além disso, os seguintes cmdlets implementam um novo conjunto de parâmetros de **Target**, **Scope** e **EnumerationServer**:
 
 - **Get-ADReplicationFailure**
 
@@ -98,12 +99,12 @@ Além disso, os seguintes cmdlets implementam um novo conjunto de parâmetros de
 
 - **Get-ADReplicationUpToDatenessVectorTable**
 
-O argumento **Target** aceita uma lista separada por vírgulas de cadeias de caracteres que identificam os servidores de destino, sites, domínios ou florestas especificados pelo argumento **Scope** . Um asterisco ( \* ) também é permitido e significa todos os servidores dentro do escopo especificado. Se nenhum escopo for especificado, ele implica todos os servidores na floresta do usuário atual. O argumento **Scope** especifica a latitude da pesquisa. Os valores aceitáveis ​​são **Server** , **Site** , **Domain** e **Forest** . **EnumerationServer** especifica o servidor que enumera a lista de controladores de domínio especificada em **Target** e **Scope** . Funciona da mesma forma que o argumento **Server** e requer que o servidor especificado execute o serviço Web do Active Directory.
+O argumento **Target** aceita uma lista separada por vírgulas de cadeias de caracteres que identificam os servidores de destino, sites, domínios ou florestas especificados pelo argumento **Scope**. Um asterisco ( \* ) também é permitido e significa todos os servidores dentro do escopo especificado. Se nenhum escopo for especificado, ele implica todos os servidores na floresta do usuário atual. O argumento **Scope** especifica a latitude da pesquisa. Os valores aceitáveis ​​são **Server**, **Site**, **Domain** e **Forest**. **EnumerationServer** especifica o servidor que enumera a lista de controladores de domínio especificada em **Target** e **Scope**. Funciona da mesma forma que o argumento **Server** e requer que o servidor especificado execute o serviço Web do Active Directory.
 
 Para apresentar os novos cmdlets, seguem alguns exemplos de cenários que mostram funcionalidades impossíveis para o repadmin.exe. Munidas dessas ilustrações, as possibilidades administrativas tornam-se evidentes. Examine a ajuda do cmdlet para obter requisitos específicos de uso.
 
 ### <a name="get-adreplicationattributemetadata"></a><a name="BKMK_ReplAttrMD"></a>Get-ADReplicationAttributeMetadata
-Este cmdlet é semelhante ao **repadmin.exe /showobjmeta** . Ele permite que você retorne metadados de replicação, como quando um atributo é alterado, o controlador de domínio de origem, informações de versão e USN e dados de atributo. Esse cmdlet é útil para fiscalizar onde e quando ocorreu uma alteração.
+Este cmdlet é semelhante ao **repadmin.exe /showobjmeta**. Ele permite que você retorne metadados de replicação, como quando um atributo é alterado, o controlador de domínio de origem, informações de versão e USN e dados de atributo. Esse cmdlet é útil para fiscalizar onde e quando ocorreu uma alteração.
 
 Ao contrário do Repadmin, o Windows PowerShell oferece pesquisa flexível e controle de saída. Por exemplo, você pode dar saída aos metadados do objeto de administradores de domínio, ordenados como uma lista legível:
 
@@ -185,7 +186,7 @@ Get-ADReplicationPartnerMetadata -target * -scope server | where {$_.lastreplica
 ![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)
 
 ### <a name="get-adreplicationfailure"></a><a name="BKMK_ReplFail"></a>Get-ADReplicationFailure
-Este cmdlet pode ser usado para retornar informações sobre erros recentes na replicação. É semelhante ao **Repadmin.exe /showreplsum** , mas, novamente, com muito mais controle, graças ao Windows PowerShell.
+Este cmdlet pode ser usado para retornar informações sobre erros recentes na replicação. É semelhante ao **Repadmin.exe /showreplsum**, mas, novamente, com muito mais controle, graças ao Windows PowerShell.
 
 Por exemplo, você pode retornar a maioria das falhas recentes de um controlador de domínio e os parceiros que ele não contatou:
 
@@ -208,7 +209,7 @@ Get-ADReplicationFailure -scope site -target default-first-site-name | format-ta
 Ambos os cmdlets retornam outros aspectos de atualização do controlador de domínio, que incluem replicação pendente e informações de vetor da versão.
 
 ### <a name="sync-adobject"></a><a name="BKMK_Sync"></a>Sync-ADObject
-Este cmdlet é análogo à execução do **Repadmin.exe /replsingleobject** . É muito útil quando você faz alterações que necessitam de replicação fora da banda, especialmente para corrigir um problema.
+Este cmdlet é análogo à execução do **Repadmin.exe /replsingleobject**. É muito útil quando você faz alterações que necessitam de replicação fora da banda, especialmente para corrigir um problema.
 
 Por exemplo, se alguém excluir a conta de usuário do CEO e depois restaurá-la com a lixeira do Active Directory, provavelmente desejará replicá-la em todos os controladores de domínio imediatamente. Você provavelmente desejará fazer isso sem forçar a replicação de todas as outras alterações feitas aos objetos. Afinal, é por isso que você tem uma programação de replicação – para evitar sobrecarregar links de WAN.
 
@@ -224,7 +225,7 @@ Enquanto o Repadmin.exe é bom para retornar informações sobre topologia de re
 
 Por exemplo, depois de uma rápida expansão de novas filiais, em conjunto com a consolidação de outras, você pode ter uma centena de alterações de site por fazer com base em locais físicos, mudanças de rede e novos requisitos de capacidade. Em vez de usar Dssites.msc e Adsiedit.msc para fazer alterações, você pode automatizar. Isso é especialmente atraente quando você começa com uma planilha de dados fornecida pela rede e pelas equipes.
 
-Os cmdlets **Get \\ -Adreplication** _ retornam informações sobre a topologia de replicação e são úteis para o pipeline nos cmdlets _*set-Adreplication \\* *_ em massa. _Os cmdlets *Get* * não alteram dados, apenas mostram dados ou criam objetos de sessão do Windows PowerShell que podem ser canalizados para cmdlets **set-Adreplication \\**_ . Os cmdlets _ *novo* * e **remover** são úteis para criar ou remover Active Directory objetos de topologia.
+Os cmdlets **Get \\ -Adreplication** _ retornam informações sobre a topologia de replicação e são úteis para o pipeline nos cmdlets _*set-Adreplication \\* *_ em massa. _Os cmdlets *Get** não alteram dados, apenas mostram dados ou criam objetos de sessão do Windows PowerShell que podem ser canalizados para cmdlets **set-Adreplication \\**_ . Os cmdlets _ *novo** e **remover** são úteis para criar ou remover Active Directory objetos de topologia.
 
 Por exemplo, você pode criar novos sites usando um arquivo CSV:
 

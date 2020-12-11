@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: inicializar o cluster HGS usando o modo AD em uma nova floresta dedicada (padrão)'
 title: Inicializar o cluster HGS usando o modo AD em uma nova floresta dedicada (padrão)
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 91a7620b1c484cb67300c9cb575100d9421d0dfc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a477ae4010c201b5dec89f5c3d938fd25991245d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953562"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047364"
 ---
 # <a name="initialize-the-hgs-cluster-using-ad-mode-in-a-new-dedicated-forest-default"></a>Inicializar o cluster HGS usando o modo AD em uma nova floresta dedicada (padrão)
 

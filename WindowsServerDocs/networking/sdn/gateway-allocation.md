@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: alocação de largura de banda de gateway'
 title: Alocação de largura de banda de gateway
 manager: grcusanz
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 48a24586c356650ee0e625770dcdd55ce505951c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 37982fbef7ee56ec65418aa087b631c3d19bec6d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962280"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044914"
 ---
 # <a name="gateway-bandwidth-allocation"></a>Alocação de largura de banda de gateway
 

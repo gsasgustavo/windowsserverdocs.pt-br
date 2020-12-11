@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: referência técnica do controlador de domínio virtualizado (nível 300)'
 ms.assetid: 956f23b8-0c74-4436-ad43-e041f63302ce
 title: Referência técnica do controlador de domínio virtualizado (nível 300)
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c120c161979b98617c1d906c363ffa4f90cdaa3e
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: bc585517fd8e8bee5d9763e4bacde7ed096bc237
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069808"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045834"
 ---
 # <a name="virtualized-domain-controller-technical-reference-level-300"></a>Referência técnica do controlador de domínio virtualizado (nível 300)
 

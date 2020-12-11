@@ -1,17 +1,18 @@
 ---
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: A função dos repositórios de atributos
+description: 'Saiba mais sobre: a função de repositórios de atributos'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b15eef56a071aea1b2af6ad2f17f7b97a86c9f88
-ms.sourcegitcommit: 853382db13aed60344a075fdd054ef42e09c34c9
+ms.openlocfilehash: dc23e15893672633c7e175d2b0313771d327fccc
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96932781"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045304"
 ---
 # <a name="the-role-of-attribute-stores"></a>A função dos repositórios de atributos
 Serviços de Federação do Active Directory (AD FS) usa o termo "repositórios de atributo" para se referir a diretórios ou bancos de dados que uma organização usa para armazenar suas contas de usuário e seus valores de atributo associados. Depois de configurado em uma organização de provedor de identidade, AD FS recupera esses valores de atributo da loja e cria declarações com base nessas informações para que um aplicativo Web ou serviço hospedado em uma organização de terceira parte confiável possa tomar as decisões de autorização apropriadas sempre que um usuário federado \( de um usuário cuja conta esteja armazenada na organização do provedor de identidade \) tentar acessar o aplicativo ou serviço.
@@ -37,4 +38,3 @@ O AD FS dá suporte a uma ampla variedade de repositórios de diretórios e banc
 -   Todas as edições do Microsoft SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014 e SQL Server 2016 e mais recentes;
 
 -   Repositórios de atributos personalizados
-

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: planejando volumes no Espaços de Armazenamento Diretos'
 ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planejamento de volumes nos Espaços de Armazenamento Diretos
 ms.author: cosdar
@@ -7,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: dcc98fba7194da322f9fc97b67eb43d481f50133
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d1f975299593db29da20c35a621ea870e436d8be
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971143"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048934"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>Planejamento de volumes nos Espaços de Armazenamento Diretos
 
@@ -29,7 +30,7 @@ Os volumes são onde você coloca os arquivos de que suas cargas de trabalho pre
 
 ![o que são volumes](media/plan-volumes/what-are-volumes.png)
 
-Todos os volumes são acessíveis por todos os servidores do cluster ao mesmo tempo. Depois de criadas, elas aparecem em **C:\ClusterStorage \\ ** em todos os servidores.
+Todos os volumes são acessíveis por todos os servidores do cluster ao mesmo tempo. Depois de criadas, elas aparecem em **C:\ClusterStorage \\** em todos os servidores.
 
 ![pasta de captura de tela csv](media/plan-volumes/csv-folder-screenshot.png)
 

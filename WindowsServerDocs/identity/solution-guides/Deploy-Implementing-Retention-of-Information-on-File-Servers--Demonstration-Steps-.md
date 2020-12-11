@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar implementando a retenção de informações em servidores de arquivos (etapas de demonstração)'
 ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 987d1af004955d7be75066de7a859272e656ffbc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4d74b3757e23e37116c7fafc8b1bb5f6f01ee43
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952797"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046844"
 ---
 # <a name="deploy-implementing-retention-of-information-on-file-servers-demonstration-steps"></a>Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
@@ -54,7 +55,7 @@ Nessa etapa, habilitamos as propriedades do recurso Período de Retenção e Des
 
 5.  Clique com o botão direito do mouse em **Descoberta** e em **Habilitar**.
 
-![guias de solução](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -72,7 +73,7 @@ Nessa etapa, usamos o console do Gerenciador de Recursos de Servidor de Arquivos
 
 1.  Entre no servidor de arquivos como um membro do grupo de segurança Administradores.
 
-2.  No prompt de comando do Windows PowerShell, digite **Update-FsrmClassificationPropertyDefinition** e pressione ENTER. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
+2.  No prompt de comando do Windows PowerShell, digite _ * Update-FsrmClassificationPropertyDefinition * * e pressione ENTER. Isso sincronizará as definições de propriedade criadas no controlador de domínio para o servidor de arquivos.
 
 3.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
 
@@ -88,7 +89,7 @@ Nessa etapa, usamos o console do Gerenciador de Recursos de Servidor de Arquivos
 
 6.  Clique em **OK**.
 
-![guias de solução](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -111,7 +112,7 @@ Nessa etapa, usamos o console do Gerenciador de Recursos de Servidor de Arquivos
 
 1.  Entre no servidor de arquivos como um membro do grupo de segurança Administradores.
 
-2.  Abra o Gerenciador de Recursos de Servidor de Arquivos. No Gerenciador do Servidor, clique em **Ferramentas** e em **Gerenciador de Recursos de Servidor de Arquivos**.
+2.  Abra o Gerenciador de Recursos de Servidor de Arquivos. Em Gerenciador do Servidor, clique em _ * ferramentas * * e, em seguida, clique em **Gerenciador de recursos de servidor de arquivos**.
 
 3.  Clique com o botão direito do mouse em **Tarefas de Gerenciamento de Arquivos** e clique em **Criar Tarefa de Gerenciamento de Arquivos**.
 
@@ -139,7 +140,7 @@ Nessa etapa, usamos o console do Gerenciador de Recursos de Servidor de Arquivos
 
 11. Clique em **OK**.
 
-![guias de solução](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -164,7 +165,7 @@ Nessa etapa, classificamos manualmente um arquivo para ficar em retenção legal
 
 2.  Navegue até a pasta configurada no escopo da tarefa de gerenciamento de arquivos criada na Etapa 3.
 
-3.  Clique com o botão direito do mouse na pasta e, em seguida, clique em **Propriedades**.
+3.  Clique com o botão direito do mouse na pasta e clique em _ * Propriedades * *.
 
 4.  Na guia **Classificação**, clique em **Período de Retenção**, clique em **Longo Prazo**, em seguida e em **OK**.
 
@@ -180,7 +181,7 @@ Nessa etapa, classificamos manualmente um arquivo para ficar em retenção legal
 
 10. No servidor de arquivos, execute a tarefa de gerenciamento de arquivos novamente usando o Gerenciador de Recursos de Servidor de Arquivos. Depois de concluir a tarefa de gerenciamento de arquivos, verifique a pasta e assegure que o arquivo tenha sido movido para o diretório de expiração.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   [Cenário: implementar a retenção de informações em servidores de arquivos](Scenario--Implement-Retention-of-Information-on-File-Servers.md)
 

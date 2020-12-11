@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma regra para enviar atributos LDAP como declarações'
 ms.assetid: 66664b80-2590-46c0-bfca-82402088e42c
 title: Criar uma regra para enviar atributos LDAP como declarações
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 938e82f5318bc374fd3f89bf5354c2fc447a9723
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6b6cddaa5df89e16f77022b41400be75c2bd67d5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967203"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048074"
 ---
 # <a name="create-a-rule-to-send-ldap-attributes-as-claims"></a>Criar uma regra para enviar atributos LDAP como declarações
 
@@ -26,7 +27,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS**, clique em **relações de confiança**de terceira parte confiável.
+2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
@@ -38,7 +39,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
 
-6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos**e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
+6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos** e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
 
 7.  Clique no botão **Concluir**.
@@ -61,7 +62,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
 
-6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos**e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
+6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos** e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
 
 7.  Clique no botão **Concluir**.
@@ -74,7 +75,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em ** \\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável**e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
+2.  Na árvore de console, em **\\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
@@ -93,7 +94,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap3.PNG)
 
-6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **repositório de atributos** , selecione **Active Directory**e, em **mapeamento de atributos LDAP para tipos de declaração de saída** , selecione o **atributo LDAP** desejado e os tipos de **tipo de declaração de saída** correspondentes nas listas suspensas \- .
+6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **repositório de atributos** , selecione **Active Directory** e, em **mapeamento de atributos LDAP para tipos de declaração de saída** , selecione o **atributo LDAP** desejado e os tipos de **tipo de declaração de saída** correspondentes nas listas suspensas \- .
 
     Você precisa selecionar um novo atributo LDAP e um par de tipo de declaração de saída em uma linha diferente para cada atributo de Active Directory para o qual você deseja emitir uma declaração como parte dessa regra.
 ![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap4.PNG)

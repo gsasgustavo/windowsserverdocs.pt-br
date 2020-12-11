@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar declarações entre florestas (etapas de demonstração)'
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Implantar declarações em florestas (passo a passo)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 828b7256854f9d2fd6d58567c773d4abc288cd0a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 16f175baade8cffb16225ef195edf425762e839b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952868"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048514"
 ---
 # <a name="deploy-claims-across-forests-demonstration-steps"></a>Implantar declarações em florestas (passo a passo)
 
@@ -100,7 +101,7 @@ Nesta etapa, você aplica a política de transformação de declarações recém
 
 ##### <a name="to-apply-the-claims-transformation-policy"></a>Para aplicar a política de transformação de declarações
 
-1. Entre no controlador de domínio, adatum.com como administrador com a senha <strong>pass@word1</strong> .
+1. Entre no controlador de domínio, adatum.com como administrador com a senha  <strong>pass@word1</strong> .
 
 2. Abra um prompt de comando com privilégios elevados no Windows PowerShell e digite o seguinte:
 
@@ -168,11 +169,11 @@ A seguir está uma lista de casos comuns adicionais na transformação de declar
 
 |                                                 Cenário                                                 |                                                                                                                                                                                                                                           Política                                                                                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                  Permitir que todas as declarações provenientes de adatum passem para contoso adatum                  |                                                          Auto-completar <br />New-ADClaimTransformPolicy\`<br /> -Descrição: "política de transformação de declarações para permitir todas as declarações"\`<br />-Name: "AllowAllClaimsPolicy"\`<br />-AllowAll\`<br />-Server:"contoso. com"\`<br />Set-ADClaimTransformLink\`<br />-Identity:"adatum. com"\`<br />-Política: "AllowAllClaimsPolicy"\`<br />-TrustRole: confiança\`<br />-Server:"contoso. com"\`                                                          |
-|                  Negar todas as declarações provenientes de adatum para passar para o contoso adatum                   |                                                            Auto-completar <br />New-ADClaimTransformPolicy\`<br />-Descrição: "política de transformação de declarações para negar todas as declarações"\`<br />-Name: "DenyAllClaimsPolicy"\`<br /> -DenyAll\`<br />-Server:"contoso. com"\`<br />Set-ADClaimTransformLink\`<br />-Identity:"adatum. com"\`<br />-Política: "DenyAllClaimsPolicy"\`<br />-TrustRole: confiança\`<br />-Server:"contoso. com"\`                                                             |
-| Permitir que todas as declarações provenientes de adatum, exceto "empresa" e "departamento", passem para o contoso adatum | Código <br />-New-ADClaimTransformationPolicy\`<br />-Descrição: "política de transformação de declarações para permitir todas as reivindicações, exceto a empresa e o departamento"\`<br /> -Name: "AllowAllClaimsExceptCompanyAndDepartmentPolicy"\`<br />-AllowAllExcept: empresa, departamento\`<br />-Server:"contoso. com"\`<br />Set-ADClaimTransformLink\`<br /> -Identity:"adatum. com"\`<br />-Política: "AllowAllClaimsExceptCompanyAndDepartmentPolicy"\`<br /> -TrustRole: confiança\`<br />-Server:"contoso. com"\` |
+|                  Permitir que todas as declarações provenientes de adatum passem para contoso adatum                  |                                                          Auto-completar <br />New-ADClaimTransformPolicy \`<br /> -Descrição: "política de transformação de declarações para permitir todas as declarações" \`<br />-Name: "AllowAllClaimsPolicy" \`<br />-AllowAll \`<br />-Server:"contoso. com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum. com" \`<br />-Política: "AllowAllClaimsPolicy" \`<br />-TrustRole: confiança \`<br />-Server:"contoso. com" \`                                                          |
+|                  Negar todas as declarações provenientes de adatum para passar para o contoso adatum                   |                                                            Auto-completar <br />New-ADClaimTransformPolicy \`<br />-Descrição: "política de transformação de declarações para negar todas as declarações" \`<br />-Name: "DenyAllClaimsPolicy" \`<br /> -DenyAll \`<br />-Server:"contoso. com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum. com" \`<br />-Política: "DenyAllClaimsPolicy" \`<br />-TrustRole: confiança \`<br />-Server:"contoso. com"\`                                                             |
+| Permitir que todas as declarações provenientes de adatum, exceto "empresa" e "departamento", passem para o contoso adatum | Código <br />-New-ADClaimTransformationPolicy \`<br />-Descrição: "política de transformação de declarações para permitir todas as reivindicações, exceto a empresa e o departamento" \`<br /> -Name: "AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />-AllowAllExcept: empresa, departamento \`<br />-Server:"contoso. com" \`<br />Set-ADClaimTransformLink \`<br /> -Identity:"adatum. com" \`<br />-Política: "AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> -TrustRole: confiança \`<br />-Server:"contoso. com" \` |
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   Para obter uma lista de todos os cmdlets do Windows PowerShell que estão disponíveis para transformação de declarações, consulte [Active Directory referência de cmdlet do PowerShell](https://go.microsoft.com/fwlink/?LinkId=243150).
 

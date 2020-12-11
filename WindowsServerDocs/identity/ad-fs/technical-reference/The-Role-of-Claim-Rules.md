@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: a função de regras de declaração'
 ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: A função das regras de declaração
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 410e9ce5fbde7d84cbb4efbbde3515d0af537180
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 738d15fa7303610ddbb8c3297bc056f9db61ca2d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937883"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045324"
 ---
 # <a name="the-role-of-claim-rules"></a>A função das regras de declaração
 A função geral do Serviço de Federação no Serviços de Federação do Active Directory (AD FS) \( AD FS \) é emitir um token que contenha um conjunto de declarações. A decisão sobre o que as declarações AD FS aceita e os problemas são governadas por regras de declaração.
@@ -80,7 +81,7 @@ Para obter mais informações descrevendo cada um desses modelos de regra de dec
 #### <a name="using-the-claim-rule-language"></a>Usando linguagem de regra de declaração
 Para regras de negócios que estão além do escopo dos modelos de regra de declaração padrão, você pode usar um modelo de regra personalizado para expressar uma série de condições de lógica complexas usando a linguagem da regra de declaração. Para obter mais informações sobre como usar uma regra personalizada, consulte [quando usar uma regra de declaração personalizada](When-to-Use-a-Custom-Claim-Rule.md).
 
-#### <a name="using-windowspowershell"></a>Usando o Windows PowerShell
+#### <a name="using-windows-powershell"></a>Usando o Windows PowerShell
 Você também pode usar o objeto cmdlet ADFSClaimRuleSet com o Windows PowerShell para criar ou administrar regras no AD FS. Para obter mais informações sobre como usar o Windows PowerShell com esse cmdlet, consulte [Administração do AD FS com o Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
 
 ## <a name="what-is-a-claim-rule-set"></a>O que é um conjunto de regras de declaração?

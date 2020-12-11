@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: log único para o OpenID Connect com AD FS'
 title: Logoff único para OpenID Connect com o AD FS
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 11/17/2017
 ms.topic: article
-ms.openlocfilehash: 1ab6735e09d912bac5b1a319a3793ee6e0c70fa2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4b94ddda582c5bb51cf8b6fe987e039ee3e55957
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964933"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047014"
 ---
 #  <a name="single-log-out-for-openid-connect-with-ad-fs"></a>Logoff único para OpenID Connect com o AD FS
 
@@ -70,7 +71,7 @@ Set-ADFSProperties -EnableOAuthLogout $true
 ```
 
 >[!NOTE]
-> `EnableOAuthLogout`o parâmetro será marcado como obsoleto após a instalação de [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801). `EnableOAUthLogout`será sempre verdadeiro e não terá impacto sobre a funcionalidade de logout.
+> `EnableOAuthLogout` o parâmetro será marcado como obsoleto após a instalação de [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801). `EnableOAUthLogout` será sempre verdadeiro e não terá impacto sobre a funcionalidade de logout.
 
 >[!NOTE]
 >**só** há suporte para frontchannel_logout após instalação VCRedist de [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)

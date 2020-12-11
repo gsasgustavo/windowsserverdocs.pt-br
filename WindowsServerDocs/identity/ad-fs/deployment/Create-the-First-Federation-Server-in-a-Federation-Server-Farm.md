@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar o primeiro servidor de Federação em um farm de servidores de Federação'
 ms.assetid: 5e334c4e-75a7-453c-83e8-5ab4243cc685
 title: Criar o primeiro servidor de federação em um farm de servidores de federação
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 8c487bbb3e696be5a0817a2c19646c392e479636
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b58db4c771a4fe40a44f972521a8664f2c876e5d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962930"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044974"
 ---
 # <a name="create-the-first-federation-server-in-a-federation-server-farm"></a>Criar o primeiro servidor de federação em um farm de servidores de federação
 
@@ -34,7 +35,7 @@ O mínimo necessário para concluir esse procedimento é a associação em Admin
 
 2.  Na página **Bem-vindo**, verifique que o **Cria um novo Serviço de Federação** esteja selecionado, e então clique em **Próximo**.
 
-3.  Na página **selecionar \- implantação autônoma ou de farm** , clique em **novo farm de servidores de Federação**e, em seguida, clique em **Avançar**.
+3.  Na página **selecionar \- implantação autônoma ou de farm** , clique em **novo farm de servidores de Federação** e, em seguida, clique em **Avançar**.
 
 4.  Na página **Especificar o Nome do Serviço de Federação**, verifique que o **Certificado SSL** que é exibido seja o correto. Si este não for o certificado correto, selecione o certificado apropriado da lista **Certificado SSL**.
 
@@ -43,7 +44,7 @@ O mínimo necessário para concluir esse procedimento é a associação em Admin
     > [!NOTE]
     > O assistente não permitirá que você substitua o certificado se um certificado SSL estiver configurado para IIS. Isso assegura que qualquer configuração anterior do IIS pretendida para certificados SSL seja preservada. Para resolver essa restrição, você poderá remover o certificado ou reconfigurá-lo manualmente com o Console de Gerenciamento do IIS.
 
-5.  Se o banco de dados do AD FS que você selecionou já existir, a página **Banco de Dados de Configuração do AD FS Existente Detectada** aparece. Se aquela página aparecer, clique em **Excluir banco de dados**, e depois clique em **Próximo**.
+5.  Se o banco de dados de AD FS que você selecionou já existir, a página **banco de dados de configuração AD FS existente detectado** será exibida. Se aquela página aparecer, clique em **Excluir banco de dados**, e depois clique em **Próximo**.
 
     > [!CAUTION]
     > Selecione esta opção apenas quando você tiver certeza que os dados neste banco de dados do AD FS não forem importantes ou que não é usado em um farm de servidor de federação.
@@ -55,7 +56,7 @@ O mínimo necessário para concluir esse procedimento é a associação em Admin
 
 7.  Na página **Pronto para Aplicar as Configurações**, verificar os detalhes. Se as configurações parecem estar certas, clique em **Próximo** para começar configurar o AD FS com estas configurações.
 
-8.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar** para sair do assistente.
+8.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar**  para sair do assistente.
 
     > [!IMPORTANT]
     > Para fins de implantação segura, a resolução de artefato e a detecção de resposta são desabilitadas quando você usa o Assistente de Configuração do Servidor de Federação do AD FS para configurar um farm de servidores de federação. Esse assistente configura automaticamente o Banco de Dados Interno do Windows para armazenar dados de configuração de serviço. No entanto, você pode desfazer essa alteração por engano, habilitando o ponto de extremidade de resolução do artefato usando o nó **pontos** de extremidade no snap in AD FS Management \- ou o \- cmdlet Enable ADFSEndpoint no Windows PowerShell. Tenha cuidado para não reconfigurar a definição padrão de forma que esse ponto de extremidade permaneça desabilitado ao usar um farm de servidores de federação junto com o Banco de Dados Interno do Windows.

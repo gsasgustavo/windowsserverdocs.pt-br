@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar um grupo de segurança para hosts protegidos e registrar o grupo com o HGS'
 title: Criar um grupo de segurança para hosts protegidos e registrar o grupo com o HGS
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: efcf148356910a250a06ee9165c544c96226e10e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0c753248dc21b14cfc5b350edbc3ae055f013af1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971413"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047514"
 ---
 # <a name="create-a-security-group-for-guarded-hosts-and-register-the-group-with-hgs"></a>Criar um grupo de segurança para hosts protegidos e registrar o grupo com o HGS
 
@@ -33,7 +34,7 @@ Este tópico descreve as etapas intermediárias para preparar hosts Hyper-V para
     Get-ADGroup "Guarded Hosts"
     ```
 
-    ![Comando Get-AdGroup com saída](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
+    ![Get-AdGroup comando com a saída](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
 
 ## <a name="register-the-sid-of-the-security-group-with-hgs"></a>Registrar o SID do grupo de segurança com HGS
 

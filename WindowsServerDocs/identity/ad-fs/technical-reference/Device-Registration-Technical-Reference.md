@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: referência técnica de registro de dispositivo'
 ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Referência Técnica de Registro do Dispositivo
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fc42813829116cf3755d7807bec4e5fb00094c8e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: abe97d43e75bee50374334e33ffb8a29787ae688
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937975"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048064"
 ---
 # <a name="device-registration-technical-reference"></a>Referência Técnica de Registro do Dispositivo
 O serviço de registro de dispositivo \( DRS \) é um novo serviço do Windows incluído com a Active Directory serviço de Federação função no Windows Server 2012 R2.  O DRS deve ser instalado e configurado em todos os servidores de federação no farm do AD FS.  Para obter informações sobre o DRS, consulte [Configurar um servidor de federação com o serviço de registro de dispositivo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486831(v=ws.11)).
@@ -20,7 +21,7 @@ O serviço de registro de dispositivo \( DRS \) é um novo serviço do Windows i
 Os seguintes objetos do Active Directory são criados como parte do serviço de registro do dispositivo.
 
 ### <a name="device-registration-configuration"></a>Configuração de registro do dispositivo
-A configuração de registro do dispositivo é armazenada no contexto de nomenclatura de configuração da floresta do Active Directory. \(Por exemplo, ** \= configuração de registro de dispositivo CN, serviços cn \= , \- <\->contexto de nomenclatura de configuração ** \) . Esse objeto é criado quando a floresta do Active Directory é iniciada para o registro do dispositivo.
+A configuração de registro do dispositivo é armazenada no contexto de nomenclatura de configuração da floresta do Active Directory. \(Por exemplo, **\= configuração de registro de dispositivo CN, serviços cn \= , \- <\->contexto de nomenclatura de configuração** \) . Esse objeto é criado quando a floresta do Active Directory é iniciada para o registro do dispositivo.
 
 A configuração do registro de dispositivo inclui os seguintes elementos:
 
@@ -42,7 +43,7 @@ Objetos de dispositivo são objetos novos e leves no Active Directory.  Eles sã
 
 Os dispositivos registrados incluem os seguintes elementos:
 
--   **Nome de exibição**
+-   **Nome de Exibição**
 
     Nome amigável do dispositivo.  Para dispositivos do Windows, esse é o nome do host do computador.
 

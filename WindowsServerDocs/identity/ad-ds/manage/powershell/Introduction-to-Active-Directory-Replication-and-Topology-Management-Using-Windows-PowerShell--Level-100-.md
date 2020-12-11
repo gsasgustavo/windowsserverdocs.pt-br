@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: introdução à replicação de Active Directory e gerenciamento de topologia usando o Windows PowerShell (nível 100)'
 ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
 title: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ac50dad556ceb536a23486e20a02587a05d2e578
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 74072794f45a7eb6b56be294ef288a4d518398b0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070868"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046374"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 
@@ -49,7 +50,7 @@ Para concluir os passos nos procedimentos, você deve ser um membro do grupo de 
 
 #### <a name="to-view-all-active-directory-sites"></a>Para visualizar todos os sites do Active Directory
 
-1.  Em **DC1** , clique em **Windows PowerShell** na barra de tarefas.
+1.  Em **DC1**, clique em **Windows PowerShell** na barra de tarefas.
 
 2.  Digite o seguinte comando:
 
@@ -70,20 +71,20 @@ Para concluir os passos nos procedimentos, você deve ser um membro do grupo de 
 
 #### <a name="to-produce-a-table-of-all-domain-controllers"></a>Para produzir uma tabela de todos os controladores de domínio
 
--   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+-   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `Get-ADDomainController -Filter * | ft Hostname,Site`
 
     Este comando retorna os nomes de dos controladores de domínio, bem como .
 
 ## <a name="manage-replication-topology"></a>a topologia de replicação
-Na etapa anterior, após a execução do comando, `Get-ADDomainController -Filter * | ft Hostname,Site`, **DC2** foi listado como parte do site **CORPORATE** . Nos procedimentos a seguir, você criará um novo site de filial, **BRANCH1** , criará um novo link de site, definirá a frequência de replicação e o custo desse link e depois moverá **DC2** para **BRANCH1** .
+Na etapa anterior, após a execução do comando, `Get-ADDomainController -Filter * | ft Hostname,Site`, **DC2** foi listado como parte do site **CORPORATE**. Nos procedimentos a seguir, você criará um novo site de filial, **BRANCH1**, criará um novo link de site, definirá a frequência de replicação e o custo desse link e depois moverá **DC2** para **BRANCH1**.
 
 Para concluir os passos nos procedimentos, você deve ser um membro do grupo de Administradores de Domínio ou ter equivalentes.
 
 #### <a name="to-create-a-new-site"></a>Para criar um novo site
 
--   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+-   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `New-ADReplicationSite BRANCH1`
 
@@ -91,7 +92,7 @@ Para concluir os passos nos procedimentos, você deve ser um membro do grupo de 
 
 #### <a name="to-create-a-new-site-link"></a>Para criar um link do novo site
 
--   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+-   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `New-ADReplicationSiteLink 'CORPORATE-BRANCH1'  -SitesIncluded CORPORATE,BRANCH1 -OtherAttributes @{'options'=1}`
 
@@ -102,31 +103,31 @@ Para concluir os passos nos procedimentos, você deve ser um membro do grupo de 
 
 #### <a name="to-set-the-site-link-cost-and-replication-frequency"></a>Para definir o custo e frequência de replicação link do site
 
--   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+-   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `Set-ADReplicationSiteLink CORPORATE-BRANCH1 -Cost 100 -ReplicationFrequencyInMinutes 15`
 
-    Esse comando define o custo do link de site para **BRANCH1** como **100** e define a frequência de replicação no site como **15 minutos** .
+    Esse comando define o custo do link de site para **BRANCH1** como **100** e define a frequência de replicação no site como **15 minutos**.
 
 #### <a name="to-move-a-domain-controller-to-a-different-site"></a>Para mover um controlador de domínio para um site diferente
 
--   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+-   Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `Get-ADDomainController DC2 | Move-ADDirectoryServer -Site BRANCH1`
 
-    Esse comando move o controlador de domínio **DC2** até o site **BRANCH1** .
+    Esse comando move o controlador de domínio **DC2** até o site **BRANCH1**.
 
 ### <a name="verification"></a>Verificação
 
 ##### <a name="to-verify-site-creation-new-site-link-and-cost-and-replication-frequency"></a>Para confirmar a criação do site, novo link do site, custo e frequência de replicação
 
--   Clique em **Gerenciador do Servidor** , em **Ferramentas** e depois em **Sites e Serviços do Active Directory** e verifique o seguinte:
+-   Clique em **Gerenciador do Servidor**, em **Ferramentas** e depois em **Sites e Serviços do Active Directory** e verifique o seguinte:
 
     Verifique se o site **BRANCH1** contém todos os valores corretos provenientes dos comandos Windows PowerShell.
 
-    Verifique se o link de site **CORPORATE-BRANCH1** foi criado e se conecta aos sites **BRANCH1** e **CORPORATE** .
+    Verifique se o link de site **CORPORATE-BRANCH1** foi criado e se conecta aos sites **BRANCH1** e **CORPORATE**.
 
-    Verifique se **DC2** está agora no site **BRANCH1** . Como alternativa, você pode abrir o **Módulo Active Directory para Windows PowerShell** e digitar o seguinte comando para verificar se **DC2** está agora no site **BRANCH1** : `Get-ADDomainController -Filter * | ft Hostname,Site`.
+    Verifique se **DC2** está agora no site **BRANCH1**. Como alternativa, você pode abrir o **Módulo Active Directory para Windows PowerShell** e digitar o seguinte comando para verificar se **DC2** está agora no site **BRANCH1**: `Get-ADDomainController -Filter * | ft Hostname,Site`.
 
 ## <a name="view-replication-status-information"></a>Ver informações de status de replicação
 Nos procedimentos a seguir, você usará um dos cmdlets de replicação e gerenciamento Windows PowerShell para Active Directory, `Get-ADReplicationUpToDatenessVectorTable DC1`, para produzir um relatório de replicação simples usando a tabela de vetores de atualização mantida por cada controlador de domínio. Esta tabela de vetores de  mantém um dos USN de gravação originárias vistas em cada controlador de domínio da floresta.
@@ -135,11 +136,11 @@ Para concluir os passos nos procedimentos, você deve ser um membro do grupo de 
 
 #### <a name="to-view-the-up-to-dateness-vector-table-for-a-single-domain-controller"></a>Para visualizar a tabela de vetores de um único controlador de domínio
 
-1.  Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell** :
+1.  Digite o seguinte comando no prompt do **módulo do Active Directory para Windows PowerShell**:
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    Isso mostra uma lista dos USNs mais altos vistos por **DC1** para cada controlador de domínio da floresta. O valor **Server** refere-se ao servidor que mantém a tabela, neste caso **DC1** . O valor **Partner** refere-se ao parceiro de replicação (direto ou indireto) no qual foram feitas alterações. O valor UsnFilter é o USN mais alto visto por **DC1** a partir de Partner. Se um novo controlador de domínio for adicionado à floresta, ele não será exibido na tabela do **DC1** até que **DC1** receba uma alteração originada do novo domínio.
+    Isso mostra uma lista dos USNs mais altos vistos por **DC1** para cada controlador de domínio da floresta. O valor **Server** refere-se ao servidor que mantém a tabela, neste caso **DC1**. O valor **Partner** refere-se ao parceiro de replicação (direto ou indireto) no qual foram feitas alterações. O valor UsnFilter é o USN mais alto visto por **DC1** a partir de Partner. Se um novo controlador de domínio for adicionado à floresta, ele não será exibido na tabela do **DC1** até que **DC1** receba uma alteração originada do novo domínio.
 
 #### <a name="to-view-the-up-to-dateness-vector-table-for-all-domain-controllers-in-a-domain"></a>Para visualizar a tabela de vetores de para todos os controladores de domínio em um domínio
 

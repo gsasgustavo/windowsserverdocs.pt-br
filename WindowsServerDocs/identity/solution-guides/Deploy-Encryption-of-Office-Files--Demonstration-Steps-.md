@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar a criptografia de arquivos do Office (etapas de demonstração)'
 ms.assetid: 2c76e81a-c2eb-439f-a89f-7d3d70790244
 title: Deploy Encryption of Office Files (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1eba541baf7b00556efa686fc7b1572255498475
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dbefe3b92a1e400d525b4dc57393cc5189521d44
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952857"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046544"
 ---
 # <a name="deploy-encryption-of-office-files-demonstration-steps"></a>Deploy Encryption of Office Files (Demonstration Steps)
 
@@ -48,7 +49,7 @@ Nesse cenário, você executará as seguintes etapas:
 
 7. Clique em **Adicionar**, arraste para baixo e clique em **Impacto** para adicioná-lo à lista. Faça o mesmo para **Informações de identificação pessoal**. Clique em **OK** duas vezes para concluir.
 
-![guias de solução](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -58,7 +59,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:"CN=PII_MS,CN=Resource Propertie
 ```
 
 ## <a name="step-2-create-classification-rules"></a><a name="BKMK_2"></a>Etapa 2: Criar regras de classificação
-Esta etapa explica como criar a regra de classificação de **Alto impacto**. Esta regra pesquisará o conteúdo dos documentos e se a cadeia de caracteres "contoso Confidential" for encontrada, ele classificará este documento como tendo um impacto alto nos negócios. Essa classificação substituirá qualquer classificação previamente atribuída de baixo impacto nos negócios.
+Esta etapa explica como criar a regra de classificação de *alto impacto** *. Esta regra pesquisará o conteúdo dos documentos e se a cadeia de caracteres "contoso Confidential" for encontrada, ele classificará este documento como tendo um impacto alto nos negócios. Essa classificação substituirá qualquer classificação previamente atribuída de baixo impacto nos negócios.
 
 Você também criará uma regra de **Alto PII**. Esta regra pesquisará o conteúdo dos documentos e, caso encontre um número de seguro social, classificará o documento como PII alto.
 
@@ -88,11 +89,11 @@ Você também criará uma regra de **Alto PII**. Esta regra pesquisará o conte�
 
 12. Em **Especificar um valor**, selecione **Alto** na lista suspensa.
 
-13. Clique em **Configurar** em **Parâmetros**.  Na caixa de diálogo **Parâmetros de classificação**, na lista **Tipo de expressão**, selecione **Cadeia de caracteres**. Na caixa **Expressão** , digite: **Contoso Confidential**e clique em **OK**.
+13. Clique em **Configurar** em **Parâmetros**.  Na caixa de diálogo **Parâmetros de classificação**, na lista **Tipo de expressão**, selecione **Cadeia de caracteres**. Na caixa **Expressão** , digite: **Contoso Confidential** e clique em **OK**.
 
-14. Clique na guia **tipo de avaliação** .  Clique em **reavaliar os valores de propriedade existentes**, clique em **substituir**o valor existente e, em seguida, clique em **OK** para concluir.
+14. Clique na guia **tipo de avaliação** .  Clique em **reavaliar os valores de propriedade existentes**, clique em **substituir** o valor existente e, em seguida, clique em **OK** para concluir.
 
-![guias de solução](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -108,7 +109,7 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
 
 1. No Gerenciador do Hyper-V, conecte-se ao servidor ID_AD_FILE1. Entre no servidor usando Contoso\Administrator com a senha <strong>pass@word1</strong> .
 
-2. Na área de trabalho, abra a pasta chamada **Expressões regulares** e abra o documento de texto chamado **RegEx-SSN**. Realce e copie a seguinte cadeia de caracteres de expressão regular: **^ (?! 000) ([0-7] \d {2} | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d {4} $**. Esta cadeia de caracteres será usada posteriormente, por isso mantenha-a na área de transferência.
+2. Na área de trabalho, abra a pasta chamada _ * expressões regulares * * e, em seguida, abra o documento de texto chamado **Regex-ssn**. Realce e copie a seguinte cadeia de caracteres de expressão regular:  **^ (?! 000) ([0-7] \d {2} | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d {4} $**. Esta cadeia de caracteres será usada posteriormente, por isso mantenha-a na área de transferência.
 
 3. Abra o Gerenciador de Recursos de Servidor de Arquivos. Para abrir o Gerenciador de Recursos de Servidor de Arquivos, clique em **Iniciar**, digite **gerenciador de recursos do servidor de arquivos** e clique em **Gerenciador de Recursos do Servidor de Arquivos**.
 
@@ -132,9 +133,9 @@ New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -D
     > [!NOTE]
     > Esta expressão permitirá números de seguro social inválidos. Isso permite usar os números de seguro social fictícios nesta demonstração.
 
-12. Clique na guia **tipo de avaliação** .  Selecione **reavaliar os valores de propriedade existentes**, **substituir**o valor existente e, em seguida, clique em **OK** para concluir.
+12. Clique na guia **tipo de avaliação** .  Selecione **reavaliar os valores de propriedade existentes**, **substituir** o valor existente e, em seguida, clique em **OK** para concluir.
 
-![guias de solução](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -155,7 +156,7 @@ Agora que você criou regras para classificar documentos automaticamente com bas
 
 1. No Gerenciador do Hyper-V, conecte-se ao servidor ID_AD_FILE1. Entre no servidor usando Contoso\Administrator com a senha <strong>pass@word1</strong> .
 
-2. Abra o Gerenciador de Recursos de Servidor de Arquivos. Para abrir o Gerenciador de Recursos de Servidor de Arquivos, clique em **Iniciar**, digite **gerenciador de recursos do servidor de arquivos** e clique em **Gerenciador de Recursos do Servidor de Arquivos**.
+2. Abra o Gerenciador de Recursos de Servidor de Arquivos. Para abrir o Gerenciador de recursos do servidor de arquivos, clique em _ * iniciar * *, digite **Gerenciador de recursos do servidor de arquivos** e clique em **Gerenciador de recursos do servidor de arquivos**.
 
 3. No painel à esquerda, selecione **Tarefas de gerenciamento de arquivos**. No painel **Ações**, selecione **Criar tarefa de gerenciamento de arquivos**.
 
@@ -165,13 +166,13 @@ Agora que você criou regras para classificar documentos automaticamente com bas
 
 6. Clique na guia **ação** . Em **tipo**, selecione **criptografia do RMS**. Clique em **Navegar** para selecionar um modelo e selecione o modelo **Somente administradores de finanças da Contoso**.
 
-7. Clique na guia **Condição** e em **Adicionar**. Em **Propriedade**, selecione **Informações de identificação pessoal**. Em **Operador**, selecione**Igual a**. Em **Valor**, selecione **Alto**. Clique em **OK**.
+7. Clique na guia **Condição** e em **Adicionar**. Em **Propriedade**, selecione **Informações de identificação pessoal**. Em **Operador**, selecione **Igual a**. Em **Valor**, selecione **Alto**. Clique em **OK**.
 
-8. Clique na guia **agendar** . Na seção **agenda** , clique em **semanal**e selecione **domingo**. Executar a tarefa uma vez por semana garantirá a identificação de qualquer documento que possa ter sido ignorado devido a uma falha de serviço ou outro evento de interrupção.
+8. Clique na guia **agendar** . Na seção **agenda** , clique em **semanal** e selecione **domingo**. Executar a tarefa uma vez por semana garantirá a identificação de qualquer documento que possa ter sido ignorado devido a uma falha de serviço ou outro evento de interrupção.
 
 9. Na seção **Operação contínua**, selecione **Executar a tarefa continuamente nos novos arquivos** e clique em **OK**. Agora, você terá uma tarefa de gerenciamento chamada PII alto.
 
-![guias de solução](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -192,7 +193,7 @@ $fmj1=New-FSRMFileManagementJob -Name "High PII" -Description "Automatic RMS pro
 
 2. No Windows Explorer, navegue para D:\Finance Documents.
 
-3. Clique com o botão direito no documento Memorando financeiro e clique em **Propriedades**. Clique na guia **Classificação** e observe que a propriedade Impacto ainda não possui valor. Clique em **Cancelar**.
+3. Clique com o botão direito do mouse no documento de memorando Finanças e clique em _ * Propriedades * *. Clique na guia **classificação** e observe que a propriedade impacto atualmente não tem valor. Clique em **Cancelar**.
 
 4. Clique com o botão direito do mouse no documento **Solicitação de aprovação para documento de contratação** e selecione **Propriedades**.
 
@@ -211,11 +212,11 @@ $fmj1=New-FSRMFileManagementJob -Name "High PII" -Description "Automatic RMS pro
 
 10. Alterne novamente para o ID_AD_FILE1. No Windows Explorer, navegue para D:\Finance Documents.
 
-11. Clique com o botão direito do mouse no documento Memorando financeiro e clique em **Propriedades**. Clique na guia **classificação** . Observe que a propriedade **impacto** agora está definida como **alta**. Clique em **Cancelar**.
+11. Clique com o botão direito do mouse no documento Memorando financeiro e clique em **Propriedades**. Clique na guia **classificação** . Observe que a propriedade **Impact** agora está definida como **alta**. Clique em **Cancelar**.
 
 12. Clique com o botão direito do mouse no documento Solicitação de aprovação para contratação e clique em **Propriedades**.
 
-13. . Clique na guia **classificação** . Observe que a propriedade **informações de identificação pessoal** agora está definida como **alta**. Clique em **Cancelar**.
+13. . Clique na guia **classificação** . Observe que a propriedade de **informações de identificação pessoal** agora está definida como **alta**. Clique em **Cancelar**.
 
 ## <a name="step-5-verify-protection-with-ad-rms"></a><a name="BKMK_5"></a>Etapa 5: Verifique a proteção com o AD RMS
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar auditoria de segurança com políticas de auditoria central (etapas de demonstração)'
 ms.assetid: 22347a94-aeea-44b4-85fb-af2c968f432a
 title: Implantar a auditoria de segurança com as políticas de auditoria central (etapas de demonstração)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9fed82f80c03c0d8490dc88b1ec7c7d7c48a4c06
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6d55fc8b1d7a1f1c7f94b09c773a079f3488862c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046494"
 ---
 # <a name="deploy-security-auditing-with-central-audit-policies-demonstration-steps"></a>Implantar a auditoria de segurança com as políticas de auditoria central (etapas de demonstração)
 
@@ -87,7 +88,7 @@ Depois que as configurações de Política de Grupo forem aplicadas, você poder
 > [!IMPORTANT]
 > Um novo evento de logon é gerado no computador onde o recurso está localizado, em nome do usuário para quem o acesso efetivo está sendo verificado. Durante a análise dos logs de auditoria de segurança da atividade de logon do usuário, para diferenciar entre os eventos de logon que são gerados pelo acesso efetivo e aqueles gerados por um logon de usuário de rede interativo, as informações de Nível de Representação estão incluídas. Quando o evento de logon for gerado pelo acesso efetivo, o Nível de Representação será a Identidade. Um logon de usuário de rede interativo normalmente gera um evento de logon com o Nível de Representação = Representação ou Delegação.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Confira também
 
 -   [Cenário: auditoria de acesso a arquivos](Scenario--File-Access-Auditing.md)
 

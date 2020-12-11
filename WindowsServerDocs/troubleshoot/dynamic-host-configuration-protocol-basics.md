@@ -1,18 +1,18 @@
 ---
 title: Noções básicas do DHCP (protocolo de configuração de host dinâmico)
-description: ''
+description: 'Saiba mais sobre: Noções básicas do DHCP (protocolo de configuração de host dinâmico)'
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshoot
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: ''
-ms.openlocfilehash: 445663569fca7182e5343dd6f7ac677fd7f87f3b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 73b79eedf1d792c30c7dc6997c3005db8076d924
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045984"
 ---
 # <a name="dhcp-dynamic-host-configuration-protocol-basics"></a>Noções básicas do DHCP (protocolo de configuração de host dinâmico)
 
@@ -449,4 +449,4 @@ Para exibir informações de IP em um cliente Windows ou Windows para Workgroups
 
 ## <a name="references"></a>Referências
 
-Para obter mais informações sobre o DHCP, consulte RFC1541 e RFC2131. As RFCs podem ser obtidas pela Internet em vários sites, por exemplo: [http://www.rfc-editor.org/](http://www.rfc-editor.org/) e[http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)
+Para obter mais informações sobre o DHCP, consulte RFC1541 e RFC2131. As RFCs podem ser obtidas pela Internet em vários sites, por exemplo: [http://www.rfc-editor.org/](http://www.rfc-editor.org/) e [http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)

@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: verificar a funcionalidade DNS para dar suporte à replicação de diretório'
 ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verificar a funcionalidade do DNS para oferecer suporte à replicação de diretório
 ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
-ms.openlocfilehash: 0a79a4b73a9e3d610408076c8e7526f504055d53
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 540b62236acb9a1026219193de208b2948c2b12d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071248"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046304"
 ---
 # <a name="verify-dns-functionality-to-support-directory-replication"></a>Verificar a funcionalidade do DNS para oferecer suporte à replicação de diretório
 
@@ -40,7 +41,7 @@ Você pode usar o procedimento a seguir para verificar a funcionalidade básica 
 ### <a name="to-verify-basic-dns-functionality"></a>Para verificar a funcionalidade básica do DNS:
 
 
-1. No controlador de domínio que você deseja testar ou em um computador membro do domínio que tenha as ferramentas Active Directory Domain Services (AD DS) instaladas, abra um prompt de comando como administrador. Para abrir um prompt de comando como administrador, clique em **Iniciar** .
+1. No controlador de domínio que você deseja testar ou em um computador membro do domínio que tenha as ferramentas Active Directory Domain Services (AD DS) instaladas, abra um prompt de comando como administrador. Para abrir um prompt de comando como administrador, clique em **Iniciar**.
 2. Em Iniciar Pesquisa, digite Prompt de Comando.
 3. Na parte superior do menu Iniciar, clique com o botão direito no Prompt de Comando e, em seguida, clique em Executar como administrador. Se a caixa de diálogo Controle de Conta de Usuário aparecer, confirme a ação exibida e clique em Continuar.
 4. No prompt de comando, digite o seguinte comando e pressione ENTER: `dcdiag /test:dns /v /s:<DCName> /DnsBasic /f:dcdiagreport.txt`
@@ -73,8 +74,8 @@ Este comando verifica o registro dos seguintes registros de recursos no DNS:
 - **alias (CNAME):** o registro de recurso baseado em GUID (identificador global exclusivo) que localiza um parceiro de replicação
 - **host (A):**  o registro de recurso do host que contém o endereço IP do controlador de domínio
 - **SRV LDAP:** os registros de recurso de serviço (SRV) que localizam servidores LDAP
-- **GC SRV** : os registros de recurso de serviço (SRV) que localizam servidores de catálogo global
-- **PDC SRV** : os registros de recurso do serviço (SRV) que localizam mestres de operações do emulador do controlador de domínio primário (PDC)
+- **GC SRV**: os registros de recurso de serviço (SRV) que localizam servidores de catálogo global
+- **PDC SRV**: os registros de recurso do serviço (SRV) que localizam mestres de operações do emulador do controlador de domínio primário (PDC)
 
 Você pode usar o procedimento a seguir para verificar o registro de recurso de alias (CNAME) sozinho.
 

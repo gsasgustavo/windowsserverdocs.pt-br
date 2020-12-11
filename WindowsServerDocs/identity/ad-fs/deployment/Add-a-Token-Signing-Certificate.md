@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: adicionar um certificado de Token-Signing'
 ms.assetid: bbb84ea6-7e31-4442-85ab-a9447e7c19e8
 title: Adicionar um certificado de autenticação de tokens
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 31a624b85d68611be0661d6efcc8f33d24efdc54
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 16db3238d8d3dcac55f228a5a9cca80ccf3ca132
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947617"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048134"
 ---
 # <a name="add-a-token-signing-certificate"></a>Adicionar um certificado de autenticação de tokens
 
@@ -27,9 +28,9 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-add-a-token-signing-certificate"></a>Para adicionar um certificado de autenticação de token \-
 
-1.  Na tela **Iniciar** , digite**Gerenciamento de AD FS**e pressione Enter.
+1.  Na tela **Iniciar** , digite **Gerenciamento de AD FS** e pressione Enter.
 
-2.  Na árvore de console, clique duas vezes \- em **serviço**e, em seguida, clique em **certificados**.
+2.  Na árvore de console, clique duas vezes \- em **serviço** e, em seguida, clique em **certificados**.
 
 3.  No painel **ações** , clique no link **Adicionar \- certificado de autenticação de token** .
 

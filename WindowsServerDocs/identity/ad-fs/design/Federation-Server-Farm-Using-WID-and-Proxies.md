@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: farm de servidores de Federação AD FS herdados usando WID e proxies'
 ms.assetid: f0464182-56a2-4bfa-a8c8-7e39c1bd62d3
 title: Farm de servidores de federação usando WID e proxies
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 372d2ff3c372815823261e7e80a05db088c88331
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 186c75d6ec7660258f8b16b93e5d35bb74669ec2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945425"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046904"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-wid-and-proxies"></a>Farm de servidores de Federação AD FS herdados usando WID e proxies
 

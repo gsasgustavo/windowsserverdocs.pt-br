@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: inicializar o HGS usando o atestado de chave de host'
 title: Inicializar o HGS usando o atestado de chave do host
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: e979e4353dd9f4c5cf86a0745a704afecee2d615
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 48d1d7fe1df78021fb6dfda0c479e331e8b6900c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939617"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047304"
 ---
 # <a name="initialize-hgs-using-host-key-attestation"></a>Inicializar o HGS usando o atestado de chave do host
 

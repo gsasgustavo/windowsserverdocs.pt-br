@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: requisitos de certificado para proxies de servidor de Federação'
 ms.assetid: dc24adb7-385d-4a92-ab81-78ba73df0118
 title: Requisitos de Certificado para Proxies do Servidor de Federação
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 51eb0e72f52fafdb2f1b8bbb3f9a2850602c3f75
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 90907b37c9a048f7529f78e0685cb15521aa27fd
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954332"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044784"
 ---
 # <a name="certificate-requirements-for-federation-server-proxies"></a>Requisitos de Certificado para Proxies do Servidor de Federação
 
@@ -21,7 +22,7 @@ Os proxies de servidor de Federação geralmente são expostos a computadores na
 
 Quando você tem um farm de proxy de servidor de Federação, todos os computadores proxy de servidor de Federação devem usar o mesmo certificado de autenticação de servidor. Para obter mais informações, consulte [When to Create a Federation Server Proxy Farm](When-to-Create-a-Federation-Server-Proxy-Farm.md).
 
-É importante verificar se o nome da entidade no certificado de autenticação do servidor corresponde ao valor de Serviço de Federação nome especificado no snap-in de gerenciamento de AD FS \- . Para localizar esse valor, abra o snap \- in, clique com o botão direito do mouse \- , clique em **Editar serviço de Federação Propriedades**e localize o valor na caixa de texto **nome do serviço de Federação** . **Service**
+É importante verificar se o nome da entidade no certificado de autenticação do servidor corresponde ao valor de Serviço de Federação nome especificado no snap-in de gerenciamento de AD FS \- . Para localizar esse valor, abra o snap \- in, clique com o botão direito do mouse \- , clique em **Editar serviço de Federação Propriedades** e localize o valor na caixa de texto **nome do serviço de Federação** . 
 
 Para obter informações gerais sobre como usar certificados SSL, consulte Configurando protocolo SSL no IIS 7,0 \( [http: \/ \/ go.Microsoft.com \/ fwlink \/ ? LinkId \= 108544](https://go.microsoft.com/fwlink/?LinkID=108544) \) e configuração de certificados de servidor no IIS 7,0 \( [http: \/ \/ go.Microsoft.com \/ fwlink \/ ? LinkId \= 108545](https://go.microsoft.com/fwlink/?LinkID=108545) \) .
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: autorizar hosts Hyper-V usando o atestado de administrador confiável'
 title: Adicionar informações do host para o atestado confiável do administrador
 ms.topic: article
 ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: abc01dbb691843d199169bd654afaa5cf06bbb87
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0a4a9f7ebf3f88f6e19c4a78cb8dabd66c2004b9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971433"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047534"
 ---
 # <a name="authorize-hyper-v-hosts-using-admin-trusted-attestation"></a>Autorizar hosts Hyper-V usando o atestado de administrador confiável
 
@@ -37,7 +38,7 @@ Para autorizar um host protegido no modo AD:
    Get-ADGroup "Guarded Hosts"
    ```
 
-   ![Comando Get-AdGroup com saída](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
+   ![Get-AdGroup comando com a saída](../media/Guarded-Fabric-Shielded-VM/guarded-host-get-adgroup.png)
 
 ## <a name="register-the-sid-of-the-security-group-with-hgs"></a>Registrar o SID do grupo de segurança com HGS
 

@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: Atestado de Integridade do Dispositivo'
 title: Atestado de Integridade do Dispositivo
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
 ms.author: brianlic
 ms.date: 10/12/2016
-ms.openlocfilehash: fc5b0a3e3b3da3b329baec37888fd04c9f3adc0e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 6caff885e936809c649564a950d78a99e8fa49ce
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995727"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047544"
 ---
 # <a name="device-health-attestation"></a>Atestado de Integridade do Dispositivo
 
@@ -132,7 +133,7 @@ Depois de instalar o Windows Server 2016, o dispositivo é reiniciado e abre o G
 4.    Na página **Selecionar servidor de destino**, clique em **Selecionar um servidor no pool de servidores**, escolha o servidor e clique em **Avançar**.
 5.    Na página **Selecionar funções de servidor**, marque a caixa de seleção **Atestado de Integridade do Dispositivo**.
 6.    Clique em **Adicionar Recursos** para instalar outros serviços de função e recursos necessários.
-7.    Clique em **Próximo**.
+7.    Clique em **Avançar**.
 8.    Na página **Selecionar recursos**, clique em **Avançar**.
 9.    Na página **Função de Servidor Web (IIS)**, clique em **Avançar**.
 10.    Na página **Selecionar serviços de função**, clique em **Avançar**.

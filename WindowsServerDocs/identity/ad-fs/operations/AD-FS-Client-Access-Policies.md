@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: controlando o acesso a dados organizacionais com Serviços de Federação do Active Directory (AD FS)'
 title: Políticas de controle de acesso de cliente no AD FS
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 4d7d45b91e866b9df927620f2e214ced248b3361
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 669069b905dcd73a184abf51905894d6f5236afb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947482"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046634"
 ---
 # <a name="controlling-access-to-organizational-data-with-active-directory-federation-services"></a>Controlando o acesso a dados organizacionais com Serviços de Federação do Active Directory (AD FS)
 
@@ -53,5 +54,5 @@ Uma alteração importante ao habilitar esses cenários é a [autenticação mod
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre como controlar o acesso na nuvem e no local, consulte:
 
-- [Acesso condicional no Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+- [Acesso Condicional no Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
 - [Políticas de controle de acesso no AD FS 2016](Access-Control-Policies-in-AD-FS.md)

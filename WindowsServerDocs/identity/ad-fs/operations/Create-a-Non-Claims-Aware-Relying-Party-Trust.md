@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma relação de confiança de terceira parte confiável sem reconhecimento de declaração'
 ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: Criar um objeto de confiança da terceira parte confiável sem reconhecimento de declarações
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d8a3c8e34c9b1ca655447b52152eb9d34c466c38
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5238f93656c1d918122fc9cbb3a6b73232fce548
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967293"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048864"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>Criar uma relação de confiança de terceira parte confiável sem reconhecimento de declaração
 
@@ -33,7 +34,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 3.  Na página de **boas-vindas** , escolha **não reconhecimento de declarações** e clique em **Iniciar**.
 ![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon1.PNG)
 
-4.  Na página **Especificar Nome de Exibição**, digite um nome em **Nome de exibição**, em **Notas** digite uma descrição para essa terceira parte confiável e, em seguida, clique em **Avançar **.
+4.  Na página **Especificar Nome de Exibição**, digite um nome em **Nome de exibição**, em **Notas** digite uma descrição para essa terceira parte confiável e, em seguida, clique em **Avançar**.
 ![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon2.PNG)
 
 5. Na página **Configurar Identificadores**, especifique um ou mais identificadores da terceira parte confiável, clique em **Adicionar** para adicioná-los à lista e clique em **Avançar**.
