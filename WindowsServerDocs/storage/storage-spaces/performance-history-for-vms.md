@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: histórico de desempenho para máquinas virtuais'
 title: Histórico de desempenho para máquinas virtuais
 ms.author: cosdar
 manager: eldenc
@@ -6,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: dcf866d1de675f914d469783b1194e55adf63cb8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 594db65c64186dbdd57b5f683dae8e76749b7b6d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968723"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040884"
 ---
 # <a name="performance-history-for-virtual-machines"></a>Histórico de desempenho para máquinas virtuais
 

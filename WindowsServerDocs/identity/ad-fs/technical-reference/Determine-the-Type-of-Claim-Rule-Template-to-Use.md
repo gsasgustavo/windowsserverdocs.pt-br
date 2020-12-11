@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: determinar o tipo de modelo de regra de declaração a ser usado'
 ms.assetid: 696a29b2-d627-4c9a-a384-9c8aaf50bd23
 title: Determinar o tipo de modelo de regra de declaração a ser usado
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: bbc73c48fa3c1dd4bb743d5c088fdd94d722d5a1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a3609ee6676f2db2ad3007509bbd81f70d68014a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938017"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042384"
 ---
 # <a name="determine-the-type-of-claim-rule-template-to-use"></a>Determinar o tipo de modelo de regra de declaração a ser usado
 

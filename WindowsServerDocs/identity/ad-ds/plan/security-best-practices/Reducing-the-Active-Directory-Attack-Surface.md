@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: reduzindo a superfície de ataque de Active Directory'
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Redução da superfície de ataque do Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8802091de7746844176a97acf5e958d55b0b1f92
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 0486f62f2c53c427a196cd6e68a8b879c63df2ab
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069508"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040624"
 ---
 # <a name="reducing-the-active-directory-attack-surface"></a>Redução da superfície de ataque do Active Directory
 
@@ -35,10 +36,10 @@ Em Active Directory, três grupos internos são os grupos de privilégios mais a
 
 #### <a name="highest-privilege-groups-in-active-directory"></a>Grupos de privilégios mais altos no Active Directory
 
-##### <a name="enterprise-admins"></a>Administradores Corporativos
+##### <a name="enterprise-admins"></a>Administrador corporativo
 O EA (Enterprise Admins) é um grupo que existe somente no domínio raiz da floresta e, por padrão, é um membro do grupo Administradores em todos os domínios na floresta. A conta interna de administrador no domínio raiz da floresta é o único membro padrão do grupo EA. EAs recebem direitos e permissões que permitem que eles implementem alterações em toda a floresta (ou seja, alterações que afetam todos os domínios na floresta), como adicionar ou remover domínios, estabelecer relações de confiança de floresta ou aumentar os níveis funcionais da floresta. Em um modelo de delegação projetado e implementado corretamente, a associação EA é necessária apenas ao construir pela primeira vez a floresta ou ao fazer determinadas alterações em toda a floresta, como estabelecer uma relação de confiança de floresta de saída. A maioria dos direitos e permissões concedidas ao grupo EA pode ser delegada a usuários e grupos com menos privilégios.
 
-##### <a name="domain-admins"></a>Administradores de Domínio
+##### <a name="domain-admins"></a>Administradores do domínio
 
 Cada domínio em uma floresta tem seu próprio grupo de administradores de domínio (DA), que é um membro do grupo de administradores desse domínio e um membro do grupo de Administradores local em cada computador ingressado no domínio. O único membro padrão do grupo DA para um domínio é a conta de administrador interna para esse domínio. O DAs são "todos-poderosos" em seus domínios, enquanto EAs têm privilégios de toda a floresta. Em um modelo de delegação projetado e implementado corretamente, a associação de administradores de domínio deve ser necessária somente em cenários de "interrupção" (como situações em que uma conta com altos níveis de privilégio em cada computador no domínio é necessária). Embora os mecanismos de delegação de Active Directory nativos permitam a delegação na medida em que é possível usar contas DA dos somente em cenários de emergência, construir um modelo de delegação eficaz pode ser demorado e muitas organizações aproveitam ferramentas de terceiros para agilizar o processo.
 
@@ -72,11 +73,11 @@ A tabela a seguir lista as contas e grupos protegidos padrão no Active Director
 |Administradores|Opers. de contas|Opers. de contas|Opers. de contas|
 ||Administrador|Administrador|Administrador|
 ||Administradores|Administradores|Administradores|
-|Administradores de Domínio|Operadores de cópia|Operadores de cópia|Operadores de cópia|
+|Administradores do domínio|Operadores de cópia|Operadores de cópia|Operadores de cópia|
 ||Editores de Certificados|||
-||Administradores de Domínio|Administradores de Domínio|Administradores de Domínio|
-|Administradores Corporativos|Controladores de Domínio|Controladores de Domínio|Controladores de Domínio|
-||Administradores Corporativos|Administradores Corporativos|Administradores Corporativos|
+||Administradores do domínio|Administradores do domínio|Administradores do domínio|
+|Administrador corporativo|Controladores de Domínio|Controladores de Domínio|Controladores de Domínio|
+||Administrador corporativo|Administrador corporativo|Administrador corporativo|
 ||Krbtgt|Krbtgt|Krbtgt|
 ||Operadores de Impressão|Operadores de Impressão|Operadores de Impressão|
 ||||Controladores de Domínio somente leitura|

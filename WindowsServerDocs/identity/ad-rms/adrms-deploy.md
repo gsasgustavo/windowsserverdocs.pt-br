@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: Atualizando AD RMS para o Windows Server 2016'
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Como atualizar o AD RMS para o Windows Server 2016
 author: msmbaldwin
 ms.author: esaggese
 ms.date: 05/30/2019
 ms.topic: article
-ms.openlocfilehash: 8a2d0ec94619f74260f1fbc934e8e3328201ffa9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 65fe374c33c56beb5270d29bc432481dc2a0a960
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947206"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042374"
 ---
 # <a name="upgrading-ad-rms-to-windows-server-2016"></a>Como atualizar o AD RMS para o Windows Server 2016
 
@@ -79,11 +80,11 @@ O banco de dados dos serviços de diretório não é essencial para AD RMS funci
 
 1.  Faça logon no servidor de banco de dados do Windows Server 2012 R2 AD RMS com o SQL 2012.
 
-2.  Clique em **Iniciar**, em **todos os programas**, em **Microsoft SQL Server**e em **SQL Server Management Studio**.
+2.  Clique em **Iniciar**, em **todos os programas**, em **Microsoft SQL Server** e em **SQL Server Management Studio**.
 
 3.  Na janela **conectar ao servidor** , confirme se o servidor que hospeda os bancos de dados do AD RMS está na caixa **nome do servidor** e clique em **conectar**.
 
-4.  Expanda os **Bancos de dados**. Clique com o botão direito do mouse no banco de dados apropriado (**DRMs** e **ADFS**), aponte para **tarefas**e selecione **backup**.
+4.  Expanda os **Bancos de dados**. Clique com o botão direito do mouse no banco de dados apropriado (**DRMs** e **ADFS**), aponte para **tarefas** e selecione **backup**.
 
 5.  Repita a etapa 4 para os bancos de dados restantes.
 
@@ -99,7 +100,7 @@ As etapas a seguir demonstram como adicionar as várias contas de serviço para 
 
 1.  Faça logon no servidor com SQL Server 2016 como a conta de administrador local.
 
-2.  Clique em **Iniciar**, em **todos os programas**, em **Microsoft SQL Server**e em **SQL Server Management Studio**.
+2.  Clique em **Iniciar**, em **todos os programas**, em **Microsoft SQL Server** e em **SQL Server Management Studio**.
 
 3.  Na janela **conectar ao servidor** , confirme se o servidor que hospeda os bancos de dados do AD RMS está na caixa **nome do servidor** , em seguida, para autenticação, clique no menu suspenso e selecione **SQL Server autenticação**.
 
@@ -161,7 +162,7 @@ Você pode implantar servidores AD FS adicionais para dar suporte à implantaç�
 
 8.  Digite a senha do certificado no campo senha e clique em **OK**.
 
-9.  Clique em **Próximo**.
+9.  Clique em **Avançar**.
 
 10. Na página servidores AD FS, insira o nome ou o endereço IP do novo servidor AD FS e clique em **Adicionar**.
 
@@ -179,7 +180,7 @@ Ao implantar um servidor ADFs que exceda o nível de ambiente atual, como, tendo
 
 2.  Abra uma sessão do PowerShell de administrador.
 
-3.  Insira o seguinte comando: ** \$ cred = Get-Credential**
+3.  Insira o seguinte comando: **\$ cred = Get-Credential**
 
 4.  Uma janela será exibida solicitando credenciais, insira as credenciais de administrador de domínio.
 
@@ -199,7 +200,7 @@ A extensão de dispositivo móvel pode registrar solicitações recebidas de dis
 
 2.  Digite o seguinte comando e pressione **Enter**: **Import-Module AdRmsAdmin**
 
-3.  Digite o seguinte comando e pressione **Enter**: **novo-PSDrive-Name AdrmsCluster-PSProvider AdRmsAdmin-root https://localhost **
+3.  Digite o seguinte comando e pressione **Enter**: **novo-PSDrive-Name AdrmsCluster-PSProvider AdRmsAdmin-root https://localhost**
 
 4.  Digite o seguinte comando e pressione **Enter**: **Set-ItemProperty-Path AdrmsCluster: \\ -Name IsLoggingEnabled-value \$ true**
 
@@ -211,7 +212,7 @@ Se você estiver usando log de MDE para solução de problemas, é recomendável
 
 2.  Digite o seguinte comando e pressione **Enter**: **Import-Module AdRmsAdmin**
 
-3.  Digite o seguinte comando e pressione **Enter**: **novo-PSDrive-Name AdrmsCluster-PSProvider AdRmsAdmin-root https://localhost **
+3.  Digite o seguinte comando e pressione **Enter**: **novo-PSDrive-Name AdrmsCluster-PSProvider AdRmsAdmin-root https://localhost**
 
 4.  Digite o seguinte comando e pressione **Enter**: **Set-ItemProperty-Path AdrmsCluster: \\ -Name IsLoggingEnabled-value \$ false**
 
@@ -274,15 +275,15 @@ Você pode implantar servidores de proxy de aplicativo Web adicionais para dar s
 
 2.  No **Assistente Adicionar funções e recursos**, clique em **Avançar** até chegar à tela de seleção de função de servidor.
 
-3.  Na tela selecionar funções de servidor, selecione **acesso remoto**e clique em **Avançar** até voltar à tela selecionar funções de servidor.
+3.  Na tela selecionar funções de servidor, selecione **acesso remoto** e clique em **Avançar** até voltar à tela selecionar funções de servidor.
 
-4.  Na tela selecionar funções de servidor, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos**e, em seguida, clique em **Avançar**.
+4.  Na tela selecionar funções de servidor, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
 5.  Na tela confirmar seleções de instalação, clique em **instalar**.
 
 6.  Quando a instalação for concluída, clique em **fechar**.
 
-7.  Agora é hora de configurar o servidor. Para fazer isso, abra o console de gerenciamento de acesso remoto no servidor proxy de aplicativo Web. Abra o menu **Iniciar** , digite **RAMgmtUI.exe**e, em seguida, selecione o aplicativo.
+7.  Agora é hora de configurar o servidor. Para fazer isso, abra o console de gerenciamento de acesso remoto no servidor proxy de aplicativo Web. Abra o menu **Iniciar** , digite **RAMgmtUI.exe** e, em seguida, selecione o aplicativo.
 
 8.  No painel de navegação, clique em **Proxy do Aplicativo Web**.
 
@@ -406,15 +407,15 @@ Você pode implantar servidores WAP adicionais para configurar a alta disponibil
 
 2.  No **Assistente Adicionar funções e recursos**, clique em **Avançar** até chegar à tela de seleção de função de servidor.
 
-3.  Na tela selecionar funções de servidor, selecione **acesso remoto**e clique em **Avançar** até voltar à tela selecionar funções de servidor.
+3.  Na tela selecionar funções de servidor, selecione **acesso remoto** e clique em **Avançar** até voltar à tela selecionar funções de servidor.
 
-4.  Na tela selecionar funções de servidor, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos**e, em seguida, clique em **Avançar**.
+4.  Na tela selecionar funções de servidor, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
 5.  Na tela confirmar seleções de instalação, clique em **instalar**.
 
 6.  Quando a instalação for concluída, clique em **fechar**.
 
-7.  Agora é hora de configurar o servidor. Para fazer isso, abra o console de gerenciamento de acesso remoto no servidor proxy de aplicativo Web. Abra o menu **Iniciar** , digite **RAMgmtUI.exe**e, em seguida, selecione o aplicativo.
+7.  Agora é hora de configurar o servidor. Para fazer isso, abra o console de gerenciamento de acesso remoto no servidor proxy de aplicativo Web. Abra o menu **Iniciar** , digite **RAMgmtUI.exe** e, em seguida, selecione o aplicativo.
 
 8.  No painel de navegação, clique em **Proxy do Aplicativo Web**.
 
@@ -468,7 +469,7 @@ Você pode implantar servidores SQL adicionais para a instalação Always On alt
 
 16. Na página **selecionar testemunha de quorum** , selecione a opção **Configurar uma testemunha de compartilhamento de arquivos** . Em seguida, clique em **Próximo**.
 
-17. Selecione **procurar** e localize o caminho do compartilhamento de arquivos que você deseja usar na caixa de diálogo caminho de compartilhamento de arquivos. Clique em **Próximo**.
+17. Selecione **procurar** e localize o caminho do compartilhamento de arquivos que você deseja usar na caixa de diálogo caminho de compartilhamento de arquivos. Clique em **Avançar**.
 
 18. Na página Confirmação, clique em **Avançar**.
 

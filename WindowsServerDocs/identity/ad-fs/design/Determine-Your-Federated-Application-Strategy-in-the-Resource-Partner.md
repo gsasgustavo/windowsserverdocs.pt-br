@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: determinar sua estratégia de aplicativo federado no parceiro de recurso'
 ms.assetid: 9eab8c43-a0f2-4d19-a5a4-e1399f0d5f25
 title: Determinar sua estratégia de aplicativo federado no parceiro de recurso
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f3600b51dc78a7b11c9531daad4ad4b7c7e5f2a2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 597d0de2b4bd6380e8cba560d72567c70a5ddc6b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942770"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042294"
 ---
 # <a name="determine-your-federated-application-strategy-in-the-resource-partner"></a>Determinar sua estratégia de aplicativo federado no parceiro de recurso
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: revisando conceitos de DNS'
 ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Examinando conceitos do DNS
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 2b657660fbdba7f3f0750f4376f5f5c698b279a2
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 331d62ab65e8030057824b82b23ced3ede7e035f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070058"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042594"
 ---
 # <a name="reviewing-dns-concepts"></a>Examinando conceitos do DNS
 

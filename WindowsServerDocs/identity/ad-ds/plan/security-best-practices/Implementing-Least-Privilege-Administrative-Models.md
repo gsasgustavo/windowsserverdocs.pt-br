@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implementando modelos administrativos Least-Privilege'
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementar modelos administrativos com menos privilégios
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 95f8158f5565c57904b7423456eb7189f9e58a2a
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 02ce80d936caff5ef77a78585a2e0f35e0b12ca5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069658"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040714"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>Implementar modelos administrativos com menos privilégios
 
@@ -88,7 +89,7 @@ As contas de administrador internas nunca devem ser usadas como contas de servi�
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>Configurando GPOs para restringir contas de administrador em sistemas Domain-Joined
 
-Em um ou mais GPOs que você cria e vincula a estações de trabalho e a UOs de servidor membro em cada domínio, adicione a conta de administrador aos seguintes direitos de usuário em **computador \** \ \ \ \ \ Configurações de direitos:
+Em um ou mais GPOs que você cria e vincula a estações de trabalho e a UOs de servidor membro em cada domínio, adicione a conta de administrador aos seguintes direitos de usuário em **computador \**\ \ \ \ \ Configurações de direitos:
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes
@@ -134,7 +135,7 @@ Embora a definição do **cartão inteligente seja necessária para** que o sina
 
 Embora a desabilitação da conta de administrador em um domínio torne a conta efetivamente inutilizável, você deve implementar restrições adicionais na conta caso a conta seja habilitada inadvertidamente ou maliciosamente. Embora esses controles possam ser eventualmente revertidos pela conta de administrador, o objetivo é criar controles que prejudiquem o progresso de um invasor e limitar o dano que a conta pode gerar.
 
-Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \** \ \ \ \ Configurações de direitos:
+Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \**\ \ \ \ Configurações de direitos:
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes
@@ -148,7 +149,7 @@ Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de se
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-controllers"></a>Configurando GPOs para restringir contas de administrador em controladores de domínio
 
-Em cada domínio na floresta, a política de controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no computador \ \ \ \ \ \ \ \ \ **atribuições de direitos** :
+Em cada domínio na floresta, a política de controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no computador \ \ \ \ \ \ \ \ \ **atribuições de direitos**:
 
 - Negar acesso a este computador pela rede
 - Negar o logon como um trabalho em lotes

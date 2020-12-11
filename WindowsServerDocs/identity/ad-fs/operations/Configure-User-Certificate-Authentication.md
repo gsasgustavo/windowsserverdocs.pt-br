@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Configurando AD FS para autenticação de certificado de usuário'
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configurar suporte de AD FS para autenticação de certificado de usuário
 author: jenfieldmsft
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
-ms.openlocfilehash: 6321b3e68b71f004a030dfba8a8f1ca7b56d4f78
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 02d1d3e6e0b1d8aac739f59c2a6ef60ce8a8088a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967513"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042264"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>Configurando AD FS para autenticação de certificado de usuário
 
@@ -45,7 +46,7 @@ Além disso, há alguns aspectos opcionais.
 - Convém considerar a modificação das páginas de entrada para atender às necessidades de seus usuários finais ao fazer a autenticação do certificado. Os casos comuns são para (a) alterar "entrar com seu certificado X509" para algo mais amigável para o usuário final
 
 ## <a name="configure-seamless-certificate-authentication-for-chrome-browser-on-windows-desktops"></a>Configurar a autenticação de certificado contínuo para o navegador Chrome em áreas de trabalho do Windows
-Quando vários certificados de usuário (como certificados Wi-Fi) estiverem presentes no computador que atendem às finalidades da autenticação de cliente, o navegador Chrome no Windows Desktop solicitará que o usuário selecione o certificado correto. Isso pode ser confuso para o usuário final. Para otimizar essa experiência, você pode definir uma política para Chrome para selecionar automaticamente o certificado certo para uma melhor experiência do usuário. Essa política pode ser definida manualmente, fazendo com que um registro seja alterado ou configurado automaticamente por meio de GPO (para definir as chaves do registro). Isso exige que os certificados de cliente do usuário para autenticação no AD FS tenham emissores distintos de outros casos de uso.
+Quando vários certificados de usuário (como Wi-Fi certificados) estiverem presentes no computador que atendem às finalidades da autenticação do cliente, o navegador Chrome no Windows Desktop solicitará que o usuário selecione o certificado correto. Isso pode ser confuso para o usuário final. Para otimizar essa experiência, você pode definir uma política para Chrome para selecionar automaticamente o certificado certo para uma melhor experiência do usuário. Essa política pode ser definida manualmente, fazendo com que um registro seja alterado ou configurado automaticamente por meio de GPO (para definir as chaves do registro). Isso exige que os certificados de cliente do usuário para autenticação no AD FS tenham emissores distintos de outros casos de uso.
 
 Para obter mais informações sobre como configurar isso para o Chrome, consulte este [link](http://www.chromium.org/administrators/policy-list-3#AutoSelectCertificateForUrls).
 
@@ -78,15 +79,14 @@ Cada AD FS e servidor WAP precisarão acessar o ponto de extremidade da CRL para
 2)  Em cada servidor AD FS/WAP, verifique se os pontos de extremidade da CRL estão acessíveis por meio do protocolo usado (normalmente HTTPS ou HTTP)
 3)  Para validação avançada, [habilite o log de eventos CAPI2](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues) em cada servidor AD FS/WAP
 4) Verificar a ID do evento 41 (verificar revogação) nos logs operacionais do CAPI2
-5) Verificar`‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
+5) Verificar `‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
 
-***Dica***: você pode direcionar um único servidor de AD FS ou WAP para facilitar a solução de problemas Configurando a resolução de DNS (arquivo de hosts no Windows) para apontar para um servidor específico. Isso permite que você habilite o rastreamento direcionado a um servidor.
+***Dica** _: você pode direcionar um único servidor de AD FS ou WAP para facilitar a solução de problemas Configurando a resolução de DNS (arquivo de hosts no Windows) para apontar para um servidor específico. Isso permite que você habilite o rastreamento direcionado a um servidor.
 
 ### <a name="check-if-this-is-a-server-name-indication-sni-issue"></a>Verificar se este é um problema de Indicação de Nome de Servidor (SNI)
 AD FS requer que o dispositivo cliente (ou navegadores) e os balanceadores de carga ofereçam suporte ao SNI. Alguns dispositivos cliente (geralmente versões mais antigas do Android) podem não dar suporte a SNI. Além disso, os balanceadores de carga podem não dar suporte ao SNI ou não foram configurados para SNI. Nessas instâncias, é provável que você veja as falhas de certificação do usuário.
 1)  Trabalhe com seu engenheiro de rede para garantir que o Load Balancer para AD FS/WAP dê suporte ao SNI
-2)  Caso o SNI não tenha suporte AD FS tenha uma solução alternativa seguindo as etapas abaixo
-    *   Abrir uma janela de prompt de comandos com privilégios elevados no servidor de AD FS primário
+2)  Caso o SNI não tenha suporte AD FS tenha uma solução alternativa seguindo as etapas abaixo para abrir uma janela de prompt de comando elevada no servidor de AD FS primário
     *   Digite ```Netsh http show sslcert```
     *   Copiar o ' GUID do aplicativo ' e o ' hash de certificado ' do serviço de Federação
     *   Digite `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`
@@ -112,7 +112,7 @@ Para obter mais informações, consulte [este link](ad-fs-prompt-login.md).
 
 ### <a name="additional-troubleshooting"></a>Solução de problemas adicionais
 Essas ocorrências são raras
-1)  Se suas listas de CRL forem muito longas, ela poderá atingir o tempo limite ao tentar fazer o download. Nesse caso, você precisa atualizar o ' MaxFieldLength ' e o ' MaxRequestByte ' de acordo comhttps://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
+1)  Se suas listas de CRL forem muito longas, ela poderá atingir o tempo limite ao tentar fazer o download. Nesse caso, você precisa atualizar o ' MaxFieldLength ' e o ' MaxRequestByte ' de acordo com https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
 
 
 

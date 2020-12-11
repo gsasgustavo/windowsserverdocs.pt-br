@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: planejar sua topologia de implantação do AD FS'
 ms.assetid: 5c8c6cc0-0d22-4f27-a111-0aa90db7d6c8
 title: Planejar a topologia de implantação do AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 156a7c451038fc40cf22037138bbcf446c93de1e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: aaa2810b132bf9fb63b82850c91e8541f218b7a2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972103"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041004"
 ---
 # <a name="plan-your-ad-fs-deployment-topology"></a>Planejar a topologia de implantação do AD FS
 
@@ -24,7 +25,7 @@ Há dois tipos de banco de dados que você pode usar para armazenar AD FS dados 
 > [!IMPORTANT]
 > Para implementar a redundância básica, o balanceamento de carga e a opção de dimensionar o serviço de federação (se necessário), é recomendável implantar pelo menos dois servidores de federação por farm de servidores de federação para todos os ambientes de produção, independentemente do tipo de banco de dados que você usará.
 
-## <a name="determining-which-type-of-adfs-configuration-database-to-use"></a>A determinação de qual tipo de banco de dados de configuração AD FS deve ser usado para
+## <a name="determining-which-type-of-ad-fs-configuration-database-to-use"></a>A determinação de qual tipo de banco de dados de configuração AD FS deve ser usado para
 O AD FS usa um banco de dados para armazenar a configuração e, em alguns casos, os dados transacionais relacionados ao Serviço de Federação. Você pode usar o software AD FS para selecionar o banco de dados interno do Windows (WID) interno ou Microsoft SQL Server 2008 ou mais recente para armazenar os dados no Serviço de Federação.
 
 Para a maioria das finalidades, os dois tipos de bancos de dados são relativamente equivalentes. No entanto, há algumas diferenças a serem consideradas antes de começar a ler mais sobre as várias topologias de implantação que você pode usar com AD FS. A tabela a seguir descreve as diferenças nos recursos compatíveis entre um banco de dados WID e um banco de dados SQL Server.

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: instalar o serviço de função de Proxy do Serviço de Federação'
 ms.assetid: c50ecc6a-9504-4b4a-816f-e762dcf3a95e
 title: Instalar o serviço de função de proxy do Serviço de Federação
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: b9db53267afed5ffc68b117676d38293e5121ec2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0ee277e8e5452a9210694196aabc3c04b1e87b21
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042204"
 ---
 # <a name="install-the-federation-service-proxy-role-service"></a>Instalar o serviço de função de proxy do Serviço de Federação
 
@@ -21,17 +22,17 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-install-the-federation-service-proxy-role-service-using-the-server-manager"></a>Para instalar o serviço de função Proxy do Serviço de Federação usando o Gerenciador do Servidor
 
-1.  Na tela **Iniciar** , digite**Gerenciador do servidor**e pressione Enter.
+1.  Na tela **Iniciar** , digite **Gerenciador do servidor** e pressione Enter.
 
 2.  Clique em **Gerenciar** e clique em **Adicionar Funções e Recursos** para iniciar o Assistente para Adicionar Funções e Recursos.
 
 3.  Na página **Antes de começar** , clique em **Avançar**.
 
-4.  Na página **Selecionar tipo de instalação** , clique em instalação baseada em **função \- ou \- recurso**e clique em **Avançar**.
+4.  Na página **Selecionar tipo de instalação** , clique em instalação baseada em **função \- ou \- recurso** e clique em **Avançar**.
 
 5.  Na página **Selecionar servidor de destino**, clique em **Selecionar um servidor no pool de servidores**, verifique se o computador alvo está selecionado e, depois, clique em **Avançar**.
 
-6.  Na página **selecionar funções de servidor** , clique em **acesso remoto**e, em seguida, clique em Avançar.
+6.  Na página **selecionar funções de servidor** , clique em **acesso remoto** e, em seguida, clique em Avançar.
 
     > [!NOTE]
     > Se for solicitado instalar recursos adicionais do Framework .NET adicional ou do Serviço de Ativação do Processo do Windows, clique em **Adicionar Recursos** para instalar eles.

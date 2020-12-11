@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: ingressar um computador em um domínio'
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Adicionar um computador a um domínio
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: edb02a623998f2bac3621f201267e76fdcf3e1dd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 20c7971ff64792deadbb453edd4a76f02b14bd98
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969743"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042117"
 ---
 # <a name="join-a-computer-to-a-domain"></a>Adicionar um computador a um domínio
 
@@ -23,9 +24,9 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-join-a-computer-to-a-domain"></a>Para ingressar um computador em um domínio
 
-1.  Na tela **Iniciar** , digite **painel de controle**e pressione Enter.
+1.  Na tela **Iniciar** , digite **painel de controle** e pressione Enter.
 
-2.  Navegue até **sistema e segurança**e clique em **sistema**.
+2.  Navegue até **sistema e segurança** e clique em **sistema**.
 
 3.  Em **configurações de grupo de trabalho, o domínio e o nome do computador**, clique em **alterar configurações**.
 

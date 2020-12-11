@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: monitoramento Active Directory de sinais de comprometimento'
 ms.assetid: a7ef2fba-b05c-4be2-93b2-b9456244c3ad
 title: Monitorar o Active Directory em busca de sinais de comprometimento
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fb688e49e0c3a498ee3b5a2ed25801ea01bc37eb
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 30aa1010d1222b61ed21d2a3921d0166f24f7a79
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069638"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042474"
 ---
 # <a name="monitoring-active-directory-for-signs-of-compromise"></a>Monitorar o Active Directory em busca de sinais de comprometimento
 
@@ -88,7 +89,7 @@ Há dezenas de direitos de usuário e permissões no Windows (por exemplo, fazer
 ##### <a name="audit-process-tracking"></a>Controle de processo de auditoria
 Essa configuração de política determina se é para auditar informações detalhadas de controle de processos para eventos como ativação do programa, saída do processo, tratamento de duplicação e acesso indireto a objetos. Ele é útil para controlar usuários mal-intencionados e os programas que eles usam.
 
-Habilitar o controle de processo de auditoria gera um grande número de eventos, portanto, normalmente ele é definido como **sem auditoria** . No entanto, essa configuração pode fornecer um grande benefício durante uma resposta a incidentes do log detalhado dos processos iniciados e a hora em que foram iniciadas. Para controladores de domínio e outros servidores de infraestrutura de função única, essa categoria pode ser ativada com segurança sempre. Os servidores de função única não geram muito tráfego de controle de processos durante o curso normal de suas tarefas. Assim, eles podem ser habilitados para capturar eventos não autorizados, se eles ocorrerem.
+Habilitar o controle de processo de auditoria gera um grande número de eventos, portanto, normalmente ele é definido como **sem auditoria**. No entanto, essa configuração pode fornecer um grande benefício durante uma resposta a incidentes do log detalhado dos processos iniciados e a hora em que foram iniciadas. Para controladores de domínio e outros servidores de infraestrutura de função única, essa categoria pode ser ativada com segurança sempre. Os servidores de função única não geram muito tráfego de controle de processos durante o curso normal de suas tarefas. Assim, eles podem ser habilitados para capturar eventos não autorizados, se eles ocorrerem.
 
 ##### <a name="system-events-audit"></a>Auditoria de eventos do sistema
 
@@ -196,10 +197,10 @@ Essa subcategoria relata informações detalhadas sobre as informações replica
 #### <a name="logonlogoff"></a>Logon/logoff
 
 ##### <a name="logon"></a>Logon
-Essa subcategoria relata quando um usuário tenta fazer logon no sistema. Esses eventos ocorrem no computador acessado. Para logons interativos, a geração desses eventos ocorre no computador que está conectado ao. Se ocorrer um logon de rede para acessar um compartilhamento, esses eventos geram no computador que hospeda o recurso acessado. Se essa configuração estiver definida como **sem auditoria** , é difícil ou impossível determinar qual usuário acessou ou tentou acessar computadores da organização.
+Essa subcategoria relata quando um usuário tenta fazer logon no sistema. Esses eventos ocorrem no computador acessado. Para logons interativos, a geração desses eventos ocorre no computador que está conectado ao. Se ocorrer um logon de rede para acessar um compartilhamento, esses eventos geram no computador que hospeda o recurso acessado. Se essa configuração estiver definida como **sem auditoria**, é difícil ou impossível determinar qual usuário acessou ou tentou acessar computadores da organização.
 
 ##### <a name="network-policy-server"></a>Servidor de Políticas de Rede
-Essa subcategoria relata eventos gerados pelas solicitações de acesso do usuário RADIUS (IAS) e NAP (proteção de acesso à rede). Essas solicitações podem ser **conceder** , **negar** , **descartar** , **colocar em quarentena** , **Bloquear** e **desbloquear** . A auditoria dessa configuração resultará em um volume médio ou alto de registros em servidores NPS e IAS.
+Essa subcategoria relata eventos gerados pelas solicitações de acesso do usuário RADIUS (IAS) e NAP (proteção de acesso à rede). Essas solicitações podem ser **conceder**, **negar**, **descartar**, **colocar em quarentena**, **Bloquear** e **desbloquear**. A auditoria dessa configuração resultará em um volume médio ou alto de registros em servidores NPS e IAS.
 
 ##### <a name="ipsec-main-mode"></a>Modo principal do IPsec
 Essa subcategoria relata os resultados do protocolo protocolo IKE (IKE) e do protocolo Authenticated IP (AuthIP) durante as negociações do modo principal.
@@ -211,7 +212,7 @@ Essa subcategoria relata os resultados de AuthIP durante negociações de modo e
 Essa subcategoria relata outros eventos relacionados ao logon e ao logoff, como Serviços de Área de Trabalho Remota desconexões de sessão e reconexão, usando executar como para executar processos em uma conta diferente, bloqueando e desbloqueando uma estação de trabalho.
 
 ##### <a name="logoff"></a>Verbos
-Essa subcategoria relata quando um usuário faz logoff do sistema. Esses eventos ocorrem no computador acessado. Para logons interativos, a geração desses eventos ocorre no computador que está conectado ao. Se ocorrer um logon de rede para acessar um compartilhamento, esses eventos geram no computador que hospeda o recurso acessado. Se essa configuração estiver definida como **sem auditoria** , é difícil ou impossível determinar qual usuário acessou ou tentou acessar computadores da organização.
+Essa subcategoria relata quando um usuário faz logoff do sistema. Esses eventos ocorrem no computador acessado. Para logons interativos, a geração desses eventos ocorre no computador que está conectado ao. Se ocorrer um logon de rede para acessar um compartilhamento, esses eventos geram no computador que hospeda o recurso acessado. Se essa configuração estiver definida como **sem auditoria**, é difícil ou impossível determinar qual usuário acessou ou tentou acessar computadores da organização.
 
 ##### <a name="account-lockout"></a>Bloqueio de conta
 Essa subcategoria relata quando a conta de um usuário é bloqueada como resultado de muitas tentativas de logon com falha.
@@ -255,10 +256,10 @@ Essa configuração de política de segurança não está sendo usada no momento
 
 #### <a name="object-access"></a>Acesso a objetos
 
-##### <a name="file-system"></a>Sistema de Arquivos
+##### <a name="file-system"></a>Sistema de arquivos
 Essa subcategoria relata quando os objetos do sistema de arquivos são acessados. Somente objetos do sistema de arquivos com SACLs causam a geração de eventos de auditoria e somente quando eles são acessados de maneira correspondente às entradas da SACL. Por si só, essa configuração de política não causará a auditoria de nenhum evento. Ele determina se é necessário auditar o evento de um usuário que acessa um objeto do sistema de arquivos que tem uma SACL (lista de controle de acesso) do sistema especificada, permitindo que a auditoria ocorra com eficiência.
 
-Se a configuração de acesso ao objeto de auditoria estiver configurada como **êxito** , uma entrada de auditoria será gerada cada vez que um usuário acessar com êxito um objeto com uma SACL especificada. Se essa configuração de política estiver configurada como **falha** , uma entrada de auditoria será gerada cada vez que um usuário falhar em uma tentativa de acessar um objeto com uma SACL especificada.
+Se a configuração de acesso ao objeto de auditoria estiver configurada como **êxito**, uma entrada de auditoria será gerada cada vez que um usuário acessar com êxito um objeto com uma SACL especificada. Se essa configuração de política estiver configurada como **falha**, uma entrada de auditoria será gerada cada vez que um usuário falhar em uma tentativa de acessar um objeto com uma SACL especificada.
 
 ##### <a name="registry"></a>Registro
 Essa subcategoria relata quando os objetos do registro são acessados. Somente objetos do registro com SACLs causam a geração de eventos de auditoria e somente quando eles são acessados de maneira correspondente às entradas da SACL. Por si só, essa configuração de política não causará a auditoria de nenhum evento.
@@ -321,11 +322,11 @@ A política de auditoria do Windows pode ser definida usando políticas de grupo
 
 ### <a name="setting-windows-audit-policy-by-using-group-policy"></a>Definindo a política de auditoria do Windows usando Política de Grupo
 
-Para definir a política de auditoria usando políticas de grupo, configure as categorias de auditoria apropriadas localizadas na **política do computador \** \ Configuração do Policies\Audit (consulte a captura de tela a seguir para obter um exemplo do editor de política de grupo local (gpedit. msc)). Cada categoria de política de auditoria pode ser habilitada para eventos de **êxito** , **falha** ou **êxito** e falha.
+Para definir a política de auditoria usando políticas de grupo, configure as categorias de auditoria apropriadas localizadas na **política do computador \** \ Configuração do Policies\Audit (consulte a captura de tela a seguir para obter um exemplo do editor de política de grupo local (gpedit. msc)). Cada categoria de política de auditoria pode ser habilitada para eventos de **êxito**, **falha** ou **êxito** e falha.
 
 ![monitorando o AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_6.gif)
 
-A política de auditoria avançada pode ser definida usando Active Directory ou políticas de grupo local. Para definir a política de auditoria avançada, configure as subcategorias apropriadas localizadas em **computador \** \ Configurações de auditoria de Settings\Advanced (consulte a captura de tela a seguir para obter um exemplo do editor de política de grupo local (gpedit. msc)). Cada subcategoria de diretiva de auditoria pode ser habilitada para eventos de **êxito** , **falha** ou **êxito** e **falha** .
+A política de auditoria avançada pode ser definida usando Active Directory ou políticas de grupo local. Para definir a política de auditoria avançada, configure as subcategorias apropriadas localizadas em **computador \** \ Configurações de auditoria de Settings\Advanced (consulte a captura de tela a seguir para obter um exemplo do editor de política de grupo local (gpedit. msc)). Cada subcategoria de diretiva de auditoria pode ser habilitada para eventos de **êxito**, **falha** ou **êxito** e **falha** .
 
 ![monitorando o AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
 
@@ -364,13 +365,13 @@ Auditpol.exe pode ser usado para salvar e restaurar uma política de auditoria l
 
 `auditpol /restore /file:<filename>` -Usado para importar um arquivo de política de auditoria salvo anteriormente para uma política de auditoria local
 
-`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>` -Se essa configuração de diretiva de auditoria estiver habilitada, ela fará com que o sistema pare imediatamente (com a mensagem STOP: C0000244 {Audit Failed}) se uma auditoria de segurança não puder ser registrada por qualquer motivo. Normalmente, um evento não é registrado quando o log de auditoria de segurança está cheio e o método de retenção especificado para o log de segurança **não substitui eventos** nem **substitui eventos por dias** . Normalmente, ele só é habilitado por ambientes que precisam de maior garantia de que o log de segurança está registrando em log. Se habilitada, os administradores devem observar com atenção o tamanho do log de segurança e girar os logs conforme necessário. Ele também pode ser definido com Política de Grupo modificando a opção de segurança **auditoria: desligar o sistema imediatamente se não for possível registrar auditorias de segurança** (padrão = desabilitado).
+`auditpol /<get/set> /option:<CrashOnAuditFail> /<enable/disable>` -Se essa configuração de diretiva de auditoria estiver habilitada, ela fará com que o sistema pare imediatamente (com a mensagem STOP: C0000244 {Audit Failed}) se uma auditoria de segurança não puder ser registrada por qualquer motivo. Normalmente, um evento não é registrado quando o log de auditoria de segurança está cheio e o método de retenção especificado para o log de segurança **não substitui eventos** nem **substitui eventos por dias**. Normalmente, ele só é habilitado por ambientes que precisam de maior garantia de que o log de segurança está registrando em log. Se habilitada, os administradores devem observar com atenção o tamanho do log de segurança e girar os logs conforme necessário. Ele também pode ser definido com Política de Grupo modificando a opção de segurança **auditoria: desligar o sistema imediatamente se não for possível registrar auditorias de segurança** (padrão = desabilitado).
 
 `auditpol /<get/set> /option:<AuditBaseObjects> /<enable/disable>` – Essa configuração de política de auditoria determina se o acesso de objetos do sistema global deve ser auditado. Se essa política estiver habilitada, ela fará com que os objetos do sistema, como mutexes, eventos, semáforos e dispositivos DOS, sejam criados com uma SACL (lista de controle de acesso) do sistema padrão. A maioria dos administradores consideram a auditoria de objetos do sistema global como "ruidosa", e eles só serão habilitados se suspeitarem de hackers mal-intencionados. Somente objetos nomeados recebem uma SACL. Se a política de auditoria de acesso a objetos de auditoria (ou a subcategoria de auditoria de objeto de kernel) também estiver habilitada, o acesso a esses objetos do sistema será auditado. Ao definir essa configuração de segurança, as alterações não terão efeito até que você reinicie o Windows. Essa política também pode ser definida com Política de Grupo modificando a opção de segurança auditar o acesso de objetos do sistema global (padrão = desabilitado).
 
 `auditpol /<get/set> /option:<AuditBaseDirectories> /<enable/disable>` – Essa configuração de diretiva de auditoria Especifica que os objetos de kernel nomeados (como mutexes e semáforos) devem receber SACLs quando são criados. AuditBaseDirectories afeta objetos de contêiner enquanto AuditBaseObjects afeta objetos que não podem conter outros objetos.
 
-`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>` – Essa configuração de política de auditoria Especifica se o cliente gera um evento quando um ou mais desses privilégios são atribuídos a um token de segurança do usuário: AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege e TcbPrivilege. Se essa opção não estiver habilitada (padrão = desabilitada), os privilégios de BackupPrivilege e RestorePrivilege não serão registrados. Habilitar essa opção pode tornar o log de segurança extremamente ruidosa (às vezes, centenas de eventos por segundo) durante uma operação de backup. Essa política também pode ser definida com Política de Grupo modificando a opção de segurança **auditoria: auditar o uso do privilégio de backup e restauração** .
+`auditpol /<get/set> /option:<FullPrivilegeAuditing> /<enable/disable>` – Essa configuração de política de auditoria Especifica se o cliente gera um evento quando um ou mais desses privilégios são atribuídos a um token de segurança do usuário: AssignPrimaryTokenPrivilege, AuditPrivilege, BackupPrivilege, CreateTokenPrivilege, DebugPrivilege, EnableDelegationPrivilege, ImpersonatePrivilege, LoadDriverPrivilege, RestorePrivilege, SecurityPrivilege, SystemEnvironmentPrivilege, TakeOwnershipPrivilege e TcbPrivilege. Se essa opção não estiver habilitada (padrão = desabilitada), os privilégios de BackupPrivilege e RestorePrivilege não serão registrados. Habilitar essa opção pode tornar o log de segurança extremamente ruidosa (às vezes, centenas de eventos por segundo) durante uma operação de backup. Essa política também pode ser definida com Política de Grupo modificando a opção de segurança **auditoria: auditar o uso do privilégio de backup e restauração**.
 
 > [!NOTE]
 > Algumas informações fornecidas aqui foram tiradas do [tipo de opção de auditoria](/openspecs/windows_protocols/ms-gpac/262a2bed-93d4-4c04-abec-cf06e9ec72fd) da Microsoft e da ferramenta Microsoft SCM.
@@ -379,7 +380,7 @@ Auditpol.exe pode ser usado para salvar e restaurar uma política de auditoria l
 
 No Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 e Windows Vista, os administradores podem optar por habilitar as nove categorias tradicionais ou usar as subcategorias. É uma opção binária que deve ser feita em cada sistema Windows. As categorias principais podem ser habilitadas ou o subcategoriesit não pode ser ambos.
 
-Para impedir que a política de categoria tradicional herdada substitua as subcategorias de política de auditoria, você deve habilitar as configurações de política de **política de auditoria forçada (Windows Vista ou posterior) para substituir as configurações de categoria** de política de auditoria localizadas em **computador \** \ \ instalar opções.
+Para impedir que a política de categoria tradicional herdada substitua as subcategorias de política de auditoria, você deve habilitar as configurações de política de **política de auditoria forçada (Windows Vista ou posterior) para substituir as configurações de categoria** de política de auditoria localizadas em **computador \**\ \ instalar opções.
 
 Recomendamos que as subcategorias sejam habilitadas e configuradas em vez das nove categorias principais. Isso requer que uma configuração de Política de Grupo seja habilitada (para permitir que as subcategorias substituam as categorias de auditoria) junto com a configuração de diferentes subcategorias que dão suporte a políticas de auditoria.
 
