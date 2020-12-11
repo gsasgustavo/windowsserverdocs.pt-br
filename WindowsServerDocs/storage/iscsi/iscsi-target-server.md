@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: visão geral do servidor de destino iSCSI'
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
 ms.topic: article
@@ -6,12 +7,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: febd4b7ab74e89949997b6a182390ef5177f5ac5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 71c2e3bb7ef125e79dadab331786b5c53fa0800d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957273"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041244"
 ---
 # <a name="iscsi-target-server-overview"></a>Visão geral do servidor de destino iSCSI
 
@@ -21,13 +22,13 @@ Este tópico fornece uma breve visão geral do servidor de destino iSCSI, um ser
 
 O servidor de destino iSCSI é ideal para o seguinte:
 
-* Inicialização de rede **e disco**     Usando adaptadores de rede com capacidade de inicialização ou um carregador de software, você pode implantar centenas de servidores sem disco. Com o servidor de destino iSCSI, a implantação é rápida. Em testes internos da Microsoft, 256 computadores foram implantados em 34 minutos. Usando discos rígidos virtuais diferentes, você pode economizar até 90% do espaço de armazenamento usado para as imagens do sistema operacional. Isso é ideal para grandes implantações de imagens de sistemas operacionais idênticos, por exemplo, em máquinas virtuais que executam o Hyper-V ou em clusters de computação de alto desempenho (HPC).
+* **Inicialização de rede e disco**   Usando adaptadores de rede com capacidade de inicialização ou um carregador de software, você pode implantar centenas de servidores sem disco. Com o servidor de destino iSCSI, a implantação é rápida. Em testes internos da Microsoft, 256 computadores foram implantados em 34 minutos. Usando discos rígidos virtuais diferentes, você pode economizar até 90% do espaço de armazenamento usado para as imagens do sistema operacional. Isso é ideal para grandes implantações de imagens de sistemas operacionais idênticos, por exemplo, em máquinas virtuais que executam o Hyper-V ou em clusters de computação de alto desempenho (HPC).
 
-* Armazenamento de aplicativos **do servidor**     Alguns aplicativos exigem armazenamento em bloco. O Servidor de Destino iSCSI pode fornecer esses aplicativos com armazenamento em bloco continuamente disponível. Como o armazenamento é acessível remotamente, ele também pode consolidar o armazenamento em bloco para escritórios centrais ou filiais.
+* **Armazenamento de aplicativos do servidor**   Alguns aplicativos exigem armazenamento em bloco. O Servidor de Destino iSCSI pode fornecer esses aplicativos com armazenamento em bloco continuamente disponível. Como o armazenamento é acessível remotamente, ele também pode consolidar o armazenamento em bloco para escritórios centrais ou filiais.
 
-* **Armazenamento heterogêneo**     o servidor de destino iSCSI dá suporte a iniciadores iSCSI não Microsoft, facilitando o compartilhamento de armazenamento em servidores em um ambiente de software misto.
+* O servidor de destino iSCSI de **armazenamento heterogêneo** dá suporte a iniciadores não Microsoft iSCSI, facilitando o compartilhamento de armazenamento em servidores em um ambiente de software misto.
 
-* Ambientes de desenvolvimento **, teste, demonstração e laboratório**     Quando o servidor de destino iSCSI está habilitado, um computador executando o sistema operacional Windows Server torna-se um dispositivo de armazenamento de blocos acessível pela rede. Isso é útil para testar aplicativos antes da implantação em uma SAN (Rede de Área de Armazenamento).
+* **Ambientes de desenvolvimento, teste, demonstração e laboratório**   Quando o servidor de destino iSCSI está habilitado, um computador executando o sistema operacional Windows Server torna-se um dispositivo de armazenamento de blocos acessível pela rede. Isso é útil para testar aplicativos antes da implantação em uma SAN (Rede de Área de Armazenamento).
 
 ## <a name="block-storage-requirements"></a>Requisitos de armazenamento em bloco
 

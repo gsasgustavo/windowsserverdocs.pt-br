@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar um ambiente de laboratório de AD FS'
 ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: Configurar um ambiente de laboratório do AD FS
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: d9625992d7098a1f5cd510901be07187702b3771
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0b7c4c40ea37c9d8f7f2e7dd5639245a98a25aab
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967083"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039684"
 ---
 # <a name="set-up-an-ad-fs-lab-environment"></a>Configurar um ambiente de laboratório do AD FS
 
@@ -48,7 +49,7 @@ Depois que o controlador de domínio estiver funcionando, você poderá criar co
 
 Crie as seguintes contas:
 
-- Usuário: **Robert Hatley** com as seguintes credenciais: nome de usuário: **RobertH** e senha:<strong>P@ssword</strong>
+- Usuário: **Robert Hatley** com as seguintes credenciais: nome de usuário: **RobertH** e senha: <strong>P@ssword</strong>
 
 - Grupo: **Finance**
 
@@ -169,7 +170,7 @@ A próxima etapa é configurar o Device Registration Service no servidor ADFS1. 
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>Adicionar registros de recurso de host (A) e alias (CNAME) ao DNS
 No DC1, você deve assegurar que os seguintes registros DNS (Sistema de Nomes de Domínio) sejam criados para o Device Registration Service.
 
-|Entrada|Type|Endereço|
+|Entrada|Tipo|Endereço|
 |---------|--------|-----------|
 |adfs1|Host (A)|Endereço IP do servidor de AD FS|
 |enterpriseregistration|Alias (CNAME)|adfs1.contoso.com|
@@ -303,9 +304,9 @@ Você deve concluir as etapas a seguir para configurar um servidor Web com esse 
 
     1.  Execute FedUtil.exe, localizado em **arquivos C:Program (x86) Windows Identity Foundation sdkv 3.5**.
 
-    2.  Defina o local de configuração do aplicativo como **C:inetputclaimappweb.config** e defina o URI do aplicativo como a URL do seu site, ** https://webserv1.contoso.com /ClaimApp/**. Clique em **Próximo**.
+    2.  Defina o local de configuração do aplicativo como **C:inetputclaimappweb.config** e defina o URI do aplicativo como a URL do seu site, **https://webserv1.contoso.com /ClaimApp/**. Clique em **Avançar**.
 
-    3.  Selecione **usar um STS existente** e navegue até a URL de metadados do AD FS Server **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Clique em **Próximo**.
+    3.  Selecione **usar um STS existente** e navegue até a URL de metadados do AD FS Server **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Clique em **Avançar**.
 
     4.  Selecione **Desabilitar validação da cadeia de certificados** e clique em **Avançar**.
 
@@ -353,9 +354,9 @@ O cliente DEVE confiar no certificado SSL usado para o servidor de federação (
 Você também deve configurar e usar uma conta da Microsoft para fazer logon no Client1.
 
 ## <a name="see-also"></a>Consulte Também
-[Série de vídeos de instruções serviços de Federação do Active Directory (AD FS): instalando um farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- de servidores do AD FS [Série de vídeos de instruções serviços de Federação do Active Directory (AD FS): Atualizando certificados](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- [Série de vídeos de instruções serviços de Federação do Active Directory (AD FS): adicionar uma relação de confiança](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- de terceira parte confiável [Série de vídeos de instruções serviços de Federação do Active Directory (AD FS): Habilitando o serviço](https://channel9.msdn.com/) 
- de registro de dispositivo [Série de vídeos de instruções serviços de Federação do Active Directory (AD FS): Instalando o proxy de aplicativo Web](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+[Serviços de Federação do Active Directory (AD FS) How-To série de vídeos: instalando um farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ de servidores AD FS [Serviços de Federação do Active Directory (AD FS) How-To série de vídeo: Atualizando certificados](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ [Serviços de Federação do Active Directory (AD FS) How-To série de vídeos: adicionar uma terceira parte confiável](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ [Série de vídeo do Serviços de Federação do Active Directory (AD FS) How-To: Habilitando o serviço](https://channel9.msdn.com/) 
+ de registro do dispositivo [Serviços de Federação do Active Directory (AD FS) How-To série de vídeos: Instalando o proxy de aplicativo Web](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
 

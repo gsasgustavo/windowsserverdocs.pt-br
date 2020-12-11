@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: delimitar a alocação de volumes no Espaços de Armazenamento Diretos'
 title: Delimitar a alocação de volumes no Espaços de Armazenamento Diretos
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.author: cosdar
 ms.date: 03/29/2018
-ms.openlocfilehash: 394d9dbb41f502fe9be273e97177237dea79fde7
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: b0d036b08ab3c538a134cdbc294c2208d8d547aa
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078491"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041404"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>Delimitar a alocação de volumes no Espaços de Armazenamento Diretos
 > Aplica-se a: Windows Server 2019

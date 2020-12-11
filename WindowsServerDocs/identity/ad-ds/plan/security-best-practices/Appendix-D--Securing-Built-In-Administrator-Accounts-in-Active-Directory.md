@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice D: protegendo Built-In contas de administrador no Active Directory'
 ms.assetid: 11f36f2b-9981-4da0-9e7c-4eca78035f37
 title: Apêndice D-protegendo Built-In contas de administrador no Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 10251bb37e68165c1e2573d41fc7d24a91b66aa6
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 2d6a8a626c5fbf2a8d34a1527b3eb9976c21ebd0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070578"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041714"
 ---
 # <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>Apêndice D: Proteger contas de administrador internas no Active Directory
 
@@ -36,7 +37,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 -   Configure GPOs para restringir o uso da conta de administrador em sistemas ingressados no domínio:
 
-    -   Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \** \ \ \ \ Configurações de direitos:
+    -   Em um ou mais GPOs que você cria e vincula a estações de trabalho e UOs de servidor membro em cada domínio, adicione a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \**\ \ \ \ Configurações de direitos:
 
         -   Negar acesso a este computador pela rede
 
@@ -55,7 +56,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)
 
 -   Configurar GPOs para restringir contas de administrador em controladores de domínio
-    -   Em cada domínio na floresta, o GPO controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \** \ \ \ \ \ Configurações de direitos:
+    -   Em cada domínio na floresta, o GPO controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \**\ \ \ \ \ Configurações de direitos:
         -   Negar acesso a este computador pela rede
 
         -   Negar o logon como um trabalho em lotes
@@ -73,25 +74,25 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 #### <a name="step-by-step-instructions-to-secure-built-in-administrator-accounts-in-active-directory"></a>Instruções passo a passo para proteger contas de administrador internas no Active Directory
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e em **Active Directory usuários e computadores** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e em **Active Directory usuários e computadores**.
 
 2.  Para evitar ataques que aproveitam a delegação para usar as credenciais da conta em outros sistemas, execute as seguintes etapas:
 
-    1.  Clique com o botão direito do mouse na conta de **administrador** e clique em **Propriedades** .
+    1.  Clique com o botão direito do mouse na conta de **administrador** e clique em **Propriedades**.
 
-    2.  Clique na guia **Conta** .
+    2.  Clique na guia **Conta**.
 
-    3.  Em **Opções de conta** , selecione a **conta é confidencial e não pode ser** demarcada como indicado na captura de tela a seguir e clique em **OK** .
+    3.  Em **Opções de conta**, selecione a **conta é confidencial e não pode ser** demarcada como indicado na captura de tela a seguir e clique em **OK**.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_24.gif)
 
 3.  Para habilitar o **cartão inteligente é necessário para** o sinalizador de logon interativo na conta, execute as seguintes etapas:
 
-    1.  Clique com o botão direito do mouse na conta de **administrador** e selecione **Propriedades** .
+    1.  Clique com o botão direito do mouse na conta de **administrador** e selecione **Propriedades**.
 
-    2.  Clique na guia **Conta** .
+    2.  Clique na guia **Conta**.
 
-    3.  Em opções de **conta** , selecione o sinalizador **cartão inteligente necessário para logon interativo** , conforme indicado na captura de tela a seguir, e clique em **OK** .
+    3.  Em opções de **conta** , selecione o sinalizador **cartão inteligente necessário para logon interativo** , conforme indicado na captura de tela a seguir, e clique em **OK**.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)
 
@@ -100,11 +101,11 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 > [!WARNING]
 > Esse GPO nunca deve ser vinculado no nível de domínio porque pode tornar a conta de administrador interna inutilizável, mesmo em cenários de recuperação de desastres.
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e clique em **Gerenciamento de política de grupo** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e clique em **Gerenciamento de política de grupo**.
 
 2.  Na árvore de console, expanda <Forest> \Domains \\ <Domain> e, em seguida, **política de grupo objetos** (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja criar o política de grupo).
 
-3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo** .
+3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
     ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)
 
@@ -112,19 +113,19 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)
 
-5.  No painel de detalhes, clique com o botão direito do mouse <GPO Name> e clique em **Editar** .
+5.  No painel de detalhes, clique com o botão direito do mouse <GPO Name> e clique em **Editar**.
 
-6.  Navegue até **computador \ \ Diretivas** \ \ políticas e clique em **atribuição de direitos de usuário** .
+6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
     ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_29.gif)
 
 7.  Configure os direitos de usuário para impedir que a conta de administrador acesse servidores membros e estações de trabalho na rede fazendo o seguinte:
 
-    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **administrador** , clique em **verificar nomes** e clique em **OK** . Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
+    3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)
 
@@ -132,11 +133,11 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 8.  Configure os direitos de usuário para impedir que a conta de administrador faça logon como um trabalho em lotes fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **administrador** , clique em **verificar nomes** e clique em **OK** . Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
+    3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)
 
@@ -144,11 +145,11 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 9. Configure os direitos de usuário para impedir que a conta de administrador faça logon como um serviço fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon como um serviço** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon como um serviço** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **administrador** , clique em **verificar nomes** e clique em **OK** . Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
+    3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)
 
@@ -156,27 +157,27 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 10. Configure os direitos de usuário para impedir que a conta do BA acesse servidores membros e estações de trabalho via Serviços de Área de Trabalho Remota fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **administrador** , clique em **verificar nomes** e clique em **OK** . Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
+    3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
-11. Para sair **Editor de gerenciamento de política de grupo** , clique em **arquivo** e em **sair** .
+11. Para sair **Editor de gerenciamento de política de grupo**, clique em **arquivo** e em **sair**.
 
-12. No **Gerenciamento de política de grupo** , VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
+12. No **Gerenciamento de política de grupo**, VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
 
     1.  Navegue até <Forest> \Domains \\ <Domain> (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja definir a política de grupo).
 
-    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente** .
+    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente**.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_34.gif)
 
-    3.  Selecione o GPO que você criou e clique em **OK** .
+    3.  Selecione o GPO que você criou e clique em **OK**.
 
         ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_35.gif)
 
@@ -207,15 +208,15 @@ De qualquer servidor membro ou estação de trabalho que não seja afetada pelas
 
 1.  Faça logon no domínio usando a conta de administrador interna do domínio.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **prompt de comando** , clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
+3.  Na caixa de **pesquisa** , digite **prompt de comando**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
 
-4.  Quando for solicitado a aprovar a elevação, clique em **Sim** .
+4.  Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
     ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)
 
-5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $** , em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
+5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $**, em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
 
 6.  A captura de tela a seguir mostra a mensagem de erro que deve aparecer.
 
@@ -227,50 +228,50 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 ###### <a name="create-a-batch-file"></a>Criar um arquivo em lotes
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas** .
+2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas**.
 
-3.  No **bloco de notas** , digite **dir c:** .
+3.  No **bloco de notas**, digite **dir c:**.
 
-4.  Clique em **arquivo** e em **salvar como** .
+4.  Clique em **arquivo** e em **salvar como**.
 
 5.  No campo **nome** de arquivo, digite **<Filename> . bat** (em que <Filename> é o nome do novo arquivo em lotes).
 
 ###### <a name="schedule-a-task"></a>Agendar uma tarefa
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas** .
+2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas**.
 
     > [!NOTE]
-    > Em computadores que executam o Windows 8, na caixa de pesquisa, digite **agendar tarefas** e clique em **agendar tarefas** .
+    > Em computadores que executam o Windows 8, na caixa de pesquisa, digite **agendar tarefas** e clique em **agendar tarefas**.
 
-3.  Em **Agendador de tarefas** , clique em **ação** e clique em **criar tarefa** .
+3.  Em **Agendador de tarefas**, clique em **ação** e clique em **criar tarefa**.
 
 4.  Na caixa de diálogo **criar tarefa** , digite **<Task Name>** (em que **<Task Name>** é o nome da nova tarefa).
 
-5.  Clique na guia **ações** e clique em **novo** .
+5.  Clique na guia **ações** e clique em **novo**.
 
-6.  Em **ação:** , selecione **Iniciar um programa** .
+6.  Em **ação:**, selecione **Iniciar um programa**.
 
-7.  Em **programa/script:** , clique em **procurar** , localize e selecione o arquivo em lotes criado na seção "criar um arquivo em lotes" e clique em **abrir** .
+7.  Em **programa/script:**, clique em **procurar**, localize e selecione o arquivo em lotes criado na seção "criar um arquivo em lotes" e clique em **abrir**.
 
-8.  Clique em **OK** .
+8.  Clique em **OK**.
 
-9. Clique na guia **Geral** .
+9. Clique na guia **Geral**.
 
-10. Em opções de **segurança** , clique em **Alterar usuário ou grupo** .
+10. Em opções de **segurança** , clique em **Alterar usuário ou grupo**.
 
-11. Digite o nome da conta do BA no nível do domínio, clique em **verificar nomes** e clique em **OK** .
+11. Digite o nome da conta do BA no nível do domínio, clique em **verificar nomes** e clique em **OK**.
 
-12. Selecione **executar se o usuário estiver conectado ou não** e não **armazenar a senha** . A tarefa só terá acesso aos recursos do computador local.
+12. Selecione **executar se o usuário estiver conectado ou não** e não **armazenar a senha**. A tarefa só terá acesso aos recursos do computador local.
 
-13. Clique em **OK** .
+13. Clique em **OK**.
 
 14. Uma caixa de diálogo deve ser exibida, solicitando credenciais de conta de usuário para executar a tarefa.
 
-15. Depois de inserir as credenciais, clique em **OK** .
+15. Depois de inserir as credenciais, clique em **OK**.
 
 16. Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
@@ -280,23 +281,23 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  Em **fazer logon como:** , selecione **esta conta** .
+6.  Em **fazer logon como:**, selecione **esta conta**.
 
-7.  Clique em **procurar** , digite o nome da conta do Ba no nível do domínio, clique em **verificar nomes** e clique em **OK** .
+7.  Clique em **procurar**, digite o nome da conta do Ba no nível do domínio, clique em **verificar nomes** e clique em **OK**.
 
-8.  Em **senha:** e **Confirmar senha:** , digite a senha da conta de administrador e clique em **OK** .
+8.  Em **senha:** e **Confirmar senha:**, digite a senha da conta de administrador e clique em **OK**.
 
 9. Clique em **OK** mais três vezes.
 
-10. Clique com o botão direito do mouse no **serviço spooler de impressão** e selecione **reiniciar** .
+10. Clique com o botão direito do mouse no **serviço spooler de impressão** e selecione **reiniciar**.
 
 11. Quando o serviço for reiniciado, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
@@ -306,23 +307,23 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  Em **fazer logon como:** , selecione a conta **sistema local** e clique em **OK** .
+6.  Em **fazer logon como:**, selecione a conta **sistema local** e clique em **OK**.
 
 ##### <a name="verify-deny-log-on-through-remote-desktop-services-gpo-settings"></a>Verifique as configurações de GPO "Negar logon por meio do Serviços de Área de Trabalho Remota"
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **conexão de área de trabalho remota** e clique em **conexão de área de trabalho remota** .
+2.  Na caixa de **pesquisa** , digite **conexão de área de trabalho remota** e clique em **conexão de área de trabalho remota**.
 
-3.  No campo **computador** , digite o nome do computador ao qual você deseja se conectar e clique em **conectar** . (Você também pode digitar o endereço IP em vez do nome do computador.)
+3.  No campo **computador** , digite o nome do computador ao qual você deseja se conectar e clique em **conectar**. (Você também pode digitar o endereço IP em vez do nome do computador.)
 
 4.  Quando solicitado, forneça credenciais para o nome da conta do BA no nível do domínio.
 

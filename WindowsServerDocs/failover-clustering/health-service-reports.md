@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: relatórios de Serviço de Integridade'
 title: Relatórios de Serviço de Integridade
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 1e6b11bc73ef34e5247ca43140d3e2122e77ab61
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e453744524381240f8b870326275fae56eca1635
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990779"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039494"
 ---
 # <a name="health-service-reports"></a>Relatórios de Serviço de Integridade
 
@@ -44,7 +45,7 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 ## <a name="usage-in-net-and-c"></a>Uso em .NET e C #
 
-### <a name="connect"></a>Connect
+### <a name="connect"></a>Conectar
 
 Para consultar o Serviço de Integridade, será necessário estabelecer um **CimSession** com o cluster. Para fazer isso, você precisará de algumas coisas que estão disponíveis apenas no .NET completo, o que significa que não é possível fazer isso prontamente diretamente de um aplicativo Web ou móvel. Esses exemplos de código usarão C \# , a opção mais direta para essa camada de acesso a dados.
 
@@ -77,7 +78,7 @@ O nome de usuário fornecido deve ser um administrador local do computador de de
 
 Com o **CimSession** estabelecido, você pode consultar Instrumentação de gerenciamento do Windows (WMI) no cluster.
 
-Antes que você possa obter falhas ou métricas, você precisará obter instâncias de vários objetos relevantes. Primeiro, o ** \_ StorageSubSystem do MSFT** que representa espaços de armazenamento diretos no cluster. Usando isso, você pode obter todos **os \_ StorageNode de MSFT** no cluster, e todos os volumes de **MSFT \_ **e de dados. Por fim, você precisará do **MSFT \_ StorageHealth**, o serviço de integridade em si.
+Antes que você possa obter falhas ou métricas, você precisará obter instâncias de vários objetos relevantes. Primeiro, o **\_ StorageSubSystem do MSFT** que representa espaços de armazenamento diretos no cluster. Usando isso, você pode obter todos **os \_ StorageNode de MSFT** no cluster, e todos os volumes de **MSFT \_** e de dados. Por fim, você precisará do **MSFT \_ StorageHealth**, o serviço de integridade em si.
 
 ```
 CimInstance Cluster;
@@ -105,7 +106,7 @@ public void DiscoverObjects(CimSession Session)
 }
 ```
 
-Esses são os mesmos objetos que você obtém no PowerShell usando cmdlets como **Get-StorageSubSystem**, **Get-StorageNode**e **Get-volume**.
+Esses são os mesmos objetos que você obtém no PowerShell usando cmdlets como **Get-StorageSubSystem**, **Get-StorageNode** e **Get-volume**.
 
 Você pode acessar todas as mesmas propriedades, documentadas em [classes de API de gerenciamento de armazenamento](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
 

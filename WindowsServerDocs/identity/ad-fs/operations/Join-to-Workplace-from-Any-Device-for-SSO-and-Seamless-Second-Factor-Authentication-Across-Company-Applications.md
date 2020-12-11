@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: ingressar no local de trabalho de qualquer dispositivo para SSO e autenticação de segundo fator direta entre aplicativos da empresa'
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: ingresso no Local de Trabalho em qualquer dispositivo de SSO e autenticação de dois fatores contínua em aplicativos da empresa
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
-ms.openlocfilehash: 584088900bea8acb83da076311d29ed5f45ea71e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3f681ba75ea55245948b1ed9acfd84830b3f3909
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954232"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039794"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>ingresso no Local de Trabalho em qualquer dispositivo de SSO e autenticação de dois fatores contínua em aplicativos da empresa
 
@@ -40,7 +41,7 @@ As empresas podem gerenciar o risco relacionado ao acesso a informações e cond
 
 -   Fornece uma experiência de entrada contínua para os usuários acessarem recursos da empresa em dispositivos confiáveis.
 
-### <a name="single-sign-on"></a>Logon Único
+### <a name="single-sign-on"></a>Logon único
 O SSO (Logon Único) no contexto desse cenário é a funcionalidade que reduz o número de prompts de senhas que o usuário final precisa digitar para acessar os recursos da empresa em dispositivos conhecidos. Essa funcionalidade implica que haverá apenas um prompt aos usuários durante o tempo de vida do SSO para acessar aplicativos e recursos da empresa nesse dispositivo. Se um dispositivo utiliza o Ingresso no Local Trabalho, o usuário que está registrado para usar esse dispositivo adquire SSO persistente, por padrão, por sete dias. Esse usuário tem uma experiência de entrada contínua na mesma sessão ou em novas sessões.
 
 ## <a name="solution-overview"></a>Visão geral da solução

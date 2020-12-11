@@ -1,18 +1,18 @@
 ---
 title: Introdução ao log de acesso do usuário
-desctription: Describes the User Access Logging feature and how to start using it.
+description: Descreve o recurso de registro em log de acesso do usuário e como começar a usá-lo.
 ms.topic: article
 ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
 author: brentfor
 ms.author: brentf
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 24471aca151a59306e8bf51119232f08dacdc606
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8664adc42b2d749dc353e34c66c999537032fc07
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628154"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041044"
 ---
 # <a name="get-started-with-user-access-logging"></a>Introdução ao log de acesso do usuário
 
@@ -44,7 +44,7 @@ As seguintes funções de servidor e serviços podem ter suporte no UAL:
 
 -   AD CS (Serviços de Certificados do Active Directory)
 
--   AD RMS (Active Director Rights Management Services)
+-   AD RMS (Active Directory Rights Management Services)
 
 -   BranchCache
 

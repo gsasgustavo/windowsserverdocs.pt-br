@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: cenário: auditoria de acesso a arquivos'
 ms.assetid: 7be1f2cb-02d5-4209-ba79-edf496a88f47
 title: Auditoria de acesso a arquivos de cenário
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7cd1619204a6406d2570e29f752538d781893ee3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ea5f416bd3652a1766cbf88bbee9e8258e82708b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940259"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044564"
 ---
 # <a name="scenario-file-access-auditing"></a>Scenario: File Access Auditing
 

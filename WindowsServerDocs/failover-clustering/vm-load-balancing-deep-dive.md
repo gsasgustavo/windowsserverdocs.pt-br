@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: aprofundamento de balanceamento de carga de máquina virtual'
 ms.assetid: 5b5bab7a-727b-47ce-8efa-1d37a9639cba
 title: Aprofundamento de balanceamento de carga de máquina virtual
 ms.topic: article
@@ -6,12 +7,12 @@ manager: eldenc
 ms.author: johnmar
 author: JasonGerend
 ms.date: 09/19/2016
-ms.openlocfilehash: 7fc9b449b11b5faf05ac279628f093053e292e8c
-ms.sourcegitcommit: 7a8a608df059b4278a974c52ed7b865421a83aa6
+ms.openlocfilehash: 719aad65d5b4683e7c3a4472ae29098522c89f2e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833308"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040534"
 ---
 # <a name="virtual-machine-load-balancing-deep-dive"></a>Aprofundamento de balanceamento de carga de máquina virtual
 
@@ -21,7 +22,7 @@ O [recurso de balanceamento de carga de máquina virtual](vm-load-balancing-over
 
 ## <a name="heuristics-for-balancing"></a><a id="heuristics-for-balancing"></a>Heurística para balanceamento
 O balanceamento de carga da máquina virtual avalia a carga de um nó com base na heurística a seguir:
-1. **Pressão de memória**atual: a memória é a restrição de recursos mais comum em um host Hyper-V
+1. **Pressão de memória** atual: a memória é a restrição de recursos mais comum em um host Hyper-V
 2. **Utilização** da CPU do nó calculada por média em uma janela de 5 minutos: atenua um nó no cluster ficando excessivamente confirmado
 
 ## <a name="controlling-the-aggressiveness-of-balancing"></a><a id="controlling-aggressiveness-of-balancing"></a>Controlando a agressividade do balanceamento
@@ -35,7 +36,7 @@ A agressividade de balanceamento com base na memória e na heurística da CPU po
 |-------------------|----------------|----------|
 | 1 (padrão) | Baixo | Mover quando o host tiver mais de 80% carregado |
 | 2 | Médio | Mover quando o host tiver mais de 70% carregado |
-| 3 | Alto | Média de nós e movimentação quando o host é superior a 5% acima da média |
+| 3 | Alta | Média de nós e movimentação quando o host é superior a 5% acima da média |
 
 ![Gráfico de um PowerShell de configuração da agressividade de balanceamento](media/vm-load-balancing/detailed-VM-load-balancing-1.jpg)
 

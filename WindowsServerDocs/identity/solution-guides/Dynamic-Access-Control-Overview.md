@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: visão geral do controle de acesso dinâmico'
 ms.assetid: 9ee8a6cb-7550-46e2-9c11-78d0545c3a97
 title: Visão geral do Controle de Acesso Dinâmico
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ef1c5686bb692f2fbe18e2f4bf7b2d0bd6efe52d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fb0099b730e21e9dd9208bd1ba12c35c487bdd86
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952756"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044474"
 ---
 # <a name="dynamic-access-control-overview"></a>Visão geral do Controle de Acesso Dinâmico
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice E: protegendo grupos de administradores corporativos no Active Directory'
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Apêndice E-protegendo grupos de administradores corporativos no Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 4eca54063af57c9e261abf8cb8b9787ebda6cb64
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 3816b41c446c3f7693f36a0525fada3b82e9946a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071368"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041704"
 ---
 # <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>Apêndice E: Proteger grupos de administrador corporativo no Active Directory
 
@@ -25,7 +26,7 @@ Os administradores corporativos são, por padrão, membros do grupo Administrado
 
 Para o grupo de administradores de empresa na floresta:
 
-1.  Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo Administradores de empresa deve ser adicionado aos direitos de usuário a seguir no **computador \** \ \ \ \ \ \ \ \ \ \ Configurações de direitos:
+1.  Em GPOs vinculados a UOs que contêm servidores membros e estações de trabalho em cada domínio, o grupo Administradores de empresa deve ser adicionado aos direitos de usuário a seguir no **computador \**\ \ \ \ \ \ \ \ \ \ Configurações de direitos:
 
     -   Negar acesso a este computador pela rede
 
@@ -41,13 +42,13 @@ Para o grupo de administradores de empresa na floresta:
 
 ### <a name="step-by-step-instructions-for-removing-all-members-from-the-enterprise-admins-group"></a>Instruções passo a passo para remover todos os membros do grupo de administradores de empresa
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e em **Active Directory usuários e computadores** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e em **Active Directory usuários e computadores**.
 
 2.  Se você não estiver gerenciando o domínio raiz da floresta, na árvore de console, clique com o botão direito do mouse em <Domain> e clique em **alterar domínio** (onde <Domain> é o nome do domínio que você está administrando no momento).
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)
 
-3.  Na caixa de diálogo **alterar domínio** , clique em **procurar** , selecione o domínio raiz da floresta e clique em **OK** .
+3.  Na caixa de diálogo **alterar domínio** , clique em **procurar**, selecione o domínio raiz da floresta e clique em **OK**.
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_44.gif)
 
@@ -57,20 +58,20 @@ Para o grupo de administradores de empresa na floresta:
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_45.gif)
 
-    2.  Selecione um membro do grupo, clique em **remover** , em **Sim** e em **OK** .
+    2.  Selecione um membro do grupo, clique em **remover**, em **Sim** e em **OK**.
 
 5.  Repita a etapa 2 até que todos os membros do grupo EA tenham sido removidos.
 
 ### <a name="step-by-step-instructions-to-secure-enterprise-admins-in-active-directory"></a>Instruções detalhadas para proteger administradores corporativos no Active Directory
 
-1.  Em **Gerenciador do servidor** , clique em **ferramentas** e clique em **Gerenciamento de política de grupo** .
+1.  Em **Gerenciador do servidor**, clique em **ferramentas** e clique em **Gerenciamento de política de grupo**.
 
 2.  Na árvore de console, expanda <Forest> \Domains \\ <Domain> e, em seguida, **política de grupo objetos** (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja definir o política de grupo).
 
     > [!NOTE]
     > Em uma floresta que contém vários domínios, um GPO semelhante deve ser criado em cada domínio que exige que o grupo Administradores de empresa seja protegido.
 
-3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo** .
+3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)
 
@@ -78,19 +79,19 @@ Para o grupo de administradores de empresa na floresta:
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)
 
-5.  No painel de detalhes, clique com o botão direito do mouse <GPO Name> e clique em **Editar** .
+5.  No painel de detalhes, clique com o botão direito do mouse <GPO Name> e clique em **Editar**.
 
-6.  Navegue até **computador \ \ Diretivas** \ \ políticas e clique em **atribuição de direitos de usuário** .
+6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_48.gif)
 
 7.  Configure os direitos de usuário para impedir que os membros do grupo Administradores de empresa acessem servidores membros e estações de trabalho na rede fazendo o seguinte:
 
-    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **negar acesso a este computador da rede** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
-    3.  Digite **administradores corporativos** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **administradores corporativos**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_49.gif)
 
@@ -98,14 +99,14 @@ Para o grupo de administradores de empresa na floresta:
 
 8.  Configure os direitos de usuário para impedir que os membros do grupo Administradores de empresa façam logon como um trabalho em lotes fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon como um trabalho em lotes** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e clique em **procurar**.
 
         > [!NOTE]
         > Em uma floresta que contém vários domínios, clique em **locais** e selecione o domínio raiz da floresta.
 
-    3.  Digite **administradores corporativos** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **administradores corporativos**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_50.gif)
 
@@ -113,14 +114,14 @@ Para o grupo de administradores de empresa na floresta:
 
 9. Configure os direitos de usuário para impedir que os membros do grupo EA façam logon como um serviço fazendo o seguinte:
 
-    1.  Clique duas vezes em **negar log como um serviço** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **negar log como um serviço** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e em **procurar**.
 
         > [!NOTE]
         > Em uma floresta que contém vários domínios, clique em **locais** e selecione o domínio raiz da floresta.
 
-    3.  Digite **administradores corporativos** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **administradores corporativos**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_51.gif)
 
@@ -128,14 +129,14 @@ Para o grupo de administradores de empresa na floresta:
 
 10. Configure os direitos de usuário para impedir que os membros do grupo Administradores de empresa façam logon localmente em servidores membros e estações de trabalho fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon localmente** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon localmente** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e em **procurar**.
 
         > [!NOTE]
         > Em uma floresta que contém vários domínios, clique em **locais** e selecione o domínio raiz da floresta.
 
-    3.  Digite **administradores corporativos** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **administradores corporativos**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_52.gif)
 
@@ -143,30 +144,30 @@ Para o grupo de administradores de empresa na floresta:
 
 11. Configure os direitos de usuário para impedir que os membros do grupo Administradores de empresa acessem servidores membros e estações de trabalho via Serviços de Área de Trabalho Remota fazendo o seguinte:
 
-    1.  Clique duas vezes em **Negar logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política** .
+    1.  Clique duas vezes em **Negar logon por meio de serviços de área de trabalho remota** e selecione **definir estas configurações de política**.
 
-    2.  Clique em **Adicionar usuário ou grupo** e em **procurar** .
+    2.  Clique em **Adicionar usuário ou grupo** e em **procurar**.
 
         > [!NOTE]
         > Em uma floresta que contém vários domínios, clique em **locais** e selecione o domínio raiz da floresta.
 
-    3.  Digite **administradores corporativos** , clique em **verificar nomes** e clique em **OK** .
+    3.  Digite **administradores corporativos**, clique em **verificar nomes** e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_53.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
-12. Para sair **Editor de gerenciamento de política de grupo** , clique em **arquivo** e em **sair** .
+12. Para sair **Editor de gerenciamento de política de grupo**, clique em **arquivo** e em **sair**.
 
-13. No **Gerenciamento de política de grupo** , VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
+13. No **Gerenciamento de política de grupo**, VINCULE o GPO ao servidor membro e às UOs de estação de trabalho fazendo o seguinte:
 
     1.  Navegue até <Forest> \Domains \\ <Domain> (em que <Forest> é o nome da floresta e <Domain> é o nome do domínio no qual você deseja definir a política de grupo).
 
-    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente** .
+    2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_54.gif)
 
-    3.  Selecione o GPO que você acabou de criar e clique em **OK** .
+    3.  Selecione o GPO que você acabou de criar e clique em **OK**.
 
         ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_55.gif)
 
@@ -186,15 +187,15 @@ De qualquer servidor membro ou estação de trabalho que não seja afetada pelas
 
 1.  Faça logon localmente usando uma conta que seja membro do grupo EA.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **prompt de comando** , clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
+3.  Na caixa de **pesquisa** , digite **prompt de comando**, clique com o botão direito do mouse em prompt de **comando** e clique em **Executar como administrador** para abrir um prompt de comando com privilégios elevados.
 
-4.  Quando for solicitado a aprovar a elevação, clique em **Sim** .
+4.  Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
     ![proteger grupos de administradores corporativos](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)
 
-5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $** , em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
+5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $**, em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
 
 6.  A captura de tela a seguir mostra a mensagem de erro que deve aparecer.
 
@@ -206,50 +207,50 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 ##### <a name="create-a-batch-file"></a>Criar um arquivo em lotes
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas** .
+2.  Na caixa de **pesquisa** , digite **bloco de notas** e clique em **bloco de notas**.
 
-3.  No **bloco de notas** , digite **dir c:** .
+3.  No **bloco de notas**, digite **dir c:**.
 
-4.  Clique em **arquivo** e em **salvar como** .
+4.  Clique em **arquivo** e em **salvar como**.
 
 5.  Na caixa nome do **arquivo** , digite **<Filename> . bat** (em que <Filename> é o nome do novo arquivo em lotes).
 
 ##### <a name="schedule-a-task"></a>Agendar uma tarefa
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas** .
+2.  Na caixa de **pesquisa** , digite **Agendador de tarefas** e clique em **Agendador de tarefas**.
 
     > [!NOTE]
-    > Em computadores que executam o Windows 8, na caixa de **pesquisa** , digite **agendar tarefas** e clique em **agendar tarefas** .
+    > Em computadores que executam o Windows 8, na caixa de **pesquisa** , digite **agendar tarefas** e clique em **agendar tarefas**.
 
-3.  Clique em **ação** e clique em **criar tarefa** .
+3.  Clique em **ação** e clique em **criar tarefa**.
 
 4.  Na caixa de diálogo **criar tarefa** , digite **<Task Name>** (em que <Task Name> é o nome da nova tarefa).
 
-5.  Clique na guia **ações** e clique em **novo** .
+5.  Clique na guia **ações** e clique em **novo**.
 
-6.  No campo **ação** , selecione **Iniciar um programa** .
+6.  No campo **ação** , selecione **Iniciar um programa**.
 
-7.  Em **programa/script** , clique em **procurar** , localize e selecione o arquivo em lotes criado na seção **criar um arquivo em lotes** e clique em **abrir** .
+7.  Em **programa/script**, clique em **procurar**, localize e selecione o arquivo em lotes criado na seção **criar um arquivo em lotes** e clique em **abrir**.
 
-8.  Clique em **OK** .
+8.  Clique em **OK**.
 
-9. Clique na guia **Geral** .
+9. Clique na guia **Geral**.
 
-10. No campo **Opções de segurança** , clique em **Alterar usuário ou grupo** .
+10. No campo **Opções de segurança** , clique em **Alterar usuário ou grupo**.
 
-11. Digite o nome de uma conta que seja membro do grupo EAs, clique em **verificar nomes** e clique em **OK** .
+11. Digite o nome de uma conta que seja membro do grupo EAs, clique em **verificar nomes** e clique em **OK**.
 
-12. Selecione **executar se o usuário estiver conectado ou não** e selecione não **armazenar a senha** . A tarefa só terá acesso aos recursos do computador local.
+12. Selecione **executar se o usuário estiver conectado ou não** e selecione não **armazenar a senha**. A tarefa só terá acesso aos recursos do computador local.
 
-13. Clique em **OK** .
+13. Clique em **OK**.
 
 14. Uma caixa de diálogo deve ser exibida, solicitando credenciais de conta de usuário para executar a tarefa.
 
-15. Depois de inserir as credenciais, clique em **OK** .
+15. Depois de inserir as credenciais, clique em **OK**.
 
 16. Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
@@ -259,23 +260,23 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  Em **fazer logon como** , selecione **esta conta** .
+6.  Em **fazer logon como**, selecione **esta conta**.
 
-7.  Clique em **procurar** , digite o nome de uma conta que seja membro do grupo EAS, clique em **verificar nomes** e clique em **OK** .
+7.  Clique em **procurar**, digite o nome de uma conta que seja membro do grupo EAS, clique em **verificar nomes** e clique em **OK**.
 
-8.  Em **senha:** e **confirme a senha** , digite a senha da conta selecionada e clique em **OK** .
+8.  Em **senha:** e **confirme a senha**, digite a senha da conta selecionada e clique em **OK**.
 
 9. Clique em **OK** mais três vezes.
 
-10. Clique com o botão direito do mouse no serviço **spooler de impressão** e selecione **reiniciar** .
+10. Clique com o botão direito do mouse no serviço **spooler de impressão** e selecione **reiniciar**.
 
 11. Quando o serviço for reiniciado, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
@@ -285,15 +286,15 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações do GPO, faça logon localmente.
 
-2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+2.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços** .
+3.  Na caixa de **pesquisa** , digite **Serviços** e clique em **Serviços**.
 
-4.  Localize e clique duas vezes em **spooler de impressão** .
+4.  Localize e clique duas vezes em **spooler de impressão**.
 
-5.  Clique na guia **Logon** .
+5.  Clique na guia **Logon**.
 
-6.  Em **fazer logon como** , selecione a conta **sistema local** e clique em **OK** .
+6.  Em **fazer logon como**, selecione a conta **sistema local** e clique em **OK**.
 
 #### <a name="verify-deny-log-on-locally-gpo-settings"></a>Verificar configurações de GPO "Negar logon local"
 
@@ -303,11 +304,11 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 #### <a name="verify-deny-log-on-through-remote-desktop-services-gpo-settings"></a>Verifique as configurações de GPO "Negar logon por meio do Serviços de Área de Trabalho Remota"
 
-1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar** .
+1.  Com o mouse, mova o ponteiro para o canto superior direito ou inferior direito da tela. Quando a **barra** de botões for exibida, clique em **Pesquisar**.
 
-2.  Na caixa de **pesquisa** , digite **conexão de área de trabalho remota** e clique em **conexão de área de trabalho remota** .
+2.  Na caixa de **pesquisa** , digite **conexão de área de trabalho remota** e clique em **conexão de área de trabalho remota**.
 
-3.  No campo **computador** , digite o nome do computador ao qual você deseja se conectar e, em seguida, clique em **conectar** . (Você também pode digitar o endereço IP em vez do nome do computador.)
+3.  No campo **computador** , digite o nome do computador ao qual você deseja se conectar e, em seguida, clique em **conectar**. (Você também pode digitar o endereço IP em vez do nome do computador.)
 
 4.  Quando solicitado, forneça as credenciais para uma conta que seja membro do grupo EA.
 

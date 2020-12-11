@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: Configurando contas de cluster no Active Directory'
 title: Configuração de contas de cluster no Active Directory
 ms.date: 11/12/2012
 author: JasonGerend
 manager: lizross
 ms.author: jgerend
-ms.openlocfilehash: a07b6971b342f41ce51b83e52ab7fa310f48cc2a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e6b7c2a3af136fa7c3970de4550609f4eaa9fa8d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950170"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041064"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Configuração de contas de cluster no Active Directory
 
@@ -153,7 +154,7 @@ A associação de grupo mínima exigida para concluir o procedimento a seguir de
 
    5.  Clique em **Adicionar**, digite o nome da conta que foi criada ou obtida na etapa 1 e clique em **OK**.
 
-   6.  Na caixa de diálogo **entrada de permissão para o contêiner * ** *, localize as permissões **criar objetos de computador** e **ler todas as propriedades** e verifique se a caixa de seleção **permitir** está marcada para cada uma delas.
+   6.  Na caixa de diálogo **Entrada de Permissão para**_contêiner_, localize as permissões **Criar Objetos de computador** e **Ler Todas as Propriedades**, e verifique se a caixa de seleção **Permitir** está marcada para cada uma delas.
 
        ![Caixa de diálogo entrada de permissão](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 

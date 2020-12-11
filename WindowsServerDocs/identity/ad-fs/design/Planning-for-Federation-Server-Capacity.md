@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: planejando a capacidade do servidor de Federação'
 ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: Planning for Federation Server Capacity (Planejando a capacidade do servidor de federação)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 63bc6291ea837e96660d6aba8f37374ef4e06b8a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c81c589feb940fb686aa865c8368f126ab20562d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947497"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044634"
 ---
 # <a name="planning-for-federation-server-capacity"></a>Planning for Federation Server Capacity (Planejando a capacidade do servidor de federação)
 
@@ -53,7 +54,7 @@ Em um esforço para simplificar o processo de planejamento de hardware para serv
 ### <a name="using-the-ad-fs-capacity-planning-sizing-spreadsheet"></a>Usando a planilha de dimensionamento de planejamento de capacidade AD FS
 Ao usar essa planilha, você precisará selecionar um valor \( de **40%**, **60%** ou **80%** \) que melhor represente o percentual do total de usuários que você espera enviar solicitações de autenticação para seus servidores de Federação durante períodos de pico de uso.
 
-Em seguida, você precisará selecionar um valor \( de **1 minuto**, **15 minutos**ou uma **hora** \) que melhor represente a duração do período de pico de uso até o último.Por exemplo, você pode estimar 40% como o valor do número total de usuários que efetuarão logon dentro de um período de 15 minutos ou que 60% dos usuários entrarão em um período de 1 hora.Juntos, esses valores definem o perfil de carga de pico pelo qual sua recomendação de dimensionamento será calculada.
+Em seguida, você precisará selecionar um valor \( de **1 minuto**, **15 minutos** ou uma **hora** \) que melhor represente a duração do período de pico de uso até o último. Por exemplo, você pode estimar 40% como o valor do número total de usuários que efetuarão logon dentro de um período de 15 minutos ou que 60% dos usuários entrarão em um período de 1 hora. Juntos, esses valores definem o perfil de carga de pico pelo qual sua recomendação de dimensionamento será calculada.
 
 Em seguida, você precisará especificar o número total de usuários que exigirão acesso de logon único \- ao aplicativo de reconhecimento de declarações de destino \- , com base em se os usuários são:
 
@@ -72,7 +73,7 @@ Você pode usar as etapas a seguir para cada instância de farm de servidores de
 
 2.  Na célula à direita do **período de uso do sistema de pico, espero que esse percentual dos meus usuários autentiquem** a célula, clique na célula e use as setas suspensas \- para selecionar o nível de utilização estimado do sistema, **40%**, **60%** ou **80%** para a implantação.
 
-3.  Na célula à direita do **período de tempo seguinte** , clique na célula e, em seguida, use as setas suspensas \- para selecionar **1 minuto**, **15 minutos**ou **1 hora** para selecionar a duração da carga de pico.
+3.  Na célula à direita do **período de tempo seguinte** , clique na célula e, em seguida, use as setas suspensas \- para selecionar **1 minuto**, **15 minutos** ou **1 hora** para selecionar a duração da carga de pico.
 
 4.  Na célula à direita da célula **Inserir número estimado de aplicativos internos \( , como SharePoint \( 2007 ou 2010 \) ou aplicativos \) Web com reconhecimento de declarações** , digite o número de aplicativos internos que você usará em sua organização.
 

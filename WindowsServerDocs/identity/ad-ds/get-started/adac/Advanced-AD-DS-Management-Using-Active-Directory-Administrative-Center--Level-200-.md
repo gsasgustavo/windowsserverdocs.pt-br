@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: gerenciamento de AD DS avançado usando Centro Administrativo do Active Directory (nível 200)'
 ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 255cb3da2056ed69d13cfd5814bb038420d9adc5
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 56f97929f14c1d8e9ff8819b6d821dade79c2535
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070698"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043414"
 ---
 # <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
@@ -61,11 +62,11 @@ O Active Directory Lixeira requer um nível funcional de floresta do Windows Ser
 
 ### <a name="enabling-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Habilitando a Lixeira do Active Directory usando o Centro Administrativo do Active Directory
 
-Para habilitar a Lixeira do Active Directory, abra o **Centro Administrativo do Active Directory** e clique no nome da floresta no painel de navegação. No painel **Tarefas** , clique em **Habilitar Lixeira** .
+Para habilitar a Lixeira do Active Directory, abra o **Centro Administrativo do Active Directory** e clique no nome da floresta no painel de navegação. No painel **Tarefas**, clique em **Habilitar Lixeira**.
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)
 
-O Centro Administrativo do Active Directory mostra a caixa de diálogo **Habilitar Confirmação de Lixeira** . Essa caixa de diálogo avisa que a habilitação da lixeira é irreversível. Clique em **OK** para habilitar a Lixeira do Active Directory. O Centro Administrativo do Active Directory mostra outra caixa de diálogo para lembrá-lo que a Lixeira do Active Directory não estará totalmente funcional até que todos os controladores de domínio repliquem a alteração de configuração.
+O Centro Administrativo do Active Directory mostra a caixa de diálogo **Habilitar Confirmação de Lixeira**. Essa caixa de diálogo avisa que a habilitação da lixeira é irreversível. Clique em **OK** para habilitar a Lixeira do Active Directory. O Centro Administrativo do Active Directory mostra outra caixa de diálogo para lembrá-lo que a Lixeira do Active Directory não estará totalmente funcional até que todos os controladores de domínio repliquem a alteração de configuração.
 
 > [!IMPORTANT]
 > A opção para habilitar a Lixeira do Active Directory não estará disponível se:
@@ -83,7 +84,7 @@ Para obter mais informações sobre como usar o Windows PowerShell para habilita
 
 ### <a name="managing-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Gerenciando a Lixeira do Active Directory usando o Centro Administrativo do Active Directory
 
-Esta seção usa o exemplo de um domínio existente chamado **corp.contoso.com** . Este domínio organiza os usuários em uma UO pai chamada **UserAccounts** . A UO **UserAccounts** contém três UOs nomeadas por departamento, cada qual com mais UOs, usuários e grupos.
+Esta seção usa o exemplo de um domínio existente chamado **corp.contoso.com**. Este domínio organiza os usuários em uma UO pai chamada **UserAccounts**. A UO **UserAccounts** contém três UOs nomeadas por departamento, cada qual com mais UOs, usuários e grupos.
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)
 
@@ -97,7 +98,7 @@ O contêiner **Objetos Excluídos** mostra todos os objetos restauráveis ​​
 
 Para uma explicação mais profunda sobre a arquitetura e as regras de processamento da lixeira, consulte [A lixeira do AD: Noções básicas, implementação, práticas recomendadas e solução de problemas](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).
 
-O Centro Administrativo do Active Directory limita artificialmente o número padrão de objetos retornados de um contêiner a 20.000 objetos. Você pode aumentar esse limite até 100.000 objetos, clicando no menu **Gerenciar** e depois em **Opções da Lista de Gerenciamento** .
+O Centro Administrativo do Active Directory limita artificialmente o número padrão de objetos retornados de um contêiner a 20.000 objetos. Você pode aumentar esse limite até 100.000 objetos, clicando no menu **Gerenciar** e depois em **Opções da Lista de Gerenciamento**.
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
 
@@ -116,11 +117,11 @@ A operação de restauração dá suporte a todas as opções de critérios de f
 - *ANR (resolução de nome ambígua-não listado no menu, mas o que é usado quando você digita na caixa * * * * filtro * * * *)*
 - Última modificação entre datas determinadas
 - O objeto é user/inetorgperson/computer/group/organization unit
-- Name
+- Nome
 - Quando excluído
 - Último pai conhecido
 - Tipo
-- Description
+- Descrição
 - City
 - País/região
 - department
@@ -148,7 +149,7 @@ A restauração de objetos excluídos sempre foi uma operação única.  O Centr
 
 1. Clique no nome de domínio no painel de navegação do Centro Administrativo do Active Directory.
 2. Clique duas vezes em **Objetos excluídos** na lista de gerenciamento.
-3. Clique com o botão direito do mouse no objeto e, em seguida, em **Restaurar** , ou clique em **Restaurar** no painel **Tarefas** .
+3. Clique com o botão direito do mouse no objeto e, em seguida, em **Restaurar**, ou clique em **Restaurar** no painel **Tarefas**.
 
 O objeto é restaurado ao seu local original.
 
@@ -181,7 +182,7 @@ O atributo **Último Pai Conhecido** mostra a relação de pai de cada objeto. O
 
 Considere o cenário em que um administrador exclui acidentalmente a UO de Vendas, que contém UOs filhas e usuários.
 
-Primeiro, observe o valor do **último atributo pai conhecido** para todos os usuários excluídos e como ele lê * *ou = Sales\0ADEL:* <GUID + nome diferenciado do contêiner de objetos excluídos> * * *:
+Primeiro, observe o valor do **último atributo pai conhecido** para todos os usuários excluídos e como ele lê **ou = Sales\0ADEL:*<GUID + nome diferenciado do contêiner de objetos excluídos> * * *:
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)
 
@@ -213,8 +214,8 @@ A funcionalidade do cmdlet **Restore-ADObject** não foi alterada entre o Window
 
 É possível que, com o tempo, o contêiner Objetos Excluídos acumule mais de 20.000 (ou até mesmo 100.000) objetos em médias e grandes empresas e tenha dificuldades em mostrar todos os objetos. Como o mecanismo de filtro no Centro Administrativo do Active Directory baseia-se na filtragem de cliente, ele não pode mostrar estes objetos adicionais. Para contornar essa limitação, use as seguintes etapas para realizar uma busca no servidor:
 
-1. Clique com o botão direito do mouse no contêiner **Objetos Excluídos** e depois em **Pesquisar neste nó** .
-2. Clique na divisa para expor o menu **+Adicionar critérios** , selecione e adicione **Última modificação entre determinadas datas** . A hora da última modificação (o atributo **whenChanged** ) é uma aproximação da hora de exclusão; na maioria dos ambientes, elas são idênticas. Esta consulta realiza uma pesquisa de servidor.
+1. Clique com o botão direito do mouse no contêiner **Objetos Excluídos** e depois em **Pesquisar neste nó**.
+2. Clique na divisa para expor o menu **+Adicionar critérios**, selecione e adicione **Última modificação entre determinadas datas**. A hora da última modificação (o atributo **whenChanged**) é uma aproximação da hora de exclusão; na maioria dos ambientes, elas são idênticas. Esta consulta realiza uma pesquisa de servidor.
 3. Localize os objetos excluídos para restaurar usando outra filtragem de exibição, classificação e assim por diante nos resultados e, em seguida, restaure-os normalmente.
 
 ## <a name="configuring-and-managing-fine-grained-password-policies-using-active-directory-administrative-center"></a><a name="BKMK_FGPP"></a>Configurando e gerenciando políticas de senha refinada usando o Centro Administrativo do Active Directory
@@ -225,13 +226,13 @@ O Centro Administrativo do Active Directory permite que você crie e gerencie ob
 
 Para obter informações sobre Políticas de Senha Refinada, consulte o [Guia passo a passo da política de bloqueio de senhas e contas refinadas do AD DS (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).
 
-No painel de navegação, clique no modo de exibição de árvore, depois no domínio, em seguida, em **Sistema** , clique em **Contêiner de Configuração de Senha** e depois, no painel Tarefas, clique em **Novo** e **Configurações de Senha** .
+No painel de navegação, clique no modo de exibição de árvore, depois no domínio, em seguida, em **Sistema**, clique em **Contêiner de Configuração de Senha** e depois, no painel Tarefas, clique em **Novo** e **Configurações de Senha**.
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)
 
 ### <a name="managing-fine-grained-password-policies"></a>Gerenciando políticas de senha refinada
 
-A criação de uma nova FGPP ou edição de uma existente traz o editor de **Configurações de Senha** . A partir daqui, você pode configurar todas as políticas de senha desejadas, como no Windows Server 2008 ou Windows Server 2008 R2, só que agora com um editor construído para esse fim.
+A criação de uma nova FGPP ou edição de uma existente traz o editor de **Configurações de Senha**. A partir daqui, você pode configurar todas as políticas de senha desejadas, como no Windows Server 2008 ou Windows Server 2008 R2, só que agora com um editor construído para esse fim.
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)
 
@@ -261,7 +262,7 @@ O Centro Administrativo do Active Directory também permite localizar o conjunto
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)
 
-A análise das **Propriedades** de qualquer usuário ou grupo mostra as **Configurações de Senha Diretamente Associadas** , que são as FGPPs explicitamente atribuídas:
+A análise das **Propriedades** de qualquer usuário ou grupo mostra as **Configurações de Senha Diretamente Associadas**, que são as FGPPs explicitamente atribuídas:
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)
 
@@ -287,7 +288,7 @@ Expanda qualquer item de linha de interesse para ver todos os valores fornecidos
 
 ![Gerenciamento de AD DS avançado](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)
 
-Clique no menu **Iniciar Tarefa** para criar uma notação manual antes de usar o Centro Administrativo do Active Directory para criar, modificar ou excluir um objeto. Digite o que você estava fazendo.  Ao terminar a alteração, selecione **Finalizar Tarefa** . A nota da tarefa agrupa todas as ações realizadas em uma nota recolhível que você pode usar para melhor compreensão.
+Clique no menu **Iniciar Tarefa** para criar uma notação manual antes de usar o Centro Administrativo do Active Directory para criar, modificar ou excluir um objeto. Digite o que você estava fazendo.  Ao terminar a alteração, selecione **Finalizar Tarefa**. A nota da tarefa agrupa todas as ações realizadas em uma nota recolhível que você pode usar para melhor compreensão.
 
 Por exemplo, para ver os comandos do Windows PowerShell usados ​​para alterar a senha de um usuário e removê-lo de um grupo:
 
@@ -345,7 +346,7 @@ Crie o seguinte conteúdo:
 </system.diagnostics>
 ```
 
-Os níveis de detalhamento para **DsacLogLevel** são **Nenhum** , **Erro** , **Aviso** , **Informações** e **Detalhado** . O nome do arquivo de saída é configurável e grava na mesma pasta que dsac.exe. A saída pode dizer mais sobre como o ADAC está funcionando, quais controladores de domínio são contatados, quais comandos do Windows PowerShell foram executados, quais foram as respostas e outros detalhes.
+Os níveis de detalhamento para **DsacLogLevel** são **Nenhum**, **Erro**, **Aviso**, **Informações** e **Detalhado**. O nome do arquivo de saída é configurável e grava na mesma pasta que dsac.exe. A saída pode dizer mais sobre como o ADAC está funcionando, quais controladores de domínio são contatados, quais comandos do Windows PowerShell foram executados, quais foram as respostas e outros detalhes.
 
 Por exemplo, ao usar o nível INFORMAÇÕES, que retorna todos os resultados, exceto o detalhamento do rastreamento:
 

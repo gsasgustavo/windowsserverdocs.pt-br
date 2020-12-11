@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: encontrando recursos adicionais para o Windows Server 2008 Active Directory Design da topologia do site'
 ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Localizar recursos adicionais de design de topologia de site do Active Directory do Windows Server 2008
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d7342c7af0ed3c9045fe337162d0903977857177
-ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
+ms.openlocfilehash: 3a6a76f91cf30fcf79b959dcc36589a3bc653cb3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520479"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041164"
 ---
 # <a name="finding-additional-resources-for-windows-server-2008-active-directory-site-topology-design"></a>Localizar recursos adicionais de design de topologia de site do Active Directory do Windows Server 2008
 

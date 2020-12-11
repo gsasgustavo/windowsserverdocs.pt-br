@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: AD FS configurações de Sign-On único'
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: Configurações de logon único do AD FS 2016
 author: billmath
@@ -6,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 08/17/2017
 ms.topic: article
-ms.openlocfilehash: 5d558717e3baa2f849636f4a8f347ce327cb787c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0a6596805107e728417da99496de565a549ae7cc
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966933"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041914"
 ---
-# <a name="ad-fs-single-sign-on-settings"></a>AD FS configurações de logon único
+# <a name="ad-fs-single-sign-on-settings"></a>AD FS configurações de Sign-On único
 
-O SSO (logon único) permite que os usuários se autentiquem uma vez e acessem vários recursos sem ser solicitado a fornecer credenciais adicionais.  Este artigo descreve o comportamento de AD FS padrão para SSO, bem como as definições de configuração que permitem que você personalize esse comportamento.
+O SSO (Sign-On único) permite que os usuários se autentiquem uma vez e acessem vários recursos sem ser solicitado a fornecer credenciais adicionais.  Este artigo descreve o comportamento de AD FS padrão para SSO, bem como as definições de configuração que permitem que você personalize esse comportamento.
 
-## <a name="supported-types-of-single-sign-on"></a>Tipos de logon único com suporte
+## <a name="supported-types-of-single-sign-on"></a>Tipos com suporte de Sign-On único
 
-O AD FS dá suporte a vários tipos de experiências de logon único:
+O AD FS dá suporte a vários tipos de experiências de Sign-On única:
 
 -   **SSO de sessão**
 
@@ -52,9 +53,9 @@ Habilitar/desabilitar SSO persistente | ```` Set-AdfsProperties –EnablePersist
 
 
 
-## <a name="ad-fs-2016---single-sign-on-and-authenticated-devices"></a>AD FS 2016-logon único e dispositivos autenticados
+## <a name="ad-fs-2016---single-sign-on-and-authenticated-devices"></a>AD FS 2016-Sign-On único e dispositivos autenticados
 AD FS 2016 altera o PSSO quando o solicitante está Autenticando de um dispositivo registrado aumentando para no máximo 90 dias, mas exigindo uma autenticação dentro de um período de 14 dias (janela de uso do dispositivo).
-Depois de fornecer credenciais pela primeira vez, por padrão, os usuários com dispositivos registrados obtêm logon único por um período máximo de 90 dias, desde que eles usem o dispositivo para acessar AD FS recursos pelo menos uma vez a cada 14 dias.  Se eles aguardarem 15 dias depois de fornecer credenciais, os usuários serão solicitados a fornecer as credenciais novamente.
+Depois de fornecer credenciais pela primeira vez, por padrão, os usuários com dispositivos registrados recebem um único Sign-On por um período máximo de 90 dias, desde que eles usem o dispositivo para acessar AD FS recursos pelo menos uma vez a cada 14 dias.  Se eles aguardarem 15 dias depois de fornecer credenciais, os usuários serão solicitados a fornecer as credenciais novamente.
 
 O SSO persistente é habilitado por padrão. Se estiver desabilitado, nenhum cookie PSSO será gravado. |
 
@@ -67,7 +68,7 @@ A janela de uso do dispositivo (14 dias por padrão) é regida pela propriedade 
 ``` powershell
 Set-AdfsProperties -DeviceUsageWindowInDays
 ```
-O período de logon único máximo (90 dias por padrão) é regido pela propriedade AD FS **PersistentSsoLifetimeMins**.
+O período de Sign-On único máximo (90 dias por padrão) é regido pela propriedade AD FS **PersistentSsoLifetimeMins**.
 
 ``` powershell
 Set-AdfsProperties -PersistentSsoLifetimeMins
@@ -200,9 +201,9 @@ QUE
  - [x] o administrador habilitou o recurso KMSI [e]
  - [x] o usuário clica na caixa de seleção KMSI na página de logon do Forms
 
-  
+  
 O ADFS emitirá um novo token de atualização somente se a validade do token de atualização mais recente for maior do que o token anterior. O tempo de vida máximo de um token é de 84 dias, mas AD FS mantém o token válido em uma janela deslizante de 14 dias. Se o token de atualização for válido por 8 horas, que é o tempo de SSO normal, um novo token de atualização não será emitido.
- 
+ 
 
 **Bom saber:** <br>
 Os usuários federados que não têm o atributo **LastPasswordChangeTimestamp** sincronizado são cookies de sessão emitidos e tokens de atualização que têm um **valor de idade máxima de 12 horas**.<br>

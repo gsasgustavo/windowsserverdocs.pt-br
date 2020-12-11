@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Apêndice C: contas e grupos protegidos no Active Directory'
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Apêndice C-contas e grupos protegidos no Active Directory
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9421038f90bc91d5d4f52c6e1811aec70c1a9727
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: aa7b3947c668634565ddbb0fd8df081a3f4b6347
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070528"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041674"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Apêndice C: Contas protegidas e grupos no Active Directory
 
@@ -36,15 +37,15 @@ A tabela a seguir contém os grupos protegidos no Active Directory listados pelo
 |Administradores|Administradores|Administradores|Administradores|
 |Operadores de cópia|Operadores de cópia|Operadores de cópia|Operadores de cópia|
 |Editores de Certificados|||
-|Administradores de Domínio|Administradores de Domínio|Administradores de Domínio|Administradores de Domínio|
+|Administradores do domínio|Administradores do domínio|Administradores do domínio|Administradores do domínio|
 |Controladores de Domínio|Controladores de Domínio|Controladores de Domínio|Controladores de Domínio|
-|Administradores Corporativos|Administradores Corporativos|Administradores Corporativos|Administradores Corporativos|
+|Administrador corporativo|Administrador corporativo|Administrador corporativo|Administrador corporativo|
 |Krbtgt|Krbtgt|Krbtgt|Krbtgt|
 |Operadores de Impressão|Operadores de Impressão|Operadores de Impressão|Operadores de Impressão|
 |||Controladores de Domínio somente leitura|Controladores de Domínio somente leitura|
 |Replicador|Replicador|Replicador|Replicador|
 |Administradores de esquemas|Administradores de esquemas|Administradores de esquemas|Administradores de esquemas|
-|Opers. de servidores|Opers. de servidores|Opers. de servidores|Opers. de servidores|
+|Operadores de Servidores|Operadores de Servidores|Operadores de Servidores|Operadores de Servidores|
 
 #### <a name="adminsdholder"></a>AdminSDHolder
 
@@ -74,28 +75,28 @@ Os procedimentos para executar o SDProp manualmente em sistemas operacionais mai
 
 Você pode forçar o SDProp a ser executado usando Ldp.exe ou executando um script de modificação LDAP. Para executar o SDProp usando Ldp.exe, execute as seguintes etapas depois de fazer alterações no objeto AdminSDHolder em um domínio:
 
-1. Iniciar **Ldp.exe** .
-2. Clique em **conexão** na caixa de diálogo LDP e clique em **conectar** .
+1. Iniciar **Ldp.exe**.
+2. Clique em **conexão** na caixa de diálogo LDP e clique em **conectar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
 
-3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK** .
+3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
 
-4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar** .
+4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
 
-5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como** usuário conectado no momento.) Clique em **OK** .
+5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como** usuário conectado no momento.) Clique em **OK**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
 
-6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar** .
+6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
 
-7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **FixUpInheritance** e, no campo **valores** , digite **Sim** . Clique em **Enter** para preencher a **lista de entradas** , conforme mostrado na captura de tela a seguir.
+7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **FixUpInheritance** e, no campo **valores** , digite **Sim**. Clique em **Enter** para preencher a **lista de entradas** , conforme mostrado na captura de tela a seguir.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
 
@@ -112,29 +113,29 @@ Se preferir executar o SDProp manualmente via LDIFDE ou um script, você poderá
 
 Você também pode forçar o SDProp a ser executado usando Ldp.exe ou executando um script de modificação LDAP. Para executar o SDProp usando Ldp.exe, execute as seguintes etapas depois de fazer alterações no objeto AdminSDHolder em um domínio:
 
-1. Iniciar **Ldp.exe** .
+1. Iniciar **Ldp.exe**.
 
-2. Na caixa de diálogo **LDP** , clique em **conexão** e em **conectar** .
+2. Na caixa de diálogo **LDP** , clique em **conexão** e em **conectar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
 
-3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK** .
+3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
 
-4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar** .
+4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
 
-5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como usuário conectado no momento** .) Clique em **OK** .
+5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como usuário conectado no momento**.) Clique em **OK**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
 
-6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar** .
+6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar**.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_20.gif)
 
-7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **RunProtectAdminGroupsTask** e, no campo **valores** , digite **1** . Clique em **Enter** para preencher a lista de entradas, conforme mostrado aqui.
+7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **RunProtectAdminGroupsTask** e, no campo **valores** , digite **1**. Clique em **Enter** para preencher a lista de entradas, conforme mostrado aqui.
 
    ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
 

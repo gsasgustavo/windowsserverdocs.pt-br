@@ -1,17 +1,18 @@
 ---
 ms.assetid: 5fd4063d-34dc-4b15-9a88-cc6c1fff455a
 title: Guia de instruções-gerenciar riscos com autenticação multifator adicional para aplicativos confidenciais
+description: 'Saiba mais sobre: guia de instruções: gerenciar riscos com autenticação multifator adicional para aplicativos confidenciais'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1dc0b0c278577e7318ead6b4e3ebba04b21c8a9c
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 15e2355dfa04bc53ac232b9f20bd7d26ea3535f6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866275"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039534"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>Guia Passo a passo: gerencie riscos com Multi-Factor Authentication adicional para aplicativos confidenciais
 
@@ -134,7 +135,7 @@ Conclua os procedimentos a seguir para baixar, configurar e selecionar a **auten
 
     3.  **Diretório** -o locatário do Windows Azure Active Directory ao qual o provedor de autenticação multifator está associado. Isso é opcional, já que o provedor não precisa estar ligado ao Active Directory do Windows Azure durante a proteção de aplicativos no local.
 
-7.  Depois de clicar em criar, o provedor de Multi-Factor Authentication será criado e você verá uma mensagem dizendo:  Provedor de Multi-Factor Authentication criado com sucesso.  Clique em **Ok**.
+7.  Depois de clicar em criar, o provedor de Multi-Factor Authentication será criado e você verá uma mensagem dizendo:  Provedor de Multi-Factor Authentication criado com sucesso.  Clique em **OK**.
 
 Em seguida, é preciso baixar o Servidor de Autenticação Multifator do Microsoft Azure. É possível fazer isso inicializando o portal de autenticação multifator do Windows Azure através do portal do Windows Azure.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: SMB: as portas de compartilhamento de arquivo e impressora devem estar abertas'
 title: SMB-as portas de compartilhamento de arquivos e impressoras devem estar abertas
 ms.date: 07/02/2012
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: dc2e1d7f5408ad123297b8df2dc06f59053fe870
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ca4e8cb86e567786385da0449223b6282347909b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954763"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041054"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: portas de compartilhamento de arquivo e impressora devem ser abertas
 
@@ -62,9 +63,9 @@ A associação ao grupo **Administradores**, ou equivalente, é o mínimo necess
 
 ## <a name="to-open-the-firewall-ports-to-enable-file-and-printer-sharing"></a>Para abrir as portas de firewall para habilitar o compartilhamento de arquivos e impressoras
 
-1.  Abra o painel de controle, clique em **sistema e segurança**e, em seguida, clique em **Firewall do Windows**.
+1.  Abra o painel de controle, clique em **sistema e segurança** e, em seguida, clique em **Firewall do Windows**.
 
-2.  No painel esquerdo, clique em **Configurações avançadas**e, na árvore de console, clique em **regras de entrada**.
+2.  No painel esquerdo, clique em **Configurações avançadas** e, na árvore de console, clique em **regras de entrada**.
 
 3.  Em **regras de entrada**, localize o arquivo de regras **e compartilhamento de impressora (NB-sessão-in)** e **compartilhamento de arquivos e impressoras (SMB-in)**.
 

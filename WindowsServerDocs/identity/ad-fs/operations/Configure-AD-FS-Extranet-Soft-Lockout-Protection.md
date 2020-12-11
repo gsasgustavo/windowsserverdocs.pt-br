@@ -1,17 +1,18 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configurar a proteção de bloqueio suave Extranet do AD FS
+description: 'Saiba mais sobre: Configurar AD FS proteção de bloqueio de extranet'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/01/2019
 ms.topic: article
-ms.openlocfilehash: 0511063581fd633b56803999b761156c8217c967
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: d64e30e3d59cf47ad3a8eb448ad5f856d28f1bea
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864495"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040134"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>Configurar AD FS proteção contra bloqueio de extranet
 
@@ -85,7 +86,7 @@ Há um problema conhecido em que a conta de usuário do AD não pode autenticar 
 - AD FS com mais de 2016 falharão se não for possível acessar o PDC. AD FS 2016 introduziu melhorias que permitirão que AD FS retorne a outros controladores de domínio no caso do PDC não esteja disponível.
 - AD FS permitirá solicitações de autenticação da extranet, se badPwdCount < ExtranetLockoutThreshold
 - Se **badPwdCount**  >=  **ExtranetLockoutThreshold** e **badPasswordTime**  +  **ExtranetObservationWindow** < hora atual, AD FS rejeitará as solicitações de autenticação da extranet
-- Para evitar o bloqueio de conta mal-intencionado, você deve **ExtranetLockoutThreshold** verificar se o  <  **limite de bloqueio de conta** do ExtranetLockoutThreshold e o contador de bloqueio de **ExtranetObservationWindow**  >  **conta** de ExtranetObservationWindow
+- Para evitar o bloqueio de conta mal-intencionado, você deve verificar se o  <  **limite de bloqueio de conta** do ExtranetLockoutThreshold e o contador de bloqueio de   >  **conta** de ExtranetObservationWindow
 
 
 ## <a name="additional-references"></a>Referências adicionais
@@ -94,5 +95,3 @@ Há um problema conhecido em que a conta de usuário do AD não pode autenticar 
 - [Set-Adfsproperties](/powershell/module/adfs/set-adfsproperties)
 
 [Operações do AD FS](../ad-fs-operations.md)
-
-

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: gerenciar riscos com o controle de acesso condicional'
 ms.assetid: a0f7bb11-47a5-47ff-a70c-9e6353382b39
 title: Gerenciar riscos com Controle de Acesso Condicional
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 97466c5f7d0a6c89980195d7b71e6697748db334
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2bfc8fa387ba98be10c9849b2e777f95179deb46
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954212"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039694"
 ---
 # <a name="manage-risk-with-conditional-access-control"></a>Gerenciar riscos com Controle de Acesso Condicional
 
@@ -59,7 +60,7 @@ A tabela a seguir inclui todos os tipos de declaração disponíveis em AD FS no
 |UPN|O UPN (nome principal do usuário) do usuário.|
 |Nome comum|O nome comum do usuário.|
 |Endereço de email do AD FS 1 x|O endereço de email do usuário ao interoperar com AD FS 1.1 ou AD FS 1.0.|
-|Agrupar|Um grupo do qual o usuário é membro.|
+|Grupo|Um grupo do qual o usuário é membro.|
 |UPN do AD FS 1 x|O UPN do usuário ao interoperar com AD FS 1.1 ou AD FS 1.0.|
 |Função|Uma função que o usuário tenha.|
 |Sobrenome|O sobrenome do usuário.|

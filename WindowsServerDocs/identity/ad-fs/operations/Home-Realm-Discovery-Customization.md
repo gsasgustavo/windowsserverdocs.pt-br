@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: personalização da descoberta de realm inicial'
 ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: Personalização da descoberta de realm inicial
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b747d29aa4ceba7d7f3a12fc5a6a74155e058050
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3a3bc01b4ec28d28d4815fc46c797b3f6ff62cfe
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954242"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039854"
 ---
 # <a name="home-realm-discovery-customization"></a>Personalização da descoberta de realm inicial
 

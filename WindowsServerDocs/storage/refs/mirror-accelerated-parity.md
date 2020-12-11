@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: paridade acelerada por espelhamento'
 title: Paridade acelerada por espelho
 ms.author: gawatu
 manager: masriniv
@@ -6,12 +7,12 @@ ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: f54eb8db2a71fe8576913d7d2123e822661b0732
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b39e3d518b3721bffce7b111655406cd982ccc0b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942165"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043594"
 ---
 # <a name="mirror-accelerated-parity"></a>Paridade acelerada por espelho
 

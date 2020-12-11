@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: delegando a administração de UOs e contêineres padrão'
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: Delegando administração de contêineres padrão e UOs
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8f52ca20cce86c869f66ea9d0e2e795956a0c75f
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 4056c01ec9d940a6c7c405b57b270a4f3a749f02
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069408"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039285"
 ---
 # <a name="delegating-administration-of-default-containers-and-ous"></a>Delegando administração de contêineres padrão e UOs
 
@@ -49,7 +50,7 @@ Por padrão, vários usuários e grupos bem conhecidos e contas internas são cr
 
 |Usuários e grupos bem conhecidos|Contas internas|
 |--------------------------------|----------------------|
-|Editores de Certificados<p>Controladores de Domínio<p>Proprietários criadores de política de grupo<p>KRBTGT<p>Convidados do Domínio<p>Administrador<p>Administradores de Domínio<p>Administradores de esquema (somente domínio raiz da floresta)<p>Administradores corporativos (somente domínio raiz da floresta)<p>Usuários do Domínio|Administrador<p>Convidado<p>Convidados<p>Opers. de contas<p>Administradores<p>Operadores de cópia<p>Criadores de confiança de floresta de entrada<p>Operadores de Impressão<p>Acesso compatível com versões anteriores ao Windows 2000<p>Opers. de servidores<p>Usuários|
+|Editores de Certificados<p>Controladores de Domínio<p>Proprietários criadores de política de grupo<p>KRBTGT<p>Convidados do Domínio<p>Administrador<p>Administradores do domínio<p>Administradores de esquema (somente domínio raiz da floresta)<p>Administradores corporativos (somente domínio raiz da floresta)<p>Usuários do Domínio|Administrador<p>Convidado<p>Convidados<p>Opers. de contas<p>Administradores<p>Operadores de cópia<p>Criadores de confiança de floresta de entrada<p>Operadores de Impressão<p>Acesso compatível com versões anteriores ao Windows 2000<p>Operadores de Servidores<p>Usuários|
 
 ## <a name="domain-controller-ou"></a>UO do controlador de domínio
 Quando os controladores de domínio são adicionados ao domínio, seus objetos de computador são adicionados automaticamente à UO do controlador de domínio. Essa UO tem um conjunto padrão de políticas aplicadas a ela. Para garantir que essas políticas sejam aplicadas uniformemente a todos os controladores de domínio, recomendamos que você não mova os objetos de computador dos controladores de domínio dessa UO. A falha ao aplicar as políticas padrão pode fazer com que um controlador de domínio falhe para funcionar corretamente.

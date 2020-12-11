@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: gerenciar riscos com autenticação multifator adicional para aplicativos confidenciais'
 ms.assetid: 934ac796-e2ee-490d-8265-6a818be5ee79
 title: gerencie riscos com Autenticação Multifator adicional para aplicativos confidenciais
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b9f764b64a50b0c69116cf19e253097da464cdbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3054109150402e44ba108215b4ac662ce6932b0c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954292"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039714"
 ---
 # <a name="manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>gerencie riscos com Autenticação Multifator adicional para aplicativos confidenciais
 

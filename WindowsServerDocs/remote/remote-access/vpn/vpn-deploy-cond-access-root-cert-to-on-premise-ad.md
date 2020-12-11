@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: etapa 7,4. Implantar certificados raiz de acesso condicional no AD local'
 title: Implantar certificados de raiz de acesso condicional para locais AD
 ms.topic: article
 ms.date: 06/28/2019
@@ -6,12 +7,12 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 7edae0ac84e6ea11720f786c8a5188ebc6e8a522
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a317dfeedbd7d53578ea7568574ee6c8e31c1190
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039404"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>Etapa 7.4. Implantar certificados raiz de acesso condicional no AD local
 

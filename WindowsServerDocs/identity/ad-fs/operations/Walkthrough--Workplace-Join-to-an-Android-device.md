@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Walkthrough: Workplace Join para um dispositivo Android'
 ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
 title: Walkthrough-Workplace Join a um dispositivo Android
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: adcaecd7b1eba93d074dba8ac908e6f539e9d9d6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 70885fa5fa3407f3f5d324798bd4cc03ab6ad81c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966993"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039624"
 ---
 # <a name="walkthrough-workplace-join-to-an-android-device"></a>Walkthrough: Workplace Join para um dispositivo Android
 
@@ -24,7 +25,7 @@ ms.locfileid: "87966993"
 
 #### <a name="create-a-work-account-that-joins-your-device-with-workplace-join"></a>Criar uma conta de trabalho que ingresse em seu dispositivo com o ingresso no local de trabalho
 
-1.  Você precisará instalar Azure Authenticator aplicativo em seu dispositivo para criar uma conta de trabalho que ingresse em seu dispositivo com o ingresso no local de trabalho. A URL a seguir tem instruções sobre como instalar o aplicativo Azure Authenticator em seu dispositivo Android e adicionar uma conta de trabalho. A conta corporativa torna seu dispositivo Android em um dispositivo confiável e fornece logon único (SSO) para os aplicativos no dispositivo. Você pode usar o dispositivo confiável para acessar aplicativos Web e aplicativos de linha de negócios modernos, conforme recomendado pelo administrador de ti. Para obter mais informações, consulte [Azure Authenticator para Android](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
+1.  Você precisará instalar Azure Authenticator aplicativo em seu dispositivo para criar uma conta de trabalho que ingresse em seu dispositivo com o ingresso no local de trabalho. A URL a seguir tem instruções sobre como instalar o aplicativo Azure Authenticator em seu dispositivo Android e adicionar uma conta de trabalho. A conta corporativa torna seu dispositivo Android em um dispositivo confiável e fornece um único Sign-On (SSO) para os aplicativos no dispositivo. Você pode usar o dispositivo confiável para acessar aplicativos Web e aplicativos de linha de negócios modernos, conforme recomendado pelo administrador de ti. Para obter mais informações, consulte [Azure Authenticator para Android](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
 
 ## <a name="see-also"></a>Consulte Também
 [Ingresse no local de trabalho de qualquer dispositivo para SSO e autenticação de segundo fator direta entre aplicativos](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md) 

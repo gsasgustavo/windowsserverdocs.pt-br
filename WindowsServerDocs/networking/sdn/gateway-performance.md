@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: desempenho do gateway do Windows Server 2019'
 title: Desempenho do gateway do Windows Server 2019
 manager: grcusanz
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: d7ca57b9cb1013d1e6c1081bdf7c5c50fa6a918d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d6e20febf5730d1b0f249e0979037de298157e56
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969533"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044354"
 ---
 # <a name="windows-server-2019-gateway-performance"></a>Desempenho do gateway do Windows Server 2019
 
@@ -28,7 +29,7 @@ Para **conexões de GRE**, depois que você implantar/atualizar para o Windows S
 Para **conexões IPSec**, por padrão, ao criar a conexão para suas redes virtuais, você obtém o caminho de dados do Windows Server 2016 e os números de desempenho. Para habilitar o caminho de dados do Windows Server 2019, faça o seguinte:
 
    1. Em uma VM de gateway de SDN, vá para console de **Serviços** (Services. msc).
-   2. Localize o serviço chamado **serviço de gateway do Azure**e defina o tipo de inicialização como **automático**.
+   2. Localize o serviço chamado **serviço de gateway do Azure** e defina o tipo de inicialização como **automático**.
    3. Reinicie a VM do gateway.
       As conexões ativas neste failover de gateway para uma VM de gateway redundante.
    4. Repita as etapas anteriores para o restante das VMs de gateway.

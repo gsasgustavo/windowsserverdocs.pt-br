@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: políticas de controle de acesso de cliente no AD FS 2,0'
 title: Políticas de controle de acesso de cliente no Serviços de Federação do Active Directory (AD FS) 2,0
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3cf37c1fad67c652f67f4e862780c740ae5ebe60
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4402b2e8186f723c2c2a46ad10616f8986e21e5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947290"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044344"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>Políticas de controle de acesso de cliente no AD FS 2,0
 As políticas de acesso para cliente no Serviços de Federação do Active Directory (AD FS) 2,0 permitem que você restrinja ou conceda acesso a recursos aos usuários.  Este documento descreve como habilitar as políticas de acesso do cliente no AD FS 2,0 e como configurar os cenários mais comuns.
@@ -40,7 +41,7 @@ Na Active Directory confiança do provedor de declarações, crie uma nova regra
 4. Na página Selecionar modelo de regra, em modelo de regra de declaração, selecione passar ou filtrar uma declaração de entrada na lista e clique em Avançar.
 5. Na página Configurar regra, em nome da regra de declaração, digite o nome de exibição para esta regra; em tipo de declaração de entrada, digite a seguinte URL de tipo de declaração e, em seguida, selecione passar todos os valores de declaração.</br>
         `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
-6. Para verificar a regra, selecione-a na lista e clique em Editar regra e, em seguida, clique em Exibir idioma da regra. O idioma da regra de declaração deve aparecer da seguinte maneira:`c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
+6. Para verificar a regra, selecione-a na lista e clique em Editar regra e, em seguida, clique em Exibir idioma da regra. O idioma da regra de declaração deve aparecer da seguinte maneira: `c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
 7. Clique em Concluir.
 8. Na caixa de diálogo Editar regras de declaração, clique em OK para salvar as regras.
 9. Repita as etapas de 2 a 6 para criar uma regra de declaração adicional para cada um dos quatro tipos de declaração restantes mostrados abaixo até que todas as cinco regras tenham sido criadas.
@@ -75,7 +76,7 @@ Esse cenário de política de acesso de cliente permite o acesso de todos os cli
 2. Na árvore de console, em AD FS 2.0 \ relações de confiança, clique em confiança de terceira parte confiável, clique com o botão direito do mouse na relação de confiança da plataforma de identidade Microsoft Office 365 e clique em Editar regras de declaração.
 3. Na caixa de diálogo Editar regras de declaração, selecione a guia regras de autorização de emissão e clique em Adicionar regra para iniciar o assistente de regra de declaração.
 4. Na página Selecionar modelo de regra, em modelo de regra de declaração, selecione enviar declarações usando uma regra personalizada e clique em Avançar.
-5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração: `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
@@ -98,7 +99,7 @@ O exemplo a seguir permite o acesso a todos os aplicativos do Office 365, inclui
 2. Na árvore de console, em AD FS 2.0 \ relações de confiança, clique em confiança de terceira parte confiável, clique com o botão direito do mouse na relação de confiança da plataforma de identidade Microsoft Office 365 e clique em Editar regras de declaração.
 3. Na caixa de diálogo Editar regras de declaração, selecione a guia regras de autorização de emissão e clique em Adicionar regra para iniciar o assistente de regra de declaração.
 4. Na página Selecionar modelo de regra, em modelo de regra de declaração, selecione enviar declarações usando uma regra personalizada e clique em Avançar.
-5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração: `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
     Value=="Microsoft.Exchange.Autodiscover"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
@@ -127,7 +128,7 @@ O conjunto de regras se baseia na regra de autorização de emissão padrão cha
 2. Na árvore de console, em AD FS 2.0 \ relações de confiança, clique em confiança de terceira parte confiável, clique com o botão direito do mouse na relação de confiança da plataforma de identidade Microsoft Office 365 e clique em Editar regras de declaração.
 3. Na caixa de diálogo Editar regras de declaração, selecione a guia regras de autorização de emissão e clique em Adicionar regra para iniciar o assistente de regra de declaração.
 4. Na página Selecionar modelo de regra, em modelo de regra de declaração, selecione enviar declarações usando uma regra personalizada e clique em Avançar.
-5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração: `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
@@ -147,7 +148,7 @@ O exemplo a seguir habilita o acesso de clientes internos com base no endereço 
 2. Na árvore de console, em AD FS 2.0 \ relações de confiança, clique em confiança de terceira parte confiável, clique com o botão direito do mouse na relação de confiança da plataforma de identidade Microsoft Office 365 e clique em Editar regras de declaração.
 3. Na caixa de diálogo Editar regras de declaração, selecione a guia regras de autorização de emissão e clique em Adicionar regra para iniciar o assistente de regra de declaração.
 4. Na página Selecionar modelo de regra, em modelo de regra de declaração, selecione enviar declarações usando uma regra personalizada e clique em Avançar.
-5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração:`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. Na página Configurar regra, em nome da regra de declaração, digite o nome para exibição dessa regra. Em regra personalizada, digite ou cole a seguinte sintaxe de linguagem de regra de declaração: `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "Group SID value of allowed AD group"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
@@ -257,7 +258,7 @@ Para verificar se as novas declarações de contexto de solicitação estão sen
 
 Para habilitar o log de eventos de auditoria para o log de segurança em um AD FS Server, siga as etapas em configurar a auditoria para AD FS 2,0.
 
-### <a name="event-logging"></a>Registro de eventos em log
+### <a name="event-logging"></a>Log de eventos
 
 Por padrão, as solicitações com falha são registradas no log de eventos do aplicativo localizado em logs de aplicativos e serviços \ AD FS 2,0 \ admin. para obter mais informações sobre o log de eventos para AD FS, consulte [configurar AD FS log de eventos 2,0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
 

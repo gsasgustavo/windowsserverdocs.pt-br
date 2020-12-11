@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: planejar o acesso condicional baseado no dispositivo local'
 ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: Planejar acesso condicional com base em dispositivo no local
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7f331aac7b58cc22f696130647a7f5e95ea808c9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8301cb1396785d56d81e08e2ad3d52ee4d66d887
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945472"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043304"
 ---
 # <a name="plan-device-based-conditional-access-on-premises"></a>Planejar acesso condicional com base em dispositivo no local
 
@@ -61,7 +62,7 @@ Essas regras podem então ser combinadas com outros fatores, como o local de ace
 
 - exigir autenticação multifator para dispositivos não registrados que acessam de fora da rede corporativa, exceto para membros de um grupo ou grupos específicos
 
-Com o AD FS 2016, essas políticas podem ser configuradas especificamente para exigir um nível de confiança de dispositivo específico também: **autenticado**, **gerenciado**ou em **conformidade**.
+Com o AD FS 2016, essas políticas podem ser configuradas especificamente para exigir um nível de confiança de dispositivo específico também: **autenticado**, **gerenciado** ou em **conformidade**.
 
 Para obter mais informações sobre como configurar políticas de controle de acesso AD FS, consulte [políticas de controle de acesso em AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 

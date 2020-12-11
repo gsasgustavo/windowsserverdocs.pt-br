@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: atualizando o firmware da unidade'
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Atualização do firmware da unidade
 ms.author: toklima
@@ -6,12 +7,12 @@ manager: dmoss
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 15e0d6dedc6bb81c0b511479ee342dbd463654e2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2393afa82b61d432a4191753771b27db22e1691c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946209"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039164"
 ---
 # <a name="updating-drive-firmware"></a>Atualização do firmware da unidade
 >Aplica-se a: Windows Server 2019, Windows Server 2016, Windows 10
@@ -41,7 +42,7 @@ Os dois cmdlets adicionados ao Windows são:
 -   Get-StorageFirmwareInformation
 -   Update-StorageFirmware
 
-O primeiro cmdlet fornece informações detalhadas sobre os recursos do dispositivo, as imagens de firmware e as revisões. Nesse caso, a máquina contém apenas um único SSD SATA com 1 slot de firmware. Este é um exemplo:
+O primeiro cmdlet fornece informações detalhadas sobre os recursos do dispositivo, as imagens de firmware e as revisões. Nesse caso, a máquina contém apenas um único SSD SATA com 1 slot de firmware. Veja um exemplo:
 
    ```powershell
    Get-PhysicalDisk | Get-StorageFirmwareInformation
@@ -162,7 +163,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-Se você quiser ver a Serviço de Integridade em ação e saber mais sobre seu mecanismo de distribuição, confira este vídeo:https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+Se você quiser ver a Serviço de Integridade em ação e saber mais sobre seu mecanismo de distribuição, confira este vídeo: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 

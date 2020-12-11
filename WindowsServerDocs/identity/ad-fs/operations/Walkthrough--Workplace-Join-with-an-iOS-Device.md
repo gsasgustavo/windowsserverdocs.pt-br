@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Walkthrough: Workplace Join com um dispositivo iOS'
 ms.assetid: 299e4fb9-8f1a-4275-ad7d-dad4f1594657
 title: Walkthrough-Workplace Join com um dispositivo iOS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/18/2018
 ms.topic: article
-ms.openlocfilehash: 1090c5c79ad0f4b4cf2fa27bf735604ad334b90e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d77a004dbf9b2010b1bed6c300ad1ebe90c0099c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956373"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039524"
 ---
 # <a name="walkthrough-workplace-join-with-an-ios-device"></a>Passo a passo: Ingresso no Local de Trabalho com um dispositivo iOS
 
@@ -36,11 +37,11 @@ Nesta demonstração, você ingressa o dispositivo no local de trabalho.
 
 1. -   **Quando registro de dispositivos do Azure Active Directory serviço é o DRS configurado:** Abra o Apple Safari e navegue até Registro de Dispositivos do Azure Active Directory ponto de extremidade de perfil do serviço over-the-Air para dispositivos iOS, <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > em que <`yourdomainname`> é o nome de domínio que você configurou com o Azure Active Directory. Por exemplo, se seu nome de domínio for contoso.com, a URL seria: `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
 
-   -   **Quando o DRS local é o DRS configurado**: Abra o Apple Safari e navegue até o ponto de extremidade do perfil do DRS (serviço de registro de dispositivo) por meio do ar para dispositivos IOS,`https://adf1s.contoso.com/enrollmentserver/otaprofile`
+   -   **Quando o DRS local é o DRS configurado**: Abra o Apple Safari e navegue até o ponto de extremidade do perfil do DRS (serviço de registro de dispositivo) por meio do ar para dispositivos IOS, `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
    Há muitas maneiras de se comunicar esta URL aos usuários. Uma maneira recomendada é publicando a URL em uma mensagem de acesso de aplicativo negado personalizada no AD FS. Isso é abordado na próxima seção: [criar uma política de acesso de aplicativo e uma mensagem de acesso negado personalizado](/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
-2. Faça logon na página da Web usando uma conta de domínio da empresa: <strong>roberth@contoso.com</strong> e senha: <strong>P@ssword</strong> .
+2. Faça logon na página da Web usando uma conta de domínio da empresa:  <strong>roberth@contoso.com</strong> e senha: <strong>P@ssword</strong> .
 
 3. Aparecerá um aviso para que você instale um perfil. Na tela **Instalar Perfil**, clique em **Instalar**.
 

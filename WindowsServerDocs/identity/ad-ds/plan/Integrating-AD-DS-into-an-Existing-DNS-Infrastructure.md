@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: integrando AD DS em uma infraestrutura de DNS existente'
 ms.assetid: 4981b32f-741e-4afc-8734-26a8533ac530
 title: Integrando o AD DS a uma infraestrutura de DNS existente
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6c1a2af42d588cf8a8a2d2a940a6f67ccfad9311
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: aba44d8797e6ef77f33afc973b51dfd664f68e71
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071108"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042804"
 ---
 # <a name="integrating-ad-ds-into-an-existing-dns-infrastructure"></a>Integrando o AD DS a uma infraestrutura de DNS existente
 
@@ -28,7 +29,7 @@ Ao integrar AD DS com um namespace DNS existente, recomendamos que você faça o
 
 -   Configure os controladores de domínio para cada domínio regional para hospedar as zonas DNS que correspondem aos seus domínios de Active Directory.
 
--   Configure a zona que contém os Active Directory registros de localizador de toda a floresta (ou seja, o _msdcs. *nomedafloresta* Zone) a ser replicada em todos os servidores DNS na floresta usando a partição de diretório de aplicativo DNS de toda a floresta.
+-   Configure a zona que contém os Active Directory registros de localizador de toda a floresta (ou seja, o _msdcs.*nomedafloresta* Zone) a ser replicada em todos os servidores DNS na floresta usando a partição de diretório de aplicativo DNS de toda a floresta.
 
     > [!NOTE]
     > Quando o serviço do servidor DNS é instalado com o Assistente para Instalação do Active Directory Domain Services (recomendamos essa opção), todas as tarefas anteriores são executadas automaticamente. Para obter mais informações, consulte [implantando um domínio raiz de floresta do Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)).

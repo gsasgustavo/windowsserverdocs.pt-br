@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: adicionar uma descrição de declaração'
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: Adicionar uma descrição da declaração
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 31c04f557900cee661c2283957f590caf370bbe5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: bdf57eddd1ad76c5bf9217e9aab97cfef9332b61
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942730"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044294"
 ---
 # <a name="add-a-claim-description"></a>Adicionar uma descrição da declaração
 

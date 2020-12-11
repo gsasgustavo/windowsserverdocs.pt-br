@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: resolução de nomes para clientes de perímetro e de Internet'
 ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
 title: Resolução de nomes para clientes de perímetro e de Internet
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 04/13/2020
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 050d1ddd8d04e288c6e480bed2d9e24146198020
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dbbef945edefd9deea13468328e36df4247d3b3a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972123"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043314"
 ---
 # <a name="name-resolution-for-perimeter-and-internet-clients"></a>Resolução de nomes para clientes de perímetro e de Internet
 
@@ -37,7 +38,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 1.  Em um servidor DNS para a zona DNS da Internet, abra o snap- \- in DNS.
 
-2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \) **.
+2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \)**.
 
 3.  Em **nome**, digite apenas o nome do computador do servidor de Federação. Por exemplo, para o nome de domínio totalmente qualificado \( FQDN \) FS.fabrikam.com, digite **FS**.
 
@@ -57,7 +58,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 1.  Em um servidor DNS para a rede de perímetro, abra o **snap- \- in DNS**.
 
-2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \) **.
+2.  Na árvore de console, clique com o botão direito \- do mouse na zona de pesquisa direta aplicável e clique em **novo host \( A ou aaaa \)**.
 
 3.  Em **nome**, digite apenas o nome do computador do servidor de Federação. Por exemplo, para o FQDN fs.fabrikam;com, digite **fs**.
 

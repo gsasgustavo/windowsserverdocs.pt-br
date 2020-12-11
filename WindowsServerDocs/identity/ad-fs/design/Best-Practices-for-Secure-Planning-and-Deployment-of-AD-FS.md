@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: práticas recomendadas para o planejamento seguro e a implantação de AD FS'
 ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: Práticas recomendadas para o planejamento e a implantação seguros do AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f21eb5737bb1729999ae6d298ca868dc3f7d52d6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e4de8bf5564277a41ee5719aba9bb54041c2dff0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954342"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041294"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>Práticas recomendadas para o planejamento e a implantação seguros do AD FS
 
@@ -54,7 +55,7 @@ As seguintes práticas recomendadas principais são comuns a todas as instalaç�
 
     A tabela a seguir explica como registrar a extensão de função de SCW apropriada com base na função do servidor AD FS escolhida no computador onde o AD FS foi instalado.
 
-    |Função do servidor AD FS|Banco de dados de configuração do AD FS usado|Digite o comando a seguir em um prompt de comando:|
+    |Função do servidor AD FS|Banco de dados de configuração do AD FS usado|Digite o comando a seguir em um prompt de comando:|
     |---------------------|-------------------------------------|---------------------------------------------------|
     |Servidor de federação autônomo|Banco de Dados Interno do Windows|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwStandAlone.xml"`|
     |Servidor de federação ingressado em farm|Banco de Dados Interno do Windows|`scwcmd register /kbname:ADFS2Standalone /kbfile:"WindowsADFSscwFarm.xml"`|
@@ -114,11 +115,11 @@ As seguintes práticas recomendadas principais são comuns a todas as instalaç�
 As práticas recomendadas de segurança a seguir são específicas do uso de Microsoft SQL Server &reg; ou do banco de dados interno do Windows (wid) quando essas tecnologias de banco de dados são usadas para gerenciar os dados no design e na implantação de AD FS.
 
 > [!NOTE]
-> Essas recomendações visam ampliar, e não substituir, o guia de segurança de produto do SQL Server. Para obter mais informações sobre como planejar uma instalação segura do SQL Server, consulte [considerações de segurança para uma instalação segura do SQL](https://go.microsoft.com/fwlink/?LinkID=139831) ( https://go.microsoft.com/fwlink/?LinkID=139831) .
+> Essas recomendações visam ampliar, e não substituir, o guia de segurança de produto do SQL Server. Para obter mais informações sobre como planejar uma instalação segura do SQL Server, consulte [considerações de segurança para uma instalação segura do SQL](https://go.microsoft.com/fwlink/?LinkID=139831) ( https://go.microsoft.com/fwlink/?LinkID=139831) .
 
 -   **Sempre implante o SQL Server atrás de um firewall em um ambiente de rede fisicamente seguro.**
 
-    Uma instalação do SQL Server nunca deverá estar diretamente exposta à Internet. Somente os computadores que estão dentro de seu datacenter devem ser capazes de acessar a instalação do SQL Server que dá suporte a AD FS. Para obter mais informações, consulte [lista de verificação de práticas recomendadas de segurança](https://go.microsoft.com/fwlink/?LinkID=189229) ( https://go.microsoft.com/fwlink/?LinkID=189229) .
+    Uma instalação do SQL Server nunca deverá estar diretamente exposta à Internet. Somente os computadores que estão dentro de seu datacenter devem ser capazes de acessar a instalação do SQL Server que dá suporte a AD FS. Para obter mais informações, consulte [lista de verificação de práticas recomendadas de segurança](https://go.microsoft.com/fwlink/?LinkID=189229) ( https://go.microsoft.com/fwlink/?LinkID=189229) .
 
 -   **Execute o SQL Server em uma conta de serviço em vez de usar contas de serviço padrão integradas do sistema.**
 
@@ -126,11 +127,11 @@ As práticas recomendadas de segurança a seguir são específicas do uso de Mic
 
 -   **Minimize a área da superfície do SQL Server.**
 
-    Habilite somente os terminais do SQL Server necessários. Por padrão, o SQL Server fornece um único ponto de extremidade TCP integrado que não pode ser removido. Por AD FS, você deve habilitar esse ponto de extremidade TCP para autenticação Kerberos. Para analisar os terminais de TCP atuais para ver se portas TCP definidas pelo usuário adicionais foram adicionados a uma instalação do SQL, use a instrução de consulta "SELECT * FROM sys.tcp_endpoints" em uma sessão Transact-SQL (T-SQL). Para obter mais informações sobre SQL Server configuração de ponto de extremidade, consulte [como configurar o mecanismo de banco de dados para escutar em várias portas TCP](https://go.microsoft.com/fwlink/?LinkID=189231) ( https://go.microsoft.com/fwlink/?LinkID=189231) .
+    Habilite somente os terminais do SQL Server necessários. Por padrão, o SQL Server fornece um único ponto de extremidade TCP integrado que não pode ser removido. Por AD FS, você deve habilitar esse ponto de extremidade TCP para autenticação Kerberos. Para analisar os terminais de TCP atuais para ver se portas TCP definidas pelo usuário adicionais foram adicionados a uma instalação do SQL, use a instrução de consulta "SELECT * FROM sys.tcp_endpoints" em uma sessão Transact-SQL (T-SQL). Para obter mais informações sobre SQL Server configuração de ponto de extremidade, consulte [como configurar o mecanismo de banco de dados para escutar em várias portas TCP](https://go.microsoft.com/fwlink/?LinkID=189231) ( https://go.microsoft.com/fwlink/?LinkID=189231) .
 
 -   **Evite usar autenticação baseada no SQL.**
 
-    Para evitar transferir senhas como texto simples pela rede ou armazenar senhas nas definições de configuração, use a autenticação do Windows somente com sua instalação do SQL Server. A autenticação do SQL Server é um modo de autenticação legado. Não é recomendado armazenar credenciais de logon em linguagem SQL (ou seja, nomes de usuário e senhas do SQL) ao usar a autenticação do SQL Server. Para obter mais informações, consulte [modos de autenticação](https://go.microsoft.com/fwlink/?LinkID=189232) ( https://go.microsoft.com/fwlink/?LinkID=189232) .
+    Para evitar transferir senhas como texto simples pela rede ou armazenar senhas nas definições de configuração, use a autenticação do Windows somente com sua instalação do SQL Server. A autenticação do SQL Server é um modo de autenticação legado. Não é recomendado armazenar credenciais de logon em linguagem SQL (ou seja, nomes de usuário e senhas do SQL) ao usar a autenticação do SQL Server. Para obter mais informações, consulte [modos de autenticação](https://go.microsoft.com/fwlink/?LinkID=189232) ( https://go.microsoft.com/fwlink/?LinkID=189232) .
 
 -   **Avalie com cautela a necessidade de usar segurança de canal adicional na instalação do SQL.**
 
@@ -144,7 +145,7 @@ As práticas recomendadas de segurança a seguir são específicas do uso de Mic
 
 -   **Configure o acesso criado com segurança usando procedimentos armazenados para executar todas as pesquisas baseadas em SQL por AD FS de dados armazenados em SQL.**
 
-    Para fornecer um melhor serviço e isolamento dos dados, você pode criar procedimentos armazenados para todos os comandos de pesquisa de armazenamento de atributo. Você pode criar uma função de banco de dados que receberá permissão para executar os procedimentos armazenados. Atribua a identidade de serviço do AD FS serviço do Windows a essa função de banco de dados. O serviço do Windows AD FS não deve ser capaz de executar nenhuma outra instrução SQL, além dos procedimentos armazenados apropriados que são usados para pesquisa de atributo. Bloquear o acesso ao banco de dados do SQL Server desta maneira reduz o risco de um ataque de elevação de privilégio.
+    Para fornecer um melhor serviço e isolamento dos dados, você pode criar procedimentos armazenados para todos os comandos de pesquisa de armazenamento de atributo. Você pode criar uma função de banco de dados que receberá permissão para executar os procedimentos armazenados. Atribua a identidade de serviço do AD FS serviço do Windows a essa função de banco de dados. O serviço do Windows AD FS não deve ser capaz de executar nenhuma outra instrução SQL, além dos procedimentos armazenados apropriados que são usados para pesquisa de atributo. Bloquear o acesso ao banco de dados do SQL Server desta maneira reduz o risco de um ataque de elevação de privilégio.
 
 ## <a name="see-also"></a>Consulte Também
 [Guia de design do AD FS no Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

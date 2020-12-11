@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: atualizações de componentes de identidade'
 ms.assetid: 7e87ce2b-062e-479f-bcf2-585b6c42026a
 title: Atualizações de componentes de identidade
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8187be75c8f7ab537e6ae6e140d099c8f2a95d9b
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 1d702113220bea5e9ae73da101cae2606adbd967
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070668"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042824"
 ---
 # <a name="identity-component-updates"></a>Atualizações de componentes de identidade
 
@@ -38,7 +39,7 @@ Depois de concluir esta lição, você poderá:
 
     -   [Proteção e gerenciamento de credenciais](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))
 
-**Autor** : Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
+**Autor**: Justin Turner, engenheiro de escalonamento de suporte sênior com o grupo do Windows
 
 > [!NOTE]
 > Este documento foi criado por um engenheiro de atendimento ao cliente da Microsoft e é destinado a administradores e arquitetos de sistemas experientes que procuram explicações técnicas mais profundas para recursos e soluções no Windows Server 2012 R2 do que aquelas geralmente oferecidas em tópicos do TechNet. No entanto, ele não passou pelas mesmas etapas de edição que eles, por isso a linguagem pode parecer que menos refinada do que a geralmente encontrada no TechNet.

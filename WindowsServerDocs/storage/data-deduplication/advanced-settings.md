@@ -1,17 +1,18 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Configurações avançadas de Eliminação de Duplicação de Dados
+description: 'Saiba mais sobre: configurações avançadas de eliminação de duplicação de dados'
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 84d90e8c1de81498cbc832c8cf068e2ac339ac97
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: aa5f34f1c1fdc2b2a706cb0dfe1b7cf5a30456eb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866195"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039194"
 ---
 # <a name="advanced-data-deduplication-settings"></a>Configurações avançadas de Eliminação de Duplicação de Dados
 
@@ -74,7 +75,7 @@ Você pode alternar as seguintes configurações para trabalhos de Eliminação 
     </thead>
     <tbody>
         <tr>
-            <td>Type</td>
+            <td>Tipo</td>
             <td>O tipo do trabalho que deve ser agendado</td>
             <td>
                 <ul>
@@ -124,7 +125,7 @@ Você pode alternar as seguintes configurações para trabalhos de Eliminação 
             <td>Para impedir que um trabalho seja executado em uma carga&#39;s horas não ociosas</td>
         </tr>
         <tr>
-            <td>habilitado</td>
+            <td>Habilitada</td>
             <td>Se o trabalho será executado ou não</td>
             <td>Verdadeiro/Falso</td>
             <td>Para desabilitar um trabalho sem removê-lo</td>
@@ -150,7 +151,7 @@ Você pode alternar as seguintes configurações para trabalhos de Eliminação 
         <tr>
             <td>Nome</td>
             <td>O nome do trabalho agendado</td>
-            <td>String</td>
+            <td>Cadeia de caracteres</td>
             <td>Um trabalho deve ter um nome de identificação exclusivo.</td>
         </tr>
         <tr>

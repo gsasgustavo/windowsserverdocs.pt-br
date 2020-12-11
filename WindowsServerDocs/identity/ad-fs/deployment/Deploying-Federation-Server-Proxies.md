@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Implantando proxies herdados do servidor de Federação AD FS'
 ms.assetid: 1b21b0a9-1fe6-4fd1-8a25-92e578d774ed
 title: Implantando proxies de servidor de Federação no AD FS
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 3329daca0c8b997d7eb67cb6c85a5a11f3ac96ed
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7798867f8445ee99835e883ccab771fa346b2673
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962900"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044124"
 ---
 # <a name="deploying-legacy-ad-fs-federation-server-proxies"></a>Implantando proxies de servidor de Federação AD FS herdados
 

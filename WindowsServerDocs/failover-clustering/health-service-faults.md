@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: falhas de Serviço de Integridade'
 title: Falhas de Serviço de Integridade
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 5f35c52e6b4aaf382c80507ca562b52ce27da953
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8ac4740481d29f877e70c37993848bb397874691
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990792"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039514"
 ---
 # <a name="health-service-faults"></a>Falhas de Serviço de Integridade
 
@@ -22,7 +23,7 @@ O Serviço de Integridade monitora constantemente o cluster Espaços de Armazena
 
 Cada falha contém cinco campos importantes:
 
--   Gravidade
+-   Severity
 -   Descrição do problema
 -   Próximas etapas recomendadas para solucionar o problema
 -   Informações de identificação para a entidade com falha
@@ -70,7 +71,7 @@ Isso retorna todas as falhas que afetam apenas o volume ou o compartilhamento de
 
 ## <a name="usage-in-net-and-c"></a>Uso em .NET e C #
 
-### <a name="connect"></a>Connect
+### <a name="connect"></a>Conectar
 
 Para consultar o Serviço de Integridade, será necessário estabelecer um **CimSession** com o cluster. Para fazer isso, você precisará de algumas coisas que estão disponíveis apenas no .NET completo, o que significa que não é possível fazer isso prontamente diretamente de um aplicativo Web ou móvel. Esses exemplos de código usarão C \# , a opção mais direta para essa camada de acesso a dados.
 
@@ -103,7 +104,7 @@ O nome de usuário fornecido deve ser um administrador local do computador de de
 
 Com o **CimSession** estabelecido, você pode consultar Instrumentação de gerenciamento do Windows (WMI) no cluster.
 
-Antes que você possa obter falhas ou métricas, você precisará obter instâncias de vários objetos relevantes. Primeiro, o ** \_ StorageSubSystem do MSFT** que representa espaços de armazenamento diretos no cluster. Usando isso, você pode obter todos **os \_ StorageNode de MSFT** no cluster, e todos os volumes de **MSFT \_ **e de dados. Por fim, você precisará do **MSFT \_ StorageHealth**, o serviço de integridade em si.
+Antes que você possa obter falhas ou métricas, você precisará obter instâncias de vários objetos relevantes. Primeiro, o **\_ StorageSubSystem do MSFT** que representa espaços de armazenamento diretos no cluster. Usando isso, você pode obter todos **os \_ StorageNode de MSFT** no cluster, e todos os volumes de **MSFT \_** e de dados. Por fim, você precisará do **MSFT \_ StorageHealth**, o serviço de integridade em si.
 
 ```
 CimInstance Cluster;
@@ -131,7 +132,7 @@ public void DiscoverObjects(CimSession Session)
 }
 ```
 
-Esses são os mesmos objetos que você obtém no PowerShell usando cmdlets como **Get-StorageSubSystem**, **Get-StorageNode**e **Get-volume**.
+Esses são os mesmos objetos que você obtém no PowerShell usando cmdlets como **Get-StorageSubSystem**, **Get-StorageNode** e **Get-volume**.
 
 Você pode acessar todas as mesmas propriedades, documentadas em [classes de API de gerenciamento de armazenamento](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
 
@@ -147,7 +148,7 @@ foreach (CimInstance Node in Nodes)
 
 ### <a name="query-faults"></a>Falhas de consulta
 
-Invoque o **diagnóstico** para obter quaisquer falhas atuais com escopo para o **CimInstance**de destino, que é o cluster ou qualquer volume.
+Invoque o **diagnóstico** para obter quaisquer falhas atuais com escopo para o **CimInstance** de destino, que é o cluster ou qualquer volume.
 
 A lista completa de falhas disponíveis em cada escopo no Windows Server 2016 está documentada abaixo.
 
@@ -225,7 +226,7 @@ public void ListenForFaultEvents()
 
 Em seguida, implemente um observador cujo método **OnNext ()** será invocado sempre que um novo evento for gerado.
 
-Cada evento contém **ChangeType** que indica se uma falha está sendo criada, removida ou atualizada e a **faultid**relevante.
+Cada evento contém **ChangeType** que indica se uma falha está sendo criada, removida ou atualizada e a **faultid** relevante.
 
 Além disso, eles contêm todas as propriedades da própria falha.
 
@@ -511,7 +512,7 @@ No Windows Server 2016, o Serviço de Integridade fornece a seguinte cobertura d
 * Motivo: *"um ou mais consumidores de armazenamento (geralmente máquinas virtuais) estão usando uma política inexistente com a ID {ID}."*
 * Recomendado: *"recriar quaisquer políticas de QoS de armazenamento ausentes".*
 
-<sup>1</sup> indica que o volume atingiu 80% Full (severidade secundária) ou 90% Full (severidade principal).
+<sup>1</sup>  indica que o volume atingiu 80% Full (severidade secundária) ou 90% Full (severidade principal).
 <sup>2</sup> indica que alguns. VHD (s) no volume não atingiram seu IOPS mínimo por mais de 10% (menor), 30% (principal) ou 50% (crítico) de uma janela de 24 horas sem interrupção.
 
 >[!NOTE]

@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: malha protegida e guia de planejamento de VM blindada para locatários'
 title: Malha protegida e guia de planejamento de VM blindada para locatários
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
 ms.author: nirb
-ms.openlocfilehash: cee219282b3aec1e0ef23b81a1fb4beb6e164ca8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dc6ffa148da0f9c5ea7d7e2e2aea561260aa01d1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971263"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043834"
 ---
 # <a name="guarded-fabric-and-shielded-vm-planning-guide-for-tenants"></a>Malha protegida e guia de planejamento de VM blindada para locatários
 

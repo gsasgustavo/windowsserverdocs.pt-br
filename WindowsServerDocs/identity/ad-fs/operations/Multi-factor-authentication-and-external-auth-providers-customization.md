@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: personalização de autenticação multifator e provedores de autenticação externa'
 title: Personalização de autenticação multifator e provedores de autenticação externa
 author: billmath
 ms.author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
-ms.openlocfilehash: 47a03b43d8ac1a52453741974d4243f8aafc391c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 55ae8f4630c21ceb5cde91982970ff52c10047da
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949780"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039734"
 ---
 # <a name="multi-factor-authentication-and-external-authentication-providers-customization"></a>Personalização de autenticação multifator e provedores de autenticação externa
 
@@ -20,7 +21,7 @@ No AD FS, o suporte para autenticação multifator é fornecido prontos para uso
 Recomendamos que um provedor de autenticação externo use as classes definidas no arquivo. CSS que AD FS fornece para criar a interface do usuário de autenticação. Você pode usar o seguinte cmdlet para exportar o tema da Web padrão e inspecionar as classes de interface do usuário e os elementos definidos no arquivo .css. O arquivo. CSS pode ser usado no desenvolvimento da \- interface do usuário de entrada de um provedor de autenticação externo.
 
 ```powershell
-Export-AdfsWebTheme -Name default -DirectoryPath C:\theme
+Export-AdfsWebTheme -Name default -DirectoryPath C:\theme
 ```
 
 Veja a seguir um exemplo da interface do \- usuário de entrada, que é realçada em vermelho, por um provedor de autenticação externa. A interface do usuário usa as classes de IU no arquivo AD FS. css.

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Implantando AD FS herdados na organização do parceiro de recurso'
 ms.assetid: 41d6b897-1e72-4522-aad6-eece1154a154
 title: Implantando AD FS herdados na organização do parceiro de recurso
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a129423c4d646549b0b569fb9920e0b550a1fdbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ab08b257a9779aacf137f81217034e047d8e4c35
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942890"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044674"
 ---
 # <a name="deploying-legacy-ad-fs-in-the-resource-partner-organization"></a>Implantando AD FS herdados na organização do parceiro de recurso
 

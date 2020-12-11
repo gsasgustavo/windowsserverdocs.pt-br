@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma regra para enviar uma declaração de método de autenticação'
 ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Criar uma regra para enviar uma declaração do método de autenticação
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1ea0c352036a3e7a8070fa9f1f1ddca2a7dff3dd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dc55613e8060eda42f5f4d47a59fc20246e1684f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956653"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040124"
 ---
 # <a name="create-a-rule-to-send-an-authentication-method-claim"></a>Criar uma regra para enviar uma declaração do método de autenticação
 
@@ -30,7 +31,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS**, clique em **relações de confiança**de terceira parte confiável.
+2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
@@ -48,7 +49,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir**e, em seguida, clique em **OK** para salvar a regra.
+9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir** e, em seguida, clique em **OK** para salvar a regra.
 
 |                            Método de autenticação real                             |                                URI correspondente                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -81,7 +82,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir**e, em seguida, clique em **OK** para salvar a regra.
+9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir** e, em seguida, clique em **OK** para salvar a regra.
 
 |                            Método de autenticação real                             |                                URI correspondente                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -97,7 +98,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS**, clique em **relações de confiança**de terceira parte confiável.
+2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
@@ -115,11 +116,11 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente**e, em seguida, faça o seguinte:
+9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente** e, em seguida, faça o seguinte:
 
-    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir**e em **OK** para salvar a regra.
+    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir** e em **OK** para salvar a regra.
 
-    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir**e em **OK** para salvar a regra.
+    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir** e em **OK** para salvar a regra.
 
 |              Método de autenticação real              |                                URI correspondente                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -155,11 +156,11 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente**e, em seguida, faça o seguinte:
+9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente** e, em seguida, faça o seguinte:
 
-    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir**e em **OK** para salvar a regra.
+    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir** e em **OK** para salvar a regra.
 
-    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir**e em **OK** para salvar a regra.
+    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir** e em **OK** para salvar a regra.
 
 |              Método de autenticação real              |                                URI correspondente                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -196,7 +197,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável**e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
+2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
@@ -221,7 +222,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir**e, em seguida, clique em **OK** para salvar a regra.
+9. Em **valor de declaração de saída**, digite um dos valores padrão de URI do identificador de recurso uniforme \( \) na tabela a seguir, dependendo do seu método de autenticação preferencial, clique em **concluir** e, em seguida, clique em **OK** para salvar a regra.
 
 |                            Método de autenticação real                             |                                URI correspondente                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -239,9 +240,9 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 
 
-1.  Em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
-2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável**e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
+2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
@@ -266,11 +267,11 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 
 8.  Em **tipo de declaração de saída**, selecione o **método de autenticação** na lista.
 
-9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente**e, em seguida, faça o seguinte:
+9. Selecione **substituir um valor de declaração de entrada por um valor de declaração de saída diferente** e, em seguida, faça o seguinte:
 
-    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir**e em **OK** para salvar a regra.
+    1.  Em **valor de declaração de entrada**, digite um dos seguintes valores de URI que se baseiam no URI do método de autenticação real que foi usado originalmente, clique em **concluir** e em **OK** para salvar a regra.
 
-    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir**e em **OK** para salvar a regra.
+    2.  Em **valor de declaração de saída**, digite um dos valores de URI padrão na tabela a seguir, que depende da sua nova opção de método de autenticação preferencial, clique em **concluir** e em **OK** para salvar a regra.
 
 |              Método de autenticação real              |                                URI correspondente                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|

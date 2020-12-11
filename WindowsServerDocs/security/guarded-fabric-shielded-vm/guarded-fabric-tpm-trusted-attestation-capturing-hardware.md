@@ -1,17 +1,18 @@
 ---
 title: Capturar informações do modo TPM exigidas pelo HGS
+description: 'Saiba mais sobre: autorizar hosts protegidos usando o atestado baseado em TPM'
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 04/01/2019
-ms.openlocfilehash: 8ce4528ec7e8143c6f9af977079eed1cf8cc3940
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 3ef32427191b5bd1639319f8d5688e364129e8c6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865655"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043734"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>Autorizar hosts protegidos usando atestado baseado em TPM
 

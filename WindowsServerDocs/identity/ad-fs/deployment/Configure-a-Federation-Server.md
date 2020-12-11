@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: configurar um servidor de Federação'
 ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Configurar um servidor de Federação para o Windows Server 2012 R2 AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9df3c42f47c81190bee0420c46bcdf6b7ef34160
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 28a9ad04e1457ac7916cd0092eb53d80a2b57e6f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963097"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044244"
 ---
 # <a name="configure-a-federation-server"></a>Configurar um servidor de federação
 
@@ -39,7 +40,7 @@ Depois de instalar o Serviços de Federação do Active Directory (AD FS) \( AD 
 
 4.  Na página **Especificar Propriedades de Serviço**, siga estas etapas e clique em **Avançar**:
 
-    -   Importe o arquivo. pfx que contém o certificado SSL da camada de soquete seguro \( \) e a chave que você obteve anteriormente. Na [etapa 2: registrar um certificado SSL para AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), você obteve esse certificado e o copiou no computador que deseja configurar como um servidor de Federação. Para importar o arquivo. pfx por meio do assistente, clique em **importar**e navegue até o local do arquivo. Digite a senha para o arquivo. pfx quando solicitado.
+    -   Importe o arquivo. pfx que contém o certificado SSL da camada de soquete seguro \( \) e a chave que você obteve anteriormente. Na [etapa 2: registrar um certificado SSL para AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), você obteve esse certificado e o copiou no computador que deseja configurar como um servidor de Federação. Para importar o arquivo. pfx por meio do assistente, clique em **importar** e navegue até o local do arquivo. Digite a senha para o arquivo. pfx quando solicitado.
 
     -   Forneça um nome para seu serviço de federação. Por exemplo, **fs.contoso.com**. Este nome deve corresponder a um dos nomes da entidade ou nomes alternativos da entidade no certificado.
 
@@ -53,7 +54,7 @@ Depois de instalar o Serviços de Federação do Active Directory (AD FS) \( AD 
     > [!WARNING]
     > Se você quiser usar uma conta do gMSA, deverá ter pelo menos um controlador de domínio em seu ambiente que esteja executando o sistema operacional Windows Server 2012.
     >
-    > Se a opção gMSA estiver desabilitada e você vir uma mensagem de erro, como **contas de serviço gerenciado de grupo não estão disponíveis porque a chave raiz KDS não foi definida**, você poderá habilitar o gMSA em seu domínio executando o seguinte comando do Windows PowerShell em um controlador de domínio, que executa o windows Server 2012 ou posterior, em seu domínio de Active Directory: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)` . Em seguida, retorne ao assistente, clique em **anterior**e, em seguida, clique em **Avançar** para \- inserir novamente a página **especificar conta de serviço** . A opção gMSA agora deve estar habilitada. Você pode selecioná-lo e inserir um nome de conta do gMSA que você deseja usar.
+    > Se a opção gMSA estiver desabilitada e você vir uma mensagem de erro, como **contas de serviço gerenciado de grupo não estão disponíveis porque a chave raiz KDS não foi definida**, você poderá habilitar o gMSA em seu domínio executando o seguinte comando do Windows PowerShell em um controlador de domínio, que executa o windows Server 2012 ou posterior, em seu domínio de Active Directory: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)` . Em seguida, retorne ao assistente, clique em **anterior** e, em seguida, clique em **Avançar** para \- inserir novamente a página **especificar conta de serviço** . A opção gMSA agora deve estar habilitada. Você pode selecioná-lo e inserir um nome de conta do gMSA que você deseja usar.
 
 6.  Na página **especificar banco de dados de configuração** , especifique um banco de dados de configuração de AD FS e clique em **Avançar**. Você pode criar um banco de dados neste computador usando o wid do banco \( de dados interno \) do Windows ou pode especificar o local e o nome da instância de Microsoft SQL Server.
 
@@ -122,7 +123,7 @@ Você pode criar um novo farm de servidores de Federação usando uma conta do g
         > [!NOTE]
         > O comando anterior cria um farm WID. Se você quiser criar um farm de SQL Server, você deve ter a instância do SQL Server já instalada e operacional.
         >
-        > Você pode usar o seguinte comando para criar o primeiro servidor de Federação em um novo farm que usa uma instância de SQL Server `Install-AdfsFarm -CertificateThumbprint <certificate_thumbprint> -FederationServiceName <federation_service_name> -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` : **onde \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o ** \_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > Você pode usar o seguinte comando para criar o primeiro servidor de Federação em um novo farm que usa uma instância de SQL Server `Install-AdfsFarm -CertificateThumbprint <certificate_thumbprint> -FederationServiceName <federation_service_name> -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` : **onde \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **\_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.
@@ -141,7 +142,7 @@ Você pode criar um novo farm de servidores de Federação usando uma conta do g
 
     O **Assistente de Configuração do Serviço de Federação do Active Directory** é aberto.
 
-2.  Na página de **boas-vindas** , selecione **Adicionar um servidor de Federação a um farm de servidores de Federação**e clique em **Avançar**.
+2.  Na página de **boas-vindas** , selecione **Adicionar um servidor de Federação a um farm de servidores de Federação** e clique em **Avançar**.
 
 3.  Na página **conectar a AD DS** , especifique uma conta usando permissões de administrador de domínio para o domínio do AD ao qual este computador está associado e clique em **Avançar**.
 
@@ -179,7 +180,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -PrimaryComputerName <first_federation_server_hostname> -CertificateThumbprint <certificate_thumbprint>
         ```
 
-        `<domain>\<GMSA_name>`é seu domínio do AD e o nome da sua conta do gMSA nesse domínio. `<first_federation_server_hostname>`é o nome do host do servidor de Federação primário neste farm existente.
+        `<domain>\<GMSA_name>` é seu domínio do AD e o nome da sua conta do gMSA nesse domínio. `<first_federation_server_hostname>` é o nome do host do servidor de Federação primário neste farm existente.
 
         Você pode obter o valor para `<certificate_thumbprint>` executando `dir Cert:\LocalMachine\My` na etapa anterior.
 
@@ -189,7 +190,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         > [!NOTE]
         > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional.
         >
-        > Você pode usar o comando a seguir para adicionar um servidor de Federação a um farm existente que está usando uma instância do SQL Server: `Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em que ** \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **nome da \_ instância \_ do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > Você pode usar o comando a seguir para adicionar um servidor de Federação a um farm existente que está usando uma instância do SQL Server: `Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em que **\_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **nome da \_ instância \_ do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.
@@ -210,7 +211,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         > Se essa não for a primeira vez que você executar esse comando, adicione o `OverwriteConfiguration` parâmetro.
 
         > [!NOTE]
-        > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional. Você pode usar o seguinte comando para adicionar um servidor de Federação a um farm existente usando uma instância do SQL Server: `Add-AdfsFarmNode -ServiceAccountCredential $fscred -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em **que \_ \_ nome do host SQL** é o nome do servidor no qual a instância do SQL Server está em execução e o ** \_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional. Você pode usar o seguinte comando para adicionar um servidor de Federação a um farm existente usando uma instância do SQL Server: `Add-AdfsFarmNode -ServiceAccountCredential $fscred -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em **que \_ \_ nome do host SQL** é o nome do servidor no qual a instância do SQL Server está em execução e o **\_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.
@@ -239,7 +240,7 @@ Depois de instalar o Serviços de Federação do Active Directory (AD FS) \( AD 
 
 4.  Na página **Especificar Propriedades de Serviço**, siga estas etapas e clique em **Avançar**:
 
-    -   Importe o arquivo. pfx que contém o certificado SSL da camada de soquete seguro \( \) e a chave que você obteve anteriormente. Na [etapa 2: registrar um certificado SSL para AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), você obteve esse certificado e o copiou no computador que deseja configurar como um servidor de Federação. Para importar o arquivo. pfx por meio do assistente, clique em **importar**e navegue até o local do arquivo. Digite a senha para o arquivo. pfx quando solicitado.
+    -   Importe o arquivo. pfx que contém o certificado SSL da camada de soquete seguro \( \) e a chave que você obteve anteriormente. Na [etapa 2: registrar um certificado SSL para AD FS](../../ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md), você obteve esse certificado e o copiou no computador que deseja configurar como um servidor de Federação. Para importar o arquivo. pfx por meio do assistente, clique em **importar** e navegue até o local do arquivo. Digite a senha para o arquivo. pfx quando solicitado.
 
     -   Forneça um nome para seu serviço de federação. Por exemplo, **fs.contoso.com**. Este nome deve corresponder a um dos nomes da entidade ou nomes alternativos da entidade no certificado.
 
@@ -253,7 +254,7 @@ Depois de instalar o Serviços de Federação do Active Directory (AD FS) \( AD 
     > [!WARNING]
     > Se você quiser usar uma conta do gMSA, deverá ter pelo menos um controlador de domínio em seu ambiente que esteja executando o sistema operacional Windows Server 2012.
     >
-    > Se a opção gMSA estiver desabilitada e você vir uma mensagem de erro, como **contas de serviço gerenciado de grupo não estão disponíveis porque a chave raiz KDS não foi definida**, você poderá habilitar o gMSA em seu domínio executando o seguinte comando do Windows PowerShell em um controlador de domínio, que executa o windows Server 2012 ou posterior, em seu domínio de Active Directory: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)` . Em seguida, retorne ao assistente, clique em **anterior**e, em seguida, clique em **Avançar** para \- inserir novamente a página **especificar conta de serviço** . A opção gMSA agora deve estar habilitada. Você pode selecioná-lo e inserir um nome de conta do gMSA que você deseja usar.
+    > Se a opção gMSA estiver desabilitada e você vir uma mensagem de erro, como **contas de serviço gerenciado de grupo não estão disponíveis porque a chave raiz KDS não foi definida**, você poderá habilitar o gMSA em seu domínio executando o seguinte comando do Windows PowerShell em um controlador de domínio, que executa o windows Server 2012 ou posterior, em seu domínio de Active Directory: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)` . Em seguida, retorne ao assistente, clique em **anterior** e, em seguida, clique em **Avançar** para \- inserir novamente a página **especificar conta de serviço** . A opção gMSA agora deve estar habilitada. Você pode selecioná-lo e inserir um nome de conta do gMSA que você deseja usar.
 
 6.  Na página **especificar banco de dados de configuração** , especifique um banco de dados de configuração de AD FS e clique em **Avançar**. Você pode criar um banco de dados neste computador usando o wid do banco \( de dados interno \) do Windows ou pode especificar o local e o nome da instância de Microsoft SQL Server.
 
@@ -322,7 +323,7 @@ Você pode criar um novo farm de servidores de Federação usando uma conta do g
         > [!NOTE]
         > O comando anterior cria um farm WID. Se você quiser criar um farm de SQL Server, você deve ter a instância do SQL Server já instalada e operacional.
         >
-        > Você pode usar o seguinte comando para criar o primeiro servidor de Federação em um novo farm que usa uma instância de SQL Server `Install-AdfsFarm -CertificateThumbprint <certificate_thumbprint> -FederationServiceName <federation_service_name> -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` : **onde \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o ** \_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > Você pode usar o seguinte comando para criar o primeiro servidor de Federação em um novo farm que usa uma instância de SQL Server `Install-AdfsFarm -CertificateThumbprint <certificate_thumbprint> -FederationServiceName <federation_service_name> -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` : **onde \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **\_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.
@@ -341,7 +342,7 @@ Você pode criar um novo farm de servidores de Federação usando uma conta do g
 
     O **Assistente de Configuração do Serviço de Federação do Active Directory** é aberto.
 
-2.  Na página de **boas-vindas** , selecione **Adicionar um servidor de Federação a um farm de servidores de Federação**e clique em **Avançar**.
+2.  Na página de **boas-vindas** , selecione **Adicionar um servidor de Federação a um farm de servidores de Federação** e clique em **Avançar**.
 
 3.  Na página **conectar a AD DS** , especifique uma conta usando permissões de administrador de domínio para o domínio do AD ao qual este computador está associado e clique em **Avançar**.
 
@@ -379,7 +380,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -PrimaryComputerName <first_federation_server_hostname> -CertificateThumbprint <certificate_thumbprint>
         ```
 
-        `<domain>\<GMSA_name>`é seu domínio do AD e o nome da sua conta do gMSA nesse domínio. `<first_federation_server_hostname>`é o nome do host do servidor de Federação primário neste farm existente.
+        `<domain>\<GMSA_name>` é seu domínio do AD e o nome da sua conta do gMSA nesse domínio. `<first_federation_server_hostname>` é o nome do host do servidor de Federação primário neste farm existente.
 
         Você pode obter o valor para `<certificate_thumbprint>` executando `dir Cert:\LocalMachine\My` na etapa anterior.
 
@@ -389,7 +390,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         > [!NOTE]
         > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional.
         >
-        > Você pode usar o comando a seguir para adicionar um servidor de Federação a um farm existente que está usando uma instância do SQL Server: `Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em que ** \_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **nome da \_ instância \_ do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > Você pode usar o comando a seguir para adicionar um servidor de Federação a um farm existente que está usando uma instância do SQL Server: `Add-AdfsFarmNode -GroupServiceAccountIdentifier <domain>\<GMSA_name>$ -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em que **\_ \_ nome do host SQL** é o nome do servidor no qual SQL Server está em execução e o **nome da \_ instância \_ do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.
@@ -410,7 +411,7 @@ Você pode adicionar um servidor de Federação a um farm existente usando uma c
         > Se essa não for a primeira vez que você executar esse comando, adicione o `OverwriteConfiguration` parâmetro.
 
         > [!NOTE]
-        > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional. Você pode usar o seguinte comando para adicionar um servidor de Federação a um farm existente usando uma instância do SQL Server: `Add-AdfsFarmNode -ServiceAccountCredential $fscred -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em **que \_ \_ nome do host SQL** é o nome do servidor no qual a instância do SQL Server está em execução e o ** \_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
+        > O comando anterior cria um nó de farm WID. Se você quiser criar um nó de farm de servidores de computadores que executam o SQL Server, você deve ter a instância do SQL Server já instalada e operacional. Você pode usar o seguinte comando para adicionar um servidor de Federação a um farm existente usando uma instância do SQL Server: `Add-AdfsFarmNode -ServiceAccountCredential $fscred -SQLConnectionString "Data Source=<SQL_Host_Name>\<SQL_instance_ name>;Integrated Security=True"` em **que \_ \_ nome do host SQL** é o nome do servidor no qual a instância do SQL Server está em execução e o **\_ \_ nome da instância do SQL** é o nome da instância do SQL Server. Se você usar a instância padrão do SQL Server, use um valor **SqlConnectionString** de "**fonte de dados \=<\_ nome do host SQL \_>; segurança integrada \= true**".
 
         > [!IMPORTANT]
         > Se você quiser criar um farm de AD FS e usar SQL Server para armazenar seus dados de configuração, poderá usar SQL Server 2008 e versões mais recentes, incluindo SQL Server 2012 e SQL Server 2014.

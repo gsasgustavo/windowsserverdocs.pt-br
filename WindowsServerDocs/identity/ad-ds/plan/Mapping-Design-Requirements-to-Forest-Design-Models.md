@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: mapeamento de requisitos de design para modelos de design de floresta'
 ms.assetid: c0d64566-5530-482e-a332-af029a5fb575
 title: Mapeamento de requisitos de design para modelos de design de floresta
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 4ca6eff6d069d1f86aed3952c24996b4dcd2a879
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 3426d184a8d81243f907426cf87f87114ca76497
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071098"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042764"
 ---
 # <a name="mapping-design-requirements-to-forest-design-models"></a>Mapeamento de requisitos de design para modelos de design de floresta
 
@@ -26,7 +27,7 @@ Se nem todos os grupos em sua organização puderem compartilhar uma única flor
 > [!NOTE]
 > Se um fator estiver listado como N/A, não será uma consideração, pois outros requisitos também acomodam esse fator.
 
-|Cenário|Conectividade limitada|Isolamento dos dados|Autonomia de dados|Isolamento de serviço|Autonomia do serviço|
+|Cenário|Conectividade limitada|Isolamento de dados|Autonomia de dados|Isolamento de serviço|Autonomia do serviço|
 |------------|------------------------|------------------|-----------------|---------------------|--------------------|
 |[Cenário 1: unir uma floresta existente para autonomia de dados](#BKMK_1)|Não|Não|Sim|Não|Não|
 |[Cenário 2: usar uma floresta organizacional ou um domínio para autonomia de serviço](#BKMK_2)|Não|Não|N/D|Não|Sim|

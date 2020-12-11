@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: implantar uma política de acesso central (etapas de demonstração)'
 ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: Implantar uma política de acesso central (passo a passo)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 406674f26039f80cbca5ed3ba96e041bc8624729
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8f61fd4e483ef28e6887b8f530bc311b09b8d563
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952787"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040574"
 ---
 # <a name="deploy-a-central-access-policy-demonstration-steps"></a>Implantar uma política de acesso central (passo a passo)
 
@@ -80,9 +81,9 @@ No procedimento a seguir, você cria dois tipos de declaração: país e departa
 
 8. Nos campos **Valor** e **Nome de exibição**, digite **US** e clique em **OK**.
 
-9. Repita a etapa acima. Na caixa de diálogo **Adicionar um valor sugerido**, digite**JP** nos campos **Valor** e **Nome de exibição** e clique em **OK**.
+9. Repita a etapa acima. Na caixa de diálogo **Adicionar um valor sugerido**, digite **JP** nos campos **Valor** e **Nome de exibição** e clique em **OK**.
 
-![guias de solução](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -98,7 +99,7 @@ A próxima etapa consiste em criar as propriedades de recurso. No procedimento a
 
 #### <a name="to-create-and-enable-pre-created-resource-properties"></a>Para criar e habilitar propriedades de recurso criadas previamente
 
-1.  No painel esquerdo do Centro Administrativo do Active Directory, clique em **Modo de Exibição de Árvore**. Expanda **Controle de Acesso Dinâmico** e selecione **Propriedades de Recurso**.
+1.  No painel esquerdo de Centro Administrativo do Active Directory, clique em _ * exibição de árvore * *. Expanda **Controle de Acesso Dinâmico** e selecione **Propriedades de Recurso**.
 
 2.  Clique com o botão direito do mouse em **Propriedades de Recurso**, clique em **Novo** e, então, em **Propriedade de Recurso de Referência**.
 
@@ -117,7 +118,7 @@ A próxima etapa consiste em criar as propriedades de recurso. No procedimento a
 
     -   department
 
-![guias de solução](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -154,7 +155,7 @@ Regras de acesso:
 
 #### <a name="to-create-a-central-access-rule"></a>Para criar uma regra de acesso central
 
-1. No painel esquerdo do Centro Administrativo do Active Directory, clique em **Modo de Exibição de Árvore**, selecione **Controle de Acesso Dinâmico** e clique em **Regras de Acesso Central**.
+1. No painel esquerdo da Centro Administrativo do Active Directory, clique em _ * exibição de árvore * *, selecione **controle de acesso dinâmico** e clique em **regras de acesso central**.
 
 2. Clique com o botão direito do mouse em **Regras de Acesso Central**, clique em **Novo** e, então, em **Regra de Acesso Central**.
 
@@ -169,7 +170,7 @@ Regras de acesso:
 
 6. Na caixa de diálogo **Entrada de Permissão para Permissões**, clique em **Selecionar uma entidade de segurança**, digite **Usuários Autenticados** e clique em **OK**.
 
-7. Na caixa de diálogo **entrada de permissão para permissões** , clique em **Adicionar uma condição**e adicione as seguintes condições: [**usuário**]**[país**] [**qualquer de**] [**recurso**] [**país**] clique em **Adicionar uma condição**.
+7. Na caixa de diálogo **entrada de permissão para permissões** , clique em **Adicionar uma condição** e adicione as seguintes condições: [**usuário**]**[país**] [**qualquer de**] [**recurso**] [**país**] clique em **Adicionar uma condição**.
     [**E**] clique em [**Usuário**] [**Departamento**] [**Qualquer**] [**Recurso**] [**Departamento**]. Defina as **Permissões** como **Leitura**.
 
 8. Clique em **OK** e, depois, em **Adicionar**. Clique em **Selecionar uma entidade de segurança**, digite **FinanceAdmin** e clique em **OK**.
@@ -180,7 +181,7 @@ Regras de acesso:
 
 11. Clique em **OK** três vezes para concluir e voltar ao Centro Administrativo do Active Directory.
 
-![guias de solução](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -201,7 +202,7 @@ Você deve agora ter uma regra de acesso central que permita às pessoas acessar
 
 #### <a name="to-add-a-central-access-rule-to-a-central-access-policy"></a>Para adicionar uma regra de acesso central a uma política de acesso central
 
-1. No painel esquerdo do Centro Administrativo do Active Directory, clique em **Controle de Acesso Dinâmico** e, então, em **Políticas de Acesso Central**.
+1. No painel esquerdo da Centro Administrativo do Active Directory, clique em _ * controle de acesso dinâmico * * e, em seguida, clique em **políticas de acesso central**.
 
 2. No painel **Tarefas**, clique em **Novo** e, depois, em **Política de Acesso Central.**
 
@@ -213,7 +214,7 @@ Você deve agora ter uma regra de acesso central que permita às pessoas acessar
 
 6. Clique em **OK** para concluir. Você deve ter agora uma política de acesso central denominada Política Financeira.
 
-![guias de solução](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -225,7 +226,7 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
 
 #### <a name="to-apply-the-central-access-policy-across-file-servers-by-using-group-policy"></a>Para aplicar a política de acesso central aos servidores de arquivos usando a Política de Grupo
 
-1.  Na tela **Iniciar**, na caixa **Pesquisar**, digite **Gerenciamento de Política de Grupo**. Clique duas vezes em **Gerenciamento de Política de Grupo**.
+1.  Na tela _ *Iniciar**, na caixa de **pesquisa** , digite **Gerenciamento de política de grupo**. Clique duas vezes em **Gerenciamento de Política de Grupo**.
 
     > [!TIP]
     > Se a configuração **Mostrar Ferramentas Administrativas** estiver desabilitada, a pasta **Ferramentas Administrativas** e seus conteúdos não aparecerão nos resultados de **Configurações**.
@@ -316,7 +317,7 @@ Na próxima etapa, você garantirá que o acesso esteja configurado adequadament
 
 2.  Clique na guia **Segurança**, clique em **Avançado** e, depois, clique na guia **Acesso Efetivo**.
 
-3.  Para examinar as permissões de um usuário, clique em **selecionar um usuário**, digite o nome do usuário e, em seguida, clique em **exibir acesso efetivo** para ver os direitos de acesso efetivos. Por exemplo:
+3.  Para examinar as permissões de um usuário, clique em **selecionar um usuário**, digite o nome do usuário e, em seguida, clique em  **exibir acesso efetivo** para ver os direitos de acesso efetivos. Por exemplo:
 
     -   Myriam Delesalle (MDelesalle) faz parte do departamento financeiro e deve ter acesso de leitura à pasta.
 
@@ -385,7 +386,7 @@ A próxima etapa é criar uma regra de política de preparo. As políticas de pr
 
 12. Clique em **OK** duas vezes para concluir.
 
-![guias de solução](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![guias de solução ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -407,13 +408,13 @@ No próximo procedimento, você verificará os resultados da política de prepar
 
 1. Conecte-se ao servidor de arquivos FILE1 no Gerenciador do Hyper-V e faça logon como CONTOSO\Administrator, com a senha <strong>pass@word1</strong> .
 
-2. Abra uma janela de prompt de comando e digite **gpupdate /force**. Isso assegura que suas alterações na Política de Grupo entrem em vigor no servidor.
+2. Abra uma janela de prompt de comando e digite _ * gpupdate/force * *. Isso assegura que suas alterações na Política de Grupo entrem em vigor no servidor.
 
 3. No Gerenciador Hyper-V, conecte-se ao servidor CLIENT1. Faça logoff do usuário que está conectado no momento. Reinicie a máquina virtual CLIENT1. Em seguida, faça logon no computador usando contoso\EValle pass@word1 .
 
 4. Clique duas vezes no atalho da área de trabalho para \\ \FILE1\Finance documentos. EValle ainda deve ter acesso aos arquivos. Mude novamente para o FILE1.
 
-5. Abra o **Visualizador de Eventos** a partir do atalho da área de trabalho. Expanda **Logs do Windows** e selecione **Segurança**. Abra as entradas com a **ID de evento 4818**na categoria de tarefa de **preparo da política de acesso central** . Você verá que EValle recebeu permissão de acesso. No entanto, de acordo com a política de preparo, a usuária teria o acesso negado.
+5. Abra o **Visualizador de Eventos** a partir do atalho da área de trabalho. Expanda **Logs do Windows** e selecione **Segurança**. Abra as entradas com a **ID de evento 4818** na categoria de tarefa de **preparo da política de acesso central** . Você verá que EValle recebeu permissão de acesso. No entanto, de acordo com a política de preparo, a usuária teria o acesso negado.
 
 ## <a name="next-steps"></a>Próximas etapas
 Se tiver um sistema de gerenciamento de servidor central como o System Center Operations Manager, você também poderá configurar o monitoramento de eventos. Isso permite que os administradores monitorem os efeitos das políticas de acesso central antes de impô-las.

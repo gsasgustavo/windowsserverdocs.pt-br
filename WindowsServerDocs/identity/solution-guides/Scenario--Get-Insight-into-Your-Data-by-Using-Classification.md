@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: cenário: Obtenha informações sobre seus dados usando a classificação'
 ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: Cenário Obtenha informações sobre seus dados usando a classificação
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7c06cc4bbca7e21ffa5ef58ec6e33fc43b3f9e49
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 386f3a1f40cb3f93fb9ece34b667f51057f5347a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044544"
 ---
 # <a name="scenario-get-insight-into-your-data-by-using-classification"></a>Cenário: aprofunde-se em seus dados por meio da classificação
 

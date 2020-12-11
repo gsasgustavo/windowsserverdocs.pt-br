@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: solução de problemas de atualizações de firmware de unidade'
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Solução de problemas de atualizações de firmware de unidade
 ms.author: toklima
@@ -6,12 +7,12 @@ manager: masriniv
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017
-ms.openlocfilehash: b63df280585c4e1d5de88bc8a2ab08cce74c06d7
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f1fed8ce79fc9918b4b11bb002bd7ba352e337fc
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039176"
 ---
 # <a name="troubleshooting-drive-firmware-updates"></a>Solução de problemas de atualizações de firmware de unidade
 

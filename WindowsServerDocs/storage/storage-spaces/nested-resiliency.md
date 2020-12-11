@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: resiliência aninhada para Espaços de Armazenamento Diretos'
 title: Resiliência aninhada para Espaços de Armazenamento Diretos
 ms.author: jgerend
 manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/15/2019
-ms.openlocfilehash: 91d8cce64088855d2e8a0c89c1084077a252e26a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e433539eced1a9f7a52bbaf9bc45e8a6586586ff
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935952"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039394"
 ---
 # <a name="nested-resiliency-for-storage-spaces-direct"></a>Resiliência aninhada para Espaços de Armazenamento Diretos
 
@@ -145,7 +146,7 @@ Uma vez definido como **true**, o comportamento do cache é:
 
 | Situação                       | Comportamento do cache                           | Pode tolerar a perda da unidade de cache? |
 |---------------------------------|------------------------------------------|--------------------------------|
-| Ambos os servidores                 | Leituras e gravações de cache, desempenho completo | Sim                            |
+| Ambos os servidores                 | Leituras e gravações de cache, desempenho completo | Yes                            |
 | Servidor inativo, primeiros 30 minutos   | Leituras e gravações de cache, desempenho completo | Não (temporariamente)               |
 | Após os primeiros 30 minutos          | Somente leituras de cache, desempenho afetado   | Sim (depois que o cache tiver sido gravado em unidades de capacidade)                           |
 

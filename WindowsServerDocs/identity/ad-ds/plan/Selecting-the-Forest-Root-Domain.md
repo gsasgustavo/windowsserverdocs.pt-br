@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: selecionando o domínio raiz da floresta'
 ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Selecionando o domínio raiz da floresta
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 63c405450cca315f4388feb13402b71f207117f2
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 14d817dbc936df04415ed7590281b1e751c1c161
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070198"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043664"
 ---
 # <a name="selecting-the-forest-root-domain"></a>Selecionando o domínio raiz da floresta
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: o que há de novo no clustering de failover'
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: O que há de novo no clustering de failover no Windows Server
 ms.topic: get-started-article
@@ -6,12 +7,12 @@ manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: 2376a96d762f2ae10a5353a621dd80be2aaf0d3d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5ffe286cecc8500d70df00289a9694847e7d0994
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957013"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040465"
 ---
 # <a name="whats-new-in-failover-clustering"></a>Novidades no Clustering de Failover
 
@@ -70,11 +71,11 @@ Este tópico explica as funcionalidades novas e alteradas no clustering de failo
 
 ### <a name="cluster-operating-system-rolling-upgrade"></a><a name="BKMK_RollingUpgrade"></a>Atualização sem interrupção do sistema operacional do cluster
 
-A atualização sem interrupção do sistema operacional do cluster permite que um administrador atualize o sistema operacional dos nós do cluster do Windows Server 2012 R2 para uma versão mais recente sem interromper o Hyper-V ou as cargas de trabalho de Servidor de Arquivos de Escalabilidade Horizontal. Usando esse recurso, as penalidades de tempo de inatividade em SLAs (Contratos de Nível de Serviço) podem ser evitadas.
+A atualização sem interrupção do sistema operacional do cluster permite que um administrador atualize o sistema operacional dos nós do cluster do Windows Server 2012 R2 para uma versão mais recente sem parar o Hyper-V ou as cargas de trabalho do servidor de arquivos Scale-Out. Usando esse recurso, as penalidades de tempo de inatividade em SLAs (Contratos de Nível de Serviço) podem ser evitadas.
 
 **Qual é o valor agregado desta alteração?**
 
-A atualização de um cluster Hyper-V ou Servidor de Arquivos de Escalabilidade Horizontal do Windows Server 2012 R2 para o Windows Server 2016 não requer mais tempo de inatividade. O cluster continuará a funcionar em um nível do Windows Server 2012 R2 até que todos os nós no cluster estejam executando o Windows Server 2016. O nível funcional do cluster é atualizado para o Windows Server 2016 usando o cmdlt do Windows PowerShell `Update-ClusterFunctionalLevel` .
+A atualização de um cluster de servidor de arquivos Hyper-V ou Scale-Out do Windows Server 2012 R2 para o Windows Server 2016 não requer mais tempo de inatividade. O cluster continuará a funcionar em um nível do Windows Server 2012 R2 até que todos os nós no cluster estejam executando o Windows Server 2016. O nível funcional do cluster é atualizado para o Windows Server 2016 usando o cmdlt do Windows PowerShell `Update-ClusterFunctionalLevel` .
 
 > [!WARNING]
 > - Depois de atualizar o nível funcional do cluster, você não pode voltar para um nível funcional de cluster do Windows Server 2012 R2.
@@ -83,7 +84,7 @@ A atualização de um cluster Hyper-V ou Servidor de Arquivos de Escalabilidade 
 
 **O que passou a funcionar de maneira diferente?**
 
-Um cluster de failover do Hyper-V ou Servidor de Arquivos de Escalabilidade Horizontal agora pode ser facilmente atualizado sem qualquer tempo de inatividade ou necessidade de criar um novo cluster com nós que estejam executando o sistema operacional Windows Server 2016. Migrar clusters para o Windows Server 2012 R2 envolvido colocando o cluster existente offline e reinstalando o novo sistema operacional para cada nó e, em seguida, colocando o cluster novamente online. O processo antigo era trabalhoso e exigia tempo de inatividade. No entanto, no Windows Server 2016, o cluster não precisa ficar offline em nenhum momento.
+Um cluster de failover do servidor de arquivos Hyper-V ou Scale-Out agora pode ser facilmente atualizado sem qualquer tempo de inatividade ou precisar criar um novo cluster com nós que estejam executando o sistema operacional Windows Server 2016. Migrar clusters para o Windows Server 2012 R2 envolvido colocando o cluster existente offline e reinstalando o novo sistema operacional para cada nó e, em seguida, colocando o cluster novamente online. O processo antigo era trabalhoso e exigia tempo de inatividade. No entanto, no Windows Server 2016, o cluster não precisa ficar offline em nenhum momento.
 
 Os sistemas operacionais de cluster para a atualização em fases são os seguintes para cada nó em um cluster:
 -   O nó é pausado e drenado de todas as máquinas virtuais em execução nela.
@@ -97,7 +98,7 @@ Os sistemas operacionais de cluster para a atualização em fases são os seguin
 
 Para obter mais informações, consulte [atualização sem interrupção do sistema operacional do cluster](cluster-operating-system-rolling-upgrade.md).
 
-### <a name="storage-replica"></a><a name="BKMK_SR"></a>Réplica de Armazenamento
+### <a name="storage-replica"></a><a name="BKMK_SR"></a>Réplica de armazenamento
 A réplica de armazenamento é um novo recurso que permite a replicação síncrona de nível de bloco e independente de armazenamento entre servidores ou clusters para recuperação de desastre, bem como o alargamento de um cluster de failover entre sites. A replicação síncrona habilita o espelhamento de dados em locais físicos com volumes consistentes com falha para garantir perda zero de dados no nível do sistema de arquivos. A replicação assíncrona permite a extensão de site além das dimensões metropolitanas com a possibilidade de perda de dados.
 
 **Qual é o valor agregado desta alteração?**
@@ -110,7 +111,7 @@ A réplica de armazenamento permite que você faça o seguinte:
 
 -   Alongar clusters de failover do Windows para distâncias metropolitanas.
 
--   Use o software da Microsoft de ponta a ponta para armazenamento e clustering, como Hyper-V, réplica de armazenamento, espaços de armazenamento, cluster, Servidor de Arquivos de Escalabilidade Horizontal, SMB3, eliminação de duplicação de dados e ReFS/NTFS.
+-   Use o software da Microsoft de ponta a ponta para armazenamento e clustering, como Hyper-V, réplica de armazenamento, espaços de armazenamento, cluster, Scale-Out servidor de arquivos, SMB3, eliminação de duplicação de dados e ReFS/NTFS.
 
 -   Ajudar a reduzir o custo e a complexidade da seguinte maneira:
 
@@ -202,7 +203,7 @@ O balanceamento de carga de máquina virtual é um novo recurso no clustering de
 
 A ordem de início da máquina virtual é um novo recurso no clustering de failover que introduz a orquestração de ordem de início para máquinas virtuais (e todos os grupos) em um cluster. As máquinas virtuais agora podem ser agrupadas em camadas, e as dependências de ordem de início podem ser criadas entre diferentes camadas. Isso garante que as máquinas virtuais mais importantes (como controladores de domínio ou máquinas virtuais do utilitário) sejam iniciadas primeiro. As máquinas virtuais não são iniciadas até que as máquinas virtuais nas quais elas têm uma dependência também sejam iniciadas.
 
-### <a name="simplified-smb-multichannel-and-multi-nic-cluster-networks"></a><a name="BKMK_SMBMultiChannel"></a>Redes de cluster de vários canais e multichannels SMB simplificadas
+### <a name="simplified-smb-multichannel-and-multi-nic-cluster-networks"></a><a name="BKMK_SMBMultiChannel"></a> Redes de cluster de vários canais e multichannels SMB simplificadas
 
 As redes de cluster de failover não são mais limitadas a uma única NIC por sub-rede/rede. Com redes SMB simplificadas de cluster Multichannel e MultiNIC, a configuração de rede é automática e cada NIC na sub-rede pode ser usada para tráfego de cluster e carga de trabalho. Esse aprimoramento permite que os clientes maximizem a taxa de transferência de rede para o Hyper-V, SQL Server instância de cluster de failover e outras cargas de trabalho SMB.
 

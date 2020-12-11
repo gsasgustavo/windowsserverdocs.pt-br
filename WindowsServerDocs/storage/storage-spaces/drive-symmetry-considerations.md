@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: direcionar considerações de simetria para Espaços de Armazenamento Diretos'
 title: Considerações sobre simetria de unidade para Espaços de Armazenamento Diretos
 ms.author: cosdar
 manager: eldenc
@@ -6,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f845702bb66226e604289f7f37ffa2fb1155843
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 38ab78f24e6900019a134b480ce477b45ca5ff0e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971113"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039384"
 ---
 # <a name="drive-symmetry-considerations-for-storage-spaces-direct"></a>Considerações sobre simetria de unidade para Espaços de Armazenamento Diretos
 
@@ -25,7 +26,7 @@ Este tópico explica as restrições e fornece exemplos de configurações com e
 
 ## <a name="constraints"></a>Restrições
 
-### <a name="type"></a>Type
+### <a name="type"></a>Tipo
 
 Todos os servidores devem ter os mesmos [tipos de unidades](choosing-drives.md#drive-types).
 

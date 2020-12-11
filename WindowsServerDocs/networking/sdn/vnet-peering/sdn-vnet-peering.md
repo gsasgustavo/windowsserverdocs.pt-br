@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: emparelhamento de rede virtual'
 title: Emparelhamento de rede virtual
 manager: grcusanz
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018
-ms.openlocfilehash: d0d9f149a95c00fdac02cbdd383fb950e56b845a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8d7f88c4887a5d571722e2137d32f1088d7a1ace
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990044"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043604"
 ---
 # <a name="virtual-network-peering"></a>Emparelhamento de rede virtual
 

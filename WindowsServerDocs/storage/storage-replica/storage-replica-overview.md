@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: visão geral da réplica de armazenamento'
 title: Visão geral da Réplica de Armazenamento
 manager: siroy
 ms.author: nedpyle
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 4/26/2019
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
-ms.openlocfilehash: 1d8997edf1354a49b9b67e417906eeaa307fdee6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9761117c4fe12450d658297edd411094546d883e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961220"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043264"
 ---
 # <a name="storage-replica-overview"></a>Visão geral da Réplica de Armazenamento
 
@@ -59,7 +60,7 @@ O **Cluster Estendido** permite a configuração de computadores e o armazenamen
 > [!NOTE]
 > Você também pode configurar a replicação de servidor para si mesmo usando quatro volumes separados em um computador. No entanto, este guia não abrange esse cenário.
 
-## <a name="storage-replica-features"></a><a name="BKMK_SR2"> </a> Recursos de réplica de armazenamento
+## <a name="storage-replica-features"></a><a name="BKMK_SR2"></a> Recursos de réplica de armazenamento
 
 * **Zero perda de dados, replicação em nível de bloco**. Com a replicação síncrona, não há possibilidade de perda de dados. Com a replicação em nível de bloco, não há possibilidade de bloqueio de arquivos.
 
@@ -85,29 +86,29 @@ A réplica de armazenamento inclui os seguintes recursos:
 
 | Recurso | Detalhes |
 | ----------- | ----------- |
-| Type | Baseado em host |
-| Síncrono | Sim |
-| Assíncronos | Sim |
-| Independente de hardware de armazenamento | Sim |
+| Tipo | Baseado em host |
+| Síncrono | Yes |
+| Assíncronos | Yes |
+| Independente de hardware de armazenamento | Yes |
 | Unidade de replicação | Volume (partição) |
-| Criação de cluster de ampliação do Windows Server | Sim |
-| Replicação de servidor para servidor | Sim |
-| Replicação de cluster para cluster | Sim |
-| Transporte | SMB3 |
+| Criação de cluster de ampliação do Windows Server | Yes |
+| Replicação de servidor para servidor | Yes |
+| Replicação de cluster para cluster | Yes |
+| Transport | SMB3 |
 | Rede | TCP/IP ou RDMA |
-| Suporte a restrição de rede | Sim |
+| Suporte a restrição de rede | Yes |
 | RDMA* | iWARP, InfiniBand, RoCE v2 |
 | Requisitos de firewall de porta de rede de replicação | Porta IANA única (TCP 445 ou 5445) |
 | Multicaminhos/multicanal | Sim (SMB3) |
 | Suporte a Kerberos | Sim (SMB3) |
 | Criptografia e assinatura durante a transmissão|Sim (SMB3) |
-| Failovers por volume permitidos | Sim |
-| Suporte ao armazenamento com provisionamento dinâmico | Sim |
+| Failovers por volume permitidos | Yes |
+| Suporte ao armazenamento com provisionamento dinâmico | Yes |
 | Interface do usuário de gerenciamento pronta para uso | PowerShell, Gerenciador de Cluster de Failover |
 
 *Pode exigir equipamento e cabeamento de longa distância adicionais.
 
-## <a name="storage-replica-prerequisites"></a><a name="BKMK_SR3"></a>Pré-requisitos de réplica de armazenamento
+## <a name="storage-replica-prerequisites"></a><a name="BKMK_SR3"></a> Pré-requisitos de réplica de armazenamento
 
 * Floresta de Active Directory Domain Services.
 * Espaços de Armazenamento com JBODs de SAS, Espaços de Armazenamento Diretos, fibre channel de SAN, VHDX compartilhado, iSCSI de destino ou armazenamento SCSI/SAS/SATA local. SSD ou mais rápido recomendado para unidades de log de replicação. A Microsoft recomenda que o armazenamento de log seja mais rápido do que o armazenamento de dados. Volumes de log nunca devem ser usados para outras cargas de trabalho.
@@ -120,7 +121,7 @@ A réplica de armazenamento inclui os seguintes recursos:
   * A réplica de armazenamento replica um único volume em vez de um número ilimitado de volumes.
   * Os volumes podem ter um tamanho de até 2 TB em vez de um tamanho ilimitado.
 
-##  <a name="background"></a><a name="BKMK_SR4"> </a> Plano de fundo
+##  <a name="background"></a><a name="BKMK_SR4"></a> Plano de fundo
 
 Esta seção inclui informações sobre termos de alto nível do setor, replicação síncrona e assíncrona e comportamentos importantes.
 
@@ -136,7 +137,7 @@ A replicação síncrona garante que o aplicativo grave dados em dois locais ao 
 
 Quando gravações de aplicativo ocorrem na cópia de dados de origem, o armazenamento de origem não reconhece a E/S imediatamente. Em vez disso, essas alterações de dados são replicadas para a cópia de destino remoto e retornam uma confirmação. Somente então o aplicativo recebe a confirmação de E/S. Isso garante a sincronização constante do local remoto com o local de origem, estendendo de fato o armazenamento de E/S pela rede. Em caso de falha do local de origem, os aplicativos podem fazer failover para o local remoto do site e retomar as operações com a garantia de zero perda de dados.
 
-| Modo | Diagrama | Etapas |
+| Mode | Diagrama | Etapas |
 | -------- | ----------- | --------- |
 | **Síncrono**<p>Zero Perda de dados<p>RPO | ![Diagrama que mostra como a Réplica de Armazenamento grava dados em replicação síncrona](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  O aplicativo grava dados<br />2.  Dados de log são gravados e os dados são replicados para o local remoto<br />3.  Dados de log são gravados no local remoto<br />4.  Confirmação do local remoto<br />5.  Gravação de aplicativo confirmada<p>t e t1: dados liberados para o volume, logs sempre realizam gravação |
 
@@ -148,7 +149,7 @@ Quando o aplicativo grava dados, o mecanismo de replicação captura a gravaçã
 
 Com seu RPO maior que zero, a replicação assíncrona é menos adequada para soluções de alta disponibilidade como Clusters de Failover, pois eles são projetados para operação contínua com redundância e sem perda de dados.
 
-| Modo | Diagrama | Etapas |
+| Mode | Diagrama | Etapas |
 | -------- | ----------- | --------- |
 | **Assíncronos**<p>Perda de dados quase zero<p>(depende de vários fatores)<p>RPO | ![Diagrama que mostra como a Réplica de Armazenamento grava dados em replicação assíncrona](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  O aplicativo grava dados<br />2.  Dados de log gravados<br />3.  Gravação de aplicativo confirmada<br />4.  Dados replicados para o local remoto<br />5.  Dados de log gravados no local remoto<br />6.  Confirmação do local remoto<p>t e t1: dados liberados para o volume, logs sempre realizam gravação |
 

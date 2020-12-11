@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: usando Espaços de Armazenamento Diretos com o cache de leitura na memória CSV'
 title: Cache de leitura na memória Espaços de Armazenamento Diretos
 ms.author: eldenc
 manager: siroy
@@ -6,12 +7,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 94f541b38e0084ae3284dc0e56b2643f23b15bfe
-ms.sourcegitcommit: 8a826e992f28a70e75137f876a5d5e61238a24e4
+ms.openlocfilehash: abda5d2bfeb5bcf65c66609c1e89ab2371089330
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365329"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040524"
 ---
 # <a name="using-storage-spaces-direct-with-the-csv-in-memory-read-cache"></a>Usando Espaços de Armazenamento Diretos com o cache de leitura na memória CSV
 
@@ -30,7 +31,7 @@ O cache de leitura na memória é mais eficaz para cargas de trabalho com uso in
 Você pode usar até 80% da memória física total para o cache de leitura na memória CSV.
 
   > [!TIP]
-  > Para implantações hiperconvergentes, em que a computação e o armazenamento são executados nos mesmos servidores, tenha cuidado para deixar memória suficiente para suas máquinas virtuais. Para implantações de Servidor de Arquivos de Escalabilidade Horizontal convergidas (SoFS), com menos contenção de memória, isso não se aplica.
+  > Para implantações hiperconvergentes, em que a computação e o armazenamento são executados nos mesmos servidores, tenha cuidado para deixar memória suficiente para suas máquinas virtuais. Para imvergências Scale-Out imconvergentes de servidor de arquivos (SoFS), com menos contenção de memória, isso não se aplica.
 
   > [!NOTE]
   > Determinadas ferramentas de MicroBenchMark como DISKSPD e a [VM frota](https://github.com/Microsoft/diskspd/tree/master/Frameworks/VMFleet) podem produzir resultados piores com o cache de leitura em memória CSV habilitado do que sem ele. Por padrão, a VM frota cria 1 10 Gibibyte (GiB) VHDX por máquina virtual – aproximadamente 1 TiB total para as VMs de 100 – e, em seguida, executa leituras e gravações de forma *uniforme aleatórias* . Ao contrário das cargas de trabalho reais, as leituras não seguem nenhum padrão previsível ou repetitivo, portanto, o cache na memória não é eficaz e simplesmente incorre em sobrecarga.

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: planejando a implantação de AD FS'
 ms.assetid: c87dc32d-ab33-44d2-a46f-f9f878b4e5b4
 title: Planejando a implantação do AD FS
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 079cf63ba6dcc3b5df08c234ff3ddc5191c6ae75
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: efac16b60fa59fdbd30f1b9636629c97c2072677
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938315"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043235"
 ---
 # <a name="planning-to-deploy-ad-fs"></a>Planejando a implantação do AD FS
 

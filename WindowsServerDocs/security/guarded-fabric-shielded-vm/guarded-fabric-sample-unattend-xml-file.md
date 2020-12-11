@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar arquivo de resposta de especialização de sistema operacional'
 title: Criar arquivo de resposta do sistema operacional especialização
 ms.topic: article
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 7ae16c6a923b8d9bb9cd0c8b345be0fc1655c9ca
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3bc7149bd8129c5fcac7d683b8327cfa5959791b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971303"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043924"
 ---
 # <a name="create-os-specialization-answer-file"></a>Criar arquivo de resposta do sistema operacional especialização
 
@@ -90,7 +91,7 @@ Você precisa configurar o adaptador de rede para sua máquina virtual. A captur
 
 ![Configurar o hardware para usar o IP estático](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-Em seguida, você pode usar o `-StaticIPPool` parâmetro para incluir os elementos IP estáticos no arquivo de resposta. Os parâmetros `@IPAddr-1@` , `@NextHop-1-1@` e `@DNSAddr-1-1@` no arquivo de resposta serão substituídos pelos valores reais que você especificou em Virtual Machine Manager no momento da implantação.
+Em seguida, você pode usar o  `-StaticIPPool` parâmetro para incluir os elementos IP estáticos no arquivo de resposta. Os parâmetros `@IPAddr-1@` , `@NextHop-1-1@` e `@DNSAddr-1-1@` no arquivo de resposta serão substituídos pelos valores reais que você especificou em Virtual Machine Manager no momento da implantação.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"

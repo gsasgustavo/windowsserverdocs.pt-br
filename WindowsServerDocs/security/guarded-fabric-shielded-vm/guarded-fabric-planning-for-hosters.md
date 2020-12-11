@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: malha protegida e guia de planejamento de VM blindada para hosters'
 title: Malha protegida e guia de planejamento de VM blindada para hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
@@ -6,12 +7,12 @@ manager: dongill
 author: nirb-ms
 ms.author: nirb
 ms.date: 08/29/2018
-ms.openlocfilehash: c603f946132e3c8811279f94c585de4ec9eb0509
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 58d29de19959bad617c9db3e07c12b316624056c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989142"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043944"
 ---
 # <a name="guarded-fabric-and-shielded-vm-planning-guide-for-hosters"></a>Malha protegida e guia de planejamento de VM blindada para hosters
 
@@ -19,7 +20,7 @@ ms.locfileid: "87989142"
 
 Este tópico aborda as decisões de planejamento que deverão ser feitas para permitir que máquinas virtuais blindadas sejam executadas em sua malha. Se você atualizar uma malha do Hyper-V existente ou criar uma nova malha, a execução de VMs blindadas consiste em dois componentes principais:
 
-- O serviço guardião de host (HGS) fornece atestado e proteção de chave para que você possa garantir que VMs blindadas sejam executadas somente em hosts Hyper-V aprovados e íntegros. 
+- O serviço guardião de host (HGS) fornece atestado e proteção de chave para que você possa garantir que VMs blindadas sejam executadas somente em hosts Hyper-V aprovados e íntegros. 
 - Os hosts Hyper-V aprovados e íntegros nos quais VMs blindadas (e VMs regulares) podem ser executados — eles são conhecidos como hosts protegidos.
 
 ![HGS e um host protegido](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-plus-host-diagram-basic.png)

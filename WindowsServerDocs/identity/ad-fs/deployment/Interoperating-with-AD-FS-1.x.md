@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: interoperação com AD FS 1. x'
 ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
 title: Interoperando com o AD FS 1.x
 author: billmath
@@ -6,16 +7,16 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 21f0ef0e3ad77d5ea58e5d3b82da66ce420e5d49
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 03bc60daaa456dba97aa1b0e210aed223a0c24a7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972143"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043354"
 ---
 # <a name="interoperating-with-ad-fs-1x"></a>Interoperando com o AD FS 1.x
 
-Para interoperabilidade entre Serviços de Federação do Active Directory (AD FS) \( AD FS \) no Windows Server &reg; 2012 e no AD FS 1.* x*, conclua uma ou mais das seguintes tarefas, dependendo das necessidades da sua organização:
+Para interoperabilidade entre Serviços de Federação do Active Directory (AD FS) \( AD FS \) no Windows Server &reg; 2012 e no AD FS 1.*x*, conclua uma ou mais das seguintes tarefas, dependendo das necessidades da sua organização:
 
 -   Planeje a interoperabilidade entre AD FS no Windows Server 2012 e versões anteriores do AD FS e saiba mais sobre o tipo de declaração ID de nome. Para obter mais informações, consulte [planejando a interoperabilidade com o AD FS 1. x](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff678040(v=ws.11)).
 

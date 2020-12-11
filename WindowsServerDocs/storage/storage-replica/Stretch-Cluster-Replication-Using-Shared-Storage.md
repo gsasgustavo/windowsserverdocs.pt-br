@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: replicação de cluster de ampliação usando armazenamento compartilhado'
 title: Replicação de cluster estendido usando Armazenamento Compartilhado
 manager: eldenc
 ms.author: nedpyle
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: efc2727c913ac2bab5ea619101ebef12f40a69b2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 096d1258cd74dec51e93b4b26266478206742beb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991509"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043754"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>Replicação de cluster estendido usando Armazenamento Compartilhado
 
@@ -132,7 +133,7 @@ Depois de instalar os nós de servidor, a próxima etapa é criar um dos seguint
 *  [Cluster de failover de Hyper-V](#BKMK_HyperV)
 *  [Servidor de arquivos para cluster de uso geral](#BKMK_FileServer)
 
-### <a name="configure-a-hyper-v-failover-cluster"></a><a name="BKMK_HyperV"></a>Configurar um cluster de failover do Hyper-V
+### <a name="configure-a-hyper-v-failover-cluster"></a><a name="BKMK_HyperV"></a> Configurar um cluster de failover do Hyper-V
 
 >[!NOTE]
 > Ignore esta seção e vá para a seção [Configurar um servidor de arquivos para cluster de uso geral](#BKMK_FileServer), se quiser criar um cluster de servidor de arquivos e não um cluster de Hyper-V.
@@ -189,7 +190,7 @@ Agora você criará um cluster de failover normal. Após a configuração, a val
         ```
 
       > [!IMPORTANT]
-      > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicionar uma carga de trabalho ou Test-SRTopology não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos no volume de origem durante o teste ou baixar e executar DISKSPD para gerar a E/S de gravação. Por exemplo, um exemplo com uma carga de trabalho de e/s de gravação baixa por dez minutos até o volume D::`Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`
+      > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicionar uma carga de trabalho ou Test-SRTopology não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos no volume de origem durante o teste ou baixar e executar DISKSPD para gerar a E/S de gravação. Por exemplo, um exemplo com uma carga de trabalho de e/s de gravação baixa por dez minutos até o volume D:: `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`
 
 1.  Examine o relatório **TestSrTopologyReport-< data >.html** para verificar que você atendeu aos requisitos de Réplica de Armazenamento e observe as recomendações de log e previsão de tempo a sincronização inicial.
 
@@ -269,7 +270,7 @@ Agora você criará um cluster de failover normal. Após a configuração, a val
 
 7. Quando estiver satisfeito, remova a máquina virtual de teste. Adicione as máquinas virtuais de teste reais necessárias para avaliação adicional para um nó de origem proposto.
 
-8. Configure o reconhecimento do site do Stretch cluster para que os servidores **Sr-Srv01** e **Sr-SRV02** estejam no local **Redmond**, **Sr-SRV03** e **Sr-SRV04** estejam no site **Bellevue**e **Redmond** seja preferencial para a propriedade do nó do armazenamento de origem e das máquinas virtuais:
+8. Configure o reconhecimento do site do Stretch cluster para que os servidores **Sr-Srv01** e **Sr-SRV02** estejam no local **Redmond**, **Sr-SRV03** e **Sr-SRV04** estejam no site **Bellevue** e **Redmond** seja preferencial para a propriedade do nó do armazenamento de origem e das máquinas virtuais:
 
    ```PowerShell
    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"
@@ -299,7 +300,7 @@ Agora você criará um cluster de failover normal. Após a configuração, a val
 
 
 
-### <a name="configure-a-file-server-for-general-use-cluster"></a><a name="BKMK_FileServer"></a>Configurar um servidor de arquivos para o cluster de uso geral
+### <a name="configure-a-file-server-for-general-use-cluster"></a><a name="BKMK_FileServer"></a> Configurar um servidor de arquivos para o cluster de uso geral
 
 >[!NOTE]
 > Ignore esta seção se você já tiver configurado um cluster de Failover de Hyper-V, conforme descrito em [Configurar um cluster de failover de Hyper-V](#BKMK_HyperV).

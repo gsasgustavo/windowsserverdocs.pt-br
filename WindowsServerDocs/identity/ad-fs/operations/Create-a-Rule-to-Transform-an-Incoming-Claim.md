@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar uma regra para transformar uma declaração de entrada'
 ms.assetid: ef83960f-d2cf-441f-b2b6-d97822ec7149
 title: Criar uma regra para transformar uma declaração de entrada
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 754db25ee9480054c12959740909841ee46311ff
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7dbb6ca59de0d7a9c3e696084409323e743b27f1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956563"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040034"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>Criar uma regra para transformar uma declaração de entrada
 
@@ -26,7 +27,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
-2.  Na árvore de console, em **AD FS**, clique em **relações de confiança**de terceira parte confiável.
+2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
@@ -92,9 +93,9 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ## <a name="to-create-a-rule-to-transform-an-incoming-claim-in-windows-server-2012-r2"></a>Para criar uma regra para transformar uma declaração de entrada no Windows Server 2012 R2
 
-1.  Em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de AD FS**.
+1.  Em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de AD FS**.
 
-2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável**e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
+2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
 ![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)

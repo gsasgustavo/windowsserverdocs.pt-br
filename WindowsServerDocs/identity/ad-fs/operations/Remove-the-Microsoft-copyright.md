@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: remover os direitos autorais da Microsoft'
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Remova os direitos autorais da Microsoft
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ec7d9cb02508fc046ce3e8f0378e63c82eecca8d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a5b377989315462789b9b33faf5267211c93bf8c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949770"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039724"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Remova os direitos autorais da Microsoft
 
@@ -35,7 +36,7 @@ Por padrão, as páginas de AD FS contêm os direitos autorais da Microsoft. Par
    Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
    ```
 
-3. Localize o `Style.css` arquivo localizado na pasta de saída. Usando o exemplo anterior, o caminho seria`C:\CustomWebTheme\Css\Style.css.`
+3. Localize o `Style.css` arquivo localizado na pasta de saída. Usando o exemplo anterior, o caminho seria `C:\CustomWebTheme\Css\Style.css.`
 
 4. Abra o `Style.css` arquivo com um editor, como o bloco de notas.
 

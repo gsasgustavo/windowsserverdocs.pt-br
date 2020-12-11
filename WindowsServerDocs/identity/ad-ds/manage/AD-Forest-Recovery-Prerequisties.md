@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Active Directory pré-requisitos de recuperação da floresta'
 title: Pré-requisitos para planejar Active Directory recuperação de floresta
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
-ms.openlocfilehash: 4e0fba25ba73fd92dd317bfdce0ee298adb485f8
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 17efaa69d80f5be04c2536fe8c7dffc7afb09915
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067768"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041754"
 ---
 # <a name="active-directory-forest-recovery-prerequisites"></a>Pré-requisitos de recuperação de floresta Active Directory
 

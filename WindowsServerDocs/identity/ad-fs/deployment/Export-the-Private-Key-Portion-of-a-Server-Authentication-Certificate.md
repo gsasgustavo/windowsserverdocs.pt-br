@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: exportar a parte da chave privada de um certificado de autenticação de servidor'
 ms.assetid: cd4d4902-dcdf-49dd-8059-82a56bf4b585
 title: Exportar a parte da chave privada de um Certificado de Autenticação de Servidor
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: dcc6332881fa4ff0143604eebb491f8ed48283c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4c845d6444a84f653e775b4b725cc1c6ba176d7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972213"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041114"
 ---
 # <a name="export-the-private-key-portion-of-a-server-authentication-certificate"></a>Exportar a parte da chave privada de um Certificado de Autenticação de Servidor
 
@@ -28,7 +29,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 ### <a name="to-export-the-private-key-portion-of-a-server-authentication-certificate"></a>Para exportar a parte da chave privada de um certificado de autenticação de servidor
 
-1. Na tela **Iniciar** , digite**serviços de informações da Internet \( \) Gerenciador do IIS**e pressione Enter.
+1. Na tela **Iniciar** , digite **serviços de informações da Internet \( \) Gerenciador do IIS** e pressione Enter.
 
 2. Na árvore de console, clique em **ComputerName**.
 

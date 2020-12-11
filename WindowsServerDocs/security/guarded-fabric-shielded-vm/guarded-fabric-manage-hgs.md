@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: Gerenciando o serviço guardião de host'
 title: Gerenciando o serviço guardião de host
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.openlocfilehash: 4c6fe87cd407a41b3686d86a37308bb08ddd6793
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 415e4980a718bac04925d349aa9bca0773f04a8b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766739"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044034"
 ---
 # <a name="managing-the-host-guardian-service"></a>Gerenciando o serviço guardião de host
 
@@ -48,7 +49,7 @@ O HGS é fornecido com duas funções JEA pré-configuradas:
 - **Revisores HgS** que permitem aos usuários o direito de auditar as políticas existentes. Eles não podem fazer nenhuma alteração na configuração do HGS.
 
 Para usar o JEA, primeiro você precisa criar um novo usuário padrão e torná-lo um membro do grupo Administradores do HGS ou dos revisores HGS.
-Se você usou `Install-HgsServer` para configurar uma nova floresta para o HgS, esses grupos serão nomeados "*ServiceName*Administrators" e "*ServiceName*revisores", respectivamente, em que *ServiceName* é o nome de rede do cluster HgS.
+Se você usou `Install-HgsServer` para configurar uma nova floresta para o HgS, esses grupos serão nomeados "*ServiceName* Administrators" e "*ServiceName* revisores", respectivamente, em que *ServiceName* é o nome de rede do cluster HgS.
 Se você tiver ingressado em HGS em um domínio existente, deverá consultar os nomes de grupo especificados em `Initialize-HgsServer` .
 
 **Criar usuários padrão para as funções de administrador e revisor HGS**

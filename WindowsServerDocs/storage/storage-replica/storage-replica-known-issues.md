@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: problemas conhecidos com a réplica de armazenamento'
 title: Problemas conhecidos com a Réplica de Armazenamento
 manager: siroy
 ms.author: nedpyle
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: ed566e5db46cb147925799b055e8bde8ead57b25
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2609d52cfa4ccc84125617567dbe4c44f16b6bfb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961170"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043224"
 ---
 # <a name="known-issues-with-storage-replica"></a>Problemas conhecidos com a Réplica de Armazenamento
 
@@ -53,7 +54,7 @@ O servidor pode precisar ser reiniciado após a limpeza do banco de dados de par
 
 ## <a name="during-initial-sync-see-event-log-4004-warnings"></a>Durante a sincronização inicial, confira os avisos 4004 do log de eventos
 
-No Windows Server 2016, ao configurar a replicação, os servidores de origem e de destino podem mostrar vários avisos **StorageReplica\Admin*do log de eventos 4004 cada um durante a sincronização inicial, com um status de "recursos insuficientes do sistema existem para concluir a API". Você provavelmente também verá erros 5014. Eles indicam que os servidores não têm memória física (RAM) suficiente para executar a sincronização inicial e executar cargas de trabalho. Adicione RAM ou reduza a RAM usada de recursos e aplicativos que não sejam de Réplica de Armazenamento.
+No Windows Server 2016, ao configurar a replicação, os servidores de origem e de destino podem mostrar vários avisos **StorageReplica\Admin* do log de eventos 4004 cada um durante a sincronização inicial, com um status de "recursos insuficientes do sistema existem para concluir a API". Você provavelmente também verá erros 5014. Eles indicam que os servidores não têm memória física (RAM) suficiente para executar a sincronização inicial e executar cargas de trabalho. Adicione RAM ou reduza a RAM usada de recursos e aplicativos que não sejam de Réplica de Armazenamento.
 
 ## <a name="when-using-guest-clusters-with-shared-vhdx-and-a-host-without-a-csv-virtual-machines-stop-responding-after-configuring-replication"></a>Ao usar clusters de convidado com VHDX compartilhado e um host sem um CSV, as máquinas virtuais param de responder depois de configurar a replicação
 
@@ -328,7 +329,7 @@ A process has requested access to an object, but has not been granted those acce
 Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 ```
 
-Observe o `Status: "{Access Denied}"` e a mensagem `A process has requested access to an object, but has not been granted those access rights.` esse é um problema conhecido na réplica de armazenamento e foi corrigido na atualização de qualidade de 12 de setembro de 2017 – KB4038782 (Build do sistema operacional 14393,1715)https://support.microsoft.com/help/4038782/windows-10-update-kb4038782
+Observe o `Status: "{Access Denied}"` e a mensagem `A process has requested access to an object, but has not been granted those access rights.` esse é um problema conhecido na réplica de armazenamento e foi corrigido na atualização de qualidade de 12 de setembro de 2017 – KB4038782 (Build do sistema operacional 14393,1715) https://support.microsoft.com/help/4038782/windows-10-update-kb4038782
 
 ## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>Erro "Falha ao colocar online o recurso 'Disco de Cluster x'". com um cluster estendido
 
@@ -486,7 +487,7 @@ Você precisa usar a chave ou a senha da unidade de dados do servidor primário 
 
 ## <a name="test-failover-doesnt-mount-when-using-asynchronous-replication"></a>O failover de teste não é montado ao usar a replicação assíncrona
 
-Ao executar o Mount-SRDestination para colocar um volume de destino online como parte do recurso de failover de teste, ele falha com o erro:
+Ao executar Mount-SRDestination para colocar um volume de destino online como parte do recurso de failover de teste, ele falha com o erro:
 
 ```
 Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.

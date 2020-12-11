@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: executando a eliminação de duplicação de dados'
 ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Executar a Eliminação de Duplicação de Dados
 ms.topic: article
@@ -6,12 +7,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: f382d229458f27795c09e0377e0f0b23ef7b395b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 55d5d3ee542ed0c16f66d9e882ae5d6dafd1af99
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936227"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040344"
 ---
 # <a name="running-data-deduplication"></a>Executar a Eliminação de Duplicação de Dados
 
@@ -48,9 +49,9 @@ Como a Eliminação de Duplicação de Dados usa um modelo de pós-processamento
 Um indicador de falha do [Trabalho de otimização](understand.md#job-info-optimization) é uma taxa de otimização com tendência para baixo, que pode indicar que os Trabalhos de otimização não estão acompanhando a taxa de alterações ou variação. Você pode verificar a taxa de otimização usando o [`Get-DedupStatus`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) cmdlet do PowerShell.
 
 > [!Important]
-> `Get-DedupStatus`tem dois campos que são relevantes para a taxa de otimização: `OptimizedFilesSavingsRate` e `SavingsRate` . Esses são dois valores importantes para rastrear, mas cada um tem um significado exclusivo.
-> - `OptimizedFilesSavingsRate`aplica-se somente aos arquivos que são "in-Policy" para otimização ( `space used by optimized files after optimization / logical size of optimized files` ).
-> - `SavingsRate`aplica-se a todo o volume ( `space used by optimized files after optimization / total logical size of the optimization` ).
+> `Get-DedupStatus` tem dois campos que são relevantes para a taxa de otimização: `OptimizedFilesSavingsRate` e `SavingsRate` . Esses são dois valores importantes para rastrear, mas cada um tem um significado exclusivo.
+> - `OptimizedFilesSavingsRate` aplica-se somente aos arquivos que são "in-Policy" para otimização ( `space used by optimized files after optimization / logical size of optimized files` ).
+> - `SavingsRate` aplica-se a todo o volume ( `space used by optimized files after optimization / total logical size of the optimization` ).
 
 ## <a name="disabling-data-deduplication"></a><a id="disabling-dedup"></a>Desabilitar a Eliminação de Duplicação de Dados
 Para desligar a Eliminação de Duplicação de Dados, execute o [Trabalho de cancelamento da otimização](understand.md#job-info-unoptimization). Para desfazer a otimização de volume, execute o seguinte comando:

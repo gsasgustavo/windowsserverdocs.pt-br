@@ -1,17 +1,18 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configurar a proteção de bloqueio inteligente Extranet do AD FS
+description: 'Saiba mais sobre: AD FS bloqueio de extranet e bloqueio inteligente de extranet'
 author: billmath
 ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.openlocfilehash: a5ce41597c7cb25202be61f47c640d3f749568b4
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 182d529ce2cd5bdf8ce0dc833cb43a283f874218
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864535"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040144"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>Bloqueio de Extranet do AD FS e Extranet Smart Lockout
 

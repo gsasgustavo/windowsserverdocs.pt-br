@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: executar recuperação inicial'
 title: Recuperação de floresta do AD-executar recuperação inicial
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 8b0498b30966c22ec8dca267988e109d976f6b69
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: d0a260b248b18286861e92cc6f3a2f1c914cc36c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067738"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040014"
 ---
 # <a name="perform-initial-recovery"></a>Executar recuperação inicial
 
@@ -50,7 +51,7 @@ Em seguida, siga estas etapas. Os procedimentos para executar determinadas etapa
 
       **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl executar sincronizações iniciais**
 
-      Crie a entrada com o tipo de dados **REG_DWORD** e um valor de **0** . Depois que a floresta é recuperada completamente, você pode redefinir o valor dessa entrada como **1** , que requer um controlador de domínio que reinicie e mantenha as funções de mestre de operações para ter êxito AD DS a replicação de entrada e saída com seus parceiros de réplica conhecidos antes que ele se anuncie como controlador de domínio e comece a fornecer serviços aos clientes. Para obter mais informações sobre os requisitos de sincronização inicial, consulte o artigo [305476](https://support.microsoft.com/kb/305476)do KB.
+      Crie a entrada com o tipo de dados **REG_DWORD** e um valor de **0**. Depois que a floresta é recuperada completamente, você pode redefinir o valor dessa entrada como **1**, que requer um controlador de domínio que reinicie e mantenha as funções de mestre de operações para ter êxito AD DS a replicação de entrada e saída com seus parceiros de réplica conhecidos antes que ele se anuncie como controlador de domínio e comece a fornecer serviços aos clientes. Para obter mais informações sobre os requisitos de sincronização inicial, consulte o artigo [305476](https://support.microsoft.com/kb/305476)do KB.
 
       Continue para as próximas etapas somente depois de restaurar e verificar os dados e antes de ingressar este computador na rede de produção.
 

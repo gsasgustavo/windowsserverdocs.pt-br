@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: recuperação de floresta do AD-invalidando o pool RID atual'
 title: Recuperação de floresta do AD-invalidando o pool RID
 ms.author: daveba
 author: iainfoulds
@@ -6,18 +7,18 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
-ms.openlocfilehash: 0cadf854cbcdf730fbb7e84febea6ddaec24ff69
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 7d517600a00fe5806b4b1539f08602beb1699269
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071278"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042914"
 ---
 # <a name="ad-forest-recovery---invalidating-the-current-rid-pool"></a>Recuperação de floresta do AD-invalidando o pool RID atual
 
 >Aplica-se a: Windows Server 2016, Windows Server 2012 e 2012 R2, Windows Server 2008 e 2008 R2
 
-Use o procedimento a seguir para o Windows PowerShell para invalidar o pool RID atual em um controlador de domínio. O Windows PowerShell é habilitado por padrão no Windows Server 2012 e no Windows Server 2008 R2, mas não no Windows Server 2008, onde ele deve ser instalado usando **Adicionar recursos** . Ele pode ser [baixado](https://www.microsoft.com/download/details.aspx?id=20020) para ser executado no Windows Server 2003.
+Use o procedimento a seguir para o Windows PowerShell para invalidar o pool RID atual em um controlador de domínio. O Windows PowerShell é habilitado por padrão no Windows Server 2012 e no Windows Server 2008 R2, mas não no Windows Server 2008, onde ele deve ser instalado usando **Adicionar recursos**. Ele pode ser [baixado](https://www.microsoft.com/download/details.aspx?id=20020) para ser executado no Windows Server 2003.
 
 Para verificar se o comando foi concluído com êxito, verifique a ID do evento 16654 (a origem é Directory-Services-SAM) no log do sistema em Visualizador de Eventos no Windows Server 2012. As versões anteriores do Windows não registram esse evento.
 

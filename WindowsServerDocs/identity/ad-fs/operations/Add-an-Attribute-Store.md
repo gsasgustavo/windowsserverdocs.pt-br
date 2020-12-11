@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: adicionar um repositório de atributos'
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Adicionar um repositório de atributos
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e092cab5a1911c2e710e6f3a9677bf9df987609b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3672d80b89738b10bcd0e0ef186b33592d6b53e2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942688"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044274"
 ---
 # <a name="add-an-attribute-store"></a>Adicionar um repositório de atributos
 
@@ -34,7 +35,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
    -   Em **nome de exibição**, digite o nome que você deseja usar para identificar o repositório de atributos.
 
-   -   Em **tipo de repositório de atributo**, selecione um tipo de repositório de atributo com suporte, **Active Directory**, **LDAP**ou **SQL**.
+   -   Em **tipo de repositório de atributo**, selecione um tipo de repositório de atributo com suporte, **Active Directory**, **LDAP** ou **SQL**.
 
    -   Em **cadeia de conexão**, se você tiver selecionado um armazenamento LDAP de protocolo de acesso de diretório Lightweight \( \) ou um linguagem SQL \( SQL \) Store, insira a cadeia de caracteres usada para estabelecer uma conexão com o repositório de atributos. Para Active Directory repositórios de atributo, nenhuma cadeia de conexão é necessária; Portanto, esse campo é desabilitado.
 

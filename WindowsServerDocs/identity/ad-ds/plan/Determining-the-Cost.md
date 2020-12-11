@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: determinando o custo'
 ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
 title: Determinando o custo
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9da1c4f247a1acfe982a2d5444fc3385806ce039
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: fe950d2ebe5d5ae4508921367d9e0b9044f6ae88
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069198"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039314"
 ---
 # <a name="determining-the-cost"></a>Determinando o custo
 

@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: criar um servidor de Federação Stand-Alone'
 ms.assetid: ab97948a-c434-48f2-8313-c1a7a518e5f7
 title: Criar um servidor de federação autônomo
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 498b2f1c87181ee2675bf7a312c73ba90d0b0421
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 55fb54ec669730795d6db6d44b57cbad0dc46e8f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962960"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044144"
 ---
 # <a name="create-a-stand-alone-federation-server"></a>Criar um servidor de federação autônomo
 
@@ -32,7 +33,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 
 2.  Na página **Bem-vindo**, verifique que o **Cria um novo Serviço de Federação** esteja selecionado, e então clique em **Próximo**.
 
-3.  Na página **selecionar \- implantação autônoma ou de farm** , clique em **servidor de \- Federação autônomo**e, em seguida, clique em **Avançar**.
+3.  Na página **selecionar \- implantação autônoma ou de farm** , clique em **servidor de \- Federação autônomo** e, em seguida, clique em **Avançar**.
 
     > [!IMPORTANT]
     > Quando você seleciona a \- opção de servidor de federação autônoma no assistente de configuração do servidor de federação AD FS, a conta de serviço associada a esse serviço de Federação será automaticamente atribuída à conta de serviço de rede. O uso do serviço de rede como a conta de serviço só é recomendado em situações em que você esteja avaliando AD FS em um ambiente de laboratório de teste. Se você pretende usar a opção de \- servidor de Federação autônomo para implantar um servidor de Federação em um ambiente de produção, é importante que você altere essa conta de serviço para uma conta de serviço mais apropriada que possa ser dedicada a atender solicitações para essa nova serviço de Federação. Alterar a conta de serviço para uma conta diferente do serviço de rede reduzirá possíveis vetores de ataque que, de outra forma, tornaria o servidor de Federação vulnerável a ataques mal-intencionados.
@@ -44,14 +45,14 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
     > [!NOTE]
     > O assistente não permitirá que você substitua o certificado se um certificado SSL estiver configurado para IIS. Isso assegura que qualquer configuração anterior do IIS pretendida para certificados SSL seja preservada. Para contornar essa restrição, você pode remover o certificado ou reconfigurá-lo manualmente com o console de gerenciamento do IIS.
 
-5.  Se o banco de dados do AD FS que você selecionou já existir, a página **Banco de Dados de Configuração do AD FS Existente Detectada** aparece. Se isso ocorrer, clique em **Excluir banco de dados**, e depois clique em **Próximo**.
+5.  Se o banco de dados de AD FS que você selecionou já existir, a página **banco de dados de configuração AD FS existente detectado** será exibida. Se isso ocorrer, clique em **Excluir banco de dados**, e depois clique em **Próximo**.
 
     > [!CAUTION]
     > Selecione esta opção apenas quando você tiver certeza que os dados neste banco de dados do AD FS não forem importantes ou que não é usado em um farm de servidor de federação.
 
 6.  Na página **Pronto para Aplicar as Configurações**, verificar os detalhes. Se as configurações parecem estar certas, clique em **Próximo** para começar configurar o AD FS com estas configurações.
 
-7.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar** para sair do assistente.
+7.  Na página **Resultados de Configuração**, analise os resultados. Quando todas as etapas de configuração forem concluídas, clique em **fechar**  para sair do assistente.
 
 ## <a name="additional-references"></a>Referências adicionais
 [Lista de verificação: Como configurar um servidor de federação](Checklist--Setting-Up-a-Federation-Server.md)

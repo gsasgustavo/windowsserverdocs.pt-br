@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: políticas de controle de acesso no Windows Server 2016 AD FS'
 ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Políticas de controle de acesso no AD FS Windows Server 2016
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7ed0360c9fcbdabab7ae731b8816049b58765f2b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d256266afb99f45ededb3a14687c6164d2de6f8d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947356"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044464"
 ---
 # <a name="access-control-policies-in-windows-server-2016-ad-fs"></a>Políticas de controle de acesso no AD FS para Windows Server 2016
 

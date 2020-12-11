@@ -1,16 +1,17 @@
 ---
+description: 'Saiba mais sobre: como configurar contas protegidas'
 title: Como configurar contas protegidas
 ms.topic: article
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: f50e5494210c349a1438570140d6733dce17dcb9
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c9f5e16d6dc6ccdc8233ad6daac1d917d47fdec8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639037"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039574"
 ---
 # <a name="how-to-configure-protected-accounts"></a>Como configurar contas protegidas
 
@@ -227,7 +228,7 @@ O domínio da conta do usuário deve estar no nível funcional do domínio do Wi
 
 4.  Para configurar um tempo de vida de TGT para contas de usuário, marque a caixa de seleção **Especificar um tempo de vida do Tíquete de Concessão de Tíquete para contas de usuário** e digite o tempo em minutos.
 
-    ![Especificar um tempo de vida de tíquete de concessão de tíquete para contas de usuário](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)
+    ![Especificar um tempo de vida de Ticket-Granting de tíquete para contas de usuário](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)
 
     Por exemplo, se você deseja obter um tempo de vida de TGT máximo de 10 horas, digite **600** como mostrado. Se o tempo de vida de TGT não for configurado, se a conta for membro do grupo **Protected Users**, o tempo de vida de TGT e sua renovação serão de quatro horas. Senão, o tempo de vida de TGT e sua renovação baseiam-se na política do domínio como indicado na janela Editor de Gerenciamento de Política de Grupo para o domínio com configurações padrão.
 
@@ -330,7 +331,7 @@ A seção de contas na Política de autenticação mostra que as contas que poss
 ![Captura de tela da seção contas na política de autenticação mostrando as contas que aplicaram a política diretamente](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_AccountsAssigned.gif)
 
 #### <a name="use-the-authentication-policy-failures---domain-controller-administrative-log"></a>Usar as falhas da política de autenticação-log administrativo do controlador de domínio
-Uma nova **falha de política de autenticação – log administrativo do controlador de domínio** em **logs de aplicativos e serviços**  >  a autenticação**do Microsoft**  >  **Windows**  >  **Authentication** foi criada para facilitar a descoberta de falhas devido a políticas de autenticação. Este log fica desabilitado por padrão. Para habilitá-lo, clique com o botão direito no nome do log e clique em **Habilitar log**. Os novos eventos são muito semelhantes com relação ao conteúdo aos eventos de TGT de Kerberos e auditoria de tíquete de serviço. Para obter mais informações sobre esses eventos, consulte [políticas de autenticação e silos de política de autenticação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11)).
+Uma nova **falha de política de autenticação – log administrativo do controlador de domínio** em **logs de aplicativos e serviços**  >  a autenticação **do Microsoft**  >  **Windows**  >   foi criada para facilitar a descoberta de falhas devido a políticas de autenticação. Este log fica desabilitado por padrão. Para habilitá-lo, clique com o botão direito no nome do log e clique em **Habilitar log**. Os novos eventos são muito semelhantes com relação ao conteúdo aos eventos de TGT de Kerberos e auditoria de tíquete de serviço. Para obter mais informações sobre esses eventos, consulte [políticas de autenticação e silos de política de autenticação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11)).
 
 ### <a name="manage-authentication-policies-by-using-windows-powershell"></a>Gerenciar as políticas de autenticação usando o Windows PowerShell
 Este comando cria uma política de autenticação chamada **TestAuthenticationPolicy**. O parâmetro **UserAllowedToAuthenticateFrom** especifica os dispositivos aos quais o usuário pode autenticar-se com uma cadeia SDDL no arquivo chamado someFile.txt.
@@ -429,7 +430,7 @@ Este comando cria um objeto do silo de política de autenticação e o impõe.
 PS C:\>New-ADAuthenticationPolicySilo -Name newSilo -Enforce
 ```
 
-Este comando obtém todos os silos de política de autenticação correspondentes ao filtro especificado pelo parâmetro**Filter**. A saída é então repassada ao cmdlet **Format-Table** para exibir o nome da política e o valor de **Enforce** em cada política.
+Este comando obtém todos os silos de política de autenticação correspondentes ao filtro especificado pelo parâmetro **Filter**. A saída é então repassada ao cmdlet **Format-Table** para exibir o nome da política e o valor de **Enforce** em cada política.
 
 ```
 PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce -AutoSize
