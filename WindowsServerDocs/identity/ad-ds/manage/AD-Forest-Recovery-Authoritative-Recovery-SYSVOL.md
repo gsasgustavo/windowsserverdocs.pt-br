@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: recuperação de floresta do AD-executando uma sincronização autoritativa de SYSVOL replicado pelo DFSR'
 title: Recuperação de floresta do AD-sincronização autoritativa do SYSVOL
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 38a1c543-c76d-4b8e-a06b-53742aaa172f
-ms.openlocfilehash: 63b894e8abe0ac50f59f5ebf38566d97050a11c4
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: bd583de3f4da6ac9bbe1fbcc0c1a4927e77b9df2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068018"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045754"
 ---
 # <a name="ad-forest-recovery---performing-an-authoritative-synchronization-of-dfsr-replicated-sysvol"></a>Recuperação de floresta do AD-executando uma sincronização autoritativa de SYSVOL replicado pelo DFSR
 
@@ -24,19 +25,19 @@ Use as etapas a seguir para executar uma sincronização autoritativa do SYSVOL 
 ## <a name="to-perform-an-authoritative-synchronization-of-dfsr-replicated-sysvol"></a>Para executar uma sincronização autoritativa de SYSVOL replicado pelo DFSR
 
 1. Abra Usuários e Computadores do Active Directory.
-2. Clique em **Exibir** e selecione **usuários, contatos, grupos e computadores como contêineres** e **recursos avançados** .
+2. Clique em **Exibir** e selecione **usuários, contatos, grupos e computadores como contêineres** e **recursos avançados**.
 
    ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol1.png)
 
-3. No modo de exibição de árvore, clique em **controladores de domínio** , o nome do DC que você restaurou, **DFSR-LocalSettings** e, em seguida, **volume do sistema de domínio** .
+3. No modo de exibição de árvore, clique em **controladores de domínio**, o nome do DC que você restaurou, **DFSR-LocalSettings** e, em seguida, **volume do sistema de domínio**.
 
    ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol2.png)
 
-4. No painel de detalhes, clique com o botão direito do mouse em **assinatura SYSVOL** , clique em **Propriedades** e clique em **Editor de atributos** .
+4. No painel de detalhes, clique com o botão direito do mouse em **assinatura SYSVOL**, clique em **Propriedades** e clique em **Editor de atributos**.
 
    ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol3.png)
 
-5. Clique em **msDFSR-opções** , clique em **Editar** , digite **1** e clique em **OK**
+5. Clique em **msDFSR-opções**, clique em **Editar**, digite **1** e clique em **OK**
 
    ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol4.png)
 
