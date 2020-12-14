@@ -7,12 +7,12 @@ author: jasongerend
 ms.author: jgerend
 manager: lizapo
 ms.date: 06/07/2020
-ms.openlocfilehash: d08e969d0296c9ca1efc34bfd0ac6ad7e42519cf
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.openlocfilehash: 23d2742d7afeba630c11545cefa3696da05fbcc6
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554539"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390254"
 ---
 # <a name="robocopy"></a>robocopy
 
@@ -24,7 +24,7 @@ Copia dados de arquivo de um local para outro.
 robocopy <source> <destination> [<file>[ ...]] [<options>]
 ```
 
-Por exemplo, para copiar um arquivo chamado *yearly-Report. mov* de *c:\Reports* para um compartilhamento de arquivos * \\ marketing\videos* enquanto habilita o multithreading para um melhor desempenho (com o parâmetro **/MT** ) e a capacidade de reiniciar a transferência caso ela seja interrompida (com o parâmetro **/z** ), digite:
+Por exemplo, para copiar um arquivo chamado *yearly-Report. mov* de *c:\Reports* para um compartilhamento de arquivos *\\ marketing\videos* enquanto habilita o multithreading para um melhor desempenho (com o parâmetro **/MT** ) e a capacidade de reiniciar a transferência caso ela seja interrompida (com o parâmetro **/z** ), digite:
 
 ```dos
 robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
@@ -36,8 +36,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 |--|--|
 | `<source>` | Especifica o caminho para o diretório de origem. |
 | `<destination>` | Especifica o caminho para o diretório de destino. |
-| `<file>` | Especifica o arquivo ou os arquivos a serem copiados. Há suporte para caracteres curinga (**&#42;** ou **?**). Se você não especificar esse parâmetro, `*.` será usado como o valor padrão. |
-| `<options>` | Especifica as opções a serem usadas com o comando **Robocopy** , incluindo opções de **cópia**, **arquivo**, **repetição**, **log**e **trabalho** . |
+| `<file>` | Especifica o arquivo ou os arquivos a serem copiados. Há suporte para caracteres curinga (**&#42;** ou **?**). Se você não especificar esse parâmetro, `*.*` será usado como o valor padrão. |
+| `<options>` | Especifica as opções a serem usadas com o comando **Robocopy** , incluindo opções de **cópia**, **arquivo**, **repetição**, **log** e **trabalho** . |
 
 #### <a name="copy-options"></a>Opções de cópia
 

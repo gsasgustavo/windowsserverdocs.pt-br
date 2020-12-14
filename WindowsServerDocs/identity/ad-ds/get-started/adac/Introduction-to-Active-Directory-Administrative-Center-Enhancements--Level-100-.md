@@ -7,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 884710e1cf327940937d627fbbbc124bb99baca9
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 901078ec17ce744fb4eb4a2bb3a29f1d79718060
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390324"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Introduction to Active Directory Administrative Center Enhancements (Level 100)
 
@@ -151,7 +151,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 #### <a name="to-create-an-organizational-unit"></a>Para criar uma unidade organizacional
 
 1. Clique com o botão direito do mouse no ícone do Windows PowerShell, clique em _ *Executar como administrador** e digite **dsac.exe** para abrir ADAC.
-2. Clique em **gerenciar**, clique em **adicionar nós de navegação** e selecione o domínio de destino apropriado na caixa de diálogo **adicionar nós de navegação** e clique em * * OK
+2. Clique em **Gerenciar**, em **Adicionar Nós de Navegação**, selecione o domínio de destino apropriado na caixa de diálogo **Adicionar Nós de Navegação** e clique em **OK**.
 3. No painel **Tarefas**, clique em **Novo** e depois em **Unidade Organizacional**.
 4. Insira as informações a seguir em **Unidade Organizacional** e clique em **OK**:
 

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 03/20/2020
 ms.topic: article
-ms.openlocfilehash: c7779522e874fb484f3801780495f96ddcead990
-ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
+ms.openlocfilehash: 61369f2dde82264190bcbd4d81eaae317e159a0d
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97091270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390264"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>Configurar navegadores para usar a autenticação integrada do Windows (WIA) com AD FS
 
@@ -66,8 +66,8 @@ O comando acima garantirá que AD FS abrange apenas os seguintes casos de uso pa
 |Windows NT 6,3; Trident/7.0</br></br>Windows NT 6,3; Win64 x86 Trident/7.0</br></br>Windows NT 6,3; WOW64 Trident/7.0| Windows 8.1 sistema operacional de desktop, diferentes plataformas|
 |Windows NT 6,2; Trident/7.0</br></br>Windows NT 6,2; Win64 x86 Trident/7.0</br></br>Windows NT 6,2; WOW64 Trident/7.0|Sistema operacional Windows 8 desktop, diferentes plataformas|
 |Windows NT 6,1; Trident/7.0</br></br>Windows NT 6,1; Win64 x86 Trident/7.0</br></br>Windows NT 6,1; WOW64 Trident/7.0|Sistema operacional Windows 7 Desktop, diferentes plataformas|
-|Edg/79.0.309.43 | Microsoft Edge (Chromium) para Windows Server 2012 R2 ou anterior |
-|Edg/*| Microsoft Edge (Chromium) para Windows Server 2016 ou posterior|
+|Edg/e borda/| Microsoft Edge (Chromium) para Windows Server 2012 R2 ou anterior |
+|= ~ Windows\s *NT.* EDG. *| Microsoft Edge (Chromium) para Windows Server 2016 ou posterior|
 |MSIPC| Microsoft Information Protection and Control Client|
 |Cliente do Windows Rights Management|Cliente do Windows Rights Management|
 
