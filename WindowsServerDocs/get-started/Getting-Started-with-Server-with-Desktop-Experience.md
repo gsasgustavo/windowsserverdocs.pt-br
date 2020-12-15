@@ -8,18 +8,18 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 43a483df0f9ad8c6961f9309249a5c2eef88c085
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 74a98c02794c2bba95a9de8684e4e7d308d99da2
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990540"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788055"
 ---
 # <a name="install-server-with-desktop-experience"></a>Instalar o Servidor com Experiência Desktop
 > Aplica-se a: Windows Server 2016
 
 
-Ao instalar o Windows Server 2016 usando o Assistente de Instalação, é possível escolher entre o **Windows Server 2016** e o **Windows Server (Servidor com Experiência Desktop)** . A opção Servidor com Experiência Desktop é o equivalente do Windows Server 2016 à opção Instalação completa disponível no Windows Server 2012 R2 com o recurso Experiência Desktop instalado. Se você não fizer uma escolha no Assistente de instalação, o **Windows Server 2016**será instalado. Essa é a opção de instalação do **Server Core**.
+Ao instalar o Windows Server 2016 usando o Assistente de Instalação, é possível escolher entre o **Windows Server 2016** e o **Windows Server (Servidor com Experiência Desktop)** . A opção Servidor com Experiência Desktop é o equivalente do Windows Server 2016 à opção Instalação completa disponível no Windows Server 2012 R2 com o recurso Experiência Desktop instalado. Se você não fizer uma escolha no Assistente de instalação, o **Windows Server 2016** será instalado. Essa é a opção de instalação do **Server Core**.
 
 A opção Servidor com Experiência Desktop instala a interface de usuário padrão e todas as ferramentas, incluindo recursos de experiência do cliente que exigiam uma instalação separada no Windows Server 2012 R2. As funções e recursos do servidor são instalados com o Gerenciador de Servidores ou por outros métodos. Comparando com a opção Server Core, requer maior espaço em disco e tem mais requisitos de manutenção, portanto recomendamos que você escolha a instalação Server Core, a menos que tenha uma necessidade específica dos elementos adicionais da interface do usuário e das ferramentas gráficas de gerenciamento que estão incluídas na opção Servidor com Experiência Desktop. Se você achar que pode trabalhar sem os elementos adicionais, consulte [Install Server Core](Getting-Started-with-Server-Core.md) (Instalar o Server Core). Para uma opção ainda mais leve, consulte [Install Nano Server](Getting-Started-with-Nano-Server.md) (Instalar o Nano Server).
 
@@ -83,7 +83,7 @@ Para muitas opções adicionais para mover para o Windows Server 2016, como a co
 ### <a name="migration"></a>Migração
 **Migração** significa mudar do seu sistema operacional existente para o Windows Server 2016 executando uma instalação limpa em um conjunto diferente de hardware ou máquina virtual e, em seguida, transferir as cargas de trabalho do servidor mais antigo para o novo servidor. A migração, que pode variar consideravelmente dependendo das funções de servidor instaladas, é discutida em detalhes em [Instalação, atualização e migração do Windows Server](./installation-and-upgrade.md).
 
-A capacidade de migrar varia entre as diferentes funções de servidor. A grade a seguir explica suas opções de migração e atualização de funções de servidor, especificamente ao mover para o Windows Server 2016. Para obter guias de migração sobre funções específicas, visite [Migrar funções e recursos no Windows Server](./migrate-roles-and-features.md). Para saber mais sobre instalação e atualização, confira [Instalação, atualização e migração do Windows Server](./installation-and-upgrade.md).
+A capacidade de migrar varia entre as diferentes funções de servidor. Veja na grade a seguir uma explicação sobre suas opções de migração e atualização de função de servidor, especificamente ao mover para o Windows Server 2016. Para obter guias de migração sobre funções específicas, visite [Migrar funções e recursos no Windows Server](./migrate-roles-and-features.md). Para saber mais sobre instalação e atualização, confira [Instalação, atualização e migração do Windows Server](./installation-and-upgrade.md).
 
 |Função de servidor|Pode ser atualizado do Windows Server 2012 R2?|Pode ser atualizado do Windows Server 2012?|Migração compatível?|A migração pode ser concluída sem tempo de inatividade?|
 |-------------------|----------|--------------|--------------|----------|

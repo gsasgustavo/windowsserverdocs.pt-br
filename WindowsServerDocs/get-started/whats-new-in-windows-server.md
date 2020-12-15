@@ -6,12 +6,12 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 1876c2dbfcff9c8ea653885cd12232c3c97891f3
-ms.sourcegitcommit: 5a67672c3ba9e666c29a41c7356006359c639912
+ms.openlocfilehash: 51d14aab4b972cc608e9b3afe3e6313e6efffbd8
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92440145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390244"
 ---
 # <a name="whats-new-in-windows-server"></a>Novidades no Windows Server
 
@@ -27,10 +27,10 @@ Versões do LTSC (Canal de Manutenção em Longo Prazo):
 Versões do Canal Semestral:
 
 - [Novidades no Windows Server, versões 2004 e 20H2](whats-new-in-windows-server-2004.md)
-- [Novidades no Windows Server, versões 1903 e 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md)
-- [Novidades no Windows Server, versão 1809](whats-new-in-windows-server-1809.md)
-- [Novidades no Windows Server, versão 1803](whats-new-in-windows-server-1803.md) (sem suporte a partir de 12 de novembro de 2019)
-- [Novidades no Windows Server, versão 1709](whats-new-in-windows-server-1709.md) (sem suporte a partir de 9 de abril de 2019)
+- [Novidades no Windows Server, versões 1903 e 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md) (chegou ao fim da manutenção em 8 de dezembro de 2020)
+- [Novidades no Windows Server, versão 1809](whats-new-in-windows-server-1809.md) (chegou ao fim da manutenção em 10 de novembro de 2020)
+- [Novidades no Windows Server, versão 1803](whats-new-in-windows-server-1803.md) (chegou ao fim da manutenção em 12 de novembro de 2019)
+- [Novidades no Windows Server, versão 1709](whats-new-in-windows-server-1709.md) (chegou ao fim da manutenção em 9 de abril de 2019)
 
 As versões do Canal semestral do Windows Server fornecem novos recursos de sistema operacional em um ritmo mais rápido. Uma nova versão é lançada a cada seis meses e tem suporte por 18 meses. Verifique as [Informações sobre versão do Windows Server](windows-server-release-info.md) e a [Página de suporte do ciclo de vida](https://support.microsoft.com/lifecycle) para datas de suporte e use sempre a versão mais recente, se possível.
 

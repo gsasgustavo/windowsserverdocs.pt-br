@@ -1,17 +1,18 @@
 ---
 title: Como implantar Perfis de Usuários Móveis
+description: 'Saiba mais sobre: Como implantar Perfis de Usuários Móveis'
 TOCTitle: Deploying Roaming User Profiles
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.date: 06/07/2019
 ms.author: jgerend
-ms.openlocfilehash: 8019986ed29e9ffedaca8d714f63d5de06ae3c80
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1ed7e52b5408e654d007e1f5c02cb9e61ad5c8bb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942247"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049183"
 ---
 # <a name="deploying-roaming-user-profiles"></a>Como implantar Perfis de Usuários Móveis
 
@@ -116,7 +117,7 @@ Se você ainda não tiver um compartilhamento de arquivo separado para os perfis
 
 Veja como criar um compartilhamento de arquivo no Windows Server:
 
-1. No painel de navegação Gerenciador do Servidor, selecione **Serviços de Arquivos e Armazenamento**e, em seguida, selecione **Compartilhamentos** para exibir a página Compartilhamentos.
+1. No painel de navegação Gerenciador do Servidor, selecione **Serviços de Arquivos e Armazenamento** e, em seguida, selecione **Compartilhamentos** para exibir a página Compartilhamentos.
 2. No bloco Compartilhamentos, selecione **Tarefas** e, em seguida, selecione **Novo Compartilhamento**. O Assistente Novo Compartilhamento é exibido.
 3. Na página **Selecionar Perfil**, selecione **Compartilhamento SMB – Rápido**. Se você tiver o Gerenciador de Recursos de Servidor de Arquivos instalado e estiver usando propriedades de gerenciamento de pasta, em vez disso, selecione **Compartilhamento SMB – Avançado**.
 4. Na página **Compartilhar Local** , selecione o servidor e o volume nos quais deseja criar o compartilhamento.
@@ -205,7 +206,7 @@ Veja como configurar Perfis de Usuários Móveis em computadores:
 1. Abra o Gerenciador do Servidor em um computador com o Gerenciamento de Política de Grupo instalado.
 2. No menu **Ferramentas**, selecione **Gerenciamento de Política de Grupo**. O Gerenciamento de Política de Grupo será exibido.
 3. No Gerenciamento de Política de Grupo, clique com o botão direito do mouse no GPO criado por você na Etapa 3 (por exemplo, **Configurações de Perfis de Usuários Móveis**) e selecione **Editar**.
-4. Na janela Editor de Gerenciamento de Política de Grupo, navegue até **Configuração do Computador**, em seguida, **Políticas**, **Modelos Administrativos**, **Sistema**e **Perfis de Usuário**.
+4. Na janela Editor de Gerenciamento de Política de Grupo, navegue até **Configuração do Computador**, em seguida, **Políticas**, **Modelos Administrativos**, **Sistema** e **Perfis de Usuário**.
 5. Clique com o botão direito do mouse em **Definir caminho de perfil móvel para todos os usuários registrados em log neste computador** e selecione **Editar**.
     > [!TIP]
     > Uma pasta base do usuário, se configurada, é a pasta padrão usada por alguns programas como o Windows PowerShell. É possível configurar um local alternativo ou local de rede por usuário usando a seção **Pasta base** das propriedades de conta do usuário em AD DS. Para configurar a localização da pasta base para todos os usuários em um computador que usa o Windows 8.1, o Windows 8, o Windows Server 2019, o Windows Server 2016, o Windows Server 2012 R2 ou o Windows Server 2012 em um ambiente de área de trabalho virtual, habilite a configuração de política **Definir pasta base de usuário** e especifique o compartilhamento de arquivo e a letra da unidade para mapear (ou especifique uma pasta local). Não use elipses ou variáveis de ambiente. O alias do usuário é anexado ao final do caminho especificado durante o registro do usuário.
@@ -240,7 +241,7 @@ Para especificar um layout de menu Iniciar, faça o seguinte:
 
 5. (Opcional) Habilite otimizações de primeiro logon para tornar a entrada mais rápida para os usuários. Para fazer isso, confira [Aplicar políticas para aprimorar o tempo de entrada](/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Opcional) Diminua ainda mais os tempos de entrada removendo aplicativos desnecessários da imagem base do Windows 10 que você usa para implantar computadores cliente. O Windows Server 2019 e o Windows Server 2016 não têm nenhum aplicativo previamente provisionado, portanto, você pode ignorar essa etapa em imagens do servidor.
-    - Para remover aplicativos, use o cmdlet [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) no Windows PowerShell para desinstalar os aplicativos a seguir. Se os computadores já estiverem implantados, você poderá gerar scripts para a remoção desses aplicativos usando o [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=win10-ps).
+    - Para remover aplicativos, use o cmdlet [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) no Windows PowerShell para desinstalar os aplicativos a seguir. Se os computadores já estiverem implantados, você poderá gerar scripts para a remoção desses aplicativos usando o [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
 
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe

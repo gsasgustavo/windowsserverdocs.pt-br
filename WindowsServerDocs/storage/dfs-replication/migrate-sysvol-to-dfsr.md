@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: Migrar a replicação do SYSVOL para a Replicação do DFS'
 title: Migrar a replicação do SYSVOL para a Replicação do DFS
 ms.date: 07/02/2012
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: e3917f0170e70ea6ba8ca09dc25415650f8a0dcc
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: c0ab678542260b9b7d1975a633b2244aac7fe3d7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766620"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048754"
 ---
 # <a name="migrate-sysvol-replication-to-dfs-replication"></a>Migrar a replicação do SYSVOL para a Replicação do DFS
 

@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: Replicação do DFS: Perguntas frequentes (FAQ)'
 title: Replicação do DFS – Perguntas Frequentes
 ms.date: 06/18/2014
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 346fa77e1a22626094baa33aaf70ead23f2f0db0
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 976539e31fa335a09d834e889ecd6c729b533236
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766639"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048774"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>Replicação do DFS: Perguntas frequentes (FAQ)
 
@@ -68,7 +69,7 @@ A Replicação do DFS interopera com NFS em um servidor que executa um sistema o
 
 Sim. A Replicação do DFS é compatível com volumes VSS (Serviço de Cópias de Sombra de Volume) e os instantâneos anteriores podem ser restaurados com êxito com o Cliente de Versões Anteriores.
 
-### <a name="can-i-use-windowsbackup-ntbackupexe-to-remotely-back-up-a-replicated-folder"></a>Posso usar o backup do Windows (Ntbackup.exe) para fazer backup de uma pasta replicada remotamente?
+### <a name="can-i-use-windows-backup-ntbackupexe-to-remotely-back-up-a-replicated-folder"></a>Posso usar o backup do Windows (Ntbackup.exe) para fazer backup de uma pasta replicada remotamente?
 
 Não, não há suporte para usar o backup do Windows (Ntbackup.exe) em um computador que executa o Windows Server 2003 ou anterior para fazer backup do conteúdo de uma pasta replicada em um computador que executa o Windows Server 2012, o Windows Server 2008 R2 ou o Windows Server 2008.
 
@@ -440,13 +441,13 @@ Para usar a RDC entre arquivos, um membro da conexão de replicação deve estar
 <td><p>Sim</p></td>
 </tr>
 <tr class="even">
-<td><p>Windows Server 2008 R2</p></td>
+<td><p>Windows Server 2008 R2</p></td>
 <td><p>Não</p></td>
 <td><p>Sim</p></td>
 <td><p>Sim</p></td>
 </tr>
 <tr class="odd">
-<td><p>Windows Server 2008</p></td>
+<td><p>Windows Server 2008</p></td>
 <td><p>Não</p></td>
 <td><p>Sim</p></td>
 <td><p>Não</p></td>
@@ -692,7 +693,7 @@ Os arquivos são preparados no membro de envio quando o membro de recebimento so
 </colgroup>
 <thead>
 <tr class="header">
-<th> </th>
+<th> </th>
 <th>RDC habilitada</th>
 <th>RDC desabilitada</th>
 </tr>

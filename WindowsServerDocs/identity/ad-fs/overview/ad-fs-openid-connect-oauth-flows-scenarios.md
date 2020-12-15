@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Fluxos e cenários de aplicativo do AD FS OpenID Connect/OAuth'
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
 title: Fluxos e cenários de aplicativo do AD FS OpenID Connect/OAuth
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 05ee7a1e5e36ee7bc2ffcb41fbdabf4b5b6c2c4e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2f2feb9485eb63ea1727fbec8b8300d5ef4f5c51
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966823"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042084"
 ---
 # <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>Fluxos e cenários de aplicativo do AD FS OpenID Connect/OAuth
 Aplica-se ao AD FS 2016 e posterior
@@ -223,7 +224,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZn
  ```
 
 ### <a name="refresh-token-grant-flow"></a>Atualizar fluxo de concessão do token
- 
+ 
 Access_tokens têm vida curta e você deve atualizá-los depois que eles expirarem para continuar acessando os recursos. Você pode fazer isso enviando outra solicitação POST para o ponto de extremidade `/token` , desta vez, fornecendo a refresh_token em vez do código. Os tokens de atualização são válidos para todas as permissões para as quais o cliente já recebeu o token de acesso.
 
 Os tokens de atualização não têm tempos de vida especificados. Normalmente, os tempos de vida de tokens de atualização são relativamente longos. No entanto, em alguns casos, os tokens de atualização expiram, são revogados ou não têm privilégios suficientes para a ação desejada. Seu aplicativo precisa esperar e tratar os erros retornados pelo ponto de extremidade de emissão de token corretamente.

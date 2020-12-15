@@ -5,17 +5,19 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 12/02/2019
-ms.openlocfilehash: 403a0f68f559d72dfaa54e4b537a50a66fc3ec6a
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.date: 12/11/2019
+ms.openlocfilehash: e1ddd00ab30e2ef547be5a874a4dc57d18f1d69f
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390274"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>Que tipo de instalação é ideal para você?
 
 Este tópico descreve as diferentes opções de instalação do Centro de Administração do Windows, incluindo a instalação do em um PC com Windows 10 ou um Windows Server para uso por vários administradores. Para instalar o Windows Admin Center em uma VM no Azure, confira [Implantar o Windows Admin Center no Azure](../azure/deploy-wac-in-azure.md).
+
+Não é recomendável usar o Windows Admin Center para o gerenciamento local do mesmo servidor em que ele está instalado. Para gerenciar um servidor, use o Windows Admin Center para se conectar a ele remotamente de um PC de gerenciamento ou outro servidor.
 
 ## <a name="installation-types"></a>Instalação: Tipos
 
@@ -23,7 +25,7 @@ Este tópico descreve as diferentes opções de instalação do Centro de Admini
 
 | Cliente local                                | Servidor Gateway                                  | Servidor gerenciado                               | Cluster de failover                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| [Instale](../deploy/install.md) em um cliente local do Windows 10 que tenha conectividade com os servidores gerenciados.  Ótimo para cenários de início rápido, teste, ad hoc ou de pequena escala. |[Instale](../deploy/install.md) em um servidor de gateway designado e acesse de qualquer navegador cliente com conectividade com o servidor de gateway.  Ótimo para cenários em grande escala. | [Instale](../deploy/install.md) diretamente em um servidor gerenciado para gerenciar a si mesmo ou um cluster no qual ele seja um nó de membro.  Ótimo para cenários distribuídos. | [Implante](#high-availability) em um cluster de failover para habilitar a alta disponibilidade do serviço de gateway. Ótimo para ambientes de produção para garantir a resiliência do seu serviço de gerenciamento. |
+| [Instale](../deploy/install.md) em um cliente local do Windows 10 que tenha conectividade com os servidores gerenciados. Ótimo para cenários de início rápido, teste, ad hoc ou de pequena escala. |[Instale](../deploy/install.md) em um servidor de gateway designado e acesse de qualquer navegador cliente com conectividade com o servidor de gateway. Ótimo para cenários em grande escala. | [Instale](../deploy/install.md) diretamente em um servidor gerenciado para gerenciá-lo remotamente ou um cluster em que ele seja um nó de membro. Ótimo para cenários distribuídos. | [Implante](#high-availability) em um cluster de failover para habilitar a alta disponibilidade do serviço de gateway. Ótimo para ambientes de produção para garantir a resiliência do seu serviço de gerenciamento. |
 
 ## <a name="installation-supported-operating-systems"></a>Instalação: Sistemas operacionais compatíveis
 

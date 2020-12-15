@@ -6,12 +6,12 @@ ms.date: 8/28/2020
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
-ms.openlocfilehash: 71b892d95b15f02445ec7898a6c57f931bc4b501
-ms.sourcegitcommit: 2b1a12c85acff137e5ac84cd0e62d8353fcdde31
+ms.openlocfilehash: a3a38581a257007d9e6afbf4059c88c485ac5a04
+ms.sourcegitcommit: 97af0c18f5868567a1435658bce9c7751454caea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89087459"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913406"
 ---
 # <a name="set-up-email-discovery-to-subscribe-to-your-rds-feed"></a>Configurar a descoberta de email para assinar seu feed de RDS
 
@@ -35,7 +35,7 @@ Agora, siga estas etapas para configurar a descoberta de email:
 3. Insira um novo registro DNS com as seguintes propriedades:
    - **Host:** _msradc
    - **Texto:** \<RD Web Feed URL\>
-   - **TTL:** 300
+   - **TTL:** 300 segundos
 
    Os nomes dos campos dos registros DNS variam de acordo com o registrador de nomes de domínio, mas esse processo resultará em um registro TXT denominado _msradc.\<domain_name\> (por exemplo, _msradc.contoso.com) que tem um valor do Web Feed de RD completo.
 

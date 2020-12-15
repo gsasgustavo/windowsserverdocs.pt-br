@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: Serviço de Cópias de Sombra de Volume'
 title: Serviço de Cópias de Sombra de Volume
 ms.date: 01/30/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 0a8015096d22cfb384815f1e5b8c5b9c9c248922
-ms.sourcegitcommit: 7499749ce7baaf58a523cae2dd46737d635475ce
+ms.openlocfilehash: fce81dbff86ec06d69a9a684a5f418866fe485c6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043914"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046034"
 ---
 # <a name="volume-shadow-copy-service"></a>Serviço de Cópias de Sombra de Volume
 
@@ -442,15 +443,15 @@ O sistema operacional Windows fornece as seguintes ferramentas para trabalhar co
 
 O DiskShadow é um solicitante VSS que você pode usar para gerenciar todos os instantâneos de hardware e software que você pode ter em um sistema. O DiskShadow inclui comandos como os seguintes:
 
-  - **list** : lista gravadores do VSS, provedores do VSS e cópias de sombra
+  - **list**: lista gravadores do VSS, provedores do VSS e cópias de sombra
 
-  - **create** : cria uma cópia de sombra
+  - **create**: cria uma cópia de sombra
 
-  - **import** : importa uma cópia de sombra transportável
+  - **import**: importa uma cópia de sombra transportável
 
-  - **expose** : expõe uma cópia de sombra persistente (como uma letra da unidade)
+  - **expose**: expõe uma cópia de sombra persistente (como uma letra da unidade)
 
-  - **revert** : reverte um volume de volta para uma cópia de sombra especificada
+  - **revert**: reverte um volume de volta para uma cópia de sombra especificada
 
 
 Essa ferramenta é destinada ao uso por profissionais de TI, mas também pode ser útil para desenvolvedores no teste de um VSS Writer ou de um provedor VSS.
@@ -463,15 +464,15 @@ O VssAdmin é usado para criar, excluir e listar informações sobre cópias de 
 
 O VssAdmin inclui comandos como os seguintes:
 
-  - **create shadow** : cria uma cópia de sombra
+  - **create shadow**: cria uma cópia de sombra
 
-  - **delete shadows** : exclui cópias de sombra
+  - **delete shadows**: exclui cópias de sombra
 
-  - **list providers** : lista todos os provedores do VSS registrados
+  - **list providers**: lista todos os provedores do VSS registrados
 
-  - **list writers** : lista todos os gravadores do VSS inscritos
+  - **list writers**: lista todos os gravadores do VSS inscritos
 
-  - **resize shadowstorage** : altera o tamanho máximo da área de armazenamento de cópia de sombra
+  - **resize shadowstorage**: altera o tamanho máximo da área de armazenamento de cópia de sombra
 
 
 O VssAdmin só pode ser usado para administrar cópias de sombra criadas pelo provedor de software do sistema.

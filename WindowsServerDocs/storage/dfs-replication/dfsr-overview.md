@@ -1,15 +1,16 @@
 ---
+description: 'Saiba mais sobre: Visão geral sobre a Replicação do DFS'
 title: Visão geral sobre a Replicação do DFS
 ms.date: 03/08/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 6a68d27ec7c1d06e070d18362de68e12ecbf9578
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7cc69e3d1b3a141d79a1a0ef036db93762154039
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950750"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048764"
 ---
 # <a name="dfs-replication-overview"></a>Visão geral sobre a Replicação do DFS
 
@@ -63,7 +64,7 @@ Instale a Replicação do DFS usando o [Windows Admin Center](../../manage/windo
 
 ### <a name="to-install-dfs-by-using-server-manager"></a>Para instalar DFS usando o Gerenciador do Servidor
 
-1. Abra o Gerenciador do Servidor, clique em **Gerenciar**e em **Adicionar Funções e Recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
+1. Abra o Gerenciador do Servidor, clique em **Gerenciar** e em **Adicionar Funções e Recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
 
 2. Na página **Seleção de Servidor** , selecione o servidor no VHD (disco rígido virtual) de uma máquina virtual offline na qual deseja instalar o DFS.
 
@@ -71,7 +72,7 @@ Instale a Replicação do DFS usando o [Windows Admin Center](../../manage/windo
 
     - Para instalar o serviço de Replicação do DFS, na página **Funções de Servidor**, selecione **Replicação do DFS**.
 
-    - Para instalar apenas as Ferramentas de Gerenciamento de DFS, na página **Recursos** , expanda **Ferramentas de Administração do Servidor Remoto**, **Ferramentas de Administração de Funções**, expanda **Ferramentas de Serviços de Arquivo**e selecione **Ferramentas de Gerenciamento de DFS**.
+    - Para instalar apenas as Ferramentas de Gerenciamento de DFS, na página **Recursos** , expanda **Ferramentas de Administração do Servidor Remoto**, **Ferramentas de Administração de Funções**, expanda **Ferramentas de Serviços de Arquivo** e selecione **Ferramentas de Gerenciamento de DFS**.
 
          **Ferramentas de Gerenciamento do DFS** instala o snap-in Gerenciamento de DFS, a Replicação do DFS e os módulos de Namespaces do DFS para Windows PowerShell e as ferramentas de linha de comando, mas não instala serviços de DFS no servidor.
 

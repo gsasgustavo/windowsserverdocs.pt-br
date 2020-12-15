@@ -6,18 +6,19 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/17/2020
+ms.date: 12/11/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f59c00e375ab142c4e3dadc480c648cdd8e2396
-ms.sourcegitcommit: 877d6db73d9520e3a23738d6528016235493cff3
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: 5e289d1641d5171b4a11526f36aa569baa41980c
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90779240"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390304"
 ---
 # <a name="get-started-with-the-android-client"></a>Introdução ao cliente para Android
 
->Aplica-se a: Android 4.1 e posterior
+>Aplica-se a: Android 6.0 e posterior
 
 É possível usar o cliente de Área de Trabalho Remota para o Android para trabalhar com áreas de trabalho e aplicativos do Windows diretamente do seu dispositivo Android ou do Chromebook que dá suporte à Google Play Store.
 
@@ -25,7 +26,7 @@ Este artigo mostrará como começar a usar o cliente. Se você tiver outras dúv
 
 > [!NOTE]
 > - Curioso sobre novas versões para o cliente Android? Confira [Novidades do cliente Android](android-whatsnew.md).
-> - O cliente Android dá suporte a dispositivos que executam o Android 4.1 e posterior, bem como Chromebooks com ChromeOS 53 e posterior. Saiba mais sobre os aplicativos Android no Chrome em [Sistemas de SO Chrome que dão suporte a aplicativos Android](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
+> - O cliente Android é compatível com dispositivos que executam o Android 6.0 e posterior, bem como Chromebooks com ChromeOS 53 e posterior. Saiba mais sobre os aplicativos Android no Chrome em [Sistemas de SO Chrome que dão suporte a aplicativos Android](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
 ## <a name="download-the-remote-desktop-client"></a>Baixar o cliente de Área de Trabalho Remota
 

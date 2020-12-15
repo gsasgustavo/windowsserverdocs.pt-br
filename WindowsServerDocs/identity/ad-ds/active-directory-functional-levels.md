@@ -1,4 +1,5 @@
 ---
+description: 'Saiba mais sobre: Níveis funcionais de floresta e domínio'
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Níveis funcionais do Windows Server 2016
 ms.author: daveba
@@ -8,12 +9,12 @@ ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.openlocfilehash: b74bb786b3d1a6ec8a1f96054b2d74ca93bd9bcf
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: a05049c17e3d8fec8198c42c6dd589a4907e6e54
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068368"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048954"
 ---
 # <a name="forest-and-domain-functional-levels"></a>Níveis funcionais de floresta e domínio
 
