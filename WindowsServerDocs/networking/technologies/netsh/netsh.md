@@ -7,12 +7,12 @@ manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 1f331a7ea987f413f814dcb1b0e4173714b1153b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 33002210a27dcea0c39ede5997a7b20d3d7d1df0
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994615"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864825"
 ---
 # <a name="network-shell-netsh"></a>Netsh \(Shell de Rede\)
 
@@ -27,7 +27,7 @@ Na maioria dos casos, os comandos netsh fornecem a mesma funcionalidade disponí
 Além disso, há comandos netsh para tecnologias de rede, como IPv6, ponte de rede e RPC \(Chamada de Procedimento Remoto\), que não estão disponíveis no Windows Server como um snap-in do MMC.
 
 >[!IMPORTANT]
->É recomendável que você use o Windows PowerShell para gerenciar as tecnologias de rede no [Windows Server 2016 e Windows 10](/powershell/windows/get-started?view=win10-ps) em vez de no Shell de Rede. No entanto, o Shell de Rede é incluído para oferecer compatibilidade com seus scripts e há suporte para o uso dele.
+>É recomendável que você use o Windows PowerShell para gerenciar as tecnologias de rede no [Windows Server 2016 e Windows 10](/powershell/windows/get-started) em vez de no Shell de Rede. No entanto, o Shell de Rede é incluído para oferecer compatibilidade com seus scripts e há suporte para o uso dele.
 
 ## <a name="network-shell-netsh-technical-reference"></a>Referência Técnica do Netsh (Shell de Rede)
 

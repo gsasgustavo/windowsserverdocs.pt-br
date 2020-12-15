@@ -7,12 +7,12 @@ author: eross-msft
 manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: 0e477a404e7bef9ed1e201393a95e875c308e80f
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: f80e08817a8c7e4d3e9aef64f84d534413b32281
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766889"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865445"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Novidades no Windows Server, versão 1709
 
@@ -143,7 +143,7 @@ O **Roteamento de malha do Docker** é compatível. A malha de roteamento de ing
 
   - **ISATAP e 6to4**: como uma etapa rumo à preterição futura, a Atualização para Criadores terá essas tecnologias desabilitadas por padrão.
 - **DGD (Detecção de Gateway Inativo)** : o algoritmo de DGD faz a transição automática de conexões por outro gateway quando o atual não está acessível. Nesta versão, o algoritmo é melhorado para investigar novamente periodicamente o ambiente de rede.
-- O [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=win10-ps) é um cmdlet interno do Windows PowerShell que executa diversos diagnósticos de rede.  Nesta versão, aprimoramos o cmdlet para fornecer informações detalhadas sobre a seleção de rota, bem como a seleção do endereço de origem.
+- O [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) é um cmdlet interno do Windows PowerShell que executa diversos diagnósticos de rede.  Nesta versão, aprimoramos o cmdlet para fornecer informações detalhadas sobre a seleção de rota, bem como a seleção do endereço de origem.
 
 **Rede definida pelo software**
 

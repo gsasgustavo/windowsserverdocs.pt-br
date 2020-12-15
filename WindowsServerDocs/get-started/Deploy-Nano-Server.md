@@ -8,12 +8,12 @@ ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: deb17bb54f2576cdb811a11d78d4cb324a120140
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 67ef50ce2c788ac5028de1ab39a5f6b6bf388978
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959894"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865715"
 ---
 # <a name="deploy-nano-server"></a>Implantar o Nano Server
 
@@ -72,7 +72,7 @@ Esta tabela mostra as funções e recursos disponíveis nesta versão do Nano Se
 | DSC (Desired State Configuration) do PowerShell | -Package Microsoft-NanoServer-DSC-Package<p>**Observação**: Para obter mais detalhes, confira [Usar DSC no Nano Server](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids). |
 | Internet Information Server (IIS) | -Package Microsoft-NanoServer-IIS-Package<p>**Observação**: confira [IIS no Nano Server](IIS-on-Nano-Server.md) para saber mais sobre como trabalhar com o IIS. |
 | Suporte de host para contêineres do Windows | -Containers |
-| Agente do System Center Virtual Machine Manager | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Observação**: use o SCVMM Compute Package somente se estiver monitorando o Hyper-V. Para implantações hiperconvergidas em VMM, você também deve especificar o parâmetro -Storage. Para saber mais, confira a [documentação do VMM](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016&viewFallbackFrom=sc-vmm-2019). |
+| Agente do System Center Virtual Machine Manager | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Observação**: use o SCVMM Compute Package somente se estiver monitorando o Hyper-V. Para implantações hiperconvergidas em VMM, você também deve especificar o parâmetro -Storage. Para saber mais, confira a [documentação do VMM](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016). |
 | Agente do System Center Operations Manager | Instalado separadamente. Para saber mais, confira a documentação do System Center Operations Manager em https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server. |
 | Data Center Bridging (incluindo DCBQoS) | -Package Microsoft-NanoServer-DCB-Package |
 | Implantar em uma máquina virtual | -Package Microsoft-NanoServer-Guest-Package |
@@ -523,7 +523,7 @@ Os pacotes de driver PnP e do Filtro de Sistema de Arquivos devem seguir os requ
 
 #### <a name="installing-driver-packages-offline"></a>Instalar pacotes de driver offline
 
-Os pacotes de driver com suporte podem ser instalados offline no Nano Server por meio dos cmdlets [DISM.exe](/windows-hardware/manufacture/desktop/dism-driver-servicing-command-line-options-s14) ou [DISM PowerShell](/powershell/module/dism/add-windowsdriver?view=win10-ps).
+Os pacotes de driver com suporte podem ser instalados offline no Nano Server por meio dos cmdlets [DISM.exe](/windows-hardware/manufacture/desktop/dism-driver-servicing-command-line-options-s14) ou [DISM PowerShell](/powershell/module/dism/add-windowsdriver).
 
 #### <a name="installing-driver-packages-online"></a>Instalar pacotes de driver online
 Pacotes de driver PnP podem ser instalados online no Nano Server usando [PnpUtil](/windows-hardware/drivers/devtest/pnputil). Não há suporte no momento para a instalação de pacotes de driver online não PnP no Nano Server.

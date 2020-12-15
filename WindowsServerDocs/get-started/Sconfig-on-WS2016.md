@@ -8,12 +8,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 727525d426a8417e642485be51db7206f3efa64a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8b3a28af19ef1840856b7751deb9b362451a5905
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959464"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865745"
 ---
 # <a name="configure-a-server-core-installation-of-windows-server-2016-or-windows-server-version-1709-with-sconfigcmd"></a>Configurar uma instalação Server Core do Windows Server 2016 ou Windows Server, versão 1709, com Sconfig.cmd
 
@@ -56,7 +56,7 @@ Para adicionar usuários ao grupo local de administradores, utilize a opção **
 Você pode configurar o endereço IP a ser atribuído automaticamente por um Servidor DHCP ou atribuir um endereço IP estático manualmente. Esta opção permite que você defina as configurações do Servidor DNS para o servidor também.
 
 > [!NOTE]
-> Estas opções e muitas mais estão agora disponíveis com os cmdlets de Redes do Windows PowerShell. Para obter mais informações, consulte [Cmdlets de Adaptador de Rede](/powershell/module/netadapter/?view=win10-ps) na Biblioteca do Windows Server.
+> Estas opções e muitas mais estão agora disponíveis com os cmdlets de Redes do Windows PowerShell. Para obter mais informações, consulte [Cmdlets de Adaptador de Rede](/powershell/module/netadapter/) na Biblioteca do Windows Server.
 
 ## <a name="windows-update-settings"></a>Configurações do Windows Update
 

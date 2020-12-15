@@ -8,12 +8,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 862349c0601981f064becd8bd02a1b26b308dc48
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 68a684ad9c99014f8b0bab922de52319e99354b4
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959254"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788100"
 ---
 # <a name="upgrade-and-conversion-options-for-windows-server-2016"></a>Opções de atualização e conversão para o Windows Server 2016
 
@@ -87,7 +87,7 @@ Antes de tentar converter de uma versão de avaliação para a versão comercial
 
 - Em um prompt de comandos com privilégios elevados, execute **slmgr.vbs /dlv**; as versões de avaliação incluirão EVAL na saída.
 
-- Na tela Inicial, abra o **Painel de Controle**. Abra **Sistema e Segurança**e, em seguida, **Sistema**. Visualize o status de ativação do Windows na área de ativação do Windows da página **Sistema**. Clique em **Exibir detalhes** na ativação do Windows para obter mais informações sobre o status de ativação do Windows.
+- Na tela Inicial, abra o **Painel de Controle**. Abra **Sistema e Segurança** e, em seguida, **Sistema**. Visualize o status de ativação do Windows na área de ativação do Windows da página **Sistema**. Clique em **Exibir detalhes** na ativação do Windows para obter mais informações sobre o status de ativação do Windows.
 
 Caso você já tenha ativado o Windows, a Área de Trabalho mostrará o tempo restante do período de avaliação.
 

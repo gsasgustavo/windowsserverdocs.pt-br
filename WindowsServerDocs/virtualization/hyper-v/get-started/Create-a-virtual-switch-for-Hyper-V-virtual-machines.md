@@ -6,16 +6,16 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: 1bb5c6492896cfdaaf9446502e0eee36ef7dd46a
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 1a3cc557b39fca63d07e42c2fba41dc11bf88aa6
+ms.sourcegitcommit: d3f066dd812f60b37c7c2daea70775dc82f9df00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866135"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97486284"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Criar uma opção virtual para máquinas virtuais Hyper-V
 
->Aplica-se a: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+> Aplica-se a: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Um comutador virtual permite que máquinas virtuais criadas em hosts Hyper-V se comuniquem com outros computadores. Você pode criar um comutador virtual ao instalar pela primeira vez a função Hyper-V no Windows Server. Para criar outros comutadores virtuais, use o Gerenciador do Hyper-V ou o Windows PowerShell. Para saber mais sobre os comutadores virtuais, consulte [comutador virtual do Hyper-V](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
@@ -23,38 +23,38 @@ A rede de máquinas virtuais pode ser um assunto complexo. E há vários novos r
 
 ## <a name="create-a-virtual-switch-by-using-hyper-v-manager"></a>Criar um comutador virtual usando o Gerenciador do Hyper-V
 
-1.  Abra o Gerenciador do Hyper-V, selecione o nome do computador host do Hyper-V.
+1. Abra o Gerenciador do Hyper-V, selecione o nome do computador host do Hyper-V.
 
-2.  Selecione **ação**  >  **Gerenciador de comutador virtual**.
+2. Selecione **ação**  >  **Gerenciador de comutador virtual**.
 
     ![Captura de tela que mostra a ação de opção de menu > Gerenciador de comutador virtual](../media/Hyper-V-Action-VSwitchManager.png)
 
-3.  Escolha o tipo de comutador virtual desejado.
+3. Escolha o tipo de comutador virtual desejado.
 
-    |Tipo de conexão|Descrição|
-    |-------------------|---------------|
-    |Externo|Dá acesso às máquinas virtuais a uma rede física para se comunicar com servidores e clientes em uma rede externa. Permite que as máquinas virtuais no mesmo servidor Hyper-V se comuniquem entre si.|
-    |Interna|Permite a comunicação entre máquinas virtuais no mesmo servidor Hyper-V e entre as máquinas virtuais e o sistema operacional do host de gerenciamento.|
-    |Privados|Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado.|
+    | Tipo de conexão | Descrição |
+    | --------------- | ----------- |
+    |     Externo    | Dá acesso às máquinas virtuais a uma rede física para se comunicar com servidores e clientes em uma rede externa. Permite que as máquinas virtuais no mesmo servidor Hyper-V se comuniquem entre si. |
+    |     Interna    | Permite a comunicação entre máquinas virtuais no mesmo servidor Hyper-V e entre as máquinas virtuais e o sistema operacional do host de gerenciamento. |
+    |     Privados     | Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado. |
 
-4.  Selecione **criar comutador virtual**.
+4. Selecione **criar comutador virtual**.
 
-5.  Adicione um nome para o comutador virtual.
+5. Adicione um nome para o comutador virtual.
 
-6.  Se você selecionar externo, escolha o adaptador de rede (NIC) que você deseja usar e quaisquer outras opções descritas na tabela a seguir.
+6. Se você selecionar externo, escolha o adaptador de rede (NIC) que você deseja usar e quaisquer outras opções descritas na tabela a seguir.
 
     ![Captura de tela que mostra as opções de rede externa](../media/Hyper-V-NewVSwitch-ExternalOptions.png)
 
-    |Nome da configuração|Descrição|
-    |----------------|---------------|
-    |Permitir que o sistema de operacional de gerenciamento compartilhe esse adaptador de rede|Selecione esta opção se desejar permitir que o host Hyper-V Compartilhe o uso do comutador virtual e NIC ou equipe NIC com a máquina virtual. Com isso habilitado, o host pode usar qualquer uma das configurações definidas para o comutador virtual, como configurações de QoS (qualidade de serviço), configurações de segurança ou outros recursos do comutador virtual Hyper-V.|
-    |Habilitar SR-IOV (virtualização de e/s de raiz única)|Selecione esta opção somente se você quiser permitir que o tráfego da máquina virtual ignore o comutador da máquina virtual e vá diretamente para a NIC física. Para obter mais informações, consulte [virtualização de e/s de raiz única](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) na referência do pôster Companion: rede Hyper-V.|
+    | Nome da configuração | Descrição |
+    | ------------ | ----------- |
+    | Permitir que o sistema de operacional de gerenciamento compartilhe esse adaptador de rede | Selecione esta opção se desejar permitir que o host Hyper-V Compartilhe o uso do comutador virtual e NIC ou equipe NIC com a máquina virtual. Com isso habilitado, o host pode usar qualquer uma das configurações definidas para o comutador virtual, como configurações de QoS (qualidade de serviço), configurações de segurança ou outros recursos do comutador virtual Hyper-V. |
+    | Habilitar SR-IOV (virtualização de e/s de raiz única) | Selecione esta opção somente se você quiser permitir que o tráfego da máquina virtual ignore o comutador da máquina virtual e vá diretamente para a NIC física. Para obter mais informações, consulte [virtualização de e/s de raiz única](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) na referência do pôster Companion: rede Hyper-V. |
 
-7.  Se você quiser isolar o tráfego de rede do sistema operacional do host Hyper-V de gerenciamento ou outras máquinas virtuais que compartilham o mesmo comutador virtual, selecione **habilitar identificação de LAN virtual para o sistema operacional de gerenciamento**. Você pode alterar a ID de VLAN para qualquer número ou deixar o padrão. Esse é o número de identificação de LAN virtual que o sistema operacional de gerenciamento usará para toda a comunicação de rede por meio desse comutador virtual.
+7. Se você quiser isolar o tráfego de rede do sistema operacional do host Hyper-V de gerenciamento ou outras máquinas virtuais que compartilham o mesmo comutador virtual, selecione **habilitar identificação de LAN virtual para o sistema operacional de gerenciamento**. Você pode alterar a ID de VLAN para qualquer número ou deixar o padrão. Esse é o número de identificação de LAN virtual que o sistema operacional de gerenciamento usará para toda a comunicação de rede por meio desse comutador virtual.
 
     ![Captura de tela que mostra as opções de ID de VLAN](../media/Hyper-V-NewSwitch-VLAN.png)
 
-8.  Clique em **OK**.
+8. Clique em **OK**.
 
 9. Clique em **Sim**.
 
@@ -62,31 +62,31 @@ A rede de máquinas virtuais pode ser um assunto complexo. E há vários novos r
 
 ## <a name="create-a-virtual-switch-by-using-windows-powershell"></a>Criar um comutador virtual usando o Windows PowerShell
 
-1.  Na área de trabalho do Windows, clique no botão Iniciar e digite qualquer parte do nome **Windows PowerShell**.
+1. Na área de trabalho do Windows, clique no botão Iniciar e digite qualquer parte do nome **Windows PowerShell**.
 
-2.  Clique com o botão direito do mouse em Windows PowerShell e selecione **Executar como administrador**.
+2. Clique com o botão direito do mouse em Windows PowerShell e selecione **Executar como administrador**.
 
-3.  Encontre adaptadores de rede existentes executando o cmdlet [Get-netadapter](https://technet.microsoft.com/library/jj130867.aspx) . Anote o nome do adaptador de rede que você deseja usar para o comutador virtual.
+3. Encontre adaptadores de rede existentes executando o cmdlet [Get-netadapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) . Anote o nome do adaptador de rede que você deseja usar para o comutador virtual.
 
-    ```
+    ```PowerShell
     Get-NetAdapter
     ```
 
-4.  Crie um comutador virtual usando o cmdlet [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch) . Por exemplo, para criar um comutador virtual externo chamado ExternalSwitch, usando o adaptador de rede Ethernet e com **permitir que o sistema operacional de gerenciamento compartilhe esse adaptador de rede** ativado, execute o comando a seguir.
+4. Crie um comutador virtual usando o cmdlet [New-VMSwitch](https://docs.microsoft.com/powershell/module/hyper-v/new-vmswitch) . Por exemplo, para criar um comutador virtual externo chamado ExternalSwitch, usando o adaptador de rede Ethernet e com **permitir que o sistema operacional de gerenciamento compartilhe esse adaptador de rede** ativado, execute o comando a seguir.
 
-    ```
+    ```PowerShell
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true
     ```
 
     Para criar um comutador interno, execute o comando a seguir.
 
-    ```
+    ```PowerShell
     New-VMSwitch -name InternalSwitch -SwitchType Internal
     ```
 
     Para criar um comutador particular, execute o comando a seguir.
 
-    ```
+    ```PowerShell
     New-VMSwitch -name PrivateSwitch -SwitchType Private
     ```
 
@@ -94,4 +94,5 @@ Para obter scripts mais avançados do Windows PowerShell que abrangem recursos d
 
 
 ## <a name="next-step"></a>Próxima etapa
+
 [Criar uma máquina virtual com o Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)

@@ -1,6 +1,6 @@
 ---
 title: Data center definido por software do Windows Server
-Description: Visão geral do Windows Server SDDC
+description: Visão geral do Windows Server SDDC
 ms.prod: windows-server
 ms.topic: get-started article
 ms.author: lizross
@@ -8,12 +8,12 @@ author: eross-msft
 manager: mtillman
 ms.date: 06/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0be52c1b0df5f93d39e38327bdcce6cd0984cb5b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f3013acdb9a0351b447f10a57e5f1073facb9272
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640880"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045184"
 ---
 # <a name="windows-server-software-defined-datacenter"></a>Datacenter definido por software do Windows Server
 

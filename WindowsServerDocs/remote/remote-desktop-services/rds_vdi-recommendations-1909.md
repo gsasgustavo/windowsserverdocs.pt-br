@@ -7,12 +7,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.date: 02/19/2020
-ms.openlocfilehash: 2caecd2b625de8790ddd0d1ebfeeb9db24d11635
-ms.sourcegitcommit: faa5db4cdba4ad2b3a65533b6b49d960080923c9
+ms.openlocfilehash: 94deca783d770fb5322f9fc489d692f925cfa1a9
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91752908"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866255"
 ---
 # <a name="optimizing-windows-10-version-1909-for-a-virtual-desktop-infrastructure-vdi-role"></a>Como otimizar o Windows 10, versão 1909, para uma função da VDI (Virtual Desktop Infrastructure)
 
@@ -180,7 +180,7 @@ Os aplicativos UWP que são provisionados para um sistema podem ser removidos du
 
 [Windows 10 1607: impedindo aplicativos de retornarem durante a implantação da atualização de recursos](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Execute o comando do PowerShell [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) para remover o conteúdo do aplicativo UWP:
+Execute o comando do PowerShell [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) para remover o conteúdo do aplicativo UWP:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName
@@ -755,7 +755,7 @@ Aplica-se ao Windows 10. O padrão é **128**, com um intervalo válido de 1 a 6
 
 Aplica-se ao Windows 10. O padrão é **1023**. Esse parâmetro especifica o número máximo de arquivos que deve ser aberto em um recurso compartilhado após o aplicativo fechar o arquivo. Onde muitos milhares de clientes estiverem se conectando a servidores SMB, considere a redução desse valor para **256**.
 
-É possível definir muitas configurações SMB usando os cmdlets [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps) e [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps) do Windows PowerShell. As configurações somente de Registro também podem ser definidas com o Windows PowerShell, como no seguinte exemplo:
+É possível definir muitas configurações SMB usando os cmdlets [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) e [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration) do Windows PowerShell. As configurações somente de Registro também podem ser definidas com o Windows PowerShell, como no seguinte exemplo:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force

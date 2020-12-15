@@ -6,12 +6,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 6337a3812cb6e1ca838c463bc811f8959d1f0714
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9260cf9cc377c5a0665e4ad6b3ca5871f016a256
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972363"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788033"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Novidades no Windows Server 2019
 
@@ -69,7 +69,7 @@ O **Windows Defender ATP Exploit Guard** é um novo conjunto de funcionalidades 
 
 O [Controle de Aplicativos do Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (também conhecido como a política de CI [integridade de código]) foi lançado no Windows Server 2016.
 De acordo com os comentários dos clientes, este é um excelente conceito, mas difícil de implantar.
-Para resolver isso, criamos políticas de CI padrão que aceitam todos os arquivos de caixa de entrada do Windows e aplicativos da Microsoft, como o SQL Server, e bloqueiam executáveis conhecidos que podem ignorar a CI. 
+Para resolver isso, criamos políticas de CI padrão que aceitam todos os arquivos de caixa de entrada do Windows e aplicativos da Microsoft, como o SQL Server, e bloqueiam executáveis conhecidos que podem ignorar a CI. 
 
 ### <a name="security-with-software-defined-networking-sdn"></a>Segurança com SDN (Rede Definida pelo Software)
 
