@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fd35c76efa8419df1b1032ddf551b054c4d290e9
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: eb59f5626ac36f844716035c6dfb5de4815ec2d6
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97043384"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599809"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>Implantação e configuração do controlador de domínio virtualizado
 
@@ -59,9 +59,9 @@ Examine a tabela abaixo para ver os produtos de virtualização e se eles dão s
 
 |**Produto de virtualização**|**Dá suporte a controladores de domínio virtualizados e VMGID**|
 |--|--|
-|**Servidor Microsoft Windows Server 2012 com recurso Hyper-V**|Yes|
-|**Hyper-V Server do Microsoft Windows Server 2012**|Yes|
-|**Microsoft Windows 8 com recurso Hyper-V Client**|Yes|
+|**Servidor Microsoft Windows Server 2012 com recurso Hyper-V**|Sim|
+|**Hyper-V Server do Microsoft Windows Server 2012**|Sim|
+|**Microsoft Windows 8 com recurso Hyper-V Client**|Sim|
 |**Windows Server 2008 R2 e Windows Server 2008**|No|
 |**Soluções de virtualização não Microsoft**|Contate o fornecedor|
 
@@ -123,7 +123,7 @@ Há vários pontos no procedimento em que há opções de como criar o computado
 
 O diagrama a seguir ilustra o processo de clonagem do controlador de domínio virtualizado, em que o domínio já existe.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)
+![Diagrama que ilustra o processo de clonagem do controlador de domínio virtualizado, onde o domínio já existe.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)
 
 ### <a name="step-1---validate-the-hypervisor"></a>Etapa 1 — Validar o hipervisor
 Verifique se o controlador de domínio de origem está em execução em um hipervisor com suporte examinando a documentação do fornecedor. Os controladores de domínio virtualizados são independentes do hipervisor e não requerem Hyper-V.
@@ -132,7 +132,7 @@ Se o hipervisor estiver Microsoft Hyper-V, verifique se ele está em execução 
 
 Abra o **Devmgmt.msc** e examine se há dispositivos e drivers Microsoft Hyper-V nos **Dispositivos do Sistema**. O dispositivo do sistema especifico necessário para um controlador de domínio virtualizado é o **Microsoft Hyper-V Generation Counter** (driver: vmgencounter.sys).
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)
+![Captura de tela que mostra os detalhes do contador de geração de Microsoft Hyper-V.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)
 
 ### <a name="step-2---verify-the-pdce-fsmo-role"></a>Etapa 2 — Verificar a função PDCE FSMO
 Antes de tentar clonar um DC, valide que o controlador de domínio que hospeda o Emulador de Controlador de Domínio Primário FSMO executa o Windows Server 2012. O PDCE (emulador PDC) é necessário por vários motivos:
@@ -181,7 +181,7 @@ get-adcomputer(Get-ADDomainController -Discover -Service "PrimaryDC").name -prop
 
 O exemplo abaixo demonstra como especificar o nome de domínio e filtrar as propriedades retornadas antes do pipeline do Windows PowerShell:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)
+![Captura de tela de uma janela de terminal que demonstra a especificação do nome de domínio e a filtragem das propriedades retornadas antes do pipeline do Windows PowerShell.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)
 
 ### <a name="step-3---authorize-a-source-dc"></a>Etapa 3 — Autorizar um DC de origem
 O controlador de domínio de origem deve ter o CAR (direito de acesso de controle) **Permitir que um controlador de domínio crie um clone dele mesmo** no cabeçalho NC do domínio. Por padrão, o grupo bem conhecido **Controlador de Domínio Clonáveis** tem essa permissão e não contém membros. O PDCE cria esse grupo quando essa função FSMO é transferida para um controlador de domínio do Windows Server 2012.
@@ -201,7 +201,7 @@ Get-adcomputer <dc name> | %{add-adgroupmember "cloneable domain controllers" $_
 
 Por exemplo, isso adiciona o servidor DC1 ao grupo, sem a necessidade de especificar um nome diferenciado do membro do grupo:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)
+![Captura de tela de uma janela de terminal que mostra o comando para adicionar um servidor a um grupo ](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)
 
 #### <a name="rebuilding-default-permissions"></a>Recompilando permissões padrão
 Se você remover essa permissão do cabeçalho do domínio, a clonagem falhará. Você pode recriar a permissão usando o Centro Administrativo do Active Directory ou o Windows PowerShell.
@@ -289,7 +289,7 @@ Testes feitos ao se executar no modo online:
 
 - O controlador de domínio de origem ainda não contém um DcCloneConfig.xml no caminho especificado
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewDCCloneConfig.png)
+![Captura de tela de uma janela de terminal que mostra os testes que são executados.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewDCCloneConfig.png)
 
 ### <a name="step-6---take-the-source-domain-controller-offline"></a>Etapa 6 — Tornar o controlador de domínio de origem offline
 Você não pode copiar um DC de origem em execução; ele deve ser desligado normalmente. Não clone um controlador de domínio interrompido forçosamente por falta de energia.
@@ -297,9 +297,9 @@ Você não pode copiar um DC de origem em execução; ele deve ser desligado nor
 #### <a name="graphical-method"></a>Método gráfico
 Use o botão de desligamento no DC em execução, ou o botão de desligamento do Gerenciador Hyper-V.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_Shutdown.png)
+![Captura de tela que mostra o botão desligar dentro do DC em execução.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_Shutdown.png)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVShutdown.png)
+![Captura de tela que mostra o botão desligar do Gerenciador do Hyper-V.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVShutdown.png)
 
 #### <a name="windows-powershell-method"></a>Método do Windows PowerShell
 Você pode desligar uma máquina virtual usando um dos seguintes cmdlets:
@@ -311,9 +311,9 @@ Stop-vm
 
 Stop-computer é um cmdlet que dá suporte a desligamento de computadores independente de virtualização, e é análogo ao utilitário Shutdown.exe herdado. Stop-vm é um novo cmdlet no módulo Windows PowerShell do Windows Server 2012 Hyper-V, e é equivalente às opções de energia no Gerenciador Hyper-V. Este é útil em ambientes de laboratório em que o controlador de domínio geralmente opera em uma rede virtualizada privada.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopComputer2.png)
+![Captura de tela de uma janela de terminal que mostra como usar o cmdlet Stop-Computer.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopComputer2.png)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopVM.png)
+![Captura de tela de uma janela de terminal que mostra como usar o cmdlet Stop-VM.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_StopVM.png)
 
 ### <a name="step-7---copy-disks"></a>Etapa 7 — Copiar discos
 Uma opção administrativa é necessária na fase de cópia:
@@ -338,11 +338,11 @@ Se for copiar arquivos manualmente, exclua quaisquer instantâneos antes de copi
 ##### <a name="hyper-v-manager-method"></a>Método do Gerenciador Hyper-V
 Usar o snap-in do Gerenciador Hyper-V para determinar quais discos estão associados ao controlador de domínio de origem. Use a opção Inspecionar para validar se o controlador de domínio usa discos diferenciais (o que requer também copiar o disco pai)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVInspect.png)
+![Captura de tela que mostra como usar a opção inspecionar.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVInspect.png)
 
 Para excluir os instantâneos, selecione uma VM e exclua a subárvore do instantâneo.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDeleteSnapshot.gif)
+![Captura de tela que mostra como excluir um instantâneo.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDeleteSnapshot.gif)
 
 Você pode então copiar manualmente os arquivos VHD ou VHDX usando Windows Explorer, Xcopy.exe ou Robocopy.exe. Nenhuma etapa especial é necessária. A melhor prática é alterar os nomes de arquivo mesmo se movê-los para outra pasta.
 
@@ -361,7 +361,7 @@ Get-vmharddiskdrive
 
 Por exemplo, você pode retornar todas as unidades de disco rígido IDE de uma VM denominada **DC2** com a seguinte amostra:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_ReturnIDE.png)
+![Captura de tela que mostra como retornar todos os discos rígidos IDE de uma VM chamada DC2.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_ReturnIDE.png)
 
 Se o caminho do disco aponta para um arquivo AVHD ou AVHDX, ele é um instantâneo. Para excluir os instantâneos associados a um disco e mesclar no VHD ou VHDX real, use cmdlets:
 
@@ -372,7 +372,7 @@ Remove-VMSnapshot
 
 Por exemplo, para excluir todos os instantâneos de uma VM denominada DC2-SOURCECLONE:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_DelSnapshots.png)
+![Captura de tela que mostra como excluir todos os instantâneos de uma VM chamada DC2-SOURCECLONE.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_DelSnapshots.png)
 
 Para copiar os arquivos usando o Windows PowerShell, use o seguinte cmdlet:
 
@@ -386,7 +386,7 @@ Combine-o com cmdlets de VM em pipelines para ajudar a automação. O pipeline �
 Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-item -path $_.path -destination c:\temp\copy.vhd}
 ```
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)
+![Captura de tela que mostra para copiar a unidade de um controlador de domínio de origem offline denominado DC2-SOURCECLONE para um novo disco chamado c:\temp\copy.vhd sem a necessidade de saber o caminho exato para a unidade do sistema.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)
 
 > [!IMPORTANT]
 > Você não pode usar discos de passagem com clonagem, pois eles não usam um arquivo de disco virtual e sim um disco rígido real.
@@ -397,7 +397,7 @@ Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-
 #### <a name="exporting-the-vm"></a>Exportando a VM
 Como uma alternativa para copiar os discos, você pode exportar toda a VM do Hyper-V como uma cópia. A exportação automática cria uma pasta denominada para a VM, contendo todos os discos e informações de configuração.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVExport.png)
+![Captura de tela que mostra onde você pode exportar toda a VM do Hyper-V como uma cópia.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVExport.png)
 
 ##### <a name="hyper-v-manager-method"></a>Método do Gerenciador Hyper-V
 Para exportar uma VM com o Gerenciador Hyper-V:
@@ -417,7 +417,7 @@ Export-vm
 
 Por exemplo, para exportar uma VM denominada DC2-SOURCECLONE para uma pasta denominada C:\VM:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSExport.png)
+![Captura de tela que mostra como exportar uma VM denominada DC2-SOURCECLONE para uma pasta chamada C:\VM.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSExport.png)
 
 > [!NOTE]
 > O Windows Server 2012 Hyper-V dá suporte a novas funcionalidades de exportação e importação que estão fora do escopo deste treinamento. Examine a TechNet para obter mais informações.
@@ -445,7 +445,7 @@ Convert-vm
 
 Por exemplo, para exportar a cadeia inteira de instantâneos de disco de uma VM (dessa vez não incluindo nenhum disco diferencial) e o disco pai em um único disco novo denominado DC4-CLONED.VHDX:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSConvertVhd.png)
+![Captura de tela de uma janela de terminal que mostra como exportar a cadeia inteira de instantâneos de disco de uma VM e o disco pai para um novo disco único chamado DC4-CLONed. VHDX](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSConvertVhd.png)
 
 #### <a name="adding-xml-to-the-offline-system-disk"></a><a name="BKMK_Offline"></a>Adicionando XML ao disco do sistema offline
 Se você copiou o Dccloneconfig.xml para o DC de origem em execução, agora copie o arquivo dccloneconfig.xml atualizado no disco do sistema copiado/exportado offline. Dependendo dos aplicativos instalados detectados com Get-ADDCCloningExcludedApplicationList anteriormente, você pode ter que copiar o arquivo CustomDCCloneAllowList.xml no disco.
@@ -514,11 +514,11 @@ O Windows Server 2012 agora oferece uma opção gráfica para montar arquivos VH
 
 3. Clique na unidade montada e clique em **Ejetar** no menu **Ferramentas de Disco**.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVClickMountedDrive.png)
+![Captura de tela que mostra o disco rígido montado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVClickMountedDrive.png)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDetailsMountedDrive.gif)
+![Captura de tela que mostra os detalhes do disco rígido montado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDetailsMountedDrive.gif)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVEjectMountedDrive.gif)
+![Captura de tela que mostra o disco rígido ejetado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVEjectMountedDrive.gif)
 
 ##### <a name="windows-powershell-method"></a>Método do Windows PowerShell
 Você também pode montar o disco offline e copiar o arquivo XML usando os cmdlets do Windows PowerShell:
@@ -544,7 +544,7 @@ dismount-vhd <disk path>
 
 Por exemplo:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSMountVHD.png)
+![Captura de tela que mostra como uma unidade pode ser montada com uma letra de unidade específica, o arquivo copiado e a unidade desmontada.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSMountVHD.png)
 
 Você também pode usar o novo cmdlet **Mount-DiskImage** para montar um arquivo VHD (ou ISO).
 
@@ -558,7 +558,7 @@ A etapa de configuração final antes do início do processo de clonagem é cria
 #### <a name="associating-a-new-vm-with-copied-disks"></a>Associando uma nova VM com discos copiados
 Se você copiou o disco do sistema manualmente, crie uma nova máquina virtual usando o disco copiado. O hipervisor configura automaticamente a ID de Geração de VM quando uma nova VM é criada; nenhuma alteração na configuração é necessária no host VM ou Hyper-V.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVConnectVHD.gif)
+![Captura de tela que mostra como criar uma nova máquina virtual usando o disco copiado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVConnectVHD.gif)
 
 ##### <a name="hyper-v-manager-method"></a>Método do Gerenciador Hyper-V
 
@@ -581,7 +581,7 @@ New-VM
 
 Por exemplo, aqui a VM DC4-CLONEDFROMDC2 é criada usando 1GB de RAM, com inicialização do arquivo c:\vm\dc4-systemdrive-clonedfromdc2.vhd e uso da rede virtual 10.0:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewVM.png)
+![Captura de tela que mostra os detalhes da VM DC4-CLONEDFROMDC2.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewVM.png)
 
 #### <a name="import-vm"></a>Importar VM
 Se você exportou anteriormente sua VM, agora precisa importá-la de volta como uma cópia. Isso usa o XML exportado para recriar o computador usando todas as configurações, unidades, redes e configurações de memória anteriores.
@@ -604,15 +604,15 @@ Para importar usando o snap-in do Gerenciador Hyper-V:
 
 5. Renomeie a VM importada se estiver importando no mesmo host Hyper-V, ela terá o mesmo nome que o controlador de domínio de origem exportado.
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportLocateFolder.png)
+![Captura de tela que mostra onde localizar a pasta onde a VM está instalada.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportLocateFolder.png)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportSelectVM.png)
+![Captura de tela que mostra como selecionar qual VM deve ser importada.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportSelectVM.png)
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportChooseType.gif)
+![Captura de tela que mostra como selecionar o tipo de importação.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportChooseType.gif)
 
 Lembre-se de remover quaisquer instantâneos importados usando o snap-in de Gerenciamento do Hyper-V:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportDelSnap.gif)
+![Captura de tela que mostra como remover qualquer instantâneo.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVImportDelSnap.gif)
 
 > [!WARNING]
 > Excluir quaisquer instantâneos importados é fundamental; se aplicável, eles poderiam retornar o controlador de domínio clonado para o estado de um DC anterior — e possivelmente ativo —, resultando em falha de replicação, informações de IP duplicadas e interrupções.
@@ -627,7 +627,7 @@ Rename-VM
 
 Por exemplo, aqui a VM exportada DC2-CLONED é importada usando seu arquivo XML determinado automaticamente, depois é imediatamente renomeada para seu novo nome de VM DC5-CLONEDFROMDC2:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)
+![Captura de tela de uma janela de terminal que mostra o arquivo renomeado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)
 
 Lembre-se de remover quaisquer instantâneos importados usando os seguintes cmdlets:
 
@@ -638,7 +638,7 @@ Remove-VMSnapshot
 
 Por exemplo:
 
-![Implantação de DC virtualizado](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)
+![Captura de tela de uma janela de terminal que mostra como remover qualquer instantâneo importado.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)
 
 > [!WARNING]
 > Certifique-se de que, ao importar o computador, os endereços MAC estáticos não foram designados para o controlador de domínio de origem. Se um computador de origem com um MAC estático for clonado, aqueles computadores copiados não enviarão ou receberão corretamente qualquer tráfego de rede. Defina um novo endereço MAC estático ou dinâmico exclusivo, se esse for o caso. Você pode ver se uma VM usa endereços MAC estáticos com o comando:

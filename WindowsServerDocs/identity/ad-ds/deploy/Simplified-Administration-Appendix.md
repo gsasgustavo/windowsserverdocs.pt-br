@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d54ed836b60c4b1551b3a87ff92a50f2b10bda23
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 21b379b8138e95b70ebae91b34b8955e20715b3b
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045994"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599689"
 ---
 # <a name="simplified-administration-appendix"></a>Apêndice de administração simplificada
 
@@ -100,6 +100,6 @@ A tabela a seguir descreve os dois novos itens de menu:
 |Criar NoDefrag% s completo|Criar mídia IFM sem desfragmentação para um DC completo do AD ou uma instância do AD/LDS na pasta% s|
 |Criar NoDefrag completo do SYSVOL% s|Criar mídia IFM com SYSVOL e sem desfragmentação para um DC do AD completo na pasta% s|
 
-![Administração simplificada](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
+![Captura de tela de uma janela de terminal que mostra o processo de criação de mídia IFM.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
 
-![Administração simplificada](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)
+![Captura de tela de uma janela de terminal que mostra a mídia IFM foi criada com êxito.](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)

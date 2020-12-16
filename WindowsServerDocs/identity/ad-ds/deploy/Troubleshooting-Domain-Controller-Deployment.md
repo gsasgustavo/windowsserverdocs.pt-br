@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 03/20/2019
 ms.topic: article
-ms.openlocfilehash: 80f152b4a8d7c7c73226a3e32a63cc4b8620be66
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: e9d08bd4580766a7e4ccd2929dfc4695b3220f95
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045974"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599679"
 ---
 # <a name="troubleshooting-domain-controller-deployment"></a>Solução de problemas de implantação de controlador de domínio
 
@@ -22,13 +22,13 @@ Este tópico abrange metodologia detalhada sobre solução de problemas de confi
 
 ## <a name="introduction-to-troubleshooting"></a>Introdução à solução de problemas
 
-![Solução de problemas](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
+![Diagrama que mostra o fluxo de trabalho para solução de problemas de implantação do controlador de domínio.](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
 
 ## <a name="built-in-logs-for-troubleshooting"></a>Logs internos para solução de problemas
 
 Os logs internos são os instrumentos mais importantes para solucionar problemas de promoção e rebaixamento do controlador de domínio. Todos esses logs são habilitados e configurados para o máximo de detalhamento, por padrão.
 
-| Fase | Log |
+| Fase | Registro |
 |--|--|
 | Gerenciador do Servidor ou operações ADDSDeployment do Windows PowerShell | - %systemroot%\debug\dcpromoui.log<p>-%SystemRoot%\debug\DCPROMOUI *. log |
 | Instalação/Promoção do controlador de domínio | - %systemroot%\debug\dcpromo.log<p>-%SystemRoot%\debug\dcpromo *. log<p>-Evento viewer\Windows Windows\Sistema<p>-Evento viewer\Windows logs\Application<p>-Viewer\Applications de eventos e serviço logs\Directory de serviços<p>-Evento viewer\Applications e serviços de replicação do logs\File<p>-Viewer\Applications de eventos e replicação de serviços logs\DFS |

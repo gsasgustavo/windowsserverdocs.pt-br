@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ed8d67f223cd2946dca00d556797acad31685b8e
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d263a38545cd5cc59298c7e8bfdf7bc9a35b1b84
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89635215"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599659"
 ---
 # <a name="manage-bde-wipefreespace"></a>Manage-bde wipefreespace
 
@@ -37,7 +37,7 @@ manage-bde -wipefreespace|-w [<drive>] [-cancel] [-computername <name>] [{-?|/?}
 
 ### <a name="examples"></a>Exemplos
 
-Para apagar o espaço livre na unidade C, digite: \
+Para apagar o espaço livre na unidade C, digite:
 
 ```
 manage-bde -w C:

@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 11/14/2018
 ms.topic: article
-ms.openlocfilehash: 6ebbeed0ab8f06ba4f3189af31396d5c30b3427f
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 5a4d182d89f2e4f3143cb1f5d193a241fba3e672
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049214"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599759"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>Rebaixando controladores de domínio e domínios
 
@@ -192,7 +192,7 @@ Use o argumento opcional **Whatif** com o **Uninstall-ADDSDomainController** e o
 
 Por exemplo:
 
-![Exemplo de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
+![Captura de tela de uma janela de terminal que mostra os valores explícito e implícito dos argumentos de um cmdlet.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 
 o prompt para reiniciar é sua última oportunidade de cancelar esta operação ao usar o ADDSDeployment no Windows PowerShell. Para substituir este prompt, use os argumentos **-force** ou **confirm:$false**.
 
@@ -220,7 +220,7 @@ Para aceitar o prompt de reinicialização automática, use os argumentos **-for
 
 Aqui está um exemplo de rebaixamento forçado com o mínimo necessário de argumentos **-forceremoval** e **-demoteoperationmasterrole**. O argumento **-credential** não é necessário porque o usuário fez logon como membro do grupo Administradores Corporativos:
 
-![Exemplo de Uninstall-ADDSDomainController do PowerShell](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
+![Captura de tela de uma janela de terminal que mostra um exemplo de rebaixamento forçado com seus argumentos mínimos necessários de-forceremoval e-demoteoperationmasterrole.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
 
 Aqui está um exemplo de remoção do último controlador de domínio, no domínio, usando o mínimo necessário de argumentos **-lastdomaincontrollerindomain** e **-removeapplicationpartitions**:
 

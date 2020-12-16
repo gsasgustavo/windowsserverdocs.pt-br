@@ -1,18 +1,18 @@
 ---
 description: 'Saiba mais sobre: arquitetura do controlador de domínio virtualizado'
-ms.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
+s.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Arquitetura do controlador de domínio virtualizado
 author: iainfoulds
 ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6f8984528aab0d1929d2a90d9558288b2c4cdf03
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 42a0bdd3fc8e6ec45c884322c1de71088a679837
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045814"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599641"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>Arquitetura do controlador de domínio virtualizado
 
@@ -38,7 +38,7 @@ O diagrama a seguir mostra a arquitetura de uma operação de clonagem inicial e
 
 **Operação de clonagem inicial**
 
-![Arquitetura de DC virtualizado](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)
+![Diagrama que mostra a arquitetura de uma operação de clonagem inicial e para uma operação de repetição de clonagem.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)
 
 **Operação de repetição de clonagem**
 
@@ -156,7 +156,7 @@ As seções a seguir explicam a restauração segura em detalhes para cada cená
 ### <a name="safe-restore-detailed-processing"></a>Processamento detalhado da restauração segura
 O fluxograma a seguir mostra como ocorre a restauração segura quando um controlador de domínio virtual é iniciado depois que um instantâneo foi restaurado enquanto o controlador estava desligado.
 
-![Arquitetura de DC virtualizado](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)
+![Fluxograma que mostra como a restauração segura ocorre quando um controlador de domínio virtual é iniciado depois que um instantâneo é restaurado enquanto ele foi desligado.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)
 
 1.  Quando a máquina virtual é inicializada depois da restauração do instantâneo, ela tem uma nova ID de geração de VM fornecida pelo host do hipervisor em virtude da restauração do instantâneo.
 
@@ -173,7 +173,7 @@ O fluxograma a seguir mostra como ocorre a restauração segura quando um contro
 
 O diagrama a seguir mostra como as garantias de virtualização impedem a divergência induzida pela reversão de USN quando um instantâneo é restaurado em um controlador de domínio virtual em execução.
 
-![Arquitetura de DC virtualizado](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)
+![Diagrama que mostra como as proteções de virtualização impedem divergências por reversão de USN quando um instantâneo é restaurado em um controlador de domínio virtual em execução.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)
 
 > [!NOTE]
 > A ilustração anterior foi simplificada para explicar os conceitos.

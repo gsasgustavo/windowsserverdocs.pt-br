@@ -5,12 +5,12 @@ ms.date: 11/12/2012
 author: JasonGerend
 manager: lizross
 ms.author: jgerend
-ms.openlocfilehash: e6b7c2a3af136fa7c3970de4550609f4eaa9fa8d
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 86662b623adb0a482c843286608a796b923e13fd
+ms.sourcegitcommit: 6fbe337587050300e90340f9aa3e899ff5ce1028
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041064"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599619"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Configuração de contas de cluster no Active Directory
 
@@ -156,7 +156,7 @@ A associação de grupo mínima exigida para concluir o procedimento a seguir de
 
    6.  Na caixa de diálogo **Entrada de Permissão para**_contêiner_, localize as permissões **Criar Objetos de computador** e **Ler Todas as Propriedades**, e verifique se a caixa de seleção **Permitir** está marcada para cada uma delas.
 
-       ![Caixa de diálogo entrada de permissão](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+       ![Captura de tela que mostra a opção criar objetos de computador definida como permitir. ](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## <a name="steps-for-prestaging-the-cluster-name-account"></a>Etapas para pré-preparar a conta de nome do cluster
 
@@ -208,7 +208,7 @@ A associação ao grupo **Admins. do Domínio**, ou equivalente, é o mínimo ne
 
     5.  Verifique se a conta de usuário que você acabou adicionar está selecionada e, próximo a **Controle Total**, marque a caixa de seleção **Permitir**.
 
-        ![Caixa de diálogo entrada de permissão](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
+        ![Captura de tela que mostra a guia Segurança na caixa de diálogo Propriedades de CLUSTER1.](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
 
 ## <a name="steps-for-prestaging-an-account-for-a-clustered-service-or-application"></a>Etapas para pré-preparar uma conta para um aplicativo ou serviço clusterizado
 
@@ -306,7 +306,7 @@ A associação ao grupo **Admins. do Domínio**, ou equivalente, é o mínimo ne
 
 9. Para a conta de nome do cluster (também conhecida como o objeto de nome do cluster ou CNO), verifique se a opção **Permitir** está selecionada para as permissões **Criar Objetos de computador** e **Ler Todas as Propriedades**.
 
-   ![Caixa de diálogo entrada de permissão](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+   ![Captura de tela que mostra a caixa de diálogo entrada de permissão com a opção criar objetos de computador definida como permitir.](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Clique em **OK** até retornar ao snap-in **Usuários e Computadores do Active Directory**.
 
