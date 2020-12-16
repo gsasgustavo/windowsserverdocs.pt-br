@@ -1,24 +1,24 @@
 ---
 title: Visão geral do servidor de arquivos de expansão para dados de aplicativos
-description: O Servidor de Arquivos de Escalabilidade Horizontal foi projetado para fornecer compartilhamentos de arquivos de expansão que estão continuamente disponíveis para armazenamento de aplicativo de servidor baseado em arquivo. Os compartilhamentos de arquivos de expansão proporcionam a capacidade de compartilhar a mesma pasta em múltiplos nós do mesmo cluster. Esse cenário se concentra em como planejar e implantar o Servidor de Arquivos de Escalabilidade Horizontal.
+description: Scale-Out servidor de arquivos foi projetado para fornecer compartilhamentos de arquivos de expansão que estão continuamente disponíveis para o armazenamento de aplicativos de servidor baseado em arquivo. Os compartilhamentos de arquivos de expansão proporcionam a capacidade de compartilhar a mesma pasta em múltiplos nós do mesmo cluster. Esse cenário se concentra em como planejar e implantar o Servidor de Arquivos de Escalabilidade Horizontal.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
 ms.date: 09/29/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5aca126d036dffc9b7463edd07e70a3dd02b7dbd
-ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
+ms.openlocfilehash: 6687acf56f076afb6fa3038043b07fba3e9029e3
+ms.sourcegitcommit: 4f7308430a69fe7965e16aa5b31f87c5d68e4a09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91517482"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577378"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>Visão geral do servidor de arquivos de expansão para dados de aplicativos
 
 >Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-O Servidor de Arquivos de Escalabilidade Horizontal foi projetado para fornecer compartilhamentos de arquivos de expansão que estão continuamente disponíveis para armazenamento de aplicativo de servidor baseado em arquivo. Os compartilhamentos de arquivos de expansão proporcionam a capacidade de compartilhar a mesma pasta em múltiplos nós do mesmo cluster. Esse cenário se concentra em como planejar e implantar o Servidor de Arquivos de Escalabilidade Horizontal.
+Scale-Out servidor de arquivos foi projetado para fornecer compartilhamentos de arquivos de expansão que estão continuamente disponíveis para o armazenamento de aplicativos de servidor baseado em arquivo. Os compartilhamentos de arquivos de expansão proporcionam a capacidade de compartilhar a mesma pasta em múltiplos nós do mesmo cluster. Esse cenário se concentra em como planejar e implantar o Servidor de Arquivos de Escalabilidade Horizontal.
 
 Você pode implantar e configurar um servidor de arquivos clusterizado usando qualquer um dos seguintes métodos:
 
@@ -35,8 +35,8 @@ Os principais benefícios fornecidos pelo servidor de arquivos de escalabilidade
 - **Maior largura de banda**. A largura de banda máxima de compartilhamento é a largura de banda total de todos os nós de cluster de servidor de arquivos. Ao contrário das versões anteriores do Windows Server, a largura de banda total não é mais limitada à largura de banda de um único nó de cluster; mas, em vez disso, a capacidade do armazenamento do sistema de suporte define as restrições. Você pode aumentar a largura de banda total adicionando nós.
 - **Chkdsk sem tempo de inatividade**. O CHKDSK no Windows Server 2012 é significativamente aprimorado para reduzir drasticamente o tempo em que um sistema de arquivos está offline para reparo. Os CSVs (Volumes Compartilhados Clusterizados) levam isso adiante e eliminam a fase offline. Um CSVFS (Sistema de Arquivos CSV) pode executar o CHKDSK sem causar impacto nos aplicativos com identificadores abertos no sistema de arquivos.
 - **Cache do volume compartilhado clusterizado**. O CSVs no Windows Server 2012 apresenta suporte para um cache de leitura, que pode melhorar significativamente o desempenho em determinados cenários, como no Virtual Desktop Infrastructure (VDI).
-- **Gerenciamento mais simples**. Com Servidor de Arquivos de Escalabilidade Horizontal, você cria os servidores de arquivos de escalabilidade horizontal e, em seguida, adiciona os compartilhamentos de arquivos e CSVs necessários. Não é mais preciso criar vários servidores de arquivos clusterizados, cada um com discos de cluster separados, e depois desenvolver políticas de posicionamento para garantir a atividade em cada nó de cluster.
-- **Rebalanceamento automático de clientes servidor de arquivos de escalabilidade horizontal**. No Windows Server 2012 R2, o rebalanceamento automático melhora a escalabilidade e a capacidade de gerenciamento para servidores de arquivos de escalabilidade horizontal. As conexões de clientes SMB são controladas por compartilhamento de arquivos (em vez de por servidor), e os clientes são então redirecionados para o nó de cluster com o melhor acesso ao volume usado pelo compartilhamento de arquivos. Isso melhora a eficiência, reduzindo o tráfego de redirecionamento entre nós de servidor de arquivos. Os clientes são redirecionados após uma conexão inicial e quando o armazenamento de cluster é reconfigurado.
+- **Gerenciamento mais simples**. Com Scale-Out servidor de arquivos, você cria os servidores de arquivos de escalabilidade horizontal e, em seguida, adiciona os compartilhamentos de arquivos e CSVs necessários. Não é mais preciso criar vários servidores de arquivos clusterizados, cada um com discos de cluster separados, e depois desenvolver políticas de posicionamento para garantir a atividade em cada nó de cluster.
+- **Rebalanceamento automático de clientes de servidor de arquivos Scale-Out**. No Windows Server 2012 R2, o rebalanceamento automático melhora a escalabilidade e a capacidade de gerenciamento para servidores de arquivos de escalabilidade horizontal. As conexões de clientes SMB são controladas por compartilhamento de arquivos (em vez de por servidor), e os clientes são então redirecionados para o nó de cluster com o melhor acesso ao volume usado pelo compartilhamento de arquivos. Isso melhora a eficiência, reduzindo o tráfego de redirecionamento entre nós de servidor de arquivos. Os clientes são redirecionados após uma conexão inicial e quando o armazenamento de cluster é reconfigurado.
 
 ## <a name="in-this-scenario"></a>Neste cenário
 
@@ -101,103 +101,103 @@ A tabela a seguir lista os recursos do SMB 3.0, os sistemas de arquivos comuns d
 <td>Sim</td>
 </tr>
 <tr class="even">
-<td>Sistema de arquivos</td>
+<td>Sistema de Arquivos</td>
 <td>NTFS</td>
 <td>Sim</td>
 <td>NA</td>
 </tr>
 <tr class="odd">
-<td>Sistema de arquivos</td>
+<td>Sistema de Arquivos</td>
 <td><a href="/windows-server/storage/refs/refs-overview">ReFS</a>(sistema de arquivos resiliente)</td>
 <td>Recomendado com Espaços de Armazenamento Diretos</td>
 <td>Recomendado com Espaços de Armazenamento Diretos</td>
 </tr>
 <tr class="even">
-<td>Sistema de arquivos</td>
+<td>Sistema de Arquivos</td>
 <td>Sistema de arquivos CSV (Volume Compartilhado Clusterizado)</td>
 <td>NA</td>
 <td>Sim</td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>BranchCache</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Eliminação de duplicação de dados (Windows Server 2012)</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Eliminação de duplicação de dados (Windows Server 2012 R2)</td>
 <td>Sim</td>
 <td>Sim (VDI somente)</td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Raiz de servidor raiz DFSN (Namespace do DFS)</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Servidor de destino da pasta DFSN (Namespace do DFS)</td>
 <td>Sim</td>
 <td>Sim</td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>DFS-R (Replicação do DFS)</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Gerenciador de Recursos de Servidor de Arquivos (telas e cotas)</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Infraestrutura de Classificação de Arquivos</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Controle de Acesso Dinâmico (acesso baseado em declarações, CAP)</td>
 <td>Sim</td>
 <td>Não</td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Redirecionamento de pasta</td>
 <td>Sim</td>
 <td>Não recomendado<em></td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Arquivos offline (cache do lado do cliente)</td>
 <td>Sim</td>
 <td>Não recomendado</em></td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Perfis de usuário em roaming</td>
 <td>Sim</td>
 <td>Não recomendado<em></td>
 </tr>
 <tr class="odd">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Diretórios base</td>
 <td>Sim</td>
 <td>Não recomendado</em></td>
 </tr>
 <tr class="even">
-<td>Gerenciamento de arquivos</td>
+<td>Gerenciamento de Arquivos</td>
 <td>Pastas de trabalho</td>
 <td>Sim</td>
 <td>Não</td>
@@ -223,7 +223,7 @@ A tabela a seguir lista os recursos do SMB 3.0, os sistemas de arquivos comuns d
 </tbody>
 </table>
 
-\*A <a href="https://docs.microsoft.com/windows-server/storage/storage-spaces/cluster-sets#scale-out-file-server-and-cluster-sets">AC (disponibilidade contínua) de auto-retorno SMB em configurações hiperconvergentes</a> é cursor disponível no Windows Server 2019. 
+\*A <a href="https://docs.microsoft.com/windows-server/storage/storage-spaces/cluster-sets#scale-out-file-server-and-cluster-sets">AC (disponibilidade contínua) de auto-retorno SMB em configurações hiperconvergentes</a> está disponível no Windows Server 2019. 
 
 >[!NOTE]
 >O redirecionamento de pasta, Arquivos Offline, perfis de usuário de roaming ou diretórios base geram um grande número de gravações que devem ser gravadas imediatamente no disco (sem buffer) ao usar compartilhamentos de arquivos disponíveis continuamente, reduzindo o desempenho em comparação com os compartilhamentos de arquivos de uso geral. Compartilhamentos de arquivos disponíveis continuamente também são incompatíveis com o Gerenciador de Recursos de Servidor de Arquivos e PCs que executam o Windows XP. Além disso, Arquivos Offline pode não fazer a transição para o modo offline por 3-6 minutos depois que um usuário perde o acesso a um compartilhamento, o que pode frustrar os usuários que ainda não estão usando o modo sempre offline do Arquivos Offline.
@@ -235,11 +235,11 @@ Servidores de Arquivos de Escalabilidade Horizontal são ideais para armazenamen
 - O servidor Web IIS (Serviços de Informações da Internet) pode armazenar dados de configuração e de sites em um compartilhamento de arquivos de escalabilidade horizontal. Para obter mais informações, consulte [Configuração compartilhada](https://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264).
 - O Hyper-V pode armazenar configuração e discos virtuais dinâmicos em um compartilhamento de arquivos de escalabilidade horizontal. Para obter mais informações, consulte [Implantar Hyper-V no SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
 - O SQL Server pode armazenar arquivos de banco de dados dinâmicos em um compartilhamento de arquivo de escalabilidade horizontal. Para obter mais informações, consulte [Instalar SQL Server com compartilhamento de arquivo SMB como uma opção de armazenamento](/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
-- VMM (Virtual Machine Manager) pode armazenar um compartilhamento de biblioteca (que contém modelos de máquina virtual e arquivos relacionados) em um compartilhamento de arquivos de escalabilidade horizontal. No entanto, o próprio servidor de biblioteca não pode ser um Servidor de Arquivos de Escalabilidade Horizontal — ele deve estar em um servidor autônomo ou em um cluster de failover que não use a função de cluster Servidor de Arquivos de Escalabilidade Horizontal.
+- VMM (Virtual Machine Manager) pode armazenar um compartilhamento de biblioteca (que contém modelos de máquina virtual e arquivos relacionados) em um compartilhamento de arquivos de escalabilidade horizontal. No entanto, o próprio servidor de biblioteca não pode ser um Scale-Out servidor de arquivos — ele deve estar em um servidor autônomo ou em um cluster de failover que não use a função de cluster de servidor de arquivos Scale-Out.
 
 Se você usar um compartilhamento de arquivos de escalabilidade horizontal como um compartilhamento de biblioteca, só poderá usar tecnologias compatíveis com o servidor de arquivos de escalabilidade horizontal. Por exemplo, você não pode usar Replicação do DFS para replicar um compartilhamento de biblioteca hospedado em um compartilhamento de arquivos de escalabilidade horizontal. Também é importante que o servidor de arquivos de escalabilidade horizontal tenha as atualizações de software mais recentes instaladas.
 
-Para usar um compartilhamento de arquivos de escalabilidade horizontal como um compartilhamento de biblioteca, primeiro adicione um servidor de biblioteca (provavelmente uma máquina virtual) com um compartilhamento local ou nenhum compartilhamento. Em seguida, ao adicionar um compartilhamento de biblioteca, escolha um compartilhamento de arquivos hospedado em um servidor de arquivos de escalabilidade horizontal. Esse compartilhamento deve ser gerenciado pelo VMM e criado exclusivamente para uso do servidor de biblioteca. Além disso, certifique-se de instalar as atualizações mais recentes no servidor de arquivos de escalabilidade horizontal. Para obter mais informações sobre como adicionar servidores de biblioteca do VMM e compartilhamentos de biblioteca, consulte [adicionar perfis à biblioteca do VMM](/system-center/vmm/library-profiles?view=sc-vmm-1801). Para obter uma lista de hotfixes atualmente disponíveis para serviços de arquivo e armazenamento, consulte o [artigo da base de dados de conhecimento da Microsoft 2899011](https://support.microsoft.com/help/2899011/list-of-currently-available-hotfixes-for-the-file-services-technologie).
+Para usar um compartilhamento de arquivos de escalabilidade horizontal como um compartilhamento de biblioteca, primeiro adicione um servidor de biblioteca (provavelmente uma máquina virtual) com um compartilhamento local ou nenhum compartilhamento. Em seguida, ao adicionar um compartilhamento de biblioteca, escolha um compartilhamento de arquivos hospedado em um servidor de arquivos de escalabilidade horizontal. Esse compartilhamento deve ser gerenciado pelo VMM e criado exclusivamente para uso do servidor de biblioteca. Além disso, certifique-se de instalar as atualizações mais recentes no servidor de arquivos de escalabilidade horizontal. Para obter mais informações sobre como adicionar servidores de biblioteca do VMM e compartilhamentos de biblioteca, consulte [adicionar perfis à biblioteca do VMM](/system-center/vmm/library-profiles). Para obter uma lista de hotfixes atualmente disponíveis para serviços de arquivo e armazenamento, consulte o [artigo da base de dados de conhecimento da Microsoft 2899011](https://support.microsoft.com/help/2899011/).
 
 >[!NOTE]
 >Alguns usuários, como profissionais da informação, têm cargas de trabalho com impacto maior no desempenho. Por exemplo, operações, como abrir e fechar arquivos, criar novos arquivos e renomear arquivos existentes, quando executada por vários usuários, têm um impacto no desempenho. Se um compartilhamento de arquivos estiver habilitado com disponibilidade contínua, ele fornecerá integridade de dados, mas também afetará o desempenho geral. Disponibilidade contínua exige que dados sejam gravados por meio de disco para garantir a integridade em caso de falha de um nó de cluster em um servidor de arquivos de escalabilidade horizontal. Portanto, um usuário que copia vários arquivos grandes em um servidor de arquivos pode esperar um desempenho significativamente mais lento no compartilhamento de arquivos continuamente disponíveis.
@@ -258,7 +258,7 @@ A tabela a seguir lista os recursos que fazem parte deste cenário e descreve co
 <tbody>
 <tr class="odd">
 <td><a href="/windows-server/failover-clustering/failover-clustering-overview">Clustering de failover</a></td>
-<td>Os clusters de failover adicionaram os seguintes recursos no Windows Server 2012 para dar suporte ao servidor de arquivos de escalabilidade horizontal: nome de rede distribuído, tipo de recurso de Servidor de Arquivos de Escalabilidade Horizontal, CSV (volumes compartilhados de cluster) 2 e Servidor de Arquivos de Escalabilidade Horizontal função de alta disponibilidade. Para obter mais informações sobre esses recursos, consulte <a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">o que&#39;s New no clustering de failover no Windows Server 2012 [redirected]</a>.</td>
+<td>Os clusters de failover adicionaram os seguintes recursos no Windows Server 2012 para dar suporte ao servidor de arquivos de escalabilidade horizontal: nome de rede distribuído, o tipo de recurso de Scale-Out servidor de arquivos, CSV (volumes compartilhados do cluster) 2 e a função de alta disponibilidade do servidor de arquivos Scale-Out. Para obter mais informações sobre esses recursos, consulte <a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">o que&#39;s New no clustering de failover no Windows Server 2012 [redirected]</a>.</td>
 </tr>
 <tr class="even">
 <td><a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Protocolo SMB</a></td>
