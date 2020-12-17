@@ -6,12 +6,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: c03d223bcfcf4be9360d175bfcc9f70e7b4cd59e
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 86a47d6fc6660413e42c270616d4ec004729063e
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97042934"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644656"
 ---
 # <a name="ad-forest-recovery---configuring-the-dns-server-service"></a>Recuperação de floresta do AD-Configurando o serviço do servidor DNS
 
@@ -37,13 +37,13 @@ Conclua as etapas de instalação e configuração abaixo.
 5. Na tela **funções do servidor** , selecione **servidor DNS**, se solicitado, clique em **Adicionar recursos** e clique em **Avançar**.
 6. Na tela **recursos** , clique em **Avançar**.
 7. Leia as informações na página do **servidor DNS** e clique em **Avançar**.
-   ![Servidor DNS](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
+   ![Captura de tela que mostra a página do servidor DNS.](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
 8. Na página **confirmação** , verifique se a função servidor DNS será instalada e clique em **instalar**.
 
 ### <a name="to-configure-the-dns-server-service"></a>Para configurar o serviço do servidor DNS
 
 1. Abra Gerenciador do Servidor, clique em **ferramentas** e clique em **DNS**.
-   ![Servidor DNS](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
+   ![Captura de tela que mostra o objeto DNS.](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. Crie zonas DNS para os mesmos nomes de domínio DNS que foram hospedados nos servidores DNS antes do mau funcionamento crítico. Para obter mais informações, consulte Adicionar uma zona de pesquisa direta ( [https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574) ).
 3. Configure os dados DNS como existiam antes do mau funcionamento crítico. Por exemplo:
 

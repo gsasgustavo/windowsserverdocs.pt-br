@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc
-ms.openlocfilehash: be7c7d99668512d3ea014b8826e257be38660101
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b5dccb17f9cfa1ca9a6a09824d12659abb28707b
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97043084"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644666"
 ---
 # <a name="ad-forest-recovery---backing-up-the-system-state-data"></a>Recuperação de floresta do AD-fazendo backup dos dados de estado do sistema
 
@@ -25,20 +25,20 @@ Use o procedimento a seguir para executar um backup de estado do sistema em um c
 1. Abra **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **backup do Windows Server**.
    - No Windows Server 2008 R2 e no Windows Server 2008, clique em **Iniciar**, aponte para **Ferramentas administrativas** e clique em **backup do Windows Server**.
 
-   ![Instalar backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
+   ![Captura de tela que realça a opção de menu Backup do Windows Server.](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
 
 2. Se solicitado, na caixa de diálogo **controle de conta de usuário** , forneça credenciais de operador de backup e clique em **OK**.
 3. Clique em **backup local**.
 4. No menu **Ação**, clique em **Backup único**.
 5. No assistente de backup único, na página **Opções de backup** , clique em **opções diferentes** e, em seguida, clique em **Avançar**.
 
-   ![Instalar backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup3.png)
+   ![Captura de tela que mostra a página opções de backup com a opção opções diferentes selecionada.](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup3.png)
 
 6. Na página **selecionar configuração de backup** , clique em **personalizado)** e, em seguida, clique em **Avançar**.
 7. Na tela **selecionar itens para backup** , clique em **Adicionar itens** e selecione **estado do sistema** e clique em **OK**.
    - No Windows Server 2008 R2 e no Windows Server 2008, selecione os volumes a serem incluídos no backup. Se você marcar a caixa de seleção **habilitar recuperação do sistema** , todos os volumes críticos serão selecionados.
 
-   ![Instalar backup](media/AD-Forest-Recovery-Backing-up-System-State/systemstatebackup.png)
+   ![Captura de tela que mostra a caixa de seleção estado do sistema selecionada. ](media/AD-Forest-Recovery-Backing-up-System-State/systemstatebackup.png)
 
 8. Na página **especificar tipo de destino** , clique **em unidades locais** ou **pasta compartilhada remota** e, em seguida, clique em **Avançar**.  Se você estiver fazendo backup em uma pasta compartilhada remota, faça o seguinte:
    - Digite o caminho para a pasta compartilhada.

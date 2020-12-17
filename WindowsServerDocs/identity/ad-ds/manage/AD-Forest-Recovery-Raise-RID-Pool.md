@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
-ms.openlocfilehash: 7f27438ba96d1ce3a8876408123ab768aa32d6c6
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: fe5498bf5efc940b9a91f214f93f40de670df547
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041824"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644686"
 ---
 # <a name="ad-forest-recovery---raising-the-value-of-available-rid-pools"></a>Recuperação de floresta do AD-aumentando o valor dos pools RID disponíveis
 
@@ -37,15 +37,15 @@ Quando você aumenta o valor do inteiro grande, aumenta o valor da parte inferio
 
 1. Abra Gerenciador do Servidor, clique em **ferramentas** e clique em **Editor ADSI**.
 2. Clique com o botão direito do mouse, selecione **conectar a** e conectar faça o contexto de nomenclatura padrão e clique em **OK**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
+   ![Captura de tela que mostra como se conectar ao contexto de nomenclatura padrão](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
 3. Navegue até o seguinte caminho de nome distinto: **CN = RID Manager $, CN = System, DC <domain name> =**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
+   ![Captura de tela que mostra como procurar o caminho do nome distinto.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. Clique com o botão direito do mouse e selecione as propriedades de CN = RID Manager $.
 4. Selecione o atributo **rIDAvailablePool**, clique em **Editar** e copie o valor inteiro grande para a área de transferência.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
+   ![Captura de tela que mostra o atributo rIDAvailablePool selecionado.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
 5. Inicie a calculadora e, no menu **Exibir** , selecione **modo científico**.
 6. Adicione 100.000 ao valor atual.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
+   ![Captura de tela que mostra onde adicionar 100.000 ao valor atual.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
 7. Usando Ctrl-c ou o comando **Copy** no menu **Editar** , copie o valor para a área de transferência.
 8. Na caixa de diálogo Editar do ADSIEdit, Cole esse novo valor.
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png)
@@ -55,17 +55,17 @@ Quando você aumenta o valor do inteiro grande, aumenta o valor da parte inferio
 
 1. No prompt de comando, digite o seguinte comando e pressione ENTER: **LDP**
 2. Clique em **conexão**, clique em **conectar**, digite o nome do Gerenciador de RID e clique em **OK**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
+   ![Captura de tela que mostra onde digitar o nome do Gerenciador de RID.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
 3. Clique em **conexão**, clique em **associar**, selecione **associar com credenciais** e digite suas credenciais administrativas e clique em **OK**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
-4. Clique em **Exibir**, em **árvore** e digite o seguinte caminho de nome distinto: CN = RID Manager $, CN = System, DC =*nome de domínio* 
-    ![ LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
+   ![Captura de tela que mostra a opção associar com credenciais.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
+4. Clique em **Exibir**, clique em **árvore** e digite a seguinte caminho de nome distinto: CN = RID Manager $, CN = System, DC = captura de *nome de domínio* 
+    ![ que mostra onde você digita o caminho do nome distinto.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
 5. Clique em **procurar** e em **Modificar**.
 6. Adicione 100.000 ao valor **rIDAvailablePool** atual e, em seguida, digite a soma em **valores**.
 7. Em **DN**, digite `cn=RID Manager$,cn=System,dc=` *<nome \> de domínio*.
 8. Em **Editar atributo de entrada**, digite `rIDAvailablePool` .
 9. Selecione **substituir** como a operação e, em seguida, clique em **Enter**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png)
+   ![Captura de tela que mostra a opção Replace.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png)
 10. Clique em **executar** para executar a operação. Clique em **fechar**
 11. Para validar a alteração, clique em **Exibir**, em **árvore** e digite o seguinte caminho de nome distinto: CN = Gerenciador de RID $, CN = System, DC =*nome de domínio*.   Verifique o atributo **rIDAvailablePool** .
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)

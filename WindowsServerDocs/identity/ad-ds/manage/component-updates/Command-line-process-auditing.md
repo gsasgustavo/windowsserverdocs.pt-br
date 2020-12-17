@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 24d4541da55e97b5506719b7b6df0566695c4e5f
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 635910f1988a06ca86aff048a6df80eea28ef86e
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049454"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644626"
 ---
 # <a name="command-line-process-auditing"></a>Auditoria de processo de linha de comando
 
@@ -35,7 +35,7 @@ ms.locfileid: "97049454"
 
     -   "Incluir linha de comando em eventos de criação de processo"
 
-![auditoria de linha de comando](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)
+![Captura de tela que realça a linha de comando do processo.](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)
 
 **Figura SEQ figura \\ \* árabe 16 evento 4688**
 
@@ -74,11 +74,11 @@ Volume do evento: baixo para médio, dependendo do uso do sistema
 |**Com suporte em:**|?|
 |**Descrição**|Essa configuração de política determina quais informações são registradas nos eventos de auditoria de segurança quando um novo processo é criado.<p>Essa configuração se aplica somente quando a política de criação de processo de auditoria está habilitada. Se você habilitar essa configuração de política, as informações de linha de comando para cada processo serão registradas em texto sem formatação no log de eventos de segurança como parte do evento de criação de processo de auditoria 4688, "um novo processo foi criado" nas estações de trabalho e servidores nos quais essa configuração de política é aplicada.<p>Se você desabilitar ou não definir essa configuração de política, as informações de linha de comando do processo não serão incluídas nos eventos de criação do processo de auditoria.<p>Padrão: não configurado<p>Observação: quando essa configuração de política estiver habilitada, qualquer usuário com acesso para ler os eventos de segurança poderá ler os argumentos de linha de comando para qualquer processo criado com êxito. Argumentos de linha de comando podem conter informações confidenciais ou privadas, como senhas ou dados de usuário.|
 
-![auditoria de linha de comando](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)
+![Captura de tela que mostra ](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)
 
 Ao usar configurações da Configuração de Política de Auditoria Avançada, você precisa confirmar que essas configurações não foram substituídas pelas configurações básicas de política de auditoria.  O evento 4719 é registrado quando as configurações são substituídas.
 
-![auditoria de linha de comando](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)
+![Captura de tela que mostra a linha de comando include na caixa de diálogo eventos de criação de processo.](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)
 
 O procedimento a seguir mostra como evitar conflitos, bloqueando a aplicação de quaisquer configurações de política de auditoria básicas.
 

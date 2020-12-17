@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a5836f3dda9615a449c89fe130798566e7481906
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 7b761ab0c645c33c3cc2d842d1db582590d7db90
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049654"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644646"
 ---
 # <a name="directory-services-component-updates"></a>Atualizações de componentes dos Serviços de Diretório
 
@@ -108,7 +108,7 @@ A promoção de um DC que executa o Windows Server 2012 R2 como uma réplica adi
 
 Nova criação de domínio em uma floresta existente
 
-![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_FFL.gif)
+![Captura de tela que mostra a página de opções do controlador de domínio.](media/Directory-Services-component-updates/GTR_ADDS_FFL.gif)
 
 ### <a name="adprep"></a>A
 Não há nenhuma nova operação de floresta ou domínio nesta versão.
@@ -150,9 +150,9 @@ O FRS foi preterido no Windows Server 2012 R2.  A substituição do FRS é reali
 
 Use o parâmetro-DomainMode com os cmdlets Install-ADDSForest ou Install-ADDSDomain para especificar o nível funcional do domínio.  Os valores com suporte para esse parâmetro podem ser um número inteiro válido ou um valor de cadeia de caracteres enumerado correspondente. Por exemplo, para definir o nível de modo de domínio como Windows Server 2008 R2, você pode especificar o valor 4 ou "Win2008R2".  Ao executar esses cmdlets do Server 2012 R2, os valores válidos incluem aqueles para Windows Server 2008 (3, Win2008) Windows Server 2008 R2 (4, Win2008R2) Windows Server 2012 (5, Win2012) e Windows Server 2012 R2 (6, Win2012R2). O nível de domínio funcional não pode ser inferior ao nível funcional da floresta, mas pode ser superior.  Como o FRS foi preterido nesta versão, o Windows Server 2003 (2, Win2003) não é um parâmetro reconhecido com esses cmdlets quando executado do Windows Server 2012 R2.
 
-![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
+![Captura de tela de uma janela de terminal que mostra o parâmetro-DomainMode usado com o cmdlet Install-ADDSForest.](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
 
-![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)
+![Captura de tela de uma janela de terminal que mostra como usar o cmdlet Install-ADDSForest.](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)
 
 ## <a name="ldap-query-optimizer-changes"></a><a name="BKMK_LDAPQuery"></a>Alterações do otimizador de consulta LDAP
 
@@ -264,7 +264,7 @@ Log Record Bytes Generated: 0
 
     -   Exposto por meio de rastreamento ETW e ID de evento 1644
 
-        ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)
+        ![Captura de tela que realça os atributos que impedem o valor de otimização.](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)
 
 ### <a name="to-enable-the-stats-control-in-ldp"></a><a name="BKMK_EnableStats"></a>Para habilitar o controle Stats no LDP
 
@@ -274,7 +274,7 @@ Log Record Bytes Generated: 0
 
 3.  Na caixa de diálogo controles, expanda o menu suspenso **carregar predefinido** , clique em **Pesquisar estatísticas** e clique em **OK**.
 
-    ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
+    ![Captura de tela que realça a lista predefinida de carregamento.](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
 4.  No menu **procurar** , clique em **Pesquisar**
 
@@ -282,7 +282,7 @@ Log Record Bytes Generated: 0
 
 6.  Verifique se a caixa de seleção **estendida** está marcada na caixa de diálogo opções de pesquisa e selecione **OK**.
 
-    ![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
+    ![Captura de tela que realça a opção estendida.](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
 
 ### <a name="try-this-use-ldp-to-return-query-statistics"></a>Experimente: usar o LDP para retornar estatísticas de consulta
 Execute o seguinte em um controlador de domínio ou em um cliente ou servidor ingressado no domínio que tenha as ferramentas de AD DS instaladas.  Repita o seguinte direcionamento para o seu controlador de domínio do Windows Server 2012 e seu controlador de domínio do Windows Server 2012 R2.
@@ -368,7 +368,7 @@ Windows Registry Editor Version 5.00
 #### <a name="comparison-of-the-old-and-new-event-id-1644"></a>Comparação entre a ID de evento antiga e a nova 1644
 OLD
 
-![atualizações de serviços de diretório](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)
+![Captura de tela que mostra a ID de evento 1664 antiga.](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)
 
 NEW
 
