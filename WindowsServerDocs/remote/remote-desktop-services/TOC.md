@@ -95,7 +95,8 @@
 #### [Conceder acesso ao seu computador de fora da rede](clients/remote-desktop-allow-outside-access.md)
 #### [Alterar a porta de escuta da Área de Trabalho Remota em seu computador](clients/change-listening-port.md)
 ### Informações avançadas
-#### [Comparar os clientes](clients/remote-desktop-app-compare.md)
+#### [Comparar os clientes: recursos](clients/remote-desktop-features.md)
+#### [Comparar os clientes: redirecionamentos](clients/remote-desktop-app-compare.md)
 #### [Configurações de arquivo RDP de Área de Trabalho Remota compatível](clients/rdp-files.md)
 #### [Esquema de URI de Área de Trabalho Remota](clients/remote-desktop-uri.md)
 #### [Perguntas frequentes sobre o cliente da Área de Trabalho Remota](clients/remote-desktop-client-faq.md)
