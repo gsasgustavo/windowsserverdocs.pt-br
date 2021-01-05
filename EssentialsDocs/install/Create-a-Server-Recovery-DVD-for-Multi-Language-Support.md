@@ -1,23 +1,23 @@
 ---
 title: Criar um DVD de recuperação de servidor para suporte a vários idiomas
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como criar um DVD de instalação do servidor e de recuperação de servidor para suporte a vários idiomas em servidores administrados localmente.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: 3c415155734515af004e25a07c4e61afabaa3359
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.openlocfilehash: d17a7103233b25553eb67a2c7d025d4647cbbbc5
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838005"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711321"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>Criar um DVD de recuperação de servidor para suporte a vários idiomas
 
 >Aplica-se a: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="create-a-server-setup-and-server-recovery-dvd-for-multiple-language-support-on-locally-administered-servers"></a><a name="BKMK_MLHeadedRecovery"></a>Criar um DVD de instalação do servidor e de recuperação do servidor para suporte a vários idiomas em servidores administrados localmente
+##  <a name="create-a-server-setup-and-server-recovery-dvd-for-multiple-language-support-on-locally-administered-servers"></a><a name="BKMK_MLHeadedRecovery"></a> Criar um DVD de instalação do servidor e de recuperação do servidor para suporte a vários idiomas em servidores administrados localmente
 
 > [!NOTE]
 >  Primeiro, você deve criar uma imagem multilíngue do Windows, conforme descrito no [passo a passo: criação de imagem multilíngüe do Windows](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) antes de adicionar o Windows Server Essentials langauage Pack ao install. wim.
@@ -56,7 +56,7 @@ ms.locfileid: "87838005"
 
 -   Um DVD do pacote de idiomas do Windows Server Essentials.
 
-###  <a name="adding-multiple-language-support"></a><a name="BKMK_Steps"></a>Adicionando suporte a vários idiomas
+###  <a name="adding-multiple-language-support"></a><a name="BKMK_Steps"></a> Adicionando suporte a vários idiomas
  Para adicionar suporte a vários idiomas ao Instalação do Windows você atualiza o install. wim adicionando os pacotes de idiomas do Windows Server 2012 e do Windows Server Essentials a ele.
 
 #### <a name="update-installwim"></a>Atualizar Install.wim

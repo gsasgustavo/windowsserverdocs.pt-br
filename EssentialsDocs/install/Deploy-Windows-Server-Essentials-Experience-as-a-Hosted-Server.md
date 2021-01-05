@@ -1,18 +1,18 @@
 ---
 title: Implantar a Experiência do Windows Server Essentials como um servidor hospedado
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como implantar o Microsoft Windows Server 16 e oferecer a experiência do Windows Server Essentials como um serviço para seus clientes.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 5c0e186cb51eadd2671a4a7d21ccc1ce90dd7221
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0698bb4d7def33194ccbdc6280e3336bbc3f2ee2
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623533"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755132"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Implantar a Experiência do Windows Server Essentials como um servidor hospedado
 
@@ -172,12 +172,12 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 > [!NOTE]
 >  Verifique se as configurações de fuso horário da máquina virtual do host e da experiência do Windows Server Essentials são as mesmas. Caso contrário, você pode enfrentar vários erros. Isso inclui: a configuração inicial do servidor pode não ter êxito em tarefas relacionadas ao certificado, o certificado pode não funcionar por algumas horas depois que a função da experiência do Windows Server Essentials for instalada e as informações do dispositivo não serão atualizadas corretamente.
 
- Após a implantação, use o cmdlet do Windows PowerShell **Get-WssConfigurationStatus** para verificar se a configuração inicial foi bem-sucedida. O status retornado deve ser um dos seguintes: **Notstarted**, **FinishedWithWarning**, **Executando**, **Concluído**, **Falha**ou **PendingReboot**.
+ Após a implantação, use o cmdlet do Windows PowerShell **Get-WssConfigurationStatus** para verificar se a configuração inicial foi bem-sucedida. O status retornado deve ser um dos seguintes: `Notstarted` , `FinishedWithWarning` , `Running` , `Finished` , `Failed` ou `PendingReboot` .
 
  O servidor será reiniciado durante a configuração inicial. Se você precisa impedir esta reinicialização automática, você pode usar o seguinte comando para adicionar uma chave do Registro antes de iniciar a configuração inicial:
 
 ```
-New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false
+New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name "WaitForReboot" -Value 1 -PropertyType "DWord" -Force -Confirm:$false
 
 ```
 
@@ -204,29 +204,29 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  **Exemplo**:
 
- $Enable-WssRemoteWebAccess œDenyAccessByDefault œApplyToExistingUsers
+ `$Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers`
 
  Esse comando permitirá Acesso Remoto da Web com o roteador configurado automaticamente, e trocará as permissões de acesso padrão para todos os usuários existentes.
 
 ### <a name="add-user"></a>Adicionar usuário
  **Sintaxe**:
 
- Add-WssUser [-name] <cadeia \> de caracteres [-password] <SecureString \> [-AccessLevel <String \> {usuário &#124; administrador}] [-FirstName <String \> ] [-LastName <String \> ] [-AllowRemoteAccess] [-AllowVpnAccess] [<CommonParameters \> ]
+ Add-WssUser [-name] <cadeia \> de caracteres [-password] <SecureString \> [-AccessLevel <cadeia de caracteres \> {usuário &#124; administrador}] [-FirstName <String \> ] [-LastName <String \> ] [-AllowRemoteAccess] [-AllowVpnAccess] [<CommonParameters \> ]
 
  **Exemplo**:
 
- $password = ConvertTo-SecureString "Passw0rd!" -astexto œforce $ Add-WssUser-Name User2Test-password $password-AccessLevel administrador-FirstName Usuário2-LastName Test
+ `$password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test`
 
  Este comando adicionará um administrador chamado User2Test com a senha Passw0rd!.
 
 ### <a name="add-server-folder"></a>Adicionar Pasta do Servidor
  **Sintaxe**:
 
- Add-WssFolder [-name] <cadeia \> de caracteres [-Path] <cadeia de caracteres \> [[-Description] <cadeia de caracteres \> ] [-KeepPermissions] [<CommonParameters \> ]
+ Add-WssFolder [-name] <String \> [-Path] <cadeia de caracteres \> [[-Description] <cadeia de caracteres \> ] [-KeepPermissions] [<CommonParameters \> ]
 
  **Exemplo**:
 
- $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
+ `$Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"`
 
  Esse comando adicionará uma pasta de servidor chamada MyTestFolder no local especificado.
 
@@ -251,7 +251,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 #### <a name="server-backup"></a>Backup do servidor
  O Windows Server Essentials oferece suporte a duas maneiras de fazer backup do servidor: backup local e backup externo. Se você deseja implantar sua própria solução de backup do servidor, você pode personalizar essas opções.
 
--   O**backup local** permite que você realize backup incremental no nível do bloco regularmente em um disco separado. Como hoster, você pode anexar um disco rígido virtual à máquina virtual que executa o Windows Server Essentials e, em seguida, configurar o backup do servidor nesse disco rígido virtual. O disco rígido virtual deve estar localizado em um disco físico diferente da máquina virtual que executa o Windows Server Essentials.
+-   O **backup local** permite que você realize backup incremental no nível do bloco regularmente em um disco separado. Como hoster, você pode anexar um disco rígido virtual à máquina virtual que executa o Windows Server Essentials e, em seguida, configurar o backup do servidor nesse disco rígido virtual. O disco rígido virtual deve estar localizado em um disco físico diferente da máquina virtual que executa o Windows Server Essentials.
 
     > [!NOTE]
     >  Se você tiver outras soluções de backup para as máquinas virtuais e não quiser que os usuários vejam o recurso de Backup do servidor nativo do Windows Server Essentials, você pode desativá-lo e remover a interface do usuário relacionada do Painel. Para obter mais informações, consulte a seção [Personalizar backup do servidor](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293413(v=win.10)) de [Personalizar e implantar o Windows Server Essentials no Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
@@ -299,7 +299,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   [Implantação de Servidor](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)
 
--   [Configuração do servidor](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)
+-   [Configuração de Servidor](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)
 
 -   [Gerenciamento de servidor](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)
 

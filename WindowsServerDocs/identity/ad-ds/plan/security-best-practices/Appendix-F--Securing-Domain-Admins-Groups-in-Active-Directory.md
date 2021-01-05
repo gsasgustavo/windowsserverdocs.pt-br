@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 591cab5cdba949b7f1828a6719904a2beae071e5
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 613d99bc3f97834897fd11923aaa619bb7558101
+ms.sourcegitcommit: e2dadc9b0c227a489a945bbc531aca5e101f18cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041634"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97801780"
 ---
 # <a name="appendix-f-securing-domain-admins-groups-in-active-directory"></a>Apêndice F: Proteger grupos de administrador de domínio no Active Directory
 
@@ -50,7 +50,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     1.  Clique duas vezes no grupo **Admins** . do domínio e clique na guia **Membros** .
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_62.gif)
+        ![Captura de tela que mostra a guia Membros para remover todos os membros do grupo Admins. do domínio.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_62.gif)
 
     2.  Selecione um membro do grupo, clique em **remover**, em **Sim** e em **OK**.
 
@@ -64,17 +64,17 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
 3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_63.gif)
+    ![Captura de tela que mostra onde selecionar novo para que você possa proteger os administradores de domínio no Active Directory.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_63.gif)
 
 4.  Na caixa de diálogo **novo GPO** , digite \<GPO Name\> e clique em **OK** (em que \<GPO Name\> é o nome desse GPO).
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_64.gif)
+    ![Captura de tela que mostra onde nomear o GPO para que você possa proteger os administradores de domínio no Active Directory.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_64.gif)
 
 5.  No painel de detalhes, clique com o botão direito do mouse \<GPO Name\> e clique em **Editar**.
 
 6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_65.gif)
+    ![Captura de tela que mostra onde navegar para que você possa selecionar administrador de direitos de usuário para proteger os administradores de domínio no Active Directory.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_65.gif)
 
 7.  Configure os direitos de usuário para impedir que os membros do grupo Administradores de domínio acessem servidores e estações de trabalho Membros pela rede fazendo o seguinte:
 
@@ -84,7 +84,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     3.  Digite **Admins**. do domínio, clique em **verificar nomes** e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_66.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que os membros do grupo Administradores de domínio acessem servidores membros e estações de trabalho na rede.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_66.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -96,7 +96,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     3.  Digite **Admins**. do domínio, clique em **verificar nomes** e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_67.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que os membros do grupo DA faça logon como um trabalho em lotes.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_67.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -108,7 +108,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     3.  Digite **Admins**. do domínio, clique em **verificar nomes** e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_68.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que os membros do grupo DA faça logon como um serviço.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_68.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -120,7 +120,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     3.  Digite **Admins**. do domínio, clique em **verificar nomes** e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_69.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que os membros do grupo Administradores de domínio façam logon localmente em servidores membros e estações de trabalho.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_69.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -132,7 +132,7 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     3.  Digite **Admins**. do domínio, clique em **verificar nomes** e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_70.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que membros do grupo Admins. do domínio acessem servidores membros e estações de trabalho via Serviços de Área de Trabalho Remota](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_70.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -144,11 +144,11 @@ Para o grupo Admins. do domínio em cada domínio na floresta:
 
     2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_71.gif)
+        ![Captura de tela que mostra a opção vincular um menu de GPO existente quando você clica com o botão direito do mouse na UO à qual o GPO será aplicado.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_71.gif)
 
     3.  Selecione o GPO que você acabou de criar e clique em **OK**.
 
-        ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_72.gif)
+        ![Captura de tela que mostra onde selecionar o GPO que você acabou de criar enquanto está vinculando o GPO ao servidor membro.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_72.gif)
 
     4.  Crie links para todas as outras UOs que contêm estações de trabalho.
 
@@ -170,13 +170,13 @@ De qualquer servidor membro ou estação de trabalho que não seja afetada pelas
 
 4.  Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)
+    ![Captura de tela que mostra onde aprovar a elevação ao verificar as configurações de GPO negar acesso a estas redes de computador.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)
 
 5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $**, em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
 
 6.  A captura de tela a seguir mostra a mensagem de erro que deve aparecer.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
+    ![Captura de tela que mostra a mensagem de erro que deve aparecer enquanto você está tentando accsss o servidor membro.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
 
 ##### <a name="verify-deny-log-on-as-a-batch-job-gpo-settings"></a>Verificar as configurações de GPO "Negar logon como um trabalho em lotes"
 
@@ -231,7 +231,7 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 16. Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)
+    ![Captura de tela que mostra o erro que deve ocorrer depois que você inserir as credenciais.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)
 
 ##### <a name="verify-deny-log-on-as-a-service-gpo-settings"></a>Verificar as configurações de GPO "Negar logon como um serviço"
 
@@ -257,7 +257,7 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 11. Quando o serviço for reiniciado, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_76.gif)
+    ![Captura de tela que mostra a caixa de diálogo que aparece depois que o serviço é reiniciado.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_76.gif)
 
 ##### <a name="revert-changes-to-the-printer-spooler-service"></a>Reverter alterações para o serviço spooler de impressora
 
@@ -290,4 +290,4 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 5.  Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
-    ![proteger grupos de administradores de domínio](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)
+    ![Captura de tela que mostra a mensagem que indica que o método de entrada que você está usando não é permitido.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)

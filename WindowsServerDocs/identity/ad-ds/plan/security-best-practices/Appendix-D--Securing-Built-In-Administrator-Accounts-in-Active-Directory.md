@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2d6a8a626c5fbf2a8d34a1527b3eb9976c21ebd0
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 2f7588b852c9061f8183d4db02be65ac2e0f79f6
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041714"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711781"
 ---
 # <a name="appendix-d-securing-built-in-administrator-accounts-in-active-directory"></a>Apêndice D: Proteger contas de administrador internas no Active Directory
 
@@ -53,7 +53,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 > É recomendável restringir contas de administrador local em estações de trabalho e servidores membros da mesma maneira que as contas de administrador baseadas em domínio. Portanto, você geralmente deve adicionar a conta de administrador para cada domínio na floresta e a conta de administrador para os computadores locais a essas configurações de direitos de usuário. A captura de tela a seguir mostra um exemplo de configuração desses direitos de usuário para bloquear as contas de administrador local e a conta de administrador de um domínio de executar logons que não devem ser necessários para essas contas.
 
 
-![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)
+![Captura de tela que realça a atribuição de direitos de usuário.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)
 
 -   Configurar GPOs para restringir contas de administrador em controladores de domínio
     -   Em cada domínio na floresta, o GPO controladores de domínio padrão ou uma política vinculada à UO Controladores de domínio deve ser modificada para adicionar a conta de administrador de cada domínio aos seguintes direitos de usuário no **computador \**\ \ \ \ \ Configurações de direitos:
@@ -84,7 +84,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Em **Opções de conta**, selecione a **conta é confidencial e não pode ser** demarcada como indicado na captura de tela a seguir e clique em **OK**.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_24.gif)
+        ![Captura de tela que mostra a caixa de seleção a conta é confidencial e não pode ser delegada.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_24.gif)
 
 3.  Para habilitar o **cartão inteligente é necessário para** o sinalizador de logon interativo na conta, execute as seguintes etapas:
 
@@ -94,7 +94,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Em opções de **conta** , selecione o sinalizador **cartão inteligente necessário para logon interativo** , conforme indicado na captura de tela a seguir, e clique em **OK**.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)
+        ![Captura de tela que mostra que a caixa de seleção cartão inteligente é necessário para logon interativo.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_25.gif)
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-at-the-domain-level"></a>Configurando GPOs para restringir contas de administrador no Domain-Level
 
@@ -107,17 +107,17 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
 3.  Na árvore de console, clique com o botão direito do mouse em **política de grupo objetos** e clique em **novo**.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)
+    ![Captura de tela que mostra Política de Grupo objetos na árvore de console.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)
 
 4.  Na caixa de diálogo **novo GPO** , digite <GPO Name> e clique em **OK** (em que <GPO Name> é o nome desse GPO), conforme indicado na captura de tela a seguir.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)
+    ![Captura de tela que mostra a caixa de diálogo novo GPO.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)
 
 5.  No painel de detalhes, clique com o botão direito do mouse <GPO Name> e clique em **Editar**.
 
 6.  Navegue até **computador \ \ Diretivas**\ \ políticas e clique em **atribuição de direitos de usuário**.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_29.gif)
+    ![Captura de tela que mostra a Editor de Gerenciamento de Política de Grupo.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_29.gif)
 
 7.  Configure os direitos de usuário para impedir que a conta de administrador acesse servidores membros e estações de trabalho na rede fazendo o seguinte:
 
@@ -127,7 +127,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)
+        ![Captura de tela que mostra o formato DomainName/username.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -139,7 +139,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que a conta de administrador faça logon como um trabalho em lotes.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -151,7 +151,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que a conta de administrador faça logon como um serviço.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -163,7 +163,7 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     3.  Digite **administrador**, clique em **verificar nomes** e clique em **OK**. Verifique se a conta é exibida no <DomainName> formato \Username, conforme indicado na captura de tela a seguir.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)
+        ![Captura de tela que mostra como verificar se você configurou os direitos de usuário para impedir que a conta do BA acesse servidores membros e estações de trabalho via Serviços de Área de Trabalho Remota.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)
 
     4.  Clique em **OK** e em **OK** novamente.
 
@@ -175,11 +175,11 @@ Para a conta de administrador interno em cada domínio em sua floresta, você de
 
     2.  Clique com o botão direito do mouse na UO à qual o GPO será aplicado e clique em **vincular um GPO existente**.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_34.gif)
+        ![Captura de tela que mostra a opção vincular um menu de GPO existente.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_34.gif)
 
     3.  Selecione o GPO que você criou e clique em **OK**.
 
-        ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_35.gif)
+        ![Captura de tela que mostra onde selecionar o GPO que você criou.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_35.gif)
 
     4.  Crie links para todas as outras UOs que contêm estações de trabalho.
 
@@ -195,13 +195,13 @@ As etapas de verificação descritas aqui são específicas para o Windows 8 e o
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações de GPO, tente fazer logon interativamente no domínio usando a conta de administrador interna do domínio. Depois de tentar fazer logon, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
-![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)
+![Captura de tela que diz que você deve usar um cartão inteligente para entrar.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)
 
 ##### <a name="verify-account-is-disabled-account-option"></a>Opção de conta verificar "a conta está desabilitada"
 
 1.  De qualquer servidor membro ou estação de trabalho afetada pelas alterações de GPO, tente fazer logon interativamente no domínio usando a conta de administrador interna do domínio. Depois de tentar fazer logon, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
-![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)
+![Captura de tela que diz que sua conta foi desabilitada.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)
 
 ##### <a name="verify-deny-access-to-this-computer-from-the-network-gpo-settings"></a>Verificar as configurações de GPO "negar acesso a este computador pela rede"
 De qualquer servidor membro ou estação de trabalho que não seja afetada pelas alterações de GPO (como um servidor de salto), tente acessar um servidor membro ou estação de trabalho na rede que é afetada pelas alterações de GPO. Para verificar as configurações do GPO, tente mapear a unidade do sistema usando o comando **net use** executando as seguintes etapas:
@@ -214,13 +214,13 @@ De qualquer servidor membro ou estação de trabalho que não seja afetada pelas
 
 4.  Quando for solicitado a aprovar a elevação, clique em **Sim**.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)
+    ![Captura de tela que mostra a caixa de diálogo controle de acesso do usuário.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_38.gif)
 
 5.  Na janela do **prompt de comando** , digite **net use \\ \\ \<Server Name\> \c $**, em que \<Server Name\> é o nome do servidor membro ou da estação de trabalho que você está tentando acessar pela rede.
 
 6.  A captura de tela a seguir mostra a mensagem de erro que deve aparecer.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_39.gif)
+    ![Captura de tela que mostra um erro de falha de acesso.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_39.gif)
 
 ##### <a name="verify-deny-log-on-as-a-batch-job-gpo-settings"></a>Verificar as configurações de GPO "Negar logon como um trabalho em lotes"
 
@@ -275,7 +275,7 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 16. Uma caixa de diálogo semelhante à seguinte deve aparecer.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_40.gif)
+    ![Captura de tela que mostra uma caixa de diálogo Agendador de Tarefas.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_40.gif)
 
 ##### <a name="verify-deny-log-on-as-a-service-gpo-settings"></a>Verificar as configurações de GPO "Negar logon como um serviço"
 
@@ -301,7 +301,7 @@ De qualquer servidor membro ou estação de trabalho afetada pelas alterações 
 
 11. Quando o serviço for reiniciado, uma caixa de diálogo semelhante à seguinte deverá ser exibida.
 
-    ![Protegendo contas de administrador internas](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_41.gif)
+    ![Captura de tela que mostra a caixa de diálogo serviços.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_41.gif)
 
 ##### <a name="revert-changes-to-the-printer-spooler-service"></a>Reverter alterações para o serviço spooler de impressora
 

@@ -1,18 +1,18 @@
 ---
 title: Instalar e configurar o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como instalar e configurar o Windows Server Essentials.
 ms.date: 06/17/2013
 ms.topic: article
 ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: c6fe658db8756856a65bb5284731b949d8edbd31
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c20f06922a29f723e927035689831c04bd13df49
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626231"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97754942"
 ---
 # <a name="install-and-configure-windows-server-essentials"></a>Instalar e configurar o Windows Server Essentials
 
@@ -81,7 +81,7 @@ ms.locfileid: "89626231"
         > [!NOTE]
         >  Depois de clicar em **Opções de unidade (avançadas)**, essa opção não aparecerá novamente. Nesse caso, ignore a parte da etapa que se refere a opções de unidade.
 
-    2.  Para criar uma partição a partir de um espaço não particionado, clique no disco rígido que deseja particionar, clique em **Opções de unidade (avançadas)**, clique em **Novo**, clique na caixa de texto **Tamanho** e digite o tamanho da partição que deseja criar. Por exemplo, se usar o tamanho de partição recomendado de 120 gigabytes (GB), digite **122880**e depois clique em **Aplicar**. Depois de a partição ter sido criada, clique em **Avançar**. A partição é formatada antes de a instalação continuar.
+    2.  Para criar uma partição a partir de um espaço não particionado, clique no disco rígido que deseja particionar, clique em **Opções de unidade (avançadas)**, clique em **Novo**, clique na caixa de texto **Tamanho** e digite o tamanho da partição que deseja criar. Por exemplo, se usar o tamanho de partição recomendado de 120 gigabytes (GB), digite **122880** e depois clique em **Aplicar**. Depois de a partição ter sido criada, clique em **Avançar**. A partição é formatada antes de a instalação continuar.
 
     3.  Para criar uma partição que use todo o espaço não particionado, clique no disco rígido que você deseja particionar, clique em **Opções de unidade (avançadas)**, clique em **Novo** e clique em **Aplicar** para aceitar o tamanho padrão da partição. Depois de a partição ter sido criada, clique em **Avançar**. A partição é formatada antes de a instalação continuar.
 
@@ -123,7 +123,7 @@ ms.locfileid: "89626231"
     > [!IMPORTANT]
     >  O nome do servidor deve ser exclusivo na sua rede. Não é possível alterar o nome do servidor ou o nome de domínio interno depois de concluir esta etapa.
 
-4.  Clique em **Próximo**.
+4.  Clique em **Avançar**.
 
 5.  Na página **Fornecer as informações da conta do administrador**, digite as informações para uma nova conta de administrador.
 
@@ -136,7 +136,7 @@ ms.locfileid: "89626231"
 
 8.  A página **Atualizando e preparando o servidor** exibe o progresso do processo de instalação final. Isso leva tempo para concluir, e o computador reiniciará algumas vezes.
 
-9. Depois de o último servidor reiniciar, a página **Seu servidor está pronto para ser usado** aparece. Clique em **Fechar**.
+9. Depois de o último servidor reiniciar, a página **Seu servidor está pronto para ser usado** aparece. Clique em **fechar**
 
 10. Clique no bloco Dashboard na tela **Inicial** e, no Dashboard, conclua as tarefas de **Configurar meu Servidor** na página **Home**. Você deve concluir essas tarefas imediatamente após a conclusão da instalação do Windows Server Essentials.
 

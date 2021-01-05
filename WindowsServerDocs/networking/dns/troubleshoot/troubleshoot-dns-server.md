@@ -6,12 +6,12 @@ ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: ce4a3f4a183478cd250159f1953a0fd2193f6de6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c817a1b5763f04da8e66d97ce0e47db53a3fe205
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964072"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696998"
 ---
 # <a name="troubleshooting-dns-servers"></a>Solução de problemas de servidores DNS
 
@@ -90,14 +90,14 @@ O problema pode ser causado por um erro do usuário quando os usuários inserem 
 
 ### <a name="if-the-server-is-hosting-a-secondary-copy-of-the-zone"></a>Se o servidor estiver hospedando uma cópia secundária da zona
 
-1. Examine a zona no servidor mestre (o servidor do qual esse servidor efetua pull das transferências de zona).
+1. Examine a zona no servidor primário (o servidor do qual esse servidor efetua pull das transferências de zona).
 
    > [!NOTE]
-   >Você pode determinar qual servidor é o servidor mestre examinando as propriedades da zona secundária no console DNS.
+   >Você pode determinar qual servidor é o servidor primário examinando as propriedades da zona secundária no console DNS.
 
-   Se o nome não estiver correto no servidor mestre, vá para a etapa 4.
+   Se o nome não estiver correto no servidor primário, vá para a etapa 4.
 
-2. Se o nome estiver correto no servidor mestre, verifique se o número de série no servidor mestre é menor ou igual ao número de série no servidor secundário. Se for, modifique o servidor mestre ou o servidor secundário para que o número de série no servidor mestre seja maior que o número de série no servidor secundário.
+2. Se o nome estiver correto no servidor primário, verifique se o número de série no servidor primário é menor ou igual ao número de série no servidor secundário. Se for, modifique o servidor primário ou o servidor secundário para que o número de série no servidor primário seja maior que o número de série no servidor secundário.
 
 3. No servidor secundário, Force uma transferência de zona de dentro do console DNS ou executando o seguinte comando:
 
@@ -159,7 +159,7 @@ Inicie os testes no procedimento a seguir consultando um servidor raiz válido. 
 
    - Se a resposta não contiver um registro de recurso "NS", você terá uma delegação interrompida.
 
-   - Se a resposta contiver registros de recursos "NS", mas nenhum registro de recurso "A", insira **definir recursão**e consulta individualmente para os registros de recurso "a" dos servidores listados nos registros "NS". Se você não encontrar pelo menos um endereço IP válido de um registro de recurso "A" para cada registro de recurso NS em uma zona, você terá uma delegação interrompida.
+   - Se a resposta contiver registros de recursos "NS", mas nenhum registro de recurso "A", insira **definir recursão** e consulta individualmente para os registros de recurso "a" dos servidores listados nos registros "NS". Se você não encontrar pelo menos um endereço IP válido de um registro de recurso "A" para cada registro de recurso NS em uma zona, você terá uma delegação interrompida.
 
 3. Se você determinar que tem uma delegação quebrada, corrija-a adicionando ou atualizando um registro de recurso "a" na zona pai usando um endereço IP válido para um servidor DNS correto para a zona delegada.
 
@@ -185,19 +185,19 @@ Execute as seguintes verificações:
 
 - Verifique Visualizador de Eventos tanto para o servidor DNS primário quanto para o secundário.
 
-- Verifique o servidor mestre para ver se ele está se recusando a enviar a transferência para segurança.
+- Verifique o servidor primário para ver se ele está se recusando a enviar a transferência para segurança.
 
 - Verifique a guia **transferências de zona** das propriedades de zona no console DNS. Se o servidor restringe as transferências de zona para uma lista de servidores, como aqueles listados na guia **servidores de nomes** das propriedades de zona, verifique se o servidor secundário está nessa lista. Verifique se o servidor está configurado para enviar transferências de zona.
 
-- Verifique se há problemas no servidor mestre seguindo as etapas na seção [verificar problemas do servidor DNS](#check-dns-server-problems) . Quando você for solicitado a executar uma tarefa no cliente, execute a tarefa no servidor secundário em vez disso.
+- Verifique se há problemas no servidor primário seguindo as etapas na seção [verificar problemas do servidor DNS](#check-dns-server-problems) . Quando você for solicitado a executar uma tarefa no cliente, execute a tarefa no servidor secundário em vez disso.
 
 - Verifique se o servidor secundário está executando outra implementação de servidor DNS, como BIND. Se for, o problema poderá ter uma das seguintes causas:
 
-  - O servidor mestre do Windows pode ser configurado para enviar transferências de zona rápidas, mas o servidor secundário de terceiros pode não oferecer suporte a transferências de zona rápida. Se esse for o caso, desabilite as transferências de zona rápida no servidor mestre de dentro do console DNS marcando a caixa de seleção **habilitar secundários de associação** na guia **avançado** das propriedades do servidor.
+  - O servidor primário do Windows pode ser configurado para enviar transferências de zona rápidas, mas o servidor secundário de terceiros pode não oferecer suporte a transferências de zona rápida. Se esse for o caso, desabilite as transferências de zona rápida no servidor primário de dentro do console DNS marcando a caixa de seleção **habilitar secundários de associação** na guia **avançado** das propriedades do servidor.
 
   - Se uma zona de pesquisa direta no Windows Server contiver um tipo de registro (por exemplo, um registro SRV) ao qual o servidor secundário não oferece suporte, o servidor secundário poderá ter problemas para obter a zona.
 
-Verifique se o servidor mestre está executando outra implementação de servidor DNS, como BIND. Nesse caso, é possível que a zona no servidor mestre inclua registros de recursos incompatíveis que o Windows não reconheça.
+Verifique se o servidor primário está executando outra implementação de servidor DNS, como BIND. Nesse caso, é possível que a zona no servidor primário inclua registros de recursos incompatíveis que o Windows não reconheça.
 
 Se o servidor mestre ou secundário estiver executando outra implementação de servidor DNS, verifique ambos os servidores para garantir que eles ofereçam suporte aos mesmos recursos. Você pode verificar o Windows Server no console DNS na guia **avançado** da página Propriedades do servidor. Além da caixa habilitar associações secundárias, essa página inclui a lista suspensa de **verificação de nome** . Isso permite que você selecione a imposição de conformidade RFC estrita para caracteres em nomes DNS.
 

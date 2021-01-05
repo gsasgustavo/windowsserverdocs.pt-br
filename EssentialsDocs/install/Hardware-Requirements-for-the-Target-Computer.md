@@ -1,18 +1,18 @@
 ---
 title: Requisitos de Hardware do Computador de Destino
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre os requisitos de hardware que devem estar em vigor para que você instale o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 1672c8168dd206c166ca44392ca290ebb311dcc6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 5c1cfb86c4519ab4f98280f5e21569fb7829c081
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623513"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755232"
 ---
 # <a name="hardware-requirements-for-the-target-computer"></a>Requisitos de Hardware do Computador de Destino
 
@@ -41,7 +41,7 @@ Esta seção fornece os requisitos de hardware para o Windows Server Essentials.
 |Adaptador de rede|Adaptador Gigabit Ethernet (10/100/1000baseT PHY/MAC)|
 |Internet|Algumas funcionalidades podem exigir acesso à Internet (tarifas podem ser aplicadas) ou uma conta do Windows Live &reg; ID|
 |Sistemas Operacionais Clientes com Suporte|-Windows 7<br />-Windows 8<br />-Macintosh OS X 10,5 a 10,8.<br /><br /> **Observação:** Alguns recursos exigem edições Professional ou superior.<br /><br /> 1 GB de espaço disponível no disco rígido (uma parte desse disco será liberada depois da instalação)|
-|Roteador|Um roteador ou firewall com suporte a NAT IPv4|
+|Router|Um roteador ou firewall com suporte a NAT IPv4|
 |Requisitos adicionais|Leitor de DVD-ROM|
 
  Os requisitos reais irão variar com base na configuração do seu sistema, nos aplicativos e nos recursos que você optou por instalar. O desempenho do processador depende não apenas da frequência do relógio, mas também do número de núcleos e do tamanho do cache do processador. Os requisitos de espaço de armazenamento para a partição do sistema são aproximados. Talvez seja exigido espaço de armazenamento disponível adicional se você estiver instalando em uma rede.

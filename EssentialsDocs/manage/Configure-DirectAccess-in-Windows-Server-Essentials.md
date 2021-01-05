@@ -1,18 +1,18 @@
 ---
 title: Configurar o DirectAccess no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como configurar o DirectAccess para permitir que sua equipe de força de celular se conecte à sua rede de qualquer local remoto sem estabelecer uma conexão VPN.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 2d05c5d62eae5effda2c6b73adf71daf1cd0080c
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: eb24f45e301bb616c7d8a43dbf4151c0b8af1ac7
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623325"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755332"
 ---
 # <a name="configure-directaccess-in-windows-server-essentials"></a>Configurar o DirectAccess no Windows Server Essentials
 
@@ -120,7 +120,7 @@ Este tópico fornece instruções passo a passo para configurar o DirectAccess n
 
 9. Na caixa **Servidor DNS alternativo**, digite o endereço IP do seu servidor DNS alternativo, se houver.
 
-10. Clique em **OK**e então clique em **Fechar**.
+10. Clique em **OK** e então clique em **Fechar**.
 
 > [!IMPORTANT]
 >  Certifique-se de configurar o roteador de modo a encaminhar as portas 80 e 443 para o novo endereço IP estático do servidor.
@@ -141,7 +141,7 @@ Este tópico fornece instruções passo a passo para configurar o DirectAccess n
 
 1.  Na página **Iniciar**, abra **Autoridade de Certificação**.
 
-2.  Na árvore de console, em **autoridade de certificação (local)**, expanda **<ServerName \> -AC**, clique com o botão direito do mouse em **modelos de certificado**e clique em **gerenciar**.
+2.  Na árvore de console, em **autoridade de certificação (local)**, expanda **<ServerName \> -AC**, clique com o botão direito do mouse em **modelos de certificado** e clique em **gerenciar**.
 
 3.  Em **Autoridade de certificação (Local)**, clique com botão direito do mouse em **Servidor Web** e clique em **Propriedades**.
 
@@ -191,7 +191,7 @@ Este tópico fornece instruções passo a passo para configurar o DirectAccess n
 
 ####  <a name="to-map-a-new-host-to-the-windows-server-essentials-server-address"></a><a name="BKMK_ToMapNewHosttoServerAddress"></a> Para mapear um novo host para o endereço do servidor do Windows Server Essentials
 
-1.  Na página Inicial, abra o Gerenciador de DNS. Para abrir o Gerenciador de DNS, pesquise **dnsmgmt.msc**e clique em **dnsmgmt.msc** nos resultados.
+1.  Na página Inicial, abra o Gerenciador de DNS. Para abrir o Gerenciador de DNS, pesquise **dnsmgmt.msc** e clique em **dnsmgmt.msc** nos resultados.
 
 2.  Na árvore de console do Gerenciador de DNS, expanda o servidor local, expanda **zonas de pesquisa direta**, clique com o botão direito do mouse na zona com o sufixo de domínio do servidor e clique em **novo host (A ou aaaa)**.
 
@@ -269,7 +269,7 @@ Este tópico fornece instruções passo a passo para configurar o DirectAccess n
 
     6.  Examine os GPOs (objetos de política de grupo) que serão aplicados e modifique-os se necessário.
 
-    7.  Clique em **Avançar**e em **Concluir**.
+    7.  Clique em **Avançar** e em **Concluir**.
 
     8.  Reinicie o serviço de Gerenciamento de acesso remoto executando o seguinte comando do Windows PowerShell no modo elevado:
 
@@ -324,7 +324,7 @@ gpupdate
 
 2.  No console Gerenciamento de Acesso Remoto, clique em **Configuração** e, no painel de detalhes **Configuração de Acesso Remoto**, na **Etapa 3**, clique em **Editar**.
 
-3.  No Assistente para Configuração do Servidor de Acesso Remoto, na guia **Servidor de Local de Rede** , selecione **O servidor do local de rede é implantado no servidor de Acesso Remoto**e, em seguida, selecione o certificado emitido anteriormente (na [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)).
+3.  No Assistente para Configuração do Servidor de Acesso Remoto, na guia **Servidor de Local de Rede** , selecione **O servidor do local de rede é implantado no servidor de Acesso Remoto** e, em seguida, selecione o certificado emitido anteriormente (na [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)).
 
 4.  Siga as instruções para concluir o assistente e clique em **Concluir**.
 

@@ -1,18 +1,18 @@
 ---
 title: Criar o Arquivo Oobe.xml Incluindo Logotipo e EULA
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o arquivo de Oobe.xml para adicionar seu próprio EULA (contrato de licença de usuário final) à configuração inicial.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: d6c1a721107d96f8a2a5de89f95c97ab87bf740a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a809aa273c6cae3a713ee2c39f16b610a7a0ab36
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623760"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711311"
 ---
 # <a name="create-the-oobexml-file-including-logo-and-eula"></a>Criar o Arquivo Oobe.xml Incluindo Logotipo e EULA
 
@@ -30,7 +30,7 @@ Você pode adicionar seu próprio Contrato de Licença de Usuário Final (EULA) 
 
 3. Dentro das marcas <eulafilename \></eulafilename \> , insira o caminho absoluto para o arquivo de EULA. O arquivo EULA deve ser um arquivo de formato RTF.
 
-4. Dentro do nome do <\>< \> marcações/Name, insira o nome da empresa.
+4. Dentro do nome do <\><\> marcações/Name, insira o nome da empresa.
 
     O exemplo a seguir mostra as marcas em um arquivo Oobe.xml:
 

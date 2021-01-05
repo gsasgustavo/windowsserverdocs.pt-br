@@ -1,18 +1,18 @@
 ---
 title: Substituir a Lista de Provedores de Nomes de Domínio
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como substituir a lista de provedores de nomes de domínio que é exibida no assistente de configuração de nome de domínio.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 74509a7d64e718fe1d2b62f806306235e7d827e4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 654334feaee0a0fb571a5394b15c41dc61eb2982
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623361"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755372"
 ---
 # <a name="replace-the-list-of-domain-name-providers"></a>Substituir a Lista de Provedores de Nomes de Domínio
 
@@ -49,7 +49,7 @@ ms.locfileid: "89623361"
 
 7.  Se um logotipo estiver disponível para o provedor de nomes de domínio, adicione-o clicando em **Alterar Logotipo**.
 
-8.  Clique em **Salvar**.
+8.  Clique em **Save** (Salvar).
 
 9. Repita as etapas 2 a 8 para cada provedor de nomes de domínio que desejar listar no assistente.
 
@@ -88,7 +88,7 @@ ms.locfileid: "89623361"
 
  Os seguintes status de domínio são falhas e devem ser relatados como erro:
 
-- Failed (Falha)
+- Com falha
 
 - PendingCustomerInterventionRequired (Intervenção de cliente pendente requerida)
 
@@ -104,7 +104,7 @@ ms.locfileid: "89623361"
 
 - Ready
 
-- Pending (Pendente)
+- Pendente
 
 - InRenewal (Em renovação)
 

@@ -1,18 +1,18 @@
 ---
 title: Integrar um Exchange Server local com o Windows Server Essentials [fwlink_WSE_OPE]
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como configurar e integrar um servidor local que está executando o Exchange Server com um servidor que está executando o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: a0dd4b7469aa44773d978da7d5afd68eac57bff3
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: aef1d55d3743dcee483b4e6e9e1cca5ae33682e9
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623316"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755322"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>Integrar um Exchange Server local com o Windows Server Essentials [fwlink_WSE_OPE]
 
@@ -78,7 +78,7 @@ Este guia fornece informações e instruções básicas para ajudá-lo a configu
 
 2.  Execute o Windows PowerShell como um administrador.
 
-3.  No prompt de comando do Windows PowerShell, digite **Add-ADGroupMember "Enterprise Admins" $env: username**e pressione Enter.
+3.  No prompt de comando do Windows PowerShell, digite **Add-ADGroupMember "Enterprise Admins" $env: username** e pressione Enter.
 
 #### <a name="to-install-exchange-server"></a>Para instalar o Exchange Server
 
@@ -359,18 +359,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
    - Caso esteja realizando uma instalação limpa, execute o seguinte comando:
 
-      **ARRConfig config-** _caminho do certificado para o arquivo de certificado_ **–** _nomes de hostnames para o Exchange Server_
+      `ARRConfig config  -cert`_caminho para o arquivo_ `-hostnames` de certificado _nomes de host para o Exchange Server_
 
      > [!NOTE]
-     >  Por exemplo; **ARRConfig config-CERT** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_
+     >  Por exemplo, `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_
      >
      >  Substitua *mail.contoso.com* pelo nome de seu domínio protegido pelo certificado.
 
    - Caso esteja migrando do Windows Small Business Server, execute o seguinte comando:
 
-      **ARRConfig config –** _caminho do certificado para o arquivo de certificado_ **-** _nomes de hostnames para o Exchange Server_ **-TargetServer** _Server Name do Exchange Server_
+      `ARRConfig config  -cert`_caminho para o arquivo_ `-hostnames` de certificado _nomes de host para o Exchange Server_ `-targetserver` _nome do servidor do Exchange Server_
 
-      Por exemplo; **ARRConfig config-CERT** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_ **-TargetServer** _ExchangeSvr_
+      Por exemplo; `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_ `-targetserver` _ExchangeSvr_
 
       Substitua *mail.contoso.com* pelo nome de seu domínio. Substitua *ExchangeSvr* pelo nome do servidor que executa o Exchange Server.
 

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.openlocfilehash: f1b3e687b9fd49052dd3087fdf21084278e43804
-ms.sourcegitcommit: 3c6c257526b243e876aed59e3f2dec42697f232d
+ms.openlocfilehash: 2622271abcd283471513cb7ae909499ba9d858a4
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418140"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697039"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Criar um método de autenticação personalizado para AD FS no Windows Server
 
@@ -372,7 +372,7 @@ O passo a passo usa o Visual Studio 2012. O projeto pode ser criado usando qualq
     }
     ```
 
-14.  Observe o ' todo ' para o elemento **Resources. FormPageHtml** acima. Você pode corrigi-lo em um minuto, mas primeiro vamos adicionar as instruções de retorno finais necessárias, com base nos tipos implementados recentemente, à sua classe inicial myadapter. Para fazer isso, adicione o seguinte à implementação de IAuthenticationAdapter existente:
+14. Observe o ' todo ' para o elemento **Resources. FormPageHtml** acima. Você pode corrigi-lo em um minuto, mas primeiro vamos adicionar as instruções de retorno finais necessárias, com base nos tipos implementados recentemente, à sua classe inicial myadapter. Para fazer isso, adicione o seguinte à implementação de IAuthenticationAdapter existente:
 
     ```csharp
     class MyAdapter : IAuthenticationAdapter
@@ -448,13 +448,13 @@ O passo a passo usa o Visual Studio 2012. O projeto pode ser criado usando qualq
     </div>
     ```
 
-16. Em seguida, selecione **projeto- \> Adicionar componente... ** Arquivo de recursos e nomeie os **recursos**de arquivo e clique em **Adicionar:**
+16. Em seguida, selecione **projeto- \> Adicionar componente...** Arquivo de recursos e nomeie os **recursos** de arquivo e clique em **Adicionar:**
 
-   ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "criar o provedor")
+    ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "criar o provedor")
 
 17. Em seguida, no arquivo **Resources. resx** , escolha **Adicionar recurso... Adicionar arquivo existente**. Navegue até o arquivo de texto (que contém o fragmento HTML) que você salvou acima.
 
-   Verifique se o código GetFormHtml resolve o nome do novo recurso corretamente pelo prefixo de nome do arquivo de recursos (arquivo. resx) seguido pelo nome do próprio recurso:
+    Verifique se o código GetFormHtml resolve o nome do novo recurso corretamente pelo prefixo de nome do arquivo de recursos (arquivo. resx) seguido pelo nome do próprio recurso:
 
     ```csharp
     public string GetFormHtml(int lcid)
@@ -494,7 +494,7 @@ Copie os arquivos e adicione-o ao GAC.
 
 3. Copie as ferramentas de Gacutil.exe para o servidor.
 
-    Gacutil.exe pode ser encontrado em **% HomeDrive% Program Files (x86) Microsoft sdkswindowsv 8.0 abinnetfx 4,0 Tools** em um computador com o Windows 8. Você precisará do próprio arquivo de **gacutil.exe** , bem como o **1033**, **en-US**e a outra pasta de recursos localizados abaixo do local das **ferramentas NETFX 4,0** .
+    Gacutil.exe pode ser encontrado em **% HomeDrive% Program Files (x86) Microsoft sdkswindowsv 8.0 abinnetfx 4,0 Tools** em um computador com o Windows 8. Você precisará do próprio arquivo de **gacutil.exe** , bem como o **1033**, **en-US** e a outra pasta de recursos localizados abaixo do local das **ferramentas NETFX 4,0** .
 
 4. Copie seus arquivos de provedor (um ou mais arquivos. dll assinados com nome forte) para o mesmo local de pasta que **gacutil.exe** (o local é apenas para conveniência)
 
@@ -619,35 +619,35 @@ Ao concluir os procedimentos acima, você criou uma implementação básica de a
 
 Lembre-se da implementação do TryEndAuthentication:
 
-    ```csharp
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-        //return new instance of IAdapterPresentationForm derived class
-        outgoingClaims = new Claim[0];
-        return new MyPresentationForm();
-    }
-    ```
+```csharp
+public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+{
+    //return new instance of IAdapterPresentationForm derived class
+    outgoingClaims = new Claim[0];
+    return new MyPresentationForm();
+}
+```
 
 Vamos atualizá-lo para que ele nem sempre retorne MyPresentationForm (). Para isso, você pode criar um método utilitário simples dentro de sua classe:
 
-    ```csharp
-    static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
+```csharp
+static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
+{
+    if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
     {
-        if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
-        {
-            throw new ExternalAuthenticationException("Error - no answer found", authContext);
-        }
-
-        if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        throw new ExternalAuthenticationException("Error - no answer found", authContext);
     }
-    ```
+
+    if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+```
 
 Em seguida, atualize TryEndAuthentication como mostrado abaixo:
 

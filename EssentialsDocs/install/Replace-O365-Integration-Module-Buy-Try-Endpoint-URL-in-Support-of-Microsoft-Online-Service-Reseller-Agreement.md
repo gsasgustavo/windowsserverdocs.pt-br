@@ -1,20 +1,20 @@
 ---
-title: Substituir Microsoft 365 módulo de integração comprar-Experimente a URL de ponto de extremidade para dar suporte ao contrato de revendedor de serviços online da Microsoft
-description: Descreve como usar o Windows Server Essentials
+title: Substituir a URL de ponto de extremidade de compra/teste do módulo de integração do Microsoft 365 em suporte ao Contrato de Revendedor de Serviços Online da Microsoft
+description: Saiba como substituir as URLs de ponto de extremidade usadas pelo módulo de integração do Windows Server Essentials Microsoft 365.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: a8a5cf91c6de2971bc8270cc3c7ea92327b71224
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4d01b7dbea4566bae962c73220c389c3a4e2c19a
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623370"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755362"
 ---
-# <a name="replace-microsoft-365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Substituir Microsoft 365 módulo de integração comprar-Experimente a URL de ponto de extremidade para dar suporte ao contrato de revendedor de serviços online da Microsoft
+# <a name="replace-microsoft-365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Substituir a URL de ponto de extremidade de compra/teste do módulo de integração do Microsoft 365 em suporte ao Contrato de Revendedor de Serviços Online da Microsoft
 
 >Aplica-se a: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 

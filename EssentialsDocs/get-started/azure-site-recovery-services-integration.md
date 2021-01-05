@@ -1,18 +1,18 @@
 ---
 title: Integração de Serviços do Azure Site Recovery
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar os serviços de Azure Site Recovery para criar replicações em tempo real de suas máquinas virtuais (VM) armazenadas em seu cofre de backup no Azure.
 ms.date: 10/01/2016
 ms.topic: article
 ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: aa84ae8f3d11631b76d2e85e6a50f309eb83dd74
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 1f6d0f69bdec22c264bfdea6a232892accafe414
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622587"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696868"
 ---
 # <a name="azure-site-recovery-services-integration"></a>Integração de Serviços do Azure Site Recovery
 
@@ -60,8 +60,8 @@ Quando uma máquina virtual que está protegida falhar ou o servidor host no qua
 
 Em qualquer um dos três casos acima, quando uma VM passar por failover para o Azure, o painel do Windows Server Essentials mostrará a nova VM no Azure em execução como na figura abaixo.
 
-![Uma captura de tela mostrando a página recuperação do Azure do painel do Windows Server Essentials. A replicação para o Azure foi habilitada para um host chamado Essentials e uma máquina virtual chamada Essentials-Test em execução no Azure indica que o host passou por failover no Azure.](media/azure-site-recovery-8.PNG)
+![Uma captura de tela mostrando a página recuperação do Azure do painel do Windows Server Essentials. A replicação para o Azure foi habilitada para um host chamado Essentials e uma máquina virtual chamada Essentials-Test em execução no Azure indica que o host fez failover no Azure.](media/azure-site-recovery-8.PNG)
 
-<a name="see-also"></a>Confira também
+<a name="see-also"></a>Consulte também
 --------
 [Introdução ao Windows Server Essentials](get-started.md)

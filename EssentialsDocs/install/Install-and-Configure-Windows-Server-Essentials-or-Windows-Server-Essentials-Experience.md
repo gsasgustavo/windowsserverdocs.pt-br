@@ -1,18 +1,18 @@
 ---
 title: Instalar e configurar o Windows Server Essentials ou a Experiência do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como instalar e configurar o Windows Server Essentials ou a função de experiência do Essentials no Windows Server 2016.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: dfd0611d47c159e629efff11073bec084e175a43
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: e0f903d3f515d749836222686ee6a6b4020b61d4
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626273"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755062"
 ---
 # <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Instalar e configurar o Windows Server Essentials ou a Experiência do Windows Server Essentials
 
@@ -98,9 +98,9 @@ Antes de instalar o Windows Server Essentials ou a função de experiência do E
 
 1.  Faça logon no seu servidor como um administrador local.
 
-2.  Abra **Gerenciador do Servidor**e clique em **Adicionar Funções e Recursos**.
+2.  Abra **Gerenciador do Servidor** e clique em **Adicionar Funções e Recursos**.
 
-3.  Em **Selecionar funções de servidor**, selecione a função **Experiência do Windows Server Essentials**. Na caixa de diálogo, clique em **Adicionar recursos**e clique em **Avançar**.
+3.  Em **Selecionar funções de servidor**, selecione a função **Experiência do Windows Server Essentials**. Na caixa de diálogo, clique em **Adicionar recursos** e clique em **Avançar**.
 
 4.  Em **Recursos**, clique em **Avançar**.
 
@@ -148,7 +148,7 @@ Antes de instalar o Windows Server Essentials ou a função de experiência do E
 
 5.  Nas páginas a seguir, clique em **Avançar**.
 
-6.  Em **Selecionar funções do servidor**, selecione **Experiência do Windows Server Essentials**. Na caixa de diálogo, clique em **Adicionar recursos**e clique em **Avançar**.
+6.  Em **Selecionar funções do servidor**, selecione **Experiência do Windows Server Essentials**. Na caixa de diálogo, clique em **Adicionar recursos** e clique em **Avançar**.
 
 7.  Em **Recursos**, clique em **Avançar**.
 
@@ -167,7 +167,7 @@ Antes de instalar o Windows Server Essentials ou a função de experiência do E
 
 #### <a name="to-deploy-windows-server-essentials-as-a-virtual-machine"></a>Você pode implantar o Windows Server Essentials como uma máquina virtual.
 
-1.  Após a página de boas-vindas do Windows (dependendo da configuração de "¢ s" do seu provedor de sistema), a página **antes de começar** fornece uma opção para configurar o Windows Server Essentials como uma instância virtual ou um hardware físico. A disponibilidade dessas opções é predefinida pelo provedor do seu sistema e as nem sempre as duas opções podem estar disponíveis. Para instalar o Windows Server Essentials como uma máquina virtual, em **instalar o Windows Server Essentials**, selecione **instalar como instância virtual**e clique em **Configurar**.
+1.  Após a página de boas-vindas do Windows (dependendo da configuração de "¢ s" do seu provedor de sistema), a página **antes de começar** fornece uma opção para configurar o Windows Server Essentials como uma instância virtual ou um hardware físico. A disponibilidade dessas opções é predefinida pelo provedor do seu sistema e as nem sempre as duas opções podem estar disponíveis. Para instalar o Windows Server Essentials como uma máquina virtual, em **instalar o Windows Server Essentials**, selecione **instalar como instância virtual** e clique em **Configurar**.
 
 2.  O assistente provisionará uma máquina virtual, o que leva cerca de cinco minutos.
 
@@ -208,7 +208,7 @@ Antes de instalar o Windows Server Essentials ou a função de experiência do E
 
     -   Para obter o progresso imediato sem a barra de progresso, execute `Get-WssConfigurationStatus`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 -   [O que há de novo no Windows Server Essentials](../get-started/what-s-new.md)
 

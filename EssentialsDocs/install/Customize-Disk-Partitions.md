@@ -1,18 +1,18 @@
 ---
 title: Personalizar partições de disco
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como personalizar a configuração de partição de disco criando previamente a imagem usando um arquivo de unattend.xml.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 5a1ed009-81f0-4884-b6b1-5037fe873b13
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 9cfbe158e0dfb193cd6a055652f31b3920a13e8f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 5fcbaf151fce5f1356a9c23103970d6f7d457db2
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623704"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711191"
 ---
 # <a name="customize-disk-partitions"></a>Personalizar partições de disco
 

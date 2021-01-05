@@ -1,17 +1,17 @@
 ---
 title: Usar o aplicativo My Server para se conectar ao Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o aplicativo meu servidor para se conectar ao Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: 61ebb7e0cf61b923c8a3f66b3fd98da48e11451b
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.openlocfilehash: 5384c59d13fdd9fa23104f9baa64e95b2f2d38ee
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554429"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696927"
 ---
 # <a name="use-the-my-server-app-to-connect-to-windows-server-essentials"></a>Usar o aplicativo My Server para se conectar ao Windows Server Essentials
 
@@ -114,8 +114,8 @@ Os aplicativos de servidor para o Windows Server Essentials permitem que você s
 |Gerenciar usuários|(Somente administradores) Altere a senha de uma conta de usuário. Encerrar a sessão de um usuário no servidor. (Configurações de **Usuários**)|
 |Trabalhar com arquivos compartilhados|<ul><li>Carregue e baixe arquivos de arquivos compartilhados (pastas compartilhadas às quais você tem acesso no servidor), seu compartilhamento privado ou, de um dispositivo Windows 8.1, SkyDrive ou armazenamento de rede. Crie pastas. Adicione (carregue), edite e exclua arquivos do servidor.</li><li>Veja o status da transferência durante o carregamento ou download de um arquivo. Cancele uma transferência. Resolva conflitos de arquivo.</li><li>Trabalhe ininterruptamente com arquivos e pastas no computador local, o servidor, SkyDrive ou armazenamento de rede. As listas de arquivos mostram pastas que você usou recentemente em seu computador, no SkyDrive ou no armazenamento de rede, junto com as pastas compartilhadas no servidor e permitem navegar pelas pastas em qualquer um desses locais.</li><li>Pesquise pastas e arquivos no servidor. Clique em um arquivo para baixá-lo e abri-lo no aplicativo padrão. No modo offline, pesquise apenas arquivos offline.</li><li>Compartilhe fotos, músicas e vídeos. Clique em um arquivo para abri-lo em uma imagem, música ou player de vídeo do Windows 8. Ou use **Abrir** ou **Abrir com** para abrir o arquivo em um outro aplicativo. Como sempre, você pode tornar o aplicativo escolhido o aplicativo padrão para esse tipo de mídia.<br /><br />     **Observação:** Por padrão, a funcionalidade de streaming de mídia não está disponível no Windows Server Essentials e no Windows Server 2012 R2 com a função de experiência do Windows Server Essentials instalada. Para obter mais informações, consulte [gerenciar mídia digital](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md).<br /><br /> <ul><li>**Imagens**: na exibição **Imagens**, toque em uma imagem para abri-la. Toque na imagem novamente para retornar ao modo de exibição em miniatura no My Server.</li><li>**Música** -no modo de exibição **música** , exiba álbuns ou músicas compartilhadas no servidor. Toque em um item para abri-lo no player de música.</li><li>**Vídeos** -clique em uma miniatura na exibição de **vídeos** para abrir o player de vídeo.</li></ul></li></ul>|
 |Usar as bibliotecas do SharePoint Online|(Somente meu servidor 2012 R2) Trabalhe com arquivos nas bibliotecas do SharePoint Online da sua equipe. Abra os sites de equipe. (Seção SharePoint Online: abra o site de equipe e faça o drill down até a biblioteca de documentos ou arquivo que deseja abrir. Ao abrir um arquivo, você deve entrar no Microsoft 365 com a conta online da Microsoft associada à sua conta de rede.)<br /><br /> **Observação:** Para usar esse recurso, o servidor deve ser integrado com o Microsoft 365, a assinatura Microsoft 365 deve incluir o SharePoint Online e sua conta de usuário no servidor deve ter uma conta do Microsoft Online Services associada a ele. Para obter informações sobre como integrar o Microsoft 365 e o SharePoint Online com o Windows Server Essentials, consulte [visão geral da integração de serviços para o Windows Server Essentials-parte 1](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-1) e [visão geral da integração de serviços para o Windows Server Essentials-parte 2](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-2).|
-|Personalizar sua exibição **Recentes**|A lista **Recentes** fornece acesso rápido aos arquivos nos quais você está trabalhando agora. Você pode fazer as seguintes alterações:<br /><br /> -Definir o número de dias do histórico de arquivos recente a ser exibido. (Configurações de**Recentes** : **Dias para manter em Recentes**, padrão = 7 dias)<br />-Desmarque a exibição **recente** , se você não precisar mais trabalhar com os arquivos com os quais tem trabalhado. Isso não afeta o cache. Os arquivos ainda estão disponíveis offline. (Configurações**recentes** : botão **limpar** )<br />     **Dica:** Se você não precisar de acesso offline aos arquivos, use **limpar tudo** em configurações **offline** para remover os arquivos do cache.|
-|Trabalhar offline|Por padrão, os arquivos que foram acessados nos últimos sete dias estão disponíveis offline. As alterações offline são sincronizadas com o servidor sempre que você se conectar a ele.<br /><br /> Você pode fazer as seguintes alterações na configuração offline:<br /><br /> -Alterar o número de dias de trabalho para o cache. (Configurações de**Offline** no My Server, configurações de **Arquivos** no My Server 2012 R2: **Período de cache**, padrão = 7 dias)<br />-Permitir transferências de arquivos em redes pagas ou desativar esse recurso. Esse recurso é desativado por padrão para impedir transferências de arquivos caras pelas redes pagas. (Configurações de**Offline** ou **Arquivos** : **Ativar ou desativar a transferência automática de arquivos por redes pagas**; padrão = **Desativada**)<br />-Talvez você queira, ocasionalmente, limpar o cache. Verifique o tamanho do cache nas configurações de **Recentes** ou **Arquivos** e use **Limpar** ou **Limpar tudo** para limpar o cache.<br /><br /> **Dica:** Para descobrir quais arquivos estarão disponíveis offline, em qualquer pasta compartilhada, selecione o filtro **offline em cache** , em vez de **todos**.<br /><br /> **Observação:** Por padrão, o cache armazena o mesmo histórico de arquivos exibido pela lista **recente** . Lembre-se de que se você limpar o cache ou as configurações do cache e a exibição **Recentes** não corresponderem, alguns arquivos da lista **Recentes** podem não estar disponíveis offline.|
+|Personalizar sua exibição **Recentes**|A lista **Recentes** fornece acesso rápido aos arquivos nos quais você está trabalhando agora. Você pode fazer as seguintes alterações:<br /><br /> -Definir o número de dias do histórico de arquivos recente a ser exibido. (Configurações de **Recentes** : **Dias para manter em Recentes**, padrão = 7 dias)<br />-Desmarque a exibição **recente** , se você não precisar mais trabalhar com os arquivos com os quais tem trabalhado. Isso não afeta o cache. Os arquivos ainda estão disponíveis offline. (Configurações **recentes** : botão **limpar** )<br />     **Dica:** Se você não precisar de acesso offline aos arquivos, use **limpar tudo** em configurações **offline** para remover os arquivos do cache.|
+|Trabalhar offline|Por padrão, os arquivos que foram acessados nos últimos sete dias estão disponíveis offline. As alterações offline são sincronizadas com o servidor sempre que você se conectar a ele.<br /><br /> Você pode fazer as seguintes alterações na configuração offline:<br /><br /> -Alterar o número de dias de trabalho para o cache. (Configurações de **Offline** no My Server, configurações de **Arquivos** no My Server 2012 R2: **Período de cache**, padrão = 7 dias)<br />-Permitir transferências de arquivos em redes pagas ou desativar esse recurso. Esse recurso é desativado por padrão para impedir transferências de arquivos caras pelas redes pagas. (Configurações de **Offline** ou **Arquivos** : **Ativar ou desativar a transferência automática de arquivos por redes pagas**; padrão = **Desativada**)<br />-Talvez você queira, ocasionalmente, limpar o cache. Verifique o tamanho do cache nas configurações de **Recentes** ou **Arquivos** e use **Limpar** ou **Limpar tudo** para limpar o cache.<br /><br /> **Dica:** Para descobrir quais arquivos estarão disponíveis offline, em qualquer pasta compartilhada, selecione o filtro **offline em cache** , em vez de **todos**.<br /><br /> **Observação:** Por padrão, o cache armazena o mesmo histórico de arquivos exibido pela lista **recente** . Lembre-se de que se você limpar o cache ou as configurações do cache e a exibição **Recentes** não corresponderem, alguns arquivos da lista **Recentes** podem não estar disponíveis offline.|
 |Sincronização em segundo plano|Os arquivos são sincronizados com o servidor sempre que você faz logon no My Server e quando faz alterações enquanto está conectado ao servidor. Para preservar o desempenho, as sincronizações em segundo plano de uso intensivo de recursos não são realizadas automaticamente na maioria das pastas. Para evitar transferências caras, a sincronização em segundo plano não é executada em redes de 3 GB.<br /><br /> -Resolver conflitos de arquivo, exibidos na área **conflitante** da página **status da transferência** . Quando as transferências de arquivos estão sendo executadas, a tela principal exibe os botões **Status da Transferência** e **Alertas**.|
 
 ##  <a name="how-to-connect-to-your-server-from-your-local-network"></a><a name="BKMK_ConnectServer"></a> Como se conectar ao seu servidor de sua rede local
@@ -125,7 +125,7 @@ Os aplicativos de servidor para o Windows Server Essentials permitem que você s
 
 1.  No seu Windows Phone que executa o Windows 8 ou o Windows 8.1, abra o Internet Explorer.
 
-2.  Na barra de endereços, digite **http://<nomedoservidor \> /Connect/default.aspx? Get = caroot. cer**e pressione Enter.
+2.  Na barra de endereços, digite **http://<nomedoservidor \> /Connect/default.aspx? Get = caroot. cer** e pressione Enter.
 
 3.  Quando a instalação do certificado caroot.cer for solicitada, clique em **Instalar**.
 
@@ -138,7 +138,7 @@ Os aplicativos de servidor para o Windows Server Essentials permitem que você s
 
 1.  Em um computador que executa o Windows 8 ou o Windows 8.1, abra o Internet Explorer.
 
-2.  Na barra de endereços, digite **http://<nomedoservidor \> /Connect/default.aspx? Get = caroot. cer**e pressione Enter.
+2.  Na barra de endereços, digite **http://<nomedoservidor \> /Connect/default.aspx? Get = caroot. cer** e pressione Enter.
 
 3.  Quando a instalação do certificado caroot.cer for solicitada, clique em **Abrir**.
 
@@ -153,7 +153,7 @@ Os aplicativos de servidor para o Windows Server Essentials permitem que você s
     > [!NOTE]
     >  Após a instalação do certificado ser concluída, você pode entrar no aplicativo My Server para Windows 8 ou Windows 8.1 usando o nome do seu servidor e suas credenciais de rede.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 -   [Visão geral da integração de serviços para o Windows Server Essentials-parte 1](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-1)
 

@@ -1,18 +1,18 @@
 ---
 title: Requisitos do Sistema para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre os requisitos de sistema do Windows Server Essentials.
 ms.date: 10/31/2013
 ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 39b74722b9f3036bab5face5d48c9a5a5af3da90
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 9a35006330452850dd10def998a7fdf2d8c8e853
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622390"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711691"
 ---
 # <a name="system-requirements-for-windows-server-essentials"></a>Requisitos do Sistema para o Windows Server Essentials
 
@@ -38,7 +38,7 @@ ms.locfileid: "89622390"
 |Adaptador de rede|Adaptador Gigabit Ethernet (10/100/1000baseT PHY/MAC)|
 |Internet|Alguma funcionalidade pode requerer acesso à Internet (tarifas podem ser aplicadas) ou uma conta da Microsoft|
 |Sistemas operacionais cliente suportados| Windows 10, Windows 8.1, Windows 8, Windows 7, Macintosh OS X versões 10,5 a 10,8.<br /><br /> **Observação:** Alguns recursos exigem edições Professional ou superior.<br /><br /> 1 GB de espaço disponível no disco rígido (uma parte desse disco será liberada depois da instalação)|
-|Roteador|Um roteador ou firewall com suporte para IPv4 NAT ou Ipv6|
+|Router|Um roteador ou firewall com suporte para IPv4 NAT ou Ipv6|
 |Requisitos adicionais|Leitor de DVD-ROM|
 
  Os requisitos reais irão variar com base na configuração do seu sistema, nos aplicativos e nos recursos que você optou por instalar. O desempenho do processador depende não apenas da frequência do relógio, mas também do número de núcleos e do tamanho do cache do processador. Os requisitos de espaço de armazenamento para a partição do sistema são aproximados. Talvez seja exigido espaço de armazenamento disponível adicional se você estiver instalando em uma rede.

@@ -1,18 +1,18 @@
 ---
 title: Windows Server Essentials hospedado
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como implantar o Microsoft Windows Server e oferecer a experiência do Windows Server Essentials como um serviço para seus clientes.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: b1c5a0824dfa8cba03ff778dfad6ef4505eae1eb
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 50b4a0cf76028d80cea0331427761901ddea1e7e
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623497"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755072"
 ---
 # <a name="hosted-windows-server-essentials"></a>Windows Server Essentials hospedado
 
@@ -53,7 +53,7 @@ Este documento inclui informações específicas para os hosters que pretendem i
    Se estiver usando o Virtual Machine Manager, pode criar um modelo usando a instância em execução. Criar um modelo irá realizar a preparação do sistema da instância e desligará o servidor. Depois de armazená-la na sua biblioteca, é possível abrir a instância caso a caso.
 
 ##  <a name="how-do-i-automate-the-deployment"></a><a name="BKMK_automatedeployment"></a> Como fazer automatizar a implantação?
- Depois de obter uma imagem personalizada, é possível realizar a implantação com a sua própria imagem. Para realizar a instalação parcialmente não monitorada, é preciso fornecer/implantar o unattend.xml para a instalação do WinPE. Para fazer uma instalação totalmente autônoma, você também precisa fornecer o arquivo de cfg.ini para a configuração inicial do Windows Server Essentials.
+ Depois de obter uma imagem personalizada, é possível realizar a implantação com a sua própria imagem. Para fazer uma instalação semiautônoma, você precisa fornecer/implantar unattend.xml para a instalação do WinPE. Para fazer uma instalação totalmente autônoma, você também precisa fornecer o arquivo de cfg.ini para a configuração inicial do Windows Server Essentials.
 
 1. Realizar somente instalação não monitorada do WinPE. Isso automatizará somente a instalação do WinPE, e permitirá que a instalação pare antes da Configuração inicial de modo que os usuários finais possam fornecer informações de Corporação, Domínio e Administrador por si mesmos após o RDP na sessão no servidor. Para fazer isso:
 
@@ -209,7 +209,7 @@ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
  **Adicionar Usuário**
 
 ```
-Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]   [<CommonParameters>]
+Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]   [<CommonParameters>]
 ```
 
  Exemplo:

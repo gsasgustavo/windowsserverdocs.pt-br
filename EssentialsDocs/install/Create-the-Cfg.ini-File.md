@@ -1,18 +1,18 @@
 ---
 title: Criar o Arquivo Cfg.ini
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como criar o arquivo de cfg.ini que é usado para automatizar uma instalação do sistema operacional.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 93a73556-22ef-402d-b8d4-582b74c22bcf
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 597f6349d96d29f06f06034504d5800e7e207eae
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ffc9ecaf6059ab21aae474d211ab397858f1b7d2
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623786"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711221"
 ---
 # <a name="create-the-cfgini-file"></a>Criar o Arquivo Cfg.ini
 

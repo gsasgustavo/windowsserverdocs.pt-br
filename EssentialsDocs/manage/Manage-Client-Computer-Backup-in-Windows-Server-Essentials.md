@@ -1,18 +1,18 @@
 ---
 title: Gerenciar o backup do computador cliente no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre tarefas comuns de backup para computadores cliente que você pode realizar usando o painel do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: c743e0a30796eac374052787f7c47b0af6e656b6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ecf893cf0dd2e19a172d28e5579af551c1319977
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623162"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755262"
 ---
 # <a name="manage-client-computer-backup-in-windows-server-essentials"></a>Gerenciar o backup do computador cliente no Windows Server Essentials
 
@@ -69,7 +69,7 @@ ms.locfileid: "89623162"
 ##  <a name="understand-the-computer-backup-settings"></a><a name="BKMK_2"></a> Entender as configurações de backup do computador
  Depois que o backup está configurado para computadores cliente, você pode especificar uma janela diferente de tempo para o realização do backup. Da mesma forma, você pode especificar um tempo de retenção de backup maior ou menor que o padrão.
 
- A opção**restaurar padrões** permite que você redefina a política de retenção e a janela de backup para o padrão fornecido durante a configuração inicial do backup.
+ A opção **restaurar padrões** permite que você redefina a política de retenção e a janela de backup para o padrão fornecido durante a configuração inicial do backup.
 
  Os padrões são:
 
@@ -136,7 +136,7 @@ ms.locfileid: "89623162"
 
 #### <a name="to-change-the-time-that-backup-is-scheduled-to-run"></a>Para alterar o tempo de execução do backup agendado.
 
-1.  Abra o servidor **Painel**e clique em **Dispositivos**.
+1.  Abra o servidor **Painel** e clique em **Dispositivos**.
 
 2.  Em **Tarefas de dispositivos**, clique em **Personalizar Configurações de Backup do computador e Configurações do Histórico de arquivos**.
 
@@ -193,7 +193,7 @@ ms.locfileid: "89623162"
 
 #### <a name="to-reset-computer-backup-to-the-default-settings"></a>Para redefinir o Backup do computador para as configurações padrão
 
-1.  Abra o **Painel**e, em seguida, abra a página de**Dispositivos** .
+1.  Abra o **Painel** e, em seguida, abra a página de **Dispositivos** .
 
 2.  Em **Tarefas de dispositivos**, clique em **Personalizar Configurações de Backup do computador e Configurações do Histórico de arquivos**.
 
@@ -231,11 +231,11 @@ ms.locfileid: "89623162"
 
 4.  Em **ferramentas e configurações de backup docomputador cliente**, clique na guia **ferramentas**.
 
-5.  Na seção**Reparar backups** , clique em **Reparar agora**. O Assistente de reparo do banco de dados do Backup abre.
+5.  Na seção **Reparar backups** , clique em **Reparar agora**. O Assistente de reparo do banco de dados do Backup abre.
 
 6.  Siga as instruções da reparar o Assistente de banco de dados de Backup.
 
-7.  Dependendo do tamanho do banco de dados do backup, reparar o banco de dados pode levar horas. Clique em **Fechar**e clique em **OK** para fechar a página **Personalizar configurações de Backup do computador e histórico de arquivos** .
+7.  Dependendo do tamanho do banco de dados do backup, reparar o banco de dados pode levar horas. Clique em **Fechar** e clique em **OK** para fechar a página **Personalizar configurações de Backup do computador e histórico de arquivos** .
 
     > [!NOTE]
     >  No Windows Server Essentials, clique em **configurações e ferramentas de backup do computador cliente**.
@@ -270,7 +270,7 @@ ms.locfileid: "89623162"
 
 5. Clique em **Desabilitar o backup deste computador** e, em seguida, selecione se você deseja manter ou excluir os arquivos de backup existentes.
 
-6. Clique em **salvar alterações**e clique em **fechar**.
+6. Clique em **salvar alterações** e clique em **fechar**.
 
    Para obter informações sobre como habilitar o backup de um computador depois que o backup foi desabilitado, consulte [configurar o backup de um computador cliente](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3).
 
@@ -291,7 +291,7 @@ ms.locfileid: "89623162"
 
 2.  No servidor, abra **Agendador de Tarefas**. Você pode acessar o Agendador de Tarefas do programa de **ferramentas administrativas** console.
 
-3.  No Agendador de Tarefas, expanda **Biblioteca do Agendador de Tarefas**, expanda **Microsoft**, expanda **Windows**e clique em **Windows Server Essentials**.
+3.  No Agendador de Tarefas, expanda **Biblioteca do Agendador de Tarefas**, expanda **Microsoft**, expanda **Windows** e clique em **Windows Server Essentials**.
 
 4.  Clique na tarefa **Limpeza de Backup** e, em seguida, clique em **Executar** no painel de **ações** . O Status mudará para **executando** até que a tarefa seja concluída.
 
@@ -333,7 +333,7 @@ ms.locfileid: "89623162"
 
     -   **Backup em andamento**: exibe o percentual concluído do backup.
 
-    -   **Backup cancelado**: exibe a data e hora em que o backup foi iniciado se você ou o administrador de rede cancelou o backup.
+    -   O **backup foi cancelado**: exibe a data e a hora em que o backup foi iniciado se você ou o administrador de rede cancelou o backup.
 
     -   **Backup bem-sucedido**: exibe a data e hora em que o backup foi iniciado se ele foi concluído com sucesso.
 
@@ -355,9 +355,9 @@ ms.locfileid: "89623162"
 
 2.  Clique em **Backup**.
 
-3.  Na caixa de diálogo **Propriedades de Backup**, na seção **Status de Backup**, o botão **Iniciar backup** muda para **Parar backup** quando o backup está em andamento. Clique em **Parar backup**e clique em **Sim** para confirmar. O backup continuará sendo executado até você clicar em **Sim**.
+3.  Na caixa de diálogo **Propriedades de Backup**, na seção **Status de Backup**, o botão **Iniciar backup** muda para **Parar backup** quando o backup está em andamento. Clique em **Parar backup** e clique em **Sim** para confirmar. O backup continuará sendo executado até você clicar em **Sim**.
 
-4.  Quando você interrompe um backup em andamento, o status mudará para **Backup Cancelado** com a data e hora em que o backup foi iniciado. Se, em vez disso, verificar o status de **realizado com sucesso**, **incompleto**, ou **falha**, o último backup já terá sido concluído.
+4.  Quando você interrompe um backup em andamento, o status é alterado para o **backup foi cancelado** com a data e a hora em que o backup foi iniciado. Se, em vez disso, verificar o status de **realizado com sucesso**, **incompleto**, ou **falha**, o último backup já terá sido concluído.
 
 5.  Clique em **OK** para fechar a caixa de diálogo **Propriedades de Backup**.
 
@@ -373,11 +373,11 @@ ms.locfileid: "89623162"
 
 2.  Clique em **Backup**.
 
-3.  Na caixa de diálogo **Propriedades do Backup**, na seção **status de Backup**, clique em **Iniciar backup**e, em seguida, clique **OK**.
+3.  Na caixa de diálogo **Propriedades do Backup**, na seção **status de Backup**, clique em **Iniciar backup** e, em seguida, clique **OK**.
 
 4.  Digite uma descrição para o backup e, em seguida, clique **OK**. O status mudará para **iniciando backup**, e depois para **Processeando Backup** com uma porcentagem concluída.
 
-5.  Após o início do backup, o botão muda para **Parar backup**. Se o backup está em andamento e você deseja interrompe-lo, clique em **Parar backup**e clique em**Sim**. Quando interromper um backup em andamento, o status mudará para **Backup cancelado** com a data e hora em que o backup foi iniciado.
+5.  Após o início do backup, o botão muda para **Parar backup**. Se o backup está em andamento e você deseja interrompe-lo, clique em **Parar backup** e clique em **Sim**. Quando você interrompe um backup em andamento, o status é alterado para o **backup foi cancelado** com a data e a hora em que o backup foi iniciado.
 
 6.  Quando o backup for concluído com êxito, o status mudará para **Backup realizado com sucesso** com a data e hora em que o backup realizado iniciou.
 

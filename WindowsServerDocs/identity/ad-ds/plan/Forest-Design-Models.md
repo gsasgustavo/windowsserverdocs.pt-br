@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 40701cbea94da12aea169a4d53b51024c8d31bfe
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 60c8f9b11efc18ffa7eab726126baad1139bf0c0
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049684"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711771"
 ---
 # <a name="forest-design-models"></a>Modelos de design de floresta
 
@@ -33,14 +33,14 @@ No modelo de floresta organizacional, as contas de usuário e os recursos estão
 
 Se os usuários em uma floresta organizacional precisarem acessar recursos em outras florestas (ou vice-versa), as relações de confiança poderão ser estabelecidas entre uma floresta organizacional e as outras florestas. Isso possibilita que os administradores concedam acesso aos recursos na outra floresta. A ilustração a seguir mostra o modelo de floresta organizacional.
 
-![modelos de design de floresta](media/Forest-Design-Models/b1ddb47e-78a5-49c7-bb21-d7421b7b84b8.gif)
+![Ilustração que mostra o modelo de floresta organizacional.](media/Forest-Design-Models/b1ddb47e-78a5-49c7-bb21-d7421b7b84b8.gif)
 
 Cada design de Active Directory inclui pelo menos uma floresta organizacional.
 
 ## <a name="resource-forest-model"></a>Modelo de floresta de recursos
 No modelo de floresta de recursos, uma floresta separada é usada para gerenciar recursos. As florestas de recursos não contêm contas de usuário diferentes das necessárias para a administração do serviço e as necessárias para fornecer acesso alternativo aos recursos nessa floresta, se as contas de usuário na floresta organizacional ficarem indisponíveis. As relações de confiança de floresta são estabelecidas para que os usuários de outras florestas possam acessar os recursos contidos na floresta de recursos. A ilustração a seguir mostra o modelo de floresta do recurso.
 
-![modelos de design de floresta](media/Forest-Design-Models/c0b348a6-958c-4fc5-9035-e2d2a54d5573.gif)
+![Ilustração que mostra o modelo de floresta do recurso.](media/Forest-Design-Models/c0b348a6-958c-4fc5-9035-e2d2a54d5573.gif)
 
 As florestas de recursos fornecem isolamento de serviço que é usado para proteger áreas da rede que precisam manter um estado de alta disponibilidade. Por exemplo, se sua empresa incluir uma instalação de fabricação que precisa continuar a operar quando houver problemas no restante da rede, você poderá criar uma floresta de recursos separada para o grupo de produção.
 

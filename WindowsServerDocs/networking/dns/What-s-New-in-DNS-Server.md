@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 31fdb8921bcb896cb009dcd4d67d57c6c503efa6
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: a2d38b9f9aaac11f5e4e218e24e4428f97ae2c8f
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865605"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696740"
 ---
 # <a name="whats-new-in-dns-server-in-windows-server"></a>O que há de novo no servidor DNS no Windows Server
 
@@ -65,11 +65,11 @@ Você pode definir configurações de RRL para controlar como responder a solici
 
 -   **Máximo de respostas**. Esse é o número máximo de respostas que o servidor emitirá para um cliente enquanto as respostas são suspensas.
 
--   **Domínios de lista branca**. Esta é uma lista de domínios a serem excluídos das configurações de RRL.
+-   **Domínios** daList de permissão. Esta é uma lista de domínios a serem excluídos das configurações de RRL.
 
--   **Sub-redes de lista branca**. Esta é uma lista de sub-redes a serem excluídas das configurações de RRL.
+-   **Sub-redes de permissões**. Esta é uma lista de sub-redes a serem excluídas das configurações de RRL.
 
--   **Interfaces de servidor de lista** de permissões. Esta é uma lista de interfaces do servidor DNS a ser excluída das configurações de RRL.
+-   **Permitir interfaces de servidor** deList. Esta é uma lista de interfaces do servidor DNS a ser excluída das configurações de RRL.
 
 ## <a name="dane-support"></a>Suporte ao SUNDANÊS
 

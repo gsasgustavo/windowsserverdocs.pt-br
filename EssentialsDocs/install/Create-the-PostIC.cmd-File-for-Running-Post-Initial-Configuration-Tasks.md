@@ -1,18 +1,18 @@
 ---
 title: Criar o Arquivo PostIC.cmd para Execução de Tarefas após a Configuração Inicial
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como criar o arquivo postal. cmd para executar tarefas de configuração iniciais posteriores para o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 5a3ae6711d54d1c1f2bebdae6db3065fce970312
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8092714d1a2071f8e14d1f1dcc696bdb027a52ba
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623716"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711241"
 ---
 # <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>Criar o Arquivo PostIC.cmd para Execução de Tarefas após a Configuração Inicial
 

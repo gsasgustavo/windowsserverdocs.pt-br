@@ -1,18 +1,18 @@
 ---
 title: Suporte para implantações maiores
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre o suporte para vários domínios, vários controladores de domínio, 500 usuários e 500 dispositivos e a capacidade de especificar um controlador de domínio designado.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: bf5b6027c934c1dec9916ff08995a7f096a2b8bd
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ec8cea711b679c41562b1e0580430cdb264ace0f
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622447"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696940"
 ---
 # <a name="support-for-larger-deployments"></a>Suporte para implantações maiores
 
@@ -50,7 +50,7 @@ O controlador de domínio designado padrão será o mesmo servidor que está exe
 
 O número máximo de usuários e dispositivos com suporte no Windows Server 2012 R2 Essentials é 25 e 50, respectivamente. Com a introdução da função de servidor Windows Server Essentials Experience, esse limite foi aumentado para 100 usuários e 200 dispositivos.
 
-O Windows Server 2016 Essentials dá suporte a 500 usuários e 500 dispositivos. Tornar isso possível é uma atualização dos controles de estrutura de provedor e de lista de objetos para que eles armazenem em cache e processem rapidamente grandes listas de objetos de usuários e dispositivos. Além disso, um recurso de pesquisa e filtro foi adicionado para localizar rapidamente o usuário ou dispositivo que você pode estar procurando (consulte a Figura 5-2). Você encontrará a funcionalidade de pesquisa e filtro no **painel do Windows Server Essentials**, **acesso via Web remotos**e as janelas e Windows Phone armazenar meus aplicativos de **servidor** .
+O Windows Server 2016 Essentials dá suporte a 500 usuários e 500 dispositivos. Tornar isso possível é uma atualização dos controles de estrutura de provedor e de lista de objetos para que eles armazenem em cache e processem rapidamente grandes listas de objetos de usuários e dispositivos. Além disso, um recurso de pesquisa e filtro foi adicionado para localizar rapidamente o usuário ou dispositivo que você pode estar procurando (consulte a Figura 5-2). Você encontrará a funcionalidade de pesquisa e filtro no **painel do Windows Server Essentials**, **acesso via Web remotos** e as janelas e Windows Phone armazenar meus aplicativos de **servidor** .
 
 ![Uma captura de tela mostrando o uso do recurso de pesquisa do painel do Windows Server Essentials para pesquisar a cadeia de caracteres "d5c". Os resultados dessa pesquisa incluem dois arquivos e pastas e dois usuários.](media/larger-deployments-2.PNG)
 
@@ -59,6 +59,6 @@ Uma captura de tela mostrando o uso do recurso de pesquisa do painel do Windows 
 > [!NOTE]
 > Embora o limite de usuários e dispositivos com suporte tenha aumentado para a função de servidor do Windows Server Essentials, o limite com suporte para o backup do cliente permanece em 75.
 
-<a name="see-also"></a>Confira também
+<a name="see-also"></a>Consulte também
 --------
 [Introdução ao Windows Server Essentials](get-started.md)

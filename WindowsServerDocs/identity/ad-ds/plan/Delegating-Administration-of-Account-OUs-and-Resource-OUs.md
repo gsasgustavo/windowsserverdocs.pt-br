@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3d434b1619c476d2a80003fd6c8d379d6177462e
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 432f68a113055f9e68ca4c18ed8aa54b02cad8b0
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050114"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711701"
 ---
 # <a name="delegating-administration-of-account-ous-and-resource-ous"></a>Delegando administração das UOs de conta e de recurso
 
@@ -25,7 +25,7 @@ Delegue uma estrutura de UO de conta para administradores de dados se precisar c
 
 A ilustração a seguir mostra um exemplo de uma estrutura de UO de conta.
 
-![Delegando a administração](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/66d38fbe-e8eb-42d7-abab-9526243bf6d9.gif)
+![Ilustração que mostra um exemplo de uma estrutura de UO de conta.](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/66d38fbe-e8eb-42d7-abab-9526243bf6d9.gif)
 
 A tabela a seguir lista e descreve as possíveis UOs filhas que você pode criar em uma estrutura de UO de conta.
 
@@ -39,7 +39,7 @@ A tabela a seguir lista e descreve as possíveis UOs filhas que você pode criar
 
 A ilustração a seguir mostra um exemplo de um design de grupo administrativo para uma estrutura de UO de conta.
 
-![Delegando a administração](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/be2cd2d2-6956-429c-a53a-369e6fe40b2b.gif)
+![Ilustração que mostra um exemplo de um design de grupo administrativo para uma estrutura de UO de conta.](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/be2cd2d2-6956-429c-a53a-369e6fe40b2b.gif)
 
 Os grupos que gerenciam as UOs filhas recebem controle total apenas sobre a classe específica de objetos que eles são responsáveis por gerenciar.
 
@@ -50,7 +50,7 @@ As UOs de recurso são usadas para gerenciar o acesso aos recursos. O proprietá
 
 A ilustração a seguir mostra os dois locais possíveis para a UO de recurso.
 
-![Delegando a administração](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/6667a5ce-34d6-48a9-9974-b823ba70e2af.gif)
+![Ilustração que mostra os dois locais possíveis para a UO de recurso.](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/6667a5ce-34d6-48a9-9974-b823ba70e2af.gif)
 
 A UO de recursos pode estar localizada na raiz do domínio ou como uma UO filho da UO da conta correspondente na hierarquia administrativa da UO. As UOs de recurso não têm nenhuma UO filho padrão. Os computadores e grupos são colocados diretamente na UO do recurso.
 

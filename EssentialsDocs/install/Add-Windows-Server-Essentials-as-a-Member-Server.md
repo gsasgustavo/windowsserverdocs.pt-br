@@ -1,18 +1,18 @@
 ---
 title: Adicionar o Windows Server Essentials como um servidor membro
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como adicionar o Windows Server Essentials como um servidor membro a um ambiente de domínio Active Directory existente.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 3325799dc8fb81ab15f8cb03102b9c6248526b74
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 470d713d2d9b105c834369cd15dad372f843a67d
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624004"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711611"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Adicionar o Windows Server Essentials como um servidor membro
 

@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 30aa1010d1222b61ed21d2a3921d0166f24f7a79
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 54dc9de562352f3b1106a6b0725ab368b449cac5
+ms.sourcegitcommit: e2dadc9b0c227a489a945bbc531aca5e101f18cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97042474"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97801740"
 ---
 # <a name="monitoring-active-directory-for-signs-of-compromise"></a>Monitorar o Active Directory em busca de sinais de comprometimento
 
@@ -109,7 +109,7 @@ Para obter uma lista de subcategorias de auditoria configuradas no momento em um
 
 A captura de tela a seguir mostra um exemplo de auditpol.exe listando a política de auditoria atual.
 
-![monitorando o AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
+![Captura de tela que mostra um exemplo de auditpol.exe listando a política de auditoria atual.](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
 
 > [!NOTE]
 > Política de Grupo nem sempre relata com precisão o status de todas as políticas de auditoria habilitadas, enquanto auditpol.exe. Consulte [obtendo a política de auditoria efetiva no Windows 7 e 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) para obter mais detalhes.
@@ -256,7 +256,7 @@ Essa configuração de política de segurança não está sendo usada no momento
 
 #### <a name="object-access"></a>Acesso a objetos
 
-##### <a name="file-system"></a>Sistema de arquivos
+##### <a name="file-system"></a>Sistema de Arquivos
 Essa subcategoria relata quando os objetos do sistema de arquivos são acessados. Somente objetos do sistema de arquivos com SACLs causam a geração de eventos de auditoria e somente quando eles são acessados de maneira correspondente às entradas da SACL. Por si só, essa configuração de política não causará a auditoria de nenhum evento. Ele determina se é necessário auditar o evento de um usuário que acessa um objeto do sistema de arquivos que tem uma SACL (lista de controle de acesso) do sistema especificada, permitindo que a auditoria ocorra com eficiência.
 
 Se a configuração de acesso ao objeto de auditoria estiver configurada como **êxito**, uma entrada de auditoria será gerada cada vez que um usuário acessar com êxito um objeto com uma SACL especificada. Se essa configuração de política estiver configurada como **falha**, uma entrada de auditoria será gerada cada vez que um usuário falhar em uma tentativa de acessar um objeto com uma SACL especificada.
@@ -328,7 +328,7 @@ Para definir a política de auditoria usando políticas de grupo, configure as c
 
 A política de auditoria avançada pode ser definida usando Active Directory ou políticas de grupo local. Para definir a política de auditoria avançada, configure as subcategorias apropriadas localizadas em **computador \** \ Configurações de auditoria de Settings\Advanced (consulte a captura de tela a seguir para obter um exemplo do editor de política de grupo local (gpedit. msc)). Cada subcategoria de diretiva de auditoria pode ser habilitada para eventos de **êxito**, **falha** ou **êxito** e **falha** .
 
-![monitorando o AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
+![Captura de tela que mostra um exemplo da Editor de Política de Grupo Local (gpedit. msc).](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
 
 ### <a name="setting-windows-audit-policy-using-auditpolexe"></a>Definindo a política de auditoria do Windows usando Auditpol.exe
 
@@ -378,7 +378,7 @@ Auditpol.exe pode ser usado para salvar e restaurar uma política de auditoria l
 
 ## <a name="enforcing-traditional-auditing-or-advanced-auditing"></a>Impondo auditoria tradicional ou auditoria avançada
 
-No Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 e Windows Vista, os administradores podem optar por habilitar as nove categorias tradicionais ou usar as subcategorias. É uma opção binária que deve ser feita em cada sistema Windows. As categorias principais podem ser habilitadas ou o subcategoriesit não pode ser ambos.
+No Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 e Windows Vista, os administradores podem optar por habilitar as nove categorias tradicionais ou usar as subcategorias. É uma opção binária que deve ser feita em cada sistema Windows. As categorias principais podem ser habilitadas ou as subcategorias, não podem ser ambas.
 
 Para impedir que a política de categoria tradicional herdada substitua as subcategorias de política de auditoria, você deve habilitar as configurações de política de **política de auditoria forçada (Windows Vista ou posterior) para substituir as configurações de categoria** de política de auditoria localizadas em **computador \**\ \ instalar opções.
 

@@ -5,12 +5,12 @@ ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
 author: nirb-ms
-ms.openlocfilehash: 1ddfbbda9ab0bdf4d04213069e192e471e4d1b98
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 3f12a1eae7349d3f9c5b447a65a5455f9d41b51a
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991686"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696992"
 ---
 # <a name="beginning-your-general-data-protection-regulation-gdpr-journey-for-windows-server"></a>Iniciando sua jornada de Regulamento Geral sobre a Proteção de Dados (GDPR) para o Windows Server
 
@@ -106,7 +106,7 @@ Dois princípios principais guiaram e continuarão a guiar o desenvolvimento do 
 
 A Microsoft permaneceu sólido em relação a esses princípios, conforme observado recentemente pelo CEO da Microsoft, Satya Nadella,
 
-> "À_medida que o mundo continua a mudar e os requisitos de negócios evoluem, algumas coisas são consistentes: a demanda de segurança e privacidade do cliente._"
+> "À _medida que o mundo continua a mudar e os requisitos de negócios evoluem, algumas coisas são consistentes: a demanda de segurança e privacidade do cliente._"
 
 À medida que você trabalha para cumprir o GDPR, compreender a função dos seus servidores físicos e virtuais na criação, no acesso, no processamento, no armazenamento e no gerenciamento de dados que podem ser qualificados como dados pessoais e potencialmente confidenciais sob o GDPR é importante. O Windows Server fornece recursos que o ajudarão a cumprir os requisitos de GDPR para implementar medidas de segurança técnicas e organizacionais apropriadas para proteger dados pessoais.
 
@@ -241,7 +241,7 @@ O Windows Server 2016 também inclui proteção interna contra algumas classes d
 
 Quando o programa chama essa função, ele pode ir para um local não intencional especificado pelo invasor. Esses ataques também são conhecidos como ataques de JOP (programação orientada a salto). A proteção de fluxo de controle impede ataques JOP, colocando restrições rígidas sobre o código do aplicativo que pode ser executado – especialmente instruções de chamada indiretas. Ele adiciona verificações de segurança leves para identificar o conjunto de funções no aplicativo que são destinos válidos para chamadas indiretas. Quando um aplicativo é executado, ele verifica se esses destinos de chamada indireta são válidos.
 
-Se a verificação de proteção do fluxo de controle falhar em tempo de execução, o Windows Server 2016 encerrará imediatamente o programa, interrompendo qualquer exploração que tente chamar indiretamente um endereço inválido. O protetor de fluxo de controle fornece uma camada adicional importante de proteção para o Device Guard. Se um aplicativo listado em branco tiver sido comprometido, ele poderá ser executado desmarcado pelo Device Guard, pois a triagem de dispositivo veria que o aplicativo foi assinado e é considerado confiável.
+Se a verificação de proteção do fluxo de controle falhar em tempo de execução, o Windows Server 2016 encerrará imediatamente o programa, interrompendo qualquer exploração que tente chamar indiretamente um endereço inválido. O protetor de fluxo de controle fornece uma camada adicional importante de proteção para o Device Guard. Se um aplicativo allowlisted tiver sido comprometido, ele poderá ser executado desmarcado pelo Device Guard, pois a triagem de dispositivo veria que o aplicativo foi assinado e considerado confiável.
 
 Mas como a proteção de fluxo de controle pode identificar se o aplicativo está em execução em uma ordem não predeterminada e não viável, o ataque falharia, impedindo a execução do aplicativo comprometido. Juntas, essas proteções tornam muito difícil para os invasores injetarem malwares em software em execução no Windows Server 2016.
 

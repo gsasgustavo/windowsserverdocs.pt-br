@@ -1,18 +1,18 @@
 ---
 title: Personalizar pastas compartilhadas
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como personalizar o local das pastas de servidor e especificar pastas de servidor adicionais.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: c1a6276199964ac7fd2eb3953cb3fac828063dfc
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 40ee2a7069e39c9d6b85dcc5eb69c9f800b2c68e
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623673"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755222"
 ---
 # <a name="customize-shared-folders"></a>Personalizar pastas compartilhadas
 

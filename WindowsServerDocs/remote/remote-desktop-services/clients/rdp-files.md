@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 00bda15c409f5323a96dcbf48bc2dd130ec6368b
-ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
+ms.openlocfilehash: 3bd855e172b8c9999fa258d0d5e6f5fa57664467
+ms.sourcegitcommit: 4f7308430a69fe7965e16aa5b31f87c5d68e4a09
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793593"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577368"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>Configurações do arquivo RDP com suporte da Área de Trabalho Remota
 
@@ -35,7 +35,7 @@ A tabela também realça quais configurações são compatíveis como propriedad
 | promptcredentialonce:i:value | Determina se as credenciais do usuário são salvas e usadas para ambos o Gateway de Área de Trabalho Remota e o computador remoto. | - 0: Sessão remota não usará as mesmas credenciais</br>- 1: Sessão remota usará as mesmas credenciais | 1 | Não |
 | authentication level:i:value | Define as configurações de nível de autenticação do servidor. | - 0: Se a autenticação do servidor falhar, conectar ao computador sem aviso (Conectar e não me avisar)</br>- 1: Se a autenticação do servidor falhar, não estabelecer uma conexão (Não conectar)</br>- 2: Se a autenticação do servidor falhar, mostrar um aviso e permite conectar ou recusar a conexão (Avisar-me)</br>- 3: Nenhum requisito de autenticação especificado. | 3 | Não |
 | enablecredsspsupport:i:value | Determina se o cliente usará o CredSSP (Provedor de Suporte de Segurança de Credencial) para a autenticação, se ele estiver disponível. | - 0: RDP não usará CredSSP, mesmo se o sistema operacional der suporte a CredSSP</br>- 1: O RDP usará CredSSP se o sistema operacional der suporte a CredSSP | 1 | Sim |
-| disableconnectionsharing:i:value | Determina se o cliente se reconecta a qualquer sessão desconectada existente ou iniciará uma nova conexão quando uma nova conexão for iniciada. | - 0: Reconectar a qualquer sessão existente</br>- 1: Iniciar nova conexão | 0 | Sim |
+| disableconnectionsharing:i:value | Determina se o cliente se reconecta a qualquer sessão desconectada existente ou iniciará uma nova conexão quando uma nova conexão for iniciada. | - 0: Reconectar a qualquer sessão existente</br>- 1: Iniciar nova conexão | 0 | Não |
 | alternate shell:s:value | Especifica um programa a ser iniciado automaticamente na sessão remota como shell em vez de explorador. | Caminho válido para um arquivo executável, como "C:\ProgramFiles\Office\word.exe" | | Sim |
 
 ## <a name="session-behavior"></a>Comportamento da sessão

@@ -1,18 +1,18 @@
 ---
 title: Kit de Avaliação e Implantação para Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre o kit de avaliação e implantação do Windows Server Essentials, que é uma coleção de ferramentas, binários e pacotes de idiomas do sistema operacional.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 6198e8d8e06a76b9768f5c1166b438639d2ffca2
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 991ffd45a2e4af4bdfabc569a40b6f26467d7dc1
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623969"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711571"
 ---
 # <a name="assessment-and-deployment-kit-for-windows-server-essentials"></a>Kit de Avaliação e Implantação para Windows Server Essentials
 
@@ -71,7 +71,7 @@ O &reg; ADK (Kit de avaliação e implantação) do Windows Server 2012 Essentia
 
     -   [Adicionar informações de parceiro de registro do Contrato de Parceiro de Serviço Online da Microsoft](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
 
-    -   [Substituir Microsoft 365 módulo de integração comprar-Experimente a URL de ponto de extremidade para dar suporte ao contrato de revendedor de serviços online da Microsoft](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+    -   [Substituir a URL de ponto de extremidade de compra/teste do módulo de integração do Microsoft 365 em suporte ao Contrato de Revendedor de Serviços Online da Microsoft](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 
     -   [Criar um DVD de recuperação de servidor para servidores administrados remotamente](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 

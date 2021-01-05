@@ -6,19 +6,19 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 1d25127b974c6b379e4fd52433ea74252801c166
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: c1afb664162609aa270dfa25137b9ccbad43373b
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97047274"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696981"
 ---
 # <a name="install-hgs-in-an-existing-bastion-forest"></a>Instalar o HGS em uma floresta de bastiões existente
 
 >Aplica-se a: Windows Server 2019, Windows Server (canal semestral), Windows Server 2016
 
 
-## <a name="join-the-hgs-server-to-the-existing-domain"></a>Ingressar o servidor HGS no domínio existente
+## <a name="join-the-hgs-server-to-the-root-domain"></a>Ingresse o servidor HGS no domínio raiz
 
 Em uma floresta de bastiões existente, o HGS deve ser adicionado ao domínio raiz. Use Gerenciador do Servidor ou [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) para ingressar o servidor HgS no domínio raiz.
 
@@ -31,7 +31,7 @@ Execute todos os comandos neste tópico em uma sessão do PowerShell com privil�
 Se o seu datacenter tiver uma floresta de bastiões segura em que você deseja ingressar nos nós HGS, siga estas etapas.
 Você também pode usar estas etapas para configurar dois ou mais clusters HGS independentes que ingressaram no mesmo domínio.
 
-## <a name="join-the-hgs-server-to-the-existing-domain"></a>Ingressar o servidor HGS no domínio existente
+## <a name="join-the-hgs-server-to-the-desired-domain"></a>Ingresse o servidor HGS no domínio desejado
 
 Use Gerenciador do Servidor ou [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) para unir os servidores HgS ao domínio desejado.
 

@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 304533d7f6b810a8db338b09a5959e987a922baa
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 2cc9fa031ea41bddf76285cdeabb3ed33a10688a
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049344"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711751"
 ---
 # <a name="spn-and-upn-uniqueness"></a>Exclusividade de SPN e UPN
 
@@ -26,7 +26,7 @@ ms.locfileid: "97049344"
 ## <a name="overview"></a>Visão geral
 Controladores de domínio que executam o Windows Server 2012 R2 bloqueiam a criação de SPN (nomes de entidade de serviço) duplicados e UPN (nomes de entidade de usuário). Isso inclui se a restauração ou reanimação de um objeto excluído ou a renomeação de um objeto resultaria em uma duplicata.
 
-### <a name="background"></a>Segundo plano
+### <a name="background"></a>Tela de fundo
 Normalmente, os nomes de entidade de serviço (SPN) duplicados ocorrem e resultam em falhas de autenticação e podem levar à utilização excessiva da CPU do LSASs. Não há nenhum método na caixa para bloquear a adição de um SPN ou UPN duplicado. *
 
 Valores UPN duplicados interrompem a sincronização entre o AD local e o Office 365.
@@ -49,7 +49,7 @@ Os códigos de erro 8467 ou 8468 ou seus equivalentes hexadecimais, simbólicos 
 
 **Tabela SEQ tabela \\ \* árabe 2: códigos de erro de exclusividade de UPN e SPN**
 
-|Decimal|Hex|Simbólico|Cadeia de caracteres|
+|Decimal|Hex|Simbólico|String|
 |-----------|-------|------------|----------|
 |8467|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|A operação falhou porque o valor de SPN fornecido para adição/modificação não é exclusivo em toda a floresta.|
 |8648|21C8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|A operação falhou porque o valor UPN fornecido para adição/modificação não é exclusivo em toda a floresta.|
@@ -59,29 +59,29 @@ Os códigos de erro 8467 ou 8468 ou seus equivalentes hexadecimais, simbólicos 
 ### <a name="dsamsc"></a>DSA. msc
 O nome de logon do usuário que você escolheu já está em uso nesta empresa. Escolha outro nome de logon e tente novamente.
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig01_DupUPN.gif)
+![Captura de tela que mostra uma mensagem que diz que o nome de logon que você escolheu já está em uso.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig01_DupUPN.gif)
 
 Modificar uma conta existente:
 
 O nome de logon de usuário especificado já existe na empresa. Especifique um novo, seja alterando o prefixo ou selecionando um sufixo diferente na lista.
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig02_DupUPNMod.gif)
+![Captura de tela que mostra uma mensagem que diz o nome de logon que você usou já existe na empresa.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig02_DupUPNMod.gif)
 
 ### <a name="active-directory-administrative-center-dsacexe"></a>Centro Administrativo do Active Directory (DSAC.exe)
 Uma tentativa de criar um novo usuário no Centro Administrativo do Active Directory com um UPN que já existe resultará no seguinte erro.
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)
+![Captura de tela que mostra uma mensagem dizendo que o novo usuário não foi criado.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)
 
 **Figura SEQ figura \\ \* árabe 1 erro exibido no centro administrativo do AD quando uma nova criação de usuário falhar devido a um UPN duplicado**
 
 ### <a name="event-2974-source-activedirectory_domainservice"></a>Origem do evento 2974: ActiveDirectory_DomainService
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig04_Event2974.gif)
+![Captura de tela que mostra ](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig04_Event2974.gif)
 
 **Figura SEQ figura \\ \* árabe 2 ID do evento 2974 com o erro 8648**
 
 O evento 2974 lista o valor que foi bloqueado e uma lista de um ou mais objetos (até 10) que já contêm esse valor.  Na figura a seguir, você pode ver que o valor do atributo UPN **<em>dhunt@blue.contoso.com</em>** já existe em quatro outros objetos.  Como esse é um novo recurso do Windows Server 2012 R2, a criação acidental de UPN e SPNs duplicados em um ambiente misto ainda ocorrerá quando os DCs de nível inferior processarem a tentativa de gravação.
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)
+![Captura de tela que mostra a ID de evento 2974 árabe 2 com o erro 8648.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig05_Event2974ShowAllDups.gif)
 
 **Figura SEQ figura \\ \* árabe 3 evento 2974 mostrando todos os objetos que contêm o UPN duplicado**
 
@@ -104,33 +104,33 @@ The operation failed because UPN value provided for addition/modification is not
 000021C8: AtrErr: DSID-03200BBA, #1: 0: 000021C8: DSID-03200BBA, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 90290 (userPrincipalName)
 ```
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig06_ADSI21c8.gif)
+![Captura de tela que mostra que a operação falhou com o código de erro 0x21c8.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig06_ADSI21c8.gif)
 
 **Figura SEQ figura \\ \* Arabic 4 mensagem de erro exibida em ADSIEdit quando a adição de UPN duplicado está bloqueada**
 
 ### <a name="windows-powershell"></a>Windows PowerShell
 Windows Server 2012 R2:
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig07_SetADUser2012.gif)
+![Captura de tela que mostra uma mensagem indicando que a operação falhou.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig07_SetADUser2012.gif)
 
 PS em execução no servidor 2012 destinado a um controlador de domínio do Windows Server 2012 R2:
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig08_SetADUser2012R2.gif)
+![Captura de tela que mostra um erro desconhecido.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig08_SetADUser2012R2.gif)
 
 DSAC.exe em execução no Windows Server 2012 visando um controlador de domínio do Windows Server 2012 R2:
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig09_UserCreateError.gif)
+![Captura de tela que mostra um erro de criação de usuário em não Windows Server 2012 R2 ao direcionar o Windows Server 2012 R2 DC.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig09_UserCreateError.gif)
 
 **Figura SEQ figura \\ \* árabe 5 DSAC erro de criação de usuário em não windows Server 2012 R2 ao direcionar o windows Server 2012 R2 DC**
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig10_UserModError.gif)
+![Captura de tela que mostra um erro de modificação do usuário em não Windows Server 2012 R2 ao direcionar o Windows Server 2012 R2 DC.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig10_UserModError.gif)
 
 **Figura SEQ figura \\ \* árabe 6 DSAC erro de modificação do usuário em não Windows Server 2012 R2 ao direcionar o windows Server 2012 R2 DC**
 
 ### <a name="restore-of-an-object-that-would-result-in-a-duplicate-upn-fails"></a>A restauração de um objeto que resultaria em falha em um UPN duplicado:
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig11_RestoreDupUPN.gif)
+![Captura de tela que mostra como restaurar um objeto.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig11_RestoreDupUPN.gif)
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig12_RestoreDupUPNError.gif)
+![Captura de tela que mostra que a operação falhou porque o valor UPN fornecido para adição/modificação não é exclusivo em toda a floresta.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig12_RestoreDupUPNError.gif)
 
 Nenhum evento é registrado quando um objeto não consegue ser restaurado devido a um UPN/SPN duplicado.
 
@@ -186,7 +186,7 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
 
 -   Selecionar _ *aplicar**
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)
+![Captura de tela que mostra a página de pesquisa global.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)
 
 ### <a name="using-windows-powershell"></a>Usando o Windows PowerShell
 
@@ -200,13 +200,13 @@ Se o objeto precisar ser restaurado, será necessário remover os UPNs duplicado
 
 Para anular o atributo UserPrincipalName usando o Windows PowerShell:
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig15_NullUPN.gif)
+![Captura de tela que mostra a operação que falhou com o código de erro 0x21c7.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig15_NullUPN.gif)
 
 > [!NOTE]
 > O atributo userPrincipalName é um atributo de valor único, portanto, esse procedimento só removerá o UPN duplicado.
 
 ### <a name="duplicate-spn"></a>SPN duplicado
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig16_DupSPN.gif)
+![Captura de tela que mostra a mensagem de erro exibida em ADSIEdit quando a adição de SPN duplicado está bloqueada.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig16_DupSPN.gif)
 
 **Figura SEQ Figure a \\ \* mensagem de erro Arabic 8 exibida no ADSIEdit quando a adição de SPN duplicado é bloqueada**
 
@@ -220,7 +220,7 @@ servicePrincipalName Value=<SPN>
 <Object DN> Winerror: 8467
 ```
 
-![Exclusividade de SPN e UPN](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)
+![Captura de tela que mostra o erro registrado quando a criação de SPN duplicado está bloqueada.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)
 
 **Figura SEQ figura \\ \* Arabic 9 erro registrado quando a criação de SPN duplicado está bloqueada**
 

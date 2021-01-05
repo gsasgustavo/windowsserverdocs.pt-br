@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 91f5d6cd5d7c3646bed8d37e944979eb9448a87c
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: d108ca02919cde08b93f217712d3be2e8c622fb1
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050154"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711741"
 ---
 # <a name="ad-ds-deployment-requirements"></a>Requisitos de implantação do AD DS
 
@@ -25,7 +25,7 @@ Além disso, como parte de sua implantação do AD DS, você pode decidir atuali
 ## <a name="deploying-a-windows-server-2008-forest-root-domain"></a>Implantando um domínio raiz de floresta do Windows Server 2008
 O domínio raiz da floresta fornece a base para sua infraestrutura de floresta AD DS. Para implantar AD DS, você deve primeiro implantar um domínio raiz da floresta. Para fazer isso, você deve examinar seu design de AD DS; configurar o serviço DNS para o domínio raiz da floresta; Crie o domínio raiz da floresta, que consiste na implantação de controladores de domínio raiz da floresta, na configuração da topologia do site para o domínio raiz da floresta e na configuração das funções do mestre de operações (também conhecidas como operações de mestre único flexíveis ou FSMO); e aumente os níveis funcionais de floresta e domínio. A ilustração a seguir mostra o processo geral de implantação de um domínio raiz da floresta.
 
-![Requisitos de AD DS](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
+![Ilustração que mostra o processo geral de implantação de um domínio raiz da floresta.](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
 
 Para obter mais informações, consulte [implantando um domínio raiz de floresta do Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 

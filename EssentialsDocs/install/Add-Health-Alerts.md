@@ -1,18 +1,18 @@
 ---
 title: Adicionar Alertas de Integridade
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como instalar um suplemento de integridade para fornecer definições para alertas, verificações de integridade e reparos para problemas de rede.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 3a3c04a48e06ef0040943b866eaf1ddb0be8fa89
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 9c57e364e4596427b8a2f07c7e67e2573a21ba78
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624077"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711651"
 ---
 # <a name="add-health-alerts"></a>Adicionar Alertas de Integridade
 

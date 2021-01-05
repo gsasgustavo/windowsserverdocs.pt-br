@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1e4aff28a2212b678770cb9f78400e1db48cf8ec
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b8dd22072326398f20477dbb65ebf3e1adf1164a
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049614"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711801"
 ---
 # <a name="guidance-about-how-to-configure-protected-accounts"></a>Diretrizes sobre como configurar contas protegidas
 
@@ -89,7 +89,7 @@ Para obter mais informações sobre eventos nesses logs, consulte [políticas de
 #### <a name="troubleshoot-tgt-expiration"></a>Solução de problemas de expiração de TGT
 Normalmente, o controlador de domínio define o tempo de vida de TGT e sua renovação com base na política de domínio, conforme mostrado na janela Editor de Gerenciamento de Política de Grupo a seguir.
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
+![Captura de tela que mostra a janela Editor de Gerenciamento de Política de Grupo.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
 
 Para **Usuários protegidos**, as configurações a seguir são embutidas em código:
 
@@ -100,7 +100,7 @@ Para **Usuários protegidos**, as configurações a seguir são embutidas em có
 #### <a name="troubleshoot-delegation-issues"></a>Solução de problemas de delegação
 Anteriormente, se uma tecnologia que usa delegação de Kerberos falhasse, a conta cliente era verificada para ver se **Conta sensível à segurança, não pode ser delegada** estava definido. Contudo, se a conta for um membro de **Usuários protegidos**, ela pode não ter esta definição configurada no ADAC (Centro Administrativo do Active Directory). Por isso, verifique as definições de associações de grupo ao solucionar problemas de delegação.
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
+![Captura de tela que realça a caixa de seleção a conta é confidencial e não pode ser delegada.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
 
 ### <a name="audit-authentication-attempts"></a><a name="BKMK_AuditAuthNattempts"></a>Auditar tentativas de autenticação
 Para auditar tentativas explicitamente para os membros do grupo **Usuários protegidos**, você pode continuar a coletar eventos de auditoria de log de segurança ou os dados dos novos logs administrativos operacionais. Para obter mais informações sobre esses eventos, consulte [políticas de autenticação e silos de política de autenticação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11))
@@ -121,7 +121,7 @@ Contas de serviços e computadores não podem ser membros do **Usuários protegi
 
 -   Negar delegação com delegação irrestrita ou restrita: para restringir uma conta, abra Centro Administrativo do Active Directory (ADAC) e marque a caixa de seleção a **conta é confidencial e não pode ser delegada** .
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
+    ![Captura de tela que mostra como restringir uma conta.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
 
 ## <a name="authentication-policies"></a><a name="BKMK_CreateAuthNPolicies"></a>Políticas de autenticação
 Políticas de autenticação é um novo contêiner no AD DS que contém objetos de política de autenticação. As políticas de autenticação podem especificar configurações que ajudam a reduzir o risco de roubo de credenciais, tais como restringir o tempo de vida de TGT das contas ou adicionar outras condições relacionadas a declarações.
@@ -137,7 +137,7 @@ No Windows Server 2012, o controle de acesso dinâmico introduziu uma classe de 
 ### <a name="quick-kerberos-refresher"></a>Atualizador rápido do Kerberos
 O protocolo de autenticação Kerberos consiste em três tipos de trocas, também conhecidas como subprotocolos:
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbRefresher.gif)
+![Diagrama que mostra os três tipos de trocas no protocolo de autenticação Kerberos.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbRefresher.gif)
 
 -   A troca de serviço de autenticação (AS) (KRB_AS_*)
 
@@ -162,7 +162,7 @@ Você pode restringir a autenticação inicial ou a troca AS configurando:
 
 -   As condições de controle de acesso para restringir a entrada do usuário, devendo ser cumpridas pelos dispositivos que enviam a troca AS
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictAS.gif)
+![Captura de tela que mostra como restringir a autenticação inicial ou o como o Exchange.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictAS.gif)
 
 Você pode restringir as solicitações de tíquete de serviço por meio da troca TGS configurando:
 
@@ -188,14 +188,14 @@ O domínio da conta do usuário deve estar no nível funcional do domínio do Wi
 
 1.  Em Política de controladores de domínio padrão, clique em **Habilitado** para habilitar **Suporte KDC para declarações, autenticação composta e proteção do Kerberos** em Configuração do Computador | Modelos Administrativos | Sistema | KDC.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)
+    ![Captura de tela que realça a opção habilitado.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)
 
 2.  Em **Opções**, na caixa de listagem suspensa, escolha **Sempre fornecer declarações**.
 
     > [!NOTE]
     > **Com suporte** também pode ser configurado, mas como o domínio está no Windows Server 2012 R2 DFL, ter os DCS sempre fornecem declarações permitirá que as verificações de acesso baseadas em declarações do usuário ocorram ao usar dispositivos e hosts sem reconhecimento de declaração para se conectar a serviços com reconhecimento de declaração.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)
+    ![Captura de tela que realça a opção de menu sempre fornecer declaração.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)
 
     > [!WARNING]
     > A configuração de **solicitações de autenticação desprotegidas de falha** resultará em falhas de autenticação de qualquer sistema operacional que não ofereça suporte à proteção Kerberos, como o Windows 7 e sistemas operacionais anteriores, ou sistemas operacionais que comecem com o Windows 8, que não foram explicitamente configurados para dar suporte a ele.
@@ -204,20 +204,20 @@ O domínio da conta do usuário deve estar no nível funcional do domínio do Wi
 
 1.  Abra o ADAC (Centro Administrativo do Active Directory).
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_OpenADAC.gif)
+    ![Captura de tela que mostra a página de autenticação.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_OpenADAC.gif)
 
     > [!NOTE]
     > O nó de **autenticação** selecionado é visível para domínios que estão no Windows Server 2012 R2 DFL. Se o nó não aparecer, tente novamente usando uma conta de administrador de domínio de um domínio que esteja no Windows Server 2012 R2 DFL.
 
 2.  Clique em **Políticas de autenticação** e em **Nova** para criar uma nova política.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicy.gif)
+    ![Captura de tela que mostra como criar uma nova política.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicy.gif)
 
     As políticas de autenticação devem possuir um nome de exibição e são impostas por padrão.
 
 3.  Para criar uma política somente para auditoria, clique em **Somente restrições de política de auditoria**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicyAuditOnly.gif)
+    ![Captura de tela que realça a opção somente restrições de política de auditoria.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicyAuditOnly.gif)
 
     As políticas de autenticação são aplicadas com base no tipo de conta do Active Directory. Uma única política pode ser aplicada a todos os três tipos de conta ao configurar as definições de cada tipo. Os tipos de conta são:
 
@@ -231,107 +231,107 @@ O domínio da conta do usuário deve estar no nível funcional do domínio do Wi
 
 4.  Para configurar um tempo de vida de TGT para contas de usuário, marque a caixa de seleção **Especificar um tempo de vida do Tíquete de Concessão de Tíquete para contas de usuário** e digite o tempo em minutos.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTLifetime.gif)
+    ![Captura de tela que realça a caixa de seleção especificar uma Ticket-Granting de tempo de vida de tíquete para contas de usuário.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTLifetime.gif)
 
     Por exemplo, se você deseja obter um tempo de vida de TGT máximo de 10 horas, digite **600** como mostrado. Se o tempo de vida de TGT não for configurado, se a conta for membro do grupo **Protected Users**, o tempo de vida de TGT e sua renovação serão de quatro horas. Senão, o tempo de vida de TGT e sua renovação baseiam-se na política do domínio como indicado na janela Editor de Gerenciamento de Política de Grupo para o domínio com configurações padrão.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
+    ![Captura de tela que mostra as configurações de política padrão.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
 
 5.  Para restringir a conta de usuário a certos dispositivos, clique em **Editar** para definir as condições pedidas pelo dispositivo.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)
+    ![Captura de tela que mostra como restringir a conta de usuário para selecionar dispositivos.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)
 
 6.  Na janela **Editar condições de controle de acesso**, clique em **Adicionar uma condição**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCondition.png)
+    ![Captura de tela que realça adicionar uma condição.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCondition.png)
 
 ##### <a name="add-computer-account-or-group-conditions"></a>Adicionar conta de computador ou condições de grupo
 
 1.  Para configurar contas de computador ou grupos, na lista suspensa, escolha a caixa de listagem suspensa **Membro de cada uma** e mude para **Membro de qualquer uma**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompMember.png)
+    ![Captura de tela que realça o membro de cada caixa de listagem.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompMember.png)
 
     > [!NOTE]
     > Este controle de acesso define as condições do dispositivo ou host do qual o usuário entra. Na terminologia de controle de acesso, a conta do computador para o dispositivo ou host é o usuário, e é por isso que **Usuário** é a única opção.
 
 2.  Clique em **Adicionar itens**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddItems.png)
+    ![Captura de tela que realça o botão Adicionar itens.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddItems.png)
 
 3.  Para alterar os tipos de objeto, clique em **Tipos de objeto**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjects.gif)
+    ![Captura de tela que realça o botão tipos de objeto.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjects.gif)
 
 4.  Para escolher objetos de computador no Active Directory, clique em **Computadores** e em **OK**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsComputers.gif)
+    ![Captura de tela que realça a caixa de seleção computadores.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsComputers.gif)
 
 5.  Digite o nome dos computadores para restringir o usuário e clique em **Verificar nomes**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsCompName.gif)
+    ![Captura de tela que realça os nomes da verificação.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsCompName.gif)
 
 6.  Clique em OK e crie quaisquer outras condições desejadas para a conta de computador.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddConditions.png)
+    ![Captura de tela que mostra como editar condições de controle de acesso.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddConditions.png)
 
 7.  Ao concluir, clique em **OK** e as condições definidas serão exibidas na conta do computador.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompDone.png)
+    ![Captura de tela que mostra onde selecionar OK quando tiver terminado.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompDone.png)
 
 ##### <a name="add-computer-claim-conditions"></a>Adicionar condições de declaração de computador
 
 1.  Para configurar declarações de computador, vá para a lista suspensa Grupo para escolher a declaração.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaim.gif)
+    ![Captura de tela que mostra onde selecionar o grupo.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaim.gif)
 
     As declarações somente estarão disponíveis se já tiverem sido provisionadas na floresta.
 
 2.  Digite o nome do OU e a conta de usuário deverá ser restrita ao tentar entrar.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimOUName.gif)
+    ![Captura de tela que mostra onde digitar o nome.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimOUName.gif)
 
 3.  Ao concluir, clique em OK e a caixa mostrará as condições definidas.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimComplete.gif)
+    ![Captura de tela que mostra as condições definidas.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimComplete.gif)
 
 ##### <a name="troubleshoot-missing-computer-claims"></a>Solução de problemas de declarações de computador faltantes
 Se a declaração foi provisionada, mas não está disponível, pode ter sido configurada somente para classes **Computador**.
 
 Digamos que você quisesse restringir a autenticação com base na UO (unidade organizacional) do computador, que já estava configurada, mas apenas para classes de **computador** .
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)
+![Captura de tela que realça a caixa de seleção do computador.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)
 
 Para que a declaração esteja disponível para restringir a entrada do Usuário no dispositivo, marque a caixa de seleção **Usuário**.
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)
+![Captura de tela que realça a caixa de seleção do usuário.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)
 
 #### <a name="provision-a-user-account-with-an-authentication-policy-with-adac"></a>Provisione uma conta de usuário com uma política de autenticação com o ADAC
 
 1.  Na conta de **Usuário**, clique em **Política**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicy.gif)
+    ![Captura de tela que mostra onde selecionar a política.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicy.gif)
 
 2.  Marque a caixa de seleção **Atribuir uma política de autenticação a esta conta**.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)
+    ![Captura de tela que realça a caixa de seleção atribuir uma política de autenticação a esta conta.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)
 
 3.  Em seguida, escolha a política de autenticação a ser aplicada ao usuário.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicySelect.png)
+    ![Captura de tela que mostra onde selecionar a política de autenticação a ser aplicada.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicySelect.png)
 
 #### <a name="configure-dynamic-access-control-support-on-devices-and-hosts"></a>Configurar suporte a Controle de Acesso Dinâmico em dispositivos e hosts
 Você pode configurar os tempos d vida de TGT sem configurar o DAC (Controle de Acesso Dinâmico). O DAC somente é necessário para verificar AllowedToAuthenticateFrom e AllowedToAuthenticateTo.
 
 Usando o Editor de Política de Grupo ou de Política de Grupo Local, habilite o **Suporte a cliente Kerberos para declarações, autenticação composta e proteção do Kerberos** em Configuração do Computador | Modelos Administrativos | Sistema | Kerberos:
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)
+![Captura de tela que mostra onde selecionar a opção habilitado.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)
 
 ### <a name="troubleshoot-authentication-policies"></a><a name="BKMK_TroubleshootAuthnPolicies"></a>Solução de problemas de políticas de autenticação
 
 #### <a name="determine-the-accounts-that-are-directly-assigned-an-authentication-policy"></a>Determinar as contas às quais uma Política de autenticação é diretamente atribuída
 A seção de contas na Política de autenticação mostra que as contas que possuem políticas diretamente aplicadas.
 
-![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AccountsAssigned.gif)
+![Captura de tela que mostra como determinar as contas que são atribuídas diretamente a uma política de autenticação.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AccountsAssigned.gif)
 
 #### <a name="use-the-authentication-policy-failures---domain-controller-administrative-log"></a>Usar as falhas da política de autenticação-log administrativo do controlador de domínio
 Uma nova **falha de política de autenticação – log administrativo do controlador de domínio** em **logs de aplicativos e serviços**  >  a autenticação **do Microsoft**  >  **Windows**  >   foi criada para facilitar a descoberta de falhas devido a políticas de autenticação. Este log fica desabilitado por padrão. Para habilitá-lo, clique com o botão direito no nome do log e clique em **Habilitar log**. Os novos eventos são muito semelhantes com relação ao conteúdo aos eventos de TGT de Kerberos e auditoria de tíquete de serviço. Para obter mais informações sobre esses eventos, consulte [políticas de autenticação e silos de política de autenticação](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11)).
@@ -424,7 +424,7 @@ Você pode criar um silo de política de autenticação usando Centro Administra
 
 2.  Em **Nome de exibição**, digite um nome para o silo. Em **Contas permitidas**, clique em **Adicionar**, digite os nomes das contas e clique em **OK**. Você pode especificar contas de usuários, computadores ou serviço. Em seguida, especifique se deseja usar uma única política para todas as entidades ou um política separada para cada tipo de entidade, bem como o nome das políticas em questão.
 
-    ![contas protegidas](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)
+    ![Captura de tela que mostra como adicionar uma conta permitida.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)
 
 ### <a name="manage-authentication-policy-silos-by-using-windows-powershell"></a><a name="BKMK_ManageAuthnSilosUsingPSH"></a>Gerenciar os silos de política de autenticação usando o Windows PowerShell
 Este comando cria um objeto do silo de política de autenticação e o impõe.

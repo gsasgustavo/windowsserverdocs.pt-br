@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1acf51705b112d2a1d3409b08532f0f5355c5403
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 1362cf8080e1188746887df1bdc45824aed8ea80
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049514"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711731"
 ---
 # <a name="managing-rid-issuance"></a>Gerenciar emissão de RIDs
 
@@ -53,7 +53,7 @@ Presumindo um espaço de RID global de 30 bits, o primeiro evento é registrado 
 > [!IMPORTANT]
 > Esse evento não é esperado; investigue os processos de criação de usuários, comutadores e grupos imediatamente no domínio. Criar mais de 100 milhões de objetos do AD DS é totalmente fora do comum.
 
-![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)
+![Grafo do evento Marcos.](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)
 
 ### <a name="rid-pool-invalidation-events"></a>Eventos de invalidação do pool RID
 Há novos alertas de eventos que um pool DC RID local descartou. Esses são alertas informativos e podem ser esperados, especialmente devido à nova funcionalidade do VDC. Consulte a lista de eventos abaixo para obter detalhes sobre o evento.
@@ -85,7 +85,7 @@ Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"
 
 Se você aumentar o pool RID global, o pool disponível mudará para 2.147.483.647 em vez do padrão 1.073.741.823. Por exemplo:
 
-![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)
+![Captura de tela de uma janela de terminal que mostra o aumento do padrão.](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)
 
 > [!WARNING]
 > Esse desbloqueio tem *apenas* a finalidade de evitar que os RIDs se esgotem e deve ser usado *somente* em conjunto com a Imposição de Limite Máximo de RID (veja a próxima seção). Não configure isso "com preempção" em ambientes que possuem milhões de RIDs restantes e com baixo crescimento, já que existem possíveis problemas de compatibilidade do aplicativo com SIDs gerados a partir do pool RID desbloqueado.
@@ -126,7 +126,7 @@ Para desbloquear o pool RID para o 31º<sup></sup> bit depois de receber o alert
 
 3. Selecione as opções **Síncrono** e **Estendido**, e clique em **Executar**.
 
-    ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)
+    ![Captura de tela que mostra onde selecionar executar.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)
 
 4. Se isso for bem-sucedido, a janela de saída LDP mostrará:
 
@@ -137,7 +137,7 @@ Para desbloquear o pool RID para o 31º<sup></sup> bit depois de receber o alert
 
     ```
 
-    ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)
+    ![Captura de tela que mostra a saída do LDP.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)
 
 5. Confirme o pool RID global aumentado examinando se há, no Log de Eventos do Sistema nesse controlador de domínio, o evento informativo 16655 Directory-Services-SAM.
 
@@ -187,7 +187,7 @@ Para remover o bloqueio depois de atingir o limite máximo artificial, execute a
 
 9. Habilite as opções **Síncrono** e **Estendido**, e clique em **Executar**:
 
-    ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)
+    ![Captura de tela que mostra como executar a operação.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)
 
 10. Se isso for bem-sucedido, a janela de saída LDP mostrará:
 
@@ -198,7 +198,7 @@ Para remover o bloqueio depois de atingir o limite máximo artificial, execute a
 
     ```
 
-    ![Emissão de RID](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)
+    ![Captura de tela que mostra a saída de uma operação bem-sucedida.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)
 
 ### <a name="other-rid-fixes"></a>Outras correções de RID
 Sistemas operacionais Windows Server anteriores tinham uma perda de pool RID quando o atributo rIDSetReferences estava ausente. Para resolver esse problema em controladores de domínio que executam o Windows Server 2008 R2, instale o hotfix do [KB 2618669](https://support.microsoft.com/kb/2618669).

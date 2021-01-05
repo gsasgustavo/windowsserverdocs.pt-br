@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 03/27/2018
-ms.openlocfilehash: b3cd41f3ba1980718a5e2c0a37df470a94f67657
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 5278e05e04dc4960c4a298aeaeaf0616bbaa0d0b
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89632977"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696914"
 ---
 # <a name="bcdedit"></a>bcdedit
 
@@ -39,7 +39,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 ### <a name="parameters"></a>Parâmetros
 
-### <a name="general-bcdedit-command-line-options"></a>Opções gerais de linha de comando BCDEdit
+### <a name="general-bcdedit-command-line-options"></a>Opções gerais de Command-Line de BCDEdit
 
 | Opção | DESCRIÇÃO |
 | ------ | ----------- |
@@ -59,7 +59,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | Parâmetro | Descrição |
 | ------ | ----------- |
 | /Copy | Faz uma cópia de uma entrada de inicialização especificada no mesmo repositório do sistema. |
-| /Create | Cria uma nova entrada no repositório de dados de configuração de inicialização. Se um identificador bem conhecido for especificado, os parâmetros **/Application**, **/Inherit**e **/Device** não poderão ser especificados. Se um identificador não for especificado ou não for bem conhecido, uma opção **/Application**, **/Inherit**ou **/Device** deverá ser especificada. |
+| /Create | Cria uma nova entrada no repositório de dados de configuração de inicialização. Se um identificador bem conhecido for especificado, os parâmetros **/Application**, **/Inherit** e **/Device** não poderão ser especificados. Se um identificador não for especificado ou não for bem conhecido, uma opção **/Application**, **/Inherit** ou **/Device** deverá ser especificada. |
 | /delete | Exclui um elemento de uma entrada especificada. |
 
 #### <a name="parameters-that-operate-on-entry-options"></a>Parâmetros que operam nas opções de entrada
@@ -106,6 +106,4 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 Para obter exemplos de como usar BCDEdit, consulte o artigo [referência de opções de bcdedit](/windows-hardware/drivers/devtest/bcd-boot-options-reference) .
 
-## <a name="additional-references"></a>Referências adicionais
-
-- [Chave da sintaxe de linha de comando](command-line-syntax-key.md)
+Para ver a notação usada para indicar a sintaxe da linha de comando, consulte  [chave de sintaxe de linha de comando](command-line-syntax-key.md).

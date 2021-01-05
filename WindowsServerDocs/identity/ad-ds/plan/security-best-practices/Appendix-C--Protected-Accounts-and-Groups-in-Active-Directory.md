@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: aa7b3947c668634565ddbb0fd8df081a3f4b6347
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: a968ddd70aa74d571e939c3d2c21cbc24e572f5e
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041674"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711761"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Apêndice C: Contas protegidas e grupos no Active Directory
 
@@ -30,7 +30,7 @@ A tabela a seguir contém os grupos protegidos no Active Directory listados pelo
 
 #### <a name="protected-accounts-and-groups-in-active-directory-by-operating-system"></a>Contas e grupos protegidos em Active Directory pelo sistema operacional
 
-| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
+| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
 | --- | --- | --- | --- |
 |Opers. de contas|Opers. de contas|Opers. de contas|Opers. de contas|
 |Administrador|Administrador|Administrador|Administrador|
@@ -78,27 +78,27 @@ Você pode forçar o SDProp a ser executado usando Ldp.exe ou executando um scri
 1. Iniciar **Ldp.exe**.
 2. Clique em **conexão** na caixa de diálogo LDP e clique em **conectar**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
+   ![Captura de tela que mostra a opção de menu conectar.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
 
 3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
+   ![Captura de tela que mostra onde digitar o nome do controlador de domínio para o domínio que contém a função do emulador de PDC (PDCE).](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
 
 4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
+   ![Captura de tela que mostra onde selecionar a conexão e, em seguida, selecione associar para verificar se você se conectou com êxito.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
 
 5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como** usuário conectado no momento.) Clique em **OK**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
+   ![Captura de tela que mostra a caixa de diálogo associar.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
 
 6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
+   ![Captura de tela que mostra a opção de menu modificar no menu procurar.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
 
 7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **FixUpInheritance** e, no campo **valores** , digite **Sim**. Clique em **Enter** para preencher a **lista de entradas** , conforme mostrado na captura de tela a seguir.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
+   ![Captura de tela que mostra a caixa de diálogo Modificar.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
 
 8. Na caixa de diálogo Modificar, clique em executar e verifique se as alterações feitas no objeto AdminSDHolder foram exibidas nesse objeto.
 
@@ -107,7 +107,7 @@ Você pode forçar o SDProp a ser executado usando Ldp.exe ou executando um scri
 
 Se preferir executar o SDProp manualmente via LDIFDE ou um script, você poderá criar uma entrada de modificação, conforme mostrado aqui:
 
-![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_15.gif)
+![Captura de tela que mostra como você pode criar uma entrada de modificação.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_15.gif)
 
 ###### <a name="running-sdprop-manually-in-windows-server-2012-or-windows-server-2008-r2"></a>Executando o SDProp manualmente no Windows Server 2012 ou no Windows Server 2008 R2
 
@@ -117,19 +117,19 @@ Você também pode forçar o SDProp a ser executado usando Ldp.exe ou executando
 
 2. Na caixa de diálogo **LDP** , clique em **conexão** e em **conectar**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
+   ![Captura de tela que mostra a caixa de diálogo LDP.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
 
 3. Na caixa de diálogo **conectar** , digite o nome do controlador de domínio para o domínio que contém a função emulador de PDC (PDCE) e clique em **OK**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
+   ![Captura de tela que mostra a caixa de diálogo Conectar.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
 
 4. Verifique se você se conectou com êxito, conforme indicado por **DN: (RootDSE)** na captura de tela a seguir, clique em **conexão** e clique em **associar**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
+   ![Captura de tela que mostra a opção de menu associar no menu conexão.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
 
 5. Na caixa de diálogo **associar** , digite as credenciais de uma conta de usuário que tenha permissão para modificar o objeto rootDSE. (Se estiver conectado como esse usuário, você poderá selecionar **associar como usuário conectado no momento**.) Clique em **OK**.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
+   ![Captura de tela que mostra onde digitar as credenciais de uma conta de usuário que tem permissão para modificar o objeto rootDSE.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
 
 6. Depois de concluir a operação de ligação, clique em **procurar** e clique em **Modificar**.
 
@@ -137,10 +137,10 @@ Você também pode forçar o SDProp a ser executado usando Ldp.exe ou executando
 
 7. Na caixa de diálogo **Modificar** , deixe o campo **DN** em branco. No campo **Editar atributo de entrada** , digite **RunProtectAdminGroupsTask** e, no campo **valores** , digite **1**. Clique em **Enter** para preencher a lista de entradas, conforme mostrado aqui.
 
-   ![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
+   ![Captura de tela que mostra o campo editar atributo de entrada.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
 
 8. Na caixa de diálogo **Modificar** , clique em **executar** e verifique se as alterações feitas no objeto AdminSDHolder foram exibidas nesse objeto.
 
 Se preferir executar o SDProp manualmente via LDIFDE ou um script, você poderá criar uma entrada de modificação, conforme mostrado aqui:
 
-![contas e grupos protegidos](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_22.gif)
+![Captura de tela que mostra o que fazer se você preferir executar o SDProp manualmente por meio de LDIFDE ou um script.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_22.gif)

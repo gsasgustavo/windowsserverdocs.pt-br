@@ -1,17 +1,17 @@
 ---
 title: Introdução ao Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre o Windows Server Essentials Edition, que é um primeiro servidor conectado à nuvem criado para pequenas empresas com até 25 usuários e 50 dispositivos.
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: ef30f70be32f0e8e277375118c539bc8283f9fb9
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 467468c4636beb3ecf2fe6e0258f172f1f112ca6
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622410"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696972"
 ---
 # <a name="get-started-with-windows-server-essentials"></a>Introdução ao Windows Server Essentials
 

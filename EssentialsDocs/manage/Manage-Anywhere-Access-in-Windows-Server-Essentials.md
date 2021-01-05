@@ -1,18 +1,18 @@
 ---
 title: Gerenciar o Acesso em Qualquer local no Windows Server 2012 Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como ativar as funcionalidades de acesso em qualquer lugar, Acesso via Web remoto, rede virtual privada e DirectAccess no Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c369c317-f94d-4179-a735-e74bf6f62692
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 1bd8f498cef17edc73569077dc03d4b7b4e26d66
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a0dcf82a4ee88518058db18f986151924b08f7e4
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623293"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755302"
 ---
 # <a name="manage-anywhere-access-in-windows-server-essentials"></a>Gerenciar o Acesso em Qualquer local no Windows Server 2012 Essentials
 

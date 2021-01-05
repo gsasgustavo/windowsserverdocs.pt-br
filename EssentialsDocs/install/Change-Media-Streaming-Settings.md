@@ -1,18 +1,18 @@
 ---
 title: Alterar Configurações de Streaming de Mídia
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como alterar as configurações de streaming de mídia para ocultar o suplemento de streaming de mídia remota, definir o nome da biblioteca de mídia, definir qualidade de streaming de vídeo e habilitar ou desabilitar streaming.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 041a7f53b02d9b6b6368bd2b2f4ac991a14a61fa
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 327cfff5a35ad302888146b2ee8db1cec3cf2828
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623881"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711461"
 ---
 # <a name="change-media-streaming-settings"></a>Alterar Configurações de Streaming de Mídia
 

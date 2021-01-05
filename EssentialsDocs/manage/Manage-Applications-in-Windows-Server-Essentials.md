@@ -1,18 +1,18 @@
 ---
 title: Gerenciar aplicativos no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como gerenciar aplicativos e instalar e remover suplementos no Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 30b8dfa2087e76cc80011eb359715c95564ec1b6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f978405236a83c89f07e65589e5d9af899ea1045
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623270"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755292"
 ---
 # <a name="manage-applications-in-windows-server-essentials"></a>Gerenciar aplicativos no Windows Server Essentials
 
@@ -60,7 +60,7 @@ ms.locfileid: "89623270"
 
 #### <a name="to-install-an-add-in-from-microsoft-pinpoint"></a>Para instalar um suplemento do Microsoft Pinpoint
 
-1.  No painel do servidor, clique em **aplicativos**e, em seguida, clique na guia **Microsoft Pinpoint** .  Uma lista de suplementos disponíveis é exibida.
+1.  No painel do servidor, clique em **aplicativos** e, em seguida, clique na guia **Microsoft Pinpoint** .  Uma lista de suplementos disponíveis é exibida.
 
 2.  Clique no suplemento que você deseja instalar. A página de informações do suplemento será exibida.
 

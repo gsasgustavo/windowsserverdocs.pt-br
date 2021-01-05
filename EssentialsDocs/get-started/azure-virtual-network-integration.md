@@ -1,18 +1,18 @@
 ---
 title: Integração de rede virtual do Azure
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre a integração de rede virtual do Azure que permite criar redes virtuais privadas ponto a ponto (P2P) ou site a site (S2S).
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 15a4c28c192ed93c18ad9ac515bdccda24293c6e
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 98805bb9e5b14b82b64eb7188432b0284aa8c905
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622551"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696786"
 ---
 # <a name="azure-virtual-network-integration"></a>Integração de rede virtual do Azure
 
@@ -66,6 +66,6 @@ No painel tarefas no lado direito do painel estão as várias tarefas que você 
 
 -   **Saiba mais sobre a VNET do Azure** [https://azure.microsoft.com/services/virtual-network/](https://azure.microsoft.com/services/virtual-network/) .
 
-<a name="see-also"></a>Confira também
+<a name="see-also"></a>Consulte também
 --------
 [Introdução ao Windows Server Essentials](get-started.md)

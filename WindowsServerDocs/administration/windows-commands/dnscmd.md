@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ec39f97be1998f45373ee12cdbb6e1814c7bdd1
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a804965efaa135d366b62fe2379ad7d9c3d17e5c
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89636261"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696920"
 ---
 # <a name="dnscmd"></a>Dnscmd
 
@@ -105,6 +105,9 @@ dnscmd [<servername>] /config <parameter>
 
 #### <a name="parameters"></a>Parâmetros
 
+> [!NOTE]
+> Este artigo contém referências ao termo "servidor subordinado", um termo que a Microsoft não usa mais. Quando o termo for removido do software, também o removeremos deste artigo.
+
 | Parâmetros | Descrição |
 | ---------- | ----------- |
 | `<servername>` | Especifica o servidor DNS que você pretende gerenciar, representado pela sintaxe do computador local, endereço IP, FQDN ou nome do host. Se esse parâmetro for omitido, o servidor local será usado. |
@@ -119,7 +122,7 @@ dnscmd [<servername>] /config <parameter>
 | /disablensrecordsautocreation `[0|1]` | Especifica se o servidor DNS cria automaticamente registros de recurso de servidor de nome (NS) para as zonas que hospeda. Aceita os valores:<ul><li>**0** -cria automaticamente registros de recurso de servidor de nomes (ns) para zonas que o servidor DNS hospeda.</li><li>**1** -não cria automaticamente registros de recurso de servidor de nomes (ns) para zonas que o servidor DNS hospeda.</li></ul> |
 | /dspollinginterval `[0-30]` | Especifica com que frequência o servidor DNS sonda AD DS para alterações nas zonas integradas do Active Directory. |
 | /dstombstoneinterval `[1-30]` |A quantidade de tempo, em segundos, para reter registros excluídos em AD DS. |
-| /ednscachetimeout `[3600-15724800]` | Especifica o número de segundos que as informações de DNS estendido (EDNS) são armazenadas em cache. O valor mínimo é **3600**e o valor máximo é **15.724.800**. O valor padrão é **604.800** segundos (uma semana). |
+| /ednscachetimeout `[3600-15724800]` | Especifica o número de segundos que as informações de DNS estendido (EDNS) são armazenadas em cache. O valor mínimo é **3600** e o valor máximo é **15.724.800**. O valor padrão é **604.800** segundos (uma semana). |
 | /enableednsprobes `[0|1]` | Habilita ou desabilita o servidor para investigar outros servidores para determinar se eles dão suporte ao EDNS. Aceita os valores:<ul><li>**0** -desabilita o suporte ativo para investigações de EDNS.</li><li>**1** -habilita o suporte ativo para investigações de EDNS.</li></ul> |
 | /enablednssec `[0|1]` | Habilita ou desabilita o suporte para o DNSSEC (extensões de segurança do DNS). Aceita os valores:<ul><li>**0** -DESABILITA o DNSSEC.</li><li>**1** – HABILITA o DNSSEC.</li></ul> |
 | /enableglobalnamessupport `[0|1]` | Habilita ou desabilita o suporte para a zona GlobalNames. A zona GlobalNames dá suporte à resolução de nomes DNS de rótulo único em uma floresta. Aceita os valores:<ul><li>**0** -desabilita o suporte para a zona GlobalNames. Quando você define o valor desse comando como 0, o serviço do servidor DNS não resolve nomes de rótulo único na zona GlobalNames.</li><li>**1** – habilita o suporte para a zona GlobalNames. Quando você define o valor desse comando como 1, o serviço do servidor DNS resolve nomes de rótulo único na zona GlobalNames.</li></ul> |
@@ -174,7 +177,7 @@ dnscmd /config <parameters>
 | /forwardertimeout `<zonename>` | Determina por quantos segundos uma zona DNS aguarda um encaminhador responder antes de tentar outro encaminhador. Esse valor substitui o valor definido no nível do servidor. |
 | /norefreshinterval `<zonename>` | Define um intervalo de tempo para uma zona durante a qual nenhuma atualização pode atualizar dinamicamente os registros DNS em uma zona especificada. |
 | /refreshinterval `<zonename>` | Define um intervalo de tempo para uma zona durante a qual as atualizações podem atualizar dinamicamente os registros DNS em uma zona especificada. |
-| /securesecondaries `<zonename>` | Determina quais servidores secundários podem receber atualizações de zona do servidor mestre para esta zona. |
+| /securesecondaries `<zonename>` | Determina quais servidores secundários podem receber atualizações de zona do servidor primário para esta zona. |
 
 ## <a name="dnscmd-createbuiltindirectorypartitions-command"></a>comando/CreateBuiltinDirectoryPartitions do DNSCmd
 
@@ -392,7 +395,7 @@ dnscmd [<servername>] /info [<settings>]
 
 ## <a name="dnscmd-ipvalidate-command"></a>comando/ipvalidate do DNSCmd
 
-Testa se um endereço IP identifica um servidor DNS funcional ou se o servidor DNS pode atuar como encaminhador, um servidor de dica de raiz ou um servidor mestre para uma zona específica.
+Testa se um endereço IP identifica um servidor DNS funcional ou se o servidor DNS pode atuar como encaminhador, um servidor de dica de raiz ou um servidor primário para uma zona específica.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -405,7 +408,7 @@ dnscmd [<servername>] /ipvalidate <context> [<zonename>] [[<IPaddress>]]
 | Parâmetros | Descrição |
 | ---------- | ----------- |
 | `<servername>` | Especifica o servidor DNS a ser gerenciado, representado pelo endereço IP, pelo FQDN ou pelo nome do host. Se esse parâmetro for omitido, o servidor local será usado. |
-| `<context>` | Especifica o tipo de teste a ser executado. Você pode especificar qualquer um dos seguintes testes:<ul><li>**/dnsservers** -testa se os computadores com os endereços especificados são servidores DNS em funcionamento.</li><li>**/forwarders** -testa se os endereços que você especifica identificam servidores DNS que podem atuar como encaminhadores.</li><li>**/roothints** -testa se os endereços que você especifica identificam servidores DNS que podem atuar como servidores de nomes de dica de raiz.</li><li>**/zonemasters** -testa se os endereços que você especifica identificam servidores DNS que são servidores mestres para *zonename*. |
+| `<context>` | Especifica o tipo de teste a ser executado. Você pode especificar qualquer um dos seguintes testes:<ul><li>**/dnsservers** -testa se os computadores com os endereços especificados são servidores DNS em funcionamento.</li><li>**/forwarders** -testa se os endereços que você especifica identificam servidores DNS que podem atuar como encaminhadores.</li><li>**/roothints** -testa se os endereços que você especifica identificam servidores DNS que podem atuar como servidores de nomes de dica de raiz.</li><li>**/zonemasters** -testa se os endereços que você especifica identificam servidores DNS que são servidores primários para *zonename*. |
 | `<zonename>` | Identifica a zona. Use esse parâmetro com o parâmetro **/zonemasters** . |
 | `<IPaddress>` | Especifica os endereços IP que o comando testa. |
 
@@ -679,7 +682,7 @@ dnscmd [<servername>] /zoneadd <zonename> <zonetype> [/dp <FQDN> | {/domain | en
 | ---------- | ----------- |
 | `<servername>` | Especifica o servidor DNS a ser gerenciado, representado pelo endereço IP, pelo FQDN ou pelo nome do host. Se esse parâmetro for omitido, o servidor local será usado. |
 | `<zonename>` | Especifica o nome da zona. |
-| `<zonetype>` | Especifica o tipo de zona a ser criada. A especificação de um tipo de zona de **/forwarder** ou **/DsForwarder** cria uma zona que executa o encaminhamento condicional. Cada tipo de zona tem diferentes parâmetros necessários:<ul><li>**/DsPrimary** – cria uma zona integrada do Active Directory.</li><li>**/Primary/File `<filename>` ** -Cria uma zona primária padrão e especifica o nome do arquivo que irá armazenar as informações de zona.</li><li>**/Secondary `<masterIPaddress> [<masterIPaddress>...]` ** -Cria uma zona secundária padrão.</li><li>**/stub `<masterIPaddress> [<masterIPaddress>...]` /File `<filename>` ** – cria uma zona de stub com backup em arquivo.</li><li>**/DsStub `<masterIPaddress> [<masterIPaddress>...]` ** -Cria uma zona de stub integrada do Active Directory.</li><li>**/forwarder `<masterIPaddress> [<masterIPaddress>]` .../File `<filename>` ** -especifica que a zona criada encaminha consultas não resolvidas para outro servidor DNS.</li><li>**/DsForwarder** -especifica que a zona integrada do Active Directory criada encaminha consultas não resolvidas para outro servidor DNS.</li></ul> |
+| `<zonetype>` | Especifica o tipo de zona a ser criada. A especificação de um tipo de zona de **/forwarder** ou **/DsForwarder** cria uma zona que executa o encaminhamento condicional. Cada tipo de zona tem diferentes parâmetros necessários:<ul><li>**/DsPrimary** – cria uma zona integrada do Active Directory.</li><li>**/Primary/File `<filename>`** -Cria uma zona primária padrão e especifica o nome do arquivo que irá armazenar as informações de zona.</li><li>**/Secondary `<masterIPaddress> [<masterIPaddress>...]`** -Cria uma zona secundária padrão.</li><li>**/stub `<masterIPaddress> [<masterIPaddress>...]` /File `<filename>`** – cria uma zona de stub com backup em arquivo.</li><li>**/DsStub `<masterIPaddress> [<masterIPaddress>...]`** -Cria uma zona de stub integrada do Active Directory.</li><li>**/forwarder `<masterIPaddress> [<masterIPaddress>]` .../File `<filename>`** -especifica que a zona criada encaminha consultas não resolvidas para outro servidor DNS.</li><li>**/DsForwarder** -especifica que a zona integrada do Active Directory criada encaminha consultas não resolvidas para outro servidor DNS.</li></ul> |
 | `<FQDN>` | Especifica o FQDN da partição de diretório. |
 | /Domain | Armazena a zona na partição de diretório de domínio. |
 | /enterprise | Armazena a zona na partição de diretório empresarial. |
@@ -858,7 +861,7 @@ dnscmd [<servername>] /zonerefresh <zonename>
 
 ##### <a name="remarks"></a>Comentários
 
-- O comando **zonerefresh** força uma verificação do número de versão no registro de recurso de início de autoridade (SOA) do servidor mestre. Se o número de versão no servidor mestre for maior que o número de versão do servidor secundário, uma transferência de zona será iniciada para atualizar o servidor secundário. Se o número de versão for o mesmo, nenhuma transferência de zona ocorrerá.
+- O comando **zonerefresh** força uma verificação do número de versão no registro de recurso de início de autoridade (SOA) do servidor primário. Se o número de versão no servidor primário for maior que o número de versão do servidor secundário, uma transferência de zona será iniciada para atualizar o servidor secundário. Se o número de versão for o mesmo, nenhuma transferência de zona ocorrerá.
 
 - A verificação forçada ocorre por padrão a cada 15 minutos. Para alterar o padrão, use o `dnscmd config refreshinterval` comando.
 
@@ -899,7 +902,7 @@ dnscmd dnssvr1.contoso.com /zonereload test.contoso.com
 
 ## <a name="dnscmd-zoneresetmasters-command"></a>comando/ZoneResetMasters do DNSCmd
 
-Redefine os endereços IP do servidor mestre que fornece informações de transferência de zona para uma zona secundária.
+Redefine os endereços IP do servidor primário que fornece informações de transferência de zona para uma zona secundária.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -914,7 +917,7 @@ dnscmd [<servername>] /zoneresetmasters <zonename> [/local] [<IPaddress> [<IPadd
 | `<servername>` | Especifica o servidor DNS a ser gerenciado, representado pelo endereço IP, pelo FQDN ou pelo nome do host. Se esse parâmetro for omitido, o servidor local será usado. |
 | `<zonename>` | Especifica o nome da zona a ser redefinida. |
 | /local | Define uma lista mestra local. Esse parâmetro é usado para zonas integradas ao Active Directory. |
-| `<IPaddress>` | Os endereços IP dos servidores mestres da zona secundária. |
+| `<IPaddress>` | Os endereços IP dos servidores primários da zona secundária. |
 
 ##### <a name="remarks"></a>Comentários
 
@@ -962,7 +965,7 @@ dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 1
 
 ## <a name="dnscmd-zoneresetsecondaries-command"></a>comando/zoneresetsecondaries do DNSCmd
 
-Especifica uma lista de endereços IP de servidores secundários para os quais um servidor mestre responde quando é solicitado uma transferência de zona.
+Especifica uma lista de endereços IP de servidores secundários aos quais um servidor primário responde quando é solicitado uma transferência de zona.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -980,16 +983,16 @@ dnscmd [<servername>] /zoneresetsecondaries <zonename> {/noxfr | /nonsecure | /s
 | /noxfr | Especifica que nenhuma transferência de zona é permitida. |
 | /nonsecure | Especifica que todas as solicitações de transferência de zona são concedidas. |
 | /securens | Especifica que somente o servidor listado no registro de recurso do servidor de nomes (NS) para a zona recebe uma transferência. |
-| /securelist | Especifica que as transferências de zona são concedidas somente à lista de servidores. Esse parâmetro deve ser seguido por um endereço IP ou endereços que o servidor mestre usa. |
-| `<securityIPaddresses>` | Lista os endereços IP que recebem transferências de zona do servidor mestre. Esse parâmetro é usado somente com o parâmetro **/Securelist** . |
+| /securelist | Especifica que as transferências de zona são concedidas somente à lista de servidores. Esse parâmetro deve ser seguido por um endereço IP ou endereços que o servidor primário usa. |
+| `<securityIPaddresses>` | Lista os endereços IP que recebem transferências de zona do servidor primário. Esse parâmetro é usado somente com o parâmetro **/Securelist** . |
 | /nonotify | Especifica que nenhuma notificação de alteração é enviada aos servidores secundários. |
 | /notify | Especifica que as notificações de alteração são enviadas para todos os servidores secundários. |
-| /notifylist | Especifica que as notificações de alteração são enviadas somente para a lista de servidores. Esse comando deve ser seguido por um endereço IP ou endereços que o servidor mestre usa. |
+| /notifylist | Especifica que as notificações de alteração são enviadas somente para a lista de servidores. Esse comando deve ser seguido por um endereço IP ou endereços que o servidor primário usa. |
 | `<notifyIPaddresses>` | Especifica o endereço IP ou os endereços do servidor secundário ou servidores para os quais as notificações de alteração são enviadas. Essa lista é usada somente com o parâmetro **/NotifyList** . |
 
 ##### <a name="remarks"></a>Comentários
 
-- Use o comando **zoneresetsecondaries** no servidor mestre para especificar como ele responde a solicitações de transferência de zona de servidores secundários.
+- Use o comando **zoneresetsecondaries** no servidor primário para especificar como ele responde a solicitações de transferência de zona de servidores secundários.
 
 #### <a name="examples"></a>Exemplos
 
@@ -1014,7 +1017,7 @@ dnscmd [<servername>] /zoneresettype <zonename> <zonetype> [/overwrite_mem | /ov
 | ---------- | ----------- |
 | `<servername>` | Especifica o servidor DNS a ser gerenciado, representado pelo endereço IP, pelo FQDN ou pelo nome do host. Se esse parâmetro for omitido, o servidor local será usado. |
 | `<zonename>` | Identifica a zona na qual o tipo será alterado. |
-| `<zonetype>` | Especifica o tipo de zona a ser criada. Cada tipo tem diferentes parâmetros necessários, incluindo:<ul><li>**/DsPrimary** – cria uma zona integrada do Active Directory.</li><li>**/Primary/File `<filename>` ** -Cria uma zona primária padrão.</li><li>**/Secondary `<masterIPaddress> [,<masterIPaddress>...]` ** -Cria uma zona secundária padrão.</li><li>**/stub `<masterIPaddress>[,<masterIPaddress>...]` /File `<filename>` ** – cria uma zona de stub com backup em arquivo.</li><li>**/DsStub `<masterIPaddress>[,<masterIPaddress>...]` ** -Cria uma zona de stub integrada do Active Directory.</li><li>**/forwarder `<masterIPaddress[,<masterIPaddress>]` .../File `<filename>` ** -especifica que a zona criada encaminha consultas não resolvidas para outro servidor DNS.</li><li>**/DsForwarder** -especifica que a zona integrada do Active Directory criada encaminha consultas não resolvidas para outro servidor DNS.</li></ul> |
+| `<zonetype>` | Especifica o tipo de zona a ser criada. Cada tipo tem diferentes parâmetros necessários, incluindo:<ul><li>**/DsPrimary** – cria uma zona integrada do Active Directory.</li><li>**/Primary/File `<filename>`** -Cria uma zona primária padrão.</li><li>**/Secondary `<masterIPaddress> [,<masterIPaddress>...]`** -Cria uma zona secundária padrão.</li><li>**/stub `<masterIPaddress>[,<masterIPaddress>...]` /File `<filename>`** – cria uma zona de stub com backup em arquivo.</li><li>**/DsStub `<masterIPaddress>[,<masterIPaddress>...]`** -Cria uma zona de stub integrada do Active Directory.</li><li>**/forwarder `<masterIPaddress[,<masterIPaddress>]` .../File `<filename>`** -especifica que a zona criada encaminha consultas não resolvidas para outro servidor DNS.</li><li>**/DsForwarder** -especifica que a zona integrada do Active Directory criada encaminha consultas não resolvidas para outro servidor DNS.</li></ul> |
 | /overwrite_mem | Substitui dados DNS de dados em AD DS. |
 | /overwrite_ds | Substitui os dados existentes no AD DS. |
 

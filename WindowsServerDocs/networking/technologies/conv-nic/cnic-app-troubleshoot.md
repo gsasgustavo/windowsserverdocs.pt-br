@@ -6,12 +6,12 @@ ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7868861d33392e954b64064e3f748f742293b9af
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a4d62be747859c84247b4afaa9e5a9276c072ea0
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87955833"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697019"
 ---
 # <a name="troubleshooting-converged-nic-configurations"></a>Solucionando problemas de configurações de NIC convergida
 
@@ -19,7 +19,7 @@ ms.locfileid: "87955833"
 
 Você pode usar o script a seguir para verificar se a configuração de RDMA está correta no host Hyper-V.
 
-- [Baixar Test-Rdma.ps1de script](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1)
+- [Baixar Test-Rdma.ps1de script ](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1)
 
 Você também pode usar os seguintes comandos do Windows PowerShell para solucionar problemas e verificar a configuração de suas NICs convergidas.
 
@@ -33,13 +33,13 @@ Get-NetAdapterRdma | fl *
 
 Você pode usar os seguintes resultados esperados e inesperados para identificar e resolver problemas depois de executar esse comando no host do Hyper-V.
 
-### <a name="get-netadapterrdma-expected-results"></a>Resultados esperados de Get-NetAdapterRdma
+### <a name="get-netadapterrdma-expected-results"></a>Get-NetAdapterRdma resultados esperados
 
 O host vNIC e a NIC física mostram recursos RDMA diferentes de zero.
 
 ![Resultados esperados do Windows PowerShell](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-01.jpg)
 
-### <a name="get-netadapterrdma-unexpected-results"></a>Resultados inesperados do Get-NetAdapterRdma
+### <a name="get-netadapterrdma-unexpected-results"></a>Get-NetAdapterRdma resultados inesperados
 
 Execute as etapas a seguir se você receber resultados inesperados ao executar o comando **Get-NetAdapterRdma** .
 
@@ -52,7 +52,7 @@ Execute as etapas a seguir se você receber resultados inesperados ao executar o
 5. Verifique se o vSwitch foi criado no adaptador físico correto verificando seus recursos de RDMA.
 6. Verifique o log do sistema do visualizador e filtre por origem "Hyper-V-VmSwitch".
 
-## <a name="get-smbclientnetworkinterface"></a>Get-SmbClientNetworkInterface
+## <a name="get-smbclientnetworkinterface-verifies-rdma-configuration"></a>Get-SmbClientNetworkInterface verifica a configuração RDMA
 
 Como uma etapa adicional para verificar a configuração de RDMA, execute o seguinte comando do Windows PowerShell no servidor Hyper-V.
 
@@ -60,13 +60,13 @@ Como uma etapa adicional para verificar a configuração de RDMA, execute o segu
 Get-SmbClientNetworkInterface
 ```
 
-### <a name="get-smbclientnetworkinterface-expected-results"></a>Resultados esperados de Get-SmbClientNetworkInterface
+### <a name="get-smbclientnetworkinterface-expected-results"></a>Get-SmbClientNetworkInterface resultados esperados
 
 O host vNIC também deve aparecer como RDMA habilitado da perspectiva do SMB.
 
 ![Propriedades do adaptador de rede](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
-### <a name="get-smbclientnetworkinterface-unexpected-results"></a>Resultados inesperados do Get-SmbClientNetworkInterface
+### <a name="get-smbclientnetworkinterface-unexpected-results"></a>Get-SmbClientNetworkInterface resultados inesperados
 
 1. Verifique se os drivers de barramento Mlnx e miniporta Mlnx são mais recentes. Para o Mellanox, use pelo menos a remoção de 42.
 2. Verifique se a miniporta Mlnx e os drivers de barramento correspondem verificando a versão do driver por meio de Device Manager. O driver de barramento pode ser encontrado em dispositivos do sistema. O nome deve começar com Mellanox Connect-X 3 PRO VPI, conforme ilustrado na captura de tela a seguir das propriedades do adaptador de rede.
@@ -82,13 +82,13 @@ Você pode exibir a qualidade do adaptador de rede da configuração de QoS do s
 Get-NetAdapterQos
 ```
 
-### <a name="get-netadapterqos-expected-results"></a>Resultados esperados de Get-NetAdapterQos
+### <a name="get-netadapterqos-expected-results"></a>Get-NetAdapterQos resultados esperados
 
 As prioridades e as classes de tráfego devem ser exibidas de acordo com a primeira etapa de configuração que você realizou usando este guia.
 
 ![Qualidade das prioridades e classes de serviço](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-04.jpg)
 
-### <a name="get-netadapterqos-unexpected-results"></a>Resultados inesperados do Get-NetAdapterQos
+### <a name="get-netadapterqos-unexpected-results"></a>Get-NetAdapterQos resultados inesperados
 
 Se os resultados forem inesperados, execute as etapas a seguir.
 
@@ -103,20 +103,20 @@ Você pode usar o seguinte comando do Windows PowerShell para verificar se o end
 Get-SmbMultiChannelConnection
 ```
 
-### <a name="get-smbmultichannelconnection-expected-results"></a>Resultados esperados de Get-SmbMultiChannelConnection
+### <a name="get-smbmultichannelconnection-expected-results"></a>Get-SmbMultiChannelConnection resultados esperados
 
 O endereço IP do nó remoto é mostrado como habilitado para RDMA.
 
 ![Endereço IP do nó remoto compatível com RDMA](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-05.jpg)
 
-### <a name="get-smbmultichannelconnection-unexpected-results"></a>Resultados inesperados do Get-SmbMultiChannelConnection
+### <a name="get-smbmultichannelconnection-unexpected-results"></a>Get-SmbMultiChannelConnection resultados inesperados
 
 Se os resultados forem inesperados, execute as etapas a seguir.
 
 1. Verifique se o ping funciona de ambas as maneiras.
 2. Verifique se o firewall não está bloqueando o início da conexão SMB. Especificamente, habilite a regra de firewall para a porta SMB Direct 5445 para iWARP e 445 para ROCE.
 
-## <a name="get-smbclientnetworkinterface"></a>Get-SmbClientNetworkInterface
+## <a name="get-smbclientnetworkinterface-verifies-nic-is-rmda-capable"></a>Get-SmbClientNetworkInterface verifica se a NIC é compatível com RMDA
 
 Você pode usar o comando a seguir para verificar se a NIC virtual que você habilitou para RDMA é relatada como compatível com RDMA \- pelo SMB.
 
@@ -124,13 +124,13 @@ Você pode usar o comando a seguir para verificar se a NIC virtual que você hab
 Get-SmbClientNetworkInterface
 ```
 
-### <a name="get-smbclientnetworkinterface-expected-results"></a>Resultados esperados de Get-SmbClientNetworkInterface
+### <a name="get-smbclientnetworkinterface-expected-results"></a>Get-SmbClientNetworkInterface resultados esperados
 
 A NIC virtual habilitada para RDMA deve ser vista como compatível com RDMA pelo SMB.
 
 ![O SMB relata que as NICs são compatíveis com RDMA](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-06.jpg)
 
-### <a name="get-smbclientnetworkinterface-unexpected-results"></a>Resultados inesperados do Get-SmbClientNetworkInterface
+### <a name="get-smbclientnetworkinterface-unexpected-results"></a>Get-SmbClientNetworkInterface resultados inesperados
 
 Se os resultados forem inesperados, execute as etapas a seguir.
 
@@ -151,7 +151,7 @@ A versão do RoCE em ambos os nós deve ser a mesma. Essa também é uma boa man
 
 Se os resultados forem inesperados, execute as etapas a seguir.
 
-1. Definir a versão correta do RoCE usando Set-MlnxDriverCoreSetting
+1. Definir a versão correta do RoCE usando o Set-MlnxDriverCoreSetting
 2. Instale o firmware mais recente do site da Mellanox.
 
 ## <a name="perfmon-counters"></a>Contadores Perfmon

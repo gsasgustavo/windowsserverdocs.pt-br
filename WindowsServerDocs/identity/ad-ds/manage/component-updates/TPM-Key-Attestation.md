@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7b8e311d395b31361b0ee705bf7bddf272011087
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: a297473e338e88e575db07ddbeffc568e557b6cf
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048744"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711721"
 ---
 # <a name="tpm-key-attestation"></a>Atestado de chave de TPM
 
@@ -39,7 +39,7 @@ Embora o suporte para chaves protegidas por TPM tenha existido desde o Windows 8
 |EKCert|Certificado EK. Um certificado de TPM emitido pelo fabricante para EKPub. Nem todos os TPMs têm EKCert.|
 |TPM|Trusted Platform Module. Um TPM é projetado para fornecer funções relacionadas à segurança com base em hardware. Um chip TPM é um processador de criptografia seguro projetado para desempenhar as operações de criptografia. O chip inclui vários mecanismos de segurança física para torná-lo resistente a adulterações nas funções de segurança do TPM por software mal-intencionado.|
 
-### <a name="background"></a>Segundo plano
+### <a name="background"></a>Tela de fundo
 A partir do Windows 8, um Trusted Platform Module (TPM) pode ser usado para proteger a chave privada de um certificado. O KSP (provedor de armazenamento de chaves) do provedor Microsoft Platform crypto habilita esse recurso. Houve duas preocupações com a implementação:
 
 -   Não havia nenhuma garantia de que uma chave seja realmente protegida por um TPM (alguém pode facilmente falsificar um KSP de software como um KSP de TPM com credenciais de administrador local).
@@ -112,23 +112,23 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
     -   Verifique se **Windows 8.1/Windows Server 2012 R2** está selecionado para o **destinatário do certificado**.
 
-    ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
+    ![Captura de tela que realça a lista de destinatários do certificado.](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
 
 2.  Guia **Criptografia**
 
     Verifique se o **provedor de armazenamento de chaves** está selecionado para a categoria de **provedor** e **RSA** está selecionado para o **nome do algoritmo**. Verifique se as **solicitações devem usar um dos seguintes provedores** está selecionado e a opção **provedor de criptografia de plataforma da Microsoft** está selecionada em **provedores**.
 
-    ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
+    ![Captura de tela que realça a categoria do provedor e as listas de nome do algoritmo.](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
 
 3.  Guia **atestado de chave**
 
     Esta é uma nova guia para o Windows Server 2012 R2:
 
-    ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
+    ![Captura de tela que mostra a guia atestado de chave.](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
 
     Escolha um modo de atestado dentre as três opções possíveis.
 
-    ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
+    ![Captura de tela que mostra os modos de atestado.](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
 
     -   **Nenhum:** Implica que o atestado de chave não deve ser usado
 
@@ -138,7 +138,7 @@ Para configurar o modelo de certificado para o atestado de chave do TPM, execute
 
     Em seguida, escolha o modelo de confiança do TPM. Há novamente três opções:
 
-    ![Atestado de chave de TPM](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
+    ![Captura de tela que mostra os modelos de confiança do TPM.](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
 
     -   **Credenciais do usuário:** Permitir que um usuário de autenticação comprovando um TPM válido especificando suas credenciais de domínio.
 

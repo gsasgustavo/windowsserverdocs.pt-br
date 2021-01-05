@@ -1,18 +1,18 @@
 ---
 title: Utilizar o acesso remoto via Web no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como o Acesso via Web remoto permite que você acesse arquivos/pastas e computadores na rede por meio de um navegador da Web de qualquer lugar com conectividade com a Internet.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 25b3bf64672356027742858399d1e2cbc7037194
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 5d1b3d720684ab9ece6b816b2012ea153a32217f
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624900"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696877"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Utilizar o acesso remoto via Web no Windows Server Essentials
 
@@ -41,13 +41,6 @@ ms.locfileid: "89624900"
 -   [Compartilhar arquivos e pastas](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)
 
 -   [Conectar-se de um dispositivo móvel](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)
-
-##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a> Conectar-se ao Acesso via Web remoto
-
--   [Fazer logon no Acesso via Web remoto](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)
-
--   [Acessar remotamente o computador](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)
-
 
 ###  <a name="log-on-to-remote-web-access"></a><a name="BKMK_1"></a> Fazer logon no Acesso via Web remoto
  Ao fazer logon no Acesso via Web remoto de um computador local ou remoto, você pode acessar recursos em seu servidor que executa o Windows Server Essentials e computadores na sua rede.
@@ -154,7 +147,7 @@ ms.locfileid: "89624900"
 
 2.  Na lista pasta compartilhada de arquivos e pastas, clique na pasta onde você deseja carregar os arquivos e, em seguida, clique em **carregar**. Se a pasta que você deseja carregar não existir, clique em **nova pasta**, digite o nome da nova pasta na caixa de diálogo e, em seguida, clique em **OK**.
 
-3.  Talvez seja necessário executar o complemento de soluções do Windows Server. Nesse caso, clique na faixa amarela na parte superior da tela, clique em executar **complemento**e clique em **executar** na caixa de diálogo.
+3.  Talvez seja necessário executar o complemento de soluções do Windows Server. Nesse caso, clique na faixa amarela na parte superior da tela, clique em executar **complemento** e clique em **executar** na caixa de diálogo.
 
 4.  Se a ferramenta de carregamento fácil de arquivo ainda não foi carregada, clique em **usar a ferramenta de carregamento fácil de arquivo**.
 
@@ -242,7 +235,7 @@ ms.locfileid: "89624900"
  Você pode usar o acesso remoto via Web para criar novas pastas em uma pasta compartilhada existente para renomear os arquivos e pastas, mover e copiar arquivos e pastas e excluir arquivos e pastas no servidor.
 
 > [!NOTE]
-> Para adicionar novas pastas compartilhadas em um servidor que esteja executando o Windows Server Essentials, você deve usar o Painel geral. Para se conectar ao console do servidor de acesso remoto via Web, em **computadores**, clique no nome do servidor, clique em **conectar**e, em seguida, siga as instruções para fazer logon no servidor. Para obter informações sobre como criar pastas compartilhadas, veja [adicionar ou mover uma pasta no servidor](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
+> Para adicionar novas pastas compartilhadas em um servidor que esteja executando o Windows Server Essentials, você deve usar o Painel geral. Para se conectar ao console do servidor de acesso remoto via Web, em **computadores**, clique no nome do servidor, clique em **conectar** e, em seguida, siga as instruções para fazer logon no servidor. Para obter informações sobre como criar pastas compartilhadas, veja [adicionar ou mover uma pasta no servidor](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
 
 #### <a name="to-create-a-new-folder"></a>Para criar uma nova pasta
 
@@ -312,7 +305,7 @@ ms.locfileid: "89624900"
 
 1.  Abra um navegador da Web e digite **https://** _<\> YourDomainName_**/Remote** na barra de endereços.  Certifique-se de incluir os s em https.
 
-2.  Na página logon Acesso via Web remoto, digite seu nome de usuário e senha nas caixas de texto, clique em **Exibir versão da área de trabalho**e clique na seta. Você está conectado à versão da área de trabalho do acesso remoto via Web .
+2.  Na página logon Acesso via Web remoto, digite seu nome de usuário e senha nas caixas de texto, clique em **Exibir versão da área de trabalho** e clique na seta. Você está conectado à versão da área de trabalho do acesso remoto via Web .
 
 ##### <a name="to-return-to-the-mobile-version-of-remote-web-access"></a>Para voltar para a versão móvel do acesso via Web Remoto
 

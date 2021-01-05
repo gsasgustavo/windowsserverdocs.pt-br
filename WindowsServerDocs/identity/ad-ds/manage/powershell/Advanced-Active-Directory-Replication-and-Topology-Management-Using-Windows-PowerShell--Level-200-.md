@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ecd4db8b4fdbda926cd6a65101c241c6282ebf98
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 4c233be8905c61e66d6b1b3226d149acab96ef23
+ms.sourcegitcommit: d2224cf55c5d4a653c18908da4becf94fb01819e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046554"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97711821"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 
@@ -113,7 +113,7 @@ Get-ADReplicationAttributeMetadata -object "cn=domain admins,cn=users,dc=corp,dc
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMd.png)
+![Captura de tela que mostra a saída de metadados do objeto admins. do domínio ordenado como uma lista legível.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMd.png)
 
 Você também pode organizar os dados para serem semelhantes a repadmin em uma tabela:
 
@@ -122,7 +122,7 @@ Get-ADReplicationAttributeMetadata -object "cn=domain admins,cn=users,dc=corp,dc
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdTable.png)
+![Captura de tela que mostra os dados organizados para serem semelhantes a repadmin em uma tabela.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdTable.png)
 
 Você pode também obter metadados para toda uma classe de objetos, canalizando o cmdlet **Get-Adobject** com um filtro, como todos os grupos – em seguida, combinar isso com uma data específica. O pipeline é um canal usado entre vários cmdlets para passar dados. Para ver todos os grupos modificados de alguma forma em 13 de janeiro de 2012:
 
@@ -130,7 +130,7 @@ Você pode também obter metadados para toda uma classe de objetos, canalizando 
 get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com | where-object {$_.lastoriginatingchangetime -like "*1/13/2012*" -and $_.attributename -eq "name"} | format-table object
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)
+![Captura de tela que mostra como ver todos os grupos modificados de alguma maneira em 13 de janeiro de 2012.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)
 
 Para obter outras informações sobre mais operações do Windows PowerShell com pipelines, consulte [Canalização e pipeline no Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).
 
@@ -141,7 +141,7 @@ get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetad
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter.png)
+![Captura de tela que mostra como descobrir cada grupo que tem Tony Wang como um membro e quando o grupo foi modificado pela última vez.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter.png)
 
 Como alternativa, para encontrar todos os objetos restaurados com autoridade usando um backup do estado do sistema no domínio, com base em sua alta versão artificial:
 
@@ -149,7 +149,7 @@ Como alternativa, para encontrar todos os objetos restaurados com autoridade usa
 get-adobject -filter 'objectclass -like "*"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com | where-object {$_.version -gt "100000" -and $_.attributename -eq "name"} | format-table object,LastOriginatingChangeTime
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter2.png)
+![Captura de tela que mostra como localizar todos os objetos restaurados com autoridade usando um backup de estado do sistema no domínio, com base em sua versão artificialmente alta.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter2.png)
 
 Você também pode enviar todos os metadados do usuário para um arquivo CSV para exame posterior no Microsoft Excel:
 
@@ -166,7 +166,7 @@ Por exemplo, o estado de replicação legível de um único controlador de domí
 Get-ADReplicationPartnerMetadata -target dc1.corp.contoso.com
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMd.png)
+![Captura de tela que mostra como obter o estado de replicação legível de um único controlador de domínio.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMd.png)
 
 Alternativamente, a última vez que um controlador de domínio replicou entrada e seus parceiros, em um formato de tabela:
 
@@ -174,7 +174,7 @@ Alternativamente, a última vez que um controlador de domínio replicou entrada 
 Get-ADReplicationPartnerMetadata -target dc1.corp.contoso.com | format-table lastreplicationattempt,lastreplicationresult,partner -auto
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdTable.png)
+![Captura de tela que mostra a última vez em que um controlador de domínio replicou a entrada e seus parceiros, em um formato de tabela.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdTable.png)
 
 Se preferir, entre em contato com todos os controladores de domínio na floresta e exiba qualquer tentativa de replicação com falha, por qualquer motivo:
 
@@ -183,7 +183,7 @@ Get-ADReplicationPartnerMetadata -target * -scope server | where {$_.lastreplica
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)
+![Captura de tela que mostra como entrar em contato com todos os controladores de domínio na floresta e exibir qualquer cuja última tentativa de replicação falhou por qualquer motivo.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)
 
 ### <a name="get-adreplicationfailure"></a><a name="BKMK_ReplFail"></a>Get-ADReplicationFailure
 Este cmdlet pode ser usado para retornar informações sobre erros recentes na replicação. É semelhante ao **Repadmin.exe /showreplsum**, mas, novamente, com muito mais controle, graças ao Windows PowerShell.
@@ -194,7 +194,7 @@ Por exemplo, você pode retornar a maioria das falhas recentes de um controlador
 Get-ADReplicationFailure dc1.corp.contoso.com
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFail.png)
+![Captura de tela que mostra como você pode retornar as falhas mais recentes de um controlador de domínio e os parceiros que não entraram em contato com ele.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFail.png)
 
 Se preferir, retorne uma exibição de tabela para todos os servidores em um site lógico de AD específico, ordenado para facilitar a visualização e contendo apenas os dados mais críticos:
 
@@ -203,7 +203,7 @@ Get-ADReplicationFailure -scope site -target default-first-site-name | format-ta
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)
+![Captura de tela que mostra como retornar uma exibição de tabela para todos os servidores em um site lógico específico do AD, ordenado para exibição mais fácil e contendo apenas os dados mais críticos.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)
 
 ### <a name="get-adreplicationqueueoperation-and-get-adreplicationuptodatenessvectortable"></a><a name="BKMK_ReplQueue"></a>Get-ADReplicationQueueOperation e Get-ADReplicationUpToDatenessVectorTable
 Ambos os cmdlets retornam outros aspectos de atualização do controlador de domínio, que incluem replicação pendente e informações de vetor da versão.
@@ -218,7 +218,7 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
 
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)
+![Captura de tela que mostra como replicar uma conta excluída da lixeira do Active Directory para todos os controladores de domínio sem forçar a replicação de todas as outras alterações de objeto feitas.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)
 
 ### <a name="topology"></a><a name="BKMK_Topo"></a>Topologia
 Enquanto o Repadmin.exe é bom para retornar informações sobre topologia de replicação como sites, links de site, pontes de link de site e conexões, ele não tem um conjunto abrangente de argumentos para fazer alterações. Na verdade, nunca houve um utilitário nativo, programável do Windows, projetado especificamente para criação e modificação de topologia AD DS pelos administradores. Como o Active Directory amadureceu em milhões de ambientes de cliente, a necessidade de modificar em massa as informações lógicas do Active Directory torna-se aparente.
@@ -233,9 +233,9 @@ Por exemplo, você pode criar novos sites usando um arquivo CSV:
 import-csv -path C:\newsites.csv | new-adreplicationsite
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewSitesCSV.png)
+![Captura de tela que mostra a interface do bloco de notas.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewSitesCSV.png)
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSImportCSV.png)
+![Captura de tela que mostra como criar novos sites usando um arquivo CSV.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSImportCSV.png)
 
 Você pode também criar um novo link de site entre dois sites existentes, com um intervalo de replicação personalizado e custo do site:
 
@@ -243,7 +243,7 @@ Você pode também criar um novo link de site entre dois sites existentes, com u
 new-adreplicationsitelink -name "chicago<-->waukegan" -sitesincluded chicago,waukegan -cost 50 -replicationfrequencyinminutes 15
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSite.png)
+![Captura de tela que mostra criar um novo link de site entre dois sites existentes com um intervalo de replicação personalizado e um custo de site.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSite.png)
 
 Como alternativa, encontre todos os sites na floresta e substitua seus atributos de **Opções** pelo sinalizador para permitir notificação de alteração entre sites a fim de replicar na velocidade máxima com compactação:
 
@@ -262,7 +262,7 @@ Se preferir, encontre todos os sites sem atribuição de sub-redes para concilia
 get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -eq "*"} | format-table name
 ```
 
-![gerenciamento avançado com o PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)
+![Captura de tela que mostra como localizar todos os sites que não têm atribuições de sub-rede, a fim de reconciliar a lista com as sub-redes reais desses locais.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)
 
 ## <a name="see-also"></a>Consulte Também
 [Introdução à replicação Active Directory e ao gerenciamento de topologia usando o Windows PowerShell &#40;nível 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)

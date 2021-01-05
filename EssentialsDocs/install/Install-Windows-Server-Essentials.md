@@ -1,18 +1,18 @@
 ---
 title: Instalar o Windows Server Essentials
-description: Descreve como instalar e personalizar o Windows Server Essentials
+description: Saiba como instalar o Windows Server Essentials.
 ms.date: 01/02/2017
 ms.topic: article
 ms.assetid: fdf020cd-3184-4886-9f9d-7d729a89057e
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 007ca6d41bbbb638bd1f3ededce15f294d7cb2d1
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: de274a2c8cdd4bc70a1ddfa9f9c435c1602bcbda
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626311"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97754952"
 ---
 # <a name="install-windows-server-essentials"></a>Instalar o Windows Server Essentials
 

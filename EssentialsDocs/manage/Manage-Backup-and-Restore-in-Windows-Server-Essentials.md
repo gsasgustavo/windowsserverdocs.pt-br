@@ -1,18 +1,18 @@
 ---
 title: Gerenciar Backup e restauração no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como executar backups regulares de seu servidor e backups de seus computadores de rede e restaurar dados desses backups no Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 41000915-f6ff-4dbb-b7be-629ef36386d4
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 996eb1293eebbd424c6063654322617a92043eae
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 89e67327786186a4fdd94a760d29afb47c5a2b66
+ms.sourcegitcommit: e00e789dff216dbade861e61365f078b758a5720
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623222"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97755282"
 ---
 # <a name="manage-backup-and-restore-in-windows-server-essentials"></a>Gerenciar Backup e restauração no Windows Server Essentials
 

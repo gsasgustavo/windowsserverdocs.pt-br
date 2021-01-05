@@ -1,18 +1,18 @@
 ---
 title: Use pastas compartilhadas no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre suas pastas compartilhadas que estão localizadas em seu servidor e como elas fornecem um local central para todos os seus dados e arquivos.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 8c2b906d1484f0f681325cccc36fe3446760a175
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 52e49410cc105cf2ad15b452c6d336489021e06a
+ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624885"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696904"
 ---
 # <a name="use-shared-folders-in-windows-server-essentials"></a>Use pastas compartilhadas no Windows Server Essentials
 
@@ -41,10 +41,6 @@ ms.locfileid: "89624885"
 -   [Uso do aplicativo My Server para Windows Phone](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)
 
 -   [Uso do aplicativo My Server para Windows 8](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)
-
-##  <a name="using-the-windows-server-essentials-launchpad"></a><a name="BKMK_UsingLaunchpad"></a> Usando o Launchpad do Windows Server Essentials
- Você pode usar a Barra Inicial de qualquer computador que esteja conectado ao servidor usando o Assistente Conectar Meu Computador ao Servidor. Para obter mais informações sobre como conectar o computador ao servidor, consulte [conectar computadores ao servidor](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).
-
 
  Depois de conectar seu computador ao servidor, um atalho da Barra Inicial é adicionado à área de notificação da área de trabalho. Clique duas vezes no ícone da Barra Inicial e insira suas credenciais de rede para acessar pastas compartilhadas usando a Barra Inicial. Usando o link de pastas compartilhadas na Barra Inicial, você pode fazer upload ou download de arquivos para qualquer uma das pastas compartilhadas que estão listadas por arrastar e soltar arquivos entre o computador local e as pastas compartilhadas. Pastas compartilhadas habilitam você a transmitir músicas e vídeos, reproduzir apresentações de slides ou gravar programas de TV em qualquer computador que esteja conectado ao servidor, ou você pode reproduzir uma apresentação de slides para exibir imagens.
 
@@ -89,7 +85,7 @@ ms.locfileid: "89624885"
 ##  <a name="using-my-server-app-for-windows-8"></a><a name="BKMK_App"></a> Usando meu aplicativo de servidor para Windows 8
  Você pode acessar as pastas compartilhadas por meio do Windows 8 usando o aplicativo My Server para o Windows 8. Você pode baixar o aplicativo da e armazenamento da [Loja de Aplicativos do Windows 8](https://windows.microsoft.com/windows-8/apps).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 -   [Gerenciar pastas do servidor](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)
 
