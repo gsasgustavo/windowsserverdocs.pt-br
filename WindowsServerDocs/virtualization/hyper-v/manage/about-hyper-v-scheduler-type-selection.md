@@ -1,18 +1,18 @@
 ---
 title: Sobre a seleção do tipo de Agendador de hipervisor do Hyper-V
-description: Fornece informações para os administradores de host do Hyper-V no uso dos modos de Agendador do Hyper-V
+description: Saiba mais sobre alterações importantes no padrão do Hyper-V e no uso recomendado de tipos de Agendador de hipervisor.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
-ms.openlocfilehash: 9c41dfb5bad28122f8c2a6b06ff6574acd89a9ec
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 0e3dfd0d6a2ce4f7996efa42f74bcae3bc07833d
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746621"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97845949"
 ---
 # <a name="about-hyper-v-hypervisor-scheduler-type-selection"></a>Sobre a seleção do tipo de Agendador de hipervisor do Hyper-V
 

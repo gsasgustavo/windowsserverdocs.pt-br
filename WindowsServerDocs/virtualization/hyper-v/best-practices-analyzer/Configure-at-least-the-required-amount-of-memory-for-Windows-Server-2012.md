@@ -1,17 +1,17 @@
 ---
 title: Configure pelo menos a quantidade necessária de memória para uma máquina virtual que executa o Windows Server 2012 e habilitada para Memória Dinâmica
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais estiverem configuradas para usar Memória Dinâmica com menos do que a quantidade de memória necessária para o Windows Server 2012.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 46f9a5dc-355b-415b-863d-fb740609d6b6
 ms.date: 8/16/2016
-ms.openlocfilehash: d32bfafd8fa50ffcc9864f7b426e6bea4a70c8bc
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 8f95fde98f2d164161c2bc2c1035aa9cf36981f6
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746901"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834391"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-server-2012-and-enabled-for-dynamic-memory"></a>Configure pelo menos a quantidade necessária de memória para uma máquina virtual que executa o Windows Server 2012 e habilitada para Memória Dinâmica
 

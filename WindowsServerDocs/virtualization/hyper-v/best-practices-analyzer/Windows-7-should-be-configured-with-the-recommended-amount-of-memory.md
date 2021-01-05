@@ -1,17 +1,17 @@
 ---
 title: O Windows 7 deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 7 estiver configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 ms.date: 8/16/2016
-ms.openlocfilehash: 4aa94d0b7fd06702e0aa7e53eb945e9736950476
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 96ce80f1827f0ab78b3230d507c9e60ec2198acd
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866035"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834261"
 ---
 # <a name="windows-7-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows 7 deve ser configurado com a quantidade recomendada de memória
 

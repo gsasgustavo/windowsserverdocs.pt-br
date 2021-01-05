@@ -1,17 +1,17 @@
 ---
 title: Máquinas virtuais Oracle Linux com suporte no Hyper-V
-description: Lista os serviços e recursos de integração do Linux incluídos em cada versão
+description: Lista o Oracle Linux Integration Services e os recursos incluídos em cada versão
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 06/05/2020
-ms.openlocfilehash: e4cf39e9c96a92df3962fa1a8fc2493c3022d898
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: ce31296712d23aaf30525eeec9a1e8b2c366d84f
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866405"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833841"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais Oracle Linux com suporte no Hyper-V
 
@@ -32,7 +32,7 @@ Nesta seção:
 
 * &#10004;-recurso disponível
 * (*em branco*)-recurso não disponível
-* Kernel **RHCK** -Red Hat compatível
+* Kernel compatível com **RHCK** -Red Hat
 * **UEK** -UEK (inquebrable Enterprise kernel)
    * UEK4 na versão 4.1.12 do kernel upstream do Linux
    * UEK5 na versão de kernel do Linux upstream 4,14

@@ -1,17 +1,17 @@
 ---
 title: Habilitar todos os serviços de integração em máquinas virtuais
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um ou mais serviços de integração estiverem desabilitados ou não estiverem funcionando em uma máquina virtual.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
 ms.date: 8/16/2016
-ms.openlocfilehash: ca614074035678f50dd55b82864d989b789e61fb
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 59ee108cbe2c6b3ff62c4cb6a9d57d1ec8c8ca65
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746871"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97845933"
 ---
 # <a name="enable-all-integration-services-in-virtual-machines"></a>Habilitar todos os serviços de integração em máquinas virtuais
 
@@ -46,7 +46,7 @@ Nas seções a seguir, os itálicos indicam o texto da interface do usuário que
 
 1.  Use Serviços de Área de Trabalho Remota ou conexão de máquina virtual para se conectar à máquina virtual e fazer logon no sistema operacional convidado.
 
-2.  Abrir Serviços. (Clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc**e pressione Enter.)
+2.  Abrir Serviços. (Clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc** e pressione Enter.)
 
 3.  No painel de detalhes, clique com o botão direito no serviço que deseja configurar e clique em **Propriedades**.
 

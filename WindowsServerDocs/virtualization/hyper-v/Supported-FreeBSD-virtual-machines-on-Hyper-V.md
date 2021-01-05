@@ -1,17 +1,17 @@
 ---
 title: Máquinas virtuais FreeBSD com suporte no Hyper-V
-description: Lista os serviços e recursos de integração do Linux incluídos em cada versão
+description: Lista os serviços de integração do FreeBSD/Linux e os recursos incluídos em cada versão
 ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: bf4b1aeb701741a7f58f3d186ffe7861cdd1e8e0
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: f79c2c09f5fdce570ad6e61037756dab0d4056a1
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746401"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834861"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Máquinas virtuais FreeBSD com suporte no Hyper-V
 
@@ -50,7 +50,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |**[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||||||
 |Suporte ao kernel de PAE|2019, 2016, 2012 R2||||||||
 |Configuração da lacuna de MMIO|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Memória Dinâmica-adição a quente|2019, 2016, 2012 R2||||||||
+|Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2||||||||
 |Memória Dinâmica-balões|2019, 2016, 2012 R2||||||||
 |Redimensionamento de memória de Runtime|2019, 2016||||||||
 |**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||

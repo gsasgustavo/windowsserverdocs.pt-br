@@ -1,17 +1,17 @@
 ---
 title: Windows 8.1 deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 8.1 está configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
 ms.date: 8/16/2016
-ms.openlocfilehash: eecad1ccf0df2985703c1be379a7590fb808e4d4
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: cdb8212581f82fa09207878a4ed5ac1631a93629
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865885"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833991"
 ---
 # <a name="windows-81-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows 8.1 deve ser configurado com a quantidade recomendada de memória
 

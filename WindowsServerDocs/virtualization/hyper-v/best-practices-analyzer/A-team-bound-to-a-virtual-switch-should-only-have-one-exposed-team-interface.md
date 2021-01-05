@@ -1,17 +1,17 @@
 ---
 title: Uma equipe associada a um comutador virtual deve ter apenas uma interface de equipe exposta
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um ou mais comutadores virtuais estão associados a uma equipe que tem várias interfaces de equipe.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 1074f086-1a2e-42e1-b58c-f55e657d5ce1
 ms.date: 8/16/2016
-ms.openlocfilehash: e600efe56c68f59ed8587e78a1d82576ff0c5c85
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: af7b7b80559004c765a4a964b0e72827d74136e7
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746361"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834761"
 ---
 # <a name="a-team-bound-to-a-virtual-switch-should-only-have-one-exposed-team-interface"></a>Uma equipe associada a um comutador virtual deve ter apenas uma interface de equipe exposta
 
@@ -37,7 +37,7 @@ Nas seções a seguir, os itálicos indicam o texto da interface do usuário que
 \<list of virtual switches>
 
 ## <a name="resolution"></a>Resolução
-*Use o cmdlet do Windows PowerShell remove-NetLbfoTeamNic para remover todas as interfaces de equipe da equipe que não seja a interface de equipe padrão.*
+*Use o cmdlet do Windows PowerShell Remove-NetLbfoTeamNic para remover todas as interfaces de equipe da equipe que não seja a interface de equipe padrão.*
 
 
 

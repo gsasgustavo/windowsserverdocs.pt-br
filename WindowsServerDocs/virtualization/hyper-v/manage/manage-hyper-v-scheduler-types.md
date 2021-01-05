@@ -1,18 +1,18 @@
 ---
 title: Compreendendo e usando os tipos de Agendador de hipervisor do Hyper-V
-description: Fornece informações para os administradores de host do Hyper-V no uso dos modos de Agendador do Hyper-V
+description: Saiba mais sobre os novos modos de lógica de agendamento do processador virtual que determinam como o hipervisor do Hyper-V aloca e gerencia o trabalho entre processadores virtuais convidados.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: 8dc2fec785771db4ccefb08e2359506932e11620
-ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
+ms.openlocfilehash: 661caf6bbab4c4da49a6c60d806b0fae00f8981b
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235863"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846172"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Gerenciando tipos de Agendador de hipervisor do Hyper-V
 
@@ -23,7 +23,7 @@ Este artigo descreve os novos modos de lógica de agendamento do processador vir
 > [!NOTE]
 > São necessárias atualizações para usar os recursos do Agendador de hipervisor descritos neste documento. Para obter detalhes, consulte [atualizações necessárias](#required-updates).
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Tela de fundo
 
 Antes de discutir a lógica e os controles por trás do agendamento do processador virtual do Hyper-V, é útil examinar os conceitos básicos abordados neste artigo.
 

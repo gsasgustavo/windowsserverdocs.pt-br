@@ -1,17 +1,17 @@
 ---
 title: Analisador de práticas recomendadas do Hyper-V
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba como o Analisador de Práticas Recomendadas verifica o computador usando regras baseadas nessas práticas recomendadas e relata os resultados.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 ms.date: 8/16/2016
-ms.openlocfilehash: c48f94eef1ceb77e80701adca9aeddfb4656e53c
-ms.sourcegitcommit: 6931830a70c5849d8f884cdc7bd4f5afc1a00cce
+ms.openlocfilehash: a7261e219ffc332cc0ea79fb9c6de6f9e0624b4f
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955811"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834491"
 ---
 # <a name="best-practices-analyzer-for-hyper-v"></a>Analisador de práticas recomendadas do Hyper-V
 

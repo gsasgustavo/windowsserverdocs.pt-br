@@ -1,17 +1,17 @@
 ---
 title: O Windows 10 deve ser configurado com pelo menos a quantidade mínima de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 10 é configurada com menos que a quantidade mínima de RAM, que é de 512 MB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: e4f5bd2f-b5be-4d43-80e0-0cf198182791
 ms.date: 8/16/2016
-ms.openlocfilehash: a33efeb11b9813dceb12edbf68ec97b971c55538
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: b96aefc1517585dfe64c8260103247861443bbf7
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864645"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834881"
 ---
 # <a name="windows-10-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>O Windows 10 deve ser configurado com pelo menos a quantidade mínima de memória
 

@@ -1,17 +1,17 @@
 ---
 title: Evite usar discos rígidos virtuais com um tamanho de setor menor que o tamanho de setor do armazenamento físico que armazena o arquivo de disco rígido virtual
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um ou mais discos rígidos virtuais têm um tamanho de setor físico menor do que o tamanho de setor físico do armazenamento no qual o arquivo de disco rígido virtual está localizado.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
 ms.date: 8/16/2016
-ms.openlocfilehash: 946168aa200ec80e5d2c9a69e0ecfad2477dcb6e
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: e664b0947479935dd22c3409eeb0948e01fa9b89
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745881"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834481"
 ---
 # <a name="avoid-using-virtual-hard-disks-with-a-sector-size-less-than-the-sector-size-of-the-physical-storage-that-stores-the-virtual-hard-disk-file"></a>Evite usar discos rígidos virtuais com um tamanho de setor menor que o tamanho de setor do armazenamento físico que armazena o arquivo de disco rígido virtual
 
@@ -21,7 +21,7 @@ Para obter mais informações sobre práticas recomendadas e varreduras, confira
 
 |Propriedade|Detalhes|
 |-|-|
-|**Operacional** <br />**Sistema**|Windows Server 2016|
+|**Operacional** <br />**System**|Windows Server 2016|
 |**Produto/Recurso**|Hyper-V|
 |**Gravidade**|Aviso|
 |**Categoria**|Configuração|

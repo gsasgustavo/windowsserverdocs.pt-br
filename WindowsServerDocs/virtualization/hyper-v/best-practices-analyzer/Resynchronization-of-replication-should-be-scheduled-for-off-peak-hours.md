@@ -1,17 +1,17 @@
 ---
 title: A ressincronização da replicação deve ser agendada para o horário de pico
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando a ressincronização de replicação para as máquinas virtuais primárias não estiver agendada para horários de pico.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 ms.date: 8/16/2016
-ms.openlocfilehash: 97df7945988f117ed16d59685cc60841775737da
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 3669abf4da79db82d0ba7ca985b886a02a180ea9
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746151"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97845815"
 ---
 # <a name="resynchronization-of-replication-should-be-scheduled-for-off-peak-hours"></a>A ressincronização da replicação deve ser agendada para o horário de pico
 

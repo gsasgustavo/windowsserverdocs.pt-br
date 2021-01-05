@@ -1,17 +1,17 @@
 ---
 title: Evite habilitar a qualidade de serviço de armazenamento ao usar um disco rígido virtual diferencial quando os discos rígidos virtuais pai e filho estiverem em volumes diferentes
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um disco rígido virtual diferencial com os discos rígidos virtuais pai e filho em volumes diferentes tiver a qualidade de serviço de armazenamento habilitada.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: aa9ed408-65cf-40dc-aad2-118b54c70179
 ms.date: 8/16/2016
-ms.openlocfilehash: 792ee7f84694171b7b44602c8bb1a5c307d80c6c
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: b02cb69d62e9cac74f42f68b1d4be136e1d7cd29
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747071"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834671"
 ---
 # <a name="avoid-enabling-storage-quality-of-service-when-using-a-differencing-virtual-hard-disk-when-the-parent-and-child-virtual-hard-disks-are-on-different-volumes"></a>Evite habilitar a qualidade de serviço de armazenamento ao usar um disco rígido virtual diferencial quando os discos rígidos virtuais pai e filho estiverem em volumes diferentes
 

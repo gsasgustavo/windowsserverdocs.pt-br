@@ -1,17 +1,17 @@
 ---
 title: Verifique se todas as extensões obrigatórias do comutador virtual estão disponíveis
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um ou mais adaptadores de rede virtual estiverem conectados a um comutador virtual com extensões obrigatórias que estão desabilitadas ou não instaladas.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1
 ms.date: 8/16/2016
-ms.openlocfilehash: 8eeadf6ed8b90ef217d694e2f14b38314b8be7a5
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 0af9d5823740ebcfaaf740f8738ea91d4d827baa
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746851"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846135"
 ---
 # <a name="ensure-that-all-mandatory-virtual-switch-extensions-are-available"></a>Verifique se todas as extensões obrigatórias do comutador virtual estão disponíveis
 

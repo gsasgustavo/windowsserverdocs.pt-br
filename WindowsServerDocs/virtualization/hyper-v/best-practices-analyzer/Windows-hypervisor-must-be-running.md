@@ -1,17 +1,17 @@
 ---
 title: O hipervisor do Windows deve estar em execução
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o hipervisor do Windows não está em execução.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
 ms.date: 10/03/2016
-ms.openlocfilehash: 75437680370672a1eef9fad2957f398ce4f267d7
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 12c8273d28266f02ff9af0fa5dd5975f3b764614
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90744811"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833851"
 ---
 # <a name="windows-hypervisor-must-be-running"></a>O hipervisor do Windows deve estar em execução
 
@@ -72,9 +72,9 @@ Em seguida, verifique o log de eventos do hipervisor do Hyper-V. Se houver probl
 
 #### <a name="to-check-the-event-logs"></a>Para verificar os logs de eventos
 
-1.  Visualizador de EventosAberto. Clique em **Iniciar**, em **Ferramentas administrativas**e em **Visualizador de eventos**.
+1.  Visualizador de EventosAberto. Clique em **Iniciar**, em **Ferramentas administrativas** e em **Visualizador de eventos**.
 
-2.  Abra o log de eventos do hipervisor do Hyper-V. No painel de navegação, expanda **logs de aplicativos e serviços**  >>  **Microsoft**  >>  **Windows**  >>  **Hyper-V-hipervisor**e, em seguida, clique em **operacional**.
+2.  Abra o log de eventos do hipervisor do Hyper-V. No painel de navegação, expanda **logs de aplicativos e serviços**  >>  **Microsoft**  >>  **Windows**  >>  **Hyper-V-hipervisor** e, em seguida, clique em **operacional**.
 
 3.  Se o hipervisor do Windows estiver em execução, nenhuma ação adicional será necessária. Se o hipervisor do Windows não estiver em execução, faça o seguinte:
 

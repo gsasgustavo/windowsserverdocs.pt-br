@@ -1,17 +1,17 @@
 ---
 title: Discos rígidos virtuais dinâmicos de formato VHD não são recomendados para máquinas virtuais que executam cargas de trabalho de servidor em um ambiente de produção
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais usam discos rígidos virtuais de expansão dinâmica em formato VHD.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
 ms.date: 8/16/2016
-ms.openlocfilehash: 080858d709592fd877fc643219a7cca1bd0607ff
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 53e32d215311712130a48009359706ad1aea4a14
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746771"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97845764"
 ---
 # <a name="vhd-format-dynamic-virtual-hard-disks-are-not-recommended-for-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>Discos rígidos virtuais dinâmicos de formato VHD não são recomendados para máquinas virtuais que executam cargas de trabalho de servidor em um ambiente de produção
 

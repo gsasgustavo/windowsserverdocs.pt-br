@@ -1,17 +1,17 @@
 ---
 title: O número de máquinas virtuais em execução ou configuradas deve estar dentro dos limites com suporte
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando mais máquinas virtuais estiverem em execução ou configuradas do que têm suporte.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 ms.date: 8/16/2016
-ms.openlocfilehash: f97ca9ad38bfdeee7e6d543a32f62f7a5344e700
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 257c929364614dd058721012ff80ea352479b5d5
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746821"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834821"
 ---
 # <a name="the-number-of-running-or-configured-virtual-machines-must-be-within-supported-limits"></a>O número de máquinas virtuais em execução ou configuradas deve estar dentro dos limites com suporte
 
@@ -75,14 +75,14 @@ Depois de exportar as máquinas virtuais, importe as máquinas virtuais para o o
 
 A associação no grupo **Administradores de domínio** é necessária para concluir este procedimento.
 
-1.  Em um computador com o recurso ferramentas de Active Directory Domain Services instalado, em **Ferramentas administrativas**, abra **Active Directory usuários e computadores**e, em seguida, navegue até a conta de computador do computador que executa o Hyper-V.
+1.  Em um computador com o recurso ferramentas de Active Directory Domain Services instalado, em **Ferramentas administrativas**, abra **Active Directory usuários e computadores** e, em seguida, navegue até a conta de computador do computador que executa o Hyper-V.
 
     > [!NOTE]
     > Se **Active Directory usuários e computadores** não estiver listado, instale o recurso de ferramentas de Active Directory Domain Services. Para obter instruções, consulte [installing ferramentas de administração de servidor remoto for AD DS](https://go.microsoft.com/fwlink/?LinkId=140463) ( https://go.microsoft.com/fwlink/?LinkId=140463) .
 
 2.  Clique com o botão direito do mouse na conta do computador que executa o Hyper-V e clique em **Propriedades**.
 
-3.  Na guia **delegação** , clique em **selecionar este computador para delegação apenas para serviços especificados**e, em seguida, clique em **usar qualquer protocolo de autenticação**.
+3.  Na guia **delegação** , clique em **selecionar este computador para delegação apenas para serviços especificados** e, em seguida, clique em **usar qualquer protocolo de autenticação**.
 
 4.  Para permitir que a conta de computador do Hyper-V apresente credenciais delegadas ao computador remoto:
 

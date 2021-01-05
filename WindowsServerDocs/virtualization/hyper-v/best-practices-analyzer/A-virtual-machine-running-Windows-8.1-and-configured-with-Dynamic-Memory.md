@@ -1,17 +1,17 @@
 ---
 title: Uma máquina virtual que executa Windows 8.1 e configurada com Memória Dinâmica deve usar os valores recomendados para as configurações de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais estiverem configuradas para usar Memória Dinâmica com menos do que a quantidade de memória recomendada para Windows 8.1.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 ms.date: 8/16/2016
-ms.openlocfilehash: 7ad74e982ad75a7763c37ad28599642c593b5612
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: c93acc1bc27af81ddca7b7ade1b8ca2df7cd1e94
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746331"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834111"
 ---
 # <a name="a-virtual-machine-running-windows-81-and-configured-with-dynamic-memory-should-use-recommended-values-for-memory-settings"></a>Uma máquina virtual que executa Windows 8.1 e configurada com Memória Dinâmica deve usar os valores recomendados para as configurações de memória
 

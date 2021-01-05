@@ -1,17 +1,17 @@
 ---
 title: O Windows 8 deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 8 é configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0c739e7c-4403-4eff-9e69-213ba1ab7336
 ms.date: 10/03/2016
-ms.openlocfilehash: c8c38f5603926ae4042a30c34a4ccd9ebc43fc7c
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 67c2897d51dc5fe7c669ccd911247d77dcfa3c56
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866015"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834011"
 ---
 # <a name="windows-8-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows 8 deve ser configurado com a quantidade recomendada de memória
 

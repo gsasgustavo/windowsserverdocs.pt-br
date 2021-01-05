@@ -1,17 +1,17 @@
 ---
 title: Máquinas virtuais Ubuntu com suporte no Hyper-V
-description: Lista os serviços e recursos de integração do Linux incluídos em cada versão
+description: Lista os serviços de integração do Ubuntu/Linux e os recursos incluídos em cada versão
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/29/2020
-ms.openlocfilehash: 40064ac11b9e6d27ea864ba286278179a2ebd4bf
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 4e1384d372714932d45f9274d8c6e98eb42a5a04
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864016"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834811"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Máquinas virtuais Ubuntu com suporte no Hyper-V
 

@@ -1,17 +1,17 @@
 ---
 title: O Windows 10 deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 10 é configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
 ms.date: 8/16/2016
-ms.openlocfilehash: ffe4b2060b7e57a8c70b00f0157c8fba10a093df
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 52339d59afbd7d6159e11d48d3d3eff7b2513ea4
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865905"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833751"
 ---
 # <a name="windows-10-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows 10 deve ser configurado com a quantidade recomendada de memória
 

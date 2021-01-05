@@ -1,17 +1,17 @@
 ---
 title: Reservar uma ou mais redes virtuais externas para uso exclusivo por máquinas virtuais
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando todas as redes virtuais externas são configuradas para uso tanto pelo sistema operacional de gerenciamento quanto por máquinas virtuais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 ms.date: 8/16/2016
-ms.openlocfilehash: 8039f5ef94f1ca762a994607d5a1faf8eac0d98e
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 430b7a933a0e4b301c1ced9dbc894527adca766b
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746501"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834081"
 ---
 # <a name="reserve-one-or-more-external-virtual-networks-for-exclusive-use-by-virtual-machines"></a>Reservar uma ou mais redes virtuais externas para uso exclusivo por máquinas virtuais
 

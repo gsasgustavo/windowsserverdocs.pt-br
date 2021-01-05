@@ -1,17 +1,17 @@
 ---
 title: Evite instalar o RemoteFX em um computador configurado como um controlador de domínio Active Directory
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o RemoteFX é instalado em um controlador de domínio.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: da58694e-91f6-45d8-a599-18966db165f4
 ms.date: 8/16/2016
-ms.openlocfilehash: 1f639998c568035d0c992403cd0b1056ea4607b5
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: d22f21af2fcc54c44d142ef790b9da4ae66483c9
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747051"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834661"
 ---
 # <a name="avoid-installing-remotefx-on-a-computer-that-is-configured-as-an-active-directory-domain-controller"></a>Evite instalar o RemoteFX em um computador configurado como um controlador de domínio Active Directory
 

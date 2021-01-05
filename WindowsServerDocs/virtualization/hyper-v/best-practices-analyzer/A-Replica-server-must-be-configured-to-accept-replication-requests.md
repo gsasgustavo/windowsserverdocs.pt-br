@@ -1,16 +1,16 @@
 ---
 title: Um servidor de réplica deve ser configurado para aceitar solicitações de replicação
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o computador for designado como um servidor de réplica do Hyper-V, mas não estiver configurado para aceitar dados de replicação de entrada de servidores primários.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.date: 8/16/2016
-ms.openlocfilehash: 941eccbafb7b84caf161f68b022c9a93fffd4f5f
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: a9f62c5dbfe6f78a4b1556ea2da30d4dfc8f2c8f
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746381"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834771"
 ---
 # <a name="a-replica-server-must-be-configured-to-accept-replication-requests"></a>Um servidor de réplica deve ser configurado para aceitar solicitações de replicação
 

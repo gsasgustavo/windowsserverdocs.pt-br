@@ -1,17 +1,17 @@
 ---
 title: Verifique se há espaço em disco físico suficiente disponível quando as máquinas virtuais usam discos rígidos virtuais diferenciais
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais estiverem usando discos rígidos virtuais diferenciais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 71f99aab-f994-4022-9da0-d661965b95ac
 ms.date: 8/16/2016
-ms.openlocfilehash: d5a8c5d38aa47845a88077eaa6b785dc5ebb148c
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: fe4cf45a9b93ce0a5277dcd6e108205a74ffca0b
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746271"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846100"
 ---
 # <a name="ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-differencing-virtual-hard-disks"></a>Verifique se há espaço em disco físico suficiente disponível quando as máquinas virtuais usam discos rígidos virtuais diferenciais
 

@@ -1,17 +1,17 @@
 ---
 title: O Windows 7 deve ser configurado com pelo menos a quantidade mínima de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas. "
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 7 estiver configurada com menos que a quantidade mínima de RAM, que é de 512 MB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
 ms.date: 8/16/2016
-ms.openlocfilehash: c2bd302fb5adafe0bb1d9252cbac3d6ba6a6a8ac
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: e8f24fd0ebb0bcd40efcc11b4ba003339055077b
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864605"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834031"
 ---
 # <a name="windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>O Windows 7 deve ser configurado com pelo menos a quantidade mínima de memória
 

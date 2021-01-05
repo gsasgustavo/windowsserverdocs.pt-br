@@ -1,17 +1,17 @@
 ---
 title: Usar todas as funções virtuais para rede quando elas estiverem disponíveis
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando alguns recursos de aceleração de hardware não estão sendo utilizados.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: bf895484-6a0d-4aa4-9a42-9fac739e875d
 ms.date: 8/16/2016
-ms.openlocfilehash: 4a1502180350c338793bf811cddc675785e9c67a
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 4252fd790c34bb9f4eca116eff84eb900033658b
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746801"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846313"
 ---
 # <a name="use-all-virtual-functions-for-networking-when-they-are-available"></a>Usar todas as funções virtuais para rede quando elas estiverem disponíveis
 

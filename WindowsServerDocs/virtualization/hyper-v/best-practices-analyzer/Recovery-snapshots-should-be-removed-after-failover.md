@@ -1,17 +1,17 @@
 ---
 title: Os instantâneos de recuperação devem ser removidos após o failover
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual com failover tiver um ou mais instantâneos de recuperação.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 922115fa-e8dd-4055-aaf1-4a4437c5cf28
 ms.date: 8/16/2016
-ms.openlocfilehash: b30dbf9996f2406e3d260c825dbe2dbbc6918324
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: e37e59b8796913c2d46914834f4467e927f7e32b
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745541"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846274"
 ---
 # <a name="recovery-snapshots-should-be-removed-after-failover"></a>Os instantâneos de recuperação devem ser removidos após o failover
 

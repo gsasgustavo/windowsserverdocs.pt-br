@@ -1,17 +1,17 @@
 ---
 title: Oferecer todos os serviços de integração disponíveis para máquinas virtuais
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando um ou mais serviços de integração disponíveis não estiverem habilitados em máquinas virtuais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 ms.date: 8/16/2016
-ms.openlocfilehash: 1343761ae9e0982d25133bd429218c8fe31aadbc
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 0c618684e66f9a0af55e160ede8a263781d307a5
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746251"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833721"
 ---
 # <a name="offer-all-available-integration-services-to-virtual-machines"></a>Oferecer todos os serviços de integração disponíveis para máquinas virtuais
 

@@ -1,17 +1,17 @@
 ---
 title: Configure pelo menos a quantidade necessária de memória para uma máquina virtual que executa o Windows Vista e esteja habilitada para Memória Dinâmica
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais estiverem configuradas para usar Memória Dinâmica com menos do que a quantidade de memória necessária para o Windows Vista.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d3de7614-6eee-4839-a939-d390bca9ba89
 ms.date: 8/16/2016
-ms.openlocfilehash: 838bd69e9bc8efd250fa1b4339b1049eb521d6c9
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: d18ab7890e2043db131de37f1f3cff1b24985237
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746891"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834301"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-vista-and-enabled-for-dynamic-memory"></a>Configure pelo menos a quantidade necessária de memória para uma máquina virtual que executa o Windows Vista e esteja habilitada para Memória Dinâmica
 

@@ -1,17 +1,17 @@
 ---
 title: Máquinas virtuais do Debian com suporte no Hyper-V
-description: Lista os serviços e recursos de integração do Linux incluídos em cada versão
+description: Lista os serviços de integração do Debin/Linux e os recursos incluídos em cada versão
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: 440d3c0dc51cc9e7d9c4d8abe439f4adb5da07dc
-ms.sourcegitcommit: faa5db4cdba4ad2b3a65533b6b49d960080923c9
+ms.openlocfilehash: 22d356f668f0e289a41bb43d738b03998b985ceb
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91752888"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834321"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Máquinas virtuais do Debian com suporte no Hyper-V
 
@@ -49,13 +49,13 @@ O mapa de distribuição de recursos a seguir indica os recursos que estão pres
 | **[Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                       |                       |                       |                       |
 | Suporte ao kernel de PAE                                                                                                                           | 2019, 2016, 2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
 | Configuração da lacuna de MMIO                                                                                                                    | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
-| Memória Dinâmica-adição a quente                                                                                                                     | 2019, 2016, 2012 R2                   | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
+| Memória Dinâmica-Hot-Add                                                                                                                     | 2019, 2016, 2012 R2                   | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | Memória Dinâmica-balões                                                                                                                  | 2019, 2016, 2012 R2                   | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | Redimensionamento de memória de Runtime                                                                                                                        | 2019, 2016                                  | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |
 | Dispositivo de vídeo específico do Hyper-V                                                                                                                | 2019, 2016, 2012 R2          | &#10004;              | &#10004;              | &#10004;              |                       |
 | **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                       |                       |                       |                       |
-| Par chave-valor                                                                                                                               | 2019, 2016, 2012 R2          | Observação de &#10004; 2       | Observação de &#10004; 2       | Observação de &#10004; 2       |                       |
+| Key-Value emparelhar                                                                                                                               | 2019, 2016, 2012 R2          | Observação de &#10004; 2       | Observação de &#10004; 2       | Observação de &#10004; 2       |                       |
 | Interrupção não mascarável                                                                                                                       | 2019, 2016, 2012 R2                         | &#10004;              | &#10004;              | &#10004;              |                       |
 | Cópia de arquivo do host para o convidado                                                                                                                 | 2019, 2016, 2012 R2                         | Observação de &#10004; 2       | Observação de &#10004; 2       | Observação de &#10004; 2       |                       |
 | comando lsvmbus                                                                                                                              | 2019, 2016, 2012 R2          |                       |                       |                       |                       |

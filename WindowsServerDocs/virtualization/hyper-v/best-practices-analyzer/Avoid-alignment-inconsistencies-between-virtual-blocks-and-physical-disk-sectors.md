@@ -1,17 +1,17 @@
 ---
 title: Evite as inconsistências de alinhamento entre blocos virtuais e setores de disco físico em discos rígidos virtuais dinâmicos ou discos diferenciais
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando foram detectadas inconsistências de alinhamento para um ou mais discos rígidos virtuais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a17c8fd2-af81-485b-bfea-bd1ef3e43923
 ms.date: 8/16/2016
-ms.openlocfilehash: aa165dad38ae455f7c4a5a0d73cdd005c01a60ef
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: a35906161a51e2884a15944b51416a2404cce38a
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747091"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834721"
 ---
 # <a name="avoid-alignment-inconsistencies-between-virtual-blocks-and-physical-disk-sectors-on-dynamic-virtual-hard-disks-or-differencing-disks"></a>Evite as inconsistências de alinhamento entre blocos virtuais e setores de disco físico em discos rígidos virtuais dinâmicos ou discos diferenciais
 

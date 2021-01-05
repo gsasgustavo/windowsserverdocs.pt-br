@@ -1,17 +1,17 @@
 ---
 title: Verifique se o driver de função virtual opera corretamente quando uma máquina virtual está configurada para usar SR-IOV
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o driver de função virtual não está operando corretamente no sistema operacional convidado de uma ou mais máquinas virtuais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d21e4b93-29bf-423a-a635-71c6d48dc49e
 ms.date: 8/16/2016
-ms.openlocfilehash: 3be2f616ab8981e887688404f2907524f5f53e49
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: a009060dc67ba29c12e986167b2ed746865311d5
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746841"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97845913"
 ---
 # <a name="ensure-that-the-virtual-function-driver-operates-correctly-when-a-virtual-machine-is-configured-to-use-sr-iov"></a>Verifique se o driver de função virtual opera corretamente quando uma máquina virtual está configurada para usar SR-IOV
 

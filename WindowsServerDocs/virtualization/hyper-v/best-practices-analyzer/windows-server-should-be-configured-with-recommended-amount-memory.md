@@ -1,17 +1,17 @@
 ---
 title: O Windows Server 2016 deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows Server 2016 é configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 7860e609-d278-42a3-85a4-ca92c8b6b2ad
 ms.date: 8/16/2016
-ms.openlocfilehash: 6d6a517fe2afb91a977a75a667817add5b4c174e
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: bc56327e1df636a4b36977a4a32adf9a35ce14ff
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865015"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833671"
 ---
 # <a name="windows-server-2016-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows Server 2016 deve ser configurado com a quantidade recomendada de memória
 

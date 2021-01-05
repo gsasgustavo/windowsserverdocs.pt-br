@@ -1,17 +1,17 @@
 ---
 title: O serviço gerenciamento de máquinas virtuais do Hyper-V deve estar em execução
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o serviço necessário para gerenciar as máquinas virtuais não estiver em execução.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 ms.date: 10/03/2016
-ms.openlocfilehash: 6fe2f95821b23f98931b7cecc3c59dc58f0f5e37
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 1fc629002f17861c496e6aa6574cf2aead4baf46
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746231"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834341"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-must-be-running"></a>O serviço gerenciamento de máquinas virtuais do Hyper-V deve estar em execução
 
@@ -49,13 +49,13 @@ E se você não conseguir ver o console do MMC do Hyper-V no menu Iniciar, insta
 Para instalar as ferramentas de gerenciamento do Hyper-V:
 >
 > - No Windows Server, abra Gerenciador do Servidor e use o assistente para adicionar funções e recursos. Para obter mais detalhes, consulte [instalar a função Hyper-V no Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  Você também pode usar o PowerShell para instalar as ferramentas ( `Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell` )
-> - No Windows, na área de trabalho, comece digitando **programas**, clique em **programas e recursos** (painel de controle) > **Ativar ou desativar recursos do Windows em**  >  **Hyper-V**  >  **ferramentas de gerenciamento**Hyper-v Hyper-v. Depois, clique em **OK**.
+> - No Windows, na área de trabalho, comece digitando **programas**, clique em **programas e recursos** (painel de controle) > **Ativar ou desativar recursos do Windows em**  >    >  **ferramentas de gerenciamento** Hyper-v Hyper-v. Depois, clique em **OK**.
 
 ### <a name="to-reconfigure-the-service-to-start-automatically-using-the-services-desktop-app"></a>Para reconfigurar o serviço para iniciar automaticamente usando o aplicativo de área de trabalho de serviços
 
-1.  Abra o aplicativo de área de trabalho serviços. (Clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc**e pressione Enter.)
+1.  Abra o aplicativo de área de trabalho serviços. (Clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc** e pressione Enter.)
 
-2.  No painel de detalhes, clique com o botão direito do mouse em **Gerenciamento de máquinas virtuais do Hyper-V**e clique em **Propriedades**.
+2.  No painel de detalhes, clique com o botão direito do mouse em **Gerenciamento de máquinas virtuais do Hyper-V** e clique em **Propriedades**.
 
 3.  Na guia **geral** , em tipo de **inicialização** , clique em **automático**.
 

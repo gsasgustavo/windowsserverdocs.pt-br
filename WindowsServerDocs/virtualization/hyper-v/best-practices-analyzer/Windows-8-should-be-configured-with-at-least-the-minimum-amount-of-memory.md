@@ -1,17 +1,17 @@
 ---
 title: O Windows 8 deve ser configurado com pelo menos a quantidade mínima de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
-ms.author: benarm
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 8 estiver configurada com menos que a quantidade mínima de RAM, que é de 512 MB.
 author: BenjaminArmstrong
+ms.author: benarm
 ms.topic: article
 ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 ms.date: 8/16/2016
-ms.openlocfilehash: 9c565b1e22091325c9e5017e5c82d225b835bad6
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: a193eb64fd11624c30ab7426ac4261b6dee74a08
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866025"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834021"
 ---
 # <a name="windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>O Windows 8 deve ser configurado com pelo menos a quantidade mínima de memória
 

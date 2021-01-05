@@ -1,17 +1,17 @@
 ---
 title: As entradas de autorização devem ter nomes de grupos de confiança distintos para servidores primários com máquinas virtuais que não fazem parte do mesmo grupo de confiança
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o servidor aceitar solicitações de replicação para a máquina virtual de réplica de qualquer um dos servidores na lista de autorização associada à mesma marca de replicação que a máquina virtual.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8827a3a7-9f3c-4f51-826a-8e2ec43e01df
 ms.date: 8/16/2016
-ms.openlocfilehash: 984fa9233a433384cddae34af9a62bcf1e0204ca
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 7d66212f0633608ca9d094316c18b5fdd311640e
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747101"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834731"
 ---
 # <a name="authorization-entries-should-have-distinct-trust-group-names-for-primary-servers-with-virtual-machines-that-are-not-part-of-the-same-trust-group"></a>As entradas de autorização devem ter nomes de grupos de confiança distintos para servidores primários com máquinas virtuais que não fazem parte do mesmo grupo de confiança
 

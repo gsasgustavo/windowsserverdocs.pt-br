@@ -1,17 +1,17 @@
 ---
 title: Os servidores de réplica devem ser configurados para identificar servidores primários específicos autorizados a enviar tráfego de replicação
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando, conforme configurado, o servidor de réplica aceitar o tráfego de replicação de todos os servidores primários e os armazenar em um único local.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 ms.date: 8/16/2016
-ms.openlocfilehash: 2771a9814fb9061756626466f446ca6131580dc2
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 542c58e3699a1132361f8698de6a72bbf967a5ca
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864655"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834312"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>Os servidores de réplica devem ser configurados para identificar servidores primários específicos autorizados a enviar tráfego de replicação
 

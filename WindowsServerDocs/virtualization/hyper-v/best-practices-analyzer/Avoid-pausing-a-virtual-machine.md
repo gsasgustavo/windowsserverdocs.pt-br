@@ -1,17 +1,17 @@
 ---
 title: Evitar pausar uma máquina virtual
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando esse servidor tiver uma ou mais máquinas virtuais em um estado de pausa.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 ms.date: 8/16/2016
-ms.openlocfilehash: 956ada130cea2d489545c8206ae8283041e6868f
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: c1f5ba73a181ef0ec89dfa83bdbb82b3b49e9c6d
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747031"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834611"
 ---
 # <a name="avoid-pausing-a-virtual-machine"></a>Evitar pausar uma máquina virtual
 

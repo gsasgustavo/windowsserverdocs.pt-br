@@ -1,17 +1,17 @@
 ---
 title: Evite usar discos rígidos virtuais diferenciais de formato VHD em máquinas virtuais que executam cargas de trabalho de servidor em um ambiente de produção
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais usam discos rígidos virtuais diferenciais de formato VHD.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
 ms.date: 8/16/2016
-ms.openlocfilehash: 688dd348a7b00a32a50778cf0fb6350b37232f58
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 4a5d1a2b1c94845b26fd90df4e62932f28c99d0d
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747011"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834601"
 ---
 # <a name="avoid-using-vhd-format-differencing-virtual-hard-disks-on-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>Evite usar discos rígidos virtuais diferenciais de formato VHD em máquinas virtuais que executam cargas de trabalho de servidor em um ambiente de produção
 

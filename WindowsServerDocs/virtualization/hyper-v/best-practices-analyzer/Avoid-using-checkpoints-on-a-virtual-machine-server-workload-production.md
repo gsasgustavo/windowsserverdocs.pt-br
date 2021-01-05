@@ -1,17 +1,17 @@
 ---
 title: Evite usar pontos de verificação em uma máquina virtual que executa uma carga de trabalho de servidor em um ambiente de produção
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual com um ou mais pontos de verificação for encontrada.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 1be75890-d316-495a-b9b7-be75fc1aac10
 ms.date: 8/16/2016
-ms.openlocfilehash: da0315ab06d4678d3cedc51092be7160d301ac4d
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 0fef612d9da5ad74561429c3852d407623d9d334
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747001"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97834561"
 ---
 # <a name="avoid-using-checkpoints-on-a-virtual-machine-that-runs-a-server-workload-in-a-production-environment"></a>Evite usar pontos de verificação em uma máquina virtual que executa uma carga de trabalho de servidor em um ambiente de produção
 

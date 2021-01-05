@@ -1,17 +1,17 @@
 ---
 title: Use pelo menos o protocolo SMB versão 3,0 para compartilhamentos de arquivos que armazenam arquivos para máquinas virtuais.
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando arquivos de máquina virtual ou arquivos de disco rígido virtual são armazenados em um compartilhamento de arquivos que não suporta pelo menos o protocolo SMB versão 3,0.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 4bb832b8-f1aa-4c1f-a0f2-324dd53553ea
 ms.date: 8/16/2016
-ms.openlocfilehash: a979035c5b58542865faf6254baf49815f81cc2d
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 783ba7b2e8b5dc83eb575ee395d85e58701c0b89
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746781"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846223"
 ---
 # <a name="use-at-least-smb-protocol-version-30-for-file-shares-that-store-files-for-virtual-machines"></a>Use pelo menos o protocolo SMB versão 3,0 para compartilhamentos de arquivos que armazenam arquivos para máquinas virtuais.
 
