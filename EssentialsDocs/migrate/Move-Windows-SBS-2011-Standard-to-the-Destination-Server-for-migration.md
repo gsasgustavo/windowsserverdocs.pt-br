@@ -1,18 +1,18 @@
 ---
 title: Mover as configurações e dados do Windows SBS 2011 Standard para o servidor de destino para migração para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como mover os dados e as configurações padrão do Windows SBS 2011 para o servidor de destino para a migração do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 6a961f8bb201f9746b4e212801576ff287dc43b2
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 02496775815c5d05f99f3a5fc7bbb1c1b9efaa6c
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625676"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810693"
 ---
 # <a name="move-windows-sbs-2011-standard-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Mover as configurações e dados do Windows SBS 2011 Standard para o servidor de destino para migração para o Windows Server Essentials
 
@@ -49,7 +49,7 @@ Mova as configurações e os dados para o servidor de destino da seguinte maneir
 
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
- Sendo que:
+ Em que:
  - \<SourceServerName\> é o nome do servidor de origem
  - \<SharedSourceFolderName\> é o nome da pasta compartilhada no servidor de origem
  - \<DestinationServerName\> é o nome do servidor de destino,
@@ -126,9 +126,9 @@ Mova as configurações e os dados para o servidor de destino da seguinte maneir
 
 2. Clique em **Iniciar** e, em seguida, em **Gerenciamento de servidor**.
 
-3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo**e, em seguida, clique em **floresta:** _<YourDomainName \> _.
+3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo** e, em seguida, clique em **floresta:** _<YourDomainName \>_.
 
-4. Clique em **domínios**, clique em *<\> YourDomainName*e, em seguida, clique em **objetos política de grupo**.
+4. Clique em **domínios**, clique em *<\> YourDomainName* e, em seguida, clique em **objetos política de grupo**.
 
 5. Clique com o botão direito do mouse em **Política de auditoria do Small Business Server**, clique em **Excluir** e, em seguida, clique em **OK**.
 
@@ -156,15 +156,15 @@ Mova as configurações e os dados para o servidor de destino da seguinte maneir
 
 2. Clique em **Iniciar** e, em seguida, em **Gerenciamento de servidor**.
 
-3. No painel de navegação, clique em **recursos**, clique em **Gerenciamento de política de grupo**e, em seguida, clique em **floresta:** _<YourNetworkDomainName \> _
+3. No painel de navegação, clique em **recursos**, clique em **Gerenciamento de política de grupo** e, em seguida, clique em **floresta:** _<YourNetworkDomainName \>_
 
-4. Clique em **domínios**, clique em *<\> YourNetworkDomainName*e, em seguida, clique em **filtros WMI**.
+4. Clique em **domínios**, clique em *<\> YourNetworkDomainName* e, em seguida, clique em **filtros WMI**.
 
-5. Clique com botão direito **Windows SBS Client**, clique em **Excluir**e clique em **Sim**.
+5. Clique com botão direito **Windows SBS Client**, clique em **Excluir** e clique em **Sim**.
 
-6. Clique com o botão direito do mouse em Windows **SBS Client Windows 7 e Windows Vista**, clique em **excluir**e, em seguida, clique em **Sim**.
+6. Clique com o botão direito do mouse em Windows **SBS Client Windows 7 e Windows Vista**, clique em **excluir** e, em seguida, clique em **Sim**.
 
-7. Clique com o botão direito do mouse em **cliente do Windows SBS Windows XP**, clique em **excluir**e em **Sim**.
+7. Clique com o botão direito do mouse em **cliente do Windows SBS Windows XP**, clique em **excluir** e em **Sim**.
 
 8. Confirme se esses três filtros WMI foram excluídos.
 

@@ -1,18 +1,18 @@
 ---
 title: Rebaixar e remover o servidor de origem do novo network1 do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como rebaixar e remover o servidor de origem da nova rede do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 3e0902f99be96e3197b90b4892f78849a5c84125
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 792aa83ed86c620921f243eba856f76258ab638f
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622883"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811033"
 ---
 # <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>Rebaixar e remover o servidor de origem do novo network1 do Windows Server Essentials
 
@@ -56,7 +56,7 @@ Depois de concluir a instalação do Windows Server Essentials e concluir as tar
    >  O Exchange Server verifica se não há caixas de correio ou pastas públicas no servidor. Se restar algum dado, uma mensagem de erro aparece ao clicar **Remover**. Para evitar esse problema, verifique se você concluiu todos os procedimentos no tópico [mover as configurações e os dados do SBS 2003 para o servidor de destino](./move-windows-sbs-2003-to-the-destination-server-for-migration.md).
 
 
-6. Clique em **Próximo**.
+6. Clique em **Avançar**.
 
 7. Quando solicitado, insira o Windows Small Business Server 2003 CD #3 e siga as instruções na tela.
 
@@ -123,7 +123,7 @@ Depois de concluir a instalação do Windows Server Essentials e concluir as tar
 
     1.  No servidor de origem, clique em **Iniciar**, clique em **Ferramentas Administrativas** e clique em **Serviços**.
 
-    2.  Na lista de serviços em execução, com o botão direito do **Windows Server**e clique em **Propriedades**.
+    2.  Na lista de serviços em execução, com o botão direito do **Windows Server** e clique em **Propriedades**.
 
     3.  Para **Tipo de Início**, selecione **Desabilitado**.
 

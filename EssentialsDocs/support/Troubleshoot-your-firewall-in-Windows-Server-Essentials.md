@@ -1,18 +1,18 @@
 ---
 title: Solucionar problemas do firewall no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o assistente para reparar acesso em qualquer local se você tiver problemas com o acesso remoto.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51d94b67-8b9b-4159-80dd-f652d73a43cb
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: d1a36ecbd62e658c6361c004cf0166a295641b35
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 3cf84844a0bbca8128df1429c843d3e565318f95
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625043"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810063"
 ---
 # <a name="troubleshoot-your-firewall-in-windows-server-essentials"></a>Solucionar problemas do firewall no Windows Server Essentials
 
@@ -38,7 +38,7 @@ ms.locfileid: "89625043"
 |65532|Estrutura do provedor para comunicações loopback do servidor|
 |6602|Estrutura do provedor para a comunicação entre os computadores cliente e servidor|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 -   [Usar o Acesso via Web Remoto](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)
 

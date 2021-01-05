@@ -1,18 +1,18 @@
 ---
 title: Usar o coletor de log do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o coletor de logs do Windows Server Essentials para coletar logs de servidores, computadores na rede ou ambos.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 07e849fa8db3cdc4204de402c6fc0cb823881480
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4a540c52ee4cb84455f125c0d9f5c2f4ad0f3bf1
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624993"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810123"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Usar o coletor de log do Windows Server Essentials
 
@@ -46,7 +46,7 @@ Quando você estiver solucionando problemas do computador, um representante do s
 
 -   Adaptadores de rede que estão vinculados ao TCP/IP
 
--   Locale
+-   Localidade
 
 -   Processos
 
@@ -123,11 +123,11 @@ Quando você estiver solucionando problemas do computador, um representante do s
 
 -   Chaves do Registro, de
 
-    -   \\\ HKEY_LOCAL_MACHINE servidor \SOFTWARE\Microsoft\Windows \
+    -   \\\ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\
 
-    -   \\\ HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DevicesProviderSvc
+    -   \\\ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DevicesProviderSvc
 
-    -   \\\ HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DomainManagerProviderSvc
+    -   \\\ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DomainManagerProviderSvc
 
 ### <a name="network-computer-logs-and-registry-information"></a>Logs de computador da rede e informações do Registro
 
@@ -154,7 +154,7 @@ Quando você estiver solucionando problemas do computador, um representante do s
 
 -   Biblioteca/logs/DiagnosticReports/LaunchPad-<nnn \> (Copie todo o Launchpad-<arquivos nnn \> . Crash)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 -   [Solucionar problemas de erros de coletores de log](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 

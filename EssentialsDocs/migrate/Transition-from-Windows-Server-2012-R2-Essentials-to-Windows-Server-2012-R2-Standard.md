@@ -1,18 +1,18 @@
 ---
 title: Transição do Windows Server Essentials para o Windows Server 2012 R2 Standard
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como fazer a transição do Windows Server Essentials para o Windows Server 2012 R2 Standard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a14689e3-2310-4229-bd3e-dafc0e739e02
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: a60ffd7593da8e8275e36e9aec2cf6e25fbe23db
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4838101de3ed9daa1150e208d7aa0a938c95041e
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625301"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810343"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-r2-standard"></a>Transição do Windows Server Essentials para o Windows Server 2012 R2 Standard
 
@@ -40,7 +40,11 @@ O Windows Server 2016 é o sistema operacional pronto para a nuvem que dá supor
 
     2.  Execute o comando a seguir:
 
-         **dism /online /set-edition:ServerStandard /geteula:** *caminho do eula* (onde *caminho do eula* representa o local no qual deseja salvar o arquivo dos Termos de Licença. Use .rtf como extensão de nome de arquivo.
+        ```console
+        dism /online /set-edition:ServerStandard /geteula: <eula path>
+        ```
+
+        Em que *caminho do EULA* representa o local no qual você deseja salvar o arquivo de EULA; por exemplo: C:\ ws8std_eula. rtf). Use .rtf como extensão de nome de arquivo.
 
     3.  Abra o local onde salvou o arquivo e clique duas vezes nele para abri-lo.
 
@@ -60,7 +64,11 @@ O Windows Server 2016 é o sistema operacional pronto para a nuvem que dá supor
 
 2. Abra o Windows PowerShell como administrador e execute o comando a seguir:
 
-    **DISM/online/Set-Edition: ServerStandard/AcceptEula/ProductKey:** *chave do produto* (em que *chave do produto* é a chave do produto para sua cópia do Windows Server 2012 R2 Standard).
+    ```console
+    dism /online /set-edition:ServerStandard /accepteula /productkey: <Product Key>
+    ```
+
+    Em que *chave do produto* é a chave do produto (Product Key) para sua cópia do Windows Server 2012 R2 Standard).
 
     O servidor é reiniciado para concluir o processo de transição.
 

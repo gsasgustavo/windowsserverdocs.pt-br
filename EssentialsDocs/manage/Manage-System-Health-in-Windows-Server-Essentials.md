@@ -1,18 +1,18 @@
 ---
 title: Gerenciar a integridade do sistema no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como exibir e responder a todos os alertas de integridade do sistema em sua rede usando o painel.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 78b0b9f8cb2056bc307fd66b9fa70f3d128012cf
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 24b1853234754de0d02355210ffdd86f721fe00a
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626047"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811233"
 ---
 # <a name="manage-system-health-in-windows-server-essentials"></a>Gerenciar a integridade do sistema no Windows Server Essentials
 
@@ -35,11 +35,11 @@ ms.locfileid: "89626047"
 
 -   [Responder a alertas](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Respond)
 
--   [Configurar emails de notificações de alertas](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)
+-   [Configurar notificações por email para alertas](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)
 
 -   [Alertas potenciais do computador](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Potential)
 
-##  <a name="about-the-health-report-add-in"></a><a name="BKMK_AddIn"></a> Sobre o suplemento de relatório de integridade
+##  <a name="about-the-health-report-add-in"></a><a name="BKMK_AddIn"></a> Sobre o relatório de integridade Add-In
  O Suplemento de Relatório de integridade para o Windows Server Essentials fornece informações consolidadas sobre a rede do Windows Server Essentials e permite que você distribua essas informações para outras pessoas. Essas informações podem ser exibidas de **relatórios** guia do Painel. Com o **relatórios** guia, você pode fazer o seguinte:
 
 -   [Gerar um relatório sob demanda ou agendamento](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Generate)
@@ -58,7 +58,7 @@ ms.locfileid: "89626047"
 
  Depois que um relatório de integridade é gerado, um novo item é criado no Painel de lista, identificado por data e hora de geração do relatório. Para abrir um item, você pode clicar duas vezes no painel de lista, ou você pode selecioná-lo e, em seguida, clicar em **abrir o relatório de integridade** no painel de tarefas. O relatório é exibido em uma nova janela no formato HTML.
 
- Além de gerar um relatório manualmente, você pode gerar o relatório automaticamente sob agendamento por dia ou por hora. Para fazer isso, no painel de tarefas, clique em **Personalizar configurações do relatório de integridade**e, em seguida, clique na guia **agenda e email** . O recurso de **agendamento** está desativado por padrão e você pode ativá-lo selecionando a caixa de seleção **gerar um relatório de integridade em seu horário agendado** .
+ Além de gerar um relatório manualmente, você pode gerar o relatório automaticamente sob agendamento por dia ou por hora. Para fazer isso, no painel de tarefas, clique em **Personalizar configurações do relatório de integridade** e, em seguida, clique na guia **agenda e email** . O recurso de **agendamento** está desativado por padrão e você pode ativá-lo selecionando a caixa de seleção **gerar um relatório de integridade em seu horário agendado** .
 
 ###  <a name="customize-the-content-of-the-report"></a><a name="BKMK_Customize"></a> Personalizar o conteúdo do relatório
  O relatório de integridade contém o seguinte:
@@ -73,7 +73,7 @@ ms.locfileid: "89626047"
 
 - **Atualizações** Você pode ver o status de atualização do servidor e todos os computadores cliente na seção **Detalhes** .
 
-- **Armazenamento** A lista de unidades e sua capacidade é apresentada na seção**Detalhes** .
+- **Armazenamento** A lista de unidades e sua capacidade é apresentada na seção **Detalhes** .
 
   No Relatório de Integridade, primeiro exiba o **Resumo** e, para os itens com ícone de erro vermelho ou um ícone de aviso amarelo, clique no link **Detalhes** na mesma linha para exibir os detalhes do item.
 
@@ -112,9 +112,9 @@ ms.locfileid: "89626047"
 
 3.  Expanda a lista suspensa **Organizar** e siga um destes procedimentos:
 
-    1.  Selecione **Filtrar por computador**e clique no nome do computador para o qual você deseja exibir os alertas. Isso mostra os alertas no Visualizador de alertas somente para o computador selecionado.
+    1.  Selecione **Filtrar por computador** e clique no nome do computador para o qual você deseja exibir os alertas. Isso mostra os alertas no Visualizador de alertas somente para o computador selecionado.
 
-    2.  Selecione **Filtrar por tipo de alerta**e clique no tipo alerta (crítico, aviso ou informacional) para o qual você deseja exibir os alertas. Isso exibe apenas o tipo de alerta selecionado no Visualizador de alerta.
+    2.  Selecione **Filtrar por tipo de alerta** e clique no tipo alerta (crítico, aviso ou informacional) para o qual você deseja exibir os alertas. Isso exibe apenas o tipo de alerta selecionado no Visualizador de alerta.
 
 ##  <a name="respond-to-alerts"></a><a name="BKMK_Respond"></a> Responder a alertas
  Quando você encontrar um alerta, você poderá optar por fazer o seguinte:
@@ -139,7 +139,7 @@ ms.locfileid: "89626047"
 
 2. Na barra inicial, clique em algum dos ícones exibidos alertas (críticos, de aviso e informativos). Isso abre o Visualizador de alertas.
 
-3. No Visualizador de alerta, selecione o alerta que você deseja ignorar, e, em seguida, na seção**tarefas**, clique em **ignorar o alerta**.
+3. No Visualizador de alerta, selecione o alerta que você deseja ignorar, e, em seguida, na seção **tarefas**, clique em **ignorar o alerta**.
 
    Para responder a um alerta desabilitado, você precisará primeiro habilitar o alerta.
 
@@ -316,7 +316,7 @@ ms.locfileid: "89626047"
 
 4.  Na guia **Agendamento e email**, na seção **email**, faça o seguinte:
 
-    1.  Clique em **habilitar**e digite o endereço de email que você deseja usar para enviar os relatórios de integridade. Esse endereço de email será exibido como o endereço do remetente nos relatórios de integridade que são enviados por email.
+    1.  Clique em **habilitar** e digite o endereço de email que você deseja usar para enviar os relatórios de integridade. Esse endereço de email será exibido como o endereço do remetente nos relatórios de integridade que são enviados por email.
 
         1.  Para **nome do servidor SMTP**, digite o nome do servidor SMTP. (Consulte a tabela 1 para obter uma lista de alguns nomes de servidor SMTP).
 
@@ -345,7 +345,7 @@ ms.locfileid: "89626047"
 
 6.  Em **personalizar as configurações do relatório de integridade**, para **automaticamente enviar o relatório de integridade para os destinatários de email a seguir:**, digite os endereços de email das pessoas que você deseja que recebam os relatórios de integridade por email. Certifique-se de separar cada endereço de email com um ponto e vírgula (;).
 
-7.  Para verificar se você configurou suas configurações do servidor SMTP corretamente para enviar relatórios de integridade através de email, a partir da guia Relatório de integridade no Painel, selecione um relatório, e clique em **Enviar o relatório de integridade por Email** no painel de tarefas.
+7.  Para verificar se você definiu as configurações do servidor SMTP corretamente para enviar relatórios de integridade por email, na guia relatório de integridade no painel, selecione um relatório e clique em **Enviar relatório de integridade** por email no painel de tarefas.
 
 ##  <a name="potential-computer-alerts"></a><a name="BKMK_Potential"></a> Possíveis alertas do computador
  Esta seção discute entender e gerenciar os alertas que são específicos para o computador que esteja conectado ao servidor e que aparecem na barra inicial do computador.
@@ -355,7 +355,7 @@ ms.locfileid: "89626047"
 |Título do alerta|Impacto e resolução de alerta|
 |-----------------|---------------------------------|
 |O status atual do firewall de rede fornece proteção reduzida para este computador.|Pessoas não autorizadas ou software poderá acessar este computador se o Firewall do Windows não estiver ativado.|
-|Se a Proteção anti-vírus estiver desativada, não instalado ou não atualizado.|Os dados no seu computador estão em risco se a configuração de segurança da**proteção anti-vírus** estiver desativada ou não atualizada. [Para proteger o computador](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), siga as etapas indicadas.|
+|Se a Proteção anti-vírus estiver desativada, não instalado ou não atualizado.|Os dados no seu computador estão em risco se a configuração de segurança da **proteção anti-vírus** estiver desativada ou não atualizada. [Para proteger o computador](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), siga as etapas indicadas.|
 |Spyware e software de proteção indesejado está desativado, não instalado ou não atualizado.|Os dados no seu computador estão em risco se o **Spyware e o software de proteção anti-vírus** estiver desativado ou não atualizado. [Para proteger o computador](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), siga as etapas indicadas.|
 |O Windows Update está desativado.|Você não poderá se beneficiar com as funcionalidades novas e corrigidas de atualizações, a menos que o Windows Update esteja ativado. Para ativar o Windows Update, no Visualizador de alertas, clique em **abrir o Windows Update**.<br /><br /> Se a tarefa **abrir o Windows Update** não for exibida, você não está conectado ao computador onde o alerta foi gerado. Você deve estar conectado ao computador onde o alerta foi criado para executar essa tarefa no Visualizador de alertas.|
 |Atualizações importantes devem ser instaladas.|Você não poderá se beneficiar com as funcionalidades novas e corrigidas de atualizações, a menos que o Windows Update esteja ativado. Para ativar o Windows Update, no Visualizador de alertas, clique em **abrir o Windows Update**.<br /><br /> Se a tarefa **abrir o Windows Update** não for exibida, você não está conectado ao computador onde o alerta foi gerado. Você deve estar conectado ao computador onde o alerta foi criado para executar essa tarefa no Visualizador de alertas.|

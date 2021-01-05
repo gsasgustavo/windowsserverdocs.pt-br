@@ -7,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 02ce80d936caff5ef77a78585a2e0f35e0b12ca5
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: ca8d073eff673697a65fd1266cf7de19ccd90c97
+ms.sourcegitcommit: e2dadc9b0c227a489a945bbc531aca5e101f18cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97040714"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97801750"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>Implementar modelos administrativos com menos privilégios
 
@@ -31,7 +31,7 @@ O trecho a seguir é do [Microsoft Windows Security Resource Kit](https://www.mi
 
 ## <a name="the-privilege-problem"></a>O problema de privilégio
 
-Os princípios descritos nos trechos anteriores não foram alterados, mas na avaliação de instalações de Active Directory, invariavelmente encontramos números excessivos de contas que receberam direitos e permissões muito além daqueles necessários para executar o trabalho diário. O tamanho do ambiente afeta os números brutos de contas com privilégios elevados, mas não os diretórios proportionmidsized podem ter dezenas de contas nos grupos com maior privilégio, enquanto as instalações grandes podem ter centenas ou até milhares. Com poucas exceções, independentemente da sofisticação das habilidades e do arsenal de um invasor, os invasores normalmente seguem o caminho de menos resistência. Eles aumentam a complexidade de suas ferramentas e abordagem apenas se e quando mecanismos mais simples falharem ou forem frustrados por defensores.
+Os princípios descritos nos trechos anteriores não foram alterados, mas na avaliação de instalações de Active Directory, invariavelmente encontramos números excessivos de contas que receberam direitos e permissões muito além daqueles necessários para executar o trabalho diário. O tamanho do ambiente afeta os números brutos de contas excessivamente privilegiadas, mas não os diretórios de nível médio podem ter dezenas de contas nos grupos com maior privilégio, enquanto as instalações grandes podem ter centenas ou mesmo milhares. Com poucas exceções, independentemente da sofisticação das habilidades e do arsenal de um invasor, os invasores normalmente seguem o caminho de menos resistência. Eles aumentam a complexidade de suas ferramentas e abordagem apenas se e quando mecanismos mais simples falharem ou forem frustrados por defensores.
 
 Infelizmente, o caminho de menos resistência em muitos ambientes provou ser o uso excessivo de contas com um privilégio amplo e profundo. Privilégios amplos são direitos e permissões que permitem que uma conta execute atividades específicas em uma grande seção cruzada do ambiente. por exemplo, a equipe de suporte técnico pode receber permissões que permitem redefinir as senhas em muitas contas de usuário.
 
@@ -312,7 +312,7 @@ Embora uma discussão completa sobre ataques contra infraestruturas de chave pú
 
 Quando um certificado é apresentado para autenticação em um sistema ingressado no domínio, o conteúdo do assunto ou o atributo SAN (nome alternativo da entidade) no certificado são usados para mapear o certificado para um objeto de usuário no Active Directory. Dependendo do tipo de certificado e de como ele é construído, o atributo Subject em um certificado normalmente contém o CN (nome comum) de um usuário, conforme mostrado na captura de tela a seguir.
 
-![modelos de administrador de privilégios mínimos](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)
+![A captura de tela que mostra o atributo de assunto em um certificado normalmente contém o nome comum de um usuário.](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)
 
 Por padrão, Active Directory constrói o CN de um usuário concatenando o primeiro nome + "" + sobrenome da conta. No entanto, os componentes do CN de objetos de usuário no Active Directory não são necessários ou têm a garantia de serem exclusivos e a movimentação de uma conta de usuário para um local diferente no diretório altera o DN (nome distinto) da conta, que é o caminho completo para o objeto no diretório, conforme mostrado no painel inferior da captura de tela anterior.
 

@@ -1,17 +1,17 @@
 ---
 title: O Windows Vista deve ser configurado com a quantidade recomendada de memória
-description: Fornece instruções para resolver o problema relatado por essa regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows Vista estiver configurada com menos do que a quantidade recomendada de RAM, que é de 1 GB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
 ms.date: 8/16/2016
-ms.openlocfilehash: ca492081383b962f85e8c28bc9e240a9ed62acfe
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 43255cbb62bc35b6eee0dc73c0d52d192dbd66cd
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866375"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833461"
 ---
 # <a name="windows-vista-should-be-configured-with-the-recommended-amount-of-memory"></a>O Windows Vista deve ser configurado com a quantidade recomendada de memória
 

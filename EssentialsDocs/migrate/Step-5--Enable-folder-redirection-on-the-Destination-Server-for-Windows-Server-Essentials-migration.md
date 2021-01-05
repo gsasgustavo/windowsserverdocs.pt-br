@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 5: Habilitar o redirecionamento de pasta na migração de servidor de destino para Windows Server Essentials'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como habilitar o redirecionamento de pasta no servidor de destino para a migração do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 2fa628429a692f77620116ed0db2ef052abc8a22
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4cbb8ae2fed9398d21e128cb8f14646ff7b898f2
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625448"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810423"
 ---
 # <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>Etapa 5: Habilitar o redirecionamento de pasta na migração de servidor de destino para Windows Server Essentials
 

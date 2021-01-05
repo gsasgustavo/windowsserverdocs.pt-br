@@ -1,18 +1,18 @@
 ---
 title: Gerenciar o acesso remoto via Web no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como ativar o Acesso via Web remoto usando o assistente para configurar acesso em qualquer local e, em seguida, saiba como configurar o roteador e o nome de domínio.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: f797bfee89b40437078862527a3c02e52e4f7833
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a9d83d12dc34b9b540f9f10ea677690726347766
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623026"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811293"
 ---
 # <a name="manage-remote-web-access-in-windows-server-essentials"></a>Gerenciar o acesso remoto via Web no Windows Server Essentials
 
@@ -122,7 +122,7 @@ ms.locfileid: "89623026"
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que você deseja conceder permissões para acessar a área de trabalho remotamente.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **Propriedades**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **Propriedades**.
 
 5.  Em **<\> Propriedades da conta de usuário**, clique na guia **acesso em qualquer lugar** .
 
@@ -135,7 +135,7 @@ ms.locfileid: "89623026"
 7.  Clique em **Aplicar** e em **OK**.
 
 ##  <a name="set-up-your-router"></a><a name="BKMK_2"></a> Configurar o roteador
- Quando você configura seu servidor para Acesso via Web Remoto, o assistente de configuração do Acesso em Qualquer Local tenta configurar o roteador. Caso troque de roteador ou altere suas configurações, você deverá retornar ao assistente de configuração do roteador. Para obter mais informações, consulte estes tópicos:
+ Quando você configura seu servidor para Acesso via Web Remoto, o assistente de configuração do Acesso em Qualquer Local tenta configurar o roteador. Caso troque de roteador ou altere suas configurações, você deverá retornar ao assistente de configuração do roteador. Para mais informações, consulte os seguintes tópicos:
 
 -   [Configurar o roteador](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpRouter)
 
@@ -197,7 +197,7 @@ ms.locfileid: "89623026"
 4.  Clique em **OK** duas vezes para aceitar as alterações e fechar a caixa de diálogo.
 
 ##  <a name="set-up-your-domain-name"></a><a name="BKMK_3"></a> Configurar seu nome de domínio
- Depois que o Acesso via Web Remoto é ativado, você pode configurar um nome de domínio para o servidor que executa o Windows Server Essentials. Essa é uma etapa necessária para usar o Acesso via Web Remoto a partir de um computador remoto. Para obter mais informações, consulte estes tópicos:
+ Depois que o Acesso via Web Remoto é ativado, você pode configurar um nome de domínio para o servidor que executa o Windows Server Essentials. Essa é uma etapa necessária para usar o Acesso via Web Remoto a partir de um computador remoto. Para mais informações, consulte os seguintes tópicos:
 
 -   [Visão geral de nomes de domínio](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_DNOverview)
 
@@ -368,9 +368,9 @@ ms.locfileid: "89623026"
 
 ##### <a name="to-find-the-domain-name-service-provider-for-your-domain-name"></a>Para localizar o provedor de serviços de nome de domínio para seu nome de domínio
 
-1. Abra um navegador da Web e digite <strong>www.internic.com</strong> na barra de endereços para ir para página inicial da Internic.
+1. Abra um navegador da Web e digite <strong>www.internic.com</strong> na barra de endereços para ir para o home page do InterNIC.
 
-2. Na página inicial da Internic, clique em **Whois**.
+2. Na home page do InterNIC, clique em **whois**.
 
 3. Na caixa **Whois**, digite o nome do seu domínio (por exemplo, contoso.com).
 
@@ -379,7 +379,7 @@ ms.locfileid: "89623026"
 5. Nos resultados da pesquisa, o nome do seu provedor de serviços de nome de domínio está listado sob **Registrar**.
 
 ##  <a name="customize-remote-web-access"></a><a name="BKMK_4"></a> Personalizar Acesso via Web remotos
- Você pode personalizar o site de Acesso via Web Remoto adicionando um logotipo pessoal ou uma imagem de fundo. Você também pode adicionar links na Home page, de modo que essas informações fiquem disponíveis para todos os usuários. Para obter mais informações, consulte estes tópicos:
+ Você pode personalizar o site de Acesso via Web Remoto adicionando um logotipo pessoal ou uma imagem de fundo. Você também pode adicionar links na Home page, de modo que essas informações fiquem disponíveis para todos os usuários. Para mais informações, consulte os seguintes tópicos:
 
 -   [Personalizar Acesso via Web Remoto](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeRWA)
 
@@ -441,7 +441,7 @@ ms.locfileid: "89623026"
 
 3.  Clique em **Reparar**. O Assistente **Reparo do Acesso via Web Remoto** é iniciado.
 
-4.  Clique em **Próximo**. O assistente analisa o Acesso via Web Remoto, identifica o problema e tenta repará-lo.
+4.  Clique em **Avançar**. O assistente analisa o Acesso via Web Remoto, identifica o problema e tenta repará-lo.
 
 5.  Se você receber um alerta quando o assistente for concluído, você pode clicar em **Tentar novamente** para tentar reparar o problema novamente. Se você continuar a receber um alerta, verifique o alerta para obter informações adicionais sobre o problema e as etapas de solução de problemas.
 

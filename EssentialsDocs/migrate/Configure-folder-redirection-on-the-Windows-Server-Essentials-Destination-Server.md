@@ -1,18 +1,18 @@
 ---
 title: Configurar o redirecionamento de pastas no servidor de destino do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como configurar o redirecionamento de pasta no servidor de destino do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: bc67b6bae8492d7e176ec5e46d268d171ad7c94a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0613bb1167fff59f17bfc30dc84552022dd62572
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622929"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811043"
 ---
 # <a name="configure-folder-redirection-on-the-windows-server-essentials-destination-server"></a>Configurar o redirecionamento de pastas no servidor de destino do Windows Server Essentials
 

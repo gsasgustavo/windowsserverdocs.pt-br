@@ -1,18 +1,18 @@
 ---
 title: Restaurar ou reparar o servidor que executa o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como restaurar ou reparar um servidor que executa o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 27bf6f24-30c4-4935-9b24-069eb43e22f4
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 00c57fab4ee9689ba8bd760e5c99d87e3e18d130
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0ad3ff83c028b42e5664548a19caa117257aa2da
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622957"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811073"
 ---
 # <a name="restore-or-repair-your-server-running-windows-server-essentials"></a>Restaurar ou reparar o servidor que executa o Windows Server Essentials
 
@@ -89,7 +89,7 @@ ms.locfileid: "89622957"
 
  Depois da redefinição de fábrica, você precisará executar as seguintes tarefas:
 
--   **Reconfigure o servidor.** No servidor, use o Assistente Configurar o Servidor para redigitar as definições de configuração. Para configurar um servidor do Windows Server Essentials gerenciado remotamente de um computador cliente, abra um navegador da Web e digite **http://** _<nomedoservidor \> _ na barra de endereços.
+-   **Reconfigure o servidor.** No servidor, use o Assistente Configurar o Servidor para redigitar as definições de configuração. Para configurar um servidor do Windows Server Essentials gerenciado remotamente de um computador cliente, abra um navegador da Web e digite **http://** _<nomedoservidor \>_ na barra de endereços.
 
 -   **Reconecte computadores cliente ao servidor.** Se um computador tiver sido conectado anteriormente ao servidor, você deverá desinstalar o software do conector do Windows Server Essentials do computador antes de conectar o computador ao servidor novamente. Para obter mais informações, consulte [Desinstalar o software Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) e [Conectar computadores ao servidor](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).
 
@@ -228,7 +228,7 @@ ms.locfileid: "89622957"
 
 5.  Clique em **procurar**, navegue até *<unidade \> \\<\> ServerName*\ServerFolders (por exemplo, *d:\Contoso\ServerFolders*), selecione a pasta que deseja compartilhar e clique em **OK**.
 
-6.  Clique em **Próximo**.
+6.  Clique em **Avançar**.
 
 7.  Especifique as permissões que você anotou na etapa 2 e clique em **Adicionar pasta**.
 

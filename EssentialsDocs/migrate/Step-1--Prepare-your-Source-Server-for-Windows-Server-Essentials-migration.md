@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 1: Preparar o servidor de origem para a migração para o Windows Server Essentials'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como fazer backup do servidor de origem, avaliar a integridade do sistema, instalar os service packs e correções mais recentes e verificar a configuração de rede.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 2be09665c0a2361938226b10be0ef058b8aa0ee6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 700be9d860651767cca39fc285de4d76d07aa5a2
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625504"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810553"
 ---
 # <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>Etapa 1: Preparar o servidor de origem para a migração para o Windows Server Essentials
 
@@ -120,7 +120,7 @@ Este tópico explica como fazer backup do servidor de origem, avaliar a integrid
 
    2.  No painel, clique na guia **Dispositivos**.
 
-   3.  No painel Tarefas do <**Server**  > **Tasks** , clique em **analisador de práticas recomendadas**.
+   3.  No painel Tarefas do <**Server**  >  , clique em **analisador de práticas recomendadas**.
 
 4. No painel de detalhes, digite o rótulo da varredura e, em seguida, clique em **Iniciar a varredura**. Ele corresponde ao nome do relatório de varredura, por exemplo, **SBS BPA Scan 1Jul2013**.
 
@@ -177,7 +177,7 @@ Para exibir a descrição e as soluções de um problema, clique no problema no 
 >  Depois de concluir a instalação, você deve ativar o recurso de integração de Microsoft 365 no Windows Server Essentials executando a tarefa **integrar com Microsoft 365** .
 
 > [!IMPORTANT]
->  Para permitir que a ferramenta de migração de Microsoft 365 se conecte ao Exchange Server em execução no servidor de origem, você deve habilitar o RPC sobre HTTP no servidor de origem. Para obter informações sobre como habilitar o RPC sobre HTTP, consulte [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard ou Premium) (Como implantar o RPC sobre HTTP pela primeira vez no Small Business Server 2003 (Standard ou Premium))](/previous-versions/tn-archive/bb123622(v=exchg.65)). Se você não puder executar a ferramenta de migração de Microsoft 365 com êxito depois de habilitar o RPC sobre HTTP, exiba a configuração **ValidPorts** no registro em HKEY_LOCAL_MACHINE \software\microsoft\rpc\rpcproxy e verifique se o FQDN (nome de domínio totalmente qualificado) do servidor de origem está listado. Caso não esteja, adicione-o manualmente usando o exemplo a seguir:
+>  Para permitir que a ferramenta de migração de Microsoft 365 se conecte ao Exchange Server em execução no servidor de origem, você deve habilitar o RPC sobre HTTP no servidor de origem. Para obter informações sobre como habilitar o RPC sobre HTTP, consulte [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard ou Premium) (Como implantar o RPC sobre HTTP pela primeira vez no Small Business Server 2003 (Standard ou Premium))](/previous-versions/tn-archive/bb123622(v=exchg.65)). Se você não puder executar a ferramenta de migração de Microsoft 365 com êxito depois de habilitar o RPC sobre HTTP, exiba a configuração **ValidPorts** no registro em HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy e verifique se o FQDN (nome de domínio totalmente qualificado) do servidor de origem está listado. Caso não esteja, adicione-o manualmente usando o exemplo a seguir:
 >
 >  remoto. *contoso*.com: 6001-6002; remoto. *contoso*.com:6004 (substitua *contoso* pelo nome do seu domínio)
 

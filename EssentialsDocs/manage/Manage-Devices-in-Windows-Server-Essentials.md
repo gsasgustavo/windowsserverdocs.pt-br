@@ -1,18 +1,18 @@
 ---
 title: Gerenciar Dispositivos no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre os recursos de gerenciamento de dispositivos de um servidor e saiba como configurar e usar dispositivos na rede.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 96d99bb41a528a3a2f86be2d876df6e777e4b790
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0e275db0844ac431b80284a6c2d69540432a2be5
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623142"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811393"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Gerenciar Dispositivos no Windows Server Essentials
 
@@ -95,7 +95,7 @@ ms.locfileid: "89623142"
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que você deseja alterar.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
 
 5.  Na guia **Acesso ao computador**, selecione o computador que o usuário pode acessar remotamente e clique em **OK**.
 
@@ -130,7 +130,7 @@ ms.locfileid: "89623142"
 
 5.  Sobre a página **Habilitar a política de grupo de redirecionamento de pasta** do assistente, você pode escolher as pastas de usuário que deseja redirecionar.
 
-6.  Sobre a página **Habilitar configurações de política de segurança** do assistente, você pode optar por habilitar as configurações de política de grupo para o **Windows Update**, o **Windows Defender**e o **Firewall de rede**.
+6.  Sobre a página **Habilitar configurações de política de segurança** do assistente, você pode optar por habilitar as configurações de política de grupo para o **Windows Update**, o **Windows Defender** e o **Firewall de rede**.
 
 7.  Clique em **Concluir** para implementar as configurações de política de grupo.
 
@@ -170,7 +170,7 @@ ms.locfileid: "89623142"
 
 1.  Na lista de computadores, selecione a conta na qual você deseja exibir ou alterar as propriedades.
 
-2.  No painel ** \> tarefas do<ComputerName** , clique em **exibir as propriedades do computador**. A página **Propriedades** aparecerá para os computadores.
+2.  No painel **\> tarefas do<ComputerName** , clique em **exibir as propriedades do computador**. A página **Propriedades** aparecerá para os computadores.
 
 3.  Clique na guia para exibir as propriedades para esse computador.
 

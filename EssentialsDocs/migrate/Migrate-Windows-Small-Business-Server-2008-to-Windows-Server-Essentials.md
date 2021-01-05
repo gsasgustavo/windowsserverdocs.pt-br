@@ -1,18 +1,18 @@
 ---
 title: Migrar do Windows Small Business Server 2008 para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como migrar um domínio existente do Windows SBS 2008 para o Windows Server 2012 Essentials em novo hardware e, em seguida, migre as configurações e os dados.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 71e3243e-2da9-409a-ae1f-813d4c9062e1
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 81bb6a55efa3fef0154eda500e13928ac5db5b9e
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 1c8e6a52fbb9292e21d4eb17e086a4f78e1fadaa
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625843"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810863"
 ---
 # <a name="migrate-windows-small-business-server-2008-to-windows-server-essentials"></a>Migrar do Windows Small Business Server 2008 para o Windows Server Essentials
 

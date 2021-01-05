@@ -1,18 +1,18 @@
 ---
 title: As regras usadas pela Ferramenta Analisador de Práticas Recomendadas (BPA) do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre as regras usadas pela ferramenta BPA (Windows Server Essentials Analisador de Práticas Recomendadas).
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 37e1dae7-586c-4dd7-bf83-7e14a9567c8f
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 231fad84ecb5ac5831d4d638af7bd8fbe0281b04
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8689a04c693f463d99889e6d7bdc3f5f21ea5c2e
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625547"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810623"
 ---
 # <a name="rules-used-by-the-windows-server-essentials-best-practices-analyzer-bpa-tool"></a>As regras usadas pela Ferramenta Analisador de Práticas Recomendadas (BPA) do Windows Server Essentials
 
@@ -554,7 +554,7 @@ Este artigo descreve as regras usadas pelo BPA (Windows Server Essentials Analis
 
  **Impacto:**  Talvez você não consiga acessar os recursos da Internet por nome.
 
- **Resolução:**  Defina o valor da chave do registro RecursionTimeout para ser maior que o valor da chave ForwardingTimeout, localizado no registro em HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\DNS\Parameters.
+ **Resolução:**  Defina o valor da chave do registro RecursionTimeout para ser maior que o valor da chave ForwardingTimeout, localizado no registro em HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters.
 
 ### <a name="the-forward-dns-zone-for-your-active-directory-domain-does-not-allow-secure-updates"></a>A zona DNS direita de seu domínio do Active Directory não permite atualizações seguras
  **Problema:**  Você deve configurar a zona de pesquisa direta para permitir apenas atualizações dinâmicas seguras.

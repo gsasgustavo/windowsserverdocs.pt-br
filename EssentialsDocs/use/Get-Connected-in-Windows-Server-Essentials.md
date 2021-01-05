@@ -1,24 +1,24 @@
 ---
 title: Manter-se conectado no Windows Server Essentials [A_Web_Client_H2]
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o software do conector para conectar seus computadores ao servidor do Windows Server Essentials.
 ms.date: 05/07/2016
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: ef0cdcffb90ba14eca6ccff50e4a297662bd61c6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 3d8983444853846fdf5bb36173a4ca1d2136c0c2
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624976"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810113"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Manter-se conectado no Windows Server Essentials [A_Web_Client_H2]
 
 >Aplica-se a: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Você pode conectar os computadores ao servidor do Windows Server Essentials usando o software Connector. O software Connector é instalado quando você conectar um computador ao servidor usando o Conector usando Connecte um computador ao Assistente do servidor. Você pode iniciar esse assistente digitando **http://<ServerName \> /Connect**, em que **<ServerName \> ** é o nome do seu servidor.
+ Você pode conectar os computadores ao servidor do Windows Server Essentials usando o software Connector. O software Connector é instalado quando você conectar um computador ao servidor usando o Conector usando Connecte um computador ao Assistente do servidor. Você pode iniciar esse assistente digitando **http://<ServerName \> /Connect**, em que **<ServerName \>** é o nome do seu servidor.
 
  Neste tópico:
 
@@ -269,7 +269,7 @@ ms.locfileid: "89624976"
 
     -   Rede Principal
 
-    -   Serviços da área de trabalho Remota
+    -   Serviços da Área de Trabalho Remota
 
 -   Faz as seguintes alterações no computador para facilitar backups:
 
@@ -323,7 +323,7 @@ ms.locfileid: "89624976"
 
 ##### <a name="to-remove-a-computer-from-a-windows-domain"></a>Para remover um computador de um domínio do Windows
 
-1.  Clique em **Iniciar**, clique com botão direito do **computador**e clique em **Propriedades**.
+1.  Clique em **Iniciar**, clique com botão direito do **computador** e clique em **Propriedades**.
 
 2.  Em **configurações de grupo de trabalho, o domínio e o nome do computador**, clique em **alterar configurações**.
 
@@ -389,14 +389,14 @@ ms.locfileid: "89624976"
 
 2.  Abra um navegador de Internet, como o Internet Explorer.
 
-3.  Na barra de endereços, digite **http://<ServerName \> /Connect**e pressione Enter.
+3.  Na barra de endereços, digite **http://<ServerName \> /Connect** e pressione Enter.
 
     > [!NOTE]
     >  Se o computador estiver em um local remoto fora da rede do Windows Server Essentials, para executar o assistente para conectar um computador ao servidor, digite **http://<\> /Connect** na barra de endereços do seu navegador da Web (em que <domínio \> é o nome de domínio da sua organização). Você pode obter as informações de nome de domínio do administrador da rede.
 
 4.  A página **Conectar o computador ao servidor** será exibida. Realize um dos seguintes procedimentos:
 
-    -   Para um computador que executa o sistema operacional Windows, clique em **Baixar software para Windows **.
+    -   Para um computador que executa o sistema operacional Windows, clique em **Baixar software para Windows**.
 
     -   Em um computador executando o Mac OS X ou posterior, clique em **Baixar software para Mac**.
 
@@ -416,7 +416,7 @@ ms.locfileid: "89624976"
 
         -   Para todos os outros computadores, primeiro crie uma conta de usuário de rede no servidor usando o Painel. Crie a conta de usuário com privilégios de administrador ou usuário padrão, com base nas tarefas executadas pela pessoa que utiliza o computador.
 
-    4.  Se o computador estiver executando o Windows 8, Windows 8.1 ou Windows 10, ignore esta etapa. Se seu computador tem o Windows 7 e você deseja manter documentos, fotos ou preferências pessoais (como planos de fundo da área de trabalho, proteções de tela ou favoritos do Internet Explorer) depois de adicionar o computador à nova rede, selecione **Mover meus dados e configurações para minha nova conta de usuário de rede** na página **Selecione se você deseja mover seus dados e configurações existentes**do assistente.
+    4.  Se o computador estiver executando o Windows 8, Windows 8.1 ou Windows 10, ignore esta etapa. Se seu computador tem o Windows 7 e você deseja manter documentos, fotos ou preferências pessoais (como planos de fundo da área de trabalho, proteções de tela ou favoritos do Internet Explorer) depois de adicionar o computador à nova rede, selecione **Mover meus dados e configurações para minha nova conta de usuário de rede** na página **Selecione se você deseja mover seus dados e configurações existentes** do assistente.
 
     5.  Selecione se deseja ou não ativar automaticamente este computador para criar um backup na página **Selecione se você deseja ativar este computador para criar seu backup**.
 
@@ -486,7 +486,7 @@ ms.locfileid: "89624976"
 
     -   No Windows 8, na página **inicial** , digite **comando** e pressione Enter. Nos resultados, clique com botão direito **Prompt de comando** e clique em **executar como administrador**.
 
-    -   No Windows 7, no menu **Iniciar** , digite **comando** na caixa de pesquisa, clique com o botão direito do mouse em **prompt de comando**e clique em **Executar como administrador**.
+    -   No Windows 7, no menu **Iniciar** , digite **comando** na caixa de pesquisa, clique com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador**.
 
 3.  No prompt de comando, digite o seguinte comando e pressione Enter:
 
@@ -504,7 +504,7 @@ ms.locfileid: "89624976"
 
 1.  Faça logon no servidor que você deseja conectar à rede Windows Server Essentials.
 
-2.  Abra um navegador da Internet e, na barra de endereços, digite **http://<ServerName \> /Connect**, em que *<ServerName \> * é o nome do servidor que executa o Windows Server Essentials e pressione Enter.
+2.  Abra um navegador da Internet e, na barra de endereços, digite **http://<ServerName \> /Connect**, em que *<ServerName \>* é o nome do servidor que executa o Windows Server Essentials e pressione Enter.
 
 3.  Se a configuração de segurança aprimorada do Internet Explorer estiver habilitada no servidor que você está tentando se conectar à rede Windows Server Essentials, execute o seguinte; Caso contrário, ignore esta etapa.
 
@@ -512,7 +512,7 @@ ms.locfileid: "89624976"
 
     2.  Adicione o site do **http://<ServerName \> /Connect** aos sites confiáveis da seguinte maneira:
 
-        1.  No painel de navegação do navegador, clique em **ferramentas**e clique em **opções da Internet**.
+        1.  No painel de navegação do navegador, clique em **ferramentas** e clique em **opções da Internet**.
 
         2.  Clique na guia de **segurança**, e em seguida, clique em **Sites confiáveis**.
 
@@ -520,7 +520,7 @@ ms.locfileid: "89624976"
 
         4.  O site deve ser mostrado no campo **adicionar este site à zona** . Clique em **Adicionar**.
 
-        5.  Clique em **Fechar**e clique em **OK**.
+        5.  Clique em **Fechar** e clique em **OK**.
 
     3.  Atualize a página da Web.
 
@@ -561,10 +561,10 @@ ms.locfileid: "89624976"
 - O status de Política de Grupo do segundo servidor é exibido como **não aplicável**.
 
 ###  <a name="install-the-connector-software"></a><a name="BKMK_11"></a> Instalar o software do conector
- O software Connector no Windows Server Essentials é instalado quando você conecta o computador ao servidor usando a conectar um computador para o Assistente do servidor. Você pode iniciar esse assistente digitando **http://<ServerName \> /Connect** na barra de endereços do seu navegador da Web (em que *<\> * ServerName é o nome do seu servidor).
+ O software Connector no Windows Server Essentials é instalado quando você conecta o computador ao servidor usando a conectar um computador para o Assistente do servidor. Você pode iniciar esse assistente digitando **http://<ServerName \> /Connect** na barra de endereços do seu navegador da Web (em que *<\>* ServerName é o nome do seu servidor).
 
 > [!NOTE]
->  Se o seu computador estiver em um local remoto, para executar o assistente para conectar um computador ao servidor, digite **http://<nome_do_domínio \> /Connect** na barra de endereços do navegador da Web (em que *<domínio \> * é o nome de domínio da sua organização). Você pode obter as informações de nome de domínio do administrador da rede.
+>  Se o seu computador estiver em um local remoto, para executar o assistente para conectar um computador ao servidor, digite **http://<nome_do_domínio \> /Connect** na barra de endereços do navegador da Web (em que *<domínio \>* é o nome de domínio da sua organização). Você pode obter as informações de nome de domínio do administrador da rede.
 
  O software Connector faz o seguinte:
 
@@ -600,7 +600,7 @@ ms.locfileid: "89624976"
 
 1.  De um computador que está executando o Windows 7, Windows 8, Windows 8.1 ou Windows 10, abra o **Painel de Controle** e, em seguida, na seção de **Programas**, clique em **Exibir atualizações instaladas**.
 
-2.  Na lista de programas instalados, selecione **Windows Server Essentials Connector**e clique em **desinstalar**.
+2.  Na lista de programas instalados, selecione **Windows Server Essentials Connector** e clique em **desinstalar**.
 
 3.  Na página de aviso, clique em **Sim**.
 

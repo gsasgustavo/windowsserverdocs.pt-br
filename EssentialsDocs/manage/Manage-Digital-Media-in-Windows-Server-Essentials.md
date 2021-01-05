@@ -1,18 +1,18 @@
 ---
 title: Gerenciar mídia digital no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre os recursos de streaming de mídia do seu servidor e saiba como configurar e usar o streaming de mídia em sua rede.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: b5788495a2d622a74d5099d3e7c91e62c8d84a6f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 59149ddfdde440d4b5d5ce722e054a858c5e5a6b
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623131"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811383"
 ---
 # <a name="manage-digital-media-in-windows-server-essentials"></a>Gerenciar mídia digital no Windows Server Essentials
 
@@ -55,7 +55,7 @@ Os tópicos a seguir abordam as recursos do servidor de streaming de mídia e ex
 
 -   **Assistir vídeos**. O servidor pode ser usado para armazenar e transmitir grandes coleções de vídeos e TV gravada mostrada aos computadores ou outra reprodução de dispositivos na sua rede. Você pode transmitir vídeos para um Xbox 360 ou para um computador usando o Windows Media Player.
 
--   **Reproduzir música**. Quando você ativa o compartilhamento de mídia para a pasta compartilhada\**música**, você poderá acessar seus arquivos de música de dispositivos que oferecem suporte a conexão de mídia do Windows. Não é necessário habilitar ou configurar as contas de usuário para transmitir da pasta compartilhad**música** depois que o compartilhamento estiver ativado.
+-   **Reproduzir música**. Quando você ativa o compartilhamento de mídia para a pasta compartilhada\**música**, você poderá acessar seus arquivos de música de dispositivos que oferecem suporte a conexão de mídia do Windows. Não é necessário habilitar ou configurar as contas de usuário para transmitir da pasta compartilhad **música** depois que o compartilhamento estiver ativado.
 
 -   **Exibir apresentações de fotos**. Você pode armazenar fotos digitais na pasta compartilhada **fotos** no servidor e acessá-las a partir de qualquer computador ou um Xbox 360 conectado a uma TV em casa ou no escritório. Você pode assistir a apresentações de fotos, transformando sua TV em um grande quadro de imagens.
 
@@ -118,7 +118,7 @@ Os tópicos a seguir abordam as recursos do servidor de streaming de mídia e ex
 
    -   Clique em **Desativar** para interromper o compartilhamento de todos os arquivos que estão armazenados na biblioteca de mídia do servidor.
 
-3. Se você quiser compartilhar pastas adicionais na biblioteca de mídia, clique em **Personalizar**e selecione **Sim** para cada pasta compartilhada que você deseja incluir na biblioteca de mídia.
+3. Se você quiser compartilhar pastas adicionais na biblioteca de mídia, clique em **Personalizar** e selecione **Sim** para cada pasta compartilhada que você deseja incluir na biblioteca de mídia.
 
 4. Clique em **OK** para salvar suas alterações.
 
@@ -148,7 +148,7 @@ Os tópicos a seguir abordam as recursos do servidor de streaming de mídia e ex
 
 -   Quando você ativa o compartilhamento de mídia, ele cria quatro pastas predefinidas: Música, imagens, vídeos e TV gravada. Se houver qualquer uma das pastas no servidor, a pasta existente será reutilizada como uma pasta compartilhada para compartilhamento de mídia. Todas as permissões de conteúdo de mídia e de usuário da pasta existente são preservadas e são compartilhadas com todos os usuários da rede.
 
--   Antes de ativar o compartilhamento de biblioteca de mídia para uma pasta compartilhada, você deve saber que o compartilhamento de biblioteca de mídia ignora qualquer tipo de acesso à conta de usuário que você definir para a pasta compartilhada. Por exemplo, digamos que você ativa o compartilhamento de biblioteca de mídia para a pasta compartilhada **Fotos**e você definir a pasta compartilhada **Fotos** como **Sem Acesso** para uma conta de usuário chamada Bobby. Bobby ainda pode transmitir qualquer mídia digital a partir da pasta compartilhada**vídeos** para qualquer reprodutor de mídia digital compatível ou DMR. Se houver mídia digital que você não deseja transmitir dessa maneira, armazene os arquivos em uma pasta que não tenha o compartilhamento de biblioteca de mídia ativado.
+-   Antes de ativar o compartilhamento de biblioteca de mídia para uma pasta compartilhada, você deve saber que o compartilhamento de biblioteca de mídia ignora qualquer tipo de acesso à conta de usuário que você definir para a pasta compartilhada. Por exemplo, digamos que você ativa o compartilhamento de biblioteca de mídia para a pasta compartilhada **Fotos** e você definir a pasta compartilhada **Fotos** como **Sem Acesso** para uma conta de usuário chamada Bobby. Bobby ainda pode transmitir qualquer mídia digital a partir da pasta compartilhada **vídeos** para qualquer reprodutor de mídia digital compatível ou DMR. Se houver mídia digital que você não deseja transmitir dessa maneira, armazene os arquivos em uma pasta que não tenha o compartilhamento de biblioteca de mídia ativado.
 
 -   Se você ativar o compartilhamento de biblioteca de mídia para uma pasta compartilhada, qualquer player de mídia digital com suporte ou DMR que possa acessar sua rede do Windows Server Essentials também poderá acessar sua mídia digital nessa pasta compartilhada. Por exemplo, se você tiver uma rede sem fio e ela não estiver protegida, qualquer pessoa dentro do alcance de sua rede sem fio potencialmente pode acessar sua mídia digital nessa pasta. Antes de ativar o compartilhamento de biblioteca de mídia, certifique-se de proteger sua rede sem fio. Para obter mais informações, veja a documentação do ponto de acesso sem fio.
 
@@ -174,13 +174,13 @@ Os tópicos a seguir abordam as recursos do servidor de streaming de mídia e ex
 
 1.  Abra o Painel do servidor.
 
-2.  Na página **Início** do Painel, clique em **Configuração**, clique em **Configurar o servidor de mídia**e clique em **Clique para configurar o servidor de mídia**.
+2.  Na página **Início** do Painel, clique em **Configuração**, clique em **Configurar o servidor de mídia** e clique em **Clique para configurar o servidor de mídia**.
 
 3.  Na página de configurações **Mídia**, você pode escolher uma das seguintes opções:
 
     -   Clicar em **Desativar** para interromper o compartilhamento de todos os arquivos que são armazenados no servidor.
 
-    -   Clicar em **Personalizar**e selecione **não** para pastas específicas que você deseja interromper o compartilhamento.
+    -   Clicar em **Personalizar** e selecione **não** para pastas específicas que você deseja interromper o compartilhamento.
 
 4.  Clicar em **Aplicar** ou **OK** para salvar suas alterações.
 
@@ -199,7 +199,7 @@ Os tópicos a seguir abordam as recursos do servidor de streaming de mídia e ex
 
  O formato e média de bites escolhidos para transcodificação dependem totalmente do desempenho do processador do servidor. O desempenho do processador é identificado como parte do Índice de experiência do Windows. Para determinar a pontuação de desempenho do servidor, siga este procedimento:
 
-- Em um computador de rede que executa o Windows 7 ou o Windows 8 que tem o mesmo processador que o servidor, vá para o **painel de controle**, clique em **informações e ferramentas de desempenho**e examine as informações na **taxa e melhore a página desempenho do computador** .
+- Em um computador de rede que executa o Windows 7 ou o Windows 8 que tem o mesmo processador que o servidor, vá para o **painel de controle**, clique em **informações e ferramentas de desempenho** e examine as informações na **taxa e melhore a página desempenho do computador** .
 
 - Entre em contato com o fabricante do processador.
 

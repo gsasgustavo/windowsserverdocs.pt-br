@@ -1,18 +1,18 @@
 ---
 title: Unir computadores ao novo Server1 do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como unir computadores ao novo servidor do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 92bdcc107b3246fb1d288ab9b56f6c65d9b0634a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 573c2525d9b878c3fc56260bd46a738919ca7c8b
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622822"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810903"
 ---
 # <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>Unir computadores ao novo Server1 do Windows Server Essentials
 

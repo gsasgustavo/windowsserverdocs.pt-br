@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 4: Mover configurações e dados para o servidor de destino para migração para o Windows Server Essentials'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como migrar dados e configurações do servidor de origem para o servidor de destino.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 888ecc5c5ab8fd609264f0f184686a144e2f8ce8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 33267506d2017e96c16a877a0ba0c95fbd7d7de8
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625478"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810515"
 ---
 # <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Etapa 4: Mover configurações e dados para o servidor de destino para migração para o Windows Server Essentials
 
@@ -47,7 +47,7 @@ Esta seção fornece informações sobre a migração de dados e configurações
 
    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
-    Sendo que:
+    Em que:
 
    - \<SourceServerName\> é o nome do servidor de origem
 

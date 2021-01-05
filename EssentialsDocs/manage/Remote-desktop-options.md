@@ -1,18 +1,18 @@
 ---
 title: Opções de área de trabalho remota
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre as opções de área de trabalho remota, incluindo velocidade de conexão, tamanho da tela, como habilitar o computador remoto para imprimir em seu computador local e muito mais.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: f4603adb7da1df0853b4c816254241d21b969fc5
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 02e34da2bf47498d3ee7ce7a424cc4abbc360f5a
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625936"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811113"
 ---
 # <a name="remote-desktop-options"></a>Opções de área de trabalho remota
 

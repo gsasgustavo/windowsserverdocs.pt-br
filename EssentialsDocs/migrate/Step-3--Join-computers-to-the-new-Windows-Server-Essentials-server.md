@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 3: Fazer computadores ingressarem no novo servidor do Windows Server Essentials'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como conectar computadores cliente ao novo servidor que executa o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 7495831c6f593b65261fda8f50d4ef9d1000d9b4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 137330d084738313dbf666590f78575bba3b04ef
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625479"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810505"
 ---
 # <a name="step-3-join-computers-to-the-new-windows-server-essentials-server"></a>Etapa 3: Fazer computadores ingressarem no novo servidor do Windows Server Essentials
 
@@ -32,7 +32,7 @@ A próxima etapa do processo de migração é conectar computadores cliente ao n
 2.  Na lista de programas, clique no aplicativo Connector que está em execução no seu computador.
 
     > [!NOTE]
-    >  O aplicativo do conector pode ser o **conector do Windows Small Business Server 2011 Essentials**ou o **conector do Windows Server Essentials**, dependendo de qual versão do Windows Server Essentials o computador cliente estava conectado.
+    >  O aplicativo do conector pode ser o **conector do Windows Small Business Server 2011 Essentials** ou o **conector do Windows Server Essentials**, dependendo de qual versão do Windows Server Essentials o computador cliente estava conectado.
 
 3.  Clique em **Desinstalar**.
 
@@ -45,7 +45,7 @@ A próxima etapa do processo de migração é conectar computadores cliente ao n
 
 2.  Abra um navegador de Internet, como o Internet Explorer.
 
-3.  Na barra de endereços, digite **http://<ServerName \> /Connect**e pressione Enter.
+3.  Na barra de endereços, digite **http://<ServerName \> /Connect** e pressione Enter.
 
 4.  Siga as instruções na tela para ingressar o computador cliente no novo servidor do Windows Server Essentials.
 

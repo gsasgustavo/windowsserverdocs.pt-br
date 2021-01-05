@@ -1,18 +1,18 @@
 ---
 title: Gerenciar contas de usuário no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre a página usuários do painel do Windows Server Essentials e como ele centraliza informações e tarefas que ajudam a gerenciar as contas de usuário.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: e45ca557db8a72c927eec56bed4f578f19f799b2
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: da6a85d2337af18464c1ce709d5a2c3cf3209e06
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626027"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811223"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Gerenciar contas de usuário no Windows Server Essentials
 
@@ -85,7 +85,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que deseja remover.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **remover a conta de usuário**. O Assistente de Exclusão de Conta de Usuário é exibido.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **remover a conta de usuário**. O Assistente de Exclusão de Conta de Usuário é exibido.
 
 5.  Na página deseja **manter os arquivos?** do assistente, você pode optar por excluir os arquivos do usuário, incluindo backups de histórico de arquivos e a pasta redirecionada para a conta de usuário. Para manter os arquivos do usuário, deixe a caixa de seleção vazia. Depois de fazer sua escolha, clique em **Avançar**.
 
@@ -111,7 +111,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 1.  Na lista de contas de usuário, selecione a conta para a qual você deseja exibir ou alterar as propriedades.
 
-2.  No painel ** \> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
+2.  No painel **\> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
 
 3.  Clique na guia para exibir as propriedades da conta.
 
@@ -128,7 +128,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que você deseja alterar.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
 
 5.  Na guia **Geral**, digite um novo **Nome** e **Sobrenome** para a conta de usuário e clique em **OK**.
 
@@ -148,7 +148,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na exibição de lista, selecione a conta de usuário que você deseja ativar.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **ativar a conta de usuário**.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **ativar a conta de usuário**.
 
 5.  Na janela de confirmação, clique em **Sim** para confirmar a ação.
 
@@ -173,7 +173,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na exibição de lista, selecione a conta de usuário que você deseja desativar.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **desativar a conta de usuário**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **desativar a conta de usuário**.
 
 5.  Na janela de confirmação, clique em **Sim** para confirmar a ação.
 
@@ -202,7 +202,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 - Uma lista de contas de usuário, que exibe:
 
-  -   O nome de usuário.
+  -   O nome do usuário.
 
   -   O nome de Logon da conta de usuário.
 
@@ -287,7 +287,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3. Na lista de contas de usuário, selecione a conta de usuário que você deseja redefinir.
 
-4. No painel ** \> tarefas da conta de usuário do<** , clique em **alterar a senha da conta de usuário**. O Assistente de Alteração de Senha de Conta de Usuário é exibido.
+4. No painel **\> tarefas da conta de usuário do<** , clique em **alterar a senha da conta de usuário**. O Assistente de Alteração de Senha de Conta de Usuário é exibido.
 
 5. Digite uma nova senha para a conta de usuário e, em seguida, digite a senha novamente para confirmá-la.
 
@@ -374,7 +374,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3. Na lista de contas de usuário, selecione a conta de usuário que deseja remover.
 
-4. No painel ** \> tarefas da conta de usuário do<** , clique em **remover a conta de usuário**. O Assistente de Exclusão de Conta de Usuário é exibido.
+4. No painel **\> tarefas da conta de usuário do<** , clique em **remover a conta de usuário**. O Assistente de Exclusão de Conta de Usuário é exibido.
 
 5. Na página **Deseja manter os arquivos?**, certifique-se de que a caixa de seleção **Excluir os arquivos, incluindo os backups do Histórico de Arquivos e a pasta redirecionada, desta conta de usuário** não esteja marcada e clique em **Avançar**.
 
@@ -486,7 +486,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que deseja remover.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**.
 
 5.  Na **<\> Propriedades da conta de usuário**, faça o seguinte:
 
@@ -508,7 +508,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que deseja remover.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **Propriedades**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **Propriedades**.
 
 5.  Na **<\> Propriedades da conta de usuário**, faça o seguinte:
 
@@ -535,7 +535,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que você deseja alterar.
 
-4.  No painel ** \> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
+4.  No painel **\> tarefas da conta de usuário do<** , clique em **exibir as propriedades da conta**. A página **Propriedades** da conta de usuário é exibida.
 
 5.  Na guia **Acesso em qualquer lugar**, faça o seguinte:
 
@@ -556,7 +556,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário para a qual você deseja conceder permissões para acessar a área de trabalho remotamente.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **Propriedades**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **Propriedades**.
 
 5.  Na **<\> Propriedades da conta de usuário**, clique na guia **acesso em qualquer lugar** .
 
@@ -595,7 +595,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 4.  No painel de tarefas, clique em **Exibir as propriedades da pasta**.
 
-5.  Nas ** \> Propriedades<nome_da_pasta**, clique em **compartilhamento**e selecione o nível de acesso do usuário apropriado para as contas de usuário listadas e clique em **aplicar**.
+5.  Nas **\> Propriedades<nome_da_pasta**, clique em **compartilhamento** e selecione o nível de acesso do usuário apropriado para as contas de usuário listadas e clique em **aplicar**.
 
     > [!NOTE]
     >  Não é possível modificar as permissões de compartilhamento das pastas **Backups do histórico de arquivos**, **Redirecionamento de pasta**, e **Usuários** do servidor. Assim, as propriedades dessas pastas de servidor não incluem uma guia **Compartilhamento**.
@@ -613,7 +613,7 @@ A página Usuários do Painel do Windows Server Essentials centraliza informaç�
 
 3.  Na lista de contas de usuário, selecione a conta de usuário a que você deseja conceder permissões para acessar a área de trabalho remotamente.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **Propriedades**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **Propriedades**.
 
 5.  Na **<\> Propriedades da conta de usuário**, clique na guia acesso do **computador** .
 

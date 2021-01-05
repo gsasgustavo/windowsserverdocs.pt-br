@@ -1,18 +1,18 @@
 ---
 title: Executar o coletor de log do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como executar o coletor de logs do Windows Server Essentials do servidor ou de um computador na rede.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 34c853abb19424d94fa768c70fcb6c9d8d8feea8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 40efab1582bf035ee0426b748a2090d69eed23e1
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625280"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810313"
 ---
 # <a name="run-the-windows-server-essentials-log-collector"></a>Executar o coletor de log do Windows Server Essentials
 Você pode executar o coletor de logs do Windows Server Essentials do servidor ou de um computador na rede. Se executar o coletor de log do servidor, você só poderá coletar logs do servidor. Se você executar o coletor de log de um computador da rede, você pode optar por coletar logs do servidor, além de logs para esse computador.
@@ -24,10 +24,10 @@ Você pode executar o coletor de logs do Windows Server Essentials do servidor o
 1. Na página **inicial** do servidor, clique em **coletor de logs do Windows Server Essentials**.
 
    > [!NOTE]
-   > - Se o programa coletor de logs não aparecer na página **inicial** , navegue até **%System%\Program arquivos (x86) \Windows Server Essentials log Collector**e clique duas vezes em **LogCollector**.
+   > - Se o programa coletor de logs não aparecer na página **inicial** , navegue até **%System%\Program arquivos (x86) \Windows Server Essentials log Collector** e clique duas vezes em **LogCollector**.
    >   -   Se você não estiver conectado ao servidor com privilégios administrativos, o coletor de log solicitará que você insira suas credenciais.
 
-2. Quando for solicitado um local para salvar os arquivos de log coletados, você poderá escolher o local padrão, ** \\ \\<ServerName \> \Logs**ou especificar outro local. Para aceitar o local padrão, clique em **Avançar**. Para alterar o local, clique em **Navegar**, navegue até a pasta onde deseja salvar os arquivos de log e, em seguida, clique em **Salvar**.
+2. Quando for solicitado um local para salvar os arquivos de log coletados, você poderá escolher o local padrão, **\\ \\<ServerName \> \Logs** ou especificar outro local. Para aceitar o local padrão, clique em **Avançar**. Para alterar o local, clique em **Navegar**, navegue até a pasta onde deseja salvar os arquivos de log e, em seguida, clique em **Salvar**.
 
    > [!NOTE]
    >  Você não precisará fornecer nomes de arquivo para os arquivos de log. O coletor de logs nomeia a coleção de arquivos zip concatenando o nome do computador e o carimbo de data/hora do arquivo.
@@ -38,7 +38,7 @@ Você pode executar o coletor de logs do Windows Server Essentials do servidor o
 
 #### <a name="to-run-the-log-collector-on-a-network-computer-by-using-the-wizard"></a>Para executar o coletor de log em um computador de rede usando o assistente
 
-1.  Navegue até **%System%\Program arquivos (x86) \Windows Server Essentials log Collector**e clique duas vezes no arquivo **LogCollector.exe**.
+1.  Navegue até **%System%\Program arquivos (x86) \Windows Server Essentials log Collector** e clique duas vezes no arquivo **LogCollector.exe**.
 
     > [!NOTE]
     >  Se você não estiver conectado ao computador de rede com privilégios administrativos, insira seu nome de usuário e senha quando solicitado e clique em **Avançar**.
@@ -49,7 +49,7 @@ Você pode executar o coletor de logs do Windows Server Essentials do servidor o
 
     2.  A caixa de seleção **Arquivos de log do computador cliente (este computador)** é marcada por padrão, indicando que o coletor de log coletará os logs do computador de rede que está executando o. Se você deseja coletar logs do servidor, desmarque a caixa de seleção **Arquivos de log do computador cliente (este computador)**.
 
-    3.  Clique em **Próximo**.
+    3.  Clique em **Avançar**.
 
 3.  Quando solicitado, digite o nome de usuário e a senha de um administrador de servidor e, em seguida, clique em **Avançar**.
 
@@ -73,7 +73,7 @@ Você pode executar o coletor de logs do Windows Server Essentials do servidor o
 
 3.  Na raiz da **Biblioteca do Agendador de Tarefas**, navegue até a tarefa agendada denominada **LogCollector**.
 
-4.  Clique com botão direito do mouse em **LogCollector** e clique em **Executar**. O coletor de logs coloca os logs na pasta padrão no servidor, ** \\ \\<ServerName \> \Logs**. Se você não tiver permissão de gravação para a pasta ou a pasta não existir, os logs serão colocados no subdiretório **temporário \><** .
+4.  Clique com botão direito do mouse em **LogCollector** e clique em **Executar**. O coletor de logs coloca os logs na pasta padrão no servidor, **\\ \\<ServerName \> \Logs**. Se você não tiver permissão de gravação para a pasta ou a pasta não existir, os logs serão colocados no subdiretório **temporário \><** .
 
 ##### <a name="to-manually-run-the-log-collector-on-a-network-computer"></a>Para executar o coletor de log manualmente em um computador de rede
 

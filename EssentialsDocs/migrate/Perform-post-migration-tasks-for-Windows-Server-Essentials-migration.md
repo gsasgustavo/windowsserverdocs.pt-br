@@ -1,18 +1,18 @@
 ---
 title: Executar tarefas de pós-implantação para o Windows Server Essentials migration1
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre as tarefas de pós-atualização que você precisa executar depois de migrar o Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: abd092b3e6b4176c83b51995f140aad0dafc6e0f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: cf96832b6731dd8680ad41a49cd1d260644ba103
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625636"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810653"
 ---
 # <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Executar tarefas de pós-implantação para o Windows Server Essentials migration1
 
@@ -94,11 +94,11 @@ As tarefas a seguir ajudaram a concluir a configuração do servidor de destino 
 
 1. No servidor de destino, abra a ferramenta administrativa **Gerenciamento de Política de Grupo**.
 
-2. Na árvore de console de **Gerenciamento do política de grupo** , expanda **floresta:** * \><ServerName*, expanda domínios e expanda o servidor.
+2. Na árvore de console de **Gerenciamento do política de grupo** , expanda **floresta:** *\><ServerName*, expanda domínios e expanda o servidor.
 
 3. Expanda **Controladores de Domínio**, clique com botão direito na **Política de Controladores de Domínio Padrão** e clique em **Editar**.
 
-4. Em **Editor de gerenciamento de política de grupo**, clique em **política de controladores de domínio padrão**<**política**do<em> \> ServerName</em>e, em seguida, expanda Configuração do **computador**.
+4. Em **Editor de gerenciamento de política de grupo**, clique em **política de controladores de domínio padrão**<**política** do <em> \> ServerName</em>e, em seguida, expanda Configuração do **computador**.
 
 5. Expanda **Políticas**, expanda **Configurações do Windows** e então expanda **Configurações de Segurança**.
 
@@ -114,7 +114,7 @@ As tarefas a seguir ajudaram a concluir a configuração do servidor de destino 
 
 11. Clique em **Verificar Nomes** para verificar se o grupo de administradores interno é exibido e, em seguida, clique em **OK** três vezes para salvar a configuração.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 
 -   [Migrar do Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)

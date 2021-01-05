@@ -1,18 +1,18 @@
 ---
 title: Solucionar problemas do Acesso em Qualquer Local no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar o assistente para reparar acesso em qualquer lugar no Windows Server Essentials para solucionar problemas que impedem que os usuários de rede acessem recursos do servidor.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 4de71e30e4dd706a52587dc1c869960c9b83bc5c
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 947b75f6f314fad479f7725d3abc482116755172
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625232"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810210"
 ---
 # <a name="troubleshoot-anywhere-access-in-windows-server-essentials"></a>Solucionar problemas do Acesso em Qualquer Local no Windows Server Essentials
 
@@ -33,7 +33,7 @@ O assistente Reparar o Acesso em Qualquer Local tenta identificar e reparar os p
 
 3. Clique em **Reparar**. O assistente Reparar o Acesso em Qualquer Local é iniciado.
 
-4. Clique em **Próximo**. O assistente analisa o Acesso em Qualquer Local, identifica o problema e tenta repará-lo.
+4. Clique em **Avançar**. O assistente analisa o Acesso em Qualquer Local, identifica o problema e tenta repará-lo.
 
 5. Se você receber um alerta quando o assistente for concluído, você pode clicar em **Tentar novamente** para tentar reparar o problema novamente. Se você continuar a receber um alerta, verifique o alerta para obter informações adicionais sobre o problema e as etapas de solução de problemas.
 

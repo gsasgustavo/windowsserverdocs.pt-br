@@ -1,6 +1,6 @@
 ---
 title: Habilitar o redirecionamento de pastas no servidor de destino 1 do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como habilitar o redirecionamento de pasta no servidor de destino do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 H1: Habilitar o redirecionamento de pasta no servidor de destino do Windows Server Essentials
@@ -8,12 +8,12 @@ ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 9ea3b7b6c42c85ef553e56f017d068fabea42eee
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7e03d2d2033e9b5c3f20f5139c338584eac4cbde
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622862"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811003"
 ---
 # <a name="enable-folder-redirection-on-the-windows-server-essentials-destination-server1"></a>Habilitar o redirecionamento de pastas no servidor de destino 1 do Windows Server Essentials
 

@@ -1,18 +1,18 @@
 ---
 title: Mover as configurações e dados do Windows SBS 2011 Essentials para o servidor de destino para migração para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como mover os dados e as configurações do Windows SBS 2011 Essentials para o servidor de destino para a migração do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47548994-9fa0-42e0-afa4-c2ccbd063acb
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 5ab8e54fe94fa2f733e28dd461b7d35988589864
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 25a155db15f0ea76695c1bbbda100d18e1c56b9a
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625693"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810704"
 ---
 # <a name="move-windows-sbs-2011-essentials-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Mover as configurações e dados do Windows SBS 2011 Essentials para o servidor de destino para migração para o Windows Server Essentials
 
@@ -46,7 +46,7 @@ Mova as configurações e os dados para o servidor de destino da seguinte maneir
 
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
-     Sendo que:
+     Em que:
      - \<SourceServerName\> é o nome do servidor de origem
      - \<SharedSourceFolderName\> é o nome da pasta compartilhada no servidor de origem
      - \<DestinationServerName\> é o nome do servidor de destino,

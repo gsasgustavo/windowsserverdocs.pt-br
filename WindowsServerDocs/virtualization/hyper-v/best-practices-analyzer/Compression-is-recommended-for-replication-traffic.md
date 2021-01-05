@@ -1,17 +1,17 @@
 ---
 title: A compactação é recomendada para o tráfego de replicação
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando o tráfego de replicação enviado pela rede do servidor primário para o servidor de réplica é descompactado.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930
 ms.date: 8/16/2016
-ms.openlocfilehash: 61f1b56720af3583745960073823fef7b7b5173f
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 41825e6484c7cef85b11795a68df501b13c4881e
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745841"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833641"
 ---
 # <a name="compression-is-recommended-for-replication-traffic"></a>A compactação é recomendada para o tráfego de replicação
 

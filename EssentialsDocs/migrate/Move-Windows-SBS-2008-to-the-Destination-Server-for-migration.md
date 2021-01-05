@@ -1,18 +1,18 @@
 ---
 title: Mover configurações e dados do Windows SBS 2008 para o servidor de destino para migração para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como mover os dados e as configurações do Windows SBS 2008 para o servidor de destino para a migração do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: a05a91fa6ad3ed2ac15daaff204990fdad688284
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f2e2ce873dad8a7c2e16d819ad38ed185c5b0f21
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625701"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810743"
 ---
 # <a name="move-windows-sbs-2008-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Mover configurações e dados do Windows SBS 2008 para o servidor de destino para migração para o Windows Server Essentials
 
@@ -49,7 +49,7 @@ Antes de copiar os dados do servidor de origem para o servidor de destino, execu
 
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
- Sendo que:
+ Em que:
  - \<SourceServerName\> é o nome do servidor de origem
  - \<SharedSourceFolderName\> é o nome da pasta compartilhada no servidor de origem
  - \<DestinationServerName\> é o nome do servidor de destino,
@@ -126,9 +126,9 @@ Os objetos de Política de Grupo (GPOs) são atualizados para o Windows Server E
 
 2. Clique em **Iniciar** e, em seguida, em **Gerenciamento de servidor**.
 
-3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo**e, em seguida, clique em **floresta:** _<YourDomainName \> _.
+3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo** e, em seguida, clique em **floresta:** _<YourDomainName \>_.
 
-4. Clique em **domínios**, clique em *<\> YourDomainName*e, em seguida, clique em **objetos política de grupo**.
+4. Clique em **domínios**, clique em *<\> YourDomainName* e, em seguida, clique em **objetos política de grupo**.
 
 5. Clique com o botão direito do mouse em **Política de auditoria do Small Business Server**, clique em **Excluir** e, em seguida, clique em **OK**.
 
@@ -168,9 +168,9 @@ Recomendamos que você configure a política de senha no Windows Server Essentia
 
 2. Clique em **Iniciar** e, em seguida, em **Gerenciamento de servidor**.
 
-3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo**e, em seguida, clique em **floresta:** _<YourNetworkDomainName \> _
+3. No painel de navegação, clique em **gerenciamento avançado**, clique em **Gerenciamento de política de grupo** e, em seguida, clique em **floresta:** _<YourNetworkDomainName \>_
 
-4. Clique em **domínios**, clique em *<\> YourNetworkDomainName*e, em seguida, clique em **filtros WMI**.
+4. Clique em **domínios**, clique em *<\> YourNetworkDomainName* e, em seguida, clique em **filtros WMI**.
 
 5. Clique com o botão direito em **PostSP2**, clique em **Excluir** e, em seguida, clique em **Sim**.
 

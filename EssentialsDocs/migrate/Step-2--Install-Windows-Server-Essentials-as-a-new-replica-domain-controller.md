@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 2: Instalar o Windows Server Essentials como um novo controlador de domínio de réplica'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como instalar o Windows Server Essentials e o Windows Server 2012 R2 Standard (com a função de experiência do Windows Server Essentials habilitada) como um controlador de domínio.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 9d70a4d5aae1269f10958f808692fffde9c83de8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 64e6cbbf3eefd34e9373dcb1e49b3626e6014368
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625492"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810543"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>Etapa 2: Instalar o Windows Server Essentials como um novo controlador de domínio de réplica
 
@@ -23,7 +23,7 @@ Esta seção descreve como instalar o Windows Server Essentials e o Windows Serv
  Para ambientes com até 25 usuários e 50 dispositivos, você pode seguir as etapas neste guia para migrar de versões anteriores do Windows SBS para o Windows Server Essentials. Para ambientes com até 100 usuários e 200 dispositivos, você pode seguir as mesmas diretrizes para migrar para as edições Standard e Datacenter do Windows Server 2012 R2 com a função de experiência do Windows Server Essentials instalada. Os dois cenários são abordados nesta documentação.
 
 > [!IMPORTANT]
->  Se você migrar para o Windows Server Essentials, a seguinte mensagem de erro será adicionada ao log de eventos a cada dia durante o período de carência de 21 dias até que você remova o servidor de origem da rede. Após o período de cortesia de 21 dias, o servidor de origem será desativado. <br> **A verificação da função FSMO detectou uma condição em seu ambiente que está fora de conformidade com a política de licenciamento. O servidor de gerenciamento deve conter o controlador de domínio primário e o mestre de nomeação de domínio Active Directory funções. Mova as funções de Active Directory para o servidor de gerenciamento agora. Esse servidor será desligado automaticamente se o problema não for corrigido em 21 dias a partir do momento em que essa condição foi detectada pela primeira**vez.
+>  Se você migrar para o Windows Server Essentials, a seguinte mensagem de erro será adicionada ao log de eventos a cada dia durante o período de carência de 21 dias até que você remova o servidor de origem da rede. Após o período de cortesia de 21 dias, o servidor de origem será desativado. <br> **A verificação da função FSMO detectou uma condição em seu ambiente que está fora de conformidade com a política de licenciamento. O servidor de gerenciamento deve conter o controlador de domínio primário e o mestre de nomeação de domínio Active Directory funções. Mova as funções de Active Directory para o servidor de gerenciamento agora. Esse servidor será desligado automaticamente se o problema não for corrigido em 21 dias a partir do momento em que essa condição foi detectada pela primeira** vez.
 
 #### <a name="install-windows-server-essentials-or-windows-server-2012-r2-standard-on-the-destination-server"></a>Instalar o Windows Server Essentials ou o Windows Server 2012 R2 Standard no servidor de destino
 
@@ -74,7 +74,7 @@ Esta seção descreve como instalar o Windows Server Essentials e o Windows Serv
 
     3.  Digite **conexões** e pressione ENTER.
 
-    4.  Digite **conectar-se ao servidor** * \><* servername * \> * (em que<ServerName é o nome do servidor de destino) e pressione Enter.
+    4.  Digite **conectar-se ao servidor** *\><* servername *\>* (em que<ServerName é o nome do servidor de destino) e pressione Enter.
 
     5.  No prompt de comando, digite **q** e pressione ENTER.
 

@@ -1,18 +1,18 @@
 ---
-title: Extensão de diagnóstico de caminho de dados SDN no centro de administração do Windows
+title: Extensão de diagnóstico de caminho de dados SDN no Windows Admin Center
 description: Use este tópico para automatizar capturas de pacotes baseadas no monitor de pacotes com a extensão de diagnóstico de caminho de dados SDN no centro de administração do Windows
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
 ms.date: 11/12/2020
-ms.openlocfilehash: 9b1a247e0d07a4e44ba7640aa2e95180956ccee8
-ms.sourcegitcommit: 8808f871c8cf131f819ef5540286218bd425da96
+ms.openlocfilehash: 54a65147847a28a9820589521f7c94ea1c4b08cd
+ms.sourcegitcommit: b0c10eaffaa5de3eeff44c433580b41270c27d32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632385"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97826178"
 ---
-# <a name="sdn-data-path-diagnostics-extension-in-windows-admin-center"></a>Extensão de diagnóstico de caminho de dados SDN no centro de administração do Windows
+# <a name="sdn-data-path-diagnostics-extension-in-windows-admin-center"></a>Extensão de diagnóstico de caminho de dados SDN no Windows Admin Center
 
 >Aplica-se a: Windows Server (canal semestral), Windows Server 2019, Windows 10, Azure Stack HCI, Hub de Azure Stack, Azure
 
@@ -39,7 +39,7 @@ O cluster será adicionado à lista de conexões. Clique nele para iniciar o pai
 
 <center>
 
-:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adicionando uma conexão de HCI habilitada para SDN com o centro de administração do Windows" border="true":::
+:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adicionando uma conexão de HCI habilitada para SDN com o centro de administração do Windows" border="true" lightbox="media/add-sdn-enabled-hci-connection.png":::
 
 </center>
 
@@ -53,7 +53,7 @@ A primeira página lista todos os cenários de SDN classificados como cenários 
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="Monitoramento de SDN-página cenários de diagnóstico" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="Monitoramento de SDN-página cenários de diagnóstico" border="true" lightbox="media/sdn-data-path-diagnostics-main-page.png":::
 
 </center>
 
@@ -63,7 +63,7 @@ Depois de escolher o cenário, preencha uma lista de parâmetros obrigatórios e
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="Monitoramento de SDN – página condições de captura" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="Monitoramento de SDN – página condições de captura" border="true" lightbox="media/sdn-data-path-diagnostics-scenario-parameters.png":::
 
 </center>
 
@@ -73,7 +73,7 @@ Depois de iniciar a captura, a extensão mostrará uma lista de computadores em 
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="Iniciando a captura de pacotes" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="Iniciando a captura de pacotes" border="true" lightbox="media/sdn-data-path-diagnostics-loading-wheel2.png":::
 
 </center>
 
@@ -81,7 +81,7 @@ Depois de parar a captura, os logs de todos os computadores serão mostrados em 
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Log de diagnóstico de caminho de dados após parar a captura" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Log de diagnóstico de caminho de dados após parar a captura" border="true" lightbox="media/sdn-data-path-diagnostics-log.png":::
 
 </center>
 
@@ -102,7 +102,7 @@ As informações nesta página são particularmente valiosas se você tiver prob
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Página de detalhes de diagnóstico de caminho de dados" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Página de detalhes de diagnóstico de caminho de dados" border="true" lightbox="media/sdn-data-path-diagnostics-details-page.png":::
 
 </center>
 
@@ -110,7 +110,7 @@ Selecione um salto para exibir mais detalhes. Em cenários de encapsulamento e N
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="exibindo detalhes sobre um salto específico" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="exibindo detalhes sobre um salto específico" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane1.png":::
 
 </center>
 
@@ -118,7 +118,7 @@ Role para baixo para exibir detalhes de pacotes brutos:
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="exibindo detalhes de pacotes brutos sobre um salto específico" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="exibindo detalhes de pacotes brutos sobre um salto específico" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png":::
 
 </center>
 
@@ -132,7 +132,7 @@ Os filtros de exibição permitem filtrar o log depois de capturar os pacotes. P
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtrando logs com filtros de exibição" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtrando logs com filtros de exibição" border="true" lightbox="media/sdn-data-path-diagnostics-display-filters.png":::
 
 </center>
 
@@ -147,6 +147,6 @@ O botão salvar permite que você salve o log em seu computador local para anál
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="Salvando logs localmente" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="Salvando logs localmente" border="true" lightbox="media/sdn-data-path-diagnostics-save.png":::
 
 </center>

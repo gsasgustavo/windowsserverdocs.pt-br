@@ -1,18 +1,18 @@
 ---
 title: Executar as práticas recomendadas do Windows Server Essentials Analyzer6
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como executar o BPA (Windows Server Essentials Analisador de Práticas Recomendadas) no servidor de destino.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 00addf78-8999-4c8e-8ac4-4ebdde00c5a3
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: fdd0dd56c763453c1d14175a5d52845ba3e28ad4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d132d5a69471a68b16b4f024496745b13cba2889
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625526"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810563"
 ---
 # <a name="run-the-windows-server-essentials-best-practices-analyzer6"></a>Executar as práticas recomendadas do Windows Server Essentials Analyzer6
 

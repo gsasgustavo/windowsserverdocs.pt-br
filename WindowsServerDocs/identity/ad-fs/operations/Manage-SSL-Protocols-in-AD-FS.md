@@ -1,17 +1,17 @@
 ---
 title: Gerenciando protocolos SSL/TLS e conjuntos de codificação para AD FS
-description: Perguntas frequentes sobre o AD FS 2016
+description: Saiba como desabilitar e habilitar determinados protocolos TLS/SSL e conjuntos de codificação usados pelo AD FS.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b38f61dc5b505ac135b0f6ac5f67544b4897252e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 43c5cbda88f02792a4c0a8f91f84909a3c303c2b
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949840"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811443"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Gerenciando protocolos SSL/TLS e conjuntos de codificação para AD FS
 A documentação a seguir fornece informações sobre como desabilitar e habilitar determinados protocolos TLS/SSL e conjuntos de codificação que são usados pelo AD FS
@@ -40,7 +40,7 @@ AD FS usa Schannel.dll para executar suas interações de comunicações seguras
 
 No dia e na idade de hoje, a proteção dos servidores e a remoção de pacotes de criptografia antigos ou fracos estão se tornando uma prioridade importante para muitas organizações.  Os pacotes de software estão disponíveis para testar seus servidores e fornecer informações detalhadas sobre esses protocolos e conjuntos de pacotes.  Para permanecer em conformidade ou obter classificações seguras, remover ou desabilitar protocolos mais fracos ou pacotes de codificação se tornou um necessário.  O restante deste documento fornecerá orientações sobre como habilitar ou desabilitar determinados protocolos e conjuntos de codificação.
 
-As chaves do registro abaixo estão localizadas no mesmo local: HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use o regedit ou o PowerShell para habilitar ou desabilitar esses protocolos e conjuntos de codificação.
+As chaves do registro abaixo estão localizadas no mesmo local: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use o regedit ou o PowerShell para habilitar ou desabilitar esses protocolos e conjuntos de codificação.
 
 ![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
@@ -48,16 +48,16 @@ As chaves do registro abaixo estão localizadas no mesmo local: HKEY_LOCAL_MACHI
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o SSL 2,0.
 
 ### <a name="enable-ssl-20"></a>Habilitar SSL 2,0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
 
 ### <a name="disable-ssl-20"></a>Desabilitar SSL 2,0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
 
 ### <a name="using-powershell-to-disable-ssl-20"></a>Usando o PowerShell para desabilitar o SSL 2,0
 
@@ -80,16 +80,16 @@ Write-Host 'SSL 2.0 has been disabled.'
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o SSL 3,0.
 
 ### <a name="enable-ssl-30"></a>Habilitar o SSL 3.0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
 
 ### <a name="disable-ssl-30"></a>Desabilitar SSL 3.0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
 
 ### <a name="using-powershell-to-disable-ssl-30"></a>Usando o PowerShell para desabilitar o SSL 3,0
 
@@ -117,16 +117,16 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 
 ### <a name="enable-tls-10"></a>Habilitar TLS 1,0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "DisabledByDefault" = DWORD: 00000000
 
 ### <a name="disable-tls-10"></a>Desabilitar o TLS 1.0
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ servidor] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ cliente] "DisabledByDefault" = DWORD: 00000001
 
 ### <a name="using-powershell-to-disable-tls-10"></a>Usando o PowerShell para desabilitar o TLS 1,0
 
@@ -150,16 +150,16 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o TLS 1,1.
 
 ### <a name="enable-tls-11"></a>Habilitar TLS 1,1
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "DisabledByDefault" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "DisabledByDefault" = DWORD: 00000000
 
 ### <a name="disable-tls-11"></a>Desabilitar TLS 1,1
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "DisabledByDefault" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ servidor] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ cliente] "DisabledByDefault" = DWORD: 00000001
 
 ### <a name="using-powershell-to-disable-tls-11"></a>Usando o PowerShell para desabilitar o TLS 1,1
 
@@ -215,7 +215,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o RC4.  As chaves do registro do conjunto de codificação estão localizadas aqui:
 
-- HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
 ![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
 
@@ -223,15 +223,15 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 ### <a name="enable-rc4"></a>Habilitar RC4
 
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = DWORD: 00000001
 
 ### <a name="disable-rc4"></a>Desabilitar RC4
 
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Habilitado" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Habilitado" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Habilitado" = DWORD: 00000000
 
 ### <a name="using-powershell"></a>Usando o PowerShell
 
@@ -248,7 +248,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 ## <a name="enabling-or-disabling-additional-cipher-suites"></a>Habilitando ou desabilitando conjuntos de codificação adicionais
 
-Você pode desabilitar determinadas codificações específicas removendo-as de HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002
+Você pode desabilitar determinadas codificações específicas removendo-as da HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002
 
 ![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
@@ -260,14 +260,14 @@ Para obter uma lista completa de pacotes de criptografia com suporte, consulte [
 Os aplicativos .NET Framework 3.5/4.0/4.5. x podem alternar o protocolo padrão para TLS 1,2 habilitando a chave do registro SchUseStrongCrypto.  Essa chave do registro forçará os aplicativos .NET a usarem o TLS 1,2.
 
 > [!IMPORTANT]
-> Para AD FS no Windows Server 2016 e no Windows Server 2012 R2, você precisa usar a chave .NET Framework 4.0/4.5. x: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . NETFramework\v4.0.30319
+> Para AD FS no Windows Server 2016 e no Windows Server 2012 R2, você precisa usar a chave .NET Framework 4.0/4.5. x: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ . NETFramework\v4.0.30319
 
 
 Para o .NET Framework 3,5, use a seguinte chave do registro:
 
-[HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft \\ . NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\ . NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
 
-Para o .NET Framework 4.0/4.5. x, use a seguinte chave do registro: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
+Para o .NET Framework 4.0/4.5. x, use a seguinte chave do registro: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ . NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
 
 ![Autenticação forte](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 

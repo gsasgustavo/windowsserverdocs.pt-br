@@ -1,18 +1,18 @@
 ---
 title: Visão geral do Painel no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba mais sobre o painel administrativo, que simplifica as tarefas que você executa para gerenciar a rede e o servidor do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 50f610bec8573916edffd3efb5e551a45fc6e72a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4c9a5464d2a33d0116b38befd5a572407cac5b3a
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625954"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811153"
 ---
 # <a name="overview-of-the-dashboard-in-windows-server-essentials"></a>Visão geral do Painel no Windows Server Essentials
 
@@ -115,7 +115,7 @@ ms.locfileid: "89625954"
 
     -   Na área de trabalho, clique duas vezes em **Painel**.
 
-    -   No painel **Pesquisa**, digite **dashboard** e clique em**Painel** nos resultados da pesquisa.
+    -   No painel **Pesquisa**, digite **dashboard** e clique em **Painel** nos resultados da pesquisa.
 
 ###  <a name="access-the-dashboard-from-a-computer-that-is-connected-to-the-network"></a><a name="BKMK_Network"></a> Acessar o painel de um computador que está conectado à rede
  No Windows Server Essentials, depois de ingressar um computador à rede, os administradores podem usar a Barra Inicial para acessar o Painel do computador.
@@ -144,7 +144,7 @@ ms.locfileid: "89625954"
 
 3.  Digite seu nome de usuário e senha para entrar no site de Acesso via Web remoto.
 
-4.  Na seção **computadores** da**Home** Page do acesso via Web remoto; Localize o servidor e clique em **conectar**.
+4.  Na seção **computadores** da **Home** Page do acesso via Web remoto; Localize o servidor e clique em **conectar**.
 
      Uma conexão remota com o Painel é aberta.
 

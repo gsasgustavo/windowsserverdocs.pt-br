@@ -1,18 +1,18 @@
 ---
 title: Gerenciar mídia digital no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como o Windows Server Essentials possibilita que computadores em rede e dispositivos de mídia digital reproduzam mídia armazenada no servidor.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 77246642e7f011768742a30ed517d63b12c47ee4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ac159f49903ba2c15007c4c93fb1d146b457fa49
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624939"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810023"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Gerenciar mídia digital no Windows Server Essentials
 
@@ -48,7 +48,7 @@ Mídia digital se refere ao áudio, vídeo e conteúdo de fotos que foram compac
 
 -   **Assistir vídeos**. O servidor pode ser usado para armazenar e transmitir grandes coleções de vídeos e TV gravada mostrada aos computadores ou outra reprodução de dispositivos na sua rede. Você pode transmitir vídeos para um Xbox 360 ou para um computador usando o Windows Media Player.
 
--   **Reproduzir música**. Quando você ativa o compartilhamento de mídia para a pasta compartilhada\**música**, você poderá acessar seus arquivos de música de dispositivos que oferecem suporte a conexão de mídia do Windows. Não é necessário habilitar ou configurar as contas de usuário para transmitir da pasta compartilhad**música** depois que o compartilhamento estiver ativado.
+-   **Reproduzir música**. Quando você ativa o compartilhamento de mídia para a pasta compartilhada\**música**, você poderá acessar seus arquivos de música de dispositivos que oferecem suporte a conexão de mídia do Windows. Não é necessário habilitar ou configurar as contas de usuário para transmitir da pasta compartilhad **música** depois que o compartilhamento estiver ativado.
 
 -   **Exibir apresentações de fotos**. Você pode armazenar fotos digitais na pasta compartilhada **fotos** no servidor e acessá-las a partir de qualquer computador ou um Xbox 360 conectado a uma TV em casa ou no escritório. Você pode assistir a apresentações de fotos, transformando sua TV em um grande quadro de imagens.
 
@@ -112,12 +112,12 @@ Mídia digital se refere ao áudio, vídeo e conteúdo de fotos que foram compac
 
 3.  Para executar arquivos de mídia digital usando o console Xbox 360:
 
-    1.  Vá para **Meu Xbox**e selecione **biblioteca de vídeos**, **biblioteca de música**, ou **biblioteca de imagens**, dependendo do tipo de mídia que você deseja exibir ou executar.
+    1.  Vá para **Meu Xbox** e selecione **biblioteca de vídeos**, **biblioteca de música**, ou **biblioteca de imagens**, dependendo do tipo de mídia que você deseja exibir ou executar.
 
     2.  Selecione o nome do seu servidor.
 
         > [!NOTE]
-        >  Se o nome do seu servidor não estiver listado, selecione **computador**e clique em **Testar conexão**.
+        >  Se o nome do seu servidor não estiver listado, selecione **computador** e clique em **Testar conexão**.
 
     3.  Procurar a lista de arquivos e selecione o item que você deseja executar.
 
@@ -159,7 +159,7 @@ Mídia digital se refere ao áudio, vídeo e conteúdo de fotos que foram compac
 2. Vá para o site de Acesso Remoto via Web . Digite **https://<YourDomainName \> /Remote** na barra de endereços do navegador da Internet e pressione Enter.
 
    > [!NOTE]
-   >  *<YourDomainName \> * é um espaço reservado. Ele será um nome exclusivo para o seu servidor, portanto, o endereço que você digitar terá a seguinte aparência **https://contoso.com/remote** . Se você não souber o nome do seu domínio, peça ao administrador que escolheu o nome de domínio quando a função Acesso remoto estiver configurada no servidor. Para obter mais informações, veja [ativar o acesso remoto via Web](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).
+   >  *<YourDomainName \>* é um espaço reservado. Ele será um nome exclusivo para o seu servidor, portanto, o endereço que você digitar terá a seguinte aparência **https://contoso.com/remote** . Se você não souber o nome do seu domínio, peça ao administrador que escolheu o nome de domínio quando a função Acesso remoto estiver configurada no servidor. Para obter mais informações, veja [ativar o acesso remoto via Web](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).
 
 3. Sobre a acesso remoto via Web da página de entrada, digite o nome de conta de usuário e senha e, em seguida, clique na seta.
 

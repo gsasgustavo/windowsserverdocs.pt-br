@@ -1,18 +1,18 @@
 ---
 title: Restaurar um sistema completo de um backup de computador cliente existente
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como restaurar um sistema completo de um backup de computador cliente existente.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 6b93e0e31c592a11d44aca74029012a1b6229227
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7423af3846648e353b9dcfebe4644efe0f91a846
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622979"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811084"
 ---
 # <a name="restore-a-full-system-from-an-existing-client-computer-backup"></a>Restaurar um sistema completo de um backup de computador cliente existente
 
@@ -161,7 +161,7 @@ ms.locfileid: "89622979"
 
 3. Na janela **Assistente de Restauração Completa do Sistema**, escolha seu idioma preferencial e clique na seta.
 
-4. Escolha o **Formato de hora e moeda** adequado e o **Teclado ou método de entrada** para esse computador. Clique em **Continuar**.
+4. Escolha o **Formato de hora e moeda** adequado e o **Teclado ou método de entrada** para esse computador. Clique em **Continue**.
 
 5. Se os drivers estiverem ausentes, a mensagem o processo de restauração não poderá verificar se os drivers são exibidos. Clique em **Fechar** e na caixa de diálogo de boas-vindas, clique em **Carregar drivers**.
 
@@ -185,7 +185,7 @@ ms.locfileid: "89622979"
 
    3.  Se o servidor estiver localizado, a página **fazer logon no <\> nomedoservidor** será exibida.
 
-9. Na página **fazer logon no <nomedoservidor \> ** , digite * \><AdministratorAccountName* na caixa de texto **nome de usuário** e a senha da conta de administrador na caixa de texto **senha** e clique em **Avançar**.
+9. Na página **fazer logon no <nomedoservidor \>** , digite *\><AdministratorAccountName* na caixa de texto **nome de usuário** e a senha da conta de administrador na caixa de texto **senha** e clique em **Avançar**.
 
     > [!IMPORTANT]
     >  Você deve usar uma conta de administrador criada em inglês. Se não tiver uma, você deve criar uma nova conta de administrador. Para fazer isso, primeiro, abra a guia **Usuários** no painel do servidor, em seguida, defina o formato de idioma do teclado para inglês e execute a tarefa **Adicionar uma conta de usuário** para criar a conta de administrador. Em seguida, use a nova conta de administrador para continuar a restaurar o computador cliente.
@@ -238,7 +238,7 @@ ms.locfileid: "89622979"
           >  Se um computador cliente for baseado em Unified Extensible Firmware Interface (UEFI), você deverá usar a ferramenta **DiskPart** para inicializar o disco do sistema. Para fazer isso, abra uma janela Comando (pressione Ctrl+Alt+Shift por 5 segundos no ambiente WinPE), execute **diskpart.exe** e depois execute os seguintes comandos de diskpart:
           >
           > 1. **Disco de lista de> do DISKPART**
-          >    2. **DISKPART> selecionar disco #** *<disco \> *
+          >    2. **DISKPART> selecionar disco #** *<disco \>*
           >    3. **DISKPART&gt; clean**
           >    4. **DISKPART> convert gpt**
           >    5. **DISKPART> criar partição tamanho da EFI =** *100* (em que *100* é um tamanho de partição de exemplo em MB, deve ser o mesmo que a partição original)

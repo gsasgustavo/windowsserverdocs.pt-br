@@ -1,20 +1,20 @@
 ---
-title: Gerenciar Microsoft 365 no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+title: Gerenciar o Microsoft 365 no Windows Server Essentials
+description: Saiba como gerenciar seus serviços de Microsoft 365 e contas online junto com seus recursos locais no painel do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 71e8204c8b11f423871f890badffdfb96206feb8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 1df50d94d8ec118742d089c11afbc5fff17f9800
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623059"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811353"
 ---
-# <a name="manage-microsoft-365-in-windows-server-essentials"></a>Gerenciar Microsoft 365 no Windows Server Essentials
+# <a name="manage-microsoft-365-in-windows-server-essentials"></a>Gerenciar o Microsoft 365 no Windows Server Essentials
 
 >Aplica-se a: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
@@ -114,17 +114,17 @@ Ao integrar seu servidor do Windows Server Essentials com o Microsoft 365, você
 
 1. Entre no servidor como administrador e abra o painel do Windows Server Essentials.
 
-2. Na **Home** Page do, clique em **Serviços** (no Windows Server Essentials, clique em **email**), clique em **integrar com Microsoft 365**e, em seguida, clique em **Configurar a integração Microsoft 365**.
+2. Na **Home** Page do, clique em **Serviços** (no Windows Server Essentials, clique em **email**), clique em **integrar com Microsoft 365** e, em seguida, clique em **Configurar a integração Microsoft 365**.
 
     O assistente para integrar com Microsoft 365 é exibido.
 
 3. Na página **Começar**, execute uma das seguintes ações:
 
-   -   Se você não tiver uma assinatura para Microsoft 365, clique em **Avançar**e siga as instruções para assinar Microsoft 365 ou inscrever-se para uma assinatura de avaliação.
+   -   Se você não tiver uma assinatura para Microsoft 365, clique em **Avançar** e siga as instruções para assinar Microsoft 365 ou inscrever-se para uma assinatura de avaliação.
 
         Você precisará entrar no Microsoft 365 antes de retornar ao assistente. Mas você não precisa executar nenhuma das tarefas na seção **Iniciar aqui** do portal de Microsoft 365.
 
-   -   Se você já tiver uma assinatura para Microsoft 365 que deseja integrar ao servidor, selecione **já tenho uma assinatura para Microsoft 365**e clique em **Avançar**.
+   -   Se você já tiver uma assinatura para Microsoft 365 que deseja integrar ao servidor, selecione **já tenho uma assinatura para Microsoft 365** e clique em **Avançar**.
 
 4. Siga as instruções para concluir o assistente.
 
@@ -236,7 +236,7 @@ Ao integrar seu servidor do Windows Server Essentials com o Microsoft 365, você
 
 3.  Digite as credenciais da conta que você deseja usar para se conectar à sua assinatura do Microsoft 365 e clique em **Avançar**.
 
-4.  Clique em **Fechar**. O Painel é reiniciado.
+4.  Clique em **fechar** O Painel é reiniciado.
 
 ###  <a name="disable-microsoft-365-integration"></a><a name="BKMK_Disable"></a> Desabilitar integração de Microsoft 365
  Se você decidir que não deseja gerenciar seus serviços de Microsoft 365 e contas online no painel, você pode desabilitar a integração de Microsoft 365. Sua assinatura do Microsoft 365 permanece ativa e as alterações de configuração feitas a partir do painel permanecem em vigor. Por exemplo, você receberá email endereçado a um nome de domínio que você vinculou à sua assinatura do Microsoft 365. Você não perderá nenhum email e os controles que você definir para dispositivos móveis ainda serão usados no Exchange Online.

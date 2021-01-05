@@ -1,18 +1,18 @@
 ---
 title: Solucionar problemas referentes a erros de backup restauração do computador no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como solucionar problemas de backups de computadores, incluindo problemas de configuração de backup, backups incompletos ou malsucedidos, alertas de integridade de backup e outros problemas.
 ms.date: 06/25/2013
 ms.topic: article
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: ce2d6d51f230d4a06f2e1b9acfd378d61bfaf863
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 48adcdf82d6b8963e754c154b726e93d13e278ca
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625105"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810143"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Solucionar problemas referentes a erros de backup restauração do computador no Windows Server Essentials
 

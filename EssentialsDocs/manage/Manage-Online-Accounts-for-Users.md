@@ -1,18 +1,18 @@
 ---
 title: Gerenciar contas Online para usuários do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como gerenciar suas contas online junto com as contas de usuário do painel do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 3506f83ae2d6b5fc3d49376193cbf3c59e36fb65
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 684afa6d17e4be5282e1596244689a501ffaf5be
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89623041"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811343"
 ---
 # <a name="manage-online-accounts-for-windows-server-essentials-users"></a>Gerenciar contas Online para usuários do Windows Server Essentials
 
@@ -25,7 +25,7 @@ Ao integrar seu servidor do Windows Server Essentials com o Microsoft 365, você
 >  Para gerenciar suas contas do Microsoft Online Services no Windows Server Essentials, você deve integrar seu servidor com Microsoft 365. Para obter instruções, consulte [gerenciar Microsoft 365](Manage-Office-365-in-Windows-Server-Essentials.md).
 
 > [!IMPORTANT]
->  Se você estiver gerenciando contas online no Windows Server Essentials, você está acostumado a ver as contas do Microsoft Online Services chamadas de *contas de Microsoft 365*. No painel do Windows Server Essentials, os rótulos foram alterados para *contas do Microsoft Online Services*ou *contas online da Microsoft* para serem curtos. As contas e os procedimentos são iguais, somente os rótulos foram alterados. A maioria dos procedimentos neste tópico usam o termo *conta online*.
+>  Se você estiver gerenciando contas online no Windows Server Essentials, você está acostumado a ver as contas do Microsoft Online Services chamadas de *contas de Microsoft 365*. No painel do Windows Server Essentials, os rótulos foram alterados para *contas do Microsoft Online Services* ou *contas online da Microsoft* para serem curtos. As contas e os procedimentos são iguais, somente os rótulos foram alterados. A maioria dos procedimentos neste tópico usam o termo *conta online*.
 
 ## <a name="in-this-topic"></a>Neste tópico
 
@@ -231,7 +231,7 @@ Ao integrar seu servidor do Windows Server Essentials com o Microsoft 365, você
 
 ###  <a name="to-add-a-distribution-group"></a><a name="BKMK_PROCEDURE_AddDistGroup"></a> Para adicionar um grupo de distribuição
 
-1.  No painel do Windows Server Essentials, clique em **usuários**e, em seguida, clique na guia **grupos de distribuição** .
+1.  No painel do Windows Server Essentials, clique em **usuários** e, em seguida, clique na guia **grupos de distribuição** .
 
 2.  Em **Tarefas do Grupo de Distribuição**, clique em **Adicionar um grupo de distribuição**.
 

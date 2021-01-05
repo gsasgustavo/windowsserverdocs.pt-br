@@ -1,18 +1,18 @@
 ---
 title: Solucionar problemas de erros de coletores de log do Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como solucionar problemas encontrados ao executar o coletor de logs.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 6f8318b6a6b711c6041a9227cd2d207470233dab
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0da27272f3daf5159e5f6ac868788382b1bf11a7
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625136"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810216"
 ---
 # <a name="troubleshoot-windows-server-essentials-log-collector-errors"></a>Solucionar problemas de erros de coletores de log do Windows Server Essentials
 
@@ -45,7 +45,7 @@ Quando executar o coletor de Log, você pode encontrar um dos seguintes erros. P
 ###  <a name="you-do-not-have-permission-to-save-the-log-files-to-the-selected-folder"></a><a name="BKMK_YouDoNotHavePermission"></a> Você não tem permissão para salvar os arquivos de log na pasta selecionada
  **Cause:** você pode não ter permissão de gravação para a pasta selecionada para salvar os arquivos de log.
 
- **Solução:** Se você estiver usando o caminho padrão para salvar arquivos de log, verifique se você tem permissão de gravação para a pasta compartilhada ** \\ \\<ServerName \> \Logs**. Se estiver armazenando logs em um computador da rede, certifique-se de que você tenha permissão de gravação para a pasta que selecionada para salvar os arquivos de log.
+ **Solução:** Se você estiver usando o caminho padrão para salvar arquivos de log, verifique se você tem permissão de gravação para a pasta compartilhada **\\ \\<ServerName \> \Logs**. Se estiver armazenando logs em um computador da rede, certifique-se de que você tenha permissão de gravação para a pasta que selecionada para salvar os arquivos de log.
 
 ###  <a name="the-computer-is-not-configured-properly-to-collect-the-log-files"></a><a name="BKMK_TheComputerIsNotConfiguredProperly"></a> O computador não está configurado corretamente para coletar os arquivos de log
  **Causa:** o computador não foi configurado corretamente para o coletor de log.

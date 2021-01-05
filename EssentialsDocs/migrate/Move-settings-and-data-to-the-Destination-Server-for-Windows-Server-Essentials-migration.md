@@ -1,18 +1,18 @@
 ---
 title: Mover configurações e dados para o servidor de destino para migração para o Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como mover as configurações e os dados para o servidor de destino para a migração do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 4a37d8e39dde95a143c15a5573be0deb0291d827
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 1b9ee5e4c52b812ab05a251257625772c361c1e8
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625651"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810674"
 ---
 # <a name="move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Mover configurações e dados para o servidor de destino para migração para o Windows Server Essentials
 
@@ -43,7 +43,7 @@ Mova as configurações e os dados para o servidor de destino da seguinte maneir
 
  `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
- Sendo que:
+ Em que:
  - \<SourceServerName\> é o nome do servidor de origem
  - \<SharedSourceFolderName\> é o nome da pasta compartilhada no servidor de origem
  - \<DestinationServerName\> é o nome do servidor de destino,

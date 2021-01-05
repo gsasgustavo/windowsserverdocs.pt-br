@@ -1,18 +1,18 @@
 ---
 title: Gerenciar Pastas do Servidor no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como gerenciar o acesso a qualquer pasta de servidor no servidor usando as tarefas na guia pastas de servidor do painel.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: e901038a2a4e294184241b4d35797347a5910026
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 09e64ad045216adf2ad59ad33d7445e5040863c7
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626122"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811273"
 ---
 # <a name="manage-server-folders-in-windows-server-essentials"></a>Gerenciar Pastas do Servidor no Windows Server Essentials
 
@@ -114,9 +114,9 @@ ms.locfileid: "89626122"
 
 3.  Na exibição de lista, selecione a pasta do servidor cujas propriedades você deseja exibir ou modificar.
 
-4.  No painel ** \> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
+4.  No painel **\> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
 
-5.  Nas ** \> Propriedades<nome_da_pasta**, clique **em compartilhamento**, selecione **ocultar esta pasta de acesso via Web remoto e aplicativos de serviço Web**e, em seguida, clique em **aplicar**.
+5.  Nas **\> Propriedades<nome_da_pasta**, clique **em compartilhamento**, selecione **ocultar esta pasta de acesso via Web remoto e aplicativos de serviço Web** e, em seguida, clique em **aplicar**.
 
 ###  <a name="set-permissions-to-server-folders"></a><a name="BKMK_Perms"></a> Definir permissões para pastas do servidor
  Para quaisquer pastas de servidor adicionais que adicionar ao servidor usando o Painel, você pode escolher três configurações diferentes de acesso:
@@ -147,9 +147,9 @@ ms.locfileid: "89626122"
 
 3.  Na exibição de lista, selecione a pasta do servidor cujas propriedades você deseja exibir ou modificar.
 
-4.  No painel ** \> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
+4.  No painel **\> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
 
-5.  Nas ** \> Propriedades<nome_da_pasta**, clique em **compartilhamento**e selecione o nível de acesso do usuário apropriado para as contas de usuário listadas e clique em **aplicar**.
+5.  Nas **\> Propriedades<nome_da_pasta**, clique em **compartilhamento** e selecione o nível de acesso do usuário apropriado para as contas de usuário listadas e clique em **aplicar**.
 
 > [!NOTE]
 >  Por padrão, quando você adiciona uma conta de usuário à rede, uma subpasta é criada para o usuário na pasta **Usuários** no servidor. A subpasta pode ser acessada a partir de um computador da rede, somente pelo usuário ou administrador. As permissões são definidas para cada subpasta em **Usuários**, portanto, não há permissões de acesso geral para a pasta de nível superior **Usuários**.
@@ -171,9 +171,9 @@ ms.locfileid: "89626122"
 
 3.  Na exibição de lista, selecione a pasta do servidor cujas propriedades você deseja exibir ou modificar.
 
-4.  No painel ** \> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
+4.  No painel **\> tarefas do<ServerFolder** , clique em **Exibir Propriedades da pasta**.
 
-5.  Nas ** \> Propriedades<nome_da_pasta**, na guia **geral** , exiba ou modifique o nome e a descrição da pasta do servidor.
+5.  Nas **\> Propriedades<nome_da_pasta**, na guia **geral** , exiba ou modifique o nome e a descrição da pasta do servidor.
 
     > [!NOTE]
     >  No Windows Server Essentials e no Windows Server 2012 R2 com a função de experiência do Windows Server Essentials instalada, você também pode modificar a cota da pasta que fornece uma mensagem de aviso quando uma pasta do servidor atinge seu tamanho especificado.

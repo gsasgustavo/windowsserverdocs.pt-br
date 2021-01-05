@@ -1,18 +1,18 @@
 ---
 title: Migrar do Windows Server Essentials para um novo hardware
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como migrar um domínio existente do Windows Server 2012 Essentials para o Windows Server Essentials em um novo hardware e, em seguida, migre as configurações e os dados.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 704fc7fa97c949080104846011cf07e8e28da73a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d95100cdfa08fa1aa672be8c9978ac230573a46c
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625866"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810893"
 ---
 # <a name="migrate-windows-server-essentials-to-new-hardware"></a>Migrar do Windows Server Essentials para um novo hardware
 

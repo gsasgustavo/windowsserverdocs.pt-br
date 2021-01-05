@@ -1,18 +1,18 @@
 ---
 title: Gerenciar VPN no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como usar conexões VPN para acessar recursos do servidor.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cc2b264a-b9a8-4114-9f7b-8604f77096e5
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: a4e2d87787c3c7e9ebcb8dc216de725f7cb13a1f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: b4518d43b2b3a24f9df15e122c328c1874817092
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626004"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811203"
 ---
 # <a name="manage-vpn-in-windows-server-essentials"></a>Gerenciar VPN no Windows Server Essentials
 
@@ -54,7 +54,7 @@ ms.locfileid: "89626004"
 
 3.  Na lista de contas de usuário, selecione a conta de usuário que você deseja conceder permissões para acessar a área de trabalho remotamente.
 
-4.  No painel ** \> tarefas da conta de usuário<** , clique em **Propriedades**.
+4.  No painel **\> tarefas da conta de usuário<** , clique em **Propriedades**.
 
 5.  Na **<\> Propriedades da conta de usuário**, clique na guia **acesso em qualquer lugar** .
 

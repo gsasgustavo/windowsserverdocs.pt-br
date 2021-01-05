@@ -1,18 +1,18 @@
 ---
 title: 'Etapa 6: Rebaixar e remover o servidor de origem da nova rede do Windows Server Essentials'
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como rebaixar e remover o servidor de origem da nova rede do Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 6c4410cb94f79be291984a92a2b788e3ae984a4f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d842f7cf0b7378254e43fec7b6ed2b7e80b5b9c1
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625424"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97810413"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>Etapa 6: Rebaixar e remover o servidor de origem da nova rede do Windows Server Essentials
 

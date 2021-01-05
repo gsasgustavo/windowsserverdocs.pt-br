@@ -1,18 +1,18 @@
 ---
-title: Extensão de monitoramento de pacotes no centro de administração do Windows
+title: Extensão de monitoramento de pacotes no Windows Admin Center
 description: Use esta página para operar e consumir o monitor de pacotes (Pktmon) por meio do centro de administração do Windows.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
 ms.date: 11/12/2020
-ms.openlocfilehash: 85d204d1731ebcf21c55364f48ebe0e7b6dc157c
-ms.sourcegitcommit: 8808f871c8cf131f819ef5540286218bd425da96
+ms.openlocfilehash: eabcda1c535086472fda55136b14073ce6181d36
+ms.sourcegitcommit: b0c10eaffaa5de3eeff44c433580b41270c27d32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632386"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97826189"
 ---
-# <a name="packet-monitoring-extension-in-windows-admin-center"></a>Extensão de monitoramento de pacotes no centro de administração do Windows
+# <a name="packet-monitoring-extension-in-windows-admin-center"></a>Extensão de monitoramento de pacotes no Windows Admin Center
 
 >Aplica-se a: Windows Server (canal semestral), Windows Server 2019, Windows 10, Azure Stack HCI, Hub de Azure Stack, Azure
 
@@ -47,7 +47,7 @@ Para obter a ferramenta, navegue até o servidor que você criou na etapa anteri
 
    Se você quiser capturar o tráfego que passa por apenas componentes específicos, a primeira etapa do painel filtros mostra o layout da pilha de rede para que você possa selecionar os componentes pelos quais filtrar. Esse também é um ótimo lugar para analisar e entender o layout da pilha de rede de seu computador.
 
-   :::image type="content" source="media/filtering-by-networking-stack-components.png" alt-text="Exemplo de filtragem por componentes de pilha de rede" border="true":::
+   :::image type="content" source="media/filtering-by-networking-stack-components.png" alt-text="Exemplo de filtragem por componentes de pilha de rede" border="true" lightbox="media/filtering-by-networking-stack-components.png":::
 
 2. Filtrando por parâmetros de pacote
 
@@ -57,17 +57,17 @@ Para obter a ferramenta, navegue até o servidor que você criou na etapa anteri
    - Para filtrar ainda mais os pacotes TCP, é possível fornecer uma lista opcional de sinalizadores TCP para correspondência. Os sinalizadores com suporte são FIN, SYN, RST, PSH, ACK, URG, ECE e CWR.
    - Se a caixa de **encapsulamento** estiver marcada, a ferramenta aplicará o filtro aos pacotes internos encapsulados, além do pacote externo. Os métodos de encapsulamento com suporte são VXLAN, GRE, NVGRE e IP-in-IP. A porta VXLAN personalizada é opcional e o padrão é 4789.
 
-   :::image type="content" source="media/filtering-by-packet-parameters.png" alt-text="Exemplo de filtragem por parâmetros de pacote" border="true":::
+   :::image type="content" source="media/filtering-by-packet-parameters.png" alt-text="Exemplo de filtragem por parâmetros de pacote" border="true" lightbox="media/filtering-by-packet-parameters.png":::
 
 3. Filtrando por status de fluxo de pacote
 
    O monitor de pacotes capturará o fluxo e os pacotes descartados por padrão. Para capturar somente em pacotes descartados, selecione **pacotes descartados**.
 
-   :::image type="content" source="media/filtering-by-packet-flow-status.png" alt-text="Exemplo de filtragem por status de fluxo de pacotes" border="true":::
+   :::image type="content" source="media/filtering-by-packet-flow-status.png" alt-text="Exemplo de filtragem por status de fluxo de pacotes" border="true" lightbox="media/filtering-by-packet-flow-status.png":::
 
    Posteriormente, um resumo de todas as condições de filtro selecionadas será exibido para revisão. Você poderá recuperar essa exibição depois de iniciar a captura por meio do botão **capturar condições** .
 
-   :::image type="content" source="media/filters-review.png" alt-text="Como capturar somente pacotes descartados" border="true":::
+   :::image type="content" source="media/filters-review.png" alt-text="Como capturar somente pacotes descartados" border="true" lightbox="media/filters-review.png":::
 
 ## <a name="capture-log"></a>Log de captura
 
@@ -79,7 +79,7 @@ Os resultados são exibidos em uma tabela que mostra os parâmetros principais d
    - Você pode pesquisar um valor em qualquer coluna no log usando a barra de pesquisa.
    - Você pode reiniciar a captura com os mesmos filtros escolhidos usando o botão **reiniciar** .
 
-   :::image type="content" source="media/capture-log-result.png" alt-text="Exemplo de tabela de resultados do log de captura" border="true":::
+   :::image type="content" source="media/capture-log-result.png" alt-text="Exemplo de tabela de resultados do log de captura" border="true" lightbox="media/capture-log-result.png":::
 
 ## <a name="details-page"></a>Página de detalhes
 
@@ -89,7 +89,7 @@ Esta página apresenta um instantâneo do pacote conforme ele flui por cada comp
    - Quando um instantâneo é selecionado, mais detalhes sobre esse instantâneo específico são mostrados, incluindo os cabeçalhos de pacotes brutos.
    - Todos os pacotes eliminados têm um valor "verdadeiro" na guia **descartada** , um motivo de eliminação e são exibidos em texto vermelho para facilitar o Pinpoint.
 
-   :::image type="content" source="media/details-page.png" alt-text="Exemplo de página de detalhes mostrando instantâneos de pacote" border="true":::
+   :::image type="content" source="media/details-page.png" alt-text="Exemplo de página de detalhes mostrando instantâneos de pacote" border="true" lightbox="media/details-page.png":::
 
 ## <a name="display-filters"></a>Filtros de exibição
 
@@ -99,7 +99,7 @@ Os filtros de exibição permitem filtrar o log depois de capturar os pacotes. P
    - Os filtros de exibição podem ser excluídos e editados depois de serem aplicados para alterar a exibição do log.
    - Os filtros de exibição são revertidos nos logs salvos.
 
-   :::image type="content" source="media/display-filters.png" alt-text="Tela de filtros de exibição" border="true":::
+   :::image type="content" source="media/display-filters.png" alt-text="Tela de filtros de exibição" border="true" lightbox="media/display-filters.png":::
 
 ## <a name="save-feature"></a>Salvar recurso
 
@@ -111,10 +111,10 @@ O botão salvar permite que você salve o log no computador local, no computador
       - Pcapng fomat, que pode ser analisado usando ferramentas como o Wireshark.
          - A maioria dos metadados do monitor de pacotes será perdida durante essa conversão. [Confira esta página](pktmon-pcapng-support.md) para obter mais informações.
 
-   :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Salvando uma cópia local da captura" border="true":::
+   :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Salvando uma cópia local da captura" border="true" lightbox="media/packet-monitoring-save-feature.png":::
 
 ## <a name="open-feature"></a>Abrir recurso
 
 O recurso abrir permitirá que você reabra qualquer um dos cinco últimos logs salvos para analisar por meio da ferramenta.
 
-   :::image type="content" source="media/open.png" alt-text="Abrindo um log recente" border="true":::
+   :::image type="content" source="media/open.png" alt-text="Abrindo um log recente" border="true" lightbox="media/open.png":::

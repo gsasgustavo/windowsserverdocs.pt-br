@@ -1,18 +1,18 @@
 ---
 title: Gerenciar o armazenamento de servidor no Windows Server Essentials
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como gerenciar todo o armazenamento do servidor (incluindo discos rígidos e espaços de armazenamento) nas páginas de discos rígidos na guia armazenamento do painel.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 1836682e-c7bb-4dd5-a2b5-6ff032693574
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 2cd8ac4e93027e3ab88042d0bca465f3fea67f26
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4f9f1c42996eb0582d9c2eb14bc88012e121e862
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626114"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811253"
 ---
 # <a name="manage-server-storage-in-windows-server-essentials"></a>Gerenciar o armazenamento de servidor no Windows Server Essentials
 
@@ -57,7 +57,7 @@ ms.locfileid: "89626114"
 
 |Nome da Tarefa|Descrição|
 |---------------|-----------------|
-|**Exibir as propriedades do disco rígido**|Abre a página de**Propriedades** do _disco rígido_. Essa tarefa é exibida quando o disco rígido é selecionado. A guia **Geral** da página Propriedades do *HardDriveName* inclui as seguintes tarefas adicionais:<br /><br /> -   **Limpeza da unidade**: permite que você limpe arquivos não utilizados no disco rígido (essa tarefa só está disponível no Windows Server Essentials).<br />-   **Verificar e reparar**: verifica os erros do sistema de arquivos no disco rígido e tenta reparar os erros detectados automaticamente.<br /><br /> A guia **Cópias de Sombra** da página Propriedades do _HardDriveName_**HardDriveName** permite habilitar cópias de sombra. Essa guia também exibe a próxima vez que as cópias de sombra estão agendadas para serem executadas.|
+|**Exibir as propriedades do disco rígido**|Abre a página de **Propriedades** do _disco rígido_. Essa tarefa é exibida quando o disco rígido é selecionado. A guia **Geral** da página Propriedades do *HardDriveName* inclui as seguintes tarefas adicionais:<br /><br /> -   **Limpeza da unidade**: permite que você limpe arquivos não utilizados no disco rígido (essa tarefa só está disponível no Windows Server Essentials).<br />-   **Verificar e reparar**: verifica os erros do sistema de arquivos no disco rígido e tenta reparar os erros detectados automaticamente.<br /><br /> A guia **Cópias de Sombra** da página Propriedades do _HardDriveName_**HardDriveName** permite habilitar cópias de sombra. Essa guia também exibe a próxima vez que as cópias de sombra estão agendadas para serem executadas.|
 |**Gerenciar espaços de armazenamento**|**Observação:** Para o Windows Server Essentials, essa tarefa só é exibida quando há um espaço de armazenamento existente.<br /><br /> Abre o painel de controle **Espaços de Armazenamento**, do qual você pode criar e gerenciar pools de armazenamento e espaços de armazenamento.|
 |**Criar um espaço de armazenamento**|Abre o assistente Criar um Espaço de Armazenamento, que permite que você use um ou mais discos rígidos para aumentar a capacidade de um pool de armazenamento.|
 |**Aumentar capacidade do pool de armazenamento**|**Observação:** Essa tarefa só ficará visível se o disco rígido selecionado estiver localizado em um espaço de armazenamento.<br /><br /> Abre o assistente Aumentar a Capacidade de um Pool de Armazenamento, que permite que você use um ou mais discos rígidos para aumentar a capacidade de um pool de armazenamento.|
@@ -89,7 +89,7 @@ ms.locfileid: "89626114"
 
 3.  Na seção **Discos rígidos**, selecione a letra da unidade que foi atribuída ao disco rígido recém-adicionado e, no painel de tarefas, clique em **Exibir as propriedades do disco rígido**.
 
-4.  Em ** \> propriedades de<DriveLetter**, na guia **geral** , clique em **limpeza da unidade**.
+4.  Em **\> propriedades de<DriveLetter**, na guia **geral** , clique em **limpeza da unidade**.
 
 ##  <a name="perform-checks-and-repairs-on-hard-drives"></a><a name="BKMK_Check"></a> Executar verificações e reparos em discos rígidos
  O processo de verificação e reparo do disco rígido verifica a integridade do sistema de arquivos armazenado no discos rígidos. Ele executa um processo **chkdsk** no volume em que os arquivos de backup estão armazenados. O alerta de problema a seguir pode ser resolvido executando uma verificação e reparo nos discos rígidos:

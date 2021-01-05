@@ -1,18 +1,18 @@
 ---
 title: Configurar ou personalizar o backup do servidor
-description: Descreve como usar o Windows Server Essentials
+description: Saiba como proteger seu servidor e seus dados automaticamente agendando backups diários.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
-ms.openlocfilehash: 464b30d610dcf25dc53c12bf38f8ec3da8691e2a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a6f31b4e9db5ce3aa2e74f42441e0de0d863a43c
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622946"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811063"
 ---
 # <a name="set-up-or-customize-server-backup"></a>Configurar ou personalizar o backup do servidor
 
