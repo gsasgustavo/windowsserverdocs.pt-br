@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: a7921ba40f4fcc760aad1c281a0c29ba0abb6954
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 2fe1a6a0e3b2d9e3c64e3e7553221a027212636d
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039324"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879815"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>Solução de problemas usando a ferramenta de diagnóstico de malha protegida
 
@@ -106,7 +106,7 @@ Get-HgsTrace -RunDiagnostics -Target $server
 ```
 Este exemplo irá gerar um prompt para coletar as credenciais de usuário remoto e, em seguida, o diagnóstico será executado usando o host remoto em `hgs-01.secure.contoso.com` para concluir a coleta de rastreamento.  Os rastreamentos resultantes são baixados para o localhost e, em seguida, diagnosticados.  Os resultados do diagnóstico são apresentados da mesma forma que ao executar o [diagnóstico local](#local-diagnosis).  Da mesma forma, não é necessário especificar uma função, pois ela pode ser inferida com base nos módulos do Windows PowerShell instalados no sistema remoto.
 
-O diagnóstico remoto utiliza a comunicação remota do Windows PowerShell para todos os acessos ao host remoto.  Portanto, é um pré-requisito que o destino de rastreamento tem a comunicação remota do Windows PowerShell habilitada (consulte [habilitar PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)) e que o localhost está configurado corretamente para iniciar conexões com o destino.
+O diagnóstico remoto utiliza a comunicação remota do Windows PowerShell para todos os acessos ao host remoto.  Portanto, é um pré-requisito que o destino de rastreamento tem a comunicação remota do Windows PowerShell habilitada (consulte [habilitar PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true)) e que o localhost está configurado corretamente para iniciar conexões com o destino.
 
 > [!NOTE]
 > Na maioria dos casos, só é necessário que o localhost seja uma parte da mesma floresta Active Directory e que um nome de host DNS válido seja usado.  Se seu ambiente utiliza um modelo de Federação mais complicado ou se você deseja usar endereços IP diretos para conectividade, talvez seja necessário executar configurações adicionais, como definir os [hosts confiáveis](/previous-versions/technet-magazine/ff700227(v=msdn.10))do WinRM.
@@ -123,7 +123,7 @@ Esse comando retornará `$True` se e somente se `Get-HgsTrace` puder estabelecer
 Ao executar o diagnóstico remoto de um usuário com privilégios suficientes para se conectar remotamente ao destino de rastreamento, não é necessário fornecer credenciais para `New-HgsTraceTarget` .  O `Get-HgsTrace` cmdlet reutilizará automaticamente as credenciais do usuário que invocou o cmdlet ao abrir uma conexão.
 
 > [!WARNING]
-> Algumas restrições se aplicam à reutilização de credenciais, especialmente ao executar o que é conhecido como "segundo salto".  Isso ocorre quando se tenta reutilizar credenciais de dentro de uma sessão remota para outra máquina.  É necessário configurar o [CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) para dar suporte a esse cenário, mas isso está fora do escopo do gerenciamento de malha protegida e solução de problemas.
+> Algumas restrições se aplicam à reutilização de credenciais, especialmente ao executar o que é conhecido como "segundo salto".  Isso ocorre quando se tenta reutilizar credenciais de dentro de uma sessão remota para outra máquina.  É necessário configurar o [CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true) para dar suporte a esse cenário, mas isso está fora do escopo do gerenciamento de malha protegida e solução de problemas.
 
 #### <a name="using-windows-powershell-just-enough-administration-jea-and-diagnostics"></a>Usando o Windows PowerShell apenas JEA (administração suficiente) e diagnósticos
 

@@ -7,12 +7,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: a60ed0b1228780ebb6e8d1e75541dc3089f7665c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2592783d0f5187c27db45522420c93ac52748667
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989456"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879695"
 ---
 # <a name="overview-of-tls---ssl-schannel-ssp"></a>Visão geral do TLS-SSL (Schannel SSP)
 
@@ -31,7 +31,7 @@ Veja a seguir uma descrição dos recursos do TLS no SSP do Schannel.
 ### <a name="tls-session-resumption"></a>Retomada da sessão TLS
 O protocolo TLS (Transport Layer Security), um componente do Provedor de Suporte de Segurança Schannel, é usado para proteger os dados enviados entre os aplicativos em uma rede não confiável. Você pode usar o TLS/SSL para autenticar servidores e computadores cliente, e também para criptografar mensagens entre as partes autenticadas.
 
-Os dispositivos que conectam o TLS aos servidores frequentemente precisam se reconectar devido à expiração de sessão. O Windows 8.1 e o Windows Server 2012 R2 agora dão suporte à RFC 5077 (retomada da sessão TLS sem estado do lado do servidor). Essa modificação fornece aos dispositivos Windows Phone e Windows RT:
+Os dispositivos que conectam o TLS aos servidores frequentemente precisam se reconectar devido à expiração de sessão. O Windows 8.1 e o Windows Server 2012 R2 agora dão suporte à RFC 5077 (retomada da sessão TLS sem o estado Server-Side). Essa modificação fornece aos dispositivos Windows Phone e Windows RT:
 
 -   Uso reduzido de recursos do servidor
 
@@ -84,15 +84,15 @@ No Windows Server 2012, a lista de emissores confiáveis é configurada usando r
 
 -   Se nenhum certificado existir no repositório definido pelo aplicativo, o Schannel verificará o repositório **Emissores de autenticação de clientes** do computador local e, se os certificados estiverem presentes, usará esse repositório como a origem. Se nenhum certificado for encontrado em um repositório, o repositório de Raízes Confiáveis será verificado.
 
--   Se nem os repositórios globais ou locais contiverem certificados, o provedor Schannel usará o repositório de **autoridades de Certifictation raiz confiáveis** como a origem da lista de emissores confiáveis. (Esse é o comportamento do Windows Server 2008 R2.)
+-   Se nem os repositórios globais ou locais contiverem certificados, o provedor Schannel usará o repositório de  **autoridades de Certifictation raiz confiáveis** como a origem da lista de emissores confiáveis. (Esse é o comportamento do Windows Server 2008 R2.)
 
-Se o repositório de **autoridades de Certifictation raiz confiáveis** que foi usado contiver uma combinação de certificados de emissor (autoassinado) e autoridade de certificação (CA), somente os certificados de emissor de autoridade de certificação serão enviados ao servidor por padrão.
+Se o repositório de  **autoridades de Certifictation raiz confiáveis** que foi usado contiver uma combinação de certificados de emissor (autoassinado) e autoridade de certificação (CA), somente os certificados de emissor de autoridade de certificação serão enviados ao servidor por padrão.
 
 **Como configurar o Schannel para usar o repositório de certificados para emissores confiáveis**
 
 A arquitetura do SSP do Schannel no Windows Server 2012 usará, por padrão, as lojas, conforme descrito acima, para gerenciar a lista de emissores confiáveis. Você ainda pode usar os commandlets existentes de gerenciamento de certificados do provedor do PowerShell, bem como as ferramentas de linha de comando como Certutil, para gerenciar certificados.
 
-Para obter informações sobre como gerenciar certificados usando o provedor do PowerShell, consulte [Cmdlets de administração do AD CS no Windows](/powershell/module/adcsadministration/?view=winserver2012-ps).
+Para obter informações sobre como gerenciar certificados usando o provedor do PowerShell, consulte [Cmdlets de administração do AD CS no Windows](/powershell/module/adcsadministration/?view=winserver2012-ps&preserve-view=true).
 
 Para obter informações sobre como gerenciar certificados usando o utilitário de certificados, consulte [certutil.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732443(v=ws.11)).
 
@@ -100,7 +100,7 @@ Para obter informações sobre quais dados, incluindo o repositório definido pe
 
 **Padrões para modos de confiança**
 
-O provedor Schannel dá suporte a três modos de confiança de autenticação de clientes. O modo de confiança controla como a validação da cadeia de certificados do cliente é executada e é uma configuração de todo o sistema controlada pelo REG_DWORD "ClientAuthTrustMode" em HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
+O provedor Schannel dá suporte a três modos de confiança de autenticação de clientes. O modo de confiança controla como a validação da cadeia de certificados do cliente é executada e é uma configuração de todo o sistema controlada pelo REG_DWORD "ClientAuthTrustMode" em HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel.
 
 |Valor|Modo de confiança|Descrição|
 |-----|-------|--------|
@@ -142,7 +142,7 @@ Os datagramas são comuns em mídia de streaming, como jogos ou videoconferênci
 
 Os aplicativos que usam DTLS sobre UDP podem usar o modelo SSPI no Windows Server 2012 e no Windows 8. Alguns pacotes de codificações estão disponíveis para configuração, de maneira semelhante à forma como se configura o TLS. O Schannel continua a usar o provedor de criptografia CNG, que usa a certificação FIPS 140, introduzida no Windows Vista.
 
-### <a name="deprecated-functionality"></a><a name="BKMK_Deprecated"></a>Funcionalidades preteridas
+### <a name="deprecated-functionality"></a><a name="BKMK_Deprecated"></a>Funcionalidade preterida
 No SSP do Schannel para Windows Server 2012 e Windows 8, não há recursos ou funcionalidades preteridos.
 
 ## <a name="additional-references"></a>Referências adicionais

@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fffad9fa95b3b3ff6ca7933ec70a4a334667ce95
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: e66a03ec89a2cd77fbeafd59972a24a020ed66f7
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049294"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879835"
 ---
 # <a name="install-active-directory-domain-services-level-100"></a>Instalar os Serviços de Domínio Active Directory (nível 100)
 
@@ -81,7 +81,7 @@ Get-Help Add-ADDSReadOnlyDomainControllerAccount
 
 Argumentos opcionais aparecem entre colchetes.
 
-Também é possível baixar os últimos exemplos da Ajuda e os conceitos de cmdlets do Windows PowerShell. Para obter mais informações, consulte [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1).
+Também é possível baixar os últimos exemplos da Ajuda e os conceitos de cmdlets do Windows PowerShell. Para obter mais informações, consulte [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&preserve-view=true).
 
 O Windows PowerShell pode ser executado com base em servidores remotos:
 
@@ -91,7 +91,7 @@ O Windows PowerShell pode ser executado com base em servidores remotos:
     Invoke-Command { Install-ADDSDomainController -DomainName contoso.com -Credential (Get-Credential) } -ComputerName ConDC3
     ```
 
--ou-
+- ou -
 
 -   No Gerenciador do Servidor, crie um grupo de servidores que inclua o servidor remoto. Clique com o botão direito do mouse no nome do servidor remoto e depois clique em **Windows PowerShell**.
 

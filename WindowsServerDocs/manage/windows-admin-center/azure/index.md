@@ -6,12 +6,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/31/2019
-ms.openlocfilehash: eb53a01d4b82bd800b6cc87d2f5d3c36bfa7ff85
-ms.sourcegitcommit: 01b3140f79f5614ce566e8036474feefafbeddc3
+ms.openlocfilehash: 00e09df491bc5cc6bd6cba00cb22001766db2efb
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94581430"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879905"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Como conectar o Windows Server aos serviços híbridos do Azure
 
@@ -101,7 +101,7 @@ Para obter mais informações, consulte [Integrar a Central de Segurança do Azu
 Os serviços híbridos do Azure funcionam com os Servidores do Windows nas seguintes configurações:
 
 - Servidores físicos e VMs (máquinas virtuais) autônomos
-- Clusters, incluindo clusters hiperconvergentes certificados pelo [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002) e por programas [WSSD (definidos pelo software do Windows Server)](https://www.microsoft.com/cloud-platform/software-defined-datacenter)
+- Clusters, incluindo clusters hiperconvergentes certificados pelo [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002&preserve-view=true) e por programas [WSSD (definidos pelo software do Windows Server)](https://www.microsoft.com/cloud-platform/software-defined-datacenter)
 
 ### <a name="services-for-stand-alone-servers-and-vms"></a>Serviços para servidores e VMs autônomos
 

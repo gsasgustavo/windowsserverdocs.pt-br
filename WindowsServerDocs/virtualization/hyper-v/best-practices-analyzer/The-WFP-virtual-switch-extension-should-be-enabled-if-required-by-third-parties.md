@@ -1,17 +1,17 @@
 ---
 title: a extensão do comutador virtual WFP deve ser habilitada se for exigida pelas extensões de terceiros
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando a extensão do comutador virtual WFP (Windows Filtering Platform) estiver desabilitada.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
 ms.date: 8/16/2016
-ms.openlocfilehash: 00312413c8da02ce5221767667ecd941f0095776
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 1f9543b90610bb361e379e545ecd40d6db1f9efc
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865155"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846335"
 ---
 # <a name="the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions"></a>a extensão do comutador virtual WFP deve ser habilitada se for exigida pelas extensões de terceiros
 

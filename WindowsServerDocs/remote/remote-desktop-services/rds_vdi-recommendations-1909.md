@@ -7,12 +7,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.date: 02/19/2020
-ms.openlocfilehash: 94deca783d770fb5322f9fc489d692f925cfa1a9
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 0eaea9ced163f63c37f2ef932e568872ec84bdcc
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866255"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879755"
 ---
 # <a name="optimizing-windows-10-version-1909-for-a-virtual-desktop-infrastructure-vdi-role"></a>Como otimizar o Windows 10, versão 1909, para uma função da VDI (Virtual Desktop Infrastructure)
 
@@ -663,7 +663,7 @@ Nome da tarefa agendada:
 
 ### <a name="apply-windows-and-other-updates"></a>Aplicar atualizações do Windows (entre outras)
 
-Seja do Microsoft Update, seja de recursos internos, aplique as atualizações disponíveis, incluindo assinaturas do Windows Defender. Esse é um bom momento para aplicar outras atualizações disponíveis, incluindo o Microsoft Office, se instalado, bem como outras atualizações. Se o PowerShell permanecer na imagem, baixe a ajuda mais recente disponível para o PowerShell executando o comando [Update-Help](/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
+Seja do Microsoft Update, seja de recursos internos, aplique as atualizações disponíveis, incluindo assinaturas do Windows Defender. Esse é um bom momento para aplicar outras atualizações disponíveis, incluindo o Microsoft Office, se instalado, bem como outras atualizações. Se o PowerShell permanecer na imagem, baixe a ajuda mais recente disponível para o PowerShell executando o comando [Update-Help](/powershell/module/microsoft.powershell.core/update-help?view=powershell-7&preserve-view=true).
 
 #### <a name="servicing-the-operating-system-and-apps"></a>Manutenção do sistema operacional e de aplicativos
 

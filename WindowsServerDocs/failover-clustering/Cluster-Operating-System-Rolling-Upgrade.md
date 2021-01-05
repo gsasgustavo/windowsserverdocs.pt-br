@@ -7,12 +7,12 @@ author: jasongerend
 ms.author: jgerend
 manager: lizross
 ms.date: 03/27/2018
-ms.openlocfilehash: e1e4cd3cc7258b1670de58a7df5e5930274ae3b6
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 7929fc90f42c2033952e527a3edf180dedef24c2
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97041694"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879925"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>Atualização sem interrupção do sistema operacional do cluster
 
@@ -43,7 +43,7 @@ Este guia descreve os vários estágios do processo de atualização sem interru
 O cenário a seguir não tem suporte no Windows Server 2016:
 -  Atualização sem interrupção do sistema operacional do cluster de clusters de convidado usando o disco rígido virtual (arquivo. vhdx) como armazenamento compartilhado
 
-A atualização sem interrupção do sistema operacional do cluster tem suporte total pelo SCVMM (System Center Virtual Machine Manager) 2016. Se você estiver usando o SCVMM 2016, consulte [executar uma atualização sem interrupção de um cluster de host do Hyper-V para o Windows Server 2016 no VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807) para obter orientação sobre como atualizar os clusters e automatizar as etapas descritas neste documento.
+A atualização sem interrupção do sistema operacional do cluster tem suporte total pelo SCVMM (System Center Virtual Machine Manager) 2016. Se você estiver usando o SCVMM 2016, consulte [executar uma atualização sem interrupção de um cluster de host do Hyper-V para o Windows Server 2016 no VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) para obter orientação sobre como atualizar os clusters e automatizar as etapas descritas neste documento.
 
 ## <a name="requirements"></a>Requisitos
 Conclua os seguintes requisitos antes de iniciar o processo de atualização sem interrupção do sistema operacional do cluster:

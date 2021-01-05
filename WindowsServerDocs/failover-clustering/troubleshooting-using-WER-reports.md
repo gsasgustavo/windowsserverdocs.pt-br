@@ -4,12 +4,12 @@ description: Solução de problemas de um cluster de failover usando relatórios
 ms.author: johnmar
 author: JohnMarlin-MSFT
 ms.date: 03/27/2018
-ms.openlocfilehash: 9b4569f4f4d28ad1380cf057cdf96e4b81fbdb2a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 865689fd18825d32e7f5d46a60b3bf02321aaebb
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990739"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879865"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Solução de problemas de um Cluster de Failover usando o Relatório de Erros do Windows
 
@@ -77,7 +77,7 @@ Depois de habilitar os canais de eventos, você pode usar o **DumpLogQuery** par
 
 Ao solucionar problemas, se você precisar coletar canais de eventos adicionais, poderá modificar a propriedade **DumpLogQuery** adicionando consultas adicionais ou modificando a lista.
 
-Para fazer isso, primeiro teste sua consulta XPATH usando o cmdlet [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1) do PowerShell:
+Para fazer isso, primeiro teste sua consulta XPATH usando o cmdlet [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1&preserve-view=true) do PowerShell:
 
 ```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
@@ -304,7 +304,7 @@ Para identificar por que o disco falhou, navegue até os eventos em **FailoverCl
 
 ### <a name="physical-disk-timed-out"></a>O disco físico atingiu o tempo limite
 
-Para diagnosticar esse problema, navegue até a pasta de relatório do WER. A pasta contém arquivos de log e arquivos de despejo para **RHS**, **clussvc.exe**e do processo que hospeda o serviço "**smphost**", como mostrado abaixo:
+Para diagnosticar esse problema, navegue até a pasta de relatório do WER. A pasta contém arquivos de log e arquivos de despejo para **RHS**, **clussvc.exe** e do processo que hospeda o serviço "**smphost**", como mostrado abaixo:
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
@@ -395,7 +395,7 @@ DynamicSig[29].Value=10008
 
 A lista de serviços e processos que coletamos em um despejo é controlada pela seguinte propriedade: **PS C:\Windows\system32> (Get-ClusterResourceType-Name "disco físico"). DumpServicesSmphost**
 
-Para identificar por que o travamento ocorreu, abra os arquivos dum. Em seguida, execute a seguinte consulta: **EventLog. EventData ["LogString"] contém "disco de cluster 10"** . isso fornecerá a você a seguinte saída:
+Para identificar por que o travamento ocorreu, abra os arquivos dum. Em seguida, execute a seguinte consulta: **EventLog. EventData ["LogString"] contém "disco de cluster 10"**  . isso fornecerá a você a seguinte saída:
 
 ![Saída da consulta de log de execução 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 

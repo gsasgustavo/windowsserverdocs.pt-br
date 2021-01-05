@@ -4,14 +4,14 @@ description: Este documento descreve como configurar navegadores para usar o WIA
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/20/2020
+ms.date: 01/04/2021
 ms.topic: article
-ms.openlocfilehash: 61369f2dde82264190bcbd4d81eaae317e159a0d
-ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
+ms.openlocfilehash: e272fba0ec41b559129f097d4a447eb99635f5f1
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97390264"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879536"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>Configurar navegadores para usar a autenticação integrada do Windows (WIA) com AD FS
 
@@ -37,7 +37,8 @@ Você pode exibir as configurações atuais usando o seguinte exemplo do PowerSh
 Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
-![Suporte a WIA](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)
+![Suporte a WIA](media/Configure-AD-FS-Browser-WIA/wiasupport.png)
+
 
 ### <a name="change-wiasupporteduseragent-settings"></a>Alterar configurações de WIASupportedUserAgent
 Por padrão, uma nova instalação do AD FS tem um conjunto de correspondências de cadeias de caracteres do agente do usuário criado. No entanto, elas podem estar desatualizadas com base nas alterações feitas em navegadores e dispositivos. Particularmente, os dispositivos Windows têm cadeias de caracteres de agente do usuário semelhantes com pequenas variações nos tokens. O exemplo do Windows PowerShell a seguir fornece a melhor orientação para o conjunto atual de dispositivos que estão no mercado atualmente que dão suporte a WIA contínuo:

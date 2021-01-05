@@ -6,18 +6,18 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: bd7d80ca79175f41944292d7a11dbc03a1e30c3d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 128c9ce3591f9603ac9085b66fc3359d85a892f2
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997590"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879775"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Implantar o DHCP usando o Windows PowerShell
 
 > Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
 
-Este guia fornece instruções sobre como usar o Windows PowerShell para implantar um servidor DHCP do protocolo de configuração de host dinâmico do protocolo Internet (IP) versão 4 \( \) que atribui automaticamente endereços IP e opções DHCP a clientes DHCP IPv4 que estão conectados a uma ou mais sub-redes em sua rede.
+Este guia fornece instruções sobre como usar o Windows PowerShell para implantar um servidor DHCP do protocolo de configuração de host dinâmico do protocolo Internet (IP) versão 4 \( \)  que atribui automaticamente endereços IP e opções DHCP a clientes DHCP IPv4 que estão conectados a uma ou mais sub-redes em sua rede.
 
 > [!NOTE]
 > Para baixar este documento no formato do Word na galeria do TechNet, consulte [implantar o DHCP usando o Windows PowerShell no Windows Server 2016](https://gallery.technet.microsoft.com/Deploy-DHCP-Using-Windows-246dd293).
@@ -298,9 +298,9 @@ Para obter mais informações, consulte a seção **criar um comutador virtual c
 
 Você pode usar o procedimento a seguir para executar o Windows PowerShell com privilégios de administrador.
 
-1. Em um computador que executa o Windows Server 2016, clique em **Iniciar**e clique com o botão direito do mouse no ícone do Windows PowerShell. Um menu é exibido.
+1. Em um computador que executa o Windows Server 2016, clique em **Iniciar** e clique com o botão direito do mouse no ícone do Windows PowerShell. Um menu é exibido.
 
-2. No menu, clique em **mais**e, em seguida, clique em **Executar como administrador**. Se solicitado, digite as credenciais para uma conta que tenha privilégios de administrador no computador. Se a conta de usuário com a qual você fez logon no computador for uma conta de nível de administrador, você não receberá uma solicitação de credencial.
+2. No menu, clique em **mais** e, em seguida, clique em **Executar como administrador**. Se solicitado, digite as credenciais para uma conta que tenha privilégios de administrador no computador. Se a conta de usuário com a qual você fez logon no computador for uma conta de nível de administrador, você não receberá uma solicitação de credencial.
 
 3. O Windows PowerShell é aberto com privilégios de administrador.
 
@@ -352,7 +352,7 @@ Restart-Computer
 
 Para obter mais informações sobre o comando Add-Computer, consulte o tópico a seguir.
 
-- [Add-Computer](/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
+- [Add-Computer](/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1&preserve-view=true)
 
 ### <a name="install-dhcp"></a>Instalar o DHCP
 

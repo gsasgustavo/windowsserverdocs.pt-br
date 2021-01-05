@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 05/05/2020
 ms.topic: article
-ms.openlocfilehash: 2c1d05450869d558d1991da2f95b72bcaeca7462
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 7df064f4afe5fa8536bd35003a397ab85ea1bf67
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97047814"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879645"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Criar Plug-ins com o Modelo de Avaliação de Risco do AD FS 2019
 
@@ -216,8 +216,8 @@ A classe inclui métodos e propriedades a seguir.
 |[OnAuthenticationPipelineUnload](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload) |Void|Chamado por AD FS quando o plug-in é descarregado de seu pipeline|
 |[OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate)| Void|Chamado por AD FS na atualização de configuração |
 |**Propriedade** |**Tipo** |**Definição**|
-|[Nome_do_Fornecedor](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname)|Cadeia de caracteres |Obtém o nome do fornecedor que possui o plug-in|
-|[ModuleIdentifier](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier)|Cadeia de caracteres |Obtém o identificador do plug-in|
+|[Nome_do_Fornecedor](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname)|String |Obtém o nome do fornecedor que possui o plug-in|
+|[ModuleIdentifier](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier)|String |Obtém o identificador do plug-in|
 
 Em nosso plug-in de exemplo, estamos usando os métodos [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload) e [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate) para ler os IPs predefinidos do AD FS DB. [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload) é chamado quando o plug-in é registrado com AD FS enquanto [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate) é chamado quando o. csv é importado usando o `Import-AdfsThreatDetectionModuleConfiguration` cmdlet.
 
@@ -261,7 +261,7 @@ IList<Claim> additionalClams
 );
 }
 ```
-A interface inclui o método [EvaluatePreAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication) , que permite que você use as informações passadas nos parâmetros de entrada [RequestContext RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext), [ProtocolContext ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext)e [IList <Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) para gravar a lógica de avaliação de risco de pré-autenticação.
+A interface inclui o método [EvaluatePreAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication) , que permite que você use as informações passadas nos parâmetros de entrada [RequestContext RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext), [ProtocolContext ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext)e [IList <Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2&preserve-view=true) para gravar a lógica de avaliação de risco de pré-autenticação.
 
 >[!NOTE]
 >Para obter a lista de propriedades passadas com cada tipo de contexto, visite as definições de classe [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext)e [ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext) .
@@ -288,7 +288,7 @@ IList<Claim> additionalClams
 }
 ```
 
-A interface inclui o método [EvaluatePostAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication) , que permite que você use as informações passadas nos parâmetros de entrada [RequestContext RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext), [ProtocolContext ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext)e [IList <Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) para gravar a lógica de avaliação de risco pós-autenticação.
+A interface inclui o método [EvaluatePostAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication) , que permite que você use as informações passadas nos parâmetros de entrada [RequestContext RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext), [ProtocolContext ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext)e [IList <Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2&preserve-view=true) para gravar a lógica de avaliação de risco pós-autenticação.
 
 >[!NOTE]
 > Para obter uma lista completa das propriedades passadas com cada tipo de contexto, consulte definições de classe [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext), [SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext)e [ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext) .

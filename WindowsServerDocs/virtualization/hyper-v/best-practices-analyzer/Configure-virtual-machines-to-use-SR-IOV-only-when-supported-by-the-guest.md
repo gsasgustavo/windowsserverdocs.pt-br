@@ -1,17 +1,17 @@
 ---
 title: Configurar máquinas virtuais para usar o SR-IOV somente quando houver suporte do sistema operacional convidado
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma ou mais máquinas virtuais são configuradas para usar O SR-IOV (virtualização de e/s de raiz única), mas o sistema operacional convidado não oferece suporte a SR-IOV.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 33cf5b68-e43e-47ef-adbc-6b266c1d4dce
 ms.date: 8/16/2016
-ms.openlocfilehash: 3a167b72f9c5c9a011980c07afe5a9a262aaa1be
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 2f919f3ed2708b9d388a5215d73e629dc93f9922
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745681"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846388"
 ---
 # <a name="configure-virtual-machines-to-use-sr-iov-only-when-supported-by-the-guest-operating-system"></a>Configurar máquinas virtuais para usar o SR-IOV somente quando houver suporte do sistema operacional convidado
 

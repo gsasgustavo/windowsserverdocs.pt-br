@@ -8,12 +8,12 @@ ms.author: thierryp
 ms.date: 07/12/2018
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: d31fb5b9d5e31ed9bb64a8335e40195b4cfb45ce
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 0a65ad1b26017001b61af94af497317c509d20b1
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078473"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879785"
 ---
 # <a name="upgrade-windows-server-2008-and-windows-server-2008-r2"></a>Fazer upgrade do Windows Server 2008 e do Windows Server 2008 R2
 
@@ -50,7 +50,7 @@ Para ajudá-lo a entender como analisar os recursos de TI existentes, avaliar o 
 
 ![Logotipo do SQL Server](media/sqlr2.jpg)
 
-Se estiver executando o SQL Server 2008/2008 R2, você poderá fazer upgrade para o SQL Server [2016](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016) ou [2017](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017).
+Se estiver executando o SQL Server 2008/2008 R2, você poderá fazer upgrade para o SQL Server [2016](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016&preserve-view=true) ou [2017](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017&preserve-view=true).
 
 
 ## <a name="additional-resources"></a>Recursos adicionais

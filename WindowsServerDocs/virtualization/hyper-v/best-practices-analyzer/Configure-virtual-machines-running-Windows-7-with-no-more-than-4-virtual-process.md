@@ -1,17 +1,17 @@
 ---
 title: Configurar máquinas virtuais que executam o Windows 7 sem mais de 4 processadores virtuais
-description: Versão online do texto para esta regra de Analisador de Práticas Recomendadas.
+description: Saiba o que fazer quando uma máquina virtual que executa o Windows 7 estiver configurada com mais de 4 processadores virtuais.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8fcf0868-b543-4f94-aee7-35324346da55
 ms.date: 8/16/2016
-ms.openlocfilehash: 09388f843e963252dfcaca1eb587778658b48039
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: f52884ea6ce7298980f42b1aca876866c7dbaa77
+ms.sourcegitcommit: 42581433c0bb62e291d412ee9e13869b42e69a4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745761"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846402"
 ---
 # <a name="configure-virtual-machines-running-windows-7-with-no-more-than-4-virtual-processors"></a>Configurar máquinas virtuais que executam o Windows 7 sem mais de 4 processadores virtuais
 

@@ -7,12 +7,12 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: 2cdddf706d03aa5b1aa1239b58fd4d8a9f4beed2
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 2e4e7902a52378f29c4a0a48339618c279b7cc95
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864315"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879705"
 ---
 # <a name="administer-a-server-core-server"></a>Administrar um servidor Server Core
 
@@ -101,7 +101,7 @@ Você pode configurar o Firewall do Windows localmente no computador Server Core
 
 Você pode habilitar a Comunicação Remota do Windows PowerShell, na qual comandos digitados no Windows PowerShell em um computador funcionam em outro computador. Habilite a comunicação remota do Windows PowerShell com **Enable-PSRemoting**.
 
-Para obter mais informações, consulte [sobre perguntas frequentes remotas](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1).
+Para obter mais informações, consulte [sobre perguntas frequentes remotas](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1&preserve-view=true).
 
 ## <a name="administrative-tasks-from-the-command-line"></a>Tarefas administrativas na linha de comando
 Use as informações de referência a seguir para executar tarefas administrativas na linha de comando.

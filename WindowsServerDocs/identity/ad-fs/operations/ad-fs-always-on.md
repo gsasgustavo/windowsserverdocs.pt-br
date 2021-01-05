@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 01/20/2020
 ms.topic: article
-ms.openlocfilehash: 3d1ad6745eb7051857bc27b4fc60400f40b01731
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 44131a445fcad6f3ddc5a1123ede7d492ed68bc9
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039414"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879655"
 ---
 # <a name="setting-up-an-ad-fs-deployment-with-alwayson-availability-groups"></a>Configurando uma implantação de AD FS com Grupos de Disponibilidade AlwaysOn
 Uma topologia distribuída geograficamente altamente disponível fornece:
@@ -95,7 +95,7 @@ Para implantar AD FS siga os links iniciais abaixo para instalar o serviço de f
 
 ## <a name="configuring-ad-fs-to-use-an-alwayson-availability-group"></a>Configurando AD FS para usar um grupo de disponibilidade AlwaysOn
 
-Configurar um farm de AD FS com grupos de disponibilidade AlwaysOn requer uma ligeira modificação no procedimento de implantação de AD FS. Certifique-se de que cada instância de servidor esteja executando a mesma versão do SQL. Para exibir a lista completa de pré-requisitos, restrições e recomendações para grupos de disponibilidade Always On, leia [aqui](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017#PrerequisitesForDbs).
+Configurar um farm de AD FS com grupos de disponibilidade AlwaysOn requer uma ligeira modificação no procedimento de implantação de AD FS. Certifique-se de que cada instância de servidor esteja executando a mesma versão do SQL. Para exibir a lista completa de pré-requisitos, restrições e recomendações para grupos de disponibilidade Always On, leia [aqui](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017&preserve-view=true#PrerequisitesForDbs).
 
 1.  Os bancos de dados que você deseja fazer backup devem ser criados antes que os grupos de disponibilidade AlwaysOn possam ser configurados.  AD FS cria seus bancos de dados como parte da instalação e configuração inicial do primeiro nó de serviço de Federação de um novo farm de SQL Server de AD FS.  Especifique o nome do host do banco de dados para o farm existente usando o SQL Server. Como parte da configuração de AD FS, você deve especificar uma cadeia de conexão SQL, portanto, você precisará configurar o primeiro farm de AD FS para se conectar a uma instância do SQL diretamente (isso é apenas temporário). Para obter diretrizes específicas sobre como configurar um farm de AD FS, incluindo a configuração de um nó de farm de AD FS com uma cadeia de conexão do SQL Server, consulte [configurar um servidor de Federação](../deployment/configure-a-federation-server.md).
 

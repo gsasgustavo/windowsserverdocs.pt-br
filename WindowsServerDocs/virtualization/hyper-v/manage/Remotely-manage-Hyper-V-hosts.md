@@ -6,12 +6,12 @@ ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 12/06/2016
-ms.openlocfilehash: 1d599555750d2a2e005a3e68b0c70fddd1a54f73
-ms.sourcegitcommit: 6931830a70c5849d8f884cdc7bd4f5afc1a00cce
+ms.openlocfilehash: f6065fa4f817b6029b2636abb9960c335344432d
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955801"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879895"
 ---
 # <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Gerenciar hosts do Hyper-V remotamente com o Gerenciador do Hyper-V
 
@@ -54,7 +54,7 @@ O Gerenciador do Hyper-V não lista os computadores que hospedam o Hyper-V até 
 
 Se você não conseguir se conectar:
 
-* É possível que apenas as ferramentas do Hyper-V sejam instaladas. Para verificar se a plataforma Hyper-V está instalada, procure o serviço gerenciamento de máquinas virtuais. /(Abra o aplicativo de área de trabalho serviços: clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc**e pressione **Enter**. Se o serviço gerenciamento de máquinas virtuais não estiver listado, instale a plataforma Hyper-V seguindo as instruções em [instalar o Hyper-v](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).
+* É possível que apenas as ferramentas do Hyper-V sejam instaladas. Para verificar se a plataforma Hyper-V está instalada, procure o serviço gerenciamento de máquinas virtuais. /(Abra o aplicativo de área de trabalho serviços: clique em **Iniciar**, clique na caixa **Iniciar pesquisa** , digite **Services. msc** e pressione **Enter**. Se o serviço gerenciamento de máquinas virtuais não estiver listado, instale a plataforma Hyper-V seguindo as instruções em [instalar o Hyper-v](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).
 * Verifique se o hardware atende aos requisitos. Consulte [requisitos do sistema](../System-requirements-for-Hyper-V-on-Windows.md).
 * Verifique se sua conta de usuário pertence ao grupo Administradores ou ao grupo Administradores do Hyper-V.
 
@@ -62,7 +62,7 @@ Se você não conseguir se conectar:
 
 Para gerenciar hosts remotos do Hyper-V, habilite o gerenciamento remoto no computador local e no host remoto.
 
-No Windows Server, abra Gerenciador do servidor \> gerenciamento remoto **do servidor local** \> **Remote management** e, em seguida, clique em **permitir conexões remotas com este computador**.
+No Windows Server, abra Gerenciador do servidor \> gerenciamento remoto **do servidor local** \>  e, em seguida, clique em **permitir conexões remotas com este computador**.
 
 Ou, do sistema operacional, abra o Windows PowerShell como administrador e execute:
 
@@ -119,7 +119,7 @@ Para fazer isso:
    Enable-WSManCredSSP -Role server
    ```
 
-    Para obter detalhes, consulte [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) e [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+    Para obter detalhes, consulte [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true) e [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 Em seguida, configure o computador que você usará para gerenciar o host do Hyper-V.
 
@@ -144,7 +144,7 @@ Em seguida, configure o computador que você usará para gerenciar o host do Hyp
 > [!NOTE]
 > Isso só funcionará para hosts **remotos** do windows Server 2016 ou do Windows 10.
 
-Para obter detalhes do cmdlet, consulte [set-item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7) e [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+Para obter detalhes do cmdlet, consulte [set-item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7&preserve-view=true) e [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 ## <a name="install-hyper-v-manager"></a>Instalar o Gerenciador do Hyper-V
 
