@@ -5,12 +5,13 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b72ea800f63110904af80a178f96af232507344
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.topic: article
+ms.openlocfilehash: fde64c200e8035336320d590bcb11c69b2616d38
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864345"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943522"
 ---
 # <a name="server-performance-advisor-pack-development-guide"></a>Guia de desenvolvimento do Pacote do Server Performance Advisor
 
@@ -235,7 +236,7 @@ Windows registry editor version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef]
 "Description"=
- FriendlyName = Power Source Optimized 
+ FriendlyName = Power Source Optimized
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef \0012ee47-9041-4b5d-9b77-535fba8b1442\6738e2c4-e8a5-4a42-b16a-e040e769756e
 "ACSettingIndex"=dword:000000b4
@@ -269,7 +270,7 @@ HKEY_LOCAL_MACHINE. ..\PowerSchemes | 1 | db310065-829b-4671-9647-2261c00e86ef
 
 O esquema para a tabela de **#registryKeys** é o seguinte:
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 -------- | -------- | --------
 KeyName | Nvarchar (300) NOT NULL | Nome do caminho completo da chave do registro
 Keytypeid | Smallint não nulo | ID de tipo interno
@@ -277,7 +278,7 @@ Valor | Nvarchar (4000) não nulo | Todos os valores
 
 A coluna **keytypeid** pode ter um dos seguintes tipos:
 
-ID | Type
+ID | Tipo
 --- | ---
 1 | String
 2 | ExpandString
@@ -301,7 +302,7 @@ Você pode adicionar qualquer consulta WMI. Para obter mais informações sobre 
 
 A consulta no exemplo acima retorna um registro:
 
-Legenda | Nome | PeakUsage
+Legenda | Name | PeakUsage
 ----- | ----- | -----
 C:\pagefile.sys | C:\pagefile.sys | 215
 
@@ -327,7 +328,7 @@ ID | Consulta
 
 **\#Esquema da tabela WmiObjects**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 --- | --- | ---
 SequenceId | Int não nulo | Correlacione a linha e suas propriedades
 Namespace | Nvarchar (200) não nulo | Namespace WMI
@@ -337,15 +338,15 @@ WmiqueryId | Int não nulo | Correlacione a chave de #WmiQueries
 
 **\#O esquema da tabela WmiObjectproperties**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 --- | --- | ---
 SequenceId | Int não nulo | Correlacione a linha e suas propriedades
-Nome | Nvarchar (1000) não nulo | Nome da propriedade
+Name | Nvarchar (1000) não nulo | Nome da propriedade
 Valor | Nvarchar (4000) NULL | O valor da propriedade atual
 
 **\#Esquema de tabela WmiQueries**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 --- | --- | ---
 Id | Int não nulo | >ID de consulta exclusiva
 Consulta | Nvarchar (4000) não nulo | Cadeia de caracteres de consulta original nos metadados de provisionamento
@@ -366,7 +367,7 @@ No exemplo anterior, o contador \\ de PhysicalDisk ( \* ) \\ média de disco s/t
 
 Pode haver duas instâncias: **\_ total** e **0 C: D:**, e a saída pode ser a seguinte:
 
- timestamp | CategoryName | CounterName | Valor da instância de _Total | Valor da instância de 0 C: D:
+timestamp | CategoryName | CounterName | Valor da instância de _Total | Valor da instância de 0 C: D:
 ---- | ---- | ---- | ---- | ----
 13:45:52.630 | PhysicalDisk | Média de segundos/Transferência do Disco | 0.00100008362473995 |0.00100008362473995
 13:45:53.629 | PhysicalDisk | Média de segundos/Transferência do Disco | 0.00280023414927187 | 0.00280023414927187
@@ -420,7 +421,7 @@ querypath | FullPath | Parentpath | FileName | Conteúdo
 
 **\#Esquema de tabela de arquivos**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 ---- | ---- | ----
 querypath | Nvarchar (300) NOT NULL | Instrução de consulta original
 FullPath | Nvarchar (300) NOT NULL | Caminho de arquivo absoluto e nome de arquivo
@@ -516,10 +517,10 @@ Depois que as regras são definidas, os administradores do sistema podem ver o r
 
 Continuando com o exemplo anterior, o usuário sabe se há espaço livre em disco suficiente na unidade do sistema. Os usuários também podem estar interessados no tamanho real do espaço livre. Um único grupo de valor é usado para armazenar e exibir esses resultados. Vários valores únicos podem ser agrupados e mostrados em uma tabela no console do SPA. A tabela tem apenas duas colunas, nome e valor, conforme mostrado aqui.
 
-Nome | Valor
+Name | Valor
 ---- | ----
 Tamanho do disco livre na unidade do sistema (GB) | 100
-Tamanho total do disco instalado (GB) | 500 
+Tamanho total do disco instalado (GB) | 500
 
 se um usuário quiser ver uma lista de todos os discos rígidos que estão instalados no servidor e seu tamanho de disco, poderíamos chamar um valor de lista, que tem três colunas e várias linhas, como mostrado aqui.
 
@@ -532,7 +533,7 @@ Em um pacote do Advisor, pode haver muitas tabelas (grupos de valor único e tab
 
 Em resumo, há três tipos de elementos de interface do usuário:
 
-* [Seções](#bkmk-ui-section)
+* [As](#bkmk-ui-section)
 
 * [Grupos de valor único](#bkmk-ui-svg)
 
@@ -562,7 +563,7 @@ Aqui está um exemplo que mostra os elementos da interface do usuário:
 </advisorPack>
 ```
 
-### <a name="sections"></a><a href="" id="bkmk-ui-section"></a>Seções
+### <a name="sections"></a><a href="" id="bkmk-ui-section"></a>As
 
 Uma seção é puramente para o layout da interface do usuário. Ele não participa de nenhum cálculo lógico. Cada relatório único contém um conjunto de seções de nível superior que não tem uma seção pai. As seções de nível superior são apresentadas como guias no relatório. As seções podem ter subseções, com um máximo de 10 níveis. Subseções sob as seções de nível superior são apresentadas em áreas expansíveis. Uma seção pode conter várias subseções, grupos de valor único e tabelas de valor de lista. Grupos de valor único e tabelas de valor de lista são apresentados como tabelas.
 
@@ -673,7 +674,7 @@ Você pode definir um tipo de dados para cada valor único. A entrada permitida 
 
 **Ocorrência**
 
-Nome | Valor
+Name | Valor
 --- | ---
 Sistema operacional | &lt;_um valor será definido pelo script de relatório_&gt;
 Versão do SO | &lt;_um valor será definido pelo script de relatório_&gt;
@@ -703,7 +704,7 @@ A interface do usuário fictícia do relatório final poderia ter a seguinte apa
 
 **Informações do adaptador de rede física**
 
-ID | Nome | Type | Velocidade (Mbps) | Endereço MAC
+ID | Nome | Tipo | Velocidade (Mbps) | Endereço MAC
 --- | --- | --- | --- | ---
  | <br> | | |
  | | | |
@@ -714,7 +715,7 @@ O atributo **Caption** da &lt; coluna/ &gt; é mostrado como um nome de coluna e
 Em alguns casos, uma tabela pode ter muitas colunas e apenas algumas linhas, portanto, alternar as colunas e linhas tornaria a aparência da tabela muito melhor. Para trocar as colunas e as linhas, você pode adicionar o seguinte atributo de estilo:
 
 ``` syntax
-<listValue style="Transpose"  
+<listValue style="Transpose"
 ```
 
 ### <a name="defining-charting-elements"></a>Definindo elementos de gráfico
@@ -734,7 +735,7 @@ O SPA usa um único grupo de valor para dar suporte a estatísticas estáticas e
 Como mencionado anteriormente, uma estatística estática é um único valor. Logicamente, qualquer valor único pode ser definido como uma estatística estática. No entanto, não há sentido para exibir um único valor que não pode ser convertido em um tipo de número. Para definir uma estatística estática, você pode simplesmente adicionar o atributo **trendable** à chave de valor único correspondente, conforme mostrado abaixo:
 
 ``` syntax
-<value name="freediskSize" type="int" trendable="true"  
+<value name="freediskSize" type="int" trendable="true"
 ```
 
 ### <a name="dynamic-statistics"></a>Estatísticas dinâmicas
@@ -770,7 +771,7 @@ Como o exemplo a seguir indica que há suporte para várias colunas de **valor**
 CounterName | InstanceName | Média | Somar
 --- | :---: | :---: | :---:
 % do Tempo do Processador | _Total | 10 | 20
-% do Tempo do Processador | CPU0 | 20 | 30 
+% do Tempo do Processador | CPU0 | 20 | 30
 
 Neste exemplo, você tem duas colunas de **chave** e duas colunas de **valor** . SPA gera duas chaves de estatísticas para a coluna média e outras duas chaves para a coluna Sum. As chaves de estatísticas são:
 
@@ -811,7 +812,7 @@ Depois que os metadados de provisionamento são definidos, podemos começar a gr
 Há atributos **Name** e **reportScript** no cabeçalho provisionar metadados, como mostrado aqui:
 
 ``` syntax
-<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"  
+<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"
 ```
 
 O script de relatório principal é nomeado combinando os atributos **Name** e **reportScript** . No exemplo a seguir, será \[ Microsoft. ServerPerformanceAdvisor. CoreOS. v2 \] . \[ ReportScript \] .
@@ -905,7 +906,7 @@ END
 ELSE
 BEGIN
     exec dbo.SetNotification N'freediskSize', N'SuccessAdvice'
-END 
+END
 ```
 
 ### <a name="get-threshold-value"></a>Obter valor do limite
@@ -968,9 +969,9 @@ O exemplo a seguir mostra alguns valores únicos definidos:
 Em seguida, você pode definir o valor único, conforme mostrado aqui:
 
 ``` syntax
-exec dbo.SetSingleValue N OsName ,  Windows 7 
-exec dbo.SetSingleValue N Osversion ,  6.1.7601 
-exec dbo.SetSingleValue N OsLocation ,  c:\ 
+exec dbo.SetSingleValue N OsName ,  Windows 7
+exec dbo.SetSingleValue N Osversion ,  6.1.7601
+exec dbo.SetSingleValue N OsLocation ,  c:\
 ```
 
 Em casos raros, talvez você queira remover o resultado definido anteriormente usando o \[ dbo \] . \[ \] API removeSingleValue.
@@ -980,7 +981,7 @@ Em casos raros, talvez você queira remover o resultado definido anteriormente u
 Você pode usar o script a seguir para remover o valor definido anteriormente.
 
 ``` syntax
-exec dbo.removeSingleValue N Osversion 
+exec dbo.removeSingleValue N Osversion
 ```
 
 ### <a name="get-data-collection-information"></a>Obter informações de coleta de dados
@@ -1046,7 +1047,7 @@ VALUES (
 Se houver informações adicionais que você deseja que se comuniquem com os administradores do sistema, você poderá gravar logs. Se houver algum log para um relatório específico, uma faixa amarela será mostrada no cabeçalho do relatório. O exemplo a seguir mostra como você pode escrever um log:
 
 ``` syntax
-exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning 
+exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning
 ```
 
 O primeiro parâmetro é a mensagem que você deseja mostrar no log. O segundo parâmetro é o nível de log. A entrada válida para o segundo parâmetro pode ser **informativa**, **aviso** ou **erro**.
@@ -1312,7 +1313,7 @@ Aqui, como definir o ETW em um arquivo de ProvisionMetadata.xml:
 
 Os seguintes atributos de provedor estão disponíveis para uso no ETW de coleta:
 
-Atributo | Type | Descrição
+Atributo | Type | Description
 --- | --- | ---
 guid | GUID | GUID do provedor
 sessão | string | Nome da sessão ETW (opcional, necessário apenas para eventos de kernel)
@@ -1329,22 +1330,22 @@ Há duas tabelas de saída, conforme mostrado aqui.
 
 **\#Esquema de tabela de eventos**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 --- | --- | ---
 SequenceID | Int não nulo | ID da sequência de correlação
 EventTypeId | Int não nulo | ID do tipo de evento (consulte [dbo]. [ EventTypes])
 ProcessId | BigInt não nulo | ID do Processo
 ThreadId | BigInt não nulo | ID do thread
- timestamp | datetime2 não nulo |  timestamp
+timestamp | datetime2 não nulo | timestamp
 Kerneltime | BigInt não nulo | Tempo do kernel
 Usertime | BigInt não nulo | Hora do usuário
 
 **\#Esquema de tabela eventproperties**
 
-Nome da coluna | Tipo de dados SQL | Descrição
+Nome da coluna | Tipo de dados SQL | Description
 --- | --- | ---
 SequenceID | Int não nulo | ID da sequência de correlação
-Nome | Nvarchar (100) | Nome da propriedade
+Name | Nvarchar (100) | Nome da propriedade
 Valor | Nvarchar(4000) | Valor
 
 ### <a name="etw-schema"></a>Esquema ETW

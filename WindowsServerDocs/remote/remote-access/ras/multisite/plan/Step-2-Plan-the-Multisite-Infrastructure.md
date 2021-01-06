@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 planejar a infraestrutura multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba como concluir o planejamento de infraestrutura multissite; incluindo, Active Directory, grupos de segurança e objetos Política de Grupo.
 manager: brianlic
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e411db1eef92b26a2d44051123361a5ac674bb3c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 460cf6c921e50ae0026f742fa92ed252f9eb773b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937077"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941702"
 ---
 # <a name="step-2-plan-the-multisite-infrastructure"></a>Etapa 2 planejar a infraestrutura multissite
 
@@ -48,7 +49,7 @@ Observe as recomendações e restrições a seguir para Active Directory implant
 
     1.  Se o servidor em execução como emulador de PDC não estiver disponível, você deverá designar um controlador de domínio disponível que tenha GPOs atualizados como o emulador de PDC.
 
-    2.  Se o controlador de domínio que gerencia um GPO de servidor não estiver disponível, use o cmdlet Set-DAEntryPointDC do PowerShell para associar um novo controlador de domínio ao ponto de entrada. O novo controlador de domínio deve ter GPOs atualizados antes de executar o cmdlet.
+    2.  Se o controlador de domínio que gerencia um GPO de servidor não estiver disponível, use o cmdlet Set-DAEntryPointDC PowerShell para associar um novo controlador de domínio ao ponto de entrada. O novo controlador de domínio deve ter GPOs atualizados antes de executar o cmdlet.
 
 ## <a name="22-plan-security-groups"></a><a name="bkmk_2_2_SG"></a>grupos de segurança do plano 2,2
 Durante a implantação de um único servidor com configurações avançadas, todos os computadores cliente que acessam a rede interna por meio do DirectAccess foram coletados em um grupo de segurança. Em uma implantação multissite, esse grupo de segurança é usado somente para computadores cliente com Windows 8. Para uma implantação multissite, os computadores cliente do Windows 7 serão coletados em grupos de segurança separados para cada ponto de entrada na implantação multissite. Por exemplo, se você já tiver agrupado todos os computadores cliente no grupo DA_Clients, agora deverá remover todos os computadores com Windows 7 desse grupo e colocá-los em um grupo de segurança diferente. Por exemplo, na topologia vários sites Active Directory, vários pontos de entrada, você cria um grupo de segurança para o ponto de entrada Estados Unidos (DA_Clients_US) e outro para o ponto de entrada da Europa (DA_Clients_Europe). Coloque todos os computadores cliente do Windows 7 localizados na Estados Unidos no grupo de DA_Clients_US e quaisquer localizados na Europa no grupo de DA_Clients_Europe. Se você não tiver computadores cliente com o Windows 7, não será necessário planejar grupos de segurança para computadores com Windows 7.

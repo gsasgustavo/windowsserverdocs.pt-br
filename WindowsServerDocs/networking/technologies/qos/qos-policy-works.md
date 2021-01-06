@@ -6,12 +6,13 @@ ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fe91bba99000be307ed011cb5636dc49d65c389a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 41bbf2245143281cd80a46c23c2c6bf704ea3ccc
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942526"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943162"
 ---
 # <a name="how-qos-policy-works"></a>Como funciona a política de QoS
 
@@ -21,9 +22,9 @@ Ao iniciar ou obter a configuração atualizada do usuário ou do computador Pol
 
 1. O mecanismo de Política de Grupo recupera as configurações de Política de Grupo do usuário ou do computador de Active Directory.
 
-2. O mecanismo de Política de Grupo informa a extensão do lado do cliente de QoS de que houve alterações nas políticas de QoS.
+2. O mecanismo de Política de Grupo informa a extensão de Client-Side de QoS de que houve alterações nas políticas de QoS.
 
-3. A extensão do lado do cliente de QoS envia uma notificação de evento de política de QoS para o módulo de inspeção de QoS.
+3. A extensão de Client-Side de QoS envia uma notificação de evento de política de QoS para o módulo de inspeção de QoS.
 
 4. O módulo inspeção de QoS recupera as políticas de QoS de usuário ou computador e as armazena.
 

@@ -1,17 +1,18 @@
 ---
 title: Solução de problemas de uma implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba como solucionar os erros mais comuns que podem ocorrer ao configurar uma implantação de acesso remoto multissite.
 manager: brianlic
 ms.topic: article
 ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d4ec26b02d7ceb0f28b8697088b21316dac4e374
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 466b9f46263387f7d8c990e02f7e3970bfdc68e0
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958514"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941592"
 ---
 # <a name="troubleshoot-a-multisite-deployment"></a>Solução de problemas de uma implantação multissite
 

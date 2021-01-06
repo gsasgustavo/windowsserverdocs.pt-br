@@ -1,17 +1,18 @@
 ---
 title: Planejar uma implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba mais sobre as etapas de planejamento necessárias para implantar o acesso remoto do Windows Server 2016 ou do Windows Server 2012 em uma configuração multissite.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d1e66cd0b0cec01dc601c29c47225c03fd88ddb6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: a4a56e430b1b40627aaf0e387c8df8ec122b94fb
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937025"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941632"
 ---
 # <a name="plan-a-multisite-deployment"></a>Planejar uma implantação multissite
 

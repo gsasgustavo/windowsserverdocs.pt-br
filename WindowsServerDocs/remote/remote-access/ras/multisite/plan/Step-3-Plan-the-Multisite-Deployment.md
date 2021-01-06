@@ -1,17 +1,18 @@
 ---
 title: Etapa 3 planejar a implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba como planejar quaisquer requisitos de certificado adicionais, como os computadores cliente selecionam pontos de entrada e endereços IPv6 atribuídos em sua implantação.
 manager: brianlic
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 14b86d8e3b87c033be2407bf6fc44665818b8893
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 2758efb07b6dd601bfca8789ddf5ec430e418325
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937015"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941672"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>Etapa 3 planejar a implantação multissite
 
@@ -186,7 +187,7 @@ Quando um computador cliente que executa o Windows 10 ou o Windows 8 está conec
 
 Se sua organização usa uma topologia de Active Directory com prefixos IPv6 específicos do site (por exemplo, um FQDN de recurso interno app.corp.com é hospedado em América do Norte e na Europa com um endereço IP específico do site em cada local), isso não é configurado por padrão usando o console de acesso remoto, e os prefixos IPv6 específicos do site não são configurados para cada ponto de entrada. Se você quiser habilitar esse cenário opcional, precisará configurar cada ponto de entrada com os prefixos IPv6 específicos que devem ser preferidos por computadores cliente que se conectam a um ponto de entrada específico. Faça isso da seguinte forma:
 
-1.  Para cada GPO usado para computadores cliente Windows 10 ou Windows 8, execute o cmdlet Set-DAEntryPointTableItem do PowerShell
+1.  Para cada GPO usado para computadores cliente Windows 10 ou Windows 8, execute o cmdlet Set-DAEntryPointTableItem PowerShell
 
 2.  Defina o parâmetro EntryPointRange para o cmdlet com os prefixos IPv6 específicos do site. Por exemplo, para adicionar os prefixos específicos do site 2001: DB8:1: 1::/64 e 2001: DB: 1:2::/64 a um ponto de entrada chamado Europa, execute o seguinte
 

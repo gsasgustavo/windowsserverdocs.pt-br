@@ -7,12 +7,13 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/20/2018
-ms.openlocfilehash: 42a016a95d24f6ec0abc560a54f8589ab4c65ab1
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.topic: conceptual
+ms.openlocfilehash: 6bfcd16ed8e4c834cfb32eea4774eb08da2f12b4
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077543"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943622"
 ---
 # <a name="what-is-the-server-core-installation-option-in-windows-server"></a>O que é a opção de instalação Server Core no Windows Server?
 
@@ -81,7 +82,7 @@ A tabela a seguir mostra quais aplicativos estão disponíveis *localmente* no S
 | ISE do PowerShell                     | não disponível   | disponível                      |
 | IME do PowerShell                     | disponível       | disponível                      |
 | Mstsc.exe                          | não disponível   | disponível                      |
-| Serviços da área de trabalho Remota            | disponível       | disponível                      |
+| Serviços da Área de Trabalho Remota            | disponível       | disponível                      |
 | Gerenciador do Hyper-V                    | não disponível   | disponível                      |
 | Desses\*                          | não disponível   | disponível                      |
 

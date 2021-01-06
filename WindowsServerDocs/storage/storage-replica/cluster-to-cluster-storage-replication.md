@@ -2,17 +2,17 @@
 title: Replicação de armazenamento de cluster para cluster
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
 description: Como usar a réplica de armazenamento para replicar volumes em um cluster para outro cluster que executa o Windows Server.
-ms.openlocfilehash: 5de25151f0b49ac9cbf9d6be793c2ba0c6efb165
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c980c48ab23c7e46ead47babe06055008056e763
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950470"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941462"
 ---
 # <a name="cluster-to-cluster-storage-replication"></a>Replicação de armazenamento de cluster para cluster
 
@@ -138,7 +138,7 @@ Muitos desses requisitos podem ser determinados usando o cmdlet `Test-SRTopology
 2. Certifique-se de que os volumes de log SR sempre estará no armazenamento flash mais rápido e os volumes de dados no armazenamento de mais lenta alta capacidade.
 
 3. Inicie o Windows PowerShell e use o cmdlet `Test-SRTopology` para determinar se você atende a todos os requisitos de Réplica de Armazenamento. Você pode usar o cmdlet em um modo somente de requisitos para um teste rápido, assim como um modo de avaliação de desempenho de execução longa.
-   Por exemplo:
+   Por exemplo,
 
    ```PowerShell
    MD c:\temp
@@ -147,7 +147,7 @@ Muitos desses requisitos podem ser determinados usando o cmdlet `Test-SRTopology
    ```
 
      > [!IMPORTANT]
-     > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicione uma carga de trabalho ou o servidor não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos para o volume de origem durante o teste ou baixar e executar [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) para gerar o Ios de gravação. Por exemplo, um exemplo com uma carga de trabalho de e/s de gravação baixa por cinco minutos para o volume D:`Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`
+     > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicione uma carga de trabalho ou o servidor não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos para o volume de origem durante o teste ou baixar e executar [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) para gerar o Ios de gravação. Por exemplo, um exemplo com uma carga de trabalho de e/s de gravação baixa por cinco minutos para o volume D: `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`
 
 4. Examine o relatório **TestSrTopologyReport.html** para garantir que você atende aos requisitos da Réplica de Armazenamento.
 

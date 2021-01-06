@@ -1,17 +1,18 @@
 ---
 title: Etapa 3 configurar a implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba mais sobre as etapas necessárias para configurar a implantação multissite de acesso remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: eee6d949f7b92e547a3bb05b7cd136d527b24ae5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 5b93c56a1760a23c34e522541fdc6bdeb14b9451
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937102"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941692"
 ---
 # <a name="step-3-configure-the-multisite-deployment"></a>Etapa 3 configurar a implantação multissite
 
@@ -47,20 +48,20 @@ Depois de configurar a infraestrutura multissite, siga estas etapas para configu
 
 5.   Clique em **Avançar** três vezes para exibir a tela de seleção de função de servidor.
 
-6.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto**e clique em **Avançar**.
+6.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto** e clique em **Avançar**.
 
 7.  Clique em **Avançar** três vezes.
 
 8.  Na caixa de diálogo **selecionar serviços de função** , selecione **DirectAccess e VPN (RAS)** e clique em **Adicionar recursos**.
 
-9.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos**e, em seguida, clique em **Avançar**.
+9.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
 10. Clique em **Avançar** e, em seguida, clique em **Instalar**.
 
 11.  Na caixa de diálogo **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
 
-![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 
 As etapas 1-3 devem ser executadas manualmente e não são realizadas usando este cmdlet do Windows PowerShell.
@@ -75,13 +76,13 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
 
 #### <a name="to-grant-administrator-permissions"></a>Para conceder permissões de administrador
 
-1.  No servidor de acesso remoto no ponto de entrada adicional: na tela **Iniciar** , digite **Gerenciamento do computador**e pressione Enter.
+1.  No servidor de acesso remoto no ponto de entrada adicional: na tela _ *Iniciar**, digite **Gerenciamento do computador** e pressione Enter.
 
 2.  No painel esquerdo, clique em **usuários e grupos locais**.
 
-3.  Clique duas vezes em **grupos**e clique duas vezes em **Administradores**.
+3.  Clique duas vezes em **grupos** e clique duas vezes em **Administradores**.
 
-4.  Na caixa de diálogo **Propriedades de administradores** , clique em **Adicionar**e, na caixa de diálogo **Selecionar usuários, computadores, contas de serviço ou grupos** , clique em **locais**.
+4.  Na caixa de diálogo **Propriedades de administradores** , clique em **Adicionar** e, na caixa de diálogo **Selecionar usuários, computadores, contas de serviço ou grupos** , clique em **locais**.
 
 5.  Na caixa de diálogo **locais** , na árvore **local** , clique no local que contém a conta de usuário do administrador do DirectAccess e clique em **OK**.
 
@@ -98,7 +99,7 @@ Em cada servidor de acesso remoto que será adicionado à implantação multissi
 
 #### <a name="to-obtain-an-ip-https-certificate"></a>Para obter um certificado IP-HTTPS
 
-1.  Em cada servidor de acesso remoto: na tela **Iniciar** , digite **MMC**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  Em cada servidor de acesso remoto: na tela **Iniciar** , digite **MMC** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  Clique em **Arquivo** e em **Adicionar/Remover Snap-ins**.
 
@@ -136,7 +137,7 @@ Se você tiver selecionado configurar o site do servidor de local de rede no ser
 
 #### <a name="to-install-a-certificate-for-network-location"></a>Para instalar um certificado para local de rede
 
-1.  No servidor de acesso remoto: na tela **Iniciar** , digite **MMC**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto: na tela **Iniciar** , digite **MMC** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  Clique em **Arquivo** e em **Adicionar/Remover Snap-ins**.
 
@@ -174,7 +175,7 @@ Se você tiver selecionado configurar o site do servidor de local de rede no ser
 
 ### <a name="to-create-the-network-location-server-dns-records"></a><a name="NLS"></a>Para criar os registros DNS do servidor do local de rede
 
-1.  No servidor DNS: na tela **Iniciar** , digite **DNSMGMT. msc**e pressione Enter.
+1.  No servidor DNS: na tela **Iniciar** , digite **DNSMGMT. msc** e pressione Enter.
 
 2.  No painel esquerdo do console do **Gerenciador de DNS** , abra a zona de pesquisa direta para a rede interna. Clique com o botão direito do mouse na zona relevante e clique em **novo host (A ou aaaa)**.
 
@@ -193,7 +194,7 @@ Os computadores cliente Windows do DirectAccess devem ser membros de grupos de s
 
 #### <a name="remove--windows-7--clients-from-windows-8-security-groups"></a>Remover clientes do Windows 7 de grupos de segurança do Windows 8
 
-1.  No controlador de domínio primário, clique em **Iniciar**e em **Active Directory usuários e computadores**.
+1.  No controlador de domínio primário, clique em **Iniciar** e em **Active Directory usuários e computadores**.
 
 2.  Para remover computadores do grupo de segurança, clique duas vezes no grupo de segurança e, na caixa de diálogo **Propriedades do<Group_Name>** , clique na guia **Membros** .
 
@@ -215,9 +216,9 @@ Para configurar uma implantação multissite, habilite o recurso multissite em s
 
 ### <a name="to-enable-a-multisite-configuration"></a><a name="EnabledMultisite"></a>Para habilitar uma configuração multissite
 
-1.  No servidor de acesso remoto existente: na tela **Iniciar** , digite **RAMgmtUI.exe**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto existente: na tela **Iniciar** , digite **RAMgmtUI.exe** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
-2.  No console de gerenciamento de acesso remoto, clique em **configuração**e, no painel **tarefas** , clique em **habilitar multissite**.
+2.  No console de gerenciamento de acesso remoto, clique em **configuração** e, no painel **tarefas** , clique em **habilitar multissite**.
 
 3.  No Assistente para **habilitar implantação multissite** , na página **antes de começar** , clique em **Avançar**.
 
@@ -225,7 +226,7 @@ Para configurar uma implantação multissite, habilite o recurso multissite em s
 
 5.  Na página **seleção de ponto de entrada** , siga um destes procedimentos:
 
-    -   Clique em **atribuir pontos de entrada automaticamente e permita que os clientes selecionem manualmente** para rotear automaticamente os computadores cliente para o ponto de entrada mais adequado, permitindo também que os computadores cliente selecionem um ponto de entrada manualmente. A seleção de ponto de entrada manual está disponível somente para computadores com Windows 8. Clique em **Próximo**.
+    -   Clique em **atribuir pontos de entrada automaticamente e permita que os clientes selecionem manualmente** para rotear automaticamente os computadores cliente para o ponto de entrada mais adequado, permitindo também que os computadores cliente selecionem um ponto de entrada manualmente. A seleção de ponto de entrada manual está disponível somente para computadores com Windows 8. Clique em **Avançar**.
 
     -   Clique em **atribuir pontos de entrada automaticamente** para rotear automaticamente os computadores cliente para o ponto de entrada mais adequado e clique em **Avançar**.
 
@@ -240,9 +241,9 @@ Para configurar uma implantação multissite, habilite o recurso multissite em s
 
 7.  Na página **suporte ao cliente** , siga um destes procedimentos:
 
-    -   Para limitar o acesso a computadores cliente que executam o Windows 8 ou sistemas operacionais posteriores, clique em **limitar o acesso a computadores cliente que executam o Windows 8 ou um sistema operacional posterior**e clique em **Avançar**.
+    -   Para limitar o acesso a computadores cliente que executam o Windows 8 ou sistemas operacionais posteriores, clique em **limitar o acesso a computadores cliente que executam o Windows 8 ou um sistema operacional posterior** e clique em **Avançar**.
 
-    -   Para permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada, clique em **permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada**e clique em **Adicionar**. Na caixa de diálogo **Selecionar grupos** , selecione os grupos de segurança que contêm os computadores cliente do Windows 7, clique em **OK**e em **Avançar**.
+    -   Para permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada, clique em **permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada** e clique em **Adicionar**. Na caixa de diálogo **Selecionar grupos** , selecione os grupos de segurança que contêm os computadores cliente do Windows 7, clique em **OK** e em **Avançar**.
 
 8.  Na página **configurações de GPO do cliente** , aceite o GPO padrão para computadores cliente do Windows 7 para esse ponto de entrada, digite o nome do GPO que deseja que o acesso remoto crie automaticamente ou clique em **procurar** para localizar o GPO para computadores cliente com Windows 7 e clique em **Avançar**.
 
@@ -254,7 +255,7 @@ Para configurar uma implantação multissite, habilite o recurso multissite em s
 
 10. Na caixa de diálogo **habilitando a implantação** multissite, clique em **fechar** e, em seguida, no assistente habilitar implantação multissite, clique em **Fechar**.
 
-![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -283,9 +284,9 @@ Depois de habilitar o multissite em sua implantação, você pode adicionar outr
 
 ### <a name="to-add-entry-points-to-your-multisite-deployment"></a><a name="AddEP"></a>Para adicionar pontos de entrada à implantação multissite
 
-1.  No servidor de acesso remoto existente: na tela **Iniciar** , digite **RAMgmtUI.exe**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  Em seu servidor de acesso remoto existente: na tela _ *Iniciar**, digite **RAMgmtUI.exe** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
-2.  No console de gerenciamento de acesso remoto, clique em **configuração**e, no painel **tarefas** , clique em **Adicionar um ponto de entrada**.
+2.  No console de gerenciamento de acesso remoto, clique em **configuração** e, no painel **tarefas** , clique em **Adicionar um ponto de entrada**.
 
 3.  No assistente Adicionar um ponto de entrada, na página **detalhes do ponto de entrada** , em **servidor de acesso remoto**, insira o nome de domínio totalmente qualificado (FQDN) do servidor a ser adicionado. Em **nome do ponto de entrada**, digite o nome do ponto de entrada e clique em **Avançar**.
 
@@ -296,7 +297,7 @@ Depois de habilitar o multissite em sua implantação, você pode adicionar outr
 
 5.  Na página **topologia de rede** , clique na topologia que corresponde à topologia de rede do servidor de acesso remoto que você está adicionando e clique em **Avançar**.
 
-6.  Na página **nome da rede ou endereço IP** , em **digite o nome público ou o endereço IP usado pelos clientes para se conectar ao servidor de acesso remoto**, insira o nome público ou o endereço IP usado pelos clientes para se conectar ao servidor de acesso remoto. O nome público corresponde ao nome da entidade do certificado IP-HTTPS. No caso em que a topologia de rede de borda foi implementada, o endereço IP é o do adaptador externo do servidor de acesso remoto. Clique em **Próximo**.
+6.  Na página **nome da rede ou endereço IP** , em **digite o nome público ou o endereço IP usado pelos clientes para se conectar ao servidor de acesso remoto**, insira o nome público ou o endereço IP usado pelos clientes para se conectar ao servidor de acesso remoto. O nome público corresponde ao nome da entidade do certificado IP-HTTPS. No caso em que a topologia de rede de borda foi implementada, o endereço IP é o do adaptador externo do servidor de acesso remoto. Clique em **Avançar**.
 
 7.  Na página **adaptadores de rede** , siga um destes procedimentos:
 
@@ -304,15 +305,15 @@ Depois de habilitar o multissite em sua implantação, você pode adicionar outr
 
     -   Se você estiver implantando uma topologia com um adaptador de rede, em **adaptador de rede**, selecione o adaptador que está conectado à rede interna.
 
-8.  Na página **adaptadores de rede** , em **selecionar o certificado usado para autenticar conexões IP-HTTPS**, clique em **procurar** para localizar e selecionar o certificado IP-HTTPS. Clique em **Próximo**.
+8.  Na página **adaptadores de rede** , em **selecionar o certificado usado para autenticar conexões IP-HTTPS**, clique em **procurar** para localizar e selecionar o certificado IP-HTTPS. Clique em **Avançar**.
 
 9. Se o IPv6 estiver configurado na rede corporativa, na página **configuração de prefixo** , em **prefixo IPv6 atribuído a computadores cliente**, insira um prefixo IP-HTTPS para atribuir endereços IPv6 aos computadores cliente DirectAccess e clique em **Avançar**.
 
 10. Na página **suporte ao cliente** , siga um destes procedimentos:
 
-    -   Para limitar o acesso a computadores cliente que executam o Windows 8 ou sistemas operacionais posteriores, clique em **limitar o acesso a computadores cliente que executam o Windows 8 ou um sistema operacional posterior**e clique em **Avançar**.
+    -   Para limitar o acesso a computadores cliente que executam o Windows 8 ou sistemas operacionais posteriores, clique em **limitar o acesso a computadores cliente que executam o Windows 8 ou um sistema operacional posterior** e clique em **Avançar**.
 
-    -   Para permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada, clique em **permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada**e clique em **Adicionar**. Na caixa de diálogo **Selecionar grupos** , selecione os grupos de segurança que contêm os computadores cliente do Windows 7 que se conectarão a esse ponto de entrada, clique em **OK**e clique em **Avançar**.
+    -   Para permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada, clique em **permitir que computadores cliente que executam o Windows 7 acessem esse ponto de entrada** e clique em **Adicionar**. Na caixa de diálogo **Selecionar grupos** , selecione os grupos de segurança que contêm os computadores cliente do Windows 7 que se conectarão a esse ponto de entrada, clique em **OK** e clique em **Avançar**.
 
 11. Na página **configurações de GPO do cliente** , aceite o GPO padrão para computadores cliente do Windows 7 para esse ponto de entrada, digite o nome do GPO que você deseja que o acesso remoto crie automaticamente ou clique em **procurar** para localizar o GPO para computadores cliente do Windows 7 e clique em **Avançar**.
 
@@ -336,7 +337,7 @@ Depois de habilitar o multissite em sua implantação, você pode adicionar outr
 
 16. Repita esse procedimento da etapa 2 para cada ponto de entrada que você deseja adicionar à implantação multissite.
 
-![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)**_<em>Comandos equivalentes</em> do Windows PowerShell_**
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -352,6 +353,6 @@ Para permitir que computadores cliente com Windows 7 acessem por meio do segundo
 Add-DAClient -EntrypointName 'Edge2-Europe' -DownlevelGpoName @('corp.contoso.com\ DA_W7_Clients_GPO_Europe') -DownlevelSecurityGroupNameList @('corp.contoso.com\DA_Clients_Europe')
 ```
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Veja também
 
 -   [Etapa 2: configurar a infraestrutura multissite](Step-2-Configure-the-Multisite-Infrastructure.md)

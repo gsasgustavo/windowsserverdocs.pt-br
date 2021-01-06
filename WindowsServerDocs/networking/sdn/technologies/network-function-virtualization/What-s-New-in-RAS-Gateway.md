@@ -2,16 +2,17 @@
 title: Novidades no Gateway de RAS
 description: Você pode usar este tópico para saber mais sobre os novos recursos do gateway de RAS, que é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) no Windows Server 2016.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 763764875b9213efdfbbef4e9ff1742a3734591f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: c40969f18684dbe3fffff205c9f46582c7a2b3ae
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969523"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943202"
 ---
 # <a name="whats-new-in-ras-gateway"></a>Novidades no Gateway de RAS
 

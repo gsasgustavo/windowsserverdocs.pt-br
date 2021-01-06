@@ -1,17 +1,18 @@
 ---
 title: Processo da implantação de acesso sem fio
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar o acesso sem fio autenticado 802.1 X com base em senha"
+description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
 manager: brianlic
 ms.topic: article
 ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
 author: eross-msft
 ms.author: lizross
-ms.openlocfilehash: 9c2326df824288b6adf4453d6ef272ba632eb6c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: d8573992748402911a7366cb6e9059ef7b31966a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969592"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943212"
 ---
 # <a name="wireless-access-deployment-process"></a>Processo da implantação de acesso sem fio
 
@@ -23,7 +24,7 @@ O processo que você usa para implantar o acesso sem fio ocorre nestes estágios
 
 Planeje, implante e configure seus APs para conectividade de cliente sem fio e para uso com o NPS. Dependendo de suas dependências de rede e de preferência, você pode pré-configurar \- as configurações em seus APS sem fio antes de instalá-los em sua rede, ou você pode configurá-los remotamente após a instalação.
 
-## <a name="stage-2--adds-group-configuration"></a>Etapa 2 – configuração do grupo de AD DS
+## <a name="stage-2--ad-ds-group-configuration"></a>Etapa 2 – configuração do grupo de AD DS
 
 No AD DS, você deve criar um ou mais grupos de segurança de usuários sem fio.
 

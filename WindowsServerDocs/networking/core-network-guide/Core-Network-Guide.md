@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f746422ee05afc4f000693138c1f2efb3b7f70a9
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.date: 08/07/2020
+ms.openlocfilehash: 9862b322c95a6b34bf0e66330f826c057e7de1df
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866115"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943332"
 ---
 # <a name="core-network-components"></a>Principais componentes de rede
 
@@ -133,7 +134,7 @@ O TCP/IP oferece utilitários TCP/IP básicos que permitem que computadores base
 
 -  Windows 7
 
--  Windows Server 2008
+-  Windows Server 2008
 
 - Windows Vista
 
@@ -222,7 +223,7 @@ Para obter mais informações, consulte [Planejando a implantação do DHCP1](#b
 Para cada servidor da rede principal, renomeie o computador e atribua e configure um endereço IPv4 estático e outras propriedades de TCP/IP para o computador.
 
 #### <a name="planning-naming-conventions-for-computers-and-devices"></a>Planejando convenções de nomenclatura para computadores e dispositivos
-Para manter a consistência em toda a rede, é uma boa ideia usar nomes consistentes para servidores, impressoras e outros dispositivos. Os nomes de computador podem ser usados para ajudar os usuários e administradores a identificar facilmente a finalidade e a localização do servidor, impressora ou outro dispositivo. Por exemplo, se você tiver três servidores DNS, um em São Francisco, um em Los Angeles e outro em Chicago, você poderá usar o número de local da *função de servidor* Convenção de nomenclatura - *location* - *number*:
+Para manter a consistência em toda a rede, é uma boa ideia usar nomes consistentes para servidores, impressoras e outros dispositivos. Os nomes de computador podem ser usados para ajudar os usuários e administradores a identificar facilmente a finalidade e a localização do servidor, impressora ou outro dispositivo. Por exemplo, se você tiver três servidores DNS, um em São Francisco, um em Los Angeles e outro em Chicago, você poderá usar o número de local da *função de servidor* Convenção de nomenclatura -  - :
 
 - DNS-DEN-01. Este nome representa o servidor DNS em Denver, Colorado. Se os servidores DNS adicionais forem adicionados em Denver, o valor numérico no nome poderá ser incrementado, como no DNS-DEN-02 e no DNS-DEN-03.
 
@@ -668,7 +669,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
     **Posição?**
 
-    - Active Directory a pasta usuários e computadores/*nó do domínio* / *folder*
+    - Active Directory a pasta usuários e computadores/*nó do domínio* / 
 
 3.  Aponte para **Novo** e clique em **Usuário**. A caixa de diálogo **novo objeto – usuário** é aberta.
 
@@ -1232,7 +1233,7 @@ Este tópico fornece procedimentos para configurar endereços IP estáticos em c
 
 - [Windows Server 2008 R2](#bkmk_R2Cng_WS08R2IP)
 
-- [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
+- [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
 
 ### <a name="windows-server-2008-r2"></a><a name="bkmk_R2Cng_WS08R2IP"></a>Windows Server 2008 R2
 A associação em **Administradores**, ou equivalente, é o requisito mínimo para executar este procedimento.

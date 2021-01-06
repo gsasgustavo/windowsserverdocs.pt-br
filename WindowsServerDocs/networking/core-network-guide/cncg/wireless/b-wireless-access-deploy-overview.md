@@ -1,17 +1,18 @@
 ---
 title: Visão geral da implantação de acesso sem fio
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar o acesso sem fio autenticado 802.1 X com base em senha"
+description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
 manager: brianlic
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
 author: eross-msft
 ms.author: lizross
-ms.openlocfilehash: ab135c7a30a1930fef58fae357a38510eab711eb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 336f8af276e14d0f54702f04539f041cf1c71400
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969613"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943268"
 ---
 # <a name="wireless-access-deployment-overview"></a>Visão geral da implantação de acesso sem fio
 
@@ -46,7 +47,7 @@ Use o snap Active Directory usuários e computadores \- para criar e gerenciar c
 
 Você pode usar a \( extensão de políticas de rede sem fio IEEE 802,11 \) do gerenciamento de política de grupo para configurar políticas que são aplicadas a computadores sem fio quando tentam acessar a rede.
 
-No Editor de Gerenciamento de Política de Grupo, ao clicar com o botão direito do mouse \- em ** \( \) políticas IEEE 802,11 de rede sem fio**, você terá as duas opções a seguir para o tipo de política sem fio que você criar.
+No Editor de Gerenciamento de Política de Grupo, ao clicar com o botão direito do mouse \- em **\( \) políticas IEEE 802,11 de rede sem fio**, você terá as duas opções a seguir para o tipo de política sem fio que você criar.
 
 - **Criar uma nova política de rede sem fio para o Windows Vista e versões posteriores**
 
@@ -93,9 +94,9 @@ Para habilitar a conectividade sem fio em computadores que executam sistemas ope
 
 Quando você instala o recurso **serviço de LAN sem fio** , o novo serviço **configuração automática de WLAN** é instalado nos **Serviços**. Quando a instalação for concluída, você deverá reiniciar o servidor.
 
-Depois que o servidor for reiniciado, você poderá acessar a configuração automática de WLAN ao clicar em **Iniciar**, **Ferramentas administrativas do Windows**e **Serviços**.
+Depois que o servidor for reiniciado, você poderá acessar a configuração automática de WLAN ao clicar em **Iniciar**, **Ferramentas administrativas do Windows** e **Serviços**.
 
-Após a instalação e a reinicialização do servidor, o serviço de configuração automática de WLAN está em um estado parado com um tipo de inicialização **automático**. Para iniciar o serviço, clique duas vezes em **configuração automática de WLAN**. Na guia **geral** , clique em **Iniciar**e em **OK**.
+Após a instalação e a reinicialização do servidor, o serviço de configuração automática de WLAN está em um estado parado com um tipo de inicialização **automático**. Para iniciar o serviço, clique duas vezes em **configuração automática de WLAN**. Na guia **geral** , clique em **Iniciar** e em **OK**.
 
 O serviço de configuração automática de WLAN enumera os adaptadores sem fio e gerencia as conexões sem fio e os perfis sem fio que contêm configurações que são necessárias para configurar o servidor para se conectar a uma rede sem fio.
 

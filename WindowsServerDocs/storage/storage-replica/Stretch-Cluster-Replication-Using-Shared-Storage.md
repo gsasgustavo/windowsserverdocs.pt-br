@@ -3,16 +3,16 @@ description: 'Saiba mais sobre: replicação de cluster de ampliação usando ar
 title: Replicação de cluster estendido usando Armazenamento Compartilhado
 manager: eldenc
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 096d1258cd74dec51e93b4b26266478206742beb
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 9d7153b5147d576f54fa90efc5724f994618cfc5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97043754"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97941722"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>Replicação de cluster estendido usando Armazenamento Compartilhado
 
@@ -794,7 +794,7 @@ Agora você irá gerenciar e operar o cluster estendido. Você pode executar tod
     > [!NOTE]
     > Se usar um computador de gerenciamento remoto, você precisará especificar o nome do cluster para esses cmdlets e fornecer os dois nomes de RG.
 
-### <a name="related-topics"></a>Tópicos Relacionados
+### <a name="related-topics"></a>Tópicos relacionados
 - [Visão geral da Réplica de Armazenamento](storage-replica-overview.md)
 - [Replicação de armazenamento de servidor para servidor](server-to-server-storage-replication.md)
 - [Cluster para replicação de armazenamento de cluster](cluster-to-cluster-storage-replication.md)

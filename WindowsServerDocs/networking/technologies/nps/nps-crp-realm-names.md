@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e219169ba3132a18c0a76219fa8da96e30902090
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 0ddd8ab58bcb78a7bf679b4f97b0fff116eabfae
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969393"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943182"
 ---
 # <a name="realm-names"></a>Nomes de realm
 
@@ -19,9 +20,9 @@ ms.locfileid: "87969393"
 
 Você pode usar este tópico para obter uma visão geral do uso de nomes de territórios no processamento de solicitação de conexão do servidor de políticas de rede.
 
-O atributo RADIUS de nome de usuário é uma cadeia de caracteres que normalmente contém um local de conta de usuário e um nome de conta de usuário. O local da conta de usuário também é chamado de realm ou nome de realm, e é sinônimo do conceito de domínio, incluindo domínios DNS, domínios de® de Active Directory e domínios do Windows NT 4,0. Por exemplo, se uma conta de usuário estiver localizada no banco de dados de contas de usuário para um domínio chamado example.com, example.com será o nome do realm.
+O User-Name atributo RADIUS é uma cadeia de caracteres que normalmente contém um local de conta de usuário e um nome de conta de usuário. O local da conta de usuário também é chamado de realm ou nome de realm, e é sinônimo do conceito de domínio, incluindo domínios DNS, domínios de® de Active Directory e domínios do Windows NT 4,0. Por exemplo, se uma conta de usuário estiver localizada no banco de dados de contas de usuário para um domínio chamado example.com, example.com será o nome do realm.
 
-Em outro exemplo, se o atributo RADIUS de nome de usuário contiver o nome de usuário user1@example.com , user1 será o nome da conta de usuário e example.com será o nome do realm. Os nomes de realm podem ser apresentados no nome de usuário como um prefixo ou como um sufixo:
+Em outro exemplo, se o atributo RADIUS User-Name contiver o nome de usuário user1@example.com , user1 será o nome da conta de usuário e example.com será o nome do realm. Os nomes de realm podem ser apresentados no nome de usuário como um prefixo ou como um sufixo:
 
 - **Example\user1**. Neste exemplo, o **exemplo** de nome de realm é um prefixo; e também é o nome de um domínio de AD DS do Active Directory Domain &reg; Services \( \) .
 
@@ -31,7 +32,7 @@ Você pode usar nomes de território configurados em políticas de solicitação
 
 Quando o NPS é configurado como um servidor RADIUS com a política de solicitação de conexão padrão, o NPS processa as solicitações de conexão para o domínio no qual o NPS é membro e para domínios confiáveis.
 
-Para configurar o NPS para atuar como um proxy RADIUS e encaminhar solicitações de conexão para domínios não confiáveis, você deve criar uma nova política de solicitação de conexão. Na nova política de solicitação de conexão, você deve configurar o atributo de nome de usuário com o nome de realm que estará contido no atributo User-Name das solicitações de conexão que você deseja encaminhar. Você também deve configurar a política de solicitação de conexão com um grupo de servidores RADIUS remoto. A política de solicitação de conexão permite que o NPS Calcule quais solicitações de conexão encaminhar para o grupo de servidores remotos RADIUS com base na parte de realm do atributo User-Name.
+Para configurar o NPS para atuar como um proxy RADIUS e encaminhar solicitações de conexão para domínios não confiáveis, você deve criar uma nova política de solicitação de conexão. Na nova política de solicitação de conexão, você deve configurar o atributo de nome de usuário com o nome de realm que será contido no atributo de User-Name de solicitações de conexão que você deseja encaminhar. Você também deve configurar a política de solicitação de conexão com um grupo de servidores RADIUS remoto. A política de solicitação de conexão permite que o NPS Calcule quais solicitações de conexão encaminhar para o grupo de servidores remotos RADIUS com base na parte de realm do atributo User-Name.
 
 ## <a name="acquiring-the-realm-name"></a>Adquirindo o nome do Realm
 
@@ -43,9 +44,9 @@ Por exemplo, você pode exigir que os usuários digitem seu nome de usuário, in
 
 Além disso, se você criar um pacote de discagem personalizado com o CMAK (Kit de administração do Gerenciador de conexões), poderá ajudar os usuários adicionando o nome do Realm automaticamente ao nome da conta de usuário em perfis CM que estão instalados nos computadores dos usuários. Por exemplo, você pode especificar um nome de realm e uma sintaxe de nome de usuário no perfil CM para que o usuário precise apenas especificar o nome da conta de usuário ao digitar as credenciais. Nessa circunstância, o usuário não precisa saber ou lembrar o domínio em que sua conta de usuário está localizada.
 
-Durante o processo de autenticação, depois que os usuários digitam suas credenciais baseadas em senha, o nome de usuário é passado do cliente de acesso para o servidor de acesso à rede. O servidor de acesso à rede constrói uma solicitação de conexão e inclui o nome do Realm dentro do atributo RADIUS do nome de usuário na mensagem de solicitação de acesso que é enviada para o proxy ou servidor RADIUS.
+Durante o processo de autenticação, depois que os usuários digitam suas credenciais baseadas em senha, o nome de usuário é passado do cliente de acesso para o servidor de acesso à rede. O servidor de acesso à rede constrói uma solicitação de conexão e inclui o nome do Realm dentro do atributo User-Name RADIUS na mensagem Access-Request que é enviada para o proxy ou servidor RADIUS.
 
-Se o servidor RADIUS for um NPS, a mensagem de solicitação de acesso será avaliada em relação ao conjunto de políticas de solicitação de conexão configuradas. As condições na política de solicitação de conexão podem incluir a especificação do conteúdo do atributo User-Name.
+Se o servidor RADIUS for um NPS, a mensagem de Access-Request será avaliada em relação ao conjunto de políticas de solicitação de conexão configuradas. As condições na política de solicitação de conexão podem incluir a especificação do conteúdo do atributo User-Name.
 
 Você pode configurar um conjunto de políticas de solicitação de conexão que são específicas para o nome do Realm dentro do atributo User-Name de mensagens de entrada. Isso permite que você crie regras de roteamento que encaminham mensagens RADIUS com um nome de realm específico para um conjunto específico de servidores RADIUS quando o NPS é usado como um proxy RADIUS.
 
@@ -63,7 +64,7 @@ Você pode configurar regras de manipulação de atributo para o atributo User-N
 
 Depois que o atributo User-Name é modificado de acordo com as regras de manipulação de atributo que você define, as configurações adicionais da primeira política de solicitação de conexão correspondente são usadas para determinar se:
 
-- O NPS processa a mensagem de solicitação de acesso localmente (quando o NPS está sendo usado como um servidor RADIUS).
+- O NPS processa a mensagem de Access-Request localmente (quando o NPS está sendo usado como um servidor RADIUS).
 
 - O NPS encaminha a mensagem para outro servidor RADIUS (quando o NPS está sendo usado como um proxy RADIUS).
 
