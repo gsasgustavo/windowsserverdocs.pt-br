@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 428d87c8707ca80110f926b4e81d4c43794986da
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b9fdfa0dddabd96623532d1b67dc2a189cde66d9
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049354"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946242"
 ---
 # <a name="token-signing-certificates"></a>Certificados de autenticação de tokens
 
@@ -54,7 +54,7 @@ Há duas opções de farm de servidores que você pode considerar ao obter \- ce
 
     Conforme mostrado na ilustração a seguir, a chave privada de um único certificado de autenticação de token \- pode ser compartilhada para todos os servidores de Federação em um farm. Essa opção — em comparação com a opção "certificado de assinatura de token exclusivo" a seguir \- — reduz os custos se você planeja obter um \- certificado de autenticação de token de uma AC pública.
 
-![assinatura de token](media/adfs2_fedserver_certstory_3.gif)
+    ![A ilustração que mostra a chave privada de um único \- certificado de autenticação de token pode ser compartilhada para todos os servidores de Federação em um farm.](media/adfs2_fedserver_certstory_3.gif)
 
 -   Há um \- certificado de autenticação de token exclusivo para cada servidor de Federação em um farm.
 
@@ -62,7 +62,7 @@ Há duas opções de farm de servidores que você pode considerar ao obter \- ce
 
     Conforme mostrado na ilustração a seguir, você pode obter um \- certificado de autenticação de tokens separado para cada servidor de Federação único no farm. Essa opção será mais cara se você planeja obter seus \- certificados de assinatura de token de uma AC pública.
 
-![assinatura de token](media/adfs2_fedserver_certstory_4.gif)
+    ![assinatura de token](media/adfs2_fedserver_certstory_4.gif)
 
 Para obter informações sobre como instalar um certificado ao usar os serviços de certificados da Microsoft como sua AC corporativa, consulte [IIS 7,0: criar um certificado do servidor de domínio no IIS 7,0](https://go.microsoft.com/fwlink/?LinkId=108548).
 

@@ -6,12 +6,13 @@ ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 6e6406471957c4637a556678031b6c4de9b6d08e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.topic: article
+ms.openlocfilehash: b7a75a610695348d7a42a2fea92fd24bb565966e
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952391"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946852"
 ---
 # <a name="create-a-new-nic-team-on-a-host-computer-or-vm"></a>Criar uma nova equipe de NIC em um computador host ou VM
 
@@ -41,7 +42,7 @@ Neste procedimento, você cria dois comutadores virtuais Hyper-V externos, conec
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Você deve ter a associação em **Administradores**ou equivalente.
+Você deve ter a associação em **Administradores** ou equivalente.
 
 ### <a name="procedure"></a>Procedimento
 
@@ -100,7 +101,7 @@ Você deve ter a associação em **Administradores**ou equivalente.
 
     A caixa de diálogo **configurações** da VM é aberta.
 
-14. Em **adicionar hardware**, clique em **adaptador de rede**e, em seguida, clique em **Adicionar**.
+14. Em **adicionar hardware**, clique em **adaptador de rede** e, em seguida, clique em **Adicionar**.
 
    ![Adicione um adaptador de rede](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)
 
@@ -110,11 +111,11 @@ Você deve ter a associação em **Administradores**ou equivalente.
 
 16. Em **hardware**, clique para expandir o sinal de mais (+) ao lado de **adaptador de rede**.
 
-17. Clique em **recursos avançados**, role para baixo até **agrupamento NIC**e clique para selecionar **habilitar este adaptador de rede para fazer parte de uma equipe no sistema operacional convidado**.
+17. Clique em **recursos avançados**, role para baixo até **agrupamento NIC** e clique para selecionar **habilitar este adaptador de rede para fazer parte de uma equipe no sistema operacional convidado**.
 
 18. Clique em **OK**.
 
-_**Congratula!**_  Você configurou a rede física e virtual.  Agora você pode continuar criando uma nova equipe NIC.
+_**Parabéns!**_  Você configurou a rede física e virtual.  Agora você pode continuar criando uma nova equipe NIC.
 
 ## <a name="step-2-create-a-new-nic-team"></a>Etapa 2. Criar uma nova equipe de NIC
 
@@ -136,13 +137,13 @@ Para obter mais detalhes sobre essas configurações, consulte [configurações 
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Você deve ter a associação em **Administradores**ou equivalente.
+Você deve ter a associação em **Administradores** ou equivalente.
 
 ### <a name="procedure"></a>Procedimento
 
 1. No Gerenciador do Servidor, clique em **Servidor Local**.
 
-2. No painel **Propriedades** , na primeira coluna, localize **agrupamento NIC**e, em seguida, clique no link **desabilitado** .
+2. No painel **Propriedades** , na primeira coluna, localize **agrupamento NIC** e, em seguida, clique no link **desabilitado** .
 
    A caixa de diálogo **agrupamento NIC** é aberta.
 
@@ -150,7 +151,7 @@ Você deve ter a associação em **Administradores**ou equivalente.
 
 3. Em **adaptadores e interfaces**, selecione um ou mais adaptadores de rede que você deseja adicionar a uma equipe NIC.
 
-4. Clique em **tarefas**e clique em **Adicionar à nova equipe**.
+4. Clique em **tarefas** e clique em **Adicionar à nova equipe**.
 
    A caixa de diálogo **nova equipe** é aberta e exibe os adaptadores de rede e os membros da equipe.
 
@@ -172,7 +173,7 @@ Você deve ter a associação em **Administradores**ou equivalente.
 
        ---
 
-   - **Modo de balanceamento de carga**. As opções para o modo de distribuição de balanceamento de carga são o **hash de endereço**, **a porta do Hyper-V**e o **dinâmico**.
+   - **Modo de balanceamento de carga**. As opções para o modo de distribuição de balanceamento de carga são o **hash de endereço**, **a porta do Hyper-V** e o **dinâmico**.
 
      - **Hash de endereço.** [!INCLUDE [address-hash-shortdesc-include](../../includes/address-hash-shortdesc-include.md)]
 
@@ -199,7 +200,7 @@ Você deve ter a associação em **Administradores**ou equivalente.
 
 9. Clique em **OK**.
 
-_**Congratula!**_  Você criou uma nova equipe NIC em um computador host ou VM.
+_**Parabéns!**_  Você criou uma nova equipe NIC em um computador host ou VM.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

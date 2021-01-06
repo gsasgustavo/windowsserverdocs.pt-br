@@ -1,17 +1,18 @@
 ---
 title: Etapa 3 verificar implantações
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba como verificar se você configurou corretamente sua implantação básica do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 905daa32b8293fd1140b0bf6915b18ab16445bba
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 36db79413c774700e2d164ad22146b8b06f83198
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970323"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947242"
 ---
 # <a name="step-3-verify-deployments"></a>Etapa 3 verificar implantações
 

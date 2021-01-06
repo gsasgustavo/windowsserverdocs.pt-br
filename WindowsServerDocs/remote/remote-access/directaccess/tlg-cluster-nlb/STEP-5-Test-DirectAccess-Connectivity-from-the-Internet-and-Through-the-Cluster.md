@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a00411ab3fb051edba7c6c1a0bff479b17fb4add
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 20e4895834d56bfc0cb29700dee38fee9c0b9336
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951161"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946552"
 ---
 # <a name="step-5-test-directaccess-connectivity-from-the-internet-and-through-the-cluster"></a>ETAPA 5 testar a conectividade do DirectAccess da Internet e por meio do cluster
 
@@ -48,15 +49,15 @@ O CLIENT1 agora está pronto para teste do DirectAccess.
 
 8. Na barra de endereços do Internet Explorer, digite **https://app2/** e pressione Enter. Você verá o site padrão no APP2.
 
-9. Na tela **Iniciar** , digite<strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
+9. Na tela **Iniciar** , digite <strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
 
     Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso no domínio de recursos.
 
-10. Na tela **Iniciar** , digite**WF. msc**e pressione Enter.
+10. Na tela **Iniciar** , digite **WF. msc** e pressione Enter.
 
 11. No console **Firewall do Windows com segurança avançada** , observe que somente o perfil **privado** ou **público** está ativo. O Firewall do Windows deve estar habilitado para que o DirectAccess funcione corretamente. Se o Firewall do Windows estiver desabilitado, a conectividade do DirectAccess não funcionará.
 
-12. No painel esquerdo do console, expanda o nó **monitoramento** e clique no nó **regras de segurança de conexão** . Você deve ver as regras de segurança de conexão ativas: **política do DirectAccess-ClientToCorp**, **política do DirectAccess-ClientToDNS64NAT64PrefixExemption**, **política do DirectAccess-ClientToInfra**e **política do DirectAccess-ClientToNlaExempt**. Role o painel central para a direita para mostrar as colunas **1ª autenticação** e **2 métodos de autenticação** . Observe que a primeira regra (ClientToCorp) usa o Kerberos V5 para estabelecer o túnel de intranet e a terceira regra (ClientToInfra) usa NTLMv2 para estabelecer o túnel de infraestrutura.
+12. No painel esquerdo do console, expanda o nó **monitoramento** e clique no nó **regras de segurança de conexão** . Você deve ver as regras de segurança de conexão ativas: **política do DirectAccess-ClientToCorp**, **política do DirectAccess-ClientToDNS64NAT64PrefixExemption**, **política do DirectAccess-ClientToInfra** e **política do DirectAccess-ClientToNlaExempt**. Role o painel central para a direita para mostrar as colunas **1ª autenticação** e **2 métodos de autenticação** . Observe que a primeira regra (ClientToCorp) usa o Kerberos V5 para estabelecer o túnel de intranet e a terceira regra (ClientToInfra) usa NTLMv2 para estabelecer o túnel de infraestrutura.
 
 13. No painel esquerdo do console, expanda o nó **associações de segurança** e clique no nó **modo principal** . Observe as associações de segurança de túnel de infraestrutura usando NTLMv2 e a associação de segurança de túnel de intranet usando Kerberos v5. Clique com o botão direito do mouse na entrada que mostra o **usuário (Kerberos V5)** como o **segundo método de autenticação** e clique em **Propriedades**. Na guia **geral** , observe que a **segunda ID local de autenticação** é **CORP\User1**, indicando que o Usuário1 foi capaz de se autenticar com êxito no domínio corp usando o Kerberos.
 
@@ -70,7 +71,7 @@ O CLIENT1 agora está pronto para teste do DirectAccess.
 
 3. Na janela do Windows PowerShell, execute ping em APP1 e APP2. Você deve receber respostas de ambos os recursos.
 
-4. Na tela **Iniciar** , digite<strong> \\ \app2\files</strong>. Você deve ver a pasta compartilhada no computador APP2. A capacidade de abrir o compartilhamento de arquivos em APP2 indica que o segundo túnel, que requer a autenticação Kerberos para o usuário, está funcionando corretamente.
+4. Na tela **Iniciar** , digite <strong> \\ \app2\files</strong>. Você deve ver a pasta compartilhada no computador APP2. A capacidade de abrir o compartilhamento de arquivos em APP2 indica que o segundo túnel, que requer a autenticação Kerberos para o usuário, está funcionando corretamente.
 
 5. Abra o Internet Explorer e, em seguida, abra os sites https://app1/ e https://app2/ . A capacidade de abrir ambos os sites confirma que o primeiro e o segundo túneis estão ativos e funcionando. Feche o Internet Explorer.
 

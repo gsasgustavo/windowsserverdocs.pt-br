@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 781c3d99fdd063d094b85032e1ccaca0860cba9a
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 985ef6fe09433b843b3e67445045b68449036e24
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046984"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947122"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-sql-server"></a>Farm de servidores de Federação AD FS herdados usando SQL Server
 
@@ -61,7 +61,7 @@ Semelhante ao farm de servidores de Federação com a topologia WID, todos os se
 
 A ilustração a seguir mostra como a empresa fictícia Contoso farmacêuticas implantou seu farm de servidores de Federação com SQL Server topologia na rede corporativa. Ele também mostra como essa empresa configurou a rede de perímetro com acesso a um servidor DNS, um host NLB adicional que usa o mesmo nome DNS de cluster \( FS.contoso.com \) que é usado no cluster NLB de rede corporativa e com dois proxies de aplicativo Web \( wap1 e WAP2 \) .
 
-![farm de servidores usando SQL](media/SQLFarmADFSBlue.gif)
+![Ilustração que mostra como a empresa fictícia Contoso Pharmaceuticals implantou seu farm de servidores de Federação com SQL Server topologia na rede corporativa.](media/SQLFarmADFSBlue.gif)
 
 Para obter mais informações sobre como configurar seu ambiente de rede para uso com servidores de Federação ou proxies de aplicativo Web, consulte a seção "requisitos de resolução de nomes" em [AD FS requisitos](AD-FS-Requirements.md) e [planejar a WAP (infraestrutura de proxy de aplicativo Web)](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
@@ -100,7 +100,7 @@ Da perspectiva dos nós de um farm de AD FS SQL Server, o grupo de disponibilida
 
 O diagrama a seguir mostra um farm AD FS SQL Server com o grupo de disponibilidade AlwaysOn.
 
-![farm de servidores usando SQL](media/alwaysonavailabilitygroups.jpg)
+![Diagrama que mostra um farm de SQL Server AD FS com o grupo de disponibilidade AlwaysOn.](media/alwaysonavailabilitygroups.jpg)
 
 > [!NOTE]
 > Os grupos de disponibilidade AlwaysOn exigem que as instâncias de SQL Server residam nos nós WSFC do clustering de failover do Windows Server \( \) .

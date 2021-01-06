@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a39317c8a47de36d1cdabeac2c08dbaef7ae4fb4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 5fb19aeed8cd390693b0d62516191e920e4d879b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966313"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947702"
 ---
 # <a name="step-2-configure-the-remote-access-server"></a>Etapa 2 configurar o servidor de acesso remoto
 
@@ -43,19 +44,19 @@ Você deve instalar a função de acesso remoto em um servidor em sua organizaç
 
 2.  Clique em **Avançar** três vezes para exibir a tela de seleção de função de servidor.
 
-3.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto**e clique em **Avançar**.
+3.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto** e clique em **Avançar**.
 
 4.  Clique em **Avançar** três vezes.
 
 5.  Na caixa de diálogo **selecionar serviços de função** , selecione **DirectAccess e VPN (RAS)** e clique em **Adicionar recursos**.
 
-6.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos**e, em seguida, clique em **Avançar**.
+6.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
 7. Clique em **Avançar** e, em seguida, clique em **Instalar**.
 
 8.  Na caixa de diálogo **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
-![](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -77,7 +78,7 @@ Há três opções que você pode usar para implantar o acesso remoto no console
 
 #### <a name="to-configure-the-deployment-type"></a>Para configurar o tipo de implantação
 
-1.  No servidor de acesso remoto, abra o console de gerenciamento de acesso remoto: na tela **Iniciar** , digite, digite **console de gerenciamento de acesso remoto**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto, abra o console de gerenciamento de acesso remoto: na tela _ *Iniciar**, digite, digite **console de gerenciamento de acesso remoto** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de Gerenciamento de Acesso Remoto, no painel do meio, clique em **Executar o assistente de configuração de acesso remoto**.
 
@@ -90,7 +91,7 @@ Para que um computador cliente possa ser provisionado para usar o DirectAccess, 
 
 1.  No painel central do Console de Gerenciamento de Acesso Remoto, na área **Etapa 1: Clientes Remotos**, clique em **Configurar**.
 
-2.  No assistente de instalação do cliente DirectAccess, na página **cenário de implantação** , clique em **implantar DirectAccess somente para gerenciamento remoto**e, em seguida, clique em **Avançar**.
+2.  No assistente de instalação do cliente DirectAccess, na página **cenário de implantação** , clique em **implantar DirectAccess somente para gerenciamento remoto** e, em seguida, clique em **Avançar**.
 
 3.  Na página **Selecionar Grupos**, clique em **Adicionar**.
 
@@ -136,7 +137,7 @@ Para implantar o acesso remoto, você precisa configurar o servidor que atuará 
 
     -   Certificado IP-HTTPS. Isso se baseia no nome público da implantação que você definiu durante a etapa anterior do assistente. Se o assistente não detectar o certificado IP-HTTPS correto, clique em **procurar** para selecionar manualmente o certificado correto.
 
-4.  Clique em **Próximo**.
+4.  Clique em **Avançar**.
 
 5.  Na página **configuração de prefixo** (essa página só ficará visível se o IPv6 for detectado na rede interna), o assistente detectará automaticamente as configurações de IPv6 que são usadas na rede interna. Se sua implantação necessitar de prefixos adicionais, configure os prefixos IPv6 para a rede interna, um prefixo IPv6 para atribuir a computadores cliente do DirectAccess e um para atribuir a computadores cliente do VPN.
 
@@ -169,7 +170,7 @@ Para configurar os servidores de infraestrutura em uma implantação de acesso r
 
 3.  Na página **DNS** , na tabela, insira os sufixos de nome adicionais que serão aplicados como isenções de tabela de políticas de resolução de nomes (NRPT). Selecione a opção de resolução de nome local e clique em **Avançar**.
 
-4.  Na página **lista de pesquisa de sufixo DNS** , o servidor de acesso remoto automaticamente detecta sufixos de domínio na implantação. Use os botões **Adicionar** e **remover** para criar a lista de sufixos de domínio que você deseja usar. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Próximo**.
+4.  Na página **lista de pesquisa de sufixo DNS** , o servidor de acesso remoto automaticamente detecta sufixos de domínio na implantação. Use os botões **Adicionar** e **remover** para criar a lista de sufixos de domínio que você deseja usar. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Avançar**.
 
 5.  Na página **Gerenciamento** , adicione servidores de gerenciamento que não são detectados automaticamente e clique em **Avançar**. O acesso remoto adiciona automaticamente os controladores de domínio e os servidores de Configuration Manager.
 
@@ -197,7 +198,7 @@ Uma vez concluída a configuração do Acesso Remoto, a **Revisão de Acesso Rem
 
     Esta lista inclui a URL do servidor de local de rede, os sufixos de DNS usados pelos clientes do DirectAccess e as informações do servidor de gerenciamento.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Veja também
 
 -   [Etapa 3: Verificar a implantação](Step-3-Verify-the-Deployment_2.md)
 

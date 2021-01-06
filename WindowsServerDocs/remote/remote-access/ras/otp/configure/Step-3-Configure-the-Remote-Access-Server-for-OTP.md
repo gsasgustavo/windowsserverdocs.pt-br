@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e0b03bfd06c693674e10e9eb9fba0a0dfd30b167
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: c5b4cde212da9c585c4d9afdb068147f406beb51
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969073"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946452"
 ---
 # <a name="step-3-configure-the-remote-access-server-for-otp"></a>Etapa 3 configurar o servidor de acesso remoto para OTP
 
@@ -52,14 +53,14 @@ Para configurar o acesso remoto para usar a autenticação de dois fatores e a O
 
 2.  Na janela de **instalação do DirectAccess** , em **etapa 2 – servidor de acesso remoto**, clique em **Editar**.
 
-3.  Clique **em Avançar** três vezes e, na seção **autenticação** , selecione **autenticação de dois fatores** e **usar OTP**e verifique se a opção **usar certificados de computador** está marcada.
+3.  Clique **em Avançar** três vezes e, na seção **autenticação** , selecione **autenticação de dois fatores** e **usar OTP** e verifique se a opção **usar certificados de computador** está marcada.
 
     > [!NOTE]
     > Depois que a OTP tiver sido habilitada no servidor de acesso remoto, se você desabilitar a OTP desmarcando **usar OTP**, as extensões ISAPI e CGI serão desinstaladas no servidor.
 
 4.  Se o suporte do Windows 7 for necessário, marque a caixa de seleção **habilitar computadores cliente do Windows 7 para se conectar via DirectAccess** . Observação: conforme discutido na seção de planejamento, os clientes do Windows 7 devem ter o DCA 2,0 instalado para dar suporte ao DirectAccess com OTP.
 
-5.  Clique em **Próximo**.
+5.  Clique em **Avançar**.
 
 6.  Na seção **servidor RADIUS de OTP** , clique duas vezes no campo **nome do servidor** em branco.
 
@@ -68,7 +69,7 @@ Para configurar o acesso remoto para usar a autenticação de dois fatores e a O
     > [!NOTE]
     > Se o servidor RADIUS estiver em um domínio diferente do servidor de acesso remoto, o campo nome do **servidor** deverá especificar o FQDN do servidor RADIUS.
 
-8.  Na seção **servidores de AC de OTP** , selecione os servidores de AC a serem usados para o registro de certificados de autenticação de cliente de OTP e clique em **Adicionar**. Clique em **Próximo**.
+8.  Na seção **servidores de AC de OTP** , selecione os servidores de AC a serem usados para o registro de certificados de autenticação de cliente de OTP e clique em **Adicionar**. Clique em **Avançar**.
 
 9. Na seção **modelos de certificado de OTP** , clique em **procurar** para selecionar o modelo de certificado usado para o registro de certificados emitidos para autenticação OTP.
 
@@ -93,7 +94,7 @@ Para configurar o acesso remoto para usar a autenticação de dois fatores e a O
 
 17. Na caixa de diálogo **revisão de acesso remoto** , clique em **aplicar**, aguarde a atualização da política do DirectAccess e clique em **Fechar**.
 
-18. Na tela **Iniciar** , digite**powershell.exe**, clique com o botão direito do mouse em **PowerShell**, clique em **avançado**e clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+18. Na tela **Iniciar** , digite **powershell.exe**, clique com o botão direito do mouse em **PowerShell**, clique em **avançado** e clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 19. Na janela do Windows PowerShell, digite **gpupdate/force** e pressione Enter.
 

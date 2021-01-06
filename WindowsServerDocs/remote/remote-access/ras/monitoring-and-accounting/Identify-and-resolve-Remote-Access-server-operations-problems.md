@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: de0937ffdf1c7c3d626b9100c1e02af3f2ded969
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: cae96d3034cb650b84b40a1a35364400b182a619
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970233"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947362"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>Identificar e resolver problemas de operações do servidor de acesso remoto
 
@@ -41,9 +42,9 @@ O serviço auxiliar de IP (IPHlpSvc) hospeda tecnologias de transição IPv6 (co
 
 ##### <a name="to-stop-the-ip-helper-service"></a>Para interromper o serviço auxiliar de IP
 
-1.  Na tela **inicial** do servidor de acesso remoto, clique em **Ferramentas administrativas**e clique duas vezes em **Serviços**.
+1.  Na tela **inicial** do servidor de acesso remoto, clique em **Ferramentas administrativas** e clique duas vezes em **Serviços**.
 
-2.  Na lista de **Serviços**, role para baixo e clique com o botão direito do mouse em **IP Helper**e clique em **parar**.
+2.  Na lista de **Serviços**, role para baixo e clique com o botão direito do mouse em **IP Helper** e clique em **parar**.
 
 ### <a name="identify-the-operations-issue-and-take-corrective-action"></a><a name="BKMK_Identify"></a>Identificar o problema de operações e tomar uma ação corretiva
 A desativação do serviço auxiliar de IP causará um erro grave no servidor de acesso remoto. O painel Monitoramento mostrará o status de operações do servidor e os detalhes do problema.
@@ -81,14 +82,14 @@ Para restaurar o serviço auxiliar de IP em seu servidor de acesso remoto, você
 
 ##### <a name="to-restart-the-ip-helper-service-on-the-remote-access-server"></a>Para reiniciar o serviço auxiliar de IP no servidor de acesso remoto
 
-1.  Na tela **Iniciar** , clique em **Ferramentas administrativas**e, em seguida, clique duas vezes em **Serviços**.
+1.  Na tela **Iniciar** , clique em **Ferramentas administrativas** e, em seguida, clique duas vezes em **Serviços**.
 
-2.  Na lista de **Serviços**, role para baixo e clique com o botão direito do mouse em **IP Helper**e clique em **Iniciar**.
+2.  Na lista de **Serviços**, role para baixo e clique com o botão direito do mouse em **IP Helper** e clique em **Iniciar**.
 
-![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
 ```PowerShell
-PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *
+PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property _
 ```

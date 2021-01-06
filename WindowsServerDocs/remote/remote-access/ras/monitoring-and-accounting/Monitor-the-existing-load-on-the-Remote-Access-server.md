@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9a04cdff7214fd4d7ef64fba930f282e48dbfa01
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 29964baa521b61fed229140898785acb37ddf124
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970213"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947322"
 ---
 # <a name="monitor-the-existing-load-on-the-remote-access-server"></a>Monitorar a carga existente no servidor de Acesso Remoto
 
@@ -38,7 +39,7 @@ Você pode usar o painel de monitoramento que está disponível no console de ge
 
 #### <a name="to-use-the-performance-monitor-tool-to-monitor-performance-counters-on-the-remote-access-server"></a>Para usar a ferramenta Monitor de desempenho para monitorar contadores de desempenho no servidor de acesso remoto
 
-1.  Clique em **Iniciar**, **Ferramentas administrativas**e, em seguida, clique duas vezes em **Monitor de desempenho**.
+1.  Clique em **Iniciar**, **Ferramentas administrativas** e, em seguida, clique duas vezes em **Monitor de desempenho**.
 
 2.  Em **desempenho**, clique em **Monitor de desempenho**.
 
@@ -52,7 +53,7 @@ Você pode usar o painel de monitoramento que está disponível no console de ge
 
 Agora, o **Monitor de desempenho** mostrará graficamente as estatísticas de carga do servidor selecionadas.
 
-![](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)**_<em>Comandos equivalentes</em> do Windows PowerShell_**
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 

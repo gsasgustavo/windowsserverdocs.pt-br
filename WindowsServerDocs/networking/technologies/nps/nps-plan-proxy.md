@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: ca77d64a-065b-4bf2-8252-3e75f71b7734
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9cdc28eae61acb0d8548627e48a882435cd7da81
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: feb67b757119fd69ea312845d878322f222da50d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952021"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947482"
 ---
 # <a name="plan-nps-as-a-radius-proxy"></a>Planejar NPS como um proxy RADIUS
 
@@ -51,7 +52,7 @@ Durante o planejamento para a configuração de proxy do NPS, você pode usar as
 
 - Determine os tipos de eventos que você deseja que o NPS registre no log de eventos. Você pode registrar solicitações de conexão rejeitadas, solicitações de conexão bem-sucedidas ou ambos.
 
-- Determine se você está implantando mais de um proxy NPS. Para fornecer tolerância a falhas, use pelo menos dois proxies NPS. Um proxy NPS é usado como o proxy RADIUS primário e o outro é usado como um backup. Cada cliente RADIUS é configurado em ambos os proxies do NPS. Se o proxy NPS primário ficar indisponível, os clientes RADIUS enviarão mensagens de solicitação de acesso para o proxy NPS alternativo.
+- Determine se você está implantando mais de um proxy NPS. Para fornecer tolerância a falhas, use pelo menos dois proxies NPS. Um proxy NPS é usado como o proxy RADIUS primário e o outro é usado como um backup. Cada cliente RADIUS é configurado em ambos os proxies do NPS. Se o proxy NPS primário ficar indisponível, os clientes RADIUS enviarão Access-Request mensagens para o proxy NPS alternativo.
 
 - Planeje o script usado para copiar uma configuração de proxy NPS para outros proxies NPS para economizar na sobrecarga administrativa e para impedir a configuração incorreta de um servidor. O NPS fornece os comandos netsh que permitem copiar toda ou parte de uma configuração de proxy NPS para importação em outro proxy NPS. Você pode executar os comandos manualmente no prompt do netsh. No entanto, se você salvar a sequência de comandos como um script, poderá executar o script em uma data posterior se decidir alterar as configurações de proxy.
 
@@ -97,7 +98,7 @@ Durante o planejamento de grupos de servidores RADIUS remotos, você pode usar a
 
 ## <a name="plan-attribute-manipulation-rules-for-message-forwarding"></a>Planejar regras de manipulação de atributos para encaminhamento de mensagens
 
-As regras de manipulação de atributo, que são configuradas em políticas de solicitação de conexão, permitem que você identifique as mensagens de solicitação de acesso que deseja encaminhar para um grupo de servidores RADIUS remoto específico.
+As regras de manipulação de atributo, que são configuradas em políticas de solicitação de conexão, permitem que você identifique as mensagens de Access-Request que você deseja encaminhar para um grupo de servidores RADIUS remoto específico.
 
 Você pode configurar o NPS para encaminhar todas as solicitações de conexão para um grupo de servidores remotos RADIUS sem usar regras de manipulação de atributos.
 
@@ -109,7 +110,7 @@ Você pode criar regras para os atributos a seguir.
 
 - ID de estação de chamada. O número de telefone usado pelo chamador. O valor desse atributo é uma cadeia de caracteres. Você pode usar a sintaxe de correspondência de padrões para especificar códigos de área.
 
-- Nome de usuário. O nome de usuário que é fornecido pelo cliente do Access e que é incluído pelo NAS na mensagem de solicitação de acesso do RADIUS. O valor desse atributo é uma cadeia de caracteres que normalmente contém um nome de realm e um nome de conta de usuário.
+- Nome de usuário. O nome de usuário que é fornecido pelo cliente do Access e que é incluído pelo NAS na mensagem de Access-Request do RADIUS. O valor desse atributo é uma cadeia de caracteres que normalmente contém um nome de realm e um nome de conta de usuário.
 
 Para substituir ou converter corretamente nomes de territórios no nome de usuário de uma solicitação de conexão, você deve configurar regras de manipulação de atributos para o atributo User-Name na diretiva de solicitação de conexão apropriada.
 

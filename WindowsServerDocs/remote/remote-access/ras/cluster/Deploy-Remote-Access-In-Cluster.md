@@ -1,16 +1,17 @@
 ---
 title: Implantar o acesso remoto em um cluster
-description: Este tópico faz parte do guia implantar o acesso remoto em um cluster no Windows Server 2016.
+description: Saiba mais sobre o cenário empresarial para implantar vários servidores de acesso remoto em uma carga de cluster balanceada com o balanceamento de carga de rede do Windows ou com um balanceador de carga externo.
 manager: dougkim
 ms.topic: article
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c1d0a9490a2b2ef6efbd15f39ec95f1b482efd5e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 81a4e3ff98daed83ba69834d91d8633db2dc6487
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944166"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946982"
 ---
 # <a name="deploy-remote-access-in-a-cluster"></a>Implantar o acesso remoto em um cluster
 
@@ -65,7 +66,7 @@ A tabela a seguir lista funções e recursos necessários para o cenário:
 
 |Recurso de função \/|Como este cenário tem suporte|
 |---------|-----------------|
-|Função Acesso Remoto|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Ele abrange o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2, e serviços de roteamento e acesso remoto \( RRAS \) , que era um serviço de função na função de servidor de serviços de acesso e diretiva de rede \( \) . A função Acesso Remoto consiste em dois componentes:<p>-Always On VPN e roteamento e serviços de acesso remoto \( RRAS \) VPN-DirectAccess e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />-Os recursos de roteamento RRAS de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>As dependências são as seguintes:<p>-Serviços de Informações da Internet \( \) servidor Web do IIS-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-Banco de dados interno do Windows-usado para contabilização local no servidor de acesso remoto.|
+|Função Acesso Remoto|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Ele abrange o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2, e serviços de roteamento e acesso remoto \( RRAS \) , que era um serviço de função na função de servidor de serviços de acesso e diretiva de rede \( \) . A função Acesso Remoto consiste em dois componentes:<p>-Always On VPN e roteamento e serviços de acesso remoto \( RRAS \) VPN-DirectAccess e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />-Os recursos de roteamento RRAS de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>As dependências são as seguintes:<p>-Serviços de Informações da Internet \( \) servidor Web do IIS-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-Database-Used interno do Windows para contabilização local no servidor de acesso remoto.|
 |Recurso Ferramentas de Gerenciamento de Acesso Remoto|Este recurso é instalado da seguinte maneira:<p>-Ele é instalado por padrão em um servidor de acesso remoto quando a função de acesso remoto é instalada e dá suporte à interface do usuário do console de gerenciamento remoto.<br />-Ele pode ser instalado opcionalmente em um servidor que não está executando a função de servidor de acesso remoto. Neste caso, ele é usado para gerenciamento remoto de um computador de Acesso Remoto que executa o DirectAccess e VPN.<p>O recurso de Ferramentas de Gerenciamento de Acesso Remoto consiste em:<p>-GUI de acesso remoto e ferramentas de linha de comando<br />-Módulo de acesso remoto para Windows PowerShell<p>As dependências incluem:<p>-Console de Gerenciamento de Política de Grupo<br />-Kit de administração do Gerenciador de conexões RAS \( CMAK\)<br />-Windows PowerShell 3,0<br />-Infraestrutura e ferramentas de gerenciamento gráfico|
 |Network Load Balancing|Este recurso fornece o balanceamento de carga em um cluster utilizando o NLB do Windows.|
 

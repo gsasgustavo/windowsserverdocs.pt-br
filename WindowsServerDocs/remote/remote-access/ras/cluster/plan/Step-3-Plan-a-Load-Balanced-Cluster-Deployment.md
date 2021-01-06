@@ -1,19 +1,20 @@
 ---
-title: Etapa 3 planejar uma implantação de cluster com balanceamento de carga
+title: Etapa 3 planejar uma implantação de cluster Load-Balanced
 description: Este tópico faz parte do guia implantar o acesso remoto em um cluster no Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6c590fd99715e49034592358f65c468c6a46dfb9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 46c607497192844cf9dc7221db0b78086402dc4c
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963882"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947742"
 ---
-# <a name="step-3-plan-a-load-balanced-cluster-deployment"></a>Etapa 3 planejar uma implantação de cluster com balanceamento de carga
+# <a name="step-3-plan-a-load-balanced-cluster-deployment"></a>Etapa 3 planejar uma implantação de cluster Load-Balanced
 
 >Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
 
@@ -33,7 +34,7 @@ O acesso remoto pode ser implantado em um único servidor ou em um cluster de se
 
 -   **Balanceador de carga externo**-usar um balanceador de carga externo requer hardware externo para gerenciar a carga de tráfego entre os servidores de cluster de acesso remoto. Além disso, o uso de um balanceador de carga externo dá suporte a um máximo de 32 servidores de acesso remoto em um cluster. Alguns pontos para ter em mente ao configurar o balanceamento de carga externo são:
 
-    -   O administrador deve garantir que os IPs virtuais configurados por meio do assistente de balanceamento de carga de acesso remoto sejam usados nos balanceadores de carga externos (como F5 sistema de Gerenciador de tráfego local de Big-IP). Quando o balanceamento de carga externo estiver habilitado, os endereços IP nas interfaces externas e internas serão promovidos para endereços IP virtuais e precisarão ser inseridos nos balanceadores de carga. Isso é feito para que o administrador não precise alterar a entrada DNS para o nome público da implantação do cluster. Além disso, os pontos de extremidade de túnel IPsec são derivados dos IPs de servidor. Se o administrador fornece IPs virtuais separados, o cliente não poderá se conectar ao servidor. Consulte o exemplo para configurar o DirectAccess com balanceamento de carga externo no exemplo de configuração de Load Balancer externo 3.1.1.
+    -   O administrador deve garantir que os IPs virtuais configurados por meio do assistente de balanceamento de carga de acesso remoto sejam usados nos balanceadores de carga externos (como F5 Big-Ip sistema gerenciador de tráfego local). Quando o balanceamento de carga externo estiver habilitado, os endereços IP nas interfaces externas e internas serão promovidos para endereços IP virtuais e precisarão ser inseridos nos balanceadores de carga. Isso é feito para que o administrador não precise alterar a entrada DNS para o nome público da implantação do cluster. Além disso, os pontos de extremidade de túnel IPsec são derivados dos IPs de servidor. Se o administrador fornece IPs virtuais separados, o cliente não poderá se conectar ao servidor. Consulte o exemplo para configurar o DirectAccess com balanceamento de carga externo no exemplo de configuração de Load Balancer externo 3.1.1.
 
     -   Muitos balanceadores de carga externos (incluindo F5) não dão suporte ao balanceamento de carga de 6to4 e ISATAP. Se o servidor de acesso remoto for um roteador ISATAP, a função ISATAP deverá ser movida para um computador diferente. Além disso, quando a função ISATAP está em um computador diferente, os servidores DirectAccess devem ter conectividade IPv6 nativa com o roteador ISATAP. Observe que essa conectividade deve estar presente antes de configurar o DirectAccess.
 

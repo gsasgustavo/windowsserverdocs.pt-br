@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: de285d13-9e54-4c46-88f0-607182e5e3dc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 459471c87034fbeaf11f9099e643c495a6b75389
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 2f38ed8abb4869cf7c9a917a27fdbfe37bf7d453
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997291"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947332"
 ---
 # <a name="monitor-the-configuration-distribution-status-of-the-remote-access-server"></a>Monitorar o status de distribuição de configuração do servidor de Acesso Remoto
 
@@ -31,9 +32,9 @@ O Console de Gerenciamento de Acesso Remoto compara as versões de configuraçã
 
 A tabela a seguir mostra as mensagens geradas pelo bloco **Status de Configuração**, seus significados e a ação administrativa necessária (se houver alguma).
 
-|Gravidade|Mensagem|Significado|O que fazer?|
+|Severity|Mensagem|Significado|O que fazer?|
 |--|--|--|
-|Sucesso|A configuração foi distribuída com êxito.|A configuração no GPO foi aplicada com êxito no servidor.|Nenhuma ação necessária.|
+|Êxito|A configuração foi distribuída com êxito.|A configuração no GPO foi aplicada com êxito no servidor.|Nenhuma ação necessária.|
 |Aviso|Configuração para o servidor [*nome do servidor*] não recuperada do controlador de domínio. O GPO não está vinculado.|A configuração no GPO ainda não atingiu o servidor. Isso pode ser devido ao fato de o GPO não estar vinculado ao servidor.|Vincule o GPO a um escopo de gerenciamento que é aplicado ao servidor ou em um cenário GPO de preparação, exporte manualmente as configurações do GPO de preparação e importe-as para o GPO de produção. Para obter mais informações sobre os GPOs de preparo, consulte **Gerenciando GPOs de acesso remoto com permissões limitadas** na [etapa-1-Plan-The-DirectAccess-Infrastructure](../../directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md). Para etapas de preparo de GPO, consulte **Configurando GPOs de acesso remoto com permissões limitadas** na [etapa 1: configurar a infraestrutura do DirectAccess](../../directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md).|
 |Aviso|A configuração para o servidor [*nome do servidor*] ainda não foi recuperada do controlador de domínio.|A configuração no GPO ainda não atingiu o servidor.<p>Pode levar até 10 minutos para propagar uma nova configuração.|Permitir mais tempo para que as políticas sejam atualizadas no servidor.|
 |Erro|A configuração para o servidor [*nome do servidor*] não pode ser recuperada do controlador de domínio.|A configuração no GPO não atingiu o servidor e passaram-se mais de 10 minutos desde que a configuração foi alterada.|Isso poderia ocorrer em um dos seguintes cenários:<p>-O servidor não tem conectividade com o domínio para atualizar as políticas. Você pode executar "gpupdate/force" no servidor para forçar uma atualização de política.<br />-A replicação de GPO pode ser necessária para recuperar a configuração atualizada.<br />-Não há nenhum controlador de domínio gravável no site de Active Directory do servidor de acesso remoto.<p>Aguarde que os GPOs repliquem a todos os controladores de domínio e, em seguida, use o cmdlet do Windows PowerShell **Set-DAEntryPointDC** para associar o ponto de entrada a um controlador de domínio gravável no Active Directory no servidor de Acesso Remoto.|

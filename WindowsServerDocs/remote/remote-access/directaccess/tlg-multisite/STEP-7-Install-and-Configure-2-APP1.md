@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: b881f22ab2e2aa5427b0c06f042d4102cccf26fc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 36973d822f607ac6a62fffc956f1dacee68be60a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953682"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947972"
 ---
 # <a name="step-7-install-and-configure-2-app1"></a>ETAPA 7 instalar e configurar o 2-APP1
 
@@ -47,9 +48,9 @@ Configure as propriedades de TCP/IP em 2-APP1.
 
 #### <a name="to-configure-tcpip-properties"></a>Para configurar as propriedades de TCP/IP
 
-1.  No console do Gerenciador do Servidor, clique em **servidor local**e, na área **Propriedades** , ao lado de **conexão Ethernet com fio**, clique no link.
+1.  No console do Gerenciador do Servidor, clique em **servidor local** e, na área **Propriedades** , ao lado de **conexão Ethernet com fio**, clique no link.
 
-2.  Na janela **conexões de rede** , clique com o botão direito do mouse em **conexão Ethernet com fio**e clique em **Propriedades**.
+2.  Na janela **conexões de rede** , clique com o botão direito do mouse em **conexão Ethernet com fio** e clique em **Propriedades**.
 
 3.  Clique em **Protocolo TCP/IP Versão 4 (TCP/IPv4)** e clique em **Propriedades**.
 
@@ -57,15 +58,15 @@ Configure as propriedades de TCP/IP em 2-APP1.
 
 5.  Clique em **Usar os seguintes endereços de servidor DNS**. Em **servidor DNS preferencial**, digite **10.2.0.1**.
 
-6.  Clique em **avançado**e, em seguida, clique na guia **DNS** . Em **sufixo DNS para essa conexão**, digite **corp2.Corp.contoso.com**e clique em **OK** duas vezes.
+6.  Clique em **avançado** e, em seguida, clique na guia **DNS** . Em **sufixo DNS para essa conexão**, digite **corp2.Corp.contoso.com** e clique em **OK** duas vezes.
 
 7.  Clique em **Protocolo IP Versão 6 (TCP/IPv6)** e em **Propriedades**.
 
-8.  Clique em **usar o seguinte endereço IPv6**. Em **endereço IPv6**, digite **2001: DB8:2:: 3**. Em **comprimento do prefixo da sub-rede**, digite **64**. Em **gateway padrão**, digite **2001: DB8:2:: Fe**. Clique em **usar os seguintes endereços de servidor DNS**e, em **servidor DNS preferencial**, digite **2001: DB8:2:: 1**.
+8.  Clique em **usar o seguinte endereço IPv6**. Em **endereço IPv6**, digite **2001: DB8:2:: 3**. Em **comprimento do prefixo da sub-rede**, digite **64**. Em **gateway padrão**, digite **2001: DB8:2:: Fe**. Clique em **usar os seguintes endereços de servidor DNS** e, em **servidor DNS preferencial**, digite **2001: DB8:2:: 1**.
 
 9. Clique em **Avançado** e clique na guia **DNS**.
 
-10. Em **sufixo DNS para essa conexão**, digite **corp2.Corp.contoso.com**e clique em **OK** duas vezes.
+10. Em **sufixo DNS para essa conexão**, digite **corp2.Corp.contoso.com** e clique em **OK** duas vezes.
 
 11. Na caixa de diálogo **Propriedades da conexão Ethernet com fio** , clique em **fechar**.
 
@@ -80,7 +81,7 @@ Junção 2-APP1 ao domínio corp2.corp.contoso.com.
 
 2.  Na caixa de diálogo **Propriedades do Sistema**, na guia **Nome do Computador**, clique em **Alterar**.
 
-3.  Em **nome do computador**, digite **2-App1**. Em **membro de**, clique em **domínio**, digite **corp2.Corp.contoso.com**e clique em **OK**.
+3.  Em **nome do computador**, digite **2-App1**. Em **membro de**, clique em **domínio**, digite **corp2.Corp.contoso.com** e clique em **OK**.
 
 4.  Quando for solicitado um nome de usuário e uma senha, digite **administrador** e sua senha e clique em **OK**.
 
@@ -92,7 +93,7 @@ Junção 2-APP1 ao domínio corp2.corp.contoso.com.
 
 8.  Quando for solicitado a reiniciar o computador, clique em **Reiniciar Agora**.
 
-9. Depois que o computador for reiniciado, clique em **Alternar usuário**e, em seguida, clique em **outro usuário** e faça logon no domínio CORP2 com a conta de administrador.
+9. Depois que o computador for reiniciado, clique em **Alternar usuário** e, em seguida, clique em **outro usuário** e faça logon no domínio CORP2 com a conta de administrador.
 
 ## <a name="install-the-web-server-iis-role-on-2-app1"></a><a name="bkmk_IIS"></a>Instalar a função do servidor Web (IIS) em 2-APP1
 Instale a função do servidor Web (IIS) para tornar o 2-APP1 um servidor Web.
@@ -114,25 +115,25 @@ Crie uma pasta compartilhada e um arquivo de texto dentro da pasta em 2-APP1.
 
 #### <a name="to-create-a-shared-folder"></a>Para criar uma pasta compartilhada
 
-1.  Na tela **Iniciar** , digite**explorer.exe**e pressione Enter.
+1.  Na tela **Iniciar** , digite **explorer.exe** e pressione Enter.
 
-2.  Clique em **computador**e clique duas vezes em **disco local (C:)**.
+2.  Clique em **computador** e clique duas vezes em **disco local (C:)**.
 
-3.  Clique em **nova pasta**, digite **arquivos**e pressione Enter. Deixe a janela **disco local** aberta.
+3.  Clique em **nova pasta**, digite **arquivos** e pressione Enter. Deixe a janela **disco local** aberta.
 
-4.  Na tela **Iniciar** , digite**notepad.exe**, clique com o botão direito do mouse em **bloco de notas**, clique em **avançado**e, em seguida, clique em **Executar como administrador**.
+4.  Na tela **Iniciar** , digite **notepad.exe**, clique com o botão direito do mouse em **bloco de notas**, clique em **avançado** e, em seguida, clique em **Executar como administrador**.
 
 5.  Na janela sem **título-bloco de notas** , digite **este é um arquivo compartilhado em 2-App1**.
 
 6.  Clique em **arquivo**, em **salvar**, em **computador**, clique duas vezes em **disco local (C:)** e, em seguida, clique duas vezes na pasta **arquivos** .
 
-7.  Em **nome do arquivo**, digite **example.txt**e, em seguida, clique em **salvar**. Feche o Bloco de notas.
+7.  Em **nome do arquivo**, digite **example.txt** e, em seguida, clique em **salvar**. Feche o Bloco de notas.
 
-8.  Na janela **disco local** , clique com o botão direito do mouse na pasta **arquivos** , aponte para **compartilhar com**e clique em **pessoas específicas**.
+8.  Na janela **disco local** , clique com o botão direito do mouse na pasta **arquivos** , aponte para **compartilhar com** e clique em **pessoas específicas**.
 
-9. Na caixa de diálogo **compartilhamento de arquivos** , na lista suspensa, clique em **todos**e, em seguida, clique em **Adicionar**. Em **nível de permissão** para **todos**, clique em **leitura/gravação**.
+9. Na caixa de diálogo **compartilhamento de arquivos** , na lista suspensa, clique em **todos** e, em seguida, clique em **Adicionar**. Em **nível de permissão** para **todos**, clique em **leitura/gravação**.
 
-10. Clique em **compartilhar**e, em seguida, clique em **concluído**.
+10. Clique em **compartilhar** e, em seguida, clique em **concluído**.
 
 11. Feche a janela **disco local** .
 

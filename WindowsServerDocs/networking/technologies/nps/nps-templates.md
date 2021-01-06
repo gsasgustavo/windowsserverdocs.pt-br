@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 84ab593772dc7142b17dc9a6c971f52895df2d14
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 66fb4d0b7d2fc5bd77fb1b943b45a8c75408866e
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953892"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947442"
 ---
 # <a name="nps-templates"></a>Modelos NPS
 
@@ -33,7 +34,7 @@ Por exemplo, se você configurar um cliente RADIUS no console do NPS em clientes
 
 ## <a name="creating-templates"></a>Como criar modelos
 
-Para criar um modelo, abra o console do NPS, clique com o botão direito do mouse em um tipo de modelo, como **filtros de IP**e clique em **novo**. Uma nova caixa de diálogo Propriedades do modelo é aberta e permite que você configure seu modelo.
+Para criar um modelo, abra o console do NPS, clique com o botão direito do mouse em um tipo de modelo, como **filtros de IP** e clique em **novo**. Uma nova caixa de diálogo Propriedades do modelo é aberta e permite que você configure seu modelo.
 
 ## <a name="using-templates-locally"></a>Usando modelos localmente
 

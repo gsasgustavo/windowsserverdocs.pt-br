@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ed4c2525c9d0832dae580bcbc764ce576c8dd3c6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: d18d643d6c614a90f4c9ab43b59c0b8777b2f6e8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951301"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946782"
 ---
 # <a name="directaccess-offline-domain-join"></a>Associação offline de domínio DirectAccess
 
@@ -76,9 +77,9 @@ A associação em **Admins**. do domínio, ou equivalente, é o mínimo necessá
 
 1.  Clique em **Iniciar**, em **Ferramentas Administrativas** e em **Gerenciamento de Diretiva de Grupo**.
 
-2.  Clique duas vezes no nome da floresta, clique duas vezes em **domínios**, clique duas vezes no nome do domínio no qual você deseja ingressar em um computador, clique com o botão direito do mouse em **política de domínio padrão**e clique em **Editar**.
+2.  Clique duas vezes no nome da floresta, clique duas vezes em **domínios**, clique duas vezes no nome do domínio no qual você deseja ingressar em um computador, clique com o botão direito do mouse em **política de domínio padrão** e clique em **Editar**.
 
-3.  Na árvore de console, clique duas vezes em **configuração do computador**, clique duas vezes em **políticas**, clique duas vezes em **configurações do Windows**, clique duas vezes em **configurações de segurança**, clique duas vezes em **políticas locais**e clique duas vezes em **atribuição de direitos de usuário**.
+3.  Na árvore de console, clique duas vezes em **configuração do computador**, clique duas vezes em **políticas**, clique duas vezes em **configurações do Windows**, clique duas vezes em **configurações de segurança**, clique duas vezes em **políticas locais** e clique duas vezes em **atribuição de direitos de usuário**.
 
 4.  No painel de detalhes, clique duas vezes em **Adicionar estações de trabalho ao domínio**.
 
@@ -130,7 +131,7 @@ Conclua as seguintes etapas para executar a junção de domínio offline:
 
 2.  Expanda a árvore em seu domínio e selecione o contêiner **usuários** .
 
-3.  No painel de detalhes, clique com o botão direito do mouse em **DirectAccessClients**e clique em **Propriedades**.
+3.  No painel de detalhes, clique com o botão direito do mouse em **DirectAccessClients** e clique em **Propriedades**.
 
 4.  Na guia **Membros**, clique em **Adicionar**.
 

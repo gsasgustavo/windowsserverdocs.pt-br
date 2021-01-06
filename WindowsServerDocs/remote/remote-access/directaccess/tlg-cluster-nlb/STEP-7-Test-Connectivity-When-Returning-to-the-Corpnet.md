@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 3c5a20c52c419714cc24ec1d4d76d57fa42e93c9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: a808b97ad531c38f3f6a08f416b0f0f30a5e50fa
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951081"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946532"
 ---
 # <a name="step-7-test-connectivity-when-returning-to-the-corpnet"></a>ETAPA 7 testar a conectividade ao retornar ao corpnet
 
@@ -23,9 +24,9 @@ Muitos de seus usuários se moverão entre locais remotos e o corpnet, portanto,
 
 1. Desligue o CLIENT1 e desconecte o CLIENT1 da sub-rede HomeNet ou do comutador virtual e conecte-o à sub-rede corpnet ou ao comutador virtual. Ative o CLIENT1 e faça logon como CORP\User1.
 
-2. Abra uma janela do Windows PowerShell com privilégios elevados, digite **ipconfig/all**e pressione Enter. A saída indicará que CLIENT1 tem um endereço IP local e que não há nenhum túnel 6to4, Teredo ou IP-HTTPS ativo.
+2. Abra uma janela do Windows PowerShell com privilégios elevados, digite **ipconfig/all** e pressione Enter. A saída indicará que CLIENT1 tem um endereço IP local e que não há nenhum túnel 6to4, Teredo ou IP-HTTPS ativo.
 
-3. Teste a conectividade com o compartilhamento de rede em APP2. Na tela **Iniciar** , digite<strong> \\ \APP2\Files</strong>e pressione Enter. Você poderá abrir o arquivo nessa pasta.
+3. Teste a conectividade com o compartilhamento de rede em APP2. Na tela **Iniciar** , digite <strong> \\ \APP2\Files</strong>e pressione Enter. Você poderá abrir o arquivo nessa pasta.
 
 
 

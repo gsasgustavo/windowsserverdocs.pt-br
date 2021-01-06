@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: b18531c3704d9240ecfa2c3d411158a7ef7a97df
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 01c4593bcd99c3e7e68a434f73fde74d5f01aafc
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971703"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946562"
 ---
 # <a name="step-4-create-the-network-load-balanced-remote-access-cluster"></a>ETAPA 4 criar o cluster de acesso remoto com balanceamento de carga de rede
 
@@ -54,7 +55,7 @@ Para configurar o EDGE1 e o EDGE2 em um cluster, você deve instalar o recurso d
 
 2.  Clique em **Avançar** quatro vezes para acessar a tela de seleção de recursos do servidor.
 
-3.  Na caixa de diálogo **selecionar recursos** , selecione **balanceamento de carga de rede**, clique em **Adicionar recursos**, clique em **Avançar**e em **instalar**.
+3.  Na caixa de diálogo **selecionar recursos** , selecione **balanceamento de carga de rede**, clique em **Adicionar recursos**, clique em **Avançar** e em **instalar**.
 
 4.  Na caixa de diálogo **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
@@ -65,15 +66,15 @@ Use este procedimento para habilitar o balanceamento de carga e configurar o nov
 
 ### <a name="enable-load-balancing"></a>Habilitar balanceamento de carga
 
-1.  Em EDGE1, clique em **Iniciar**, digite **RAMgmtUI.exe**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  Em EDGE1, clique em **Iniciar**, digite **RAMgmtUI.exe** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
-2.  No console de gerenciamento de acesso remoto, no painel esquerdo, clique em **configuração**e, no painel **tarefas** , clique em **habilitar balanceamento de carga**.
+2.  No console de gerenciamento de acesso remoto, no painel esquerdo, clique em **configuração** e, no painel **tarefas** , clique em **habilitar balanceamento de carga**.
 
 3.  No assistente habilitar balanceamento de carga, clique em **Avançar**.
 
-4.  Na página **método de balanceamento de carga** , clique em **usar NLB (balanceamento de carga de rede) do Windows**e clique em **Avançar**.
+4.  Na página **método de balanceamento de carga** , clique em **usar NLB (balanceamento de carga de rede) do Windows** e clique em **Avançar**.
 
-5.  Na página **endereços IP dedicados externos** , na caixa **endereço IPv4** , digite **131.107.0.10**, na caixa máscara de **sub-rede** , verifique se o prefixo de sub-rede é **255.255.255.0**e clique em **Avançar**.
+5.  Na página **endereços IP dedicados externos** , na caixa **endereço IPv4** , digite **131.107.0.10**, na caixa máscara de **sub-rede** , verifique se o prefixo de sub-rede é **255.255.255.0** e clique em **Avançar**.
 
 6.  Na página **endereços IP dedicados internos** , faça o seguinte e clique em **Avançar**:
 
@@ -99,9 +100,9 @@ Use este procedimento para adicionar EDGE2 ao cluster NLB.
 
 2.  Na caixa de diálogo **Adicionar ou remover servidores** , clique em **Adicionar servidor**.
 
-3.  No assistente **Adicionar um servidor** , na página **selecionar servidor** , digite **EDGE2**e clique em **Avançar**.
+3.  No assistente **Adicionar um servidor** , na página **selecionar servidor** , digite **EDGE2** e clique em **Avançar**.
 
-4.  Na página **adaptadores de rede** , em **adaptador externo**, verifique se **Internet** está selecionado e, em **adaptador interno**, verifique se **corpnet** está selecionado. Clique em **procurar**, na caixa de diálogo **segurança do Windows** , verifique se **certificado IP-HTTPS** está selecionado, clique em **OK**e, em seguida, clique em **Avançar**.
+4.  Na página **adaptadores de rede** , em **adaptador externo**, verifique se **Internet** está selecionado e, em **adaptador interno**, verifique se **corpnet** está selecionado. Clique em **procurar**, na caixa de diálogo **segurança do Windows** , verifique se **certificado IP-HTTPS** está selecionado, clique em **OK** e, em seguida, clique em **Avançar**.
 
 5.  Na página **Resumo** , clique em **Adicionar**.
 
@@ -111,12 +112,12 @@ Use este procedimento para adicionar EDGE2 ao cluster NLB.
 
 8.  Na caixa de diálogo **adicionando e removendo servidores** , clique em **fechar**.
 
-9. Na tela **Iniciar** , digite**nlbmgr.exe**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+9. Na tela **Iniciar** , digite **nlbmgr.exe** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 10. No **Gerenciador de balanceamento de carga de rede**, clique em cluster do **da interno**. No painel de detalhes, certifique-se de que **EDGE1 (corpnet)** e **EDGE2 (corpnet)** tenham o status **convergido**.
 
-11. Se um servidor não for **convergido**, na árvore de console, clique com o botão direito do mouse no servidor, aponte para **controlar host**e clique em **Iniciar**.
+11. Se um servidor não for **convergido**, na árvore de console, clique com o botão direito do mouse no servidor, aponte para **controlar host** e clique em **Iniciar**.
 
 12. No **Gerenciador de balanceamento de carga de rede**, clique em **cluster da Internet**. Certifique-se de que, no painel de detalhes, **EDGE1 (Internet)** e **EDGE2 (Internet)** tenham o status **convergido**.
 
-13. Se um servidor não for **convergido**, na árvore de console, clique com o botão direito do mouse no servidor, aponte para **controlar host**e clique em **Iniciar**.
+13. Se um servidor não for **convergido**, na árvore de console, clique com o botão direito do mouse no servidor, aponte para **controlar host** e clique em **Iniciar**.

@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 configurar o servidor DirectAccess-VPN
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba como definir as configurações de cliente e servidor necessárias para uma implantação básica de acesso remoto usando o assistente para habilitar o DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a9206ca86f9b64036b9a16d29e6c442268c3d4ed
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: e0419184c07f23faf458af4c37efb7761cc93f47
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953722"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947042"
 ---
 #  <a name="step-2-configure-the-directaccess-vpn-server"></a>Etapa 2 configurar o servidor DirectAccess-VPN
 
@@ -30,11 +31,11 @@ A tabela a seguir fornece uma visão geral das etapas que você pode concluir us
 
 ## <a name="to-start-the-enable-directacces-wizard"></a>Para iniciar o Assistente para Habilitar o DirectAccess
 
-1. Em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **acesso remoto**. O assistente habilitar DirectAccess é iniciado automaticamente, a menos que você tenha selecionado **não mostrar esta tela novamente**.
+1. Em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **acesso remoto**. O assistente habilitar DirectAccess é iniciado automaticamente, a menos que você tenha selecionado **não mostrar esta tela novamente**.
 
 2. Se o assistente não for iniciado automaticamente, clique com o botão direito do mouse no nó do servidor na árvore Roteamento e Acesso Remoto e clique em **Habilitar DirectAccess**.
 
-3. Clique em **Próximo**.
+3. Clique em **Avançar**.
 
 ## <a name="configure-directaccess-clients"></a>Configurar os clientes de DirectAccess
 
@@ -48,7 +49,7 @@ Para que um computador cliente possa ser provisionado para usar o DirectAccess, 
 
 4. Marque a caixa de seleção **Usar criação de túneis à força** para rotear todo o tráfego cliente (para a rede interna e para a Internet) pelo servidor de Acesso Remoto.
 
-5. Clique em **Próximo**.
+5. Clique em **Avançar**.
 
 ## <a name="configure-the-network-topology"></a>Configurar a Topologia de Rede
 

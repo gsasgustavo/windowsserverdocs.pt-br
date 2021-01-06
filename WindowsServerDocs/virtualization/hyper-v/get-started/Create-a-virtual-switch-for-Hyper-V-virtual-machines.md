@@ -1,17 +1,17 @@
 ---
 title: Criar uma opção virtual para máquinas virtuais Hyper-V
 description: Fornece instruções sobre como criar um comutador virtual usando o Gerenciador do Hyper-V ou o Windows PowerShell
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: 1a3cc557b39fca63d07e42c2fba41dc11bf88aa6
-ms.sourcegitcommit: d3f066dd812f60b37c7c2daea70775dc82f9df00
+ms.openlocfilehash: da1082a90f5d028ae6be0581245d298f3a4c00d0
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97486284"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946892"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Criar uma opção virtual para máquinas virtuais Hyper-V
 
@@ -31,11 +31,11 @@ A rede de máquinas virtuais pode ser um assunto complexo. E há vários novos r
 
 3. Escolha o tipo de comutador virtual desejado.
 
-    | Tipo de conexão | Descrição |
+    | Tipo de conexão | Description |
     | --------------- | ----------- |
     |     Externo    | Dá acesso às máquinas virtuais a uma rede física para se comunicar com servidores e clientes em uma rede externa. Permite que as máquinas virtuais no mesmo servidor Hyper-V se comuniquem entre si. |
     |     Interna    | Permite a comunicação entre máquinas virtuais no mesmo servidor Hyper-V e entre as máquinas virtuais e o sistema operacional do host de gerenciamento. |
-    |     Privados     | Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado. |
+    |     Privado     | Permite apenas a comunicação entre as máquinas virtuais no mesmo servidor Hyper-V. Uma rede privada é isolada de todo o tráfego de rede externo no servidor Hyper-V. Esse tipo de rede é útil quando você deve criar um ambiente de rede isolado, como um domínio de teste isolado. |
 
 4. Selecione **criar comutador virtual**.
 

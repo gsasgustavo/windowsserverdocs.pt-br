@@ -7,12 +7,13 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 05/07/2018
-ms.openlocfilehash: 8b81ae6dc86ad9fd3a8650ca22ba9f3a42af4d3f
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.topic: conceptual
+ms.openlocfilehash: 058a976a20e09cf46b57ec39af6c7f5b0cc30fdf
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077853"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947162"
 ---
 # <a name="roles-role-services-and-features-not-in-server-core-containers---windows-server-version-1803"></a>Funções, serviços de função e recursos que não estão em contêineres do Server Core-Windows Server, versão 1803
 
@@ -29,22 +30,22 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 
 <br>ADCertificateServicesRole
 <br>AuthManager
-<br>BitLocker-utilitários
+<br>Bitlocker-Utilities
 <br>BitLocker
 <br>BITS
-<br>BITSExtensions-carregar
+<br>BITSExtensions-Upload
 <br>CCFFilter
 <br>CertificateEnrollmentPolicyServer
 <br>CertificateEnrollmentServer
 <br>Certificadosservices
-<br>ClientForNFS-infraestrutura
+<br>ClientForNFS-Infrastructure
 <br>Contêineres
 <br>CoreFileServer
 <br>DataCenterBridging-LLDP-ferramentas
 <br>DataCenterBridging
-<br>Eliminação de duplicatas-núcleo
+<br>Dedup-Core
 <br>DeviceHealthAttestationService
-<br>DFSN-servidor
+<br>DFSN-Server
 <br>DFSR-Infrastructure-edição
 <br>DirectoryServices-ADAM
 <br>DirectoryServices-DomainController
@@ -55,11 +56,11 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>FailoverCluster-CmdInterface
 <br>FailoverCluster-FullServer
 <br>FailoverCluster-PowerShell
-<br>Serviços de arquivos
+<br>File-Services
 <br>FileServerVSSAgent
-<br>FRS-infraestrutura
+<br>FRS-Infrastructure
 <br>FSRM-infraestrutura-serviços
-<br>FSRM – infraestrutura
+<br>FSRM-Infrastructure
 <br>HardenedFabricEncryptionTask
 <br>HostGuardian
 <br>HostGuardianService-Package
@@ -70,7 +71,7 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>iSCSITargetServer
 <br>iSCSITargetStorageProviders
 <br>iSNS_Service
-<br>Licenciamento
+<br>Licenças
 <br>LightweightServer
 <br>Microsoft-Hyper-V-Management-clientes
 <br>Microsoft-Hyper-V-offline
@@ -79,7 +80,7 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>Microsoft-Windows-FCI-Client-Package
 <br>Microsoft-Windows-GroupPolicy-ServerAdminTools-Update
 <br>Microsoft-Windows-Subsystem-Linux
-<br>MSRDC-infraestrutura
+<br>MSRDC-Infrastructure
 <br>MultipathIo
 <br>NetworkController
 <br>NetworkControllerTools
@@ -90,7 +91,7 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>P2P-PnrpOnly
 <br>PeerDist
 <br>Imprimindo-cliente-gui
-<br>Imprimindo-LPDPrintService
+<br>Printing-LPDPrintService
 <br>Imprimindo-Server-Foundation-Features
 <br>Imprimindo-servidor-função
 <br>QWAVE
@@ -101,31 +102,31 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>RemoteAccessPowerShell
 <br>RemoteAccessServer
 <br>ResumeKeyFilter
-<br>RightsManagementServices-função
+<br>RightsManagementServices-Role
 <br>RightsManagementServices
-<br>RMS-Federação
+<br>RMS-Federation
 <br>SBMgr-interface do usuário
 <br>ServerCore-drivers-geral-WOW64
 <br>ServerCore-drivers-geral
-<br>ServerForNFS-infraestrutura
+<br>ServerForNFS-Infrastructure
 <br>ServerManager-Core-RSAT-recurso-ferramentas
 <br>ServerMediaFoundation
 <br>ServerMigration
 <br>SessionDirectory
 <br>SetupAndBootEventCollection
 <br>ShieldedVMToolsAdminPack
-<br>SMB1Protocol-servidor
+<br>SMB1Protocol-Server
 <br>SmbDirect
 <br>SMBHashGeneration
 <br>SmbWitness
 <br>SNMP
 <br>SoftwareLoadBalancer
 <br>Armazenamento-réplica-AdminPack
-<br>Armazenamento-réplica
+<br>Storage-Replica
 <br>TPM-PSH-cmdlets
-<br>Updateservices-banco de dados
-<br>Updateservices-Services
-<br>Updateservices-WidDatabase
+<br>UpdateServices-Database
+<br>UpdateServices-Services
+<br>UpdateServices-WidDatabase
 <br>UpdateServices
 <br>VmHostAgent
 <br>VolumeActivation-função completa
@@ -137,7 +138,7 @@ Aqui está a lista completa de recursos e funções removidas da imagem de cont�
 <br>WindowsStorageManagementService
 <br>WINSRuntime
 <br>WMISnmpProvider
-<br>WorkFolders-servidor
+<br>WorkFolders-Server
 <br>WSS-pacote-produto
 
 </div>

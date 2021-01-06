@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c65653b2014792eb844de7a82526eaacd3331de9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 8da7f989bec6a0a14a87d503afb976459a073d94
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971663"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947402"
 ---
 # <a name="deploy-remote-access-in-an-enterprise"></a>Implantar o Acesso Remoto em uma Empresa
 
@@ -61,7 +62,7 @@ A tabela a seguir lista funções e recursos utilizados no cenário corporativo:
 
 |Função/recurso|Como este cenário tem suporte|
 |---------|-----------------|
-|Função servidor de Acesso Remoto:|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Essa função engloba o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2 e Serviços de Roteamento e Acesso Remoto que eram anteriormente um serviço de função sob a função de servidor de Serviços de Acesso e Política de Rede (NPAS). A função Acesso Remoto consiste em dois componentes:<p>1. DirectAccess e roteamento e serviços de acesso remoto (RRAS) VPN-DirectAccess e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />2. roteamento RRAS-os recursos de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>A Função Servidor de Acesso Remoto depende dos seguintes recursos de servidor:<p>-Serviços de Informações da Internet (IIS)-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-O recurso de Console de Gerenciamento de Política de Grupo-recurso é exigido pelo DirectAccess para criar e gerenciar os objetos de Política de Grupo (GPOs) no Active Directory e deve ser instalado como um recurso necessário para a função de servidor.|
+|Função servidor de Acesso Remoto:|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Essa função engloba o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2 e Serviços de Roteamento e Acesso Remoto que eram anteriormente um serviço de função sob a função de servidor de Serviços de Acesso e Política de Rede (NPAS). A função Acesso Remoto consiste em dois componentes:<p>1. DirectAccess e serviços de roteamento e acesso remoto (RRAS) VPN-DirectAccess e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />2. roteamento RRAS-os recursos de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>A Função Servidor de Acesso Remoto depende dos seguintes recursos de servidor:<p>-Serviços de Informações da Internet (IIS)-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-O recurso de Console de Gerenciamento de Política de Grupo-recurso é exigido pelo DirectAccess para criar e gerenciar os objetos de Política de Grupo (GPOs) no Active Directory e deve ser instalado como um recurso necessário para a função de servidor.|
 |Recurso Ferramentas de Gerenciamento de Acesso Remoto|Este recurso é instalado da seguinte maneira:<p>-Ele é instalado por padrão em um servidor de acesso remoto quando a função de acesso remoto é instalada e dá suporte à interface do usuário do console de gerenciamento remoto.<br />-Ele pode ser instalado opcionalmente em um servidor que não está executando a função de servidor de acesso remoto. Neste caso, ele é usado para gerenciamento remoto de um computador de Acesso Remoto que executa o DirectAccess e VPN.<p>O recurso de Ferramentas de Gerenciamento de Acesso Remoto consiste em:<p>1. GUI de acesso remoto e ferramentas de linha de comando<br />2. módulo de acesso remoto para Windows PowerShell<p>As dependências incluem:<p>1. Console de Gerenciamento de Política de Grupo<br />2. kit de administração do Gerenciador de conexões RAS (CMAK)<br />3. Windows PowerShell 3,0<br />4. ferramentas e infraestrutura de gerenciamento gráfico|
 |NLB do Windows|Este recurso permite o balanceamento de carga de diversos servidores de Acesso Remoto.|
 

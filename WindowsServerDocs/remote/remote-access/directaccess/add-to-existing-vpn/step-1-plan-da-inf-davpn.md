@@ -1,17 +1,18 @@
 ---
 title: Etapa 1 planejar a infraestrutura do DirectAccess
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba como executar o planejamento para a infraestrutura necessária para a implantação do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f67609fff7f5de7cd1b53d73dcf86faaec9dec64
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 02f332c2e8d2511aad17b63413a71cc572b0b0b3
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995460"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947052"
 ---
 # <a name="step-1-plan-directaccess-infrastructure"></a>Etapa 1 planejar a infraestrutura do DirectAccess
 

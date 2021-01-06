@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 0cd438e26b014db9d051cd78e91f1a0a4bdf0a31
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 9717b4c12579564d2c3e567fdce17ac105804217
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958304"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947232"
 ---
 # <a name="troubleshooting-authentication-issues"></a>Solução de problemas de autenticação
 
@@ -32,11 +33,11 @@ O usuário forneceu uma senha válida de uso único e o servidor DirectAccess as
 
 No servidor DirectAccess, execute os seguintes comandos do Windows PowerShell:
 
-1.  Obtenha a lista de autoridades de certificação de emissão de OTP configuradas e verifique o valor de ' CAServer ':`Get-DAOtpAuthentication`
+1.  Obtenha a lista de autoridades de certificação de emissão de OTP configuradas e verifique o valor de ' CAServer ': `Get-DAOtpAuthentication`
 
-2.  Verifique se as CAs estão configuradas como servidores de gerenciamento:`Get-DAMgmtServer -Type All`
+2.  Verifique se as CAs estão configuradas como servidores de gerenciamento: `Get-DAMgmtServer -Type All`
 
-3.  Verifique se o computador cliente estabeleceu o túnel de infraestrutura: no console do Windows Firewall com segurança avançada, expanda **associações de monitoramento/segurança**, clique em **modo principal**e verifique se as associações de segurança IPSec aparecem com os endereços remotos corretos para a configuração do DirectAccess.
+3.  Verifique se o computador cliente estabeleceu o túnel de infraestrutura: no console do Windows Firewall com segurança avançada, expanda **associações de monitoramento/segurança**, clique em **modo principal** e verifique se as associações de segurança IPSec aparecem com os endereços remotos corretos para a configuração do DirectAccess.
 
 ## <a name="directaccess-server-connectivity-issues"></a>Problemas de conectividade do servidor DirectAccess
 **Cenário**. O usuário não consegue autenticar usando OTP com o erro: "falha na autenticação devido a um erro interno"
@@ -267,7 +268,7 @@ O protocolo de autenticação Kerberos não funciona quando o certificado de log
 
 **Solução**
 
-1.  Para confirmar a causa desse erro, no console de gerenciamento de acesso remoto, na **etapa 2 servidor de acesso remoto**, clique em **Editar**e, em seguida, no assistente de **instalação do servidor de acesso remoto** , clique em **modelos de certificado OTP**. Anote o modelo de certificado usado para o registro de certificados emitidos para autenticação OTP. Abra o console da autoridade de certificação, no painel esquerdo, clique em **modelos de certificado**, clique duas vezes no certificado de logon de OTP para exibir as propriedades do modelo de certificado.
+1.  Para confirmar a causa desse erro, no console de gerenciamento de acesso remoto, na **etapa 2 servidor de acesso remoto**, clique em **Editar** e, em seguida, no assistente de **instalação do servidor de acesso remoto** , clique em **modelos de certificado OTP**. Anote o modelo de certificado usado para o registro de certificados emitidos para autenticação OTP. Abra o console da autoridade de certificação, no painel esquerdo, clique em **modelos de certificado**, clique duas vezes no certificado de logon de OTP para exibir as propriedades do modelo de certificado.
 
     Para resolver esse problema, configure um certificado para o certificado de logon de OTP e não marque a caixa de seleção não **incluir informações de revogação em certificados emitidos** na guia **servidor** da caixa de diálogo Propriedades do modelo.
 

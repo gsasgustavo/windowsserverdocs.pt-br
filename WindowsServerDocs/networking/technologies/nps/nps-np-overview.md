@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f499de643a2460696305ef1ab35f695236849035
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 8277b757ce5f4d8459ba39c9f29e8d47720b6e03
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952041"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946672"
 ---
 # <a name="network-policies"></a>Políticas de Rede
 

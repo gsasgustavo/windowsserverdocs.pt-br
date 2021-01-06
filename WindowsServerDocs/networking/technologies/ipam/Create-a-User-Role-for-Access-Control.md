@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 92f0c1860858f2f888c6d78e890d4d75dbc6e696
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: fc0f0adbc19841662b8ec95491196c8047bd0cc2
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966473"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948032"
 ---
 # <a name="create-a-user-role-for-access-control"></a>Criar uma função de usuário para controle de acesso
 
@@ -26,13 +27,13 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-create-a-role"></a>Para criar uma função
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
-2.  No painel de navegação, clique em **controle de acesso**e, no painel de navegação inferior, clique em **funções**.
+2.  No painel de navegação, clique em **controle de acesso** e, no painel de navegação inferior, clique em **funções**.
 
     ![Funções de controle de acesso](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_01.jpg)
 
-3.  Clique com o botão direito do mouse em **funções**e clique em **Adicionar função de usuário**.
+3.  Clique com o botão direito do mouse em **funções** e clique em **Adicionar função de usuário**.
 
     ![Adicionar função de usuário](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_02.jpg)
 
@@ -40,11 +41,11 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
     ![Operações de gerenciamento de registro de recurso DNS](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_03.jpg)
 
-5.  Expanda **operações de gerenciamento de registro de recurso DNS**e localize **operações de registro SRV**.
+5.  Expanda **operações de gerenciamento de registro de recurso DNS** e localize **operações de registro SRV**.
 
     ![Operações de registro SRV](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_04.jpg)
 
-6.  Expanda e selecione **as operações de registro SRV**e clique em **OK**.
+6.  Expanda e selecione **as operações de registro SRV** e clique em **OK**.
 
     ![Selecionar operações de registro SRV](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_05.jpg)
 

@@ -7,12 +7,13 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: ded40a119d0d1ae759ec0b29ce9ee4808653ea50
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.topic: conceptual
+ms.openlocfilehash: a30e282647c6fb58bd9f5aaa0e24c5e840ac5351
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077753"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947142"
 ---
 # <a name="roles-role-services-and-features-included-in-windows-server---server-core"></a>Funções, serviços de função e recursos incluídos no Windows Server-Server Core
 
@@ -27,31 +28,31 @@ Lembre-se de que você [sempre pode examinar](server-core-removed-roles.md) o qu
 ## <a name="roles-included-in-server-core"></a>Funções incluídas no Server Core
 A opção de instalação Server Core inclui as seguintes funções de servidor.
 
-| Função                                            | Nome                           | Instalado por padrão? |
+| Função                                            | Name                           | Instalado por padrão? |
 |-------------------------------------------------|--------------------------------|-----------------------|
-| Serviços de Certificados do Active Directory           | AD-certificado                 | N                     |
+| Serviços de Certificados do Active Directory           | AD-Certificate                 | N                     |
 | Active Directory Domain Services                | AD-Domain-Services             | N                     |
-| Serviços de Federação do Active Directory (AD FS)            | ADFS-Federação                | N                     |
+| Serviços de Federação do Active Directory (AD FS)            | ADFS-Federation                | N                     |
 | Active Directory Lightweight Directory Services | LDS                          | N                     |
 | Active Directory Rights Management Services     | ADRMS                          | N                     |
 | Atestado de Integridade do Dispositivo                       | DeviceHealthAttestationService | N                     |
 | Servidor DHCP                                     | DHCP                           | N                     |
 | Servidor DNS                                      | DNS                            | N                     |
-| Serviços de Arquivo e Armazenamento                       | FileAndStorage-serviços        | Y                     |
+| Serviços de Arquivo e Armazenamento                       | FileAndStorage-Services        | Y                     |
 | Serviço Guardião de Host                           | HostGuardianServiceRole        | N                     |
 | Hyper-V                                         | Hyper-V                        | N                     |
-| Serviços de impressão e documentos                     | Serviços de impressão                 | N                     |
+| Serviços de impressão e documentos                     | Print-Services                 | N                     |
 | Acesso remoto                                   | RemoteAccess                   | N                     |
-| Serviços da área de trabalho Remota                         | Serviços de área de trabalho remota        | N                     |
+| Serviços da Área de Trabalho Remota                         | Serviços de área de trabalho remota        | N                     |
 | Serviços de Ativação por Volume                      | VolumeActivation               | N                     |
-| Servidor Web IIS                                  | Servidor Web                     | N                     |
+| Servidor Web IIS                                  | Web-Server                     | N                     |
 | Experiência do Windows Server Essentials            | ServerEssentialsRole           | N                     |
 | Windows Server Update Services                  | UpdateServices                 | N                     |
 
 ## <a name="role-services-included-in-server-core"></a>Serviços de função incluídos no Server Core
 A opção de instalação Server Core inclui os seguintes serviços de função.
 
-| Função                                  | Serviço de função                                                   | Nome                    | Instalado por padrão? |
+| Função                                  | Serviço de função                                                   | Name                    | Instalado por padrão? |
 |---------------------------------------|----------------------------------------------------------------|-------------------------|-----------------------|
 | Serviços de Certificados do Active Directory | Autoridade de certificação                                        | ADCS-CERT-Authority     | N                     |
 |                                       | Serviço Web de Política de Registro de Certificado                      | ADCS-registrar-Web-pol     | N                     |
@@ -59,10 +60,10 @@ A opção de instalação Server Core inclui os seguintes serviços de função.
 |                                       | Registro na Web de Autoridade de Certificação                         | ADCS-registro da Web     | N                     |
 |                                       | Serviço de Inscrição do Dispositivo de Rede                              | ADCS-registro de dispositivo  | N                     |
 |                                       | Respondente Online                                               | ADCS-online-CERT        | N                     |
-| Active Directory Rights Management    | Servidor de Gerenciamento de Direitos do Active Directory                      | ADRMS-servidor            | N                     |
-|                                       | Suporte à Federação de Identidade                                    | ADRMS-identidade          | N                     |
-| Serviços de Arquivo e Armazenamento             | Serviços de Arquivo e iSCSI                                        | Serviços de arquivos           | N                     |
-|                                       | Servidor de arquivos                                                    | FS-arquivos de arquivos           | N                     |
+| Active Directory Rights Management    | Servidor de Gerenciamento de Direitos do Active Directory                      | ADRMS-Server            | N                     |
+|                                       | Suporte à Federação de Identidade                                    | ADRMS-Identity          | N                     |
+| Serviços de Arquivo e Armazenamento             | Serviços de Arquivo e iSCSI                                        | File-Services           | N                     |
+|                                       | Servidor de Arquivos                                                    | FS-FileServer           | N                     |
 |                                       | BranchCache para arquivos de rede                                  | FS-BranchCache          | N                     |
 |                                       | Eliminação de duplicação de dados                                             | FS-eliminação de duplicação de dados   | N                     |
 |                                       | Namespaces DFS                                                 | FS-DFS-namespace        | N                     |
@@ -73,16 +74,16 @@ A opção de instalação Server Core inclui os seguintes serviços de função.
 |                                       | Provedor de armazenamento de destino iSCSI (provedores de hardware VDS e VSS) | iSCSITarget-VSS-VDS     | N                     |
 |                                       | Servidor para NFS                                                 | Serviço FS-NFS          | N                     |
 |                                       | Pastas de trabalho                                                   | FS-SyncShareService     | N                     |
-|                                       | Serviços de Armazenamento                                               | Serviços de armazenamento        | Y                     |
-| Serviços de impressão e documentos           | Servidor de Impressão                                                   | Servidor de impressão            | N                     |
+|                                       | Serviços de Armazenamento                                               | Storage-Services        | Y                     |
+| Serviços de impressão e documentos           | Servidor de Impressão                                                   | Print-Server            | N                     |
 |                                       | Serviço LPD                                                    | Print-LPD-Service       | N                     |
 | Acesso remoto                         | DirectAccess e VPN (RAS)                                     | DirectAccess-VPN        | N                     |
 |                                       | Roteamento                                                        | Roteamento                 | N                     |
 |                                       | Proxy de aplicativo Web                                          | Aplicativo Web-proxy   | N                     |
-| Serviços da área de trabalho Remota               | Agente de Conexão de Área de Trabalho Remota                               | RDS-Connection-Broker   | N                     |
-|                                       | Licenciamento de Área de Trabalho Remota                                       | Licenciamento RDS           | N                     |
-|                                       | Host de Virtualização de área de trabalho remota                             | RDS-virtualização      | N                     |
-| Servidor Web (IIS)                      | Servidor Web                                                     | Web-webserver           | N                     |
+| Serviços da Área de Trabalho Remota               | Agente de Conexão de Área de Trabalho Remota                               | RDS-Connection-Broker   | N                     |
+|                                       | Licenciamento de Área de Trabalho Remota                                       | RDS-Licensing           | N                     |
+|                                       | Host de Virtualização de área de trabalho remota                             | RDS-Virtualization      | N                     |
+| Servidor Web (IIS)                      | Servidor Web                                                     | Web-WebServer           | N                     |
 |                                       | Recursos comuns de HTTP                                           | Web-Common-http         | N                     |
 |                                       | Documento padrão                                               | Web-padrão-doc         | N                     |
 |                                       | Pesquisa no Diretório                                             | Web-dir-navegando        | N                     |
@@ -90,28 +91,28 @@ A opção de instalação Server Core inclui os seguintes serviços de função.
 |                                       | Conteúdo Estático                                                 | Web-estático-conteúdo      | N                     |
 |                                       | Redirecionamento de HTTP                                               | Web-http-Redirect       | N                     |
 |                                       | Publicação de WebDAV                                              | Publicação na Web-DAV      | N                     |
-|                                       | Integridade e diagnóstico                                         | Web-integridade              | N                     |
+|                                       | Integridade e diagnóstico                                         | Web-Health              | N                     |
 |                                       | Log HTTP                                                   | Log Web-http        | N                     |
 |                                       | Registro em log personalizado                                                 | Log personalizado da Web      | N                     |
 |                                       | Ferramentas de log                                                  | Bibliotecas de log da Web       | N                     |
 |                                       | Log de ODBC                                                   | Log Web-ODBC        | N                     |
 |                                       | Monitor de solicitações                                              | Monitor de solicitação da Web     | N                     |
 |                                       | Rastreamento                                                        | Rastreamento de http Web        | N                     |
-|                                       | Desempenho                                                    | Desempenho da Web         | N                     |
+|                                       | Desempenho                                                    | Web-Performance         | N                     |
 |                                       | Compactação de Conteúdo Estático                                     | Web-Stat-Compression    | N                     |
 |                                       | Compactação de Conteúdo Dinâmico                                    | Web-Dyn-Compression     | N                     |
-|                                       | Segurança                                                       | Segurança da Web            | N                     |
-|                                       | Filtragem de Solicitações                                              | Filtragem da Web           | N                     |
+|                                       | Segurança                                                       | Web-Security            | N                     |
+|                                       | Filtragem de Solicitações                                              | Web-Filtering           | N                     |
 |                                       | Autenticação Básica                                           | Web-básico-autenticação          | N                     |
-|                                       | Suporte Centralizado a Certificado SSL                            | Web-Certprovider        | N                     |
+|                                       | Suporte Centralizado a Certificado SSL                            | Web-CertProvider        | N                     |
 |                                       | Autenticação de mapeamento de certificado de cliente                      | Web-cliente-autenticação         | N                     |
 |                                       | Autenticação Digest                                          | Web-Digest-auth         | N                     |
 |                                       | Autenticação de mapeamento de certificado do cliente IIS                  | Web-CERT-auth           | N                     |
 |                                       | Restrições de IP e domínio                                     | Segurança de IP da Web         | N                     |
 |                                       | Autorização de URL                                              | Web-URL-auth            | N                     |
 |                                       | Autenticação do Windows                                         | Web-Windows-auth        | N                     |
-|                                       | Desenvolvimento do aplicativo                                        | Aplicativo Web-desenvolvimento             | N                     |
-|                                       | .NET Extensibility 3.5                                         | Web-net-ext             | N                     |
+|                                       | Desenvolvimento de aplicativo                                        | Aplicativo Web-desenvolvimento             | N                     |
+|                                       | Extensibilidade 3.5 do .NET                                         | Web-net-ext             | N                     |
 |                                       | Extensibilidade do .NET 4,6                                         | Web-net-Ext45           | N                     |
 |                                       | Inicialização de Aplicativo                                     | Web-AppInit             | N                     |
 |                                       | ASP                                                            | Web-ASP                 | N                     |
@@ -120,49 +121,49 @@ A opção de instalação Server Core inclui os seguintes serviços de função.
 |                                       | CGI                                                            | Web-CGI                 | N                     |
 |                                       | Extensões ISAPI                                               | Web-ISAPI-ext           | N                     |
 |                                       | Filtros ISAPI                                                  | Web-ISAPI-Filter        | N                     |
-|                                       | Server Side Includes                                           | Web-inclui            | N                     |
+|                                       | Server Side Includes                                           | Web-Includes            | N                     |
 |                                       | Protocolo WebSocket                                             | Web-WebSockets          | N                     |
 |                                       | Servidor FTP                                                     | Servidor Web-FTP          | N                     |
 |                                       | Serviço de FTP                                                    | Web-FTP-Service         | N                     |
 |                                       | Extensibilidade de FTP                                              | Web-FTP-ext             | N                     |
 |                                       | Ferramentas de gerenciamento                                               | Web-MGMT-Tools          | N                     |
 |                                       | Compatibilidade de gerenciamento do IIS 6                                 | Web-MGMT-compat         | N                     |
-|                                       | Compatibilidade de Metabase do IIS 6                                   | Web-metabase            | N                     |
+|                                       | Compatibilidade de Metabase do IIS 6                                   | Web-Metabase            | N                     |
 |                                       | Ferramentas de script do IIS 6                                          | Web-LGCY-scripting      | N                     |
 |                                       | Compatibilidade de WMI do IIS 6                                        | Web-WMI                 | N                     |
 |                                       | Scripts e Ferramentas de Gerenciamento do IIS                               | Web-Scripting-ferramentas     | N                     |
 |                                       | Management Service                                             | Web-mgmt-serviço        | N                     |
-| Windows Server Update Services        | Conectividade de WID                                               | Updateservices-WidDB    | N                     |
-|                                       | Serviços do WSUS                                                  | Updateservices-Services | N                     |
+| Windows Server Update Services        | Conectividade de WID                                               | UpdateServices-WidDB    | N                     |
+|                                       | Serviços do WSUS                                                  | UpdateServices-Services | N                     |
 |                                       | Conectividade de SQL Server                                        | Updateservices-DB       | N                     |
 
 ## <a name="features-included-in-server-core"></a>Recursos incluídos no Server Core
 A opção de instalação Server Core inclui os seguintes recursos.
 
-| Recurso                                                | Nome                               | Instalado por padrão? |
+| Recurso                                                | Name                               | Instalado por padrão? |
 |--------------------------------------------------------|------------------------------------|-----------------------|
 | Recursos do .NET Framework 3.5                            | NET-Framework-recursos             | N                     |
 | .NET Framework 3,5 (inclui o .NET 2,0 e 3,0)       | NET-Framework-Core                 | removido             |
-| Ativação de HTTP                                        | Ativação de NET-HTTP                | N                     |
+| Ativação HTTP                                        | Ativação de NET-HTTP                | N                     |
 | Ativação não HTTP                                    | NET-non-HTTP-ATI                 | N                     |
 | Recursos do .NET Framework 4,6                            | NET-Framework-45-recursos          | Y                     |
 | .NET Framework 4.6                                     | NET-Framework-45-Core              | Y                     |
 | ASP.NET 4,6                                            | NET-Framework-45-ASPNET            | N                     |
 | Serviços WCF                                           | NET-WCF-Services45                 | Y                     |
-| Ativação de HTTP                                        | NET-WCF-HTTP-Activation45          | N                     |
+| Ativação HTTP                                        | NET-WCF-HTTP-Activation45          | N                     |
 | Ativação do MSMQ (enfileiramento de mensagens)                      | NET-WCF-MSMQ-Activation45          | N                     |
 | Ativação de pipe nomeado                                  | NET-WCF-pipe-Activation45          | N                     |
 | Ativação TCP                                         | NET-WCF-TCP-Activation45           | N                     |
 | Compartilhamento de porta TCP                                       | NET-WCF-TCP-PortSharing45          | Y                     |
-| BITS         | BITS                               | N                     |
+| Serviço básico de transferência inteligente (BITS)         | BITS                               | N                     |
 | Compact Server                                         | BITS-Compact-Server                | N                     |
 | Criptografia de Unidade de Disco BitLocker                             | BitLocker                          | N                     |
 | BranchCache                                            | BranchCache                        | N                     |
-| Cliente NFS                                         | NFS-cliente                         | N                     |
+| Cliente NFS                                         | NFS-Client                         | N                     |
 | Contêineres                                             | Contêineres                         | N                     |
 | Ponte de Data Center                                   | Data Center-ponte               | N                     |
 | Armazenamento Avançado                                       | EnhancedStorage                    | N                     |
-| Clustering de failover                                    | Failover-clustering                | N                     |
+| Clustering de failover                                    | Failover-Clustering                | N                     |
 | Gerenciamento de Política de Grupo                                | GPMC                               | N                     |
 | Qualidade de Serviço de E/S                                 | DiskIo-QoS                         | N                     |
 | Núcleo da Web Hospedável do IIS                                  | Web-WHC                            | N                     |
@@ -171,26 +172,26 @@ A opção de instalação Server Core inclui os seguintes recursos.
 | Extensão do IIS do Management OData                         | ManagementOdata                    | N                     |
 | Media Foundation                                       | Server-Media-Foundation            | N                     |
 | Enfileiramento de Mensagens                                        | MSMQ                               | N                     |
-| Serviços de enfileiramento de mensagens                               | Serviços MSMQ                      | N                     |
-| Servidor de enfileiramento de mensagens                                 | Servidor MSMQ                        | N                     |
-| Integração de Serviços de Diretório                          | Diretório MSMQ                     | N                     |
+| Serviços de enfileiramento de mensagens                               | MSMQ-Services                      | N                     |
+| Servidor de enfileiramento de mensagens                                 | MSMQ-Server                        | N                     |
+| Integração de Serviços de Diretório                          | MSMQ-Directory                     | N                     |
 | Suporte a HTTP                                           | MSMQ-HTTP-support                  | N                     |
-| Gatilhos de enfileiramento de mensagens                               | Gatilhos MSMQ                      | N                     |
-| Serviço de roteamento                                        | Roteamento do MSMQ                       | N                     |
+| Gatilhos de enfileiramento de mensagens                               | MSMQ-Triggers                      | N                     |
+| Serviço de roteamento                                        | MSMQ-Routing                       | N                     |
 | Proxy DCOM do Serviço de Enfileiramento de Mensagens                             | MSMQ-DCOM                          | N                     |
 | Multipath I/O                                          | Vários caminhos-e/s                       | N                     |
-| MultiPoint Connector                                   | Conector do MultiPoint               | N                     |
+| MultiPoint Connector                                   | MultiPoint-Connector               | N                     |
 | Serviços do conector do MultiPoint                          | MultiPoint-Connector-Services      | N                     |
 | MultiPoint Manager e MultiPoint Dashboard            | MultiPoint-Tools                   | N                     |
 | Network Load Balancing                                 | NLB                                | N                     |
 | Protocolo PNRP                          | PNRP                               | N                     |
 | Quality Windows Audio-Video Experience                 | qWave                              | N                     |
-| Compactação Diferencial Remota                        | RDC                                | N                     |
+| Compressão diferencial remota                        | RDC                                | N                     |
 | Ferramentas de Administração de Servidor Remoto                     | RSAT                               | N                     |
 | Ferramentas de administração do recurso                           | RSAT-recurso-ferramentas                 | N                     |
 | Utilitários de administração de Criptografia de Unidade de Disco BitLocker  | RSAT-Feature-Tools-BitLocker       | N                     |
 | Ferramentas LLDP DataCenterBridging                          | RSAT-DataCenterBridging-LLDP-Tools | N                     |
-| Ferramentas de cluster de failover                              | RSAT-clustering                    | N                     |
+| Ferramentas de cluster de failover                              | RSAT-Clustering                    | N                     |
 | Módulo de cluster de failover para Windows PowerShell         | RSAT-Clustering-PowerShell         | N                     |
 | Servidor de automação de cluster de failover                     | RSAT-clustering-AutomationServer   | N                     |
 | Interface de comando de cluster de failover                     | RSAT-clustering-CmdInterface       | N                     |
@@ -203,7 +204,7 @@ A opção de instalação Server Core inclui os seguintes recursos.
 | Ferramentas de AD DS                                            | RSAT – ADICIONA                          | N                     |
 | Centro Administrativo do Active Directory                 | RSAT-AD-AdminCenter                | N                     |
 | Snap-ins AD DS e Ferrramentas de linha de comando                  | RSAT-ADDS – ferramentas                    | N                     |
-| AD LDS snap-ins e ferramentas de linha de comando                 | RSAT-ADLDS                         | N                     |
+| Ferramentas de Snap-Ins e Command-Line de AD LDS                 | RSAT-ADLDS                         | N                     |
 | Ferramentas de Gerenciamento do Hyper-V                               | RSAT-Hyper-V-Tools                 | N                     |
 | Módulo Hyper-V para o Windows PowerShell                  | PowerShell do Hyper-V                 | N                     |
 | Ferramentas de Windows Server Update Services                   | Updateservices-RSAT                | N                     |
@@ -217,9 +218,9 @@ A opção de instalação Server Core inclui os seguintes recursos.
 | Serviços TCP/IP Simples                                 | Simples-TCPIP                       | N                     |
 | Suporte para Compartilhamento de Arquivos SMB 1.0/ CIFS                      | FS-SMB1                            | Y                     |
 | Limite de Largura de Banda do SMB                                    | FS-SMBBW                           | N                     |
-| Serviço SNMP                                           | Serviço SNMP                       | N                     |
+| Serviço SNMP                                           | SNMP-Service                       | N                     |
 | Provedor WMI SNMP                                      | SNMP-WMI-provedor                  | N                     |
-| Cliente Telnet                                          | Telnet-cliente                      | N                     |
+| Cliente Telnet                                          | Telnet-Client                      | N                     |
 | Ferramentas de Blindagem de VM para Gerenciamento de Malha               | FabricShieldedTools                | N                     |
 | Recursos do Windows Defender                              | Windows-Defender-recursos          | Y                     |
 | Windows Defender                                       | Windows-Defender                   | Y                     |
@@ -227,7 +228,7 @@ A opção de instalação Server Core inclui os seguintes recursos.
 | Windows PowerShell                                     | PowerShellRoot                     | Y                     |
 | Windows PowerShell 5.1                                 | PowerShell                         | Y                     |
 | Mecanismo 2,0 do Windows PowerShell                          | PowerShell-v2                      | removido             |
-| Serviço de configuração de estado desejado do Windows PowerShell | Serviço DSC                        | N                     |
+| Serviço de configuração de estado desejado do Windows PowerShell | DSC-Service                        | N                     |
 | Windows PowerShell Web Access                          | WindowsPowerShellWebAccess         | N                     |
 | Serviço de Ativação de Processos do Windows                     | WAS                                | N                     |
 | Modelo de processo                                          | WAS-processo-modelo                  | N                     |
@@ -238,5 +239,5 @@ A opção de instalação Server Core inclui os seguintes recursos.
 | Gerenciamento de armazenamento baseado em padrões do Windows             | WindowsStorageManagementService    | N                     |
 | Extensão IIS WinRM                                    | WinRM-IIS-Ext                      | N                     |
 | Servidor WINS                                            | WINS                               | N                     |
-| Suporte a WoW64                                          | WoW64 – suporte                      | Y                     |
+| Suporte a WoW64                                          | WoW64-Support                      | Y                     |
 |                                                        |                                    |                       |

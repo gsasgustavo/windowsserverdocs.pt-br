@@ -3,15 +3,15 @@ title: Solucionar problemas no servidor DHCP
 description: Este Artilce apresenta como solucionar problemas no servidor DHCP e coletar dados.
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: a6b5e4128c2e07e51ab8a9c07155a8c0212fcad8
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 8ff76377dcfaefa556b9d2df676210ae55fd0f1d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078583"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947172"
 ---
 # <a name="troubleshoot-problems-on-the-dhcp-server"></a>Solucionar problemas no servidor DHCP
 
@@ -45,8 +45,8 @@ Verifique as seguintes configurações:
 
 Verifique os logs de eventos do serviço do servidor DHCP e do sistema (**logs de aplicativos e serviços** \> **Microsoft** \> **Windows** \> **DHCP-Server**) para problemas relatados relacionados ao problema observado.
 Dependendo do tipo de problema, um evento é registrado em um dos seguintes canais de eventos: servidor DHCP eventos [operacionais](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))servidor DHCP eventos administrativos de servidor DHCP eventos do sistema DHCP servidor filtro eventos de 
- [DHCP Server Administrative Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) 
- [DHCP Server System Events](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) 
+ [](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) 
+ [](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) 
  [notificação](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) 
  [servidor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\)) DHCP eventos de auditoria
 

@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 preparar servidores de cluster
-description: Este tópico faz parte do guia implantar o acesso remoto em um cluster no Windows Server 2016.
+description: Saiba como preparar servidores adicionais para adicionar ao cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ddd14a0244ce4c788a617f1fa6ff07fdfd859947
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 09c2a1a05d6800a3497bc6b8b15536eb73466770
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937280"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947382"
 ---
 # <a name="step-2-prepare-cluster-servers"></a>Etapa 2 preparar servidores de cluster
 
@@ -45,13 +46,13 @@ Para configurar um cluster de acesso remoto, você deve instalar a função de a
 
 2.  Clique em **Avançar** três vezes para exibir a tela de seleção de função de servidor.
 
-3.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto**e clique em **Avançar**.
+3.  Na caixa de diálogo **selecionar funções de servidor** , selecione **acesso remoto** e clique em **Avançar**.
 
 4.  Clique em **Avançar** três vezes.
 
 5.  Na caixa de diálogo **selecionar serviços de função** , selecione **DirectAccess e VPN (RAS)** e clique em **Adicionar recursos**.
 
-6.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos**e, em seguida, clique em **Avançar**.
+6.  Selecione **Roteamento**, selecione **proxy de aplicativo Web**, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
 7. Clique em **Avançar** e, em seguida, clique em **Instalar**.
 
@@ -71,13 +72,13 @@ Para configurar um cluster de acesso remoto, você deve instalar o recurso de ba
 
 2.  Clique em **Avançar** quatro vezes para acessar a tela de seleção de recursos do servidor.
 
-3.  Na caixa de diálogo **selecionar recursos** , selecione **balanceamento de carga de rede**, clique em **Adicionar recursos**, clique em **Avançar**e em **instalar**.
+3.  Na caixa de diálogo **selecionar recursos** , selecione **balanceamento de carga de rede**, clique em **Adicionar recursos**, clique em **Avançar** e em **instalar**.
 
 4.  Na caixa de diálogo **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
 5.  Repita esse procedimento em todos os servidores que você deseja que sejam membros do cluster.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Veja também
 
 -   [Etapa 3: configurar um cluster com balanceamento de carga](Step-3-Configure-a-Load-Balanced-Cluster.md)
 

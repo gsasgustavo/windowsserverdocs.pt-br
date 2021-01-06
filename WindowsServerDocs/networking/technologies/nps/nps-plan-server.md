@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 73e85d9582e447466115ce30047a3968a8f457d8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 3c843f4fd5bb7ed88b316fb756534b23af8007c8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952001"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946662"
 ---
 # <a name="plan-nps-as-a-radius-server"></a>Planejar NPS como um servidor RADIUS
 
@@ -49,7 +50,7 @@ Durante o planejamento da configuração do NPS, você pode usar as etapas a seg
 
 - Determine os tipos de eventos que você deseja que o NPS registre no log de eventos. Você pode registrar solicitações de autenticação rejeitadas, solicitações de autenticação bem-sucedidas ou ambos os tipos de solicitações.
 
-- Determine se você está implantando mais de um NPS. Para fornecer tolerância a falhas para autenticação e contabilidade baseadas em RADIUS, use pelo menos dois NPSs. Um NPS é usado como o servidor RADIUS primário e o outro é usado como um backup. Cada cliente RADIUS é então configurado em ambos os NPSs. Se o NPS primário ficar indisponível, os clientes RADIUS enviarão mensagens de solicitação de acesso para o NPS alternativo.
+- Determine se você está implantando mais de um NPS. Para fornecer tolerância a falhas para autenticação e contabilidade baseadas em RADIUS, use pelo menos dois NPSs. Um NPS é usado como o servidor RADIUS primário e o outro é usado como um backup. Cada cliente RADIUS é então configurado em ambos os NPSs. Se o NPS primário ficar indisponível, os clientes RADIUS enviarão Access-Request mensagens para o NPS alternativo.
 
 - Planeje o script usado para copiar uma configuração NPS para outras NPSs para economizar na sobrecarga administrativa e para evitar o configuração incorreto de um servidor. O NPS fornece os comandos netsh que permitem copiar toda ou parte de uma configuração NPS para importação em outro NPS. Você pode executar os comandos manualmente no prompt do netsh. No entanto, se você salvar a sequência de comandos como um script, poderá executar o script em uma data posterior se decidir alterar as configurações do servidor.
 
@@ -211,7 +212,7 @@ Durante o planejamento para a contabilidade do NPS usando o log de SQL Server do
 
 - Determine o aplicativo ou aplicativos que você deseja usar para exibir dados de contabilidade e produzir relatórios.
 
-- Planeje usar os servidores de acesso à rede que enviam o atributo de classe em todas as solicitações de contabilidade. O atributo de classe é enviado para o cliente RADIUS em uma mensagem de aceitação de acesso e é útil para correlacionar mensagens de solicitação de contabilidade com sessões de autenticação. Se o atributo de classe for enviado pelo servidor de acesso à rede nas mensagens de solicitação de contabilização, ele poderá ser usado para corresponder os registros de estatísticas e de autenticação. A combinação dos atributos Unique-Serial-Number, Service-reboot-time e Server-address deve ser uma identificação exclusiva para cada autenticação que o servidor aceitar.
+- Planeje usar os servidores de acesso à rede que enviam o atributo de classe em todas as solicitações de contabilidade. O atributo de classe é enviado para o cliente RADIUS em uma mensagem de Access-Accept e é útil para correlacionar Accounting-Request mensagens com sessões de autenticação. Se o atributo de classe for enviado pelo servidor de acesso à rede nas mensagens de solicitação de contabilização, ele poderá ser usado para corresponder os registros de estatísticas e de autenticação. A combinação dos atributos Unique-Serial-Number, Service-reboot-time e Server-Address deve ser uma identificação exclusiva para cada autenticação que o servidor aceita.
 
 - Planeje usar os servidores de acesso à rede que dão suporte à contabilidade provisória.
 

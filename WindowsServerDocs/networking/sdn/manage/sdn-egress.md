@@ -2,16 +2,16 @@
 title: Saída monitoração na rede virtual
 description: Um aspecto fundamental do monetização de rede em nuvem é A saída da largura de banda da rede. Por exemplo-transferências de dados de saída no modelo de negócios Microsoft Azure. Os dados de saída são cobrados com base na quantidade total de dados que saem dos data centers do Azure pela Internet em um determinado ciclo de cobrança.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 10/02/2018
-ms.openlocfilehash: a9e939b4a810848e91b5d2cb8e4b878bbcf56e84
-ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
+ms.openlocfilehash: 821adcc4ae3ac99a92de8b0b57e3248be1786ce3
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156466"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947272"
 ---
 # <a name="egress-metering-in-a-virtual-network"></a>Saída de medição em uma rede virtual
 
@@ -87,7 +87,7 @@ Você pode gerenciar o conjunto de prefixos de sub-rede IP para excluir da medi�
       ```
 
 
-3. Verifique a rede virtual para ver o **UnbilledAddressRanges**configurado.
+3. Verifique a rede virtual para ver o **UnbilledAddressRanges** configurado.
 
    ```PowerShell
    (Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceID "VNet1").properties

@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 88c35f983ae998312ad3353245927c943869d7f0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 3b14d290a1bf80b0f72abb2b2043be2e5e53516a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952051"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946682"
 ---
 # <a name="configure-network-policies"></a>Configurar políticas de rede
 
@@ -50,7 +51,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 1. Abra o console do NPS e clique duas vezes em **políticas**.
 
-2. Na árvore de console, clique com o botão direito do mouse em **políticas de rede**e clique em **novo**. O assistente Nova Diretiva de Rede é exibido.
+2. Na árvore de console, clique com o botão direito do mouse em **políticas de rede** e clique em **novo**. O assistente Nova Diretiva de Rede é exibido.
 
 3. Use o assistente de nova política de rede para criar uma política.
 
@@ -76,7 +77,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 ### <a name="to-create-policies-for-dial-up-or-vpn-with-a-wizard"></a>Para criar políticas para dial-up ou VPN com um assistente
 
-1. Abra o console do NPS. Se ainda não estiver selecionado, clique em **NPS \( local \) **. Se você quiser criar políticas em um NPS remoto, selecione o servidor.
+1. Abra o console do NPS. Se ainda não estiver selecionado, clique em **NPS \( local \)**. Se você quiser criar políticas em um NPS remoto, selecione o servidor.
 
 2. Em **introdução** e **configuração padrão**, selecione **servidor RADIUS para conexões dial-up ou VPN**. O texto e os links sob o texto são alterados para refletir sua seleção.
 
@@ -103,9 +104,9 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 ### <a name="to-create-policies-for-8021x-wired-or-wireless-with-a-wizard"></a>Para criar políticas para 802.1 X com ou sem fio com um assistente
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. Se ainda não estiver selecionado, clique em **NPS \( local \) **. Se você quiser criar políticas em um NPS remoto, selecione o servidor.
+2. Se ainda não estiver selecionado, clique em **NPS \( local \)**. Se você quiser criar políticas em um NPS remoto, selecione o servidor.
 
 3. Em **introdução** e **configuração padrão**, selecione **servidor RADIUS para conexões 802.1 x sem fio ou com fio**. O texto e os links sob o texto são alterados para refletir sua seleção.
 
@@ -127,9 +128,9 @@ Você pode usar este procedimento para configurar o NPS para ignorar as propried
 
 A associação em **Administradores**, ou equivalente, é o requisito mínimo necessário para concluir este procedimento.
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. Clique duas vezes em **políticas**, em **políticas de rede**e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
+2. Clique duas vezes em **políticas**, em **políticas de rede** e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
 
 3. Na caixa de **diálogo Propriedades** da política, na guia **visão geral** , em **permissão de acesso**, marque a caixa de seleção **ignorar Propriedades de discagem da conta de usuário** e clique em **OK**.
 
@@ -149,7 +150,7 @@ Você também pode usar VLANs quando quiser separar uma rede entre diferentes gr
 
 Você pode usar este procedimento para configurar uma política de rede que atribui usuários a uma VLAN. Ao usar o hardware de rede com reconhecimento de VLAN, como roteadores, comutadores e controladores de acesso, você pode configurar a política de rede para instruir os servidores de acesso a inserir membros de grupos de Active Directory específicos em VLANs específicas. Essa capacidade de agrupar recursos de rede logicamente com VLANs fornece flexibilidade ao projetar e implementar soluções de rede.
 
-Ao definir as configurações de uma política de rede NPS para uso com VLANs, você deve configurar os atributos **Tunnel-Medium**, **Tunnel-Pvt-Group-ID**, **túnel-Type**e **Tunnel-Tag**.
+Ao definir as configurações de uma política de rede NPS para uso com VLANs, você deve configurar os atributos **Tunnel-Medium**, **Tunnel-Pvt-Group-ID**, **túnel-Type** e **Tunnel-Tag**.
 
 Esse procedimento é fornecido como uma diretriz; sua configuração de rede pode exigir configurações diferentes das descritas abaixo.
 
@@ -157,13 +158,13 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 ### <a name="to-configure-a-network-policy-for-vlans"></a>Para configurar uma política de rede para VLANs
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. Clique duas vezes em **políticas**, em **políticas de rede**e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
+2. Clique duas vezes em **políticas**, em **políticas de rede** e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
 
 3. Na caixa de diálogo **Propriedades** da política, clique na guia **configurações** .
 
-4. Em **Propriedades**da política, em **configurações**, em **atributos RADIUS**, verifique se **padrão** está selecionado.
+4. Em **Propriedades** da política, em **configurações**, em **atributos RADIUS**, verifique se **padrão** está selecionado.
 
 5. No painel de detalhes, em **atributos**, o atributo **Service-Type** é configurado com um valor padrão de **Framed**. Por padrão, para políticas com métodos de acesso de VPN e dial-up, o atributo **Framed-Protocol** é configurado com um valor de **PPP**. Para especificar atributos de conexão adicionais necessários para VLANs, clique em **Adicionar**. A caixa de diálogo **Adicionar atributo RADIUS padrão** é aberta.
 
@@ -180,11 +181,11 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 8. Se o seu NAS (servidor de acesso à rede) exigir o uso do atributo **Tunnel-Tag** , use as etapas a seguir para adicionar o atributo **Tunnel-Tag** à política de rede. Se a documentação do NAS não mencionar esse atributo, não o adicione à política. Se necessário, adicione os atributos da seguinte maneira:
 
-    - Em **Propriedades**da política, **em configurações**, em **atributos RADIUS**, clique em **específico do fornecedor**.
+    - Em **Propriedades** da política, **em configurações**, em **atributos RADIUS**, clique em **específico do fornecedor**.
 
     - No painel de detalhes, clique em **Adicionar**. A caixa de diálogo **Adicionar atributo específico do fornecedor** é aberta.
 
-    - Em **atributos**, role para baixo até e selecione **Tunnel-Tag**e, em seguida, clique em **Adicionar**. A caixa de diálogo **informações de atributo** é aberta.
+    - Em **atributos**, role para baixo até e selecione **Tunnel-Tag** e, em seguida, clique em **Adicionar**. A caixa de diálogo **informações de atributo** é aberta.
 
     - Em **valor do atributo**, digite o valor que você obteve da documentação do hardware.
 
@@ -202,17 +203,17 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 ### <a name="to-configure-the-framed-mtu-attribute"></a>Para configurar o atributo frame-MTU
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. Clique duas vezes em **políticas**, em **políticas de rede**e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
+2. Clique duas vezes em **políticas**, em **políticas de rede** e, no painel de detalhes, clique duas vezes na política que você deseja configurar.
 
 3. Na caixa de diálogo **Propriedades** da política, clique na guia **configurações** .
 
 4. Em **configurações**, em **atributos RADIUS**, clique em **padrão**. No painel de detalhes, clique em **Adicionar**. A caixa de diálogo **Adicionar atributo RADIUS padrão** é aberta.
 
-5. Em **atributos**, role para baixo e clique em **frame-MTU**e, em seguida, clique em **Adicionar**. A caixa de diálogo **informações de atributo** é aberta.
+5. Em **atributos**, role para baixo e clique em **frame-MTU** e, em seguida, clique em **Adicionar**. A caixa de diálogo **informações de atributo** é aberta.
 
-6. Em **valor do atributo**, digite um valor igual ou menor que **1344**. Clique em **OK**, em **fechar**e em **OK**.
+6. Em **valor do atributo**, digite um valor igual ou menor que **1344**. Clique em **OK**, em **fechar** e em **OK**.
 
 
 

@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: b0bc677d56e97f6b10d1ca12ece92067e210eab9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: f379ce07682ceec4dcfff1395b316eee333a3ec5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949390"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947812"
 ---
 # <a name="refresh-group-policy"></a>Atualizar Diretiva de Grupo
 
@@ -28,7 +29,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 1.  No computador em que o NPS está instalado, abra o Windows PowerShell &reg; usando o ícone na barra de tarefas.
 
-2.  No prompt do Windows PowerShell, digite **gpupdate**e pressione Enter.
+2.  No prompt do Windows PowerShell, digite **gpupdate** e pressione Enter.
 
 
 

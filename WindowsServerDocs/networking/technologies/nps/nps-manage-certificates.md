@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 204a4ef4-9d78-4a62-9940-43cc0e1c39d0
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 0641b78a15a8d8464dd1993b62439f495391f8b1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 60b31be2cd4716b0672899d4fcccc3c9429f2713
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962030"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946802"
 ---
 # <a name="manage-certificates-used-with-nps"></a>Gerenciar certificados usados com NPS
 
@@ -61,11 +62,11 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 2. Navegue até a chave do registro **HKEY \_ local \_ MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
-3. No menu **Editar** , clique em **novo**e em **chave**.
+3. No menu **Editar** , clique em **novo** e em **chave**.
 
-4. Digite **ClientCacheTime**e pressione Enter.
+4. Digite **ClientCacheTime** e pressione Enter.
 
-5. Clique com o botão direito do mouse em **ClientCacheTime**, clique em **novo**e em **valor DWORD (32 bits)**.
+5. Clique com o botão direito do mouse em **ClientCacheTime**, clique em **novo** e em **valor DWORD (32 bits)**.
 
 6. Digite a quantidade de tempo, em milissegundos, que você deseja que os computadores cliente armazenem em cache o identificador TLS de um NPS após a primeira tentativa de autenticação bem-sucedida pelo NPS.
 
@@ -84,11 +85,11 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 2. Navegue até a chave do registro **HKEY \_ local \_ MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
-3. No menu **Editar** , clique em **novo**e em **chave**.
+3. No menu **Editar** , clique em **novo** e em **chave**.
 
-4. Digite **ServerCacheTime**e pressione Enter.
+4. Digite **ServerCacheTime** e pressione Enter.
 
-5. Clique com o botão direito do mouse em **ServerCacheTime**, clique em **novo**e em **valor DWORD (32 bits)**.
+5. Clique com o botão direito do mouse em **ServerCacheTime**, clique em **novo** e em **valor DWORD (32 bits)**.
 
 6. Digite o período de tempo, em milissegundos, que você deseja que o NPSs armazene em cache o identificador TLS de um computador cliente após a primeira tentativa de autenticação bem-sucedida pelo cliente.
 
@@ -104,11 +105,11 @@ Para concluir este procedimento, você deve ser um membro do grupo **usuários**
 
 ### <a name="to-obtain-the-sha-1-hash-of-a-trusted-root-ca-certificate"></a>Para obter o hash SHA-1 de um certificado de autoridade de certificação raiz confiável
 
-1. Na caixa de diálogo Executar ou no Windows PowerShell, digite **MMC**e pressione Enter. O MMC do console de gerenciamento Microsoft \( \) é aberto. No MMC, clique em **arquivo**e, em seguida, clique em **Adicionar/remover Snap\in**. A caixa de diálogo **Adicionar ou Remover Snap-ins** é aberta.
+1. Na caixa de diálogo Executar ou no Windows PowerShell, digite **MMC** e pressione Enter. O MMC do console de gerenciamento Microsoft \( \) é aberto. No MMC, clique em **arquivo** e, em seguida, clique em **Adicionar/remover Snap\in**. A caixa de diálogo **Adicionar ou Remover Snap-ins** é aberta.
 
 2. Em **Adicionar ou Remover Snap-ins**, em **Snap-ins disponíveis**, clique duas vezes em **Certificados**. O assistente de snap-in de certificados é aberto. Clique em **Conta de computador** e em **Avançar**.
 
-3. Em **Selecionar computador**, verifique se **o computador local (o computador no qual este console está sendo executado)** está selecionado, clique em **concluir**e em **OK**.
+3. Em **Selecionar computador**, verifique se **o computador local (o computador no qual este console está sendo executado)** está selecionado, clique em **concluir** e em **OK**.
 
 4. No painel esquerdo, clique duas vezes em **certificados (computador local)** e, em seguida, clique duas vezes na pasta **autoridades de certificação raiz confiáveis** .
 

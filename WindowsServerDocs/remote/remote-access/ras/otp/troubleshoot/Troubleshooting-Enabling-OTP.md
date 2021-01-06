@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a01a52be4ce755c57297ba825be249b9b6853c7d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: cf2ec60923415e3fafc253a14c8da0d624e72bf1
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958294"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947222"
 ---
 # <a name="troubleshooting-enabling-otp"></a>Solução de problemas da habilitação de OTP
 
@@ -59,7 +60,7 @@ Desinstale a função WebDAV:
 
 2.  No painel principal, role até **funções e recursos**.
 
-3.  Clique com o botão direito do mouse em **publicação WebDAV**e clique em **remover função ou recurso**.
+3.  Clique com o botão direito do mouse em **publicação WebDAV** e clique em **remover função ou recurso**.
 
 4.  Conclua o assistente para remover funções e recursos.
 
@@ -86,7 +87,7 @@ Há duas causas possíveis para esse erro:
 
     2.  No painel esquerdo, expanda o servidor de AC escolhido.
 
-    3.  Clique em **modelos de certificado** e verifique se os modelos necessários estão habilitados. Caso contrário, clique com o botão direito do mouse em **modelos de certificado**, clique em **novo**, clique em **modelo de certificado para emitir**e selecione os modelos que deseja habilitar.
+    3.  Clique em **modelos de certificado** e verifique se os modelos necessários estão habilitados. Caso contrário, clique com o botão direito do mouse em **modelos de certificado**, clique em **novo**, clique em **modelo de certificado para emitir** e selecione os modelos que deseja habilitar.
 
 ## <a name="cannot-set-renewal-period-of-otp-template-to-1-hour"></a>Não é possível definir o período de renovação do modelo de OTP como 1 hora
 **Cenário**. Ao configurar o modelo de logon de OTP do DirectAccess usando a AC do Windows 2003, não é possível definir o período de renovação do modelo como 1 hora.

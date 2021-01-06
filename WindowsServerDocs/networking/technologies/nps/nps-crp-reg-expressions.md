@@ -6,13 +6,13 @@ ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
 ms.author: jgerend
 author: jasongerend
-msdate: 08/16/2019
-ms.openlocfilehash: b2df170153e2848239a8846e58a84981bc9ad12e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/16/2019
+ms.openlocfilehash: b1c1acd5feb39304a7c507aa88ea15156fb5e8dd
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969383"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947092"
 ---
 # <a name="use-regular-expressions-in-nps"></a>Use expressões regulares no NPS
 
@@ -53,7 +53,7 @@ Você pode usar a tabela a seguir como uma origem de referência ao criar expres
 |    `\v`     |                                                                      Corresponde a um caractere de tabulação vertical.                                                                       |                                                                 &nbsp;                                                                  |
 |    `\w`     |                                              Corresponde a qualquer caractere de palavra, incluindo sublinhado \( equivalente a `[A-Za-z0-9_]` \) .                                              |                                                                 &nbsp;                                                                  |
 |    `\W`     |                                           Corresponde a qualquer caractere que não seja \- palavra, excluindo o sublinhado \( equivalente a `[^A-Za-z0-9_]` \) .                                           |                                                                 &nbsp;                                                                  |
-|   `\num`    | Refere-se a correspondências lembradas \( `?num` , em que num é um inteiro positivo \) .  Essa opção pode ser usada somente na caixa de texto **substituir** ao configurar a manipulação de atributos. |                                       `\1`Substitui o que está armazenado na primeira correspondência lembrada.                                       |
+|   `\num`    | Refere-se a correspondências lembradas \( `?num` , em que num é um inteiro positivo \) .  Essa opção pode ser usada somente na caixa de texto **substituir** ao configurar a manipulação de atributos. |                                       `\1` Substitui o que está armazenado na primeira correspondência lembrada.                                       |
 |   `/n/ `    |                      Permite a inserção de códigos ASCII em expressões regulares \( `?n` , em que n é um valor de escape octal, hexadecimal ou decimal \) .                       |                                                                 &nbsp;                                                                  |
 
 ## <a name="examples-for-network-policy-attributes"></a>Exemplos de atributos de política de rede
@@ -96,7 +96,7 @@ Em um cenário de dial-up terceirizado no qual um ISP do provedor de serviços d
 
 
 
-<strong>Para substituir o *usuário* por*user@specific_domain</strong>*
+<strong>Para substituir o *usuário* por *user@specific_domain</strong>*
 
 - Considerar`$`
 
@@ -106,14 +106,14 @@ Em um cenário de dial-up terceirizado no qual um ISP do provedor de serviços d
 
 Você pode criar regras de roteamento que encaminham mensagens RADIUS com um nome de realm especificado para um conjunto de servidores RADIUS quando o NPS é usado como um proxy RADIUS. A seguir, uma sintaxe recomendada para roteamento de solicitações com base no nome de realm.
 
-- **Nome NetBIOS**:`WCOAST`
-- **Padrão**:`^wcoast\\`
+- **Nome NetBIOS**: `WCOAST`
+- **Padrão**:      `^wcoast\\`
 
 No exemplo a seguir, wcoast.microsoft.com é um sufixo UPN (nome principal de usuário) exclusivo para o DNS ou Active Directory domínio wcoast.microsoft.com. Usando o padrão fornecido, o proxy NPS pode rotear mensagens com base no nome NetBIOS do domínio ou no sufixo UPN.
 
-- **Nome NetBIOS**:`WCOAST`
-- **Sufixo UPN**:`wcoast.microsoft.com`
-- **Padrão**:`^wcoast\\|@wcoast\.microsoft\.com$`
+- **Nome NetBIOS**: `WCOAST`
+- **Sufixo UPN**:   `wcoast.microsoft.com`
+- **Padrão**:      `^wcoast\\|@wcoast\.microsoft\.com$`
 
 
 Para obter mais informações sobre como gerenciar o NPS, consulte [gerenciar o servidor de políticas de rede](nps-manage-top.md).

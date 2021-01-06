@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 05/05/2020
 ms.topic: article
-ms.openlocfilehash: f57a47dc936bd1f5ab7e96e13eb7f5cf3cf91d97
-ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
+ms.openlocfilehash: a13938e19ffe7eef8e5c9f23fd6525b815d3387f
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97904441"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947922"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Criar Plug-ins com o Modelo de Avaliação de Risco do AD FS 2019
 
@@ -23,7 +23,7 @@ O modelo de avaliação de riscos é um conjunto de interfaces e classes que per
 
 O modelo permite o código de plug-in em qualquer um dos três estágios de AD FS pipeline de autenticação, conforme mostrado abaixo:
 
-![modelo](media/ad-fs-risk-assessment-model/risk1.png)
+![Diagrama que mostra os três estágios de uma autenticação D F S.](media/ad-fs-risk-assessment-model/risk1.png)
 
 1. **Estágio de solicitação recebida** – habilita a criação de plug-ins para permitir ou bloquear solicitações quando AD FS recebe a solicitação de autenticação, ou seja, antes de o usuário inserir as credenciais. Você pode usar o contexto da solicitação (por exemplo: IP do cliente, método http, DNS do servidor proxy, etc.) disponível neste estágio para executar a avaliação de risco. Por exemplo, você pode criar um plug-in para ler o IP do contexto da solicitação e bloquear a solicitação de autenticação se o IP estiver na lista predefinida de IPs arriscados.
 
@@ -69,51 +69,50 @@ O procedimento a seguir irá orientá-lo na criação de uma DLL de plug-in de e
 3. Abra o projeto `ThreatDetectionModule.sln` usando o Visual Studio.
 
 4. Remova o `Microsoft.IdentityServer.dll` do Gerenciador de soluções, conforme mostrado abaixo:</br>
-
-   ![modelo](media/ad-fs-risk-assessment-model/risk2.png)
+   ![Captura de tela que realça a opção de menu remover.](media/ad-fs-risk-assessment-model/risk2.png)
 
 5. Adicione referência ao `Microsoft.IdentityServer.dll` de seu AD FS, conforme mostrado abaixo:
 
    a. Clique com o botão direito do mouse em **referências** no **Gerenciador de soluções** e selecione **Adicionar referência..**..</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk3.png)
+   ![Captura de tela que realça a opção de menu Adicionar referência.](media/ad-fs-risk-assessment-model/risk3.png)
 
    b. Na janela **Gerenciador de referências** , selecione **procurar**. No **selecionar os arquivos a serem referenciados...** , selecione na `Microsoft.IdentityServer.dll` pasta de instalação do AD FS (no meu caso **C:\Windows\ADFS**) e clique em **Adicionar**.
 
    > [!NOTE]
    > No meu caso, estou criando o plug-in no próprio servidor AD FS. Se o ambiente de desenvolvimento estiver em um servidor diferente, copie o `Microsoft.IdentityServer.dll` de sua pasta de instalação do AD FS no servidor AD FS na sua caixa de desenvolvimento.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk4.png)
+   ![Captura de tela que mostra o arquivo que você deve copiar.](media/ad-fs-risk-assessment-model/risk4.png)
 
    c. Clique em **OK** na janela **Gerenciador de referências** depois de verificar se a caixa de `Microsoft.IdentityServer.dll` seleção está marcada.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk5.png)
+   ![Captura de tela que mostra a caixa de seleção do Microsoft ponto Identity Server ponto d l l.](media/ad-fs-risk-assessment-model/risk5.png)
 
 6. Todas as classes e referências estão agora em vigor para fazer uma compilação. No entanto, como a saída desse projeto é uma dll, ele precisará ser instalado no **cache de assembly global**, ou GAC, do AD FS Server e a DLL precisa ser assinada primeiro. Isso pode ser feito da seguinte maneira:
 
    a. **Clique com o botão direito do mouse** no nome do projeto, ThreatDetectionModule. No menu, clique em **Propriedades**.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk6.png)
+   ![Captura de tela que realça a opção de menu Propriedades.](media/ad-fs-risk-assessment-model/risk6.png)
 
    b. Na página **Propriedades** , clique em **assinatura**, à esquerda e marque a caixa de seleção sinalizar **o assembly**. No menu **escolher um arquivo de chave de nome forte:** suspenso, selecione **<novo... >**.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk7.png)
+   ![Captura de tela que mostra a caixa de seleção assinar o assembly.](media/ad-fs-risk-assessment-model/risk7.png)
 
    c. Na caixa de **diálogo Criar chave de nome forte**, digite um nome (você pode escolher qualquer nome) para a chave, desmarque a caixa de seleção **proteger meu arquivo de chave com senha**. Depois, clique em **OK**.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk8.png)
+   ![Captura de tela que mostra a caixa de seleção proteger meu arquivo de chave com senha.](media/ad-fs-risk-assessment-model/risk8.png)
 
    d. Salve o projeto, conforme mostrado abaixo:</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk9.png)
+   ![Captura de tela que mostra onde salvar o projeto.](media/ad-fs-risk-assessment-model/risk9.png)
 
 7. Crie o projeto clicando em **Compilar** e **Recompilar solução** , conforme mostrado abaixo:</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk10.png)
+   ![Captura de tela que mostra a opção de menu recompilar solução.](media/ad-fs-risk-assessment-model/risk10.png)
 
    Verifique a **janela de saída** na parte inferior da tela para ver se ocorreram erros.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk11.png)
+   ![Captura de tela que mostra a saída da solução reconstruída.](media/ad-fs-risk-assessment-model/risk11.png)
 
 
 O plug-in (DLL) agora está pronto para uso e está na pasta **\bin\Debug** da pasta do projeto (no meu caso, isso é **C:\extensions\ThreatDetectionModule\bin\Debug\ThreatDetectionModule.dll**).
@@ -128,11 +127,11 @@ Precisamos registrar a dll no AD FS usando o `Register-AdfsThreatDetectionModule
 
 2. Inicie o **prompt de comando do desenvolvedor** para o Visual Studio e vá para o diretório que contém o **sn.exe** (no meu caso, o diretório é **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**).
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk12.png)
+   ![Captura de tela que mostra o Prompt de Comando do Desenvolvedor para o Visual Studio.](media/ad-fs-risk-assessment-model/risk12.png)
 
 3. Execute o comando **SN** com o parâmetro **-T** e o local do arquivo (no meu caso `SN -T "C:\extensions\ThreatDetectionModule.dll"` ).
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk13.png)</br>
+   ![Captura de tela que mostra como executar o comando S N.](media/ad-fs-risk-assessment-model/risk13.png)</br>
 
    O comando fornecerá o token de chave pública (para mim, o **token de chave pública é 714697626ef96b35**)
 
@@ -142,7 +141,7 @@ Precisamos registrar a dll no AD FS usando o `Register-AdfsThreatDetectionModule
 
    b. Execute o comando **Gacutil** (no meu caso `Gacutil /IF C:\extensions\ThreatDetectionModule.dll` ):
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk14.png)
+   ![Captura de tela que mostra como executar o comando Gacutil.](media/ad-fs-risk-assessment-model/risk14.png)
 
    > [!NOTE]
    > Se você tiver um farm de AD FS, o acima precisará ser executado em cada servidor AD FS no farm.
@@ -183,7 +182,7 @@ Precisamos registrar a dll no AD FS usando o `Register-AdfsThreatDetectionModule
 
 1. Abra o arquivo de **authconfig.csv** que criamos anteriormente (no meu caso no local **C:\Extensions**) e adicione os **IPS de extranet** que você deseja bloquear. Cada IP deve estar em uma linha separada e não deve haver espaços no final.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk18.png)
+   ![Captura de tela que mostra como adicionar as linhas da extranet I P.](media/ad-fs-risk-assessment-model/risk18.png)
 
 2. Salve e feche o arquivo.
 
@@ -204,11 +203,11 @@ Precisamos registrar a dll no AD FS usando o `Register-AdfsThreatDetectionModule
 
    Insira a instância do servidor de Federação e clique no botão de **autenticação de teste** .</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk15.png)
+   ![Captura de tela que mostra o botão de autenticação de teste.](media/ad-fs-risk-assessment-model/risk15.png)
 
 5. A autenticação é bloqueada conforme mostrado abaixo.</br>
 
-   ![modelo](media/ad-fs-risk-assessment-model/risk16.png)
+   ![Captura de tela que mostra que a autenticação está bloqueada.](media/ad-fs-risk-assessment-model/risk16.png)
 
 Agora que sabemos como criar e registrar o plug-in, vamos analisar o código do plug-in para entender a implementação usando as novas interfaces e classes introduzidas com o modelo.
 

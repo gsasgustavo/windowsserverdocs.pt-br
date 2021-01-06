@@ -4,12 +4,13 @@ description: Exemplo que mostra como usar a API de serviço de rede de computaç
 ms.author: daschott
 author: daschott
 ms.date: 11/05/2018
-ms.openlocfilehash: e865326b77fbdec19af3e7db347734715458b18a
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.topic: article
+ms.openlocfilehash: 974097b2b63fe4b5fc585e30480013894c61ebf5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083676"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947532"
 ---
 # <a name="common-scenarios"></a>Cenários comuns
 

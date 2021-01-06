@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 12cb9b6fcb0a1c24f88d59b185ceba3d59f9f2d9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: b8dafad68546cfe20ab1e7704b60694aea4d44e0
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970263"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947372"
 ---
 # <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>Gerar um relatório de uso para clientes remotos usando dados históricos
 
@@ -53,11 +54,11 @@ O console de gerenciamento do no servidor de acesso remoto pode ser usado para g
 >
 > A contabilização de acesso remoto é baseada no conceito de **sessões**. Ao contrário de uma **conexão**, uma **sessão** é identificada exclusivamente por uma combinação de endereço IP do cliente remoto e nome de usuário. Por exemplo, se um túnel de máquina for formado a partir do cliente remoto, chamado CLIENT1, uma sessão será criada e armazenada no banco de dados de estatísticas. Quando um usuário chamado user1 se conecta desse cliente após algum tempo (mas o túnel de máquina ainda está ativo), a sessão é registrada como uma sessão separada. A distinção de sessões é manter a distinção entre o túnel do computador e o túnel do usuário.
 
-![](../../../media/Generate-a-usage-report-for-remote-clients-using-historical-data/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Generate-a-usage-report-for-remote-clients-using-historical-data/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
-No script a seguir, altere o intervalo de datas para o qual você deseja um relatório nos parâmetros **-StartDateTime** e **-EndDateTime** .
+No script a seguir, altere o intervalo de datas para o qual você deseja um relatório nos parâmetros _ *-StartDateTime** e **-EndDateTime** .
 
 ```
 PS> Get-RemoteAccessConnectionStatisticsSummary -StartDateTime "1 October 2010 00:00:00" -EndDateTime "14 October 2010 00:00:00"

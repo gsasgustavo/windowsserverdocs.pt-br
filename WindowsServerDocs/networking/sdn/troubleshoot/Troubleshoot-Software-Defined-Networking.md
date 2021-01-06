@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 050fb95805ae526a536a98d061aec1b89a92d61b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: caf9e7e68f5cbfe91932fddbc34508792aecb18a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990184"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947112"
 ---
 # <a name="troubleshoot-sdn"></a>Solucionar problemas de SDN
 
@@ -32,6 +33,6 @@ Esta seção contém os seguintes tópicos.
 
 - [Solucionar problemas de pilha de rede definida pelo software do Windows Server](./troubleshoot-windows-server-software-defined-networking-stack.md)
 - Postagem [do blog solução de problemas de Sdn: falhas de comunicação UDP e alteração do certificado do controlador de rede](https://techcommunity.microsoft.com/t5/Networking-Blog/SDN-Troubleshooting-UDP-Communication-failures-and-changing-the/ba-p/339694)
-- Postagem de blog [Solucionando problemas de certificado na rede definida pelo software (SDN)](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshooting-certificate-issues-in-Software-Defined/ba-p/339671)
-- Postagem [no blog como encontrar o endereço local do gateway Sdn para emparelhamento via protocolo BGP no Windows Server 2016](https://techcommunity.microsoft.com/t5/Networking-Blog/How-to-find-the-SDN-gateway-local-address-for-BGP-peering-in/ba-p/339663)
-- Postagem de blog [solucionar problemas ao definir configurações de largura de banda de VPN Virtual Machine Manager do gateway RAS](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshoot-Configuring-SDN-RAS-Gateway-VPN-Bandwidth-Settings/ba-p/339661)
+- Postagem de blog [Solucionando problemas de certificado na rede definida pelo software (SDN) ](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshooting-certificate-issues-in-Software-Defined/ba-p/339671)
+- Postagem [no blog como encontrar o endereço local do gateway Sdn para emparelhamento via protocolo BGP no Windows Server 2016 ](https://techcommunity.microsoft.com/t5/Networking-Blog/How-to-find-the-SDN-gateway-local-address-for-BGP-peering-in/ba-p/339663)
+- Postagem de blog [solucionar problemas ao definir configurações de largura de banda de VPN Virtual Machine Manager do gateway RAS ](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshoot-Configuring-SDN-RAS-Gateway-VPN-Bandwidth-Settings/ba-p/339661)

@@ -3,15 +3,15 @@ title: Solucionar problemas no cliente DHCP
 description: Este Artilce apresenta como solucionar problemas no cliente DHCP e coletar dados.
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: d7cfe92272ad65ca4b413eb91039a9ab21de6c17
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 62ac48a59dcbcc31316dc0a5fc4dbc99509ec140
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078623"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947192"
 ---
 # <a name="troubleshoot-problems-on-the-dhcp-client"></a>Solucionar problemas no cliente DHCP
 

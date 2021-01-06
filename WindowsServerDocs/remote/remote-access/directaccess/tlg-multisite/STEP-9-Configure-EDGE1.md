@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a0e21b9b0a0d926d2d4d166fbe3c87fee6c340fc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: ef161f7e8db4cb63d84efbf78e8733d3f24c22ae
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87955193"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947952"
 ---
 # <a name="step-9-configure-edge1"></a>ETAPA 9 configurar o EDGE1
 
@@ -25,9 +26,9 @@ Os procedimentos a seguir são executados no servidor EDGE1:
 
 ## <a name="configure-the-dns-servers-on-edge1"></a><a name="IPv6"></a>Configurar os servidores DNS em EDGE1
 
-1.  No console do Gerenciador do Servidor, clique em **servidor local**e, na área **Propriedades** , ao lado de **corpnet**, clique no link.
+1.  No console do Gerenciador do Servidor, clique em **servidor local** e, na área **Propriedades** , ao lado de **corpnet**, clique no link.
 
-2.  Na janela conexões de rede, clique com o botão direito do mouse em **corpnet**e clique em **Propriedades**.
+2.  Na janela conexões de rede, clique com o botão direito do mouse em **corpnet** e clique em **Propriedades**.
 
 3.  Clique em **Protocolo TCP/IP Versão 4 (TCP/IPv4)** e clique em **Propriedades**.
 
@@ -43,7 +44,7 @@ Os procedimentos a seguir são executados no servidor EDGE1:
 
 ## <a name="configure-routing-between-subnets"></a><a name="ConfigRouting"></a>Configurar o roteamento entre sub-redes
 
-1.  Na tela **Iniciar** , digite**cmd.exe**, clique com o botão direito do mouse em **cmd**, clique em **avançado**e, em seguida, clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  Na tela **Iniciar** , digite **cmd.exe**, clique com o botão direito do mouse em **cmd**, clique em **avançado** e, em seguida, clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  Na janela do prompt de comando, digite os comandos a seguir. Depois de inserir cada comando, pressione ENTER.
 

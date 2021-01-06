@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 0840695ce3206207de945c3b775087e8a2692e44
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 92e3abcb0d49f4f6d000cb487dbe43d6075bacd8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937189"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946952"
 ---
 # <a name="plan-a-multi-forest-deployment"></a>Plan a Multi-Forest Deployment
 
@@ -37,7 +38,7 @@ Você precisa configurar pelo menos um grupo de segurança na nova floresta para
 
 > [!NOTE]
 > -   O DirectAccess requer pelo menos um &reg; &reg; grupo de segurança de cliente do Windows 10 ou Windows 8 para cada floresta. No entanto, é recomendável ter um grupo de segurança de cliente do Windows 10 ou do Windows 8 para cada domínio que contenha clientes Windows 10 ou Windows 8.
-> -   Quando o multissite está habilitado, o DirectAccess requer pelo menos um &reg; grupo de segurança de cliente do Windows 7 por floresta para cada ponto de entrada do DirectAccess no qual os computadores cliente do Windows 7 têm suporte. No entanto, é recomendável ter um grupo de segurança de cliente do Windows 7 separado para cada ponto de entrada para cada domínio que contenha clientes do Windows 7.
+> -   Quando o multissite está habilitado, o DirectAccess requer pelo menos um &reg;  grupo de segurança de cliente do Windows 7 por floresta para cada ponto de entrada do DirectAccess no qual os computadores cliente do Windows 7 têm suporte. No entanto, é recomendável ter um grupo de segurança de cliente do Windows 7 separado para cada ponto de entrada para cada domínio que contenha clientes do Windows 7.
 >
 > Para que o DirectAccess seja aplicado a computadores cliente em domínios adicionais, é preciso criar GPOs de cliente nesses domínios. A adição de grupos de segurança dispara a geração de novos GPOs de cliente para os novos domínios. Portanto, se você adicionar um novo grupo de segurança de um novo domínio à lista de grupos de segurança de cliente do DirectAccess, um GPO de cliente será criado automaticamente no novo domínio e os computadores cliente do novo domínio receberão as configurações do DirectAccess através do GPO de cliente.
 >

@@ -1,17 +1,18 @@
 ---
 title: Etapa 1 configurar a infraestrutura básica do DirectAccess
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba como configurar a infraestrutura necessária para uma implantação básica do DirectAccess usando um único servidor DirectAccess em um ambiente misto de IPv4 e IPv6.
 manager: brianlic
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d0f9655a7ed06190d80718a8c5bbdebfedf07499
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 41009608862a21987097ad2a58f4fb524b535f06
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970343"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947252"
 ---
 # <a name="step-1-configure-the-basic-directaccess-infrastructure"></a>Etapa 1 configurar a infraestrutura básica do DirectAccess
 
@@ -115,7 +116,7 @@ Você deve configurar manualmente uma entrada DNS para o site do servidor de loc
 
 5.  Clique em **Concluído**.
 
-![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -126,7 +127,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
 
 Você também deve configurar entradas DNS para o seguinte:
 
--   **O servidor IP-HTTPS** -os clientes DirectAccess devem ser capazes de resolver o nome DNS do servidor de acesso remoto da Internet.
+-   _ *O servidor IP-HTTPS**-os clientes DirectAccess devem ser capazes de resolver o nome DNS do servidor de acesso remoto da Internet.
 
 -   **Verificação de revogação de CRL** – o DirectAccess usa a verificação de revogação de certificado para a conexão IP-HTTPS entre clientes DirectAccess e o servidor de acesso remoto e para a conexão baseada em https entre o cliente DirectAccess e o servidor de local de rede. Em ambos os casos, os clientes do DirectAccess devem poder resolver e acessar o local do ponto de distribuição da CRL.
 
@@ -177,7 +178,7 @@ O servidor de Acesso Remoto e todos os computadores cliente do DirectAccess deve
 
 9. Na caixa de diálogo **Propriedades do Sistema**, clique em Fechar. Clique em **Reiniciar Agora** quando solicitado.
 
-![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -212,7 +213,7 @@ As configurações do DirectAccess contidas nos objetos de política de grupo do
 
 ### <a name="to-create-a-security-group-for-directaccess-clients"></a><a name="Sec_Group"></a>Para criar um grupo de segurança para os clientes do DirectAccess
 
-1.  Execute o **DSA. msc**. No console **Usuários e Computadores do Active Directory**, no painel esquerdo, expanda o domínio que conterá o grupo de segurança, clique com o botão direito do mouse em **Usuários**, aponte para **Novo** e clique em **Grupo**.
+1.  Execute _ * DSA. msc * *. No console **Usuários e Computadores do Active Directory**, no painel esquerdo, expanda o domínio que conterá o grupo de segurança, clique com o botão direito do mouse em **Usuários**, aponte para **Novo** e clique em **Grupo**.
 
 2.  Na caixa de diálogo **Novo Objeto - Grupo**, em **Nome do grupo**, digite o nome do grupo de segurança.
 

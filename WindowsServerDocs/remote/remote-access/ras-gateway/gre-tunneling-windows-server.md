@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1bbbf19ad31bdc10149e10f6bc1ea9db564f1ff3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: de33ba380da611dd4bece67da382ffd72d56e5eb
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937355"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947412"
 ---
 # <a name="gre-tunneling-in-windows-server-2016"></a>Túnel de GRE no Windows Server 2016
 

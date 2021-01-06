@@ -4,12 +4,13 @@ description: Este artigo é um guia de referência rápida sobre como calcular a
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 581b485f219e960ecd467baa1f7dff7742c3acf8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.topic: troubleshooting
+ms.openlocfilehash: c15dd18c5c479ea2e280a333f8b4ec808ab70f90
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965783"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946922"
 ---
 # <a name="how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder"></a>Como determinar a área mínima de preparo exigida pela DFSR para uma pasta replicada
 
@@ -36,20 +37,20 @@ O PowerShell está incluído no Windows 2008 e superior. Você deve instalar o P
 
 Use um script do PowerShell para localizar os maiores arquivos 32 ou 9 e determinar quantos gigabytes eles somam (graças a preciso Pyle para os comandos do PowerShell). Na verdade, vou apresentar três scripts do PowerShell. Cada um é útil por conta própria; no entanto, o número 3 é o mais útil.
 
-1. Execute o seguinte comando:
+1. Execute o comando a seguir:
    ```Powershell
    Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | ft name,length -wrap –auto
    ```
 
    Esse comando retornará os nomes de arquivo e o tamanho dos arquivos em bytes. Útil se você quiser saber quais são os 32 arquivos que são o maior na pasta replicada para que você possa "visitar" seus proprietários.
 
-2. Execute o seguinte comando:
+2. Execute o comando a seguir:
    ```Poswershell
    Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
    ```
    Esse comando retornará o número total de bytes dos 32 maiores arquivos na pasta sem listar os nomes de arquivo.
 
-3. Execute o seguinte comando:
+3. Execute o comando a seguir:
    ```Poswershell
    $big32 = Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
 
@@ -68,8 +69,8 @@ A execução do comando 1 retornará resultados semelhantes à saída abaixo. Es
 <table>
 <tbody>
 <tr class="odd">
-<td>Nome</td>
-<td>Tamanho</td>
+<td>Name</td>
+<td>Comprimento</td>
 </tr>
 <tr class="even">
 <td><strong>File5.zip</strong></td>
@@ -84,7 +85,7 @@ A execução do comando 1 retornará resultados semelhantes à saída abaixo. Es
 <td>5751522304</td>
 </tr>
 <tr class="odd">
-<td> <strong>file9.zip</strong></td>
+<td> <strong>file9.zip</strong></td>
 <td>5472683008</td>
 </tr>
 <tr class="even">

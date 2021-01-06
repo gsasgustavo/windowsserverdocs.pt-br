@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f3f6aa743f592ae9336a5b8a20a13ff9e1048621
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: a4fc6b2e7342f59f971ee42848f75e6598c1c263
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969403"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947792"
 ---
 # <a name="connection-request-policies"></a>Políticas de solicitação de conexão
 
@@ -35,11 +36,11 @@ Com as políticas de solicitação de conexão, você pode usar o NPS como um se
 - O tipo de conexão que está sendo solicitada
 - O endereço IP do cliente RADIUS
 
-As mensagens de solicitação de acesso RADIUS serão processadas ou encaminhadas pelo NPS somente se as configurações da mensagem de entrada corresponderem a pelo menos uma das políticas de solicitação de conexão configuradas no NPS.
+As mensagens de Access-Request RADIUS serão processadas ou encaminhadas pelo NPS somente se as configurações da mensagem de entrada corresponderem a pelo menos uma das políticas de solicitação de conexão configuradas no NPS.
 
 Se as configurações de política forem correspondentes e a política exigir que o NPS processe a mensagem, o NPS atuará como um servidor RADIUS, Autenticando e autorizando a solicitação de conexão. Se as configurações de política forem correspondentes e a política exigir que o NPS encaminhe a mensagem, o NPS atuará como um proxy RADIUS e encaminhará a solicitação de conexão a um servidor RADIUS remoto para processamento.
 
-Se as configurações de uma mensagem de solicitação de acesso RADIUS de entrada não corresponderem a pelo menos uma das políticas de solicitação de conexão, uma mensagem de rejeição de acesso será enviada ao cliente RADIUS e o usuário ou computador que está tentando se conectar à rede terá o acesso negado.
+Se as configurações de uma mensagem de Access-Request RADIUS de entrada não corresponderem a pelo menos uma das políticas de solicitação de conexão, uma mensagem de Access-Reject será enviada ao cliente RADIUS e o usuário ou computador que está tentando se conectar à rede terá o acesso negado.
 
 ## <a name="configuration-examples"></a>Exemplos de configuração
 
@@ -70,7 +71,7 @@ Neste exemplo, o NPS atua como um servidor RADIUS e como um proxy RADIUS para ca
 
 ## <a name="connection-request-policy-conditions"></a>Condições da política de solicitação de conexão
 
-As condições de política de solicitação de conexão são um ou mais atributos RADIUS que são comparados aos atributos da mensagem de solicitação de acesso RADIUS de entrada. Se houver várias condições, todas as condições na mensagem de solicitação de conexão e na política de solicitação de conexão deverão corresponder para que a política seja imposta pelo NPS.
+As condições de política de solicitação de conexão são um ou mais atributos RADIUS que são comparados aos atributos da mensagem de Access-Request RADIUS de entrada. Se houver várias condições, todas as condições na mensagem de solicitação de conexão e na política de solicitação de conexão deverão corresponder para que a política seja imposta pelo NPS.
 
 
 A seguir estão os atributos de condição disponíveis que você pode configurar em políticas de solicitação de conexão.
@@ -132,7 +133,7 @@ As seções a seguir fornecem detalhes adicionais sobre essas configurações.
 Ao usar essa configuração, você pode substituir as configurações de autenticação definidas em todas as políticas de rede e pode designar os métodos e tipos de autenticação necessários para se conectar à sua rede.
 
 >[!IMPORTANT]
->Se você configurar um método de autenticação na diretiva de solicitação de conexão que seja menos segura do que o método de autenticação configurado na diretiva de rede, o método de autenticação mais seguro que você configurar na política de rede será substituído. Por exemplo, se você tiver uma política de rede que exija o uso do protocolo de autenticação extensível protegida – protocolo de autenticação de handshake de desafio da Microsoft versão 2 \( PEAP-MS-CHAP v2 \) , que é um método de autenticação baseado em senha para sem fio seguro e também configurar uma política de solicitação de conexão para permitir acesso não autenticado, o resultado é que nenhum cliente é solicitado a autenticar usando PEAP- Neste exemplo, todos os clientes que se conectam à sua rede recebem acesso não autenticado.
+>Se você configurar um método de autenticação na diretiva de solicitação de conexão que seja menos segura do que o método de autenticação configurado na diretiva de rede, o método de autenticação mais seguro que você configurar na política de rede será substituído. Por exemplo, se você tiver uma política de rede que exija o uso de autenticação extensível protegida Protocol-Microsoft protocolo de autenticação de handshake de desafio versão 2 \( PEAP-MS-CHAP v2 \) , que é um método de autenticação baseado em senha para sem fio seguro e também configurar uma política de solicitação de conexão para permitir acesso não autenticado, o resultado é que nenhum cliente é solicitado a autenticar usando PEAP-MS Neste exemplo, todos os clientes que se conectam à sua rede recebem acesso não autenticado.
 
 ### <a name="accounting"></a>Contabilidade
 
@@ -162,16 +163,16 @@ Para obter exemplos de como manipular o nome de realm no atributo de nome de usu
 
 ### <a name="forwarding-request"></a>Encaminhando a solicitação
 
-Você pode definir as seguintes opções de solicitação de encaminhamento que são usadas para mensagens de solicitação de acesso RADIUS:
+Você pode definir as seguintes opções de solicitação de encaminhamento que são usadas para mensagens de Access-Request RADIUS:
 
 - **Autenticar solicitações neste servidor**. Usando essa configuração, o NPS usa um domínio do Windows NT 4,0, Active Directory ou o banco de dados de contas de usuário do SAM (Gerenciador de contas de segurança) local para autenticar a solicitação de conexão. Essa configuração também especifica que a diretiva de rede correspondente configurada no NPS, juntamente com as propriedades de discagem da conta de usuário, são usadas pelo NPS para autorizar a solicitação de conexão. Nesse caso, o NPS é configurado para executar como um servidor RADIUS.
 
-- **Encaminhe solicitações para o seguinte grupo de servidores remotos RADIUS**. Ao usar essa configuração, o NPS encaminha as solicitações de conexão para o grupo de servidores remotos RADIUS que você especificar. Se o NPS receber uma mensagem de aceitação de acesso válida que corresponda à mensagem de solicitação de acesso, a tentativa de conexão será considerada autenticada e autorizada. Nesse caso, o NPS atua como um proxy RADIUS.
+- **Encaminhe solicitações para o seguinte grupo de servidores remotos RADIUS**. Ao usar essa configuração, o NPS encaminha as solicitações de conexão para o grupo de servidores remotos RADIUS que você especificar. Se o NPS receber uma mensagem de Access-Accept válida que corresponde à mensagem de Access-Request, a tentativa de conexão será considerada autenticada e autorizada. Nesse caso, o NPS atua como um proxy RADIUS.
 
-- **Aceite usuários sem validar credenciais**. Ao usar essa configuração, o NPS não verifica a identidade do usuário que está tentando se conectar à rede e o NPS não tenta verificar se o usuário ou o computador tem o direito de se conectar à rede. Quando o NPS é configurado para permitir acesso não autenticado e recebe uma solicitação de conexão, o NPS imediatamente envia uma mensagem de aceitação de acesso ao cliente RADIUS e o usuário ou computador recebe acesso à rede. Essa configuração é usada para alguns tipos de encapsulamento compulsório em que o cliente de acesso é encapsulado antes de as credenciais do usuário serem autenticadas.
+- **Aceite usuários sem validar credenciais**. Ao usar essa configuração, o NPS não verifica a identidade do usuário que está tentando se conectar à rede e o NPS não tenta verificar se o usuário ou o computador tem o direito de se conectar à rede. Quando o NPS é configurado para permitir o acesso não autenticado e recebe uma solicitação de conexão, o NPS envia imediatamente uma mensagem de Access-Accept para o cliente RADIUS, e o usuário ou computador recebe acesso à rede. Essa configuração é usada para alguns tipos de encapsulamento compulsório em que o cliente de acesso é encapsulado antes de as credenciais do usuário serem autenticadas.
 
 >[!NOTE]
->Essa opção de autenticação não pode ser usada quando o protocolo de autenticação do cliente de acesso for MS-CHAP v2 ou EAP-TLS (protocolo de autenticação extensível), que fornece autenticação mútua. Na autenticação mútua, o cliente de acesso comprova que se trata de um cliente de acesso válido para o servidor de autenticação (o NPS), e o servidor de autenticação comprova que é um servidor de autenticação válido para o cliente de acesso. Quando essa opção de autenticação é usada, a mensagem de aceitação de acesso é retornada. No entanto, o servidor de autenticação não fornece validação para o cliente de acesso e a autenticação mútua falha.
+>Essa opção de autenticação não pode ser usada quando o protocolo de autenticação do cliente de acesso é MS-CHAP v2 ou EAP-TLS (autenticação extensível Protocol-Transport segurança de camada), ambos fornecendo autenticação mútua. Na autenticação mútua, o cliente de acesso comprova que se trata de um cliente de acesso válido para o servidor de autenticação (o NPS), e o servidor de autenticação comprova que é um servidor de autenticação válido para o cliente de acesso. Quando essa opção de autenticação é usada, a mensagem de Access-Accept é retornada. No entanto, o servidor de autenticação não fornece validação para o cliente de acesso e a autenticação mútua falha.
 
 Para obter exemplos de como usar expressões regulares para criar regras de roteamento que encaminham mensagens RADIUS com um nome de realm especificado para um grupo de servidores RADIUS remotos, consulte a seção "exemplo de encaminhamento de mensagens RADIUS por um servidor proxy" no tópico [usar expressões regulares no NPS](nps-crp-reg-expressions.md).
 

@@ -1,17 +1,18 @@
 ---
 title: Planejamento da implantação de acesso sem fio
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar o acesso sem fio autenticado 802.1 X com base em senha"
+description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
 manager: brianlic
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 803fd90b2ad790375da0408a3bf1303b97e84cee
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: db628c68048032432935415928636e052be4ea83
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995530"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946692"
 ---
 # <a name="wireless-access-deployment-planning"></a>Planejamento da implantação de acesso sem fio
 
@@ -111,7 +112,7 @@ A lista a seguir resume os itens normalmente configurados em \- APS sem fio comp
 > [!NOTE]
 > Os nomes de item podem variar de acordo com a marca e o modelo e podem ser diferentes daqueles na lista a seguir. Consulte a documentação do AP sem fio para obter \- detalhes específicos de configuração.
 
-- Identificador do conjunto de ** \( serviços SSID \) **. Esse é o nome da rede sem fio, \( por exemplo, ExampleWlan \) , e o nome que é anunciado para clientes sem fio. Para reduzir a confusão, o SSID que você escolher anunciar não deve corresponder ao SSID que é transmitido por qualquer rede sem fio que esteja dentro do intervalo de recepção da sua rede sem fio.
+- Identificador do conjunto de **\( serviços SSID \)**. Esse é o nome da rede sem fio, \( por exemplo, ExampleWlan \) , e o nome que é anunciado para clientes sem fio. Para reduzir a confusão, o SSID que você escolher anunciar não deve corresponder ao SSID que é transmitido por qualquer rede sem fio que esteja dentro do intervalo de recepção da sua rede sem fio.
 
     Em casos em que vários APs sem fio são implantados como parte da mesma rede sem fio, configure cada AP sem fio com o mesmo SSID. Em casos em que vários APs sem fio são implantados como parte da mesma rede sem fio, configure cada AP sem fio com o mesmo SSID.
 
@@ -126,7 +127,7 @@ A lista a seguir resume os itens normalmente configurados em \- APS sem fio comp
 
     A criptografia sem fio é a codificação de criptografia de segurança usada com a autenticação sem fio para proteger as comunicações que são enviadas entre o AP sem fio e o cliente sem fio.
 
-- **Endereço IP do AP sem fio \( estático \) **. Em cada AP sem fio, configure um endereço IP estático exclusivo. Se a sub-rede for atendida por um servidor DHCP, verifique se todos os endereços IP de AP se enquadram em um intervalo de exclusão DHCP para que o servidor DHCP não tente emitir o mesmo endereço IP para outro computador ou dispositivo. Os intervalos de exclusão são documentados no procedimento "para criar e ativar um novo escopo de DHCP" no [Guia de rede principal](../../core-network-guide.md). Se você estiver planejando configurar APs como clientes RADIUS por grupo no NPS, cada AP no grupo deverá ter um endereço IP do mesmo intervalo de endereços IP.
+- **Endereço IP do AP sem fio \( estático \)**. Em cada AP sem fio, configure um endereço IP estático exclusivo. Se a sub-rede for atendida por um servidor DHCP, verifique se todos os endereços IP de AP se enquadram em um intervalo de exclusão DHCP para que o servidor DHCP não tente emitir o mesmo endereço IP para outro computador ou dispositivo. Os intervalos de exclusão são documentados no procedimento "para criar e ativar um novo escopo de DHCP" no [Guia de rede principal](../../core-network-guide.md). Se você estiver planejando configurar APs como clientes RADIUS por grupo no NPS, cada AP no grupo deverá ter um endereço IP do mesmo intervalo de endereços IP.
 
 - **Nome DNS**. Alguns APs sem fio podem ser configurados com um nome DNS. Configure cada AP sem fio com um nome exclusivo. Por exemplo, se você tiver um APs sem fio implantado em uma compilação de várias \- histórias, poderá nomear os três primeiros APS sem fio implantados no terceiro andar AP3 \- 01, AP3 \- 02 e AP3 \- 03.
 

@@ -4,12 +4,13 @@ description: Descreve como solucionar o problema de inicialização do serviço 
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 2836fc9385d57ff076828ab5cf6a1e341a7d88a8
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.topic: troubleshooting
+ms.openlocfilehash: f75e6bcca3a4447920d3b3f571fc606ad68752e6
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409827"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947182"
 ---
 # <a name="troubleshooting-cluster-issue-with-event-id-1135"></a>Como solucionar o problema de cluster com a ID de Evento 1135
 
@@ -162,7 +163,7 @@ Nome do serviço de sistema: **ClusSvc**
 |Administrador do cluster|UDP|137|
 |Kerberos|UDP\TCP|464 *|
 |SMB|TCP|445|
-|Portas UDP altas alocadas aleatoriamente * *|UDP|Número da porta aleatória entre 1024 e 65535<br/>Número da porta aleatória entre 49152 e 65535 * * *|
+|Portas UDP altas alocadas aleatoriamente * *|UDP|Número da porta aleatória entre 1024 e 65535<br/>Número da porta aleatória entre 49152 e 65535 * * _|
 ||||
 
 > [!NOTE]
@@ -202,9 +203,9 @@ A guia adaptadores e associações lista as conexões na ordem em que as conexõ
 
 Siga as etapas abaixo para alterar a ordem de ligação dos adaptadores de rede:
 
-1. Clique em **Iniciar**, **executar**, digite ncpa.cpl e clique em **OK**. Você pode ver as conexões disponíveis na seção **LAN e Internet de alta velocidade** da janela **conexões de rede** .
+1. Clique em _ * iniciar * *, clique em **executar**, digite ncpa.cpl e clique em **OK**. Você pode ver as conexões disponíveis na seção **LAN e High-Speed Internet** da janela **conexões de rede** .
 
-2. No menu **avançado** , clique em **Configurações avançadas**e, em seguida, clique na guia **adaptadores e associações** .
+2. No menu **avançado** , clique em **Configurações avançadas** e, em seguida, clique na guia **adaptadores e associações** .
 
 3. Na área **conexões** , selecione a conexão que você deseja mover para cima na lista. Use os botões de seta para mover a conexão. Como regra geral, o cartão que se comunica com a rede (conectividade de domínio, roteamento para outras redes etc. deve ser o primeiro cartão associado (parte superior da lista).
 

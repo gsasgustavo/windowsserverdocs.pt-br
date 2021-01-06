@@ -1,18 +1,18 @@
 ---
 title: winsat mem
 description: Artigo de referência para o WinSAT Mem, que testa a largura de banda de memória do sistema de uma maneira que reflete a memória grande para cópias de buffer de memória, como é usado no processamento de multimídia.
-winms.topic: reference
+ms.topic: reference
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 88a8ff7bf8cac5197532950d59d8c736d229f846
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f75fda37e87d0e1c6e8783cb5604b864339914ac
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641111"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947632"
 ---
 # <a name="winsat-mem"></a>winsat mem
 
@@ -57,7 +57,7 @@ winsat mem <parameters>
 ## <a name="remarks"></a>Comentários
 
 -   A associação no grupo local de administradores, ou equivalente, é o requisito mínimo necessário para usar o **WinSAT**. O comando deve ser executado em uma janela de prompt de comandos com privilégios elevados.
--   Para abrir uma janela de prompt de comando com privilégios elevados, clique em **Iniciar**, **acessórios**, clique com o botão direito do mouse em **prompt de comando**e clique em **Executar como administrador**.
+-   Para abrir uma janela de prompt de comando com privilégios elevados, clique em **Iniciar**, **acessórios**, clique com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador**.
 
 ## <a name="additional-references"></a>Referências adicionais
 

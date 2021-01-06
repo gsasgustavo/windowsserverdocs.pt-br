@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a2d3987e4051ad4248381e9a425b2d728755eb55
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: ac7fe201aa3065403abc04cb2e8df501bc46a0d4
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97044964"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947902"
 ---
 # <a name="when-to-use-identity-delegation"></a>Quando usar a delegação de identidade
 
@@ -30,7 +30,7 @@ Já que a solicitação original foi feita para o próprio servidor Web, que pod
 ## <a name="how-does-identity-delegation-work"></a>Como funciona a delegação de identidade?
 Muitas vezes, os aplicativos Web localizados em arquiteturas de aplicativos com várias camadas chamam serviços Web para acessar dados ou funcionalidades comuns. É importante que esses serviços Web saibam a identidade do usuário original para que o serviço possa tomar decisões de autorização e facilitar a auditoria. Nesse caso, o aplicativo Web de front- \- end representa o usuário para o serviço Web como um delegado. AD FS facilita esse cenário, permitindo que Active Directory contas atuem como um usuário para outra terceira parte confiável. Um cenário de delegação de identidade é exibido na ilustração a seguir.
 
-![Delegação de identidade](media/adfs2_identitydelegationsteps.gif)
+![Ilustração que mostra um cenário de delegação de identidade.](media/adfs2_identitydelegationsteps.gif)
 
 1.  Frank tenta acessar \- o histórico de pedidos de parte de um aplicativo Web em outra organização. Seu computador cliente solicita e recebe um token de AD FS para o \- aplicativo Web de ordenação de peças de front-end \- .
 

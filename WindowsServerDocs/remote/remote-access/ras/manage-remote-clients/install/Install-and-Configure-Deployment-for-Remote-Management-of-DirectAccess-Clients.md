@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e7fd48703b1432d0c7ba0f6d9d6590a3183620ee
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: c1b4a7ef7c4e09f075b052c5442465f675e2190d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970273"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947722"
 ---
 # <a name="install-and-configure-deployment-for-remote-management-of-directaccess-clients"></a>Instalar e configurar a implantação para o gerenciamento remoto de clientes DirectAccess
 

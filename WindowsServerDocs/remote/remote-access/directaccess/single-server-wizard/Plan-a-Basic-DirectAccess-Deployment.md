@@ -1,17 +1,18 @@
 ---
 title: Planejar uma implantação básica do DirectAccess
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba mais sobre as etapas de planejamento necessárias para implantar um único servidor DirectAccess executando o Windows Server 2016, o Windows Server 2012 R2 ou o Windows Server 2012 com recursos básicos.
 manager: brianlic
 ms.topic: article
 ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 64b15907190928e35c29c91ec819a2e44566f5ae
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 9e7188fe508ff33d44d2e21c9f1468b3761ab443
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970353"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947002"
 ---
 # <a name="plan-a-basic-directaccess-deployment"></a>Planejar uma implantação básica do DirectAccess
 

@@ -1,19 +1,18 @@
 ---
 title: Introdução à Coleta de Eventos de Instalação e Inicialização
 description: Configuração de coletores e metas de coleta de eventos de instalação e inicialização
-manager: DonGill
 ms.localizationpriority: medium
 ms.date: 10/16/2017
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: e5275937e12542e16c40273d69d9684d72a4ee82
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2b59dcd2d65f3c2971c6dfdf13aab07e33820423
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992449"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946762"
 ---
 # <a name="get-started-with-setup-and-boot-event-collection"></a>Introdução à Coleta de Eventos de Instalação e Inicialização
 
@@ -43,7 +42,7 @@ O computador coletor deve estar executando o Windows Server 2016 (pode estar no 
 |Windows 8.1|sim|sim|
 |Windows 10|sim|sim|
 |Windows Server 2016|sim|sim|
-|Windows Server 2012 R2|sim|no|
+|Windows Server 2012 R2|sim|não|
 
 ## <a name="installing-the-collector-service"></a>Instalação do serviço do coletor
 A partir do Windows Server 2016, o serviço de coletor de eventos está disponível como um recurso opcional. Nesta versão, você pode instalá-lo usando DISM.exe com este comando em um prompt de comandos com privilégios elevados do Windows PowerShell:
@@ -90,7 +89,7 @@ Em cada computador de destino, você primeiro habilita o transporte KDNET/EVENT-
 
 4.  Teste a conexão remota indo para o computador do coletor e executando um destes comandos do Windows PowerShell:
 
-    Se o computador de destino estiver no mesmo domínio que o computador do coletor, execute`New-PSSession -Computer <target> | Remove-PSSession`
+    Se o computador de destino estiver no mesmo domínio que o computador do coletor, execute `New-PSSession -Computer <target> | Remove-PSSession`
 
     Se o computador de destino não estiver no mesmo domínio, execute `New-PSSession -Computer  <target>  -Credential Administrator | Remove-PSSession`, que solicitará as credenciais.
 
@@ -100,7 +99,7 @@ Em cada computador de destino, você primeiro habilita o transporte KDNET/EVENT-
 
     `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d>`
 
-    Aqui <target_name> é o nome do computador de destino, \<ip> é o endereço IP do computador do coletor. \<port>é o número da porta em que o coletor será executado. A <a.b.c.d> é uma chave de criptografia necessária para a comunicação, que consiste em quatro cadeias de caracteres alfanuméricos separadas por pontos. Essa mesma chave é usada no computador coletor. Se você não inserir uma chave, o sistema gera uma chave aleatória; você precisará disso para o computador coletor, portanto, anote-a.
+    Aqui <target_name> é o nome do computador de destino, \<ip> é o endereço IP do computador do coletor. \<port> é o número da porta em que o coletor será executado. A <a.b.c.d> é uma chave de criptografia necessária para a comunicação, que consiste em quatro cadeias de caracteres alfanuméricos separadas por pontos. Essa mesma chave é usada no computador coletor. Se você não inserir uma chave, o sistema gera uma chave aleatória; você precisará disso para o computador coletor, portanto, anote-a.
 
 6.  Se você já tiver um computador coletor configurado, atualize o arquivo de configuração no computador coletor com as informações para o novo computador de destino. Consulte a seção Configurando o computador do coletor para obter detalhes.
 
@@ -130,7 +129,7 @@ Se não puder configurar a comunicação remota do Windows PowerShell, você sem
 
 1.  No computador de destino, inicie o Regedit.exe e localize esta chave do registro:
 
-    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger**. Várias sessões de log são listadas como chaves subsites sob essa chave. **Setup Platform**, **NT Kernel Logger**e **Microsoft-Windows-Setup** são opções possíveis para uso com a instalação e a coleta de eventos de inicialização, mas a opção recomendada é o **EventLog-System**. Essas chaves são detalhadas em [Configurar e iniciar uma sessão de agente de log automático](/windows/win32/etw/configuring-and-starting-an-autologger-session).
+    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger**. Várias sessões de log são listadas como chaves subsites sob essa chave. **Setup Platform**, **NT Kernel Logger** e **Microsoft-Windows-Setup** são opções possíveis para uso com a instalação e a coleta de eventos de inicialização, mas a opção recomendada é o **EventLog-System**. Essas chaves são detalhadas em [Configurar e iniciar uma sessão de agente de log automático](/windows/win32/etw/configuring-and-starting-an-autologger-session).
 
 2.  Na chave EventLog-System, altere o valor da **LogFileMode** de **0x10000180** para **0x10080180**. Para obter mais informações sobre os detalhes dessas configurações, consulte [Constantes de modo de registro em log](/windows/win32/etw/logging-mode-constants).
 
@@ -149,18 +148,18 @@ Se o computador de destino tiver mais de um adaptador de rede, o driver KDNET es
 
 3.  Execute um destes comandos:
 
-    Em um prompt elevado do Windows PowerShell:`Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`
+    Em um prompt elevado do Windows PowerShell: `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`
 
     Em um prompt de comandos com privilégios elevados: **bcdedit /eventsettings net hostip:aaa porta: 50000 chave: bbb busparams:X.Y.Z**
 
 ### <a name="validate-target-computer-configuration"></a>Validar a configuração do computador de destino
 Para verificar as configurações no computador de destino, abra um prompt de comandos com privilégios elevados e execute **bcdedit /enum**. Ao terminar, execute **bcdedit /eventsettings**. Você pode verificar os seguintes valores:
 
--   Key
+-   Chave
 
 -   Debugtype = NET
 
--   HostIP =\<IP address of the collector>
+-   HostIP = \<IP address of the collector>
 
 -   Porta = \<port number you specified for the collector to use>
 
@@ -266,7 +265,7 @@ Você pode executar uma verificação de validade do arquivo de configuração c
 
 Embora o comando do Windows PowerShell para aplicar uma nova configuração automaticamente atualize o serviço sem que seja preciso reiniciá-lo, você sempre pode reiniciar o serviço sozinho com qualquer um desses comandos:
 
-- Com o Windows PowerShell:`Restart-Service BootEventCollector`
+- Com o Windows PowerShell: `Restart-Service BootEventCollector`
 
 - Em um prompt de comando comum: **sc stop BootEventCollector; sc start BootEventCollector**
 
@@ -288,7 +287,7 @@ A interface mínima oferecida pelo Nano Server às vezes pode dificultar o diagn
 
     3. Atualize o registro de VHD do Nano Serve para habilitar Agentes de log automático. Para fazer isso, execute `Enable-SbecAutoLogger -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`. Isto adiciona uma lista básica do ambiente mais típico e eventos de inicialização; você pode pesquisar outros em [Controlar sessões de rastreamento de eventos](/windows/win32/etw/controlling-event-tracing-sessions).
 
-4. Atualize configurações de BCD na imagem do Nano Server para habilitar o sinalizador de Eventos e defina o computador coletor para certifique-se de que eventos de diagnósticos são enviados para o servidor correto. Observe que o endereço IPv4 do computador coletor, a porta TCP e a chave de criptografia configurada no arquivo Active.XML do coletor (descrito em outro lugar neste tópico). Use este comando em um console do Windows PowerShell com permissões elevadas:`Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`
+4. Atualize configurações de BCD na imagem do Nano Server para habilitar o sinalizador de Eventos e defina o computador coletor para certifique-se de que eventos de diagnósticos são enviados para o servidor correto. Observe que o endereço IPv4 do computador coletor, a porta TCP e a chave de criptografia configurada no arquivo Active.XML do coletor (descrito em outro lugar neste tópico). Use este comando em um console do Windows PowerShell com permissões elevadas: `Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`
 
 5. Atualize o computador do coletor para receber eventos enviados pelo computador do nano Server adicionando o intervalo de endereços IPv4, o endereço IPv4 específico ou o endereço MAC do nano Server ao arquivo de Active.XML no computador do coletor (consulte a seção Configurando o computador do coletor deste tópico).
 
@@ -298,7 +297,7 @@ Depois que um arquivo de configuração válido é salvo no computador do coleto
 
 O log para o serviço coletor propriamente dito (que é distinto dos dados de configuração e de inicialização coletados pelo serviço) pode ser encontrado em Microsoft-Windows-BootEvent-Collector/Admin. Para obter uma interface gráfica dos eventos, use o Visualizador de Eventos. Crie um novo modo de exibição; expanda **Logs de serviços e aplicativos** e, em seguida, expanda **Microsoft** e **Windows**. Encontre o **BootEvent-Collector**, expanda-o e encontre **Admin**.
 
-- Com o Windows PowerShell:`Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin`
+- Com o Windows PowerShell: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin`
 
 - Em um prompt de comando comum: **wevtutil qe Microsoft-Windows-BootEvent-Collector/Admin**
 
@@ -337,9 +336,9 @@ No nível de depuração, talvez seja útil gravar o log em um arquivo em vez de
    ```
    Se retorna que há uma conexão a partir deste destino, o problema pode ser nas configurações do agente de log automático. Se retorna nada, o problema é com a conexão KDNET. Para diagnosticar problemas de conexão KDNET, tente verificar a conexão de ambas as extremidades (ou seja, de um coletor e do destino).
 
-2. Para ver o diagnóstico estendido do coletor, adicione-o ao \<collector> elemento do arquivo de configuração:\<collector ... minlog=verbose>
+2. Para ver o diagnóstico estendido do coletor, adicione-o ao \<collector> elemento do arquivo de configuração: \<collector ... minlog=verbose>
    Isso permitirá mensagens sobre cada pacote recebido.
-3. Verifique se todos os pacotes são recebidos. Opcionalmente, você talvez queira gravar o log no modo detalhado diretamente em um arquivo e não por ETW. Para fazer isso, adicione isso ao \<collector> elemento do arquivo de configuração:\<collector ... minlog=verbose log=c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt>
+3. Verifique se todos os pacotes são recebidos. Opcionalmente, você talvez queira gravar o log no modo detalhado diretamente em um arquivo e não por ETW. Para fazer isso, adicione isso ao \<collector> elemento do arquivo de configuração: \<collector ... minlog=verbose log=c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt>
 
 4. Verifique os logs de evento para todas as mensagens sobre os pacotes recebidos. Verifique se todos os pacotes são recebidos. Se os pacotes são recebidos, mas de forma incorreta, verifique as mensagens de eventos para obter detalhes.
 5. Do lado do destino, o KDNET grava algumas informações de diagnósticos no registro. Procure mensagens no **HKLM\SYSTEM\CurrentControlSet\Services\kdnet** .
@@ -374,5 +373,5 @@ Como alternativa, se você não quiser salvar o resultado em uma variável, é p
 |--|--|--|
 | Computador de destino | O destino não está se conectando ao coletor | O computador de destino não foi reiniciado após ter sido configurado. Reinicie o computador de destino. O computador de destino tem configurações BCD incorretas. Verifique as configurações na seção validar configurações do computador de destino. Corrija conforme necessário e reinicie o computador de destino.<p>O driver KDNET/EVENT-NET não pôde se conectar a um adaptador de rede ou conectado ao adaptador de rede errado. No Windows PowerShell, execute `gwmi Win32_NetworkAdapter` e verifique a saída para um com o ServiceName **kdnic**. Se o adaptador de rede incorreto estiver selecionado, execute as etapas em para especificar um adaptador de rede. Se o adaptador de rede não aparecer, é possível que o driver não ofereça suporte para qualquer um dos seus adaptadores de rede.<p>**Consulte também:** Uma abordagem sugerida para solucionar problemas do coletor acima, especialmente as etapas de 5 a 8. |
 | Coletor | Não vejo mais eventos após migrar a VM na qual o coletor está hospedado. | Verifique se o endereço IP do computador do coletor não foi alterado. Se tiver, examine para habilitar o envio de eventos ETW por meio do transporte remotamente. |
-| Coletor | Os arquivos ETL não são criados. | `Get-SbecForwarding`mostra que o destino se conectou, sem erros, mas os arquivos ETL não são criados. | O computador de destino provavelmente não enviou quaisquer dados ainda; os arquivos ETL são criados apenas quando os dados são recebidos. |
+| Coletor | Os arquivos ETL não são criados. | `Get-SbecForwarding` mostra que o destino se conectou, sem erros, mas os arquivos ETL não são criados. | O computador de destino provavelmente não enviou quaisquer dados ainda; os arquivos ETL são criados apenas quando os dados são recebidos. |
 | Coletor | Um evento não está aparecendo no arquivo de ETL. | O computador de destino enviou a um evento, mas quando o arquivo ETL é lido com o Visualizador de Eventos do Analisador de Mensagem, o evento não está presente. O evento ainda pode estar no buffer. Os eventos não são gravados no arquivo ETL até que um buffer completo de 64 KB seja coletado ou um tempo limite de aproximadamente 10 a 15 segundos sem nenhum novo evento ocorrer. Espere até que o tempo limite expire ou limpe os buffers com `Save-SbecInstance`.<p>O manifesto do evento não está disponível no computador coletor ou no computador em que o Visualizador de Eventos ou o analisador de mensagem é executado.  Nesse caso, o Coletor talvez não consiga processam o evento (verifique o log do Coletor) ou o visualizador talvez não consiga mostrá-lo.  É uma prática recomendada ter todos os manifestos instalados no computador do coletor e instalar atualizações no computador coletor antes de instalá-los nos computadores de destino. |

@@ -2,17 +2,17 @@
 description: 'Saiba mais sobre: o que há de novo no clustering de failover'
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: O que há de novo no clustering de failover no Windows Server
-ms.topic: get-started-article
+ms.topic: how-to
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: 5ffe286cecc8500d70df00289a9694847e7d0994
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: a0c0a236f13a21b83a7489b1d0b8b91f76561c14
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97040465"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948072"
 ---
 # <a name="whats-new-in-failover-clustering"></a>Novidades no Clustering de Failover
 
@@ -98,7 +98,7 @@ Os sistemas operacionais de cluster para a atualização em fases são os seguin
 
 Para obter mais informações, consulte [atualização sem interrupção do sistema operacional do cluster](cluster-operating-system-rolling-upgrade.md).
 
-### <a name="storage-replica"></a><a name="BKMK_SR"></a>Réplica de armazenamento
+### <a name="storage-replica"></a><a name="BKMK_SR"></a>Réplica de Armazenamento
 A réplica de armazenamento é um novo recurso que permite a replicação síncrona de nível de bloco e independente de armazenamento entre servidores ou clusters para recuperação de desastre, bem como o alargamento de um cluster de failover entre sites. A replicação síncrona habilita o espelhamento de dados em locais físicos com volumes consistentes com falha para garantir perda zero de dados no nível do sistema de arquivos. A replicação assíncrona permite a extensão de site além das dimensões metropolitanas com a possibilidade de perda de dados.
 
 **Qual é o valor agregado desta alteração?**
@@ -211,5 +211,5 @@ Para obter mais informações, consulte [redes de cluster de vários canais e mu
 
 ## <a name="see-also"></a>Consulte Também
 
-* [Storage](../storage/storage.yml)
+* [Armazenamento](../storage/storage.yml)
 * [O que há de novo no armazenamento no Windows Server 2016](../storage/whats-new-in-storage.md)

@@ -1,19 +1,20 @@
 ---
-title: 'Etapa 3: configurar um cluster com balanceamento de carga'
-description: Este tópico faz parte do guia implantar o acesso remoto em um cluster no Windows Server 2016.
+title: Etapa 3 configurar um cluster Load-Balanced
+description: Saiba como configurar o balanceamento de carga no servidor único, configurar os certificados necessários e implantar o cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: bd1e2c7e5418c20eb5534ac8fca7517707397b0b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: a490672d5ba44483c638be5c469d9e12c3e1b0d7
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963902"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947782"
 ---
-# <a name="step-3-configure-a-load-balanced-cluster"></a>Etapa 3: configurar um cluster com balanceamento de carga
+# <a name="step-3-configure-a-load-balanced-cluster"></a>Etapa 3 configurar um cluster Load-Balanced
 
 >Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
 
@@ -39,13 +40,13 @@ Depois de preparar os servidores para o cluster, configure o balanceamento de ca
 
 ### <a name="to-configure-the-prefix"></a><a name="configDA"></a>Para configurar o prefixo
 
-1.  No servidor de acesso remoto, clique em **Iniciar**e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto, clique em **Iniciar** e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de gerenciamento de acesso remoto, clique em **Configuração**.
 
 3.  No painel central do console do, na área **etapa 2 do servidor DirectAccess** , clique em **Editar**.
 
-4.  Clique em **configuração de prefixo**. Na página **configuração de prefixo** , no **prefixo IPv6 atribuído aos computadores cliente do DirectAccess**, insira o prefixo IPv6 usado para computadores cliente do DirectAccess com um comprimento de sub-rede de 59, por exemplo, **2001: DB8:1: 1000::/59**. Se a VPN também tiver sido habilitada com IPv6, um prefixo IPv6 seria exibido e o comprimento da sub-rede precisaria ser alterado para 59. Clique em **Próximo**.
+4.  Clique em **configuração de prefixo**. Na página **configuração de prefixo** , no **prefixo IPv6 atribuído aos computadores cliente do DirectAccess**, insira o prefixo IPv6 usado para computadores cliente do DirectAccess com um comprimento de sub-rede de 59, por exemplo, **2001: DB8:1: 1000::/59**. Se a VPN também tiver sido habilitada com IPv6, um prefixo IPv6 seria exibido e o comprimento da sub-rede precisaria ser alterado para 59. Clique em **Avançar**.
 
 5.  No painel central do console do, clique em **concluir**.
 
@@ -55,17 +56,17 @@ Depois de preparar os servidores para o cluster, configure o balanceamento de ca
 
 #### <a name="to-enable-load-balancing"></a>Para habilitar o balanceamento de carga
 
-1.  No servidor DirectAccess configurado, clique em **Iniciar**e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor DirectAccess configurado, clique em **Iniciar** e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
-2.  No console de gerenciamento de acesso remoto, no painel esquerdo, clique em **configuração**e, no painel **tarefas** , clique em **habilitar balanceamento de carga**.
+2.  No console de gerenciamento de acesso remoto, no painel esquerdo, clique em **configuração** e, no painel **tarefas** , clique em **habilitar balanceamento de carga**.
 
 3.  No assistente habilitar balanceamento de carga, clique em **Avançar**.
 
 4.  Dependendo do que você escolheu nas etapas de planejamento:
 
-    1.  NLB do Windows: na página **método de balanceamento de carga** , clique em **usar NLB (balanceamento de carga de rede) do Windows**e clique em **Avançar**.
+    1.  NLB do Windows: na página **método de balanceamento de carga** , clique em **usar NLB (balanceamento de carga de rede) do Windows** e clique em **Avançar**.
 
-    2.  Balanceador de carga externo: na página **método de balanceamento de carga** , clique em **usar um balanceador de carga externo**e, em seguida, clique em **Avançar**.
+    2.  Balanceador de carga externo: na página **método de balanceamento de carga** , clique em **usar um balanceador de carga externo** e, em seguida, clique em **Avançar**.
 
 5.  Em uma única implantação de adaptador de rede, na página **endereços IP dedicados** , faça o seguinte e clique em **Avançar**:
 
@@ -94,7 +95,7 @@ Depois de preparar os servidores para o cluster, configure o balanceamento de ca
     > [!NOTE]
     > Se o balanceamento de carga externo estiver sendo usado, anote os IPs virtuais e forneça-os como nos balanceadores de carga externos.
 
-![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -114,7 +115,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 > É recomendável não incluir alterações nas configurações do balanceador de carga com alterações em quaisquer outras configurações, se você estiver usando GPOs de preparo. As alterações nas configurações do balanceador de carga devem ser aplicadas primeiro e, em seguida, outras alterações de configuração devem ser feitas. Além disso, depois de configurar o balanceador de carga em um novo servidor DirectAccess, aguarde um pouco para que as alterações de IP sejam aplicadas e replicadas nos servidores DNS da empresa, antes de alterar outras configurações do DirectAccess relacionadas ao novo cluster.
 
 ## <a name="33-install-the-ip-https-certificate"></a><a name="BKMK_InstallIPHTTP"></a>3,3 instalar o certificado IP-HTTPS
-A associação no grupo local **Administradores**, ou equivalente, é o mínimo necessário para concluir esse procedimento.
+A associação no grupo local _ *Administradores**, ou equivalente, é o requisito mínimo necessário para concluir este procedimento.
 
 ### <a name="to-install-the-ip-https-certificate"></a><a name="IPHTTPSCert"></a>Para instalar o certificado IP-HTTPS
 
@@ -122,7 +123,7 @@ A associação no grupo local **Administradores**, ou equivalente, é o mínimo 
 
 2.  No console do MMC, no menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.
 
-3.  Na caixa de diálogo **Adicionar ou remover snap-ins** , clique em **certificados**, em **Adicionar**, em **conta de computador**, em **Avançar**, em **concluir**e em **OK**.
+3.  Na caixa de diálogo **Adicionar ou remover snap-ins** , clique em **certificados**, em **Adicionar**, em **conta de computador**, em **Avançar**, em **concluir** e em **OK**.
 
 4.  No painel esquerdo do console, navegue até **certificados (computador local) \Personal\Certificates**. Clique com o botão direito do mouse no certificado IP-HTTPS, aponte para **todas as tarefas** e clique em **Exportar**.
 
@@ -146,9 +147,9 @@ A associação no grupo local **Administradores**, ou equivalente, é o mínimo 
 
 14. No console do MMC, no menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.
 
-15. Na caixa de diálogo **Adicionar ou remover snap-ins** , clique em **certificados**, em **Adicionar**, em **conta de computador**, em **Avançar**, em **concluir**e em **OK**.
+15. Na caixa de diálogo **Adicionar ou remover snap-ins** , clique em **certificados**, em **Adicionar**, em **conta de computador**, em **Avançar**, em **concluir** e em **OK**.
 
-16. No painel esquerdo do console, navegue até **certificados (computador local) \Personal\Certificates**. Clique com o botão direito do mouse no nó **certificados** , aponte para **todas as tarefas**e clique em **importar**.
+16. No painel esquerdo do console, navegue até **certificados (computador local) \Personal\Certificates**. Clique com o botão direito do mouse no nó **certificados** , aponte para **todas as tarefas** e clique em **importar**.
 
 17. Na página **Bem-vindo ao Assistente para Importação de Certificados**, clique em **Avançar**.
 
@@ -169,11 +170,11 @@ A associação no grupo local **Administradores**, ou equivalente, é o mínimo 
 
 #### <a name="to-install-a-certificate-for-network-location"></a>Para instalar um certificado para local de rede
 
-1.  No servidor de acesso remoto, clique em **Iniciar**, digite **MMC**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto, clique em **Iniciar**, digite **MMC** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  Clique em **Arquivo** e em **Adicionar/Remover Snap-ins**.
 
-3.  Clique em **certificados**, clique em **Adicionar**, em **conta de computador**, em **Avançar**, em **computador local**, em **concluir**e em **OK**.
+3.  Clique em **certificados**, clique em **Adicionar**, em **conta de computador**, em **Avançar**, em **computador local**, em **concluir** e em **OK**.
 
 4.  Na árvore de console do snap-in Certificados, abra **Certificados (Computador Local)\Pessoal\Certificados**.
 
@@ -207,7 +208,7 @@ A associação no grupo local **Administradores**, ou equivalente, é o mínimo 
 
 #### <a name="to-add-servers-to-the-cluster"></a>Para adicionar servidores ao cluster
 
-1.  No servidor DirectAccess configurado, clique em **Iniciar**e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor DirectAccess configurado, clique em **Iniciar** e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de gerenciamento de acesso remoto, clique em **Configuração**. No painel **tarefas** , em **cluster com balanceamento de carga**, clique em **Adicionar ou remover servidores**.
 
@@ -241,7 +242,7 @@ A associação no grupo local **Administradores**, ou equivalente, é o mínimo 
 
 12. Na caixa de diálogo **adicionando e removendo servidores** , clique em **fechar**.
 
-![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -257,7 +258,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 
 #### <a name="to-remove-a-server-from-the-cluster"></a>Para remover um servidor do cluster
 
-1.  No servidor de acesso remoto configurado, clique em **Iniciar**e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto configurado, clique em _ * iniciar * * e, em seguida, clique em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de gerenciamento de acesso remoto, clique em **Configuração**. No painel **tarefas** , em **cluster com balanceamento de carga**, clique em **Adicionar ou remover servidores**.
 
@@ -271,7 +272,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 
 7.  Na caixa de diálogo **adicionando e removendo servidores** , clique em **fechar**.
 
-![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -284,7 +285,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 
 #### <a name="to-disable-load-balancing"></a>Para desabilitar o balanceamento de carga
 
-1.  No servidor DirectAccess configurado, clique em **Iniciar**e em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor DirectAccess configurado, clique em _ * iniciar * * e, em seguida, clique em **Gerenciamento de acesso remoto**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de gerenciamento de acesso remoto, clique em **Configuração**. No painel **tarefas** , em **cluster com balanceamento de carga**, clique em **desabilitar balanceamento de carga**.
 
@@ -292,7 +293,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
 
 4.  Na caixa de diálogo **desabilitar balanceamento de carga** , clique em **fechar**.
 
-![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -302,14 +303,14 @@ set-RemoteAccessLoadBalancer -disable
 
 Desabilitar o balanceamento de carga removerá configurações de acesso remoto e configurações de NLB (se configurado) de todos os servidores, exceto o servidor do qual está sendo executado. Nesse servidor de acesso remoto, as configurações de NLB serão removidas (se tiver sido configuradas), mas as configurações de acesso remoto permanecerão.
 
-Clicar em **remover definições de configuração** removerá o acesso remoto e o NLB (se configurado) de todos os servidores na implantação.
+Clicar em _ *remover definições de configuração** removerá o acesso remoto e o NLB (se configurado) de todos os servidores na implantação.
 
 > [!NOTE]
 > -   Se o acesso remoto for desinstalado quando o balanceamento de carga for implantado, todos os servidores ficarão com DIPs. Os VIPs são removidos. Isso faz com que todas as rotas na rede corporativa que são destinadas aos endereços de VIPs falhem. Isso também afeta as entradas DNS que foram resolvidas para os VIPs, como o nome do assunto do certificado do servidor do local de rede. Para evitar esse problema, desabilite o balanceamento de carga, que deixa os VIPs no último servidor de acesso remoto e, em seguida, desinstale o acesso remoto.
 > -   Depois de usar o cmdlet **set-RemoteAccessLoadBalancer** para desabilitar o balanceamento de carga, aguarde 2 minutos antes de executar qualquer outro cmdlet. Isso também deve ser feito em todos os scripts que executam outro cmdlet após o cmdlet **set-RemoteAccessLoadBalancer-Disable** .
 > -   Desabilitar o balanceamento de carga altera o endereço IP virtual do cluster para um endereço IP dedicado. Como resultado, qualquer operação que consulte o nome do servidor falhará até que a entrada DNS armazenada em cache no servidor expire. Certifique-se de não executar nenhum cmdlet do PowerShell de acesso remoto depois de desabilitar o balanceamento de carga até que o cache no servidor tenha expirado. Esse problema é mais comum se você tentar desabilitar o balanceamento de carga em um computador de outro computador que esteja em outro domínio. Isso também ocorrerá se você desabilitar o balanceamento de carga do console de gerenciamento de acesso remoto e pode impedir que a configuração seja carregada. A configuração será carregada após o cache expirar ou ter sido liberada.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Veja também
 
 -   [Etapa 4: verificando o cluster](Step-4-Verify-the-Cluster.md)
 

@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 planejar a implantação do DirectAccess
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba como planejar as configurações do assistente para habilitar DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8a31dc9362e9165ae2385de62f8146b769fc8563
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 696747b64ee0c3b5412f1397daa3a1acbffd043d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969233"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947032"
 ---
 # <a name="step-2-plan-the-directaccess-deployment"></a>Etapa 2 planejar a implantação do DirectAccess
 

@@ -6,12 +6,13 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.date: 02/25/2020
-ms.openlocfilehash: 417deaf61b111b6ba54939505c65e8e0f854e604
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.topic: article
+ms.openlocfilehash: e781afdef06c7cd965e53f0103cfc02f4e20aedc
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960939"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946932"
 ---
 # <a name="creating-volumes-in-storage-spaces-direct"></a>Criando volumes em Espaços de Armazenamento Diretos
 
@@ -67,7 +68,7 @@ Para abrir um volume e adicionar arquivos ao volume no centro de administração
 
 4. Na parte superior da página, selecione **abrir**. Isso inicia a ferramenta arquivos no centro de administração do Windows.
 5. Navegue até o caminho do volume. Aqui você pode procurar os arquivos no volume.
-6. Selecione **carregar**e, em seguida, selecione um arquivo para carregar.
+6. Selecione **carregar** e, em seguida, selecione um arquivo para carregar.
 7. Use o botão **voltar** do navegador para voltar ao painel de ferramentas no centro de administração do Windows.
 
 Assista a um vídeo rápido sobre como abrir um volume e adicionar arquivos.
@@ -151,7 +152,7 @@ Pronto! Repita conforme necessário para criar mais de um volume.
 
 ## <a name="additional-references"></a>Referências adicionais
 
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 - [Planejamento de volumes nos Espaços de Armazenamento Diretos](plan-volumes.md)
 - [Estendendo volumes em Espaços de Armazenamento Diretos](resize-volumes.md)
 - [Excluindo volumes no Espaços de Armazenamento Diretos](delete-volumes.md)

@@ -4,12 +4,13 @@ description: Este artigo discute a ausência de um mecanismo de bloqueio de arqu
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 4c04ed0f97f3f6192817121bc1bd67ea8fc73fdd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.topic: troubleshooting
+ms.openlocfilehash: 55acc6e01e597261d0da3e7dfb572e77a277216b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965853"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947642"
 ---
 # <a name="understanding-the-lack-of-distributed-file-locking-in-dfsr"></a>Entender a ausência de bloqueio de arquivo distribuído na DFSR
 
@@ -66,7 +67,7 @@ Há algumas soluções de fornecedor que assumem esse problema, que normalmente 
   - Fazer uso de dispositivos especializados
 
 
-***\*** Observe que eu digo normalmente \! não poste ameaças de morte, pois você tem uma solução que não implementa um ou mais desses métodos\!*
+***\** _ Observe que eu digo normalmente\! Não poste ameaças de morte porque você tem uma solução que não implementa um ou mais desses métodos \! _
 
 ## <a name="deeper-thoughts"></a>Pensamentos mais aprofundados
 

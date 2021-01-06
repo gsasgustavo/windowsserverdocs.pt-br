@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c8a3fbb1845bf6faf14688019a3c27169d293151
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 2f664ad42781846ea44cb6b382b0078cbf403a4f
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953872"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947452"
 ---
 # <a name="radius-clients"></a>Clientes RADIUS
 
@@ -33,27 +34,27 @@ Os exemplos de servidores de acesso à rede são:
 - Opções que fornecem acesso à camada física para a rede de uma organização, usando tecnologias de LAN tradicionais, como Ethernet.
 - Proxies RADIUS que encaminham solicitações de conexão para servidores RADIUS que são membros de um grupo de servidores RADIUS remotos que são configurados no proxy RADIUS.
 
-## <a name="radius-access-request-messages"></a>Acesso RADIUS-mensagens de solicitação
+## <a name="radius-access-request-messages"></a>Mensagens de Access-Request RADIUS
 
-Os clientes RADIUS criam mensagens de solicitação de acesso RADIUS e as encaminham para um proxy RADIUS ou servidor RADIUS, ou encaminham mensagens de solicitação de acesso para um servidor RADIUS recebido de outro cliente RADIUS, mas não foram criadas por conta própria.
+Os clientes RADIUS criam mensagens Access-Request RADIUS e as encaminham para um proxy RADIUS ou servidor RADIUS, ou encaminham Access-Request mensagens a um servidor RADIUS recebido de outro cliente RADIUS, mas não foram criadas por conta própria.
 
-Os clientes RADIUS não processam mensagens de solicitação de acesso executando autenticação, autorização e contabilidade. Somente os servidores RADIUS executam essas funções.
+Os clientes RADIUS não processam Access-Request mensagens executando autenticação, autorização e contabilidade. Somente os servidores RADIUS executam essas funções.
 
-No entanto, o NPS pode ser configurado como um proxy RADIUS e um servidor RADIUS simultaneamente, para que ele processe algumas mensagens de solicitação de acesso e encaminhe outras mensagens.
+No entanto, o NPS pode ser configurado como um proxy RADIUS e um servidor RADIUS simultaneamente, para que ele processe algumas mensagens de Access-Request e encaminhe outras mensagens.
 
 ## <a name="nps-as-a-radius-client"></a>NPS como um cliente RADIUS
 
-O NPS atua como um cliente RADIUS quando você o configura como um proxy RADIUS para encaminhar mensagens de solicitação de acesso para outros servidores RADIUS para processamento. Quando você usa o NPS como um proxy RADIUS, as seguintes etapas gerais de configuração são necessárias:
+O NPS atua como um cliente RADIUS quando você o configura como um proxy RADIUS para encaminhar Access-Request mensagens para outros servidores RADIUS para processamento. Quando você usa o NPS como um proxy RADIUS, as seguintes etapas gerais de configuração são necessárias:
 
-1. Os servidores de acesso à rede, como pontos de acesso sem fio e servidores VPN, são configurados com o endereço IP do proxy NPS como o servidor RADIUS designado ou servidor de autenticação. Isso permite que os servidores de acesso à rede, que criam mensagens de solicitação de acesso com base nas informações recebidas de clientes de acesso, encaminhem mensagens para o proxy NPS.
+1. Os servidores de acesso à rede, como pontos de acesso sem fio e servidores VPN, são configurados com o endereço IP do proxy NPS como o servidor RADIUS designado ou servidor de autenticação. Isso permite que os servidores de acesso à rede, que criam Access-Request mensagens com base nas informações recebidas de clientes de acesso, encaminhem mensagens para o proxy NPS.
 
-2. O proxy NPS é configurado adicionando cada servidor de acesso à rede como um cliente RADIUS. Essa etapa de configuração permite que o proxy NPS receba mensagens dos servidores de acesso à rede e se comunique com elas durante a autenticação. Além disso, as políticas de solicitação de conexão no proxy NPS são configuradas para especificar quais mensagens de solicitação de acesso devem ser encaminhadas para um ou mais servidores RADIUS. Essas políticas também são configuradas com um grupo de servidores RADIUS remoto, que informa ao NPS para onde enviar as mensagens recebidas dos servidores de acesso à rede.
+2. O proxy NPS é configurado adicionando cada servidor de acesso à rede como um cliente RADIUS. Essa etapa de configuração permite que o proxy NPS receba mensagens dos servidores de acesso à rede e se comunique com elas durante a autenticação. Além disso, as políticas de solicitação de conexão no proxy NPS são configuradas para especificar quais Access-Request mensagens a serem encaminhadas para um ou mais servidores RADIUS. Essas políticas também são configuradas com um grupo de servidores RADIUS remoto, que informa ao NPS para onde enviar as mensagens recebidas dos servidores de acesso à rede.
 
 3. O NPS ou outros servidores RADIUS que são membros do grupo de servidores RADIUS remotos no proxy NPS são configurados para receber mensagens do proxy NPS. Isso é feito configurando o proxy NPS como um cliente RADIUS.
 
 ## <a name="radius-client-properties"></a>Propriedades do cliente RADIUS
 
-Ao adicionar um cliente RADIUS à configuração do NPS por meio do console do NPS ou usando os comandos netsh para comandos do NPS ou do Windows PowerShell, você está configurando o NPS para receber mensagens de solicitação de acesso RADIUS de um servidor de acesso à rede ou de um proxy RADIUS.
+Quando você adiciona um cliente RADIUS à configuração do NPS por meio do console do NPS ou usando os comandos netsh para comandos do NPS ou do Windows PowerShell, está configurando o NPS para receber mensagens de Access-Request RADIUS de um servidor de acesso à rede ou de um proxy RADIUS.
 
 Ao configurar um cliente RADIUS no NPS, você pode designar as seguintes propriedades:
 
@@ -65,7 +66,7 @@ Ao configurar um cliente RADIUS no NPS, você pode designar as seguintes proprie
 
 O endereço IPv4 do protocolo IP versão 4 \( \) ou o \( \) nome DNS do sistema de nome de domínio do cliente RADIUS.
 
-### <a name="client-vendor"></a>Cliente-fornecedor
+### <a name="client-vendor"></a>Client-Vendor
 
 O fornecedor do cliente RADIUS. Caso contrário, você pode usar o valor padrão RADIUS para o fornecedor do cliente.
 

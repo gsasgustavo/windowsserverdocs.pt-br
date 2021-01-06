@@ -1,17 +1,18 @@
 ---
 title: Etapa 3 verificar a implantação de acesso remoto (VPN)
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba como verificar se você configurou corretamente sua implantação do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9da14f076f177e7e819c1529f9de647b5dde0500
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 75ca3194132b8869d40b40e150eb9ae7fe9a6376
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969213"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947022"
 ---
 # <a name="step-3-verify-the-remote-access-vpn-deployment"></a>Etapa 3 verificar a implantação de acesso remoto (VPN)
 

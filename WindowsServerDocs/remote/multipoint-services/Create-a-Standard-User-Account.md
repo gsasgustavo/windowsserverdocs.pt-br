@@ -6,12 +6,13 @@ ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: f6f4a7b6b59dc78e7670084912f2cb6939036022
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.date: 09/14/2020
+ms.openlocfilehash: cb3557234115f2e8733d6d3b8ddb74872e32529a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077563"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947072"
 ---
 # <a name="create-a-standard-user-account"></a>Criar uma conta de usuário padrão
 Crie *contas de usuário padrão* para os usuários que acessarem regularmente estações, mas que não gerenciarão seu sistema MultiPoint Services. Os usuários com contas de usuário padrão podem executar a maioria dos aplicativos e salvar arquivos, mas não podem executar o Gerenciador do MultiPoint. Para ver quem tem acesso de usuário padrão, no Gerenciador do MultiPoint, clique na guia **usuários** . As contas de usuário padrão são exibidas na coluna **tipo de conta** como **padrão**.

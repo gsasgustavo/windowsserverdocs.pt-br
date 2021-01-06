@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a4459cbe1e61352be762ea3b699235325f91b5bb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: f64df3e7879f54e56b2a4365af9f0d7c2d8376e8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970183"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946972"
 ---
 # <a name="configure-a-multi-forest-deployment"></a>Configure a Multi-Forest Deployment
 
@@ -59,13 +60,13 @@ Neste cenário, o DirectAccess está implantado em uma configuração multissite
 ## <a name="configure-otp-in-a-multi-forest-deployment"></a><a name="OTPMultiForest"></a>Configurar a OTP em uma implantação de várias florestas
 Observe os seguintes termos ao configurar a OTP em uma implantação de várias florestas:
 
--   CA raiz-a autoridade de certificação da árvore principal PKI de floresta (s).
+-   Raiz CA-The floresta (s) da árvore PKI principal.
 
--   AC corporativa-todas as outras CAs.
+-   Enterprise CA-All outras CAs.
 
--   Floresta de recursos-a floresta que contém a AC raiz e é considerada como "Gerenciando forest\domain".
+-   O recurso Forest-The floresta que contém a CA raiz e é considerado como ' Gerenciando forest\domain '.
 
--   Floresta da conta-todas as outras florestas na topologia.
+-   Conta Forest-All outras florestas na topologia.
 
 O script do PowerShell, PKISync.ps1, é necessário para este procedimento. Consulte [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment (AD CS: script PKISync.ps1 para registro de certificado entre florestas)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff961506(v=ws.10)).
 
@@ -94,7 +95,7 @@ O script do PowerShell, PKISync.ps1, é necessário para este procedimento. Cons
     certutil -config <Computer-Name>\<Root-CA-Name> -ca.cert <root-ca-cert-filename.cer>
     ```
 
-    (Se você executar o comando na AC raiz, poderá omitir as informações de conexão,-config <nome do computador>\\<root-CA-name>)
+    (Se você executar o comando na AC raiz, poderá omitir as informações de conexão,-config <Computer-Name>\\<root-CA-Name>)
 
     1.  Importe o certificado de AC raiz da etapa anterior para a AC da floresta de contas executando o seguinte comando em um prompt de comando com privilégios elevados:
 
@@ -110,7 +111,7 @@ O script do PowerShell, PKISync.ps1, é necessário para este procedimento. Cons
         certutil -config <Computer-Name>\<Enterprise-CA-Name> -ca.cert <enterprise-ca-cert-filename.cer>
         ```
 
-        (Se você executar o comando na AC raiz, poderá omitir as informações de conexão,-config <nome do computador>\\<root-CA-name>)
+        (Se você executar o comando na AC raiz, poderá omitir as informações de conexão,-config <Computer-Name>\\<root-CA-Name>)
 
     4.  Importe os certificados de AC corporativa da etapa anterior para a AC da floresta de contas executando os seguintes comandos em um prompt de comando com privilégios elevados:
 

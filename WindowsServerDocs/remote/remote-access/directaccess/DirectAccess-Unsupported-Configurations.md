@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6d10b0bcef354bc1746d05d212d47f836d9c28c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 827af9315a73bb67cdb017b62150a5fb42c5d69a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951291"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946632"
 ---
 # <a name="directaccess-unsupported-configurations"></a>Configurações sem suporte do DirectAccess
 
@@ -75,8 +76,8 @@ Quando você usa o IPHTTPS, a conexão IPHTTPS deve terminar no servidor DirectA
 ## <a name="force-tunnel-with-otp-authentication"></a><a name="bkmk_ft"></a>Forçar túnel com autenticação OTP
 Não implante um servidor DirectAccess com a autenticação de dois fatores com a OTP e o túnel forçado, ou a autenticação OTP falhará. Uma conexão de protocolo SSL (SSL) fora de banda é necessária entre o servidor DirectAccess e o cliente DirectAccess. Essa conexão requer uma isenção para enviar o tráfego fora do túnel do DirectAccess. Em uma configuração de túnel forçado, todo o tráfego deve fluir por um túnel do DirectAccess e nenhuma isenção é permitida depois que o túnel é estabelecido. Por isso, não há suporte para a autenticação de OTP em uma configuração de túnel forçado.
 
-## <a name="deploying-directaccess-with-a-read-only-domain-controller"></a><a name="bkmk_rodc"></a>Implantando o DirectAccess com um controlador de domínio somente leitura
-Os servidores DirectAccess devem ter acesso a um controlador de domínio de leitura/gravação e não funcionar corretamente com um RODC (controlador de domínio somente leitura).
+## <a name="deploying-directaccess-with-a-read-only-domain-controller"></a><a name="bkmk_rodc"></a>Implantando o DirectAccess com um controlador de domínio Read-Only
+Os servidores DirectAccess devem ter acesso a um controlador de domínio de leitura/gravação e não funcionar corretamente com um RODC (controlador de domínio Read-Only).
 
 Um controlador de domínio de leitura/gravação é necessário por vários motivos, incluindo o seguinte:
 

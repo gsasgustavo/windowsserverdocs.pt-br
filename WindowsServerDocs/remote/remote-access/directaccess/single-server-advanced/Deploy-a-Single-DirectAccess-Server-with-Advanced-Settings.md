@@ -1,17 +1,18 @@
 ---
 title: Deploy a Single DirectAccess Server with Advanced Settings
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess com as configurações avançadas do Windows Server 2016
+description: Saiba mais sobre o cenário do DirectAccess que usa um único servidor DirectAccess e permite que você implante o DirectAccess com configurações avançadas.
 manager: brianlic
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4f2b2939bff08cc5c8f1fbd1eac6b421a35f589f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 3587977247b59ce2379d1a04e624099969a7c71b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996775"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946602"
 ---
 # <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>Deploy a Single DirectAccess Server with Advanced Settings
 
@@ -137,7 +138,7 @@ Há diversos requisitos para este cenário:
         > [!IMPORTANT]
         > Se você tiver habilitado o Teredo em sua implantação do DirectAccess e desejar fornecer acesso aos clientes do Windows 7, verifique se os clientes são atualizados para o Windows 7 com SP1. Os clientes que usam o Windows 7 RTM não poderão se conectar via Teredo. Contudo, tais clientes ainda poderão conectar-se à rede corporativa com IP-HTTPS.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Veja também
 A tabela a seguir fornece links para recursos adicionais.
 
 |Tipo de conteúdo|Referências|

@@ -1,17 +1,18 @@
 ---
 title: Implantar vários servidores de acesso remoto em uma implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba mais sobre o cenário empresarial para a implantação de servidores de acesso remoto em uma configuração multissite.
 manager: brianlic
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8f0d8b4416c8480921d43fd4e705b837082152fb
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 1d7ca177a2fe9483fef40d9f173b8ee4ce450db6
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991349"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97946472"
 ---
 # <a name="deploy-multiple-remote-access-servers-in-a-multisite-deployment"></a>Implantar vários servidores de acesso remoto em uma implantação multissite
 
@@ -70,7 +71,7 @@ A tabela a seguir lista as funções e os recursos usados neste cenário.
 
 |Função/recurso|Como este cenário tem suporte|
 |---------|-----------------|
-|Função Acesso Remoto|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Essa função engloba o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2 e Serviços de Roteamento e Acesso Remoto (RRAS) que eram anteriormente um serviço de função sob a função de servidor de Serviços de Acesso e Política de Rede (NPAS). A função Acesso Remoto consiste em dois componentes:<p>-DirectAccess e roteamento e serviços de acesso remoto (RRAS) VPN-e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />-Os recursos de roteamento RRAS de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>As dependências são as seguintes:<p>-Serviços de Informações da Internet (IIS) servidor Web-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-Banco de dados interno do Windows-usado para contabilização local no servidor de acesso remoto.|
+|Função Acesso Remoto|A função é instalada e desinstalada pelo console Gerenciador do Servidor. Essa função engloba o DirectAccess, que era anteriormente um recurso no Windows Server 2008 R2 e Serviços de Roteamento e Acesso Remoto (RRAS) que eram anteriormente um serviço de função sob a função de servidor de Serviços de Acesso e Política de Rede (NPAS). A função Acesso Remoto consiste em dois componentes:<p>-O DirectAccess e serviços de roteamento e acesso remoto (RRAS) VPN-DirectAccess e VPN são gerenciados juntos no console de gerenciamento de acesso remoto.<br />-Os recursos de roteamento RRAS de roteamento RRAS são gerenciados no console de roteamento e acesso remoto herdado.<p>As dependências são as seguintes:<p>-Serviços de Informações da Internet (IIS) servidor Web-esse recurso é necessário para configurar o servidor de local de rede e a investigação da Web padrão.<br />-Database-Used interno do Windows para contabilização local no servidor de acesso remoto.|
 |Recurso Ferramentas de Gerenciamento de Acesso Remoto|Este recurso é instalado da seguinte maneira:<p>-Ele é instalado por padrão em um servidor de acesso remoto quando a função de acesso remoto é instalada e dá suporte à interface do usuário do console de gerenciamento remoto.<br />-Ele pode ser instalado opcionalmente em um servidor que não está executando a função de servidor de acesso remoto. Neste caso, ele é usado para gerenciamento remoto de um computador de Acesso Remoto que executa o DirectAccess e VPN.<p>O recurso de Ferramentas de Gerenciamento de Acesso Remoto consiste em:<p>-GUI de acesso remoto e ferramentas de linha de comando<br />-Módulo de acesso remoto para Windows PowerShell<p>As dependências incluem:<p>-Console de Gerenciamento de Política de Grupo<br />-Kit de administração do Gerenciador de conexões RAS (CMAK)<br />-Windows PowerShell 3,0<br />-Infraestrutura e ferramentas de gerenciamento gráfico|
 
 ## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>Requisitos de hardware
@@ -122,7 +123,7 @@ Veja a seguir os problemas conhecidos ao configurar um cenário multissite:
 
 -   Se o endereço público especificado para clientes DirectAccess se conectar ao servidor de acesso remoto tiver um sufixo incluído na NRPT, o DirectAccess poderá não funcionar conforme o esperado. Verifique se a NRPT tem uma isenção para o nome público. Em uma implantação multissite, as isenções devem ser adicionadas para os nomes públicos de todos os pontos de entrada. Observe que, se o túnel forçado estiver habilitado, essas isenções serão adicionadas automaticamente. Eles serão removidos se o túnel forçado estiver desabilitado.
 
--   Ao usar o cmdlet **Disable-DAMultiSite**do Windows PowerShell, os parâmetros WhatIf e Confirm não têm efeito e o multissite será desabilitado e os GPOs do Windows 7 serão removidos.
+-   Ao usar o cmdlet **Disable-DAMultiSite** do Windows PowerShell, os parâmetros WhatIf e Confirm não têm efeito e o multissite será desabilitado e os GPOs do Windows 7 serão removidos.
 
 -   Quando os clientes do Windows 7 que usam o DCA em uma implantação multissite forem atualizados para o Windows 8, o assistente de conectividade de rede não funcionará. Esse problema pode ser resolvido antes da atualização do cliente, modificando os GPOs do Windows 7 usando os seguintes cmdlets do Windows PowerShell:
 

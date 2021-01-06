@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 0de2e1fa0d5dcb6c7ed2bd5ea8c6a65048296315
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 070bc4968638d6fcb0d5e63350fdbed0323df05b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970243"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947662"
 ---
 # <a name="step-2-plan-the-remote-access-deployment"></a>Etapa 2 planejar a implantação de acesso remoto
 

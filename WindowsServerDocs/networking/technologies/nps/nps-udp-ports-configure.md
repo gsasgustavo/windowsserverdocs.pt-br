@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c522206fe701d47f8f0c07e7c7a64d7e6fc7074c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 94a8e67056dff497f1adc18d898a6c87f4ab665c
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944506"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947432"
 ---
 # <a name="configure-nps-udp-port-information"></a>Configurar informações da porta UDP do NPS
 
@@ -33,7 +34,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 ## <a name="to-configure-nps-udp-port-information"></a>Para configurar as informações de porta UDP do NPS
 
 1. Abra o console do NPS.
-2. Clique com o botão direito do mouse em **servidor de políticas de rede**e clique em **Propriedades**.
+2. Clique com o botão direito do mouse em **servidor de políticas de rede** e clique em **Propriedades**.
 3. Clique na guia **portas** e examine as configurações de portas. Se as portas UDP de autenticação RADIUS e contabilização RADIUS variarem dos valores padrão fornecidos (1812 e 1645 para autenticação e 1813 e 1646 para contabilização), digite as configurações de porta em **autenticação** e **contabilidade**.
 4. Para usar várias configurações de porta para solicitações de autenticação ou de estatísticas, separe os números de porta com vírgulas.
 
