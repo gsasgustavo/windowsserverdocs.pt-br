@@ -7,12 +7,13 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: b810eb78055eeeeda62ef9e0f7d6fb82efa99d14
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.topic: conceptual
+ms.openlocfilehash: 388fef573d6c557889caa3b872b79f42cd1cf8a5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077763"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97943882"
 ---
 # <a name="roles-role-services-and-features-not-in-windows-server---server-core"></a>Funções, serviços de função e recursos que não estão no Windows Server-Server Core
 
@@ -55,7 +56,7 @@ Observe que alguns serviços de função Área de Trabalho Remota estão incluí
 - Ferramentas de Administração de Servidor Remoto \ ferramentas de administração de recurso \ ferramentas de servidor SMTP (**rsat-SMTP**)
 - Ferramentas de Administração de Servidor Remoto \ ferramentas de administração de recursos \ Criptografia de Unidade de Disco BitLocker utilitários de administração \ Criptografia de Unidade de Disco BitLocker ferramentas (**rsat-Feature-Tools-BitLocker-RemoteAdminTool**)
 - Ferramentas de Administração de Servidor Remoto \ ferramentas de administração de recurso \ BITS extensões de servidor ferramentas (**rsat-bits-servidor**)
-- Ferramentas de administração de recurso do Ferramentas de Administração de Servidor Remoto \ ferramentas de balanceamento**de carga de rede (RSAT-NLB**)
+- Ferramentas de administração de recurso do Ferramentas de Administração de Servidor Remoto \ ferramentas de balanceamento **de carga de rede (RSAT-NLB**)
 - Ferramentas de administração de recurso do Ferramentas de Administração de Servidor Remoto \ ferramentas SNMP (**rsat-SNMP**)
 - Ferramentas de Administração de Servidor Remoto \ ferramentas de administração de recurso \ ferramentas de servidor WINS (**rsat-WINS**)
 - Ferramentas de Administração de Servidor Remoto \ ferramentas de administração de função \ ferramentas de gerenciamento do Hyper-V \ ferramentas de gerenciamento de GUI do Hyper-V (**Hyper-v-Tools**)

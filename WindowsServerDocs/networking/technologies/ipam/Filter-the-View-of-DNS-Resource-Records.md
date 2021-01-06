@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 5c629c4f05e0eb1198a6dc1a2ac074967765ff7b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 528c3b8e86eb14c8bc5c08408f1326241b6da9fc
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971783"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97945292"
 ---
 # <a name="filter-the-view-of-dns-resource-records"></a>Filtrar a exibição de registros de recursos de DNS
 
@@ -23,7 +24,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-filter-the-view-of-dns-resource-records"></a>Para filtrar a exibição de registros de recursos de DNS
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
 2.  No painel de navegação, em **monitorar e gerenciar**, clique em **zonas DNS**.  O painel de navegação divide-se em um painel de navegação superior e em um painel de navegação inferior.
 
@@ -31,7 +32,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 4.  Clique na zona cujos registros você deseja exibir e filtrar.
 
-5.  No painel de exibição, clique em **exibição atual**e em **registros de recursos**. Os registros de recursos para a zona são mostrados no painel de exibição.
+5.  No painel de exibição, clique em **exibição atual** e em **registros de recursos**. Os registros de recursos para a zona são mostrados no painel de exibição.
 
 6.  No painel de exibição, clique em **Adicionar critérios**.
 

@@ -1,17 +1,18 @@
 ---
 title: Implantar um único servidor de DirectAccess usando o Assistente de Introdução
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba mais sobre o cenário do DirectAccess que usa um único servidor DirectAccess e permite que você implante o DirectAccess em algumas etapas fáceis.
 manager: brianlic
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 851b9e7909f6e2373f92d894d4cf67592cb22e15
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: e947f0a4a6c738937a315face5be97f0c509029a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970363"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97944652"
 ---
 # <a name="deploy-a-single-directaccess-server-using-the-getting-started-wizard"></a>Implantar um único servidor de DirectAccess usando o Assistente de Introdução
 
@@ -139,7 +140,7 @@ Há diversos requisitos para este cenário:
 
     -   Um grupo de segurança do Active Directory é necessário para conter os computadores que serão configurados como clientes do DirectAccess. Se um grupo de segurança não for especificado ao configurar as definições de cliente do DirectAccess, por padrão o GPO do cliente será aplicado em todos os computadores laptop no grupo de segurança de Computadores de Domínio. Somente os seguintes sistemas operacionais podem ser usados como clientes DirectAccess: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 8 Enterprise, Windows 7 Enterprise e Windows 7 Ultimate.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Veja também
 A tabela a seguir fornece links para recursos adicionais.
 
 |Tipo de conteúdo|Referências|

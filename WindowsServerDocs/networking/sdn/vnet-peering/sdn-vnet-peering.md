@@ -2,16 +2,16 @@
 description: 'Saiba mais sobre: emparelhamento de rede virtual'
 title: Emparelhamento de rede virtual
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018
-ms.openlocfilehash: 8d7f88c4887a5d571722e2137d32f1088d7a1ace
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 5bd66299271257026504dcff4b5021c0be4ef73a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97043604"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97945742"
 ---
 # <a name="virtual-network-peering"></a>Emparelhamento de rede virtual
 
@@ -72,7 +72,7 @@ O emparelhamento de rede virtual permite que o próximo salto em uma rota defini
 
 Cada rede virtual, independentemente de estar emparelhada com outra rede virtual, ainda pode ter seu próprio gateway para se conectar a uma rede local. Ao emparelhar redes virtuais, você também pode configurar o gateway na rede virtual emparelhada como um ponto de trânsito para uma rede local. Nesse caso, a rede virtual que usa um gateway remoto não pode ter seu próprio gateway. Uma rede virtual pode ter apenas um gateway que pode ser um gateway local ou remoto (na rede virtual emparelhada).
 
-## <a name="monitor"></a>Monitoramento
+## <a name="monitor"></a>Monitor
 
 Ao emparelhar duas redes virtuais, você deve configurar um emparelhamento para cada rede virtual no emparelhamento.
 

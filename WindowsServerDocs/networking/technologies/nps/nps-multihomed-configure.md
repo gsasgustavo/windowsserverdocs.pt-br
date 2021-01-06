@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1292accf4d19afa7f6a050281b7af373b3c867c3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 5c92046aaef7f22a2f9553260b009cda6663aa2e
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952081"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97944972"
 ---
 # <a name="configure-nps-on-a-multihomed-computer"></a>Configurar o NPS em um computador multihomed
 
@@ -64,9 +65,9 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 ### <a name="to-specify-the-network-adapter-and-udp-ports-that-nps-uses-for-radius-traffic"></a>Para especificar o adaptador de rede e as portas UDP que o NPS usa para o tráfego RADIUS
 
-1. No Gerenciador do servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede** para abrir o console do NPS.
+1. No Gerenciador do servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede** para abrir o console do NPS.
 
-2. Clique com o botão direito do mouse em **servidor de políticas de rede**e clique em **Propriedades**.
+2. Clique com o botão direito do mouse em **servidor de políticas de rede** e clique em **Propriedades**.
 
 3. Clique na guia **portas** e preceda o endereço IP do adaptador de rede que você deseja usar para o tráfego RADIUS para os números de porta existentes. Por exemplo, se você quiser usar o endereço IP 192.168.1.2 e as portas RADIUS 1812 e 1645 para solicitações de autenticação, altere a configuração de porta de **1812, 1645** para **192.168.1.2:1812, 1645**. Se a autenticação RADIUS e as portas UDP de contabilização RADIUS forem diferentes dos valores padrão, altere as configurações de porta adequadamente.
 

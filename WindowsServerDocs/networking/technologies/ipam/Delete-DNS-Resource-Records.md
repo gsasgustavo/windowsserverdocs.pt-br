@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 76a2847113536020bec6ea9724026c6e297cead2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 70039e266e2696f69c5eee8077bab81ccee72d35
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952297"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97945452"
 ---
 # <a name="delete-dns-resource-records"></a>Excluir registros de recursos de DNS
 
@@ -23,7 +24,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-delete-dns-resource-records"></a>Para excluir registros de recursos de DNS
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
 2.  No painel de navegação, em **monitorar e gerenciar**, clique em **zonas DNS**.  O painel de navegação divide-se em um painel de navegação superior e em um painel de navegação inferior.
 
