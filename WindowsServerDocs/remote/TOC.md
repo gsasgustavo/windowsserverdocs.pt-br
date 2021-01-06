@@ -163,7 +163,6 @@
 ####### [Como solucionar problemas da habilitação de multissite](remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md)
 ####### [Como solucionar problemas de adição de pontos de entrada](remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md)
 ####### [Como solucionar problemas de configuração do controlador de domínio de ponto de entrada](remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md)
-####### [Como solucionar problemas de URLs de investigação da Web](remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md)
 ####### [Como solucionar problemas gerais](remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md)
 ##### [Implantar o acesso remoto com autenticação OTP](remote-access/ras/otp/Deploy-RA-OTP.md)
 ###### [Planejar o acesso remoto com autenticação OTP](remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md)
