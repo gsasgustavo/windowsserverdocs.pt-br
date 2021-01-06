@@ -3,16 +3,16 @@ title: Como usar o endereçamento TCP/IP automático sem um servidor DHCP
 description: Apresente como usar o endereçamento TCP/IP automático sem um servidor DHCP.
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: robsmi
-ms.openlocfilehash: 46e7ae4a011c9a8d738dccd4fe103b49fee44c5b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: eb8a21fc999ce4f6c5953634dcfdc692b9dd0608
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935554"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948542"
 ---
 # <a name="how-to-use-automatic-tcpip-addressing-without-a-dhcp-server"></a>Como usar o endereçamento TCP/IP automático sem um servidor DHCP
 
@@ -35,7 +35,7 @@ Talvez você queira desabilitá-lo em qualquer um dos seguintes casos:
 
 - Sua rede está conectada à Internet sem um servidor NAT ou de proxy.
 
-A menos que você tenha desabilitado mensagens relacionadas ao DHCP, as mensagens DHCP fornecem notificações quando você altera entre o endereçamento DHCP e o endereçamento IP privado automático. Se o sistema de mensagens DHCP for desabilitado acidentalmente, você poderá ativar as mensagens DHCP novamente alterando o valor do valor PopupFlag na seguinte chave do registro de 00 para 01:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
+A menos que você tenha desabilitado mensagens relacionadas ao DHCP, as mensagens DHCP fornecem notificações quando você altera entre o endereçamento DHCP e o endereçamento IP privado automático. Se o sistema de mensagens DHCP for desabilitado acidentalmente, você poderá ativar as mensagens DHCP novamente alterando o valor do valor PopupFlag na seguinte chave do registro de 00 para 01: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
 Observe que você deve reiniciar o computador para que a alteração entre em vigor. Você também pode determinar se o computador está usando o APIPA usando a ferramenta winipcfg no Windows Millennium Edition, no Windows 98 ou no Windows 98 Second Edition:
 
@@ -45,9 +45,9 @@ Para o Windows 2000, Windows XP ou Windows Server 2003, você pode determinar se
 Clique em Iniciar, executar, digite "cmd" (sem as aspas) e clique em OK para abrir uma janela de linha de comando do MS-DOS. Digite "ipconfig/all" (sem as aspas) e, em seguida, pressione a tecla ENTER. Se a linha ' autoconfiguração habilitada ' disser "Sim" e o ' endereço IP de configuração automática ' for 169.254. x. y (em que x. y é o identificador exclusivo do cliente), o computador estará usando APIPA. Se a linha ' autoconfiguração habilitada ' disser "não", o computador não está usando APIPA no momento.
 Você pode desabilitar o endereçamento IP privado automático usando qualquer um dos métodos a seguir.
 
-Você pode configurar as informações de TCP/IP manualmente, o que desabilita completamente o DHCP. Você pode desabilitar o endereçamento IP privado automático (mas não o DHCP) editando o registro. Você pode fazer isso adicionando a entrada de Registro DWORD "IPAutoconfigurationEnabled" com um valor de 0x0 para a seguinte chave do registro para Windows Millennium Edition, Windows98 ou Windows 98 Second Edition:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
+Você pode configurar as informações de TCP/IP manualmente, o que desabilita completamente o DHCP. Você pode desabilitar o endereçamento IP privado automático (mas não o DHCP) editando o registro. Você pode fazer isso adicionando a entrada de Registro DWORD "IPAutoconfigurationEnabled" com um valor de 0x0 para a seguinte chave do registro para Windows Millennium Edition, Windows98 ou Windows 98 Second Edition:  `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
-Para o Windows 2000, Windows XP e Windows Server 2003, o APIPA pode ser desabilitado adicionando a entrada de Registro DWORD "IPAutoconfigurationEnabled" com um valor de 0x0 para a seguinte chave do registro:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`
+Para o Windows 2000, Windows XP e Windows Server 2003, o APIPA pode ser desabilitado adicionando a entrada de Registro DWORD "IPAutoconfigurationEnabled" com um valor de 0x0 para a seguinte chave do registro: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`
 > [!NOTE]
 > A subchave do **GUID do adaptador** é um GUID (identificador global exclusivo) para o adaptador de LAN do computador.
 

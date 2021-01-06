@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8c1b56292c500cdd56c7fe8830ec4ced8bd0b4e8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: b6cbf1780e35b1181648761990a344093aaa8f58
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951431"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950072"
 ---
 # <a name="border-gateway-protocol-bgp"></a>BGP (Border Gateway Protocol)
 
@@ -34,7 +35,7 @@ Quando configurado em um gateway RAS do serviço de acesso remoto do Windows Ser
 
 O BGP reduz a necessidade de configuração de roteamento manual em roteadores, porque ele é um protocolo de roteamento dinâmico e aprende rotas entre sites conectados usando conexões VPN site a site automaticamente.
 
-Para usar o roteamento BGP, você deve instalar o ** \( \) RAS do serviço de acesso remoto** e/ou o serviço de função de **Roteamento** da função de servidor acesso remoto em um computador ou VM de máquina virtual \( \) -o tipo de sistema que você usa depende se você tem ou não uma implantação multilocatário:
+Para usar o roteamento BGP, você deve instalar o **\( \) RAS do serviço de acesso remoto** e/ou o serviço de função de **Roteamento** da função de servidor acesso remoto em um computador ou VM de máquina virtual \( \) -o tipo de sistema que você usa depende se você tem ou não uma implantação multilocatário:
 
 -   Para uma implantação multilocatário, é recomendável que você instale o gateway RAS em uma ou mais VMs. O uso de várias VMs fornece alta disponibilidade. O gateway RAS é capaz de lidar com várias conexões de vários locatários e consiste em um host Hyper-V e uma VM que é realmente configurada como o gateway. Esse gateway é configurado com conexões VPN site a site como um roteador BGP multilocatário para trocar as rotas de sub-rede CSP do provedor de serviços de nuvem e do locatário do Exchange \( \) .
 
@@ -163,9 +164,9 @@ A seguir estão os recursos do roteador BGP de gateway de RAS.
 
 **Filtragem de rotas**. O roteador BGP dá suporte à filtragem de anúncios de rota de entrada ou de saída com base em vários atributos de rota como prefixo, intervalo ASN, comunidade e do próximo salto.
 
-**Cliente RR (route-reflector) e RR**. O roteador BGP pode atuar como um refletor de rota e um cliente RR. Isso é útil em topologias complexas nas quais o RR pode simplificar a rede ao formar clusters RR.
+**Cliente RR (route-reflector) e RR**. O roteador BGP pode atuar como um Route-Reflector e um cliente RR. Isso é útil em topologias complexas nas quais o RR pode simplificar a rede ao formar clusters RR.
 
-**Suporte de atualização de rota**. O roteador BGP dá suporte à atualização de rota e anuncia essa funcionalidade no emparelhamento por padrão. Ele é capaz de enviar um conjunto novo de atualizações de rota quando solicitado por um par por meio de uma mensagem de atualização de rota, bem como enviar uma atualização de rota para atualizar sua tabela de roteamento nos eventos como alterações de política de roteamento para um par. Isso habilita o cenário de alteração ou atualização das políticas de roteamento BGP no Windows Server 2016 sem a necessidade de reiniciar o emparelhamento.
+**Suporte de atualização de rota**. O roteador BGP dá suporte à atualização de rota e anuncia essa funcionalidade no emparelhamento por padrão. Ele é capaz de enviar um conjunto novo de atualizações de rota quando solicitado por um par por meio de uma mensagem de atualização de rota, bem como enviar um Route-Refresh para atualizar sua tabela de roteamento nos eventos como alterações de política de roteamento para um par. Isso habilita o cenário de alteração ou atualização das políticas de roteamento BGP no Windows Server 2016 sem a necessidade de reiniciar o emparelhamento.
 
 **Suporte à configuração de roteamento estático**. Você pode configurar rotas estáticas ou interfaces no roteador BGP usando o comando do Windows PowerShell **Add-BgpCustomRoute**. As rotas estáticas que você configurar podem ser os prefixos ou o nome das interfaces por meio dos quais as rotas devem ser escolhidas. No entanto, apenas as rotas com saltos seguintes resolvíveis são inseridas nas tabelas de roteamento de BGP e anunciadas para colegas.
 

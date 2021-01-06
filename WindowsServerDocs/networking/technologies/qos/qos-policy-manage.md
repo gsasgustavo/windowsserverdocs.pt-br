@@ -6,12 +6,13 @@ ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1eff6763ac00ea63e386e2774814221b01956b97
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 32ee4b774119d3494c38eeec51cc9106373ae7ae
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953842"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948272"
 ---
 # <a name="manage-qos-policy"></a>Gerenciar política de QoS
 
@@ -80,7 +81,7 @@ Na primeira página do assistente de política de QoS, você pode especificar um
 
 3. Como opção, use **Especificar Taxa de Aceleração** para habilitar a aceleração de tráfego e configurar a taxa de aceleração. O valor da taxa de limitação deve ser maior que 1 e você pode especificar unidades de kilobytes por segundo, \( kbps \) ou megabytes por segundo \( Mbps \) .
 
-4. Clique em **Próximo**.
+4. Clique em **Avançar**.
 
 ### <a name="wizard-page-2---application-name"></a>Página 2 do assistente-nome do aplicativo
 
@@ -97,7 +98,7 @@ Como opção, você pode inserir o caminho do aplicativo. Para especial um camin
 >[!NOTE]
 >O caminho do aplicativo não pode incluir um caminho que resolva um link simbólico.
 
-A URL deve estar em conformidade com a [RFC 1738](https://tools.ietf.org/html/rfc1738), na forma de `http[s]://<hostname\>:<port\>/<url-path>` . Você pode usar um caractere curinga, `‘*'` , para `<hostname>` e/ou `<port>` , por exemplo `https://training.\*/, https://\*.\*` ,, mas o curinga não pode indicar uma subcadeia de caracteres de `<hostname>` ou `<port>` .
+A URL deve estar em conformidade com a  [RFC 1738](https://tools.ietf.org/html/rfc1738), na forma de `http[s]://<hostname\>:<port\>/<url-path>` . Você pode usar um caractere curinga, `‘*'` , para `<hostname>` e/ou `<port>` , por exemplo `https://training.\*/, https://\*.\*` ,, mas o curinga não pode indicar uma subcadeia de caracteres de `<hostname>` ou `<port>` .
 
 Em outras palavras, nem `https://my\*site/` nem `https://\*training\*/` é válido.
 
@@ -109,7 +110,7 @@ Opcionalmente, você pode selecionar **incluir subdiretórios e arquivos** para 
 
 2. Se você selecionar **Somente aplicativos com este nome executável**, especifique o nome de um executável que termine com a extensão de nome de arquivo .exe.
 
-3. Clique em **Próximo**.
+3. Clique em **Avançar**.
 
 ### <a name="wizard-page-3---ip-addresses"></a>Página 3-endereços IP do assistente
 
@@ -121,13 +122,13 @@ Na terceira página do assistente de política de QoS, você pode especificar as
 
 Se você selecionar **Somente para o seguinte endereço IP de origem** ou **Somente para o seguinte endereço IP de destino**, será necessário digitar uma das seguintes opções:
 
-- Um endereço IPv4, como`192.168.1.1`
+- Um endereço IPv4, como `192.168.1.1`
 
-- Um prefixo de endereço IPv4 usando a notação de comprimento de prefixo de rede, como`192.168.1.0/24`
+- Um prefixo de endereço IPv4 usando a notação de comprimento de prefixo de rede, como `192.168.1.0/24`
 
-- Um endereço IPv6, como`3ffe:ffff::1`
+- Um endereço IPv6, como `3ffe:ffff::1`
 
-- Um prefixo de endereço IPv6, como`3ffe:ffff::/48`
+- Um prefixo de endereço IPv6, como `3ffe:ffff::/48`
 
 Se você selecionar ambos **apenas para o endereço IP de origem a seguir** e **apenas para o endereço IP de destino a seguir**, os endereços ou prefixos de endereço deverão ser baseados em IPv4 ou IPv6.
 
@@ -145,7 +146,7 @@ Isso é verdadeiro porque o endereço IP de origem é o endereço do servidor HT
 
 4. Se você selecionou **apenas para o endereço IP de destino a seguir**, especifique um endereço IPv4 ou IPv6 ou prefixo que corresponda ao tipo de endereço ou prefixo especificado para o endereço de origem.
 
-5.  Clique em **Próximo**.
+5.  Clique em **Avançar**.
 
 ### <a name="wizard-page-4---protocols-and-ports"></a>Página 4 do assistente-protocolos e portas
 
@@ -234,9 +235,9 @@ As configurações de QoS avançadas fornecem controles adicionais para que os a
 
 #### <a name="to-configure-advanced-qos-settings"></a>Para definir configurações de QoS avançadas
 
-1.  Clique em **configuração do computador**e, em seguida, clique em **configurações do Windows em política de grupo**.
+1.  Clique em **configuração do computador** e, em seguida, clique em **configurações do Windows em política de grupo**.
 
-2.  Clique com o botão direito do mouse em **política de QoS**e clique em **configurações de QoS avançadas**.
+2.  Clique com o botão direito do mouse em **política de QoS** e clique em **configurações de QoS avançadas**.
 
      A figura a seguir mostra as duas guias configurações avançadas de QoS: **tráfego TCP de entrada** e **substituição de marcação DSCP**.
 
@@ -262,9 +263,9 @@ O tamanho real da janela pode ser um valor igual ou menor que o máximo, depende
 
 ###### <a name="to-set-the-tcp-receive-side-window"></a>Para definir a janela do lado de recebimento TCP
 
-1. Em Editor de Objeto de Política de Grupo, clique em **política de computador local**, clique em **configurações do Windows**, clique com o botão direito do mouse em política de **QoS**e clique em **configurações de QoS avançadas**.
+1. Em Editor de Objeto de Política de Grupo, clique em **política de computador local**, clique em **configurações do Windows**, clique com o botão direito do mouse em política de **QoS** e clique em **configurações de QoS avançadas**.
 
-2. Em **TCP recebendo taxa de transferência**, selecione **Configurar taxa de transferência de recebimento de TCP**e, em seguida, selecione o nível de taxa de transferência desejado.
+2. Em **TCP recebendo taxa de transferência**, selecione **Configurar taxa de transferência de recebimento de TCP** e, em seguida, selecione o nível de taxa de transferência desejado.
 
 3.  Vincule o GPO à UO.
 

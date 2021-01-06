@@ -1,16 +1,17 @@
 ---
 title: Novidades na rede
 description: Este tópico fornece informações de visão geral sobre os novos recursos e as tecnologias de rede no Windows Server 2016
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
 author: dcuomo
 ms.author: dacuo
-ms.openlocfilehash: 69e1fee1a8ae0ff1c878c64790650290b4804351
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 45654f1c75705bf4b1cc8b773527c37f11fb7f72
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993815"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949222"
 ---
 # <a name="whats-new-in-networking"></a>Novidades na rede
 
@@ -47,7 +48,7 @@ A seguir estão as tecnologias de infraestrutura de SDN novas ou aprimoradas.
 
     -   **Gateway de Ras**. Você pode usar o gateway de RAS para roteamento de tráfego entre redes virtuais e redes físicas, incluindo conexões VPN site a site de seu datacenter de nuvem para sites remotos de seus locatários. Especificamente, você pode implantar protocolo IKE a IKEv2 (redes virtuais privadas) site a site (VPNs), VPN de camada 3 (L3) e gateways de túnel de roteamento genérico (GRE). Além disso, agora há suporte para pools de gateway e redundância M + N de gateways; e Border Gateway Protocol (BGP) com recursos de refletor de rota fornecem roteamento dinâmico entre redes para todos os cenários de gateway (VPN IKEv2, VPN GRE e VPN L3).
 
-        Para obter mais informações, consulte [What ' s New in RAS gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS gateway for Sdn](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
+        Para obter mais informações, consulte  [What ' s New in RAS gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS gateway for Sdn](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 
     - **Load Balancer de software (SLB) e conversão de endereços de rede (NAT)**. O balanceador de carga da camada 4-Sul e leste-oeste e o NAT aprimoram a taxa de transferência ao dar suporte ao retorno direto de servidor, com o qual o tráfego de rede de retorno pode ignorar o multiplexador de balanceamento de carga.
        Para obter mais informações, consulte [balanceamento de carga de Software &#40;&#41; SLB para Sdn](./sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
@@ -116,7 +117,7 @@ A seguir estão as tecnologias de servidor DNS novas ou aprimoradas.
 
 Para obter mais informações, consulte [o que há de novo no servidor DNS no Windows server 2016](dns/What-s-New-in-DNS-Server.md)
 
-## <a name="gre-tunneling"></a><a name="bkmk_GRE"></a>Túnel de GRE
+## <a name="gre-tunneling"></a><a name="bkmk_GRE"></a>Túnel GRE
 O gateway de RAS agora dá suporte a túneis GRE (encapsulamento de roteamento genérico) de alta disponibilidade para conexões site a site e a redundância M + N de gateways. GRE é um protocolo de túnel leve que pode encapsular uma ampla variedade de protocolos de camada de rede em links de ponto a ponto virtuais por meio de uma ligação entre redes de protocolo de Internet.
 
 Para obter mais informações, consulte [túnel GRE no Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).

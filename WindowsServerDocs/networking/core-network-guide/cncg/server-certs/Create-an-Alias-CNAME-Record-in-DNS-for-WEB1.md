@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9a966ab2883e22173ecf3e64e87d2a4b7a9c57d2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: c95efd5d9f0cbe7bbdba79d0971581f2c09ac53e
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995588"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950182"
 ---
 # <a name="create-an-alias-cname-record-in-dns-for-web1"></a>Criar um \( registro CNAME \) de alias no DNS para WEB1
 
@@ -32,11 +33,11 @@ Para executar esse procedimento, você deve ser membro de **Admins**. do domíni
 
 1.  No DC1, no Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **DNS**. O MMC (console de gerenciamento Microsoft) do Gerenciador de DNS é aberto.
 
-2.  Na árvore de console, clique duas vezes em **zonas de pesquisa direta**, clique com o botão direito do mouse na zona de pesquisa direta na qual você deseja adicionar o registro de recurso de alias e clique em **novo alias \( CNAME \) **. A caixa de diálogo **novo registro de recurso** é aberta.
+2.  Na árvore de console, clique duas vezes em **zonas de pesquisa direta**, clique com o botão direito do mouse na zona de pesquisa direta na qual você deseja adicionar o registro de recurso de alias e clique em **novo alias \( CNAME \)**. A caixa de diálogo **novo registro de recurso** é aberta.
 
 3.  Em **nome do alias**, digite o nome do alias **PKI**.
 
-4.  Quando você digita um valor para **nome de alias**, o ** \( FQDN \) automático do nome de domínio totalmente qualificado** é preenchido automaticamente na caixa de diálogo. Por exemplo, se o nome do alias for "PKI" e seu domínio for corp.contoso.com, o valor **PKI.Corp.contoso.com** será preenchido automaticamente para você.
+4.  Quando você digita um valor para **nome de alias**, o **\( FQDN \) automático do nome de domínio totalmente qualificado** é preenchido automaticamente na caixa de diálogo. Por exemplo, se o nome do alias for "PKI" e seu domínio for corp.contoso.com, o valor **PKI.Corp.contoso.com** será preenchido automaticamente para você.
 
 5.  Em **FQDN do nome de domínio totalmente qualificado \( para o host de \) destino**, digite o FQDN do seu servidor Web. Por exemplo, se o seu servidor Web for denominado WEB1 e seu domínio for corp.contoso.com, digite **WEB1.Corp.contoso.com**.
 

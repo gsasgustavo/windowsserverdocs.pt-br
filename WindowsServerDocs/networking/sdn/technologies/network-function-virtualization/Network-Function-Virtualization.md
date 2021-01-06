@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 33d0c9bcde79b6f1fd74de03abfce3fca26a378f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: b5b2b4bb93a9d90e9c74f8310430ef3e7d826f1d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991311"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949082"
 ---
 # <a name="network-function-virtualization"></a>Virtualização de função de rede
 
@@ -73,7 +74,7 @@ O Marketplace para funções de rede virtualizadas está crescendo rapidamente. 
 
     -   Roteadores
 
-    -   Opções
+    -   Comutadores
 
     -   NAT
 

@@ -6,18 +6,19 @@ ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: d9bba302c80a810e44c41079d7041b49741fd5b4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 6acfb6cbd3a8eaa528dd7457d5de008209b99ad3
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995247"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948392"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>Entrar em contato com a equipe de rede na nuvem e Datacenter
 
 > Aplica-se a: Windows Server 2016
 
-As soluções de redes de **contêiner** e ** \( Sdn \) de rede definidas pelo software** da Microsoft são criadas pelo datacenter e pela equipe de rede de nuvem. Use esta página para estar em contato com a equipe – para fazer perguntas, fornecer comentários, relatar bugs ou fazer solicitações de recursos.
+As soluções de redes de **contêiner** e **\( Sdn \) de rede definidas pelo software** da Microsoft são criadas pelo datacenter e pela equipe de rede de nuvem. Use esta página para estar em contato com a equipe – para fazer perguntas, fornecer comentários, relatar bugs ou fazer solicitações de recursos.
 
 Há muitos caminhos para entrar em contato com as equipes da Microsoft e, embora possamos fazer o melhor na equipe de SDN para seguir todas as avenidas usadas pela nossa comunidade, aqui está uma lista de fóruns que tendem a ser os mais ativos. *Esses são os principais recursos para nossos usuários e, por isso, eles são os caminhos que vimos mais próximos.*
 
@@ -38,7 +39,7 @@ Nossa [documentação de rede de contêiner](/virtualization/windowscontainers/m
 >
 > *Em geral, se você encontrar um tópico sobre Microsoft Docs que Spark uma pergunta ou deixar que você queira mais, basta deixar um comentário nessa página para compartilhar seus comentários com a equipe da Microsoft que pode ajudar.*
 
-## <a name="container-specific-forums"></a>Fóruns específicos do contêiner
+## <a name="container-specific-forums"></a>Fóruns de Container-Specific
 Sinta-se à vontade para usar qualquer Avenida nessa página para fornecer comentários relacionados aos contêineres e à rede de contêineres. No entanto, se você estiver procurando os fóruns principais da Microsoft para a comunidade de contêineres especificamente, consulte o seguinte:
 - [User Voice](https://windowsserver.uservoice.com/forums/304624-containers) -melhor para *solicitações de recursos*
 - [GitHub (repositório de virtualização)](https://github.com/Microsoft/Virtualization-Documentation) -melhor para procurar erros de *relatório* e *ajuda de solução de problemas*

@@ -2,16 +2,17 @@
 title: Novidades no DHCP
 description: Este tópico fornece uma visão geral dos novos recursos do protocolo DHCP no Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 5dee105eaf14c92145e1fe70fe4627d37b2baa82
-ms.sourcegitcommit: b0c73df80d7b4ff0c332d77e0cc07f7e6e061600
+ms.date: 12/09/2020
+ms.openlocfilehash: 19d36c075ca6059e9fb39556d89322f222139359
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925561"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949902"
 ---
 # <a name="whats-new-in-dhcp"></a>Novidades no DHCP
 
@@ -56,10 +57,10 @@ O suporte a NAP foi introduzido na função de servidor DHCP com o Windows Serve
 
 |Sistema operacional|Suporte a NAP|
 |--------------------|---------------|
-| Windows Server 2008 |Com suporte|
-| Windows Server 2008 R2 |Com suporte|
-| Windows Server 2012 |Com suporte|
-| Windows Server 2012 R2 |Com suporte|
+| Windows Server 2008 |Suportado|
+| Windows Server 2008 R2 |Suportado|
+| Windows Server 2012 |Suportado|
+| Windows Server 2012 R2 |Suportado|
 | Windows Server 2016|Sem suporte|
 
 Em uma implantação de NAP, um servidor DHCP que executa um sistema operacional que dá suporte a NAP pode funcionar como um ponto de imposição de NAP para o método de imposição de DHCP NAP. Para obter mais informações sobre o DHCP em NAP, consulte [lista de verificação: Implementando um design de imposição de DHCP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd314186(v=ws.10)).

@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 94d45dd04708d58d880f3dcbc7a65e9586e02a29
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 7b9fdb3e4bb6404e129a97222be9aa3e8adbf614
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994408"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949422"
 ---
 # <a name="hyper-v-network-virtualization-technical-details-in-windows-server-2016"></a>Detalhes técnicos da virtualização de rede Hyper-V no Windows Server 2016
 
@@ -107,7 +108,7 @@ Na rede padrão do Windows, um administrador pode criar rotas estáticas e atrib
 Como o HNV pressupõe uma topologia em estrela, o roteador distribuído HNV atua como um gateway padrão único para todo o tráfego que está indo entre sub-redes virtuais que fazem parte da mesma rede VSID. O endereço usado como padrão do gateway padrão é o endereço IP mais baixo no VSID e é atribuído ao roteador distribuído HNV. Esse roteador distribuído permite uma maneira muito eficiente para todo o tráfego dentro de uma rede VSID ser roteado adequadamente porque cada host pode rotear diretamente o tráfego para o host apropriado sem precisar de um intermediário.  Isso é particularmente verdadeiro quando duas máquinas virtuais na mesma Rede VM, mas em diferentes Sub-redes Virtuais estão no mesmo host físico.  Como você verá mais adiante nesta seção, o pacote nunca terá que sair do host físico.
 
 ### <a name="routing-between-pa-subnets"></a>Roteamento entre sub-redes PA
-Ao contrário do HNVv1 que alocou um endereço IP PA para cada sub-rede virtual (VSID), o HNVv2 agora usa um endereço IP PA por membro da equipe NIC de comutador incorporado (conjunto). A implantação padrão assume uma equipe de duas NICs e atribui dois endereços IP PA por host. Um único host tem IPs PA atribuídos da mesma sub-rede lógica do PA (provedor) na mesma VLAN. Duas VMs de locatário na mesma sub-rede virtual podem realmente estar localizadas em dois hosts diferentes que estão conectados a duas sub-redes lógicas de provedor diferentes. O HNV construirá os cabeçalhos IP externos para o pacote encapsulado com base no mapeamento CA-PA. No entanto, ele depende da pilha de TCP/IP do host para ARP para o gateway PA padrão e cria os cabeçalhos de Ethernet externos com base na resposta ARP. Normalmente, essa resposta ARP vem da interface SVI no comutador físico ou do roteador L3 onde o host está conectado. O HNV, portanto, depende do roteador L3 para rotear os pacotes encapsulados entre sub-redes lógicas/VLANs do provedor.
+Ao contrário do HNVv1 que alocou um endereço IP PA para cada sub-rede virtual (VSID), o HNVv2 agora usa um endereço IP PA por membro da equipe NIC de Switch-Embedded (conjunto). A implantação padrão assume uma equipe de duas NICs e atribui dois endereços IP PA por host. Um único host tem IPs PA atribuídos da mesma sub-rede lógica do PA (provedor) na mesma VLAN. Duas VMs de locatário na mesma sub-rede virtual podem realmente estar localizadas em dois hosts diferentes que estão conectados a duas sub-redes lógicas de provedor diferentes. O HNV construirá os cabeçalhos IP externos para o pacote encapsulado com base no mapeamento CA-PA. No entanto, ele depende da pilha de TCP/IP do host para ARP para o gateway PA padrão e cria os cabeçalhos de Ethernet externos com base na resposta ARP. Normalmente, essa resposta ARP vem da interface SVI no comutador físico ou do roteador L3 onde o host está conectado. O HNV, portanto, depende do roteador L3 para rotear os pacotes encapsulados entre sub-redes lógicas/VLANs do provedor.
 
 ### <a name="routing-outside-a-virtual-network"></a>Roteamento Fora de uma Rede Virtual
 A maioria das implantações de cliente exigirá a comunicação do ambiente de HNV com recursos que não fazem parte do ambiente de HNV. São necessários gateways de Virtualização de Rede para permitir a comunicação entre os dois ambientes. As infraestruturas que exigem um gateway HNV incluem nuvem privada e nuvem híbrida. Basicamente, os gateways de HNV são necessários para o roteamento de camada 3 entre redes internas e externas (incluindo NAT) ou entre diferentes sites e/ou nuvens (privadas ou públicas) que usam um túnel de VPN IPSec ou GRE.
@@ -231,7 +232,7 @@ Um processo semelhante para o tráfego entre as máquinas virtuais **Web** e **S
 Os endereços separados (CAs e PAs), as configurações de política dos hosts Hyper-V e a conversão de endereço entre a CA e o PA para o tráfego de máquina virtual de entrada e saída isolam esses conjuntos de servidores usando a chave NVGRE ou VLXAN VNID. Além disso, os mapeamentos de virtualização e a conversão separam a arquitetura da rede virtual da infraestrutura de rede da rede física. Embora os servidores **SQL** e **Web** da Contoso e **SQL** e **Web** da Fabrikam residam em suas próprias sub-redes IP do CA (10.1.1/24), sua implantação física ocorre em dois hosts em sub-redes PA diferentes, 192.168.1/24 e 192.168.2/24, respectivamente. A implicação é que o provisionamento de máquinas virtuais entre sub-redes e a migração ao vivo se tornam possíveis com a HNV.
 
 ## <a name="hyper-v-network-virtualization-architecture"></a>Arquitetura da Virtualização de Rede Hyper-V
-No Windows Server 2016, o HNVv2 é implementado usando a plataforma de filtragem virtual do Azure (VFP), que é uma extensão de filtragem de NDIS dentro do comutador do Hyper-V. O principal conceito de VFP é o de um mecanismo de fluxo de ação de correspondência com uma API interna exposta ao agente de host SDN para programação de diretiva de rede. O agente de host SDN em si recebe a diretiva de rede do controlador de rede nos canais de comunicação OVSDB e WCF SouthBound. Não é apenas a política de rede virtual (por exemplo, mapeamento CA-PA) programada usando o VFP, mas políticas adicionais, como ACLs, QoS e assim por diante.
+No Windows Server 2016, o HNVv2 é implementado usando a plataforma de filtragem virtual do Azure (VFP), que é uma extensão de filtragem de NDIS dentro do comutador do Hyper-V. O principal conceito de VFP é o de um mecanismo de fluxo de Match-Action com uma API interna exposta ao agente de host SDN para programação de diretiva de rede. O agente de host SDN em si recebe a diretiva de rede do controlador de rede nos canais de comunicação OVSDB e WCF SouthBound. Não é apenas a política de rede virtual (por exemplo, mapeamento CA-PA) programada usando o VFP, mas políticas adicionais, como ACLs, QoS e assim por diante.
 
 A hierarquia de objetos para o vSwitch e a extensão de encaminhamento VFP é a seguinte:
 
@@ -284,12 +285,12 @@ Figura 9: Arquitetura de HNV
 ## <a name="summary"></a>Resumo
 Os datacenters baseados em nuvem podem oferecer diversos benefícios, como escalabilidade aprimorada e melhor utilização de recursos. Para aproveitar esses possíveis benefícios, é necessária uma tecnologia que basicamente trate dos problemas de escalabilidade multilocatário em um ambiente dinâmico. A HNV foi projetada para lidar com essas questões e também para aprimorar a eficiência operacional do datacenter, separando a topologia da rede virtual para a topologia da rede física. Com base em um padrão existente, o HNV é executado no datacenter atual e opera com a infraestrutura existente do VXLAN. Os clientes com HNV agora podem consolidar seus data centers em uma nuvem privada ou estender diretamente seus data centers para um ambiente de provedor de servidor de hospedagem com uma nuvem híbrida.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Veja também
 Para saber mais sobre o HNVv2, consulte os links a seguir:
 
 
 |       Tipo de conteúdo       |                                                                                                                                              Referências                                                                                                                                              |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Recursos da comunidade**  |                                                                -   [Blog da arquitetura de nuvem privada](https://blogs.technet.com/b/privatecloud)<br />-Faça perguntas:[cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)                                                                |
+| **Recursos da comunidade**  |                                                                -   [Blog da arquitetura de nuvem privada](https://blogs.technet.com/b/privatecloud)<br />-Faça perguntas: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)                                                                |
 |         **RFC**          |                                                                   -   [RFC de rascunho do NVGRE](https://www.ietf.org/id/draft-sridharan-virtualization-nvgre-07.txt)<br />-   [VXLAN-RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                    |
 | **Tecnologias relacionadas** | -Para obter detalhes técnicos de virtualização de rede Hyper-V no Windows Server 2012 R2, consulte [detalhes técnicos da virtualização de rede do Hyper-v](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134174(v=ws.11))<br />-   [Controlador de rede](../../../sdn/technologies/network-controller/Network-Controller.md) |

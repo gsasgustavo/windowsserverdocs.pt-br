@@ -7,12 +7,12 @@ ms.date: 04/11/2018
 ms.topic: article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.author: billmath
-ms.openlocfilehash: 6c1638ee628491371409f15d7450df7b77872f7d
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 5fcc31c0b0f0482a545d17135603efaa97e174d7
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046134"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948522"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Atualizando para o AD FS no Windows Server 2016 com SQL Server
 
@@ -35,7 +35,7 @@ Um Windows Server 2016 AD FS Server pode ser adicionado a um farm do Windows Ser
 
 -   Como resultado do recurso de farm misto, AD FS as organizações do Windows Server 2012 R2 que procuram atualizar para o Windows Server 2016 não precisarão implantar um farm totalmente novo, exportar e importar dados de configuração.  Em vez disso, eles podem adicionar nós do Windows Server 2016 a um farm existente enquanto estiverem online e incorrerem apenas no tempo de inatividade relativamente curto envolvido no FBL raise.
 
-Lembre-se de que, embora no modo de farm misto, o farm de AD FS não é capaz de quaisquer novos recursos ou funcionalidades introduzidos no AD FS no Windows Server 2016.  Isso significa que as organizações que desejam experimentar novos recursos não podem fazer isso até que o FBL seja gerado.  Portanto, se sua organização estiver procurando testar os novos recursos antes de rasing o FBL, será necessário implantar um farm separado para fazer isso.
+Lembre-se de que, embora no modo de farm misto, o farm de AD FS não é capaz de quaisquer novos recursos ou funcionalidades introduzidos no AD FS no Windows Server 2016.  Isso significa que as organizações que desejam experimentar novos recursos não podem fazer isso até que o FBL seja gerado.  Portanto, se sua organização estiver procurando testar os novos recursos antes de gerar o FBL, será necessário implantar um farm separado para fazer isso.
 
 O restante do documento is fornece as etapas para adicionar um servidor de Federação do Windows Server 2016 a um ambiente do Windows Server 2012 R2 e, em seguida, aumentar o FBL para o Windows Server 2016.  Essas etapas foram executadas em um ambiente de teste descrito pelo diagrama arquitetônico abaixo.
 
@@ -52,10 +52,10 @@ Para o diagrama arquitetônico a seguir mostra a configuração que foi usada pa
 1.  Usando Gerenciador do Servidor instalar a função Serviços de Federação do Active Directory (AD FS) no Windows Server 2016
 
 2.  Usando o assistente de configuração do AD FS, ingresse o novo servidor do Windows Server 2016 no farm de AD FS existente.  Na tela de **boas-vindas** , clique em **Avançar**.
- ![Ingressar no farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
+![Captura de tela que mostra as telas de boas-vindas no assistente de configuração do AD FS.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
 3.  Na tela **conectar ao Active Directory Domain Services** , s **pecificar uma conta de administrador** com permissões para executar a configuração dos serviços de Federação e clique em **Avançar**.
 4.  Na tela **especificar farm** , insira o nome do SQL Server e da instância e clique em **Avançar**.
-![Ingressar no farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
+![Instantâneo que mostra a tela especificar farm no assistente de configuração de AD FS.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  Na tela **especificar certificado SSL** , especifique o certificado e clique em **Avançar**.
 ![Ingressar no farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  Na tela **especificar conta de serviço** , especifique a conta de serviço e clique em **Avançar**.
@@ -70,7 +70,7 @@ Para o diagrama arquitetônico a seguir mostra a configuração que foi usada pa
 >Você não precisa definir o servidor de AD FS primário usando a função Set-AdfsSyncProperties ao usar o SQL como o banco de dados.  Isso ocorre porque todos os nós são considerados primários nessa configuração.
 
 1.  No Windows Server 2012 R2 AD FS Server em Gerenciador do Servidor use **remover funções e recursos** em **gerenciar**.
-![Remover servidor](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
+![Captura de tela que realça a opção de menu remover funções e recursos.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  Na tela **Antes de começar**, clique em **Avançar**.
 3.  Na tela de **seleção de servidor** , clique em **Avançar**.
 4.  Na tela **funções de servidor** , remova a marca de seleção ao lado de **serviços de Federação do Active Directory (AD FS)** e clique em **Avançar**.
@@ -91,8 +91,8 @@ Antes desta etapa, você precisa garantir que forestprep e DomainPrep tenham sid
 2. Quando solicitado, digite **Y**.  Isso começará a gerar o nível.  Quando isso for concluído, o FBL será gerado com êxito.
 ![Concluir atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. Agora, se você for para AD FS Management, verá os novos nós que foram adicionados para AD FS no Windows Server 2016
-4. Da mesma forma, você pode usar o cmdlt do PowerShell: Get-AdfsFarmInformation para mostrar o FBL atual.
-![Concluir atualização](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
+4. Da mesma forma, você pode usar o cmdlet do PowerShell: Get-AdfsFarmInformation para mostrar a você o FBL atual.
+![Captura de tela que mostra como usar o cmdlet Get-AdfsFarmInformation para mostrar o F B L atual.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
 
 #### <a name="upgrade-the-configuration-version-of-existing-wap-servers"></a>Atualizar a versão de configuração de servidores WAP existentes
 1. Em cada proxy de aplicativo Web, reconfigure o WAP executando o seguinte comando do PowerShell em uma janela com privilégios elevados:
@@ -100,11 +100,11 @@ Antes desta etapa, você precisa garantir que forestprep e DomainPrep tenham sid
     $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
     Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred
     ```
-2. Remova os servidores antigos do cluster e mantenha somente os servidores WAP que executam a versão mais recente do servidor, que foram reconfigurados acima, executando o cmdlet do PowerShell a seguir.
+2. Remova os servidores antigos do cluster e mantenha somente os servidores WAP que executam a versão mais recente do servidor, que foram reconfigurados acima, executando o comando do PowerShell a seguir.
     ```powershell
     Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
     ```
-3. Verifique a configuração de WAP executando o Get-WebApplicationProxyConfiguration commmandlet. O ConnectedServersName refletirá a execução do servidor do comando anterior.
+3. Verifique a configuração de WAP executando o Get-WebApplicationProxyConfiguration comando. O ConnectedServersName refletirá a execução do servidor do comando anterior.
     ```powershell
     Get-WebApplicationProxyConfiguration
     ```

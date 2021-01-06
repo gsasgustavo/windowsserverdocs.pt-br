@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4ee5416bfe416759bc4a190575eb63534ec9b76d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 3c411dc560f8fed2d5138bcb8acc68a9b5f03567
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971793"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948722"
 ---
 # <a name="edit-a-dns-zone"></a>Editar uma zona DNS
 
@@ -43,7 +44,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
     ![Editar zona DNS](../../media/Edit-a-DNS-Zone/ipam_EditZone_02.jpg)
 
-6.  A caixa de diálogo **Editar zona DNS** é aberta com a página **geral** selecionada. Se necessário, edite as propriedades de zona geral: **servidor DNS**, **categoria de zona**e **tipo de zona**e, em seguida, clique em **aplicar** ou, se as edições estiverem concluídas, **OK**.
+6.  A caixa de diálogo **Editar zona DNS** é aberta com a página **geral** selecionada. Se necessário, edite as propriedades de zona geral: **servidor DNS**, **categoria de zona** e **tipo de zona** e, em seguida, clique em **aplicar** ou, se as edições estiverem concluídas, **OK**.
 
     ![Editar propriedades da zona e salvar](../../media/Edit-a-DNS-Zone/ipam_EditZone_03a.jpg)
 
@@ -51,7 +52,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
     ![Editar propriedades avançadas de zona](../../media/Edit-a-DNS-Zone/ipam_EditZone_04a.jpg)
 
-8.  Se necessário, selecione os nomes de página de propriedades de zona adicionais (servidores de nomes, SOA, transferências de zona), faça suas edições e clique em **aplicar** ou em **OK**. Para revisar todas as edições de zona, clique em **Resumo**e em **OK**.
+8.  Se necessário, selecione os nomes de página de propriedades de zona adicionais (servidores de nomes, SOA, transferências de zona), faça suas edições e clique em **aplicar** ou em **OK**. Para revisar todas as edições de zona, clique em **Resumo** e em **OK**.
 
 ## <a name="see-also"></a>Consulte Também
 Gerenciamento de zona [DNS](DNS-Zone-Management.md) 

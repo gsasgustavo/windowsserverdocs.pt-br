@@ -2,18 +2,18 @@
 title: Implantar espaços de armazenamento diretos
 manager: eldenc
 ms.author: stevenek
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 12/09/2020
 description: Instruções passo a passo para implantar o armazenamento definido pelo software com o Espaços de Armazenamento Diretos no Windows Server como infraestrutura de hiperconvergente ou uma infraestrutura convergida (também conhecida como desagregada).
 ms.localizationpriority: medium
-ms.openlocfilehash: 649d9154e08dcde0752447d2b8a290dce9dc15d2
-ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
+ms.openlocfilehash: 89efc762028fa8a77e8026b0826f5503c3d03478
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96997843"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948582"
 ---
 # <a name="deploy-storage-spaces-direct"></a>Implantar espaços de armazenamento diretos
 
@@ -386,7 +386,7 @@ Depois de implantar o servidor de arquivos clusterizado, é recomendável testar
 
 ## <a name="additional-references"></a>Referências adicionais
 
--   [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+-   [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 -   [Noções básicas sobre o cache nos Espaços de Armazenamento Diretos](understand-the-cache.md)
 -   [Planejamento de volumes nos Espaços de Armazenamento Diretos](plan-volumes.md)
 -   [Tolerância a falhas de espaços de armazenamento](storage-spaces-fault-tolerance.md)

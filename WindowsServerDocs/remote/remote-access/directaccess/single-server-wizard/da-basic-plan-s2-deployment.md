@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 planejar a implantação básica do DirectAccess
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba como planejar as configurações para o assistente de Introdução.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 832e9eb7621a6ca17edc4fcd8c7450ca558159e1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 3f4d41feb2a41226676c12de4cd0e72966ae7077
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970303"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948242"
 ---
 # <a name="step-2-plan-the-basic-directaccess-deployment"></a>Etapa 2 planejar a implantação básica do DirectAccess
 

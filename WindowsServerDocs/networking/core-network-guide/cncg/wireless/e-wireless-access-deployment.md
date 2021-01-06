@@ -1,17 +1,18 @@
 ---
 title: Implantação de acesso sem fio
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar o acesso sem fio autenticado 802.1 X com base em senha"
+description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
 manager: brianlic
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 32e54b5129bf2215758adf35bd23c4d99ab2d8e9
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 7904476686c8e929876cf2ad574c8e09f4f351f1
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996970"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949152"
 ---
 # <a name="wireless-access-deployment"></a>Implantação de acesso sem fio
 
@@ -62,7 +63,7 @@ Este procedimento enumera os itens normalmente configurados em um AP sem fio. Os
 
 - **Criptografia**. Especifique \- o WPA2 Enterprise \( preferencial \) ou \- o WPA Enterprise e a \( codificação de \) criptografia TKIP ou preferencial AES, dependendo de quais versões são suportadas pelos adaptadores de rede do computador cliente sem fio.
 
-- **Endereço IP do AP sem fio \( estático \) **. Em cada ponto de acesso, configure um endereço IP estático exclusivo que esteja dentro do intervalo de exclusão do escopo do DHCP para a sub-rede. O uso de um endereço excluído da atribuição por DHCP impede que o servidor DHCP atribua o mesmo endereço IP a um computador ou outro dispositivo.
+- **Endereço IP do AP sem fio \( estático \)**. Em cada ponto de acesso, configure um endereço IP estático exclusivo que esteja dentro do intervalo de exclusão do escopo do DHCP para a sub-rede. O uso de um endereço excluído da atribuição por DHCP impede que o servidor DHCP atribua o mesmo endereço IP a um computador ou outro dispositivo.
 
 - **Máscara de sub-rede**. Configure isso para corresponder às configurações de máscara de sub-rede da LAN à qual você conectou o AP sem fio.
 
@@ -103,7 +104,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 1. Clique em **Iniciar**, **Ferramentas Administrativas** e em **Usuários e Computadores do Active Directory**. O snap-in Active Directory usuários e computadores \- é aberto. Caso ainda não esteja selecionado, clique no nó do seu domínio. Por exemplo, se o seu domínio for exemplo.com, clique em **exemplo.com**.
 
-2. No painel de detalhes, \- clique com o botão direito do mouse na pasta na qual você deseja adicionar um novo grupo \( , por exemplo, clique com o botão direito do mouse em \- **usuários** \) , aponte para **novo**e clique em **grupo**.
+2. No painel de detalhes, \- clique com o botão direito do mouse na pasta na qual você deseja adicionar um novo grupo \( , por exemplo, clique com o botão direito do mouse em \- **usuários** \) , aponte para **novo** e clique em **grupo**.
 
 3. Em **Novo Objeto – Grupo**, em **Nome do grupo**, digite o nome do novo grupo. Por exemplo, digite **grupo sem fio**.
 
@@ -121,7 +122,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 Se você precisar de mais de um grupo de segurança para usuários sem fio, repita essas etapas para criar grupos de usuários sem fio adicionais. Posteriormente, você pode criar políticas de rede individuais no NPS para aplicar diferentes condições e restrições a cada grupo, fornecendo a eles permissões de acesso e regras de conectividade diferentes.
 
-### <a name="add-users-to-the-wireless-users-security-group"></a><a name="bkmk_addusers"></a>Adicionar usuários ao grupo de segurança usuários sem fio
+### <a name="add-users-to-the-wireless-users-security-group"></a><a name="bkmk_addusers"></a> Adicionar usuários ao grupo de segurança usuários sem fio
 
 Você pode usar este procedimento para adicionar um usuário, computador ou grupo ao seu grupo de segurança sem fio no snap-in Active Directory usuários e computadores console de gerenciamento Microsoft \( MMC \) \- .
 
@@ -135,7 +136,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 3. No painel de detalhes, clique com o botão direito \- do mouse no grupo de segurança sem fio e clique em **Propriedades**. A caixa de diálogo **Propriedades** do grupo de segurança é aberta.
 
-4. Na guia **Membros** , clique em **Adicionar**e, em seguida, conclua um dos procedimentos a seguir para adicionar um computador ou adicionar um usuário ou grupo.
+4. Na guia **Membros** , clique em **Adicionar** e, em seguida, conclua um dos procedimentos a seguir para adicionar um computador ou adicionar um usuário ou grupo.
 
 ##### <a name="to-add-a-user-or-group"></a>Para adicionar um usuário ou grupo
 
@@ -147,7 +148,7 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 1. Clique em **Tipos de Objeto**. A caixa de diálogo **tipos de objeto** é aberta.
 
-2. Em **tipos de objeto**, selecione **computadores**e clique em **OK**.
+2. Em **tipos de objeto**, selecione **computadores** e clique em **OK**.
 
 3. Em **Inserir os nomes de objeto a serem selecionados**, digite o nome do computador que você deseja adicionar e clique em **OK**.
 
@@ -171,11 +172,11 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 #### <a name="to-open-or-add-and-open-a-group-policy-object"></a>Para abrir ou adicionar e abrir um objeto Política de Grupo
 
-1. No controlador de domínio, clique em **Iniciar**, clique em **Ferramentas administrativas do Windows**e, em seguida, clique em gerenciamento de **política de grupo**. O Console de Gerenciamento de Política de Grupo é aberto.
+1. No controlador de domínio, clique em **Iniciar**, clique em **Ferramentas administrativas do Windows** e, em seguida, clique em gerenciamento de **política de grupo**. O Console de Gerenciamento de Política de Grupo é aberto.
 
 2. No painel esquerdo, clique duas vezes \- em sua floresta. Por exemplo, clique duas vezes \- em **floresta: example.com**.
 
-3. No painel esquerdo, clique duas vezes \- em **domínios**e, em seguida, clique duas vezes \- no domínio para o qual você deseja gerenciar um objeto de política de grupo. Por exemplo, clique duas vezes \- em **example.com**.
+3. No painel esquerdo, clique duas vezes \- em **domínios** e, em seguida, clique duas vezes \- no domínio para o qual você deseja gerenciar um objeto de política de grupo. Por exemplo, clique duas vezes \- em **example.com**.
 
 4. Realize um dos seguintes procedimentos:
 
@@ -194,7 +195,7 @@ Na próxima seção, você usará Editor de Gerenciamento de Política de Grupo 
 Este procedimento descreve como ativar as políticas IEEE 802,11 de rede sem fio padrão \( \) usando o editor de gerenciamento de política de grupo \( GPME \) .
 
 >[!NOTE]
->Depois de ativar a versão do **Windows Vista e versões posteriores** das políticas IEEE 802,11 da rede sem fio \( \) ou da versão do **Windows XP** , a opção versão será automaticamente removida da lista de opções quando você clicar com o botão direito do mouse \- em **rede sem fio \( \) políticas IEEE 802,11**. Isso ocorre porque depois de selecionar uma versão de política, a política é adicionada no painel de detalhes do GPME quando você seleciona o nó de **políticas de rede sem fio \( IEEE 802,11 \) ** . Esse estado permanece a menos que você exclua a política sem fio, quando a versão da política sem fio retorna ao menu de clique com o botão direito do mouse em \- ** \( \) políticas IEEE 802,11 de rede sem fio** no GPME. Além disso, as políticas sem fio são listadas apenas no painel detalhes do GPME quando o nó ** \( \) políticas IEEE 802,11 de rede sem fio** está selecionado.
+>Depois de ativar a versão do **Windows Vista e versões posteriores** das políticas IEEE 802,11 da rede sem fio \( \) ou da versão do **Windows XP** , a opção versão será automaticamente removida da lista de opções quando você clicar com o botão direito do mouse \- em **rede sem fio \( \) políticas IEEE 802,11**. Isso ocorre porque depois de selecionar uma versão de política, a política é adicionada no painel de detalhes do GPME quando você seleciona o nó de **políticas de rede sem fio \( IEEE 802,11 \)** . Esse estado permanece a menos que você exclua a política sem fio, quando a versão da política sem fio retorna ao menu de clique com o botão direito do mouse em \- **\( \) políticas IEEE 802,11 de rede sem fio** no GPME. Além disso, as políticas sem fio são listadas apenas no painel detalhes do GPME quando o nó **\( \) políticas IEEE 802,11 de rede sem fio** está selecionado.
 
 A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo para a execução deste procedimento.
 
@@ -202,11 +203,11 @@ A associação a **Adminis. do Domínio** ou equivalente é o requisito mínimo 
 
 1. Siga o procedimento anterior **para abrir ou adicionar e abrir um política de grupo objeto** para abrir o GPME.
 
-2. No GPME, no painel esquerdo, clique duas vezes \- em **configuração do computador**, clique duas vezes em \- **políticas**, clique duas vezes \- em **configurações do Windows**e clique duas vezes \- em configurações de **segurança**.
+2. No GPME, no painel esquerdo, clique duas vezes \- em **configuração do computador**, clique duas vezes em \- **políticas**, clique duas vezes \- em **configurações do Windows** e clique duas vezes \- em configurações de **segurança**.
 
 ![Política de Grupo sem fio 802.1 x](../../../media/Wireless-GP/Wireless-GP.jpg)
 
-3. Em **configurações de segurança**, clique com o botão direito do mouse \- em **rede sem fio \( \) políticas IEEE 802,11**e clique em **criar uma nova política sem fio para o Windows Vista e versões posteriores**.
+3. Em **configurações de segurança**, clique com o botão direito do mouse \- em **rede sem fio \( \) políticas IEEE 802,11** e clique em **criar uma nova política sem fio para o Windows Vista e versões posteriores**.
 
 ![Política sem fio 802.1 x](../../../media/Wireless-Policy/Wireless-Policy.jpg)
 
@@ -240,11 +241,11 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 2. Para especificar que a configuração automática de WLAN é usada para definir as configurações do adaptador de rede sem fio, verifique se **usar o serviço de configuração automática de WLAN do Windows para clientes** está selecionado.
 
-3. Em **conectar a redes disponíveis na ordem dos perfis listados abaixo**, clique em **Adicionar**e selecione **infraestrutura**. A caixa de diálogo **Propriedades do novo perfil** é aberta.
+3. Em **conectar a redes disponíveis na ordem dos perfis listados abaixo**, clique em **Adicionar** e selecione **infraestrutura**. A caixa de diálogo **Propriedades do novo perfil** é aberta.
 
-4. Na caixa de diálogo**Propriedades do novo perfil** , na guia **conexão** , no campo **nome do perfil** , digite um novo nome para o perfil. Por exemplo, digite **perfil de WLAN example.com para Windows 10**.
+4. Na caixa de diálogo **Propriedades do novo perfil** , na guia **conexão** , no campo **nome do perfil** , digite um novo nome para o perfil. Por exemplo, digite **perfil de WLAN example.com para Windows 10**.
 
-5. Em **nome da rede \( s \) \( SSID \) **, digite o SSID que corresponde ao SSID configurado em seus APS sem fio e clique em **Adicionar**.
+5. Em **nome da rede \( s \) \( SSID \)**, digite o SSID que corresponde ao SSID configurado em seus APS sem fio e clique em **Adicionar**.
 
     Se sua implantação utiliza vários SSIDs e cada PA sem fio utiliza as mesmas configurações de segurança sem fio, repita essa etapa para adicionar o SSID de cada PA sem fio ao qual você deseja que esse perfil seja aplicado.
 
@@ -261,7 +262,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
     1. Para definir as configurações 802.1X avançadas, em **IEEE 802.1X**, selecione **Aplicar configurações 802.1X avançadas**.
 
-        Quando as configurações avançadas do 802.1 X são impostas, os valores padrão para **as \- mensagens de início EAPOL máximas**, o período de **retenção**, o período de **início**e o **período de autenticação** são suficientes para implantações sem fio típicas. Por isso, você não precisa alterar os padrões, a menos que tenha um motivo específico para fazer isso.
+        Quando as configurações avançadas do 802.1 X são impostas, os valores padrão para **as \- mensagens de início EAPOL máximas**, o período de **retenção**, o período de **início** e o **período de autenticação** são suficientes para implantações sem fio típicas. Por isso, você não precisa alterar os padrões, a menos que tenha um motivo específico para fazer isso.
 
     2. Para habilitar o Logon Único, selecione **Habilitar Logon Único para esta rede**.
 
@@ -276,9 +277,9 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 11. Em **criptografia**, se houver suporte para o AP sem fio e adaptadores de rede de cliente sem fio, selecione **AES-CCMP**. Se você estiver usando pontos de acesso e adaptadores de rede sem fio que dão suporte a AC 802.11, selecione **AES-GCMP**. Caso contrário, selecione **TKIP**.
 
     > [!NOTE]
-    > As configurações para **autenticação** e **criptografia** devem corresponder às configurações definidas em seus APS sem fio. As configurações padrão para o **modo de autenticação**, as falhas de **autenticação máxima**e **as informações de usuário de cache para conexões subsequentes com essa rede** são suficientes para implantações sem fio típicas.
+    > As configurações para **autenticação** e **criptografia** devem corresponder às configurações definidas em seus APS sem fio. As configurações padrão para o **modo de autenticação**, as falhas de **autenticação máxima** e **as informações de usuário de cache para conexões subsequentes com essa rede** são suficientes para implantações sem fio típicas.
 
-12. Em **selecionar um método de autenticação de rede**, selecione **EAP \( PEAP \) protegido**e clique em **Propriedades**. A caixa de diálogo **Propriedades EAP protegidas** é aberta.
+12. Em **selecionar um método de autenticação de rede**, selecione **EAP \( PEAP \) protegido** e clique em **Propriedades**. A caixa de diálogo **Propriedades EAP protegidas** é aberta.
 
 13. Em **Propriedades EAP protegidas**, confirme que **Verifique se a identidade do servidor Validando o certificado** está selecionada.
 
@@ -289,21 +290,21 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 15. Na lista **selecionar método de autenticação** , selecione **EAP de senha segura \( \- MS \- CHAP \) v2**.
 
-16. Clique em **Configurar**. Na caixa de diálogo **Propriedades EAP MSCHAPv2** , verifique se **usar automaticamente o nome de logon do Windows e a senha \( e o domínio, se houver algum \) ** selecionado, e clique em **OK**.
+16. Clique em **Configurar**. Na caixa de diálogo **Propriedades EAP MSCHAPv2** , verifique se **usar automaticamente o nome de logon do Windows e a senha \( e o domínio, se houver algum \)** selecionado, e clique em **OK**.
 
 17. Para habilitar a reconexão rápida de PEAP, verifique se **habilitar reconexão rápida** está selecionado.
 
 18. Para exigir TLV de cryptobinding de servidor em tentativas de conexão, selecione **desconectar se o servidor não apresentar TLV de cryptobinding**.
 
-19. Para especificar que a identidade do usuário está mascarada na fase um da autenticação, selecione **Habilitar Privacidade de identidade**e, na caixa de texto, digite um nome de identidade anônimo ou deixe a caixa de texto em branco.
+19. Para especificar que a identidade do usuário está mascarada na fase um da autenticação, selecione **Habilitar Privacidade de identidade** e, na caixa de texto, digite um nome de identidade anônimo ou deixe a caixa de texto em branco.
 
     > [! REGISTRA
-    > - A política do NPS para 802.1 X sem fio deve ser criada usando a **política de solicitação de conexão**do NPS. Se a política de NPS for criada usando a **política de rede**do NPS, a privacidade de identidade não funcionará.
+    > - A política do NPS para 802.1 X sem fio deve ser criada usando a **política de solicitação de conexão** do NPS. Se a política de NPS for criada usando a **política de rede** do NPS, a privacidade de identidade não funcionará.
     > - A privacidade de identidade EAP é fornecida por determinados métodos EAP em que uma identidade vazia ou anônima \( diferente da identidade real \) é enviada em resposta à solicitação de identidade EAP. O PEAP envia a identidade duas vezes durante a autenticação. Na primeira fase, a identidade é enviada em texto sem formatação e essa identidade é usada para fins de roteamento, não para autenticação de cliente. A identidade real — usada para autenticação — é enviada durante a segunda fase da autenticação, dentro do túnel seguro que é estabelecido na primeira fase. Se a caixa de seleção **Habilitar Privacidade de identidade** estiver marcada, o nome de usuário será substituído pela entrada especificada na caixa de texto. Por exemplo, suponha que **Habilitar Privacidade de identidade** esteja selecionado e que o alias de privacidade de identidade **anônimo** seja especificado na caixa de texto. Para um usuário com um alias de identidade real <strong>jdoe@example.com</strong> , a identidade enviada na primeira fase de autenticação será alterada para <strong>anonymous@example.com</strong> . A parte do Realm da identidade da 1ª fase não é modificada, pois é usada para fins de roteamento.
 
 20. Clique em **OK** para fechar a caixa de diálogo **Propriedades EAP protegidas** .
 21. Clique em **OK** para fechar a guia **segurança** .
-22. Se você quiser criar perfis adicionais, clique em **Adicionar**e repita as etapas anteriores, fazendo diferentes escolhas para personalizar cada perfil para os clientes sem fio e a rede para a qual você deseja aplicar o perfil. Quando terminar de adicionar perfis, clique em **OK** para fechar a caixa de diálogo Propriedades da diretiva de rede sem fio.
+22. Se você quiser criar perfis adicionais, clique em **Adicionar** e repita as etapas anteriores, fazendo diferentes escolhas para personalizar cada perfil para os clientes sem fio e a rede para a qual você deseja aplicar o perfil. Quando terminar de adicionar perfis, clique em **OK** para fechar a caixa de diálogo Propriedades da diretiva de rede sem fio.
 
 Na próxima seção, você pode ordenar os perfis de política para garantir a segurança ideal.
 
@@ -355,7 +356,7 @@ A associação em **Admins**. do domínio, ou equivalente, é o mínimo necessá
 
 2. Na guia **permissões de rede** , clique em **Adicionar**. A caixa de diálogo **nova entrada de permissões** é aberta.
 
-3. Na caixa de diálogo **nova entrada de permissão** , no campo **nome da rede \( SSID \) ** , digite o SSID da rede para o qual você deseja definir permissões.
+3. Na caixa de diálogo **nova entrada de permissão** , no campo **nome da rede \( SSID \)** , digite o SSID da rede para o qual você deseja definir permissões.
 
 4.  Em **tipo de rede**, selecione **infraestrutura** ou **ad hoc**.
 
@@ -364,7 +365,7 @@ A associação em **Admins**. do domínio, ou equivalente, é o mínimo necessá
 
 5. Em **permissão**, selecione **permitir** ou **negar**.
 
-6. Clique em **OK**para retornar à guia **permissões de rede** .
+6. Clique em **OK** para retornar à guia **permissões de rede** .
 
 ##### <a name="to-specify-additional-network-permissions-optional"></a>Para especificar permissões de rede adicionais \( opcionais\)
 
@@ -403,14 +404,14 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 #### <a name="to-register-an-nps-in-its-default-domain"></a>Para registrar um NPS em seu domínio padrão
 
-1. No seu NPS, em **Gerenciador do servidor**, clique em **ferramentas**e em **servidor de políticas de rede**. O snap- \- in do NPS é aberto.
+1. No seu NPS, em **Gerenciador do servidor**, clique em **ferramentas** e em **servidor de políticas de rede**. O snap- \- in do NPS é aberto.
 
-2. Clique com o botão direito do mouse \- em **NPS \( local \) **e clique em **registrar servidor em Active Directory**. A caixa de diálogo **Servidor de Políticas de Rede** é aberta.
+2. Clique com o botão direito do mouse \- em **NPS \( local \)** e clique em **registrar servidor em Active Directory**. A caixa de diálogo **Servidor de Políticas de Rede** é aberta.
 
 3. Em **Servidor de Políticas de Rede**, clique em **OK** e em **OK** novamente.
 
 ### <a name="configure-a-wireless-ap-as-an-nps-radius-client"></a><a name="bkmk_radiusclient"></a>Configurar um AP sem fio como um cliente RADIUS NPS
-Você pode usar este procedimento para configurar um AP, também conhecido como um *servidor de acesso à rede \( nas \) *, como um cliente RADIUS de autenticação remota \- no serviço \( do usuário \) usando o snap-in do NPS \- .
+Você pode usar este procedimento para configurar um AP, também conhecido como um *servidor de acesso à rede \( nas \)*, como um cliente RADIUS de autenticação remota \- no serviço \( do usuário \) usando o snap-in do NPS \- .
 
 >[!IMPORTANT]
 >Computadores cliente, como computadores portáteis sem fio e outros computadores que executam sistemas operacionais cliente, não são clientes RADIUS. Os clientes RADIUS são servidores de acesso à rede — como pontos de acesso sem fio, \- switches compatíveis com 802.1 x, servidores VPN de rede privada virtual \( \) e servidores de dial \- -up — porque usam o protocolo RADIUS para se comunicar com servidores RADIUS, como o NPSs.
@@ -419,25 +420,25 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 #### <a name="to-add-a-network-access-server-as-a-radius-client-in-nps"></a>Para adicionar um servidor de acesso à rede como um cliente RADIUS no NPS
 
-1. No seu NPS, em **Gerenciador do servidor**, clique em **ferramentas**e em **servidor de políticas de rede**. O snap- \- in do NPS é aberto.
+1. No seu NPS, em **Gerenciador do servidor**, clique em **ferramentas** e em **servidor de políticas de rede**. O snap- \- in do NPS é aberto.
 
-2. No snap-in do NPS \- , \- clique duas vezes em **clientes e servidores RADIUS**. Clique com o botão direito do mouse \- em **clientes RADIUS**e clique em **novo**.
+2. No snap-in do NPS \- , \- clique duas vezes em **clientes e servidores RADIUS**. Clique com o botão direito do mouse \- em **clientes RADIUS** e clique em **novo**.
 
 3. Em **novo cliente RADIUS**, verifique se a caixa de seleção **habilitar este cliente RADIUS** está marcada.
 
 4. Em **novo cliente RADIUS**, em **nome amigável**, digite um nome de exibição para o ponto de acesso sem fio.
 
-    Por exemplo, se você quiser adicionar um AP de ponto de acesso sem fio \( \) chamado AP \- 01, digite **AP \- **01.
+    Por exemplo, se você quiser adicionar um AP de ponto de acesso sem fio \( \) chamado AP \- 01, digite **AP \-** 01.
 
-5. Em **endereço \( IP ou DNS \) **, digite o endereço IP ou o FQDN do nome de domínio totalmente qualificado \( \) para o nas.
+5. Em **endereço \( IP ou DNS \)**, digite o endereço IP ou o FQDN do nome de domínio totalmente qualificado \( \) para o nas.
 
-    Se você inserir o FQDN, para verificar se o nome está correto e é mapeado para um endereço IP válido, clique em **verificar**e, em **verificar endereço**, no campo **endereço** , clique em **resolver**. Se o nome FQDN for mapeado para um endereço IP válido, o endereço IP desse NAS será exibido automaticamente no **endereço IP**. Se o FQDN não for resolvido para um endereço IP, você receberá uma mensagem indicando que esse host não é conhecido. Se isso ocorrer, verifique se você tem o nome do AP correto e se o AP está ligado e conectado à rede.
+    Se você inserir o FQDN, para verificar se o nome está correto e é mapeado para um endereço IP válido, clique em **verificar** e, em **verificar endereço**, no campo **endereço** , clique em **resolver**. Se o nome FQDN for mapeado para um endereço IP válido, o endereço IP desse NAS será exibido automaticamente no **endereço IP**. Se o FQDN não for resolvido para um endereço IP, você receberá uma mensagem indicando que esse host não é conhecido. Se isso ocorrer, verifique se você tem o nome do AP correto e se o AP está ligado e conectado à rede.
 
     Clique em **OK** para fechar **verificar endereço**.
 
 6. Em **novo cliente RADIUS**, em **segredo compartilhado**, siga um destes procedimentos:
 
-    - Para configurar manualmente um segredo compartilhado RADIUS, selecione **manual**e, em **segredo compartilhado**, digite a senha forte que também é inserida no nas. Digite novamente o segredo compartilhado em **confirmar segredo compartilhado**.
+    - Para configurar manualmente um segredo compartilhado RADIUS, selecione **manual** e, em **segredo compartilhado**, digite a senha forte que também é inserida no nas. Digite novamente o segredo compartilhado em **confirmar segredo compartilhado**.
 
     - Para gerar automaticamente um segredo compartilhado, marque a caixa de seleção **gerar** e, em seguida, clique no botão **gerar** . Salve o segredo compartilhado gerado e, em seguida, use esse valor para configurar o NAS para que ele possa se comunicar com o NPS.
 
@@ -465,29 +466,29 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 #### <a name="create-policies-for-8021x-authenticated-wireless-by-using-a-wizard"></a>Criar políticas para 802.1 X autenticado sem fio usando um assistente
 
-1. Abra o snap- \- in do NPS. Se ainda não estiver selecionado, clique em **NPS \( local \) **. Se você estiver executando o snap-in do MMC do NPS \- e quiser criar políticas em um NPS remoto, selecione o servidor.
+1. Abra o snap- \- in do NPS. Se ainda não estiver selecionado, clique em **NPS \( local \)**. Se você estiver executando o snap-in do MMC do NPS \- e quiser criar políticas em um NPS remoto, selecione o servidor.
 
 2. Em **introdução**, em **configuração padrão**, selecione **servidor RADIUS para conexões 802.1 x sem fio ou com fio**. O texto e os links abaixo do texto são alterados para refletir sua seleção.
 
 3. Clique em **Configurar 802.1 x**. O assistente para configurar 802.1 X é aberto.
 
-4.  Na página **selecionar assistente de tipo de conexões 802.1 x** , em **tipo de conexões 802.1 x**, selecione **conexões sem fio seguras**e, em **nome**, digite um nome para a política ou deixe o nome padrão **conexões sem fio seguras**. Clique em **Próximo**.
+4.  Na página **selecionar assistente de tipo de conexões 802.1 x** , em **tipo de conexões 802.1 x**, selecione **conexões sem fio seguras** e, em **nome**, digite um nome para a política ou deixe o nome padrão **conexões sem fio seguras**. Clique em **Avançar**.
 
 5.  Na página especificar o assistente de **comutadores 802.1 x** , em **clientes RADIUS**, todos os comutadores 802.1 x e pontos de acesso sem fio que você adicionou como clientes RADIUS no snap do NPS \- no são mostrados. Execute um destes procedimentos:
 
-    - Para adicionar outros servidores de acesso à rede \( Nass \) , como APS sem fio, em **clientes RADIUS**, clique em **Adicionar**e, em seguida, em **novo cliente RADIUS**, insira as informações para: **nome amigável**, **endereço \( IP ou DNS \) **e **segredo compartilhado**.
+    - Para adicionar outros servidores de acesso à rede \( Nass \) , como APS sem fio, em **clientes RADIUS**, clique em **Adicionar** e, em seguida, em **novo cliente RADIUS**, insira as informações para: **nome amigável**, **endereço \( IP ou DNS \)** e **segredo compartilhado**.
 
     - Para modificar as configurações de qualquer NAS, em **clientes RADIUS**, selecione o AP para o qual você deseja modificar as configurações e clique em **Editar**. Modifique as configurações conforme necessário.
 
     - Para remover um NAS da lista, em **clientes RADIUS**, selecione o nas e clique em **remover**.
 
         >[!WARNING]
-        >A remoção de um cliente RADIUS de dentro do assistente para **Configurar 802.1 x** exclui o cliente da configuração do NPS. Todas as adições, modificações e exclusões feitas dentro do assistente para **Configurar 802.1 x** para clientes RADIUS são refletidas no snap-in do NPS \- , no nó **clientes RADIUS** em **NPS** \/ **clientes e servidores RADIUS**do NPS. Por exemplo, se você usar o assistente para remover uma opção 802.1 X, a opção também será removida do snap- \- in do NPS.
+        >A remoção de um cliente RADIUS de dentro do assistente para **Configurar 802.1 x** exclui o cliente da configuração do NPS. Todas as adições, modificações e exclusões feitas dentro do assistente para **Configurar 802.1 x** para clientes RADIUS são refletidas no snap-in do NPS \- , no nó **clientes RADIUS** em  \/ **clientes e servidores RADIUS** do NPS. Por exemplo, se você usar o assistente para remover uma opção 802.1 X, a opção também será removida do snap- \- in do NPS.
 
-6. Clique em **Próximo**. Na página Assistente para **configurar um método de autenticação** , **em tipo \( baseado em método de acesso e configuração \) de rede**, selecione **Microsoft: EAP \( PEAP \) protegido**e clique em **Configurar**.
+6. Clique em **Avançar**. Na página Assistente para **configurar um método de autenticação** , **em tipo \( baseado em método de acesso e configuração \) de rede**, selecione **Microsoft: EAP \( PEAP \) protegido** e clique em **Configurar**.
 
     >[!TIP]
-    >Se você receber uma mensagem de erro indicando que um certificado não pode ser encontrado para uso com o método de autenticação, e você configurou Active Directory serviços de certificados para emitir automaticamente certificados para servidores RAS e IAS em sua rede, primeiro verifique se você seguiu as etapas para registrar o NPS no Active Directory Domain Services, em seguida, use as seguintes etapas para atualizar Política de Grupo: clique em **Iniciar**, clique em **sistema Windows**, clique em **executar**e em **abrir**, digite **gpupdate**e pressione Enter. Quando o comando retorna resultados indicando que o usuário e o computador Política de Grupo foram atualizados com êxito, selecione **Microsoft: EAP \( PEAP \) Protected** novamente e clique em **Configurar**.
+    >Se você receber uma mensagem de erro indicando que um certificado não pode ser encontrado para uso com o método de autenticação, e você configurou Active Directory serviços de certificados para emitir automaticamente certificados para servidores RAS e IAS em sua rede, primeiro verifique se você seguiu as etapas para registrar o NPS no Active Directory Domain Services, em seguida, use as seguintes etapas para atualizar Política de Grupo: clique em **Iniciar**, clique em **sistema Windows**, clique em **executar** e em **abrir**, digite **gpupdate** e pressione Enter. Quando o comando retorna resultados indicando que o usuário e o computador Política de Grupo foram atualizados com êxito, selecione **Microsoft: EAP \( PEAP \) Protected** novamente e clique em **Configurar**.
     >
     >Se depois de atualizar Política de Grupo você continuar a receber a mensagem de erro indicando que um certificado não pode ser encontrado para uso com o método de autenticação, o certificado não será exibido porque não atende aos requisitos mínimos de certificado do servidor, conforme documentado no guia complementar da rede principal: [implantar certificados de servidor para implantações com e sem fio 802.1 x](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md). Se isso acontecer, você deverá descontinuar a configuração do NPS, revogar o certificado emitido para os s do NPS \( \) e, em seguida, seguir as instruções para configurar um novo certificado usando o guia de implantação de certificados do servidor.
 
@@ -502,11 +503,11 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
     - Para modificar as configurações de política para o tipo de EAP, em **tipos de EAP**, clique em **Editar**, em **Propriedades EAP MSCHAPv2**, modifique as configurações conforme necessário e clique em **OK**.
 
-8.  Clique em **OK**. A caixa de diálogo Editar propriedades EAP protegidas é fechada, retornando você ao Assistente para **Configurar 802.1 x** . Clique em **Próximo**.
+8.  Clique em **OK**. A caixa de diálogo Editar propriedades EAP protegidas é fechada, retornando você ao Assistente para **Configurar 802.1 x** . Clique em **Avançar**.
 
-9. Em **especificar grupos de usuários**, clique em **Adicionar**e digite o nome do grupo de segurança que você configurou para seus clientes sem fio no Active Directory usuários e computadores snap- \- in. Por exemplo, se você tiver nomeado seu grupo sem fio do grupo de segurança sem fio, digite **grupo sem fio**. Clique em **Próximo**.
+9. Em **especificar grupos de usuários**, clique em **Adicionar** e digite o nome do grupo de segurança que você configurou para seus clientes sem fio no Active Directory usuários e computadores snap- \- in. Por exemplo, se você tiver nomeado seu grupo sem fio do grupo de segurança sem fio, digite **grupo sem fio**. Clique em **Avançar**.
 
-10. Clique em **Configurar** para configurar atributos padrão RADIUS e \- atributos específicos de fornecedor para VLAN de LAN virtual \( \) , conforme necessário, e conforme especificado pela documentação fornecida pelo fornecedor de hardware de AP sem fio. Clique em **Próximo**.
+10. Clique em **Configurar** para configurar atributos padrão RADIUS e \- atributos específicos de fornecedor para VLAN de LAN virtual \( \) , conforme necessário, e conforme especificado pela documentação fornecida pelo fornecedor de hardware de AP sem fio. Clique em **Avançar**.
 
 11. Examine os detalhes do resumo da configuração e clique em **concluir**.
 
@@ -586,15 +587,15 @@ Com esse método, você conclui as etapas na seção etapas gerais e, em seguida
     >Para ingressar um computador em um domínio, o usuário deve estar conectado ao computador com a conta de administrador local. Como alternativa, o usuário deve fornecer as credenciais para a conta de administrador local durante o processo de ingresso do computador no domínio. Além disso, o usuário deve ter uma conta de usuário no domínio no qual o usuário deseja ingressar no computador. Durante o processo de ingressar o computador no domínio, o usuário receberá uma solicitação de \( nome de usuário e senha de credenciais de conta de domínio \) .
 
 2. Forneça aos usuários do domínio as instruções para configurar um perfil sem fio de Bootstrap, conforme documentado no procedimento **a seguir para configurar um perfil sem fio de Bootstrap**.
-3. Além disso, forneça aos usuários o nome de usuário e a senha das credenciais do computador local e \( \) \( o nome e a senha da conta de usuário do domínio de credenciais do domínio, \) bem como os procedimentos para "ingressar o computador no domínio" e para "fazer logon no domínio", conforme documentado no [Guia de rede](../../core-network-guide.md)do Windows Server 2016 Core. * \\ *
+3. Além disso, forneça aos usuários o nome de usuário e a senha das credenciais do computador local e \( \) \( o nome e a senha da conta de usuário do domínio de credenciais do domínio, \) bem como os procedimentos para "ingressar o computador no domínio" e para "fazer logon no domínio", conforme documentado no [Guia de rede](../../core-network-guide.md)do Windows Server 2016 Core. *\\*
 
 #### <a name="to-configure-a-bootstrap-wireless-profile"></a>Para configurar um perfil sem fio de Bootstrap
 
 1. Use as credenciais fornecidas pelo administrador de rede ou pelo profissional de suporte de ti para fazer logon no computador com a conta de administrador do computador local.
 
-2. \-Clique com o botão direito do mouse no ícone de rede na área de trabalho e clique em **Abrir Central de rede e compartilhamento**. A **Central de Rede e Compartilhamento** será aberta. Em **alterar as configurações de rede**, clique em **Configurar uma nova conexão ou rede**. A caixa de diálogo **Configurar uma conexão ou rede** é aberta.
+2. \-Clique com o botão direito do mouse no ícone de rede na área de trabalho e clique em **Abrir Central de rede e compartilhamento**. A **Central de Rede e Compartilhamento** será aberta. Em **alterar as configurações de rede**, clique em  **Configurar uma nova conexão ou rede**. A caixa de diálogo **Configurar uma conexão ou rede** é aberta.
 
-3. Clique em **conectar-se manualmente a uma rede sem fio**e clique em **Avançar**.
+3. Clique em **conectar-se manualmente a uma rede sem fio** e clique em **Avançar**.
 
 4. Em **conectar-se manualmente a uma rede sem fio**, em **nome da rede**, digite o nome SSID do AP.
 
@@ -602,29 +603,29 @@ Com esse método, você conclui as etapas na seção etapas gerais e, em seguida
 
 6. Em **tipo de criptografia** e **chave de segurança**, selecione ou digite as configurações fornecidas pelo administrador.
 
-7. Selecione **iniciar esta conexão automaticamente**e clique em **Avançar**.
+7. Selecione **iniciar esta conexão automaticamente** e clique em **Avançar**.
 
-8. Em **adicionado com êxito * * * seu SSID de rede*, clique em **alterar configurações de conexão**.
+8. Em _o SSID da rede_ **foi adicionado com êxito**, clique em **alterar configurações de conexão**.
 
 9. Clique em **alterar configurações de conexão**. A caixa de diálogo propriedade de rede sem fio Network *SSID* é aberta.
 
 10. Clique na guia **segurança** e, em **escolha um método de autenticação de rede**, selecione **EAP \( PEAP \) protegido**.
 
-11. Clique em **Configurações**. A página ** \( \) Propriedades protegidas do EAP PEAP** é aberta.
+11. Clique em **Configurações**. A página **\( \) Propriedades protegidas do EAP PEAP** é aberta.
 
-12. Na página ** \( \) Propriedades protegidas do EAP PEAP** , verifique se **validar certificado do servidor** não está selecionado, clique em **OK** duas vezes e, em seguida, clique em **fechar**.
+12. Na página **\( \) Propriedades protegidas do EAP PEAP** , verifique se **validar certificado do servidor** não está selecionado, clique em **OK** duas vezes e, em seguida, clique em **fechar**.
 
-13. Em seguida, o Windows tenta se conectar à rede sem fio. As configurações do perfil sem fio de Bootstrap especificam que você deve fornecer suas credenciais de domínio. Quando o Windows solicitar um nome de conta e uma senha, digite suas credenciais de conta de domínio da seguinte maneira: nome de domínio nome de * \\ usuário*, *senha de domínio*.
+13. Em seguida, o Windows tenta se conectar à rede sem fio. As configurações do perfil sem fio de Bootstrap especificam que você deve fornecer suas credenciais de domínio. Quando o Windows solicitar um nome de conta e uma senha, digite suas credenciais de conta de domínio da seguinte maneira: nome de domínio nome de  *\\ usuário*,  *senha de domínio*.
 
 ##### <a name="to-join-a-computer-to-the-domain"></a>Para ingressar um computador no domínio
 
 1. Faça logon no computador com a conta de Administrador local.
 
-2. Na caixa de texto Pesquisar, digite **PowerShell**. Nos resultados da pesquisa, clique com o botão direito do mouse em **Windows PowerShell**e clique em **Executar como administrador**. O Windows PowerShell é aberto com um prompt com privilégios elevados.
+2. Na caixa de texto Pesquisar, digite **PowerShell**. Nos resultados da pesquisa, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como administrador**. O Windows PowerShell é aberto com um prompt com privilégios elevados.
 
 3. No Windows PowerShell, digite o comando a seguir e pressione ENTER. Certifique-se de substituir a variável nomedodomínio pelo nome do domínio que você deseja unir.
 
-    Add-computador nome_do_domínio
+    Add-Computer nome_do_domínio
 
 4. Quando solicitado, digite o nome de usuário e a senha do domínio e clique em **OK**.
 5. Reinicie o computador.

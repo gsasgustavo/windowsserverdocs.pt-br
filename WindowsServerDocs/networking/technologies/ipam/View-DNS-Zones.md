@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 922fb23db30f484c40766f283f440e448cb6c522
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 7b9a5d7c4894f9f9019f0b481ece392ac12e3cd4
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944536"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948702"
 ---
 # <a name="view-dns-zones"></a>Exibir zonas DNS
 
@@ -23,7 +24,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-view-dns-zones-in-the-ipam-client-console"></a>Para exibir zonas DNS no console do cliente IPAM
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
 2.  No painel de navegação, em **monitorar e gerenciar**, clique em **zonas DNS**.  O painel de navegação divide-se em um painel de navegação superior e em um painel de navegação inferior.
 

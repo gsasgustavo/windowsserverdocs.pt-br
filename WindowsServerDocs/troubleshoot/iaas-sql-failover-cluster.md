@@ -4,12 +4,13 @@ description: Este artigo apresenta soluções para ajustar o limite de redes de 
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 9f28aa9c10fe64e0b86a405c1feb480396bcb76b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.topic: troubleshooting
+ms.openlocfilehash: 39469ef6b36af20a2fd8fdab8f3400d5991c2446
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965803"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948552"
 ---
 # <a name="iaas-with-sql-alwayson---tuning-failover-cluster-network-thresholds"></a>IaaS com SQL AlwaysOn - Ajustando Limites de Rede de Cluster de Failover
 
@@ -89,7 +90,7 @@ C:\Windows\system32> get-cluster | fl *subnet*
 
 Valores padrão, mínimo, máximo e recomendado para cada sistema operacional de suporte
 
-| Descrição | Sistema operacional | Mín | Max | Padrão | Recomendado |
+| Description | Sistema operacional | Mín | Max | Padrão | Recomendado |
 |--|--|--|--|--|--|
 | CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
 | Limite de CrossSubnet | 2012 | 3 | 120 | 5 | 20 |

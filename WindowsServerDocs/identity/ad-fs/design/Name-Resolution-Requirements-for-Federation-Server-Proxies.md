@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ed871b8fb0f904fee246714a852ab5934c4a6e1c
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b98d22b18c52ce9f6fd11dd9e7932806dd3726ec
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046524"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948512"
 ---
 # <a name="name-resolution-requirements-for-federation-server-proxies"></a>Requisitos de resolução de nome para proxies de servidor de federação
 
@@ -31,7 +31,7 @@ Nesse cenário, sua organização tem uma ou duas zonas DNS na rede de perímetr
 
 A ilustração a seguir e as etapas correspondentes mostram como cada uma dessas condições é obtida para um determinado exemplo. Nesta ilustração, a tecnologia NLB de balanceamento de carga de rede da Microsoft \( \) fornece um único FQDN de cluster e um único endereço IP de cluster para um farm de servidores de Federação existente.
 
-![requisitos de nome](media/adfs2_deploy_single_fs.gif)
+![A ilustração que mostra a tecnologia de balanceamento de carga de rede da Microsoft fornece um único cluster F Q D N e um único endereço de cluster I P para um farm de servidores de Federação existente.](media/adfs2_deploy_single_fs.gif)
 
 Para obter mais informações sobre como configurar um endereço IP de cluster ou um FQDN de cluster usando NLB, consulte [especificando os parâmetros de cluster](https://go.microsoft.com/fwlink/?LinkId=75282).
 

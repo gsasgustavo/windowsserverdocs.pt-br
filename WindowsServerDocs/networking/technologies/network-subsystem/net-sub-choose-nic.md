@@ -6,12 +6,13 @@ ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.openlocfilehash: c1095f3f5ea44b22c4cec4a871f6fc6210e92ab1
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: b136adc4e7cfae29ebb0517f83ac763d98bd622c
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991639"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949032"
 ---
 # <a name="choosing-a-network-adapter"></a>Escolhendo um adaptador de rede
 
@@ -24,13 +25,13 @@ Aplicativos com uso intensivo de rede exigem Adaptadores de rede de alto desempe
 > [!TIP]
 >  Você pode definir as configurações do adaptador de rede usando o Windows PowerShell. Para obter mais informações, consulte [cmdlets do adaptador de rede no Windows PowerShell](/powershell/module/netadapter).
 
-##  <a name="offload-capabilities"></a><a name="bkmk_offload"></a>Recursos de descarga
+##  <a name="offload-capabilities"></a><a name="bkmk_offload"></a> Recursos de descarga
 
 O descarregamento de tarefas da CPU da unidade de processamento central \( \) para o adaptador de rede pode reduzir o uso da CPU no servidor, o que melhora o desempenho geral do sistema.
 
 A pilha de rede nos produtos da Microsoft pode descarregar uma ou mais tarefas em um adaptador de rede se você selecionar um adaptador de rede que tenha os recursos de descarregamento apropriados. A tabela a seguir fornece uma breve visão geral de diferentes recursos de descarregamento que estão disponíveis no Windows Server 2016.
 
-|Tipo de descarregamento|Descrição|
+|Tipo de descarregamento|Description|
 |------------------|-----------------|
 |Cálculo da soma de verificação para TCP|A pilha de rede pode descarregar o cálculo e a validação das somas de verificação TCP do protocolo de controle de transmissão \( \) nos caminhos de código de envio e recebimento. Ele também pode descarregar o cálculo e a validação de somas de verificação de IPv4 e IPv6 em caminhos de código de envio e recebimento.|
 |Cálculo da soma de verificação para UDP |A pilha de rede pode descarregar o cálculo e a validação de somas de verificação UDP do protocolo de datagrama de usuário \( \) em caminhos de código de envio e recebimento.|
@@ -40,7 +41,7 @@ A pilha de rede nos produtos da Microsoft pode descarregar uma ou mais tarefas e
 |RSS de escala lateral de recebimento \(\)|O RSS é uma tecnologia de driver de rede que permite a distribuição eficiente de processamento de recebimento de rede em várias CPUs em sistemas multiprocessadores. Mais detalhes sobre o RSS são fornecidos posteriormente neste tópico.|
 |União de segmento de recebimento \( RSC\)|O RSC é a capacidade de agrupar pacotes para minimizar o processamento de cabeçalho necessário para que o host seja executado. Um máximo de 64 KB de carga recebida pode ser agrupado em um único pacote maior para processamento. Mais detalhes sobre o RSC são fornecidos posteriormente neste tópico.|
 
-###  <a name="receive-side-scaling"></a><a name="bkmk_rss"></a>Receber dimensionamento lateral
+###  <a name="receive-side-scaling"></a><a name="bkmk_rss"></a> Receber dimensionamento lateral
 
 O Windows Server 2016, o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2008 R2 e o Windows Server 2008 dão suporte ao RSS de dimensionamento lateral de recebimento \( \) .
 
@@ -96,27 +97,27 @@ A seguir estão os parâmetros **set-NetAdapterRss** adicionais que você pode u
 >[!NOTE]
 >Na sintaxe de exemplo para cada parâmetro abaixo, o nome do adaptador de rede **Ethernet** é usado como um valor de exemplo para o parâmetro **– Name** do comando **set-NetAdapterRss** . Ao executar o cmdlet, verifique se o nome do adaptador de rede que você usa é apropriado para seu ambiente.
 
-- ** \* MaxProcessors**: define o número máximo de processadores RSS a serem usados. Isso garante que o tráfego do aplicativo esteja associado a um número máximo de processadores em uma determinada interface. Exemplo de sintaxe:
+- **\* MaxProcessors**: define o número máximo de processadores RSS a serem usados. Isso garante que o tráfego do aplicativo esteja associado a um número máximo de processadores em uma determinada interface. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –MaxProcessors <value>`
 
-- ** \* BaseProcessorGroup**: define o grupo de processadores base de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Exemplo de sintaxe:
+- **\* BaseProcessorGroup**: define o grupo de processadores base de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorGroup <value>`
 
-- ** \* MaxProcessorGroup**: define o grupo de processador máximo de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Definir isso restringiria um grupo de processadores máximo para que o balanceamento de carga seja alinhado em um grupo k. Exemplo de sintaxe:
+- **\* MaxProcessorGroup**: define o grupo de processador máximo de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Definir isso restringiria um grupo de processadores máximo para que o balanceamento de carga seja alinhado em um grupo k. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –MaxProcessorGroup <value>`
 
-- ** \* BaseProcessorNumber**: define o número de processador base de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Isso permite o particionamento de processadores entre adaptadores de rede. Esse é o primeiro processador lógico no intervalo de processadores RSS que é atribuído a cada adaptador. Exemplo de sintaxe:
+- **\* BaseProcessorNumber**: define o número de processador base de um nó numa. Isso afeta a matriz do processador usada pelo RSS. Isso permite o particionamento de processadores entre adaptadores de rede. Esse é o primeiro processador lógico no intervalo de processadores RSS que é atribuído a cada adaptador. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorNumber <Byte Value>`
 
-- ** \* NumaNode**: o nó numa para o qual cada adaptador de rede pode alocar memória. Isso pode estar dentro de um grupo k ou de diferentes grupos k. Exemplo de sintaxe:
+- **\* NumaNode**: o nó numa para o qual cada adaptador de rede pode alocar memória. Isso pode estar dentro de um grupo k ou de diferentes grupos k. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –NumaNodeID <value>`
 
-- ** \* NumberofReceiveQueues**: se os processadores lógicos parecem estar subutilizados para receber tráfego \( , por exemplo, como exibido no Gerenciador de tarefas \) , você pode tentar aumentar o número de filas RSS do padrão de 2 para o máximo com suporte no seu adaptador de rede. O adaptador de rede pode ter opções para alterar o número de filas RSS como parte do driver. Exemplo de sintaxe:
+- **\* NumberofReceiveQueues**: se os processadores lógicos parecem estar subutilizados para receber tráfego \( , por exemplo, como exibido no Gerenciador de tarefas \) , você pode tentar aumentar o número de filas RSS do padrão de 2 para o máximo com suporte no seu adaptador de rede. O adaptador de rede pode ter opções para alterar o número de filas RSS como parte do driver. Exemplo de sintaxe:
 
      `Set-NetAdapterRss –Name "Ethernet" –NumberOfReceiveQueues <value>`
 
@@ -156,7 +157,7 @@ Para utilizar totalmente as CPUs, o número de filas de recebimento RSS deve ser
 
 O RSS pode ser habilitado em um adaptador de rede que está agrupado com outra placa de interface de rede usando o agrupamento NIC. Nesse cenário, somente o adaptador de rede física subjacente pode ser configurado para usar o RSS. Um usuário não pode definir os cmdlets RSS no adaptador de rede agrupado.
 
-###  <a name="receive-segment-coalescing-rsc"></a><a name="bkmk_rsc"></a>União de segmento de recebimento (RSC)
+###  <a name="receive-segment-coalescing-rsc"></a><a name="bkmk_rsc"></a> União de segmento de recebimento (RSC)
 
 A União de segmento \( de recebimento RSC \) ajuda o desempenho, reduzindo o número de cabeçalhos IP que são processados para uma determinada quantidade de dados recebidos. Ele deve ser usado para ajudar a dimensionar o desempenho de dados recebidos agrupando \( ou unindo \) os pacotes menores em unidades maiores.
 
@@ -204,7 +205,7 @@ Somente há suporte para RSC no host físico quando o adaptador de rede do host 
 
 O RSC pode ser habilitado para uma máquina virtual quando o Sr-IOV de virtualização de entrada/saída de raiz única \( \) estiver habilitado. Nesse caso, as funções virtuais dão suporte ao recurso RSC; Portanto, as máquinas virtuais também recebem o benefício do RSC.
 
-##  <a name="network-adapter-resources"></a><a name="bkmk_resources"></a>Recursos do adaptador de rede
+##  <a name="network-adapter-resources"></a><a name="bkmk_resources"></a> Recursos do adaptador de rede
 
 Alguns adaptadores de rede gerenciam ativamente seus recursos para obter um desempenho ideal. Vários adaptadores de rede permitem configurar manualmente os recursos usando a guia **rede avançada** para o adaptador. Para esses adaptadores, você pode definir os valores de um número de parâmetros, incluindo o número de buffers de recebimento e buffers de envio.
 

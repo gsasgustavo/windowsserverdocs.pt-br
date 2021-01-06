@@ -2,17 +2,17 @@
 title: Planejar uma infraestrutura de rede definida pelo software
 description: Este tópico fornece informações sobre como planejar sua implantação de infraestrutura de SDN (rede definida pelo software).
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: 1930ee8d74a1aa99b5c94df19e572d382144e604
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1d461d8da9c19e0aa755d4173f86050a7b389062
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996559"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949982"
 ---
 # <a name="plan-a-software-defined-network-infrastructure"></a>Planejar uma infraestrutura de rede definida pelo software
 
@@ -56,7 +56,7 @@ Um servidor DHCP pode atribuir automaticamente endereços IP para a rede de gere
 |                                                               Se...                                                               |                                                                                                                                                                          Então...                                                                                                                                                                           |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                                  As redes lógicas usam VLANs,                                                  |                                                                 o host de computação física deve se conectar a uma porta de comutador de tronco que tem acesso a essas VLANs. É importante observar que os adaptadores de rede física no host do computador não devem ter nenhuma filtragem de VLAN ativada.                                                                 |
-|                Usando o conjunto de agrupamentos incorporados (SET) e ter vários membros da equipe NIC, como adaptadores de rede,                |                                                                                                                        Você deve conectar todos os membros da equipe NIC para esse host específico ao mesmo domínio de difusão de camada 2.                                                                                                                         |
+|                Usando o agrupamento de Switched-Embedded (conjunto) e ter vários membros da equipe NIC, como adaptadores de rede,                |                                                                                                                        Você deve conectar todos os membros da equipe NIC para esse host específico ao mesmo domínio de difusão de camada 2.                                                                                                                         |
 | O host de computação física está executando máquinas virtuais de infraestrutura adicionais, como controlador de rede, SLB/MUX ou gateway, | esse host deve ter um endereço IP adicional atribuído da rede lógica de gerenciamento para cada uma das máquinas virtuais hospedadas.<p>Além disso, cada máquina virtual de infraestrutura SLB/MUX deve ter um endereço IP reservado para a rede lógica do provedor de HNV. A falha em ter um endereço IP reservado pode resultar em endereços IP duplicados em sua rede. |
 
 ---
@@ -84,7 +84,7 @@ Redes lógicas adicionais precisam ser criadas e provisionadas para o uso de gat
 Altere os prefixos de sub-rede IP de exemplo e as IDs de VLAN para seu ambiente.
 
 
-| **Nome da rede** |  **Sub-rede**  | **Mascara** | **ID de VLAN no caminhão** | **Gateway**  |                                                           **Reservas (exemplos)**                                                           |
+| **Nome da rede** |  **Sub-rede**  | **Mask** | **ID de VLAN no caminhão** | **Gateway**  |                                                           **Reservas (exemplos)**                                                           |
 |------------------|--------------|----------|----------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Gerenciamento    | 10.184.108.0 |    24    |          7           | 10.184.108.1 | 10.184.108.1 – roteador 10.184.108.4-controlador de rede 10.184.108.10-computação host 110.184.108.11-Compute host 210.184.108. X – host de computação X |
 |   Provedor de HNV   |  10.10.56.0  |    23    |          11          |  10.10.56.1  |                                                    10.10.56.1 – roteador 10.10.56.2-SLB/MUX1                                                     |
@@ -102,7 +102,7 @@ Se estiver usando o armazenamento baseado em RDMA, defina uma VLAN e uma sub-red
 >[!IMPORTANT]
 >Para que a qualidade de serviço (QoS) seja aplicada adequadamente, os comutadores físicos exigem uma VLAN marcada para o tráfego RDMA.
 
-| **Nome da rede** |  **Sub-rede**  | **Mascara** | **ID de VLAN no caminhão** | **Gateway**  |                                                           **Reservas (exemplos)**                                                            |
+| **Nome da rede** |  **Sub-rede**  | **Mask** | **ID de VLAN no caminhão** | **Gateway**  |                                                           **Reservas (exemplos)**                                                            |
 |------------------|--------------|----------|----------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 |     Armazenamento1     |  10.60.36.0  |    25    |          8           |  10.60.36.1  |  10.60.36.1 – roteador<p>10.60.36. X – host de computação X<p>10.60.36. y-host de computação Y<p>10.60.36. V-cluster de computação<p>10.60.36. W-cluster de armazenamento  |
 |     Storage2     | 10.60.36.128 |    25    |          9           | 10.60.36.129 | 10.60.36.129 – roteador<p>10.60.36. X – host de computação X<p>10.60.36. y-host de computação Y<p>10.60.36. V-cluster de computação<p>10.60.36. W-cluster de armazenamento |
@@ -163,19 +163,19 @@ Para considerar a sobrecarga no tráfego de rede virtual de locatário causado p
 As NICs que dão suporte à nova palavra-chave do adaptador avançado *EncapOverhead* definem o MTU automaticamente por meio do agente de host do controlador de rede. As NICs que não dão suporte à nova palavra-chave *EncapOverhead* precisam definir o tamanho de MTU manualmente em cada host físico usando o *JumboPacket* \( ou a \) palavra-chave equivalente.
 
 
-### <a name="switches"></a>Opções
+### <a name="switches"></a>Comutadores
 
 Ao selecionar um comutador físico e um roteador para o seu ambiente, verifique se ele dá suporte ao seguinte conjunto de recursos:
 
 - Configurações de MTU de switchport \( necessárias\)
-- MTU definido como >= 1674 bytes \( , incluindo o cabeçalho L2-Ethernet\)
+- MTU definido como >= 1674 bytes, \( incluindo o cabeçalho L2-Ethernet\)
 - Protocolos L3 \( necessários\)
 - ECMP
 - \( \) \- ECMP baseada em BGP IETF RFC 4271
 
 As implementações devem dar suporte às instruções deve nos seguintes padrões de IETF.
 
-- RFC 2545: "extensões do protocolo BGP-4 para roteamento entre domínios IPv6"
+- RFC 2545: "extensões de protocolo BGP-4 para IPv6 Inter-Domain roteamento"
 - RFC 4760: "extensões de multiprotocolo para BGP-4"
 - RFC 4893: "suporte de BGP para quatro octetos como espaço numérico"
 - RFC 4456: "reflexão de rota BGP: uma alternativa ao BGP interno de malha completa (IBGP)"

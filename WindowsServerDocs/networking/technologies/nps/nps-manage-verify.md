@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e178521d47ebcc152853f34ae01e72cb9d2fdd48
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 1bf956a38a15581f1aa2fd257778eccd5e1cf087
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952091"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949872"
 ---
 # <a name="verify-configuration-after-nps-changes"></a>Verificar a configuração após as alterações do NPS
 
@@ -49,9 +50,9 @@ Você deve ser um membro de **Administradores**, ou equivalente, para executar e
 
 3. Reconfigure todos os membros de todos os grupos de servidores remotos RADIUS com o endereço IP do servidor proxy. Para realizar essa tarefa, em cada NPS que tem o proxy NPS configurado como um cliente RADIUS:
 
-    a. Clique duas vezes em **NPS (local)**, clique duas vezes em **clientes e servidores RADIUS**, clique em **clientes RADIUS**e, no painel de detalhes, clique duas vezes no cliente RADIUS que você deseja alterar.
+    a. Clique duas vezes em **NPS (local)**, clique duas vezes em **clientes e servidores RADIUS**, clique em **clientes RADIUS** e, no painel de detalhes, clique duas vezes no cliente RADIUS que você deseja alterar.
 
-    b. Em **Propriedades**do cliente RADIUS, em **endereço \( IP ou \) DNS**, digite o novo endereço IP do proxy NPS.
+    b. Em **Propriedades** do cliente RADIUS, em **endereço \( IP ou \) DNS**, digite o novo endereço IP do proxy NPS.
 
 4. Se você tiver configurado o proxy NPS para usar o log de SQL Server, verifique se a conectividade entre o computador que executa o SQL Server e o proxy NPS ainda está funcionando corretamente.
 

@@ -3,16 +3,16 @@ title: Replicação de armazenamento de servidor para servidor
 description: Como configurar e usar a réplica de armazenamento para replicação de servidor para servidor no Windows Server, incluindo o centro de administração do Windows e o PowerShell.
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-ms.openlocfilehash: bba3de78076227a441321ea7cfafb447ecb7c350
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a0f6baeb5632662ce98d408e6352b509f60a73f8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961350"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948932"
 ---
 # <a name="server-to-server-storage-replication-with-storage-replica"></a>Replicação de armazenamento de servidor para servidor com réplica de armazenamento
 
@@ -74,7 +74,7 @@ Se você estiver usando o centro de administração do Windows para gerenciar a 
 2. Baixe e instale o [ferramentas de administração de servidor remoto](https://www.microsoft.com/download/details.aspx?id=45520).
     - Se você estiver usando o Windows 10, versão 1809 ou posterior, instale o "RSAT: módulo de réplica de armazenamento para Windows PowerShell" dos recursos sob demanda.
 3. Abra uma sessão do PowerShell como administrador selecionando o botão **Iniciar** , digitando **PowerShell**, clicando com o botão direito do mouse em **Windows PowerShell** e selecionando **Executar como administrador**.
-4. Digite o comando a seguir para habilitar o protocolo WS-Management no computador local e configurar a configuração padrão para o gerenciamento remoto no cliente.
+4. Digite o comando a seguir para habilitar o protocolo de WS-Management no computador local e configurar a configuração padrão para gerenciamento remoto no cliente.
 
     ```PowerShell
     winrm quickconfig
@@ -112,7 +112,7 @@ Se você estiver usando o centro de administração do Windows para gerenciar a 
     -   **Método do centro de administração do Windows**
         1. No centro de administração do Windows, navegue até Gerenciador do Servidor e, em seguida, selecione um dos servidores.
         2. Navegue até **funções & recursos**.
-        3. Selecione **recursos**  >  **réplica de armazenamento**e clique em **instalar**.
+        3. Selecione **recursos**  >  **réplica de armazenamento** e clique em **instalar**.
         4. Repita o procedimento no outro servidor.
     -   **Método de Gerenciador do Servidor**
 
@@ -181,7 +181,7 @@ Se você estiver usando o centro de administração do Windows para gerenciar a 
     ```
 
     > [!IMPORTANT]
-      > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicione uma carga de trabalho ou o servidor não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos para o volume de origem durante o teste ou baixar e executar [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) para gerar o Ios de gravação. Por exemplo, uma amostra com uma carga de trabalho de E/S de gravação baixa por dez minutos para o volume D:
+      > Ao usar um servidor de teste com nenhuma carga de gravação de E/S no volume de origem especificado durante o período de avaliação, adicione uma carga de trabalho ou o servidor não gerará um relatório útil. Você deve testar com cargas de trabalho de produção para ver os números reais e os tamanhos de log recomendados. Como alternativa, basta copiar alguns arquivos para o volume de origem durante o teste ou baixar e executar  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) para gerar o Ios de gravação. Por exemplo, uma amostra com uma carga de trabalho de E/S de gravação baixa por dez minutos para o volume D:
       >
       > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 -j100 d:\test`
 
@@ -455,7 +455,7 @@ O processo é, em um alto nível:
 1. Depois que a VM for criada, consulte [etapa 2: provisionar sistema operacional, recursos, funções, armazenamento e rede](#provision-os).
 
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 - [Visão geral da Réplica de Armazenamento](storage-replica-overview.md)
 - [Estender a replicação do cluster usando o armazenamento compartilhado](stretch-cluster-replication-using-shared-storage.md)
 - [Cluster para replicação de armazenamento de cluster](cluster-to-cluster-storage-replication.md)

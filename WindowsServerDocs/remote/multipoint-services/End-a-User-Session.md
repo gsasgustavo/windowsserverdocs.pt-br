@@ -6,12 +6,13 @@ ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: a6aa4d8b9ed45d389ae86b3806c14dc0a285c82b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 383587e131034bdb1c5522f7574da9c44c6a5564
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970683"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949862"
 ---
 # <a name="end-a-user-session"></a>Encerrar uma sessão de usuário
 Você deve encerrar a sessão de um usuário quando precisar fazer logoff do usuário do sistema de serviços do MultiPoint para retornar a área de trabalho às suas configurações padrão. O usuário recebe um aviso de que a conexão está prestes a ser encerrada. Você deve encerrar a conexão de um usuário quando desejar:

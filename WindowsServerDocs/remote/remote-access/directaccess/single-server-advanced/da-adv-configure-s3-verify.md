@@ -1,17 +1,18 @@
 ---
 title: Etapa 3 verificar a implantação avançada do DirectAccess
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess com as configurações avançadas do Windows Server 2016
+description: Saiba como verificar se você configurou corretamente sua implantação avançada do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: ae8bbff0-c981-4bc6-8df1-861621d0627f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 3d5b189d70497ead26f24f43bba9dcfe2d443ce0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 38e93e9c40b1e87557bd077f7b9d2129a2e9bae4
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989763"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949812"
 ---
 # <a name="step-3-verify-the-advanced-directaccess-deployment"></a>Etapa 3 verificar a implantação avançada do DirectAccess
 
@@ -25,7 +26,7 @@ Este tópico descreve como verificar se você configurou corretamente sua implan
 
 2.  Clique no ícone **conexões de rede** na área de notificação para acessar o Gerenciador de mídia do DirectAccess.
 
-3.  Clique em **conexão DirectAccess**e você verá que o status é **conectado localmente**.
+3.  Clique em **conexão DirectAccess** e você verá que o status é **conectado localmente**.
 
 4.  Conecte o computador cliente à rede externa e tentar acessar os recursos internos.
 

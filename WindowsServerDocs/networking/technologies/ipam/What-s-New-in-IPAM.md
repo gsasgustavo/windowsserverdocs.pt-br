@@ -2,16 +2,17 @@
 title: Novidades no IPAM
 description: Este tópico descreve a funcionalidade de IPAM (gerenciamento de endereço IP) que é nova ou alterada no Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2d30db0228177b80050eaae3e56919245b750a0c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 33ff856cbaf02e2a5160d16ccb36fbaf9c682b84
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997337"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948682"
 ---
 # <a name="whats-new-in-ipam"></a>Novidades no IPAM
 
@@ -24,7 +25,7 @@ O IPAM fornece recursos de monitoramento e administração altamente personaliz�
 ## <a name="updates-in-ipam-server"></a><a name="BKMK_IPAM2012R2"></a>Atualizações no servidor IPAM
 A seguir estão os recursos novos e aprimorados para o IPAM no Windows Server 2016.
 
-|Recurso/funcionalidade|Novo ou melhorado|Descrição|
+|Recurso/funcionalidade|Novo ou melhorado|Description|
 |--------------------------|-------------------|---------------|
 |[Gerenciamento de endereço IP aprimorado](../../technologies/ipam/../../technologies/ipam/../../technologies/ipam/What-s-New-in-IPAM.md#EIP)|Melhoria de|Os recursos do IPAM são aprimorados para cenários como tratar sub-redes IPv4/32 e IPv6/128 e localizar sub-redes de endereço IP e intervalos livres em um bloco de endereço IP.|
 |[Gerenciamento avançado de serviços de DNS](../../technologies/ipam/../../technologies/ipam/../../technologies/ipam/What-s-New-in-IPAM.md#EDNS)|Novo|O IPAM dá suporte ao registro de recurso DNS, encaminhador condicional e gerenciamento de zona DNS para servidores DNS integrados ao domínio Active Directory e com backup em arquivo.|

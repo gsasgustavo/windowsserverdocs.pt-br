@@ -6,12 +6,13 @@ ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 698428c4b8b5ce3283d3a71baf4551f06cf47bf3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: f6b7f0c5f65ad94d2fe4a7ca54f194b2fb360f4f
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969303"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949292"
 ---
 # <a name="edit-server-settings"></a>Editar configurações do servidor
 Quando você instalou o MultiPoint Services, você configurou as configurações do seu sistema, incluindo optar por participar de determinados programas. Este tópico descreve as configurações que você pode definir para o seu sistema MultiPoint Services e explica como editar as configurações.
@@ -19,7 +20,7 @@ Quando você instalou o MultiPoint Services, você configurou as configurações
 ## <a name="about-multipoint-services-settings"></a>Sobre configurações do MultiPoint Services
 A tabela a seguir descreve as diferentes configurações que você pode alterar para o seu sistema MultiPoint Services.
 
-|Configuração do MultiPoint Services|Descrição|
+|Configuração do MultiPoint Services|Description|
 |-----------------------------------------------------------------------------------------|---------------|
 |Permitir que uma conta tenha várias sessões|Permite que uma única conta de usuário esteja conectada simultaneamente a várias estações. Isso pode ser útil em casos como uma sala de aula onde cada aluno está usando uma conta única e compartilhada. Usando essa configuração, quaisquer alterações nos recursos da conta, como pastas de documentos ou a área de trabalho, estão disponíveis para todos os usuários conectados usando a mesma conta.|
 |Permitir que este computador seja gerenciado remotamente|Permite que o computador que está executando os serviços do MultiPoint seja gerenciado por outros sistemas do MultiPoint em sua rede. Se essa opção estiver selecionada e o computador de gerenciamento estiver na mesma sub-rede, esse computador aparecerá na lista de servidores disponíveis para serem gerenciados. Se essa opção estiver selecionada e o computador de gerenciamento estiver em uma sub-rede diferente, o computador de gerenciamento ainda poderá gerenciar esse computador, mas você deve especificar o endereço IP do computador.|
@@ -35,7 +36,7 @@ A tabela a seguir descreve as diferentes configurações que você pode alterar 
 
 1.  Abra o Gerenciador do MultiPoint no [modo de estação](Switch-Between-Modes.md)e clique na guia **página inicial** .
 
-2.  Na coluna **Computador**, clique no nome do computador e, em seguida, em *Tarefas do * **nome do computador**, clique em **Editar configurações do computador**.
+2.  Na coluna **Computador**, clique no nome do computador e, em seguida, em *Tarefas do* **nome do computador**, clique em **Editar configurações do computador**.
 
 3.  Marque ou desmarque os itens que você deseja alterar e clique em **OK**.
 

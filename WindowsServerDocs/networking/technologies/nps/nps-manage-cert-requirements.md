@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 114b64b7bdcaae0643ee03ecc2ee0a67c3e24fba
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 4f1680c37510a0a45dfc4ce1ce34ca62859a8f09
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992683"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948982"
 ---
 # <a name="configure-certificate-templates-for-peap-and-eap-requirements"></a>Configurar modelos de certificado para requisitos de PEAP e EAP
 
@@ -51,7 +52,7 @@ O computador cliente aceita a tentativa de autenticação do servidor quando o c
        - **Provedores:** Provedor Microsoft Platform crypto
        - **Tamanho mínimo da chave:** 2048
        - **Algoritmo de hash:** SHA2
-    4. Clique em **Próximo**.
+    4. Clique em **Avançar**.
 
 - A extensão de nome alternativo da entidade (SubjectAltName), se usada, deve conter o nome DNS do servidor. Para configurar o modelo de certificado com o nome DNS (sistema de nomes de domínio) do servidor de registro:
 
@@ -85,7 +86,7 @@ Com EAP-TLS ou PEAP-TLS, o servidor aceita a tentativa de autenticação de clie
     1. Abra os Modelos de Certificado.
     2. No painel de detalhes, clique com o botão direito do mouse no modelo de certificado que você deseja alterar e clique em **Propriedades**.
     3. Clique na guia **nome da entidade** e, em seguida, clique em **criar com base nessa Active Directory informações**.
-    4. Em **incluir essas informações em nome de entidade alternativo**, selecione ** \( UPN \) nome da entidade de usuário**.
+    4. Em **incluir essas informações em nome de entidade alternativo**, selecione **\( UPN \) nome da entidade de usuário**.
 
 - Para certificados de computador, a extensão SubjectAltName do nome alternativo \( \) da entidade no certificado deve conter o FQDN do nome de domínio totalmente qualificado \( \) do cliente, que também é chamado de *nome DNS*. Para configurar esse nome no modelo de certificado:
 

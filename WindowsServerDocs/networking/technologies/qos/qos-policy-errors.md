@@ -6,12 +6,13 @@ ms.assetid: 76974e10-6a57-4533-83be-cfd5a0d364a3
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: dc100c7ae8ff4ab65dc8cacdde9d46ade8d2b20e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 5b1c181bba776b8b42433dfb6f407c6c5a584019
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940017"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948622"
 ---
 # <a name="qos-policy-error-and-event-messages"></a>Mensagens de erro e evento da política de QoS
 
@@ -137,7 +138,7 @@ A seguir está uma lista de mensagens de aviso da política de QoS.
 |**Gravidade**|Aviso|
 |**SymbolicName**|EVENT_EQOS_WARNING_TEST_1|
 |**Idioma**|Inglês|
-|**Message**|EQOS: * * * teste \* \* \* [, com uma cadeia de caracteres] "%2".|
+|**Message**|EQOS: * * _Testing \_ \* \* [, com uma cadeia de caracteres] "%2".|
 
 |||
 |-|-|
@@ -145,7 +146,7 @@ A seguir está uma lista de mensagens de aviso da política de QoS.
 |**Gravidade**|Aviso|
 |**SymbolicName**|EVENT_EQOS_WARNING_TEST_2|
 |**Idioma**|Inglês|
-|**Message**|EQOS: * * * testando \* \* \* [, com duas cadeias de caracteres, seqüência1 é] "%2" [, string2 é] "%3".|
+|**Message**|EQOS: * * _Testing \_ \* \* [, com duas cadeias de caracteres, seqüência1 é] "%2" [, string2 é] "%3".|
 
 |||
 |-|-|

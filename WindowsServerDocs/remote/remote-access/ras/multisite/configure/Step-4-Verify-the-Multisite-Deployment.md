@@ -1,17 +1,18 @@
 ---
 title: Etapa 4 verificar a implantação multissite
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba como verificar se você configurou corretamente sua implantação multissite de acesso remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 43b4c1ddacbb4263fff0f1b8b57223abf2a9aa68
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 29c4c65673399b017716b2bfc299742f1d0c1307
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937065"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949192"
 ---
 # <a name="step-4-verify-the-multisite-deployment"></a>Etapa 4 verificar a implantação multissite
 
@@ -31,7 +32,7 @@ Este tópico descreve como verificar se você configurou corretamente sua implan
 
     Você deve ser capaz de acessar todos os recursos corporativos por meio de cada servidor multissite.
 
-4.  Conecte um &reg; computador cliente do Windows 7 à rede corporativa e obtenha a política de grupo.
+4.  Conecte um &reg;  computador cliente do Windows 7 à rede corporativa e obtenha a política de grupo.
 
 5.  Conecte o computador cliente do Windows 7 à rede externa e tente acessar os recursos internos.
 

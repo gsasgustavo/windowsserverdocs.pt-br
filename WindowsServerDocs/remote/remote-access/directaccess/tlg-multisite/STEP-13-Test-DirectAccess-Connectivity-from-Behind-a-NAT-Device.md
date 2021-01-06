@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2dde684d81d898f1c6327c60c3f10112641991ee
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 3ad38999df70c7ed8e6088687723090911dccbff
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87955223"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950032"
 ---
 # <a name="step-13-test-directaccess-connectivity-from-behind-a-nat-device"></a>ETAPA 13 testar a conectividade do DirectAccess por trás de um dispositivo NAT
 
@@ -34,13 +35,13 @@ Antes de executar esses testes, desconecte CLIENT1 e CLIENT2 do comutador da Int
 
 1. Em CLIENT1, abra uma janela elevada do Windows PowerShell.
 
-2. Habilite o adaptador Teredo, digite **netsh interface teredo set state enterpriseclient**e pressione Enter.
+2. Habilite o adaptador Teredo, digite **netsh interface teredo set state enterpriseclient** e pressione Enter.
 
 3. Na janela do Windows PowerShell, digite **ipconfig/all** e pressione Enter.
 
 4. Examine o resultado do comando ipconfig.
 
-   Este computador estará então conectado à Internet por trás de um dispositivo NAT e um endereço IPv4 privado será atribuído a ele. Quando o cliente do DirectAccess estiver atrás de um dispositivo NAT e receber um endereço IPv4 privado, a tecnologia de transição IPv6 preferida será Teredo. Se você examinar a saída do comando ipconfig, verá uma seção para a pseudo interface de túnel Teredo do adaptador de túnel e, em seguida, uma descrição do adaptador de encapsulamento Teredo da Microsoft, com um endereço IP que começa com 2001:0 consistente com um endereço Teredo. Você deverá ver o gateway padrão listado para o adaptador de túnel Teredo como ':: '.
+   Este computador estará então conectado à Internet por trás de um dispositivo NAT e um endereço IPv4 privado será atribuído a ele. Quando o cliente do DirectAccess estiver atrás de um dispositivo NAT e receber um endereço IPv4 privado, a tecnologia de transição IPv6 preferida será Teredo. Se você examinar a saída do comando ipconfig, verá uma seção para túnel de túnel Teredo Pseudo-Interface e, em seguida, uma descrição do adaptador de túnel do Microsoft Teredo, com um endereço IP que começa com 2001:0 consistente com um endereço Teredo. Você deverá ver o gateway padrão listado para o adaptador de túnel Teredo como ':: '.
 
 5. Na janela do Windows PowerShell, digite **ipconfig/flushdns** e pressione Enter.
 
@@ -48,7 +49,7 @@ Antes de executar esses testes, desconecte CLIENT1 e CLIENT2 do comutador da Int
 
 6. Na janela do Windows PowerShell, digite **ping App1** e pressione Enter. Você deverá ver as respostas do endereço IPv6 do APP1, 2001:db8:1::3.
 
-7. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD**C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
+7. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD **C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
 
 8. Na janela do Windows PowerShell, digite **ping 2-App1** e pressione Enter. Você deve ver respostas do endereço IPv6 de 2-APP1, 2001: DB8:2:: 3.
 
@@ -56,7 +57,7 @@ Antes de executar esses testes, desconecte CLIENT1 e CLIENT2 do comutador da Int
 
 10. Na barra de endereços do Internet Explorer, digite **https://app2/** e pressione Enter. Você verá o site padrão no APP2.
 
-11. Na tela **Iniciar** , digite<strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto. Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso em um host somente IPv4.
+11. Na tela **Iniciar** , digite <strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto. Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso em um host somente IPv4.
 
 12. Repita este procedimento em CLIENT2.
 
@@ -72,7 +73,7 @@ Antes de executar esses testes, desconecte CLIENT1 e CLIENT2 do comutador da Int
 
 5. Na janela do Windows PowerShell, digite **ping App1** e pressione Enter. Você deverá ver as respostas do endereço IPv6 do APP1, 2001:db8:1::3.
 
-6. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD**C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
+6. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD **C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
 
 7. Na janela do Windows PowerShell, digite **ping 2-App1** e pressione Enter. Você deve ver respostas do endereço IPv6 de 2-APP1, 2001: DB8:2:: 3.
 
@@ -80,7 +81,7 @@ Antes de executar esses testes, desconecte CLIENT1 e CLIENT2 do comutador da Int
 
 9. Na barra de endereços do Internet Explorer, digite **https://app2/** e pressione Enter. Você verá o site padrão no APP2.
 
-10. Na tela **Iniciar** , digite<strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto. Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso em um host somente IPv4.
+10. Na tela **Iniciar** , digite <strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto. Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso em um host somente IPv4.
 
 11. Repita este procedimento em CLIENT2.
 

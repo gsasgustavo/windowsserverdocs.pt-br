@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: d6d1ca5e-bde0-4509-9e14-dc3fa9ff447e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7def3b69ca638525f53a8286c5cfdf235b2531e3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: edfdb534843b7b9b81fffb2d0712c65542e6ed3a
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952071"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949322"
 ---
 # <a name="access-permission"></a>Permissões de acesso
 
@@ -31,7 +32,7 @@ A permissão de acesso também é concedida ou negada com base na configuração
 >[!NOTE]
 >As contas de usuário e suas propriedades, como propriedades de discagem, são configuradas no snap-in Active Directory usuários e computadores ou em usuários e grupos locais do MMC do console de gerenciamento Microsoft \( \) , dependendo se você tem o &reg; AD DS (Active Directory Domain Services) instalado.
 
-A **permissão de acesso à rede**da configuração de conta de usuário, que é configurada nas propriedades de discagem de contas de usuário, substitui a configuração de permissão de acesso à política de rede. Quando a permissão de acesso à rede em uma conta de usuário é definida como a opção **controlar o acesso por meio da política de rede do NPS** , a configuração de permissão de acesso de política de rede determina se o acesso ao usuário foi concedido ou negado.
+A **permissão de acesso à rede** da configuração de conta de usuário, que é configurada nas propriedades de discagem de contas de usuário, substitui a configuração de permissão de acesso à política de rede. Quando a permissão de acesso à rede em uma conta de usuário é definida como a opção **controlar o acesso por meio da política de rede do NPS** , a configuração de permissão de acesso de política de rede determina se o acesso ao usuário foi concedido ou negado.
 
 >[!NOTE]
 >No Windows Server 2016, o valor padrão da **permissão de acesso à rede** em AD DS Propriedades de discagem da conta de usuário é **controlar o acesso por meio da política de rede do NPS**.

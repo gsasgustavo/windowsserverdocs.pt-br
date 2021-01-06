@@ -2,16 +2,17 @@
 title: Habilitar publicação de hash para servidores de arquivos
 description: Saiba como habilitar a publicação de hash do BranchCache em um servidor de arquivos ou em vários servidores de arquivos.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c3cbb414b02a9a2ed3c33c617c9d513c93cb1495
-ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
+ms.date: 01/05/2021
+ms.openlocfilehash: 489b38eb4466887ecde57c8de98816b316748ae5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97904821"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948442"
 ---
 # <a name="enable-hash-publication-for-file-servers"></a>Habilitar publicação de hash para servidores de arquivos
 

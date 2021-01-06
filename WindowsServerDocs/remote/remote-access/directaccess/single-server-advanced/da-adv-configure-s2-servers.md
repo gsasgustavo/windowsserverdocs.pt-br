@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 configurar servidores DirectAccess avançados
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess com as configurações avançadas do Windows Server 2016
+description: Saiba como definir as configurações de cliente e servidor que são necessárias para uma implantação avançada de acesso remoto que usa um único servidor de acesso remoto em um ambiente misto de IPv4 e IPv6.
 manager: brianlic
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8b2ae3691ff0181dc4559692829febbbdba94c86
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 163437c8e78c5c6753b7d7db82ded5cc263e0d15
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989822"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949822"
 ---
 # <a name="step-2-configure-advanced-directaccess-servers"></a>Etapa 2 configurar servidores DirectAccess avançados
 
@@ -50,7 +51,7 @@ Para implantar o Acesso Remoto, você deverá instalar a função Acesso Remoto 
 
 6.  Na página **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
-![Êxito no progresso da instalação](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>comandos equivalentes do Windows PowerShell</em>***
+![Êxito no progresso da instalação ](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif) * *_<em>comandos equivalentes do Windows PowerShell</em>_* _
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
@@ -71,7 +72,7 @@ Este guia usa uma implantação somente DirectAccess nos procedimentos de exempl
 
 #### <a name="to-configure-the-deployment-type"></a>Para configurar o tipo de implantação
 
-1.  No servidor de acesso remoto, abra o console de gerenciamento de acesso remoto: na tela **Iniciar** , digite**RAMgmtUI.exe**e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  No servidor de acesso remoto, abra o console de gerenciamento de acesso remoto: na tela _ *Iniciar**, digite **RAMgmtUI.exe** e pressione Enter. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  No Console de Gerenciamento de Acesso Remoto, no painel do meio, clique em **Executar o assistente de configuração de acesso remoto**.
 
@@ -97,7 +98,7 @@ Para que um computador cliente possa ser provisionado para usar o DirectAccess, 
 
 6.  Marque a caixa de seleção **Usar criação de túneis à força** para rotear todo o tráfego cliente (para a rede interna e para a Internet) pelo servidor de Acesso Remoto, se necessário.
 
-7.  Clique em **Próximo**.
+7.  Clique em **Avançar**.
 
 8.  Na página **Assistente de conectividade de rede**:
 
@@ -157,7 +158,7 @@ Para configurar os servidores de infraestrutura em uma implantação de Acesso R
 
 3.  Na página **DNS**, especifique na tabela os sufixos de nome adicionais que serão aplicados como exceções da NRPT (Tabela de Políticas de Resolução de Nomes). Selecione a opção de resolução de nome local e clique em **Avançar**.
 
-4.  Na página **Lista de pesquisa de sufixo de DNS**, o servidor de Acesso Remoto detectará automaticamente qualquer sufixo de domínio na implantação. Use os botões **Adicionar** e **Remover** para adicionar e remover os sufixos de domínio da lista de sufixos de domínio a serem usados. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Próximo**.
+4.  Na página **Lista de pesquisa de sufixo de DNS**, o servidor de Acesso Remoto detectará automaticamente qualquer sufixo de domínio na implantação. Use os botões **Adicionar** e **Remover** para adicionar e remover os sufixos de domínio da lista de sufixos de domínio a serem usados. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Avançar**.
 
 5.  Na página **Gerenciamento**, adicione quaisquer servidores de gerenciamento não detectados automaticamente e clique em **Avançar**. O acesso remoto adiciona automaticamente os controladores de domínio e os servidores de Configuration Manager.
 
@@ -202,7 +203,7 @@ Uma vez concluída a configuração do Acesso Remoto, a **Revisão de Acesso Rem
 
 O seguinte cmdlet ou cmdlets do Windows PowerShell executam a mesma função que o procedimento anterior. Insira cada cmdlet em uma única linha, mesmo que possa aparecer quebra em várias linhas aqui devido a restrições de formatação.
 
-Para executar uma instalação completa em uma topologia de borda de acesso remoto para o DirectAccess somente em um domínio com o **Corp.contoso.com** raiz e usando os seguintes parâmetros: GPO do servidor: **configurações do servidor DirectAccess**, GPO do cliente: configurações do cliente DirectAccess, adaptador de rede interno: **corpnet**, adaptador de rede externo: **Internet**, ConnectTto endereço: **EDGE1.contoso.com**e servidor de local de rede: **NLS.Corp.contoso.com**:
+Para executar uma instalação completa em uma topologia de borda de acesso remoto para o DirectAccess somente em um domínio com o **Corp.contoso.com** raiz e usando os seguintes parâmetros: GPO do servidor: **configurações do servidor DirectAccess**, GPO do cliente: configurações do cliente DirectAccess, adaptador de rede interno: **corpnet**, adaptador de rede externo: **Internet**, ConnectTto endereço: **EDGE1.contoso.com** e servidor de local de rede: **NLS.Corp.contoso.com**:
 
 ```
 Install-RemoteAccess -Force -PassThru -ServerGpoName 'corp.contoso.com\DirectAccess Server Settings' -ClientGpoName 'corp.contoso.com\DirectAccess Client Settings' -DAInstallType 'FullInstall' -InternetInterface 'Internet' -InternalInterface 'Corpnet' -ConnectToAddress 'edge1.contoso.com' -NlsUrl 'https://nls.corp.contoso.com/'

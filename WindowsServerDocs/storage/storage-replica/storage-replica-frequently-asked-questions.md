@@ -3,16 +3,16 @@ description: 'Saiba mais sobre: perguntas frequentes sobre a réplica de armazen
 title: Perguntas frequentes sobre Réplica de Armazenamento
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 04/15/2020
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-ms.openlocfilehash: c47f233502383342ffbc57dd5471a64d17cafa86
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 6cb59e94549aed049a4555ad2d9d7fd0448da4f8
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049564"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948612"
 ---
 # <a name="frequently-asked-questions-about-storage-replica"></a>Perguntas frequentes sobre Réplica de Armazenamento
 
@@ -262,7 +262,7 @@ A réplica de armazenamento é uma tecnologia de replicação unidirecional.  El
 - Unidade de origem do Server1 M: com a unidade de log de origem L: replicando para a unidade de destino do Server2 M: com a unidade de log de destino L:
 - Unidade de origem do Server2 O: com a unidade de log de origem N: replicando para Server1 unidade de destino O: com a unidade de log de destino N:
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 - [Visão geral da Réplica de Armazenamento](storage-replica-overview.md)
 - [Estender a replicação do cluster usando o armazenamento compartilhado](stretch-cluster-replication-using-shared-storage.md)
 - [Replicação de armazenamento de servidor para servidor](server-to-server-storage-replication.md)

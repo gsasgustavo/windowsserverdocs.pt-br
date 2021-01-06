@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7380f5a712294b1583a7d552ef695811f8cebef4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 9e86c545fb467e7e6e381f0be5e0d12e43ce775c
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952112"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949342"
 ---
 # <a name="manage-nps-templates"></a>Gerenciar modelos do NPS
 
@@ -46,9 +47,9 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 ### <a name="to-create-an-nps-template"></a>Para criar um modelo de NPS
 
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. No console do NPS, expanda **Gerenciamento de modelos**, clique com o botão direito do mouse em um tipo de modelo, como **clientes RADIUS**e clique em **novo**.
+2. No console do NPS, expanda **Gerenciamento de modelos**, clique com o botão direito do mouse em um tipo de modelo, como **clientes RADIUS** e clique em **novo**.
 
 3. Uma nova caixa de diálogo Propriedades do modelo é aberta e você pode usar o para configurar o modelo.
 
@@ -60,9 +61,9 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 ### <a name="to-apply-an-nps-template"></a>Para aplicar um modelo de NPS
 
-1. No NPS, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
+1. No NPS, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **servidor de políticas de rede**. O console do NPS é aberto.
 
-2. No console do NPS, expanda **clientes e servidores RADIUS**e expanda **clientes RADIUS**.
+2. No console do NPS, expanda **clientes e servidores RADIUS** e expanda **clientes RADIUS**.
 
 3.In **clientes RADIUS**, no painel de detalhes, clique com o botão direito do mouse no cliente RADIUS ao qual você deseja aplicar o modelo de NPS e clique em **Propriedades**.
 
@@ -76,8 +77,8 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo ne
 
 ### <a name="to-export-or-import-nps-templates"></a>Para exportar ou importar modelos de NPS
 
-1. Para exportar modelos de NPS, no console do NPS, clique com o botão direito do mouse em **Gerenciamento de modelos**e clique em **exportar modelos para um arquivo**.
+1. Para exportar modelos de NPS, no console do NPS, clique com o botão direito do mouse em **Gerenciamento de modelos** e clique em **exportar modelos para um arquivo**.
 
-2. Para importar modelos de NPS, no console do NPS, clique com o botão direito do mouse em **Gerenciamento de modelos**e clique em **importar modelos de um computador** ou **importar modelos de um arquivo**.
+2. Para importar modelos de NPS, no console do NPS, clique com o botão direito do mouse em **Gerenciamento de modelos** e clique em **importar modelos de um computador** ou **importar modelos de um arquivo**.
 
 

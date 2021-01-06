@@ -2,17 +2,17 @@
 title: Requisitos para a implantação do controlador de rede
 description: Prepare seu datacenter para a implantação do controlador de rede, que exige um ou mais computadores ou VMs e um computador ou VM. Antes de implantar o controlador de rede, você deve configurar os grupos de segurança, os locais do arquivo de log (se necessário) e o registro de DNS dinâmico.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: 8339987e1862272d7254d94e403fc10e4827596b
-ms.sourcegitcommit: 28b5ab74cb0b40539ccc1a83998d6391e87fe51f
+ms.openlocfilehash: 74e449b51cb5513e353067e64d41aeedf6652672
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96614888"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948372"
 ---
 # <a name="requirements-for-deploying-network-controller"></a>Requisitos para a implantação do controlador de rede
 

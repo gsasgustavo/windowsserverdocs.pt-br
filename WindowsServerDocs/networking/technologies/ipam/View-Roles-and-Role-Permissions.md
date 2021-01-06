@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e9c138390731557d3865a0bf1a2d8feb323ff0ed
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 32db718c9789edb429890b0419f219b44d1cd36f
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944546"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948692"
 ---
 # <a name="view-roles-and-role-permissions"></a>Exibir funções e permissões de função
 
@@ -23,7 +24,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-view-access-control-roles"></a>Para exibir as funções de controle de acesso
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
 2.  No painel de navegação, clique em **controle de acesso**.
 

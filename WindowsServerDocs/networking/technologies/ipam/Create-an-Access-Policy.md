@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d454bef1a6bc15b5f8a6f2e6f78773785ad5af69
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: be09d4a056482f7506d7f6d8f79443e8589877c5
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966563"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949052"
 ---
 # <a name="create-an-access-policy"></a>Criar uma política de acesso
 
@@ -26,9 +27,9 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 ### <a name="to-create-an-access-policy"></a>Para criar uma política de acesso
 
-1.  Em Gerenciador do Servidor, clique em **IPAM**. O console do cliente IPAM é exibido.
+1.  Em Gerenciador do Servidor, clique em  **IPAM**. O console do cliente IPAM é exibido.
 
-2.  No painel de navegação, clique em **controle de acesso**. No painel de navegação inferior, clique com o botão direito do mouse em **políticas de acesso**e clique em **Adicionar política de acesso**.
+2.  No painel de navegação, clique em **controle de acesso**. No painel de navegação inferior, clique com o botão direito do mouse em **políticas de acesso** e clique em **Adicionar política de acesso**.
 
     ![Adicionar política de acesso](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
 
@@ -62,7 +63,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
     ![Adicionar nova configuração](../../media/Create-an-Access-Policy/ipam_CreateAP_08.jpg)
 
-11. A função é adicionada à política de acesso. Para criar políticas de acesso adicionais, clique em **aplicar**e repita essas etapas para cada política que você deseja criar. Se você não quiser criar políticas adicionais, clique em **OK**.
+11. A função é adicionada à política de acesso. Para criar políticas de acesso adicionais, clique em **aplicar** e repita essas etapas para cada política que você deseja criar. Se você não quiser criar políticas adicionais, clique em **OK**.
 
     ![Clique em aplicar ou em OK](../../media/Create-an-Access-Policy/ipam_CreateAP_09.jpg)
 

@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 82f8f382-246e-4164-8306-437f7a019e0f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ccfe766651600da146843c8db947df0f61c667dc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 073e187435dabdc328c0549e072865b5d2978765
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964062"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948342"
 ---
 # <a name="manage-resources-in-multiple-active-directory-forests"></a>Gerenciar recursos em várias florestas do Active Directory
 
@@ -21,7 +22,7 @@ Você pode usar este tópico para aprender a usar o IPAM para gerenciar controla
 
 Para usar o IPAM para gerenciar recursos em florestas de Active Directory remota, cada floresta que você deseja gerenciar deve ter uma relação de confiança bidirecional com a floresta em que o IPAM está instalado.
 
-Para iniciar o processo de descoberta para diferentes Active Directory florestas, abra Gerenciador do Servidor e clique em IPAM. No console do cliente IPAM, clique em **Configurar descoberta de servidor**e em **obter florestas**. Isso inicia uma tarefa em segundo plano que descobre florestas confiáveis e seus domínios. Após a conclusão do processo de descoberta, clique em **Configurar descoberta de servidor**, que abre a caixa de diálogo a seguir.
+Para iniciar o processo de descoberta para diferentes Active Directory florestas, abra Gerenciador do Servidor e clique em IPAM. No console do cliente IPAM, clique em **Configurar descoberta de servidor** e em **obter florestas**. Isso inicia uma tarefa em segundo plano que descobre florestas confiáveis e seus domínios. Após a conclusão do processo de descoberta, clique em **Configurar descoberta de servidor**, que abre a caixa de diálogo a seguir.
 
 ![Configurar descoberta de servidor](../../media/Manage-Resources-in-Multiple-Active-Directory-Forests/ipam_serverdiscovery.jpg)
 
@@ -32,9 +33,9 @@ Para iniciar o processo de descoberta para diferentes Active Directory florestas
     Invoke-IpamGpoProvisioning -Domain fabrikam.COM -GpoPrefixName IPAMSERVER -IpamServerFqdn IPAM.CORP.CONTOSO.COM
 ```
 
-Na caixa de diálogo **Configurar descoberta de servidor** , clique em **selecionar a floresta**e escolha a floresta que você deseja gerenciar com o IPAM. Selecione também os domínios que você deseja gerenciar e clique em **Adicionar**.
+Na caixa de diálogo **Configurar descoberta de servidor** , clique em **selecionar a floresta** e escolha a floresta que você deseja gerenciar com o IPAM. Selecione também os domínios que você deseja gerenciar e clique em **Adicionar**.
 
-Em **selecionar as funções de servidor para descobrir**, para cada domínio que você deseja gerenciar, especifique o tipo de servidores a serem descobertos. As opções são **controlador de domínio**, **servidor DHCP**e **servidor DNS**.
+Em **selecionar as funções de servidor para descobrir**, para cada domínio que você deseja gerenciar, especifique o tipo de servidores a serem descobertos. As opções são **controlador de domínio**, **servidor DHCP** e **servidor DNS**.
 
 Por padrão, os controladores de domínio, servidores DHCP e servidores DNS são descobertos. portanto, se você não quiser descobrir um desses tipos de servidores, certifique-se de desmarcar a caixa de seleção dessa opção.
 

@@ -1,17 +1,17 @@
 ---
 title: Criar uma máquina virtual com o Hyper-V
 description: Fornece instruções para criar uma máquina virtual usando o Gerenciador do Hyper-V ou o Windows PowerShell
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: 56688d61f1ab94ed011414e3967a83df070dbaaa
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 72beb053c17e00c69adaa621902fa3252bd38300
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866125"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948112"
 ---
 # <a name="create-a-virtual-machine-in-hyper-v"></a>Criar uma máquina virtual com o Hyper-V
 
@@ -33,7 +33,7 @@ Saiba como criar uma máquina virtual usando o Gerenciador do Hyper-V e o Window
 
 6.  No Gerenciador do Hyper-V, clique com o botão direito do mouse na máquina virtual e selecione **conectar**.
 
-7.  Na janela conexão de máquina virtual, selecione **Action**  >  **início** da ação.
+7.  Na janela conexão de máquina virtual, selecione   >  **início** da ação.
 
 ## <a name="create-a-virtual-machine-by-using-windows-powershell"></a>Criar uma máquina virtual usando o Windows PowerShell
 
@@ -41,7 +41,7 @@ Saiba como criar uma máquina virtual usando o Gerenciador do Hyper-V e o Window
 
 2. Clique com o botão direito do mouse em **Windows PowerShell** e selecione **Executar como administrador**.
 
-3. Obtenha o nome do comutador virtual que você deseja que a máquina virtual use usando [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch).  Por exemplo:
+3. Obtenha o nome do comutador virtual que você deseja que a máquina virtual use usando [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch).  Por exemplo,
 
    ```
    Get-VMSwitch  * | Format-Table Name
@@ -73,7 +73,7 @@ Saiba como criar uma máquina virtual usando o Gerenciador do Hyper-V e o Window
 
        Isso cria uma máquina virtual de geração 2 chamada Win10VM com 4 GB de memória. Ele é inicializado a partir da pasta VMs\Win10.vhdx no diretório atual e usa o comutador virtual chamado ExternalSwitch. Os arquivos de configuração de máquina virtual são armazenados na pasta VMData.
 
-   - **Novo disco rígido virtual** -para criar uma máquina virtual com um novo disco rígido virtual, substitua o parâmetro **-VHDPath** do exemplo acima por  **-NewVHDPath** e adicione o parâmetro **-NewVHDSizeBytes** . Por exemplo:
+   - **Novo disco rígido virtual** -para criar uma máquina virtual com um novo disco rígido virtual, substitua o parâmetro **-VHDPath** do exemplo acima por  **-NewVHDPath** e adicione o parâmetro **-NewVHDSizeBytes** . Por exemplo,
 
      ```
      New-VM -Name Win10VM -MemoryStartupBytes 4GB -BootDevice VHD -NewVHDPath .\VMs\Win10.vhdx -Path .\VMData -NewVHDSizeBytes 20GB -Generation 2 -Switch ExternalSwitch

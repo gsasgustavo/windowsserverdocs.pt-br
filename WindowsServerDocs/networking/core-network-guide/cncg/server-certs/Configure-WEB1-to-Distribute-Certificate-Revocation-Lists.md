@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 29c9cfb0a229200e1a62f0187e0bf277dbb99718
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 756dcdc046387fc11774fe751bd8901498a19b0d
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969643"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950202"
 ---
 # <a name="configure-web1-to-distribute-certificate-revocation-lists-crls"></a>Configurar o WEB1 para distribuir listas de certificados revogados (CRLs)
 
@@ -30,11 +31,11 @@ Para executar esse procedimento, você deve ser membro de **Admins**. do domíni
 
 1.  No WEB1, execute o Windows PowerShell como administrador, digite `explorer c:\` e pressione Enter. O Windows Explorer é aberto para a unidade C.
 
-2.  Crie uma nova pasta chamada PKI na unidade C:. Para fazer isso, clique em **início**e, em seguida, clique em **nova pasta**. Uma nova pasta é criada com o nome temporário realçado. Digite **PKI** e pressione Enter.
+2.  Crie uma nova pasta chamada PKI na unidade C:. Para fazer isso, clique em **início** e, em seguida, clique em **nova pasta**. Uma nova pasta é criada com o nome temporário realçado. Digite **PKI** e pressione Enter.
 
-3.  No Windows Explorer, clique com o botão direito do mouse na pasta que você acabou de criar, passe o cursor do mouse sobre **compartilhar com**e clique em **pessoas específicas**. A caixa de diálogo **Compartilhamento de Arquivos** será aberta.
+3.  No Windows Explorer, clique com o botão direito do mouse na pasta que você acabou de criar, passe o cursor do mouse sobre **compartilhar com** e clique em **pessoas específicas**. A caixa de diálogo **Compartilhamento de Arquivos** será aberta.
 
-4.  Em **compartilhamento de arquivos**, digite **editores de certificado**e clique em **Adicionar**. O grupo Publicadores de certificados é adicionado à lista. Na lista, em **nível de permissão**, clique na seta ao lado de **editores de certificado**e, em seguida, clique em **leitura/gravação**. Clique em **compartilhar**e, em seguida, clique em **concluído**.
+4.  Em **compartilhamento de arquivos**, digite **editores de certificado** e clique em **Adicionar**. O grupo Publicadores de certificados é adicionado à lista. Na lista, em **nível de permissão**, clique na seta ao lado de **editores de certificado** e, em seguida, clique em **leitura/gravação**. Clique em **compartilhar** e, em seguida, clique em **concluído**.
 
 5.  Feche o Windows Explorer.
 
@@ -44,7 +45,7 @@ Para executar esse procedimento, você deve ser membro de **Admins**. do domíni
 
 8.  Expanda **Sites**, clique com o botão direito do mouse no **Default Web Site** e clique em **Adicionar Diretório Virtual**.
 
-9. Em **alias**, digite **PKI**. Em **caminho físico** , digite **C:\pki**e clique em **OK**.
+9. Em **alias**, digite **PKI**. Em **caminho físico** , digite **C:\pki** e clique em **OK**.
 
 10. Habilite o acesso anônimo ao diretório virtual PKI, para que qualquer cliente possa verificar a validade dos certificados e das CRLs da AC. Para fazer isso:
 

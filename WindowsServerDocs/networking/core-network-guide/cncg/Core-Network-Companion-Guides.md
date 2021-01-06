@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e7595cc91f1bf3c4b2b631398bc97accba8930cc
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: ffcfbecfa47c39f0bb6e76a6e34953a2ef9140e7
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997114"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950232"
 ---
 # <a name="core-network-companion-guidance"></a>Diretrizes de complementar de rede principal
 
@@ -36,7 +37,7 @@ Certificados de servidor são necessários quando você implanta métodos de aut
 - A capacidade de expandir o uso de certificados para outras finalidades
 
 Para obter instruções sobre como implantar certificados de servidor, consulte [implantar certificados de servidor para implantações com e sem fio 802.1 x](server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md).
-## <a name="core-network-companion-guide-deploy-password-based-8021x-authenticated-wireless-access"></a>Guia complementar de rede de núcleo: implantar o acesso sem fio autenticado baseado em senha 802.1 X
+## <a name="core-network-companion-guide-deploy-password-based-8021x-authenticated-wireless-access"></a>Guia complementar de rede de núcleo: implantar Password-Based acesso sem fio autenticado 802.1 X
 
 Este guia complementar explica como criar a rede principal fornecendo instruções sobre como implantar o Institute of Electrical and Electronics Engineers \( IEEE \) 802.1 x \- autenticado com acesso sem fio IEEE 802,11 usando protocolo de autenticação extensível protegido \ – Microsoft Challenge Handshake Authentication Protocol versão 2 \( PEAP \- MS \- CHAP v2 \) .
 
@@ -49,7 +50,7 @@ Antes de usar este guia para implantar o acesso sem fio com o \- método de aute
 1. Siga as instruções no guia de rede principal para implantar sua infraestrutura de rede principal ou já ter as tecnologias apresentadas nesse guia implantadas em sua rede.
 2. Siga as instruções no guia complementar de rede principal implantar certificados de servidor para implantações 802.1 X com e sem fio, ou já ter as tecnologias apresentadas nesse guia implantadas em sua rede.
 
-Para obter instruções sobre como implantar o acesso sem fio com o PEAP \- MS \- CHAP v2, confira [implantar o acesso sem fio autenticado baseado em senha 802.1 x](wireless/a-deploy-8021X-wireless-access.md).
+Para obter instruções sobre como implantar o acesso sem fio com o PEAP \- MS \- CHAP v2, consulte [implantar Password-Based acesso sem fio autenticado 802.1 x](wireless/a-deploy-8021X-wireless-access.md).
 
 ## <a name="core-network-companion-guide-deploy-branchcache-hosted-cache-mode"></a>Guia complementar de rede de núcleo: implantar o modo de cache hospedado do BranchCache
 

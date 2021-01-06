@@ -2,16 +2,17 @@
 title: Arquitetura de implantação do Gateway de RAS
 description: Você pode usar este tópico para saber mais sobre a implantação do CSP (provedor de serviços de nuvem) do gateway de RAS no Windows Server 2016, incluindo pools de gateway de RAS, refletores de rota e implantação de vários gateways para locatários individuais.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: e15131291f14f8e7affc45d49f1b81e7c8b29ba7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: abc36a7e26ab25f7f121538dcadf9761b111a6e2
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994754"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949362"
 ---
 # <a name="ras-gateway-deployment-architecture"></a>Arquitetura de implantação do Gateway de RAS
 

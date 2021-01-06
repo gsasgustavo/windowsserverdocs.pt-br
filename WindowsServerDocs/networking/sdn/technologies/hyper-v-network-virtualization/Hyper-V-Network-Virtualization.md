@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 896a14d9a912ec5296151af8186e1f5e165512b5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 03931f7e149776abcb6a21a0bb2f033dc43b31b7
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952556"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949932"
 ---
 # <a name="hyper-v-network-virtualization"></a>Virtualização de Rede Hyper-V
 
@@ -19,7 +20,7 @@ ms.locfileid: "87952556"
 
 Introduzido no Windows Server 2012, a HNV (virtualização de rede do Hyper-V) permite a virtualização de redes de clientes sobre uma infraestrutura de rede física compartilhada. Com as alterações mínimas necessárias na malha de rede física, o HNV dá aos provedores de serviços a agilidade para implantar e migrar cargas de trabalho de locatário em qualquer lugar nas três nuvens: a nuvem do provedor de serviços, a nuvem privada ou a nuvem pública Microsoft Azure.
 
-Para obter mais informações, consulte estes tópicos:
+Para mais informações, consulte os seguintes tópicos:
 
 - [Visão geral da virtualização de rede Hyper-V no Windows Server 2016](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
 

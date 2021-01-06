@@ -1,17 +1,18 @@
 ---
 title: Implantar acesso sem fio autenticado 802.1X baseado em senha
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar o acesso sem fio autenticado 802.1 X com base em senha"
+description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
 manager: brianlic
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 252c687d3ea42254edc81d1ea1e6019a4bad69fe
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 2b6a04f10814a077ab1b8aefa612c9fbe6e153a6
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997651"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948412"
 ---
 # <a name="deploy-password-based-8021x-authenticated-wireless-access"></a>Implantar o \- acesso sem fio autenticado 802.1 x baseado em senha
 
@@ -161,7 +162,7 @@ Os **métodos de segurança de rede sem fio** são um agrupamento informal de au
 Ao definir as configurações de segurança sem fio nas políticas de rede sem fio do Política de Grupo, há várias combinações para escolher. No entanto, somente os \- padrões de autenticação WPA2 Enterprise, WPA \- Enterprise e Open with 802.1 x têm suporte para implantações sem fio autenticadas 802.1 x.
 
 >[!NOTE]
->Ao configurar as políticas de rede sem fio, você deve selecionar **WPA2 \- Enterprise**, **WPA \- Enterprise**ou **abrir com 802.1 x** para obter acesso às configurações de EAP necessárias para implantações sem fio autenticadas 802.1 x.
+>Ao configurar as políticas de rede sem fio, você deve selecionar **WPA2 \- Enterprise**, **WPA \- Enterprise** ou **abrir com 802.1 x** para obter acesso às configurações de EAP necessárias para implantações sem fio autenticadas 802.1 x.
 
 #### <a name="wireless-authentication"></a>Autenticação sem fio
 Este guia recomenda o uso dos seguintes padrões de autenticação sem fio para implantações sem fio autenticadas 802.1 X.
@@ -176,14 +177,14 @@ O WPA \- Enterprise fornece segurança aprimorada sobre o WEP:
 
 3. Implementando um contador de quadros para desencorajar ataques de repetição
 
-**Wi \- Acesso protegido Fi 2 – Enterprise \( WPA2 \- Enterprise \) ** como o WPA \- Enterprise Standard, \- o WPA2 Enterprise usa a estrutura 802.1 x e EAP. O WPA2 \- Enterprise fornece proteção de dados mais forte para vários usuários e grandes redes gerenciadas. \-O WPA2 Enterprise é um protocolo robusto que foi projetado para impedir o acesso não autorizado à rede, verificando os usuários de rede por meio de um servidor de autenticação.
+**Wi \- Acesso protegido Fi 2 – Enterprise \( WPA2 \- Enterprise \)** como o WPA \- Enterprise Standard, \- o WPA2 Enterprise usa a estrutura 802.1 x e EAP. O WPA2 \- Enterprise fornece proteção de dados mais forte para vários usuários e grandes redes gerenciadas. \-O WPA2 Enterprise é um protocolo robusto que foi projetado para impedir o acesso não autorizado à rede, verificando os usuários de rede por meio de um servidor de autenticação.
 
 #### <a name="wireless-security-encryption"></a>Criptografia de segurança sem fio
 A criptografia de segurança sem fio é usada para proteger as transmissões sem fio que são enviadas entre o cliente sem fio e o AP sem fio. A criptografia de segurança sem fio é usada em conjunto com o método de autenticação de segurança de rede selecionado. Por padrão, os computadores que executam o Windows 10, Windows 8.1 e Windows 8 dão suporte a dois padrões de criptografia:
 
 1. Protocolo temporal de **integridade de chave** \( \)O TKIP é um protocolo de criptografia mais antigo que foi originalmente projetado para fornecer criptografia sem fio mais segura do que o que foi fornecido pelo protocolo WEP de privacidade equivalente de Wired Equivalent inerentemente fraco \( \) . O TKIP foi projetado pelo grupo de tarefas IEEE 802.11 i e pela Wi- \- Fi Alliance para substituir o WEP sem exigir a substituição do hardware herdado. O TKIP é um conjunto de algoritmos que encapsula a carga WEP e permite que os usuários de equipamentos Wi-Fi herdados atualizem para TKIP sem substituir o hardware. Como o WEP, o TKIP usa o algoritmo de criptografia de fluxo RC4 como base. O novo protocolo, no entanto, criptografa cada pacote de dados com uma chave de criptografia exclusiva e as chaves são muito mais fortes do que aquelas pelo WEP. Embora o TKIP seja útil para atualizar a segurança em dispositivos mais antigos que foram projetados para usar apenas o WEP, ele não aborda todos os problemas de segurança que enfrentam LANs sem fio e, na maioria dos casos, não é suficientemente robusto para proteger as transmissões confidenciais governamentais ou de dados corporativos.
 
-2. **Criptografia AES** \( \)O AES é o protocolo de criptografia preferencial para a criptografia de dados comerciais e governamentais. O AES oferece um nível mais alto de segurança de transmissão sem fio do que o TKIP ou o WEP. Diferentemente do TKIP e do WEP, o AES requer hardware sem fio que ofereça suporte ao padrão AES. O AES é um \- padrão de criptografia de chave simétrica que usa três codificações de bloco, aes \- 128, AES \- 192 e AES \- 256.
+2. **Criptografia AES** \( \) O AES é o protocolo de criptografia preferencial para a criptografia de dados comerciais e governamentais. O AES oferece um nível mais alto de segurança de transmissão sem fio do que o TKIP ou o WEP. Diferentemente do TKIP e do WEP, o AES requer hardware sem fio que ofereça suporte ao padrão AES. O AES é um \- padrão de criptografia de chave simétrica que usa três codificações de bloco, aes \- 128, AES \- 192 e AES \- 256.
 
 No Windows Server 2016, os seguintes \- métodos de criptografia sem fio baseados em AES estão disponíveis para configuração em Propriedades de perfil sem fio quando você seleciona um método de autenticação de WPA2 \- Enterprise, que é recomendado.
 
@@ -193,7 +194,7 @@ No Windows Server 2016, os seguintes \- métodos de criptografia sem fio baseado
 > [!IMPORTANT]
 > \(O WEP de privacidade de equivalência com fio \) era o padrão de segurança sem fio original que foi usado para criptografar o tráfego de rede. Você não deve implantar o WEP em sua rede porque há \- vulnerabilidades bem conhecidas nessa forma de segurança desatualizada.
 
-### <a name="active-directorydoman-services-adds"></a>Active Directory serviços domínios \( AD DS\)
+### <a name="active-directory-doman-services-ad-ds"></a>Active Directory serviços domínios \( AD DS\)
 O AD DS fornece um banco de dados distribuído que armazena e gerencia informações sobre recursos \- de rede e dados específicos do aplicativo de \- aplicativos habilitados para diretório. Os administradores podem usar AD DS para organizar elementos de uma rede, como usuários, computadores e outros dispositivos, em uma estrutura de confinamento hierárquica. A estrutura de confinamento hierárquica inclui a floresta Active Directory, os domínios na floresta e as UOs das unidades organizacionais \( \) em cada domínio. Um servidor que está executando o AD DS é chamado de *controlador de domínio*.
 
 AD DS contém as contas de usuário, as contas de computador e as propriedades de conta exigidas pelo IEEE 802.1 X e PEAP \- MS \- CHAP v2 para autenticar as credenciais do usuário e para avaliar a autorização de conexões sem fio.
@@ -213,7 +214,7 @@ Um certificado de servidor é um documento digital que é comumente usado para a
 
 Uma CA de autoridade de certificação \( \) é uma entidade responsável por estabelecer e comprovar a autenticidade de chaves públicas que pertencem a assuntos \( geralmente usuários ou computadores \) ou outras CAS. As atividades de uma autoridade de certificação podem incluir a associação de chaves públicas a nomes distintos por meio de certificados assinados, gerenciamento de números de série de certificado e revogação de certificados.
 
-Active Directory serviços de certificados \( AD CS \) é uma função de servidor que emite certificados como uma AC de rede. Uma infraestrutura de certificado do AD CS, também conhecida como * \( PKI \) de infraestrutura de chave pública*, fornece serviços personalizáveis para emitir e gerenciar certificados para a empresa.
+Active Directory serviços de certificados \( AD CS \) é uma função de servidor que emite certificados como uma AC de rede. Uma infraestrutura de certificado do AD CS, também conhecida como *\( PKI \) de infraestrutura de chave pública*, fornece serviços personalizáveis para emitir e gerenciar certificados para a empresa.
 
 ### <a name="eap-peap-and-peap-ms-chap-v2"></a>EAP, PEAP e PEAP \- MS \- CHAP v2
 O EAP do protocolo de autenticação extensível \( \) estende o \- protocolo PPP ponto a \- ponto \( \) , permitindo que os métodos de autenticação adicionais usem as trocas de credenciais e informações de comprimentos arbitrários. Com a autenticação EAP, o cliente de acesso à rede e o autenticador, como \( o NPS, \) devem dar suporte ao mesmo tipo de EAP para que a autenticação bem-sucedida ocorra. O Windows Server 2016 inclui uma infraestrutura EAP, dá suporte a dois tipos de EAP e a capacidade de passar mensagens EAP para NPSs. Usando o EAP, você pode dar suporte a esquemas de autenticação adicionais, conhecidos como *tipos de EAP*. Os tipos de EAP com suporte no Windows Server 2016 são:

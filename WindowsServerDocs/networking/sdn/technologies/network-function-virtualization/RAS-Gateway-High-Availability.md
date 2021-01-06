@@ -2,16 +2,17 @@
 title: Alta disponibilidade do Gateway de RAS
 description: Você pode usar este tópico para saber mais sobre as configurações de alta disponibilidade para o gateway de multilocatário do RAS para SDN (rede definida pelo software) no Windows Server 2016.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 0bdf116aeb8f154290b528b9ba96fbb4a8b34426
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 81eab7d646626d705ae8c57b022309c4864bf6d7
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969553"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948832"
 ---
 # <a name="ras-gateway-high-availability"></a>Alta disponibilidade do Gateway de RAS
 

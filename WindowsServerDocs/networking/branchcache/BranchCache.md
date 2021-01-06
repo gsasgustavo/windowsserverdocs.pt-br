@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d03169b3af61dd4925b0ca2f972faff496955b9d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 934b3d7c774e2a61ceae79e1ddfaa9d0922b7164
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989231"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949572"
 ---
 # <a name="branchcache"></a>BranchCache
 
@@ -194,9 +195,9 @@ Para instalar o serviço de função ou o recurso, abra o Gerenciador do Servido
 
 - Na página do assistente **Selecione o tipo de instalação**, selecione **Instalação Baseada em Função ou Recursos**.
 
-- Na página do assistente, **selecione funções de servidor**, se você estiver instalando um servidor de arquivos habilitado para BranchCache, expanda **serviços de arquivo e armazenamento** e **serviços de arquivo e iSCSI**e, em seguida, selecione **BranchCache para arquivos de rede**.  Para economizar espaço em disco, você também pode selecionar o serviço de função **eliminação de duplicação de dados** e, em seguida, continuar o assistente para instalação e conclusão. Se você não quiser instalar um servidor de arquivos habilitado para BranchCache, não instale a função serviços de arquivo e armazenamento com o BranchCache para serviço de função de arquivos de rede.
+- Na página do assistente, **selecione funções de servidor**, se você estiver instalando um servidor de arquivos habilitado para BranchCache, expanda **serviços de arquivo e armazenamento** e **serviços de arquivo e iSCSI** e, em seguida, selecione **BranchCache para arquivos de rede**.  Para economizar espaço em disco, você também pode selecionar o serviço de função **eliminação de duplicação de dados** e, em seguida, continuar o assistente para instalação e conclusão. Se você não quiser instalar um servidor de arquivos habilitado para BranchCache, não instale a função serviços de arquivo e armazenamento com o BranchCache para serviço de função de arquivos de rede.
 
-- Na página do assistente, **selecione recursos**, se você estiver instalando um servidor de conteúdo que não seja um servidor de arquivos ou se estiver instalando um servidor de cache hospedado, selecione **BranchCache**e, em seguida, prossiga com o assistente para instalação e conclusão. Se não quiser instalar um servidor de conteúdo além do servidor de arquivos ou um servidor de cache hospedado, não instale o recurso BranchCache.
+- Na página do assistente, **selecione recursos**, se você estiver instalando um servidor de conteúdo que não seja um servidor de arquivos ou se estiver instalando um servidor de cache hospedado, selecione **BranchCache** e, em seguida, prossiga com o assistente para instalação e conclusão. Se não quiser instalar um servidor de conteúdo além do servidor de arquivos ou um servidor de cache hospedado, não instale o recurso BranchCache.
 
 ## <a name="operating-system-versions-for-branchcache"></a><a name="bkmk_os"></a>Versões de sistemas operacionais para o BranchCache
 

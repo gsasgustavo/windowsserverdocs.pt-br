@@ -6,12 +6,13 @@ ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.openlocfilehash: e9c4bc76e737c70d3d973e6fa77c57adefc7d5b1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: df57714980a6dce5187cd01d1da74e703d6cefca
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953922"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949022"
 ---
 # <a name="network-related-performance-counters"></a>Contadores de desempenho relacionados à rede
 
@@ -25,7 +26,7 @@ Este tópico lista os contadores que são relevantes para gerenciar o desempenho
 
 -   [Desempenho de União lateral de recebimento (RSC)](#bkmk_rsc)
 
-##  <a name="resource-utilization"></a><a name="bkmk_ru"></a>Utilização de recursos
+##  <a name="resource-utilization"></a><a name="bkmk_ru"></a> Utilização de recursos
 
 Os contadores de desempenho a seguir são relevantes para a utilização de recursos de rede.
 
@@ -67,7 +68,7 @@ Os contadores de desempenho a seguir são relevantes para a utilização de recu
 
     Esse contador é uma taxa média na qual as DPCs foram adicionadas à fila de DPC do processador lógico. Cada processador lógico tem sua própria fila de DPC. Esse contador mede a taxa na qual as DPCs são adicionadas à fila, não o número de DPCs na fila. Ele exibe a diferença entre os valores que foram observados nos dois últimos exemplos, divididos pela duração do intervalo de amostragem.
 
-##  <a name="potential-network-problems"></a><a name="bkmk_np"></a>Possíveis problemas de rede
+##  <a name="potential-network-problems"></a><a name="bkmk_np"></a> Possíveis problemas de rede
 
 Os contadores de desempenho a seguir são relevantes para possíveis problemas de rede.
 
@@ -117,7 +118,7 @@ Os contadores de desempenho a seguir são relevantes para possíveis problemas d
 
     -   Conexões rejeitadas/s
 
-##  <a name="receive-side-coalescing-rsc-performance"></a><a name="bkmk_rsc"></a>Desempenho de União lateral de recebimento (RSC)
+##  <a name="receive-side-coalescing-rsc-performance"></a><a name="bkmk_rsc"></a> Desempenho de União lateral de recebimento (RSC)
 
 Os contadores de desempenho a seguir são relevantes para o desempenho do RSC.
 

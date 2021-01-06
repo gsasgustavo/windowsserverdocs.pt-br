@@ -2,17 +2,17 @@
 title: Configurar a criptografia para uma rede virtual
 description: A criptografia de rede virtual permite a criptografia do tráfego de rede virtual entre máquinas virtuais que se comunicam entre si em sub-redes marcadas como ' criptografia habilitada '.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018
-ms.openlocfilehash: 41bf68a18a05f97de4cff14651bf98bfa28bc33c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 17ad35c4cb0bdcb89b095334a282e113028937b1
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990139"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948822"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>Configurar a criptografia para uma sub-rede virtual
 

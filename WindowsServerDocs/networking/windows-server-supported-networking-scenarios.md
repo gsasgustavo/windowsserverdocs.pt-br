@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 author: dcuomo
 ms.author: dacuo
-ms.openlocfilehash: 0059e04b79754a3fb183a51cbd75bc03e9a89ae5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: b8d6b0c3f983ca4798569b06f0a08c95e82106d4
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997547"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97949302"
 ---
 # <a name="windows-server-supported-networking-scenarios"></a>Cenários de rede com suporte do Windows Server
 
@@ -113,7 +114,7 @@ Para obter mais informações, consulte [acesso remoto direto à memória &#40;R
 
 Os cenários de servidor DNS permitem que você:
 
--   Especificar o gerenciamento de tráfego baseado na localização geográfica usando as políticas de DNS
+-   Especificar o gerenciamento de tráfego baseado em Geo-Location usando políticas de DNS
 
 -   Configurar o DNS de divisão-Brain usando políticas de DNS
 
@@ -162,7 +163,7 @@ Os cenários de agrupamento NIC permitem:
 -   Remover adaptadores de rede da equipe NIC
 
 > [!NOTE]
-> No Windows Server 2016, você pode usar o agrupamento NIC no Hyper-V, no entanto, em alguns casos, as filas de máquina virtual (VMQ) podem não ser habilitadas automaticamente nos adaptadores de rede subjacentes quando você cria uma equipe NIC. Se isso ocorrer, você poderá usar o seguinte comando do Windows PowerShell para garantir que a VMQ esteja habilitada nos adaptadores membros da equipe NIC:`Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`
+> No Windows Server 2016, você pode usar o agrupamento NIC no Hyper-V, no entanto, em alguns casos, as filas de máquina virtual (VMQ) podem não ser habilitadas automaticamente nos adaptadores de rede subjacentes quando você cria uma equipe NIC. Se isso ocorrer, você poderá usar o seguinte comando do Windows PowerShell para garantir que a VMQ esteja habilitada nos adaptadores membros da equipe NIC: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`
 
 Para obter mais informações, consulte [agrupamento NIC](technologies/nic-teaming/NIC-Teaming.md).
 

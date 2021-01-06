@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c8963265b6695cf50837216a8ffe0ae7d120e22c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 533ba6aef1c64de60990c3f67c09d3be1996d63b
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969143"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950042"
 ---
 # <a name="step-12-test-directaccess-connectivity"></a>Etapa 12 testar conectividade do DirectAccess
 
@@ -32,7 +33,7 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 ## <a name="verify-clients-have-the-correct-group-policy"></a><a name="policy"></a>Verificar se os clientes têm a política de grupo correta
 
-1.  Em CLIENT1, clique em **Iniciar**, digite **powershell.exe**, clique com o botão direito do mouse em **PowerShell**, clique em **avançado**e, em seguida, clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+1.  Em CLIENT1, clique em **Iniciar**, digite **powershell.exe**, clique com o botão direito do mouse em **PowerShell**, clique em **avançado** e, em seguida, clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 2.  Na janela do Windows PowerShell, digite **ipconfig** e pressione Enter.
 
@@ -46,7 +47,7 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 4.  Deixe a janela do Windows PowerShell aberta para o próximo procedimento.
 
-5.  Em CLIENT2, clique em **Iniciar**, clique em **todos os programas**, clique em **acessórios**, clique em **Windows PowerShell**, clique com o botão direito do mouse em **Windows PowerShell**e clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
+5.  Em CLIENT2, clique em **Iniciar**, clique em **todos os programas**, clique em **acessórios**, clique em **Windows PowerShell**, clique com o botão direito do mouse em **Windows PowerShell** e clique em **Executar como administrador**. Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, confirme se a ação exibida é a que você deseja e, em seguida, clique em **Sim**.
 
 6.  Na janela do Windows PowerShell, digite **ipconfig** e pressione Enter.
 
@@ -93,7 +94,7 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 9. Na janela do Windows PowerShell, digite **ping 2-App1** e pressione Enter. Você deve ver respostas do endereço IPv6 atribuído a 2-APP1, que neste caso é 2001: DB8:2:: 3.
 
-10. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD**C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
+10. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD **C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
 
     A capacidade de executar ping em APP2 é importante, pois o sucesso indica que você conseguiu estabelecer uma conexão usando NAT64/DNS64, pois APP2 é um recurso somente IPv4.
 
@@ -103,19 +104,19 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 13. Na barra de endereços do Internet Explorer, digite **https://app2/** e pressione Enter. Você verá o site padrão no APP2.
 
-14. Na tela **Iniciar** , digite<strong> \\ \2-App1\Files</strong>e pressione Enter. Clique duas vezes no arquivo de texto de exemplo.
+14. Na tela **Iniciar** , digite <strong> \\ \2-App1\Files</strong>e pressione Enter. Clique duas vezes no arquivo de texto de exemplo.
 
     Isso demonstra que você foi capaz de se conectar ao servidor de arquivos no domínio corp2.corp.contoso.com quando conectado por meio de EDGE1.
 
-15. Na tela **Iniciar** , digite<strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
+15. Na tela **Iniciar** , digite <strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
 
     Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso no domínio de recursos.
 
-16. Na tela **Iniciar** , digite**WF. msc**e pressione Enter.
+16. Na tela **Iniciar** , digite **WF. msc** e pressione Enter.
 
 17. No console **Firewall do Windows com segurança avançada** , observe que somente o **perfil público** está ativo. O Firewall do Windows deve estar habilitado para que o DirectAccess funcione corretamente. Se o Firewall do Windows estiver desabilitado, a conectividade do DirectAccess não funcionará.
 
-18. No painel esquerdo do console, expanda o nó **monitoramento** e clique no nó **regras de segurança de conexão** . Você deve ver as regras de segurança de conexão ativas: **política do DirectAccess-ClientToCorp**, **política do DirectAccess-ClientToDNS64NAT64PrefixExemption**, **política do DirectAccess-ClientToInfra**e **política do DirectAccess-ClientToNlaExempt**. Role o painel central para a direita para mostrar as colunas **1ª autenticação** e **2 métodos de autenticação** . Observe que a primeira regra (ClientToCorp) usa o Kerberos V5 para estabelecer o túnel de intranet e a terceira regra (ClientToInfra) usa NTLMv2 para estabelecer o túnel de infraestrutura.
+18. No painel esquerdo do console, expanda o nó **monitoramento** e clique no nó **regras de segurança de conexão** . Você deve ver as regras de segurança de conexão ativas: **política do DirectAccess-ClientToCorp**, **política do DirectAccess-ClientToDNS64NAT64PrefixExemption**, **política do DirectAccess-ClientToInfra** e **política do DirectAccess-ClientToNlaExempt**. Role o painel central para a direita para mostrar as colunas **1ª autenticação** e **2 métodos de autenticação** . Observe que a primeira regra (ClientToCorp) usa o Kerberos V5 para estabelecer o túnel de intranet e a terceira regra (ClientToInfra) usa NTLMv2 para estabelecer o túnel de infraestrutura.
 
 19. No painel esquerdo do console, expanda o nó **associações de segurança** e clique no nó **modo principal** . Observe as associações de segurança de túnel de infraestrutura usando NTLMv2 e a associação de segurança de túnel de intranet usando Kerberos v5. Clique com o botão direito do mouse na entrada que mostra o **usuário (Kerberos V5)** como o **segundo método de autenticação** e clique em **Propriedades**. Na guia **geral** , observe que a **segunda ID local de autenticação** é **CORP\User1**, indicando que o Usuário1 foi capaz de se autenticar com êxito no domínio corp usando o Kerberos.
 
@@ -123,17 +124,17 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 ## <a name="move-client2-to-the-win7_clients_site2-security-group"></a><a name="secgroup"></a>Mover o CLIENT2 para o grupo de segurança Win7_Clients_Site2
 
-1.  No DC1, clique em **Iniciar**, digite **DSA. msc**e pressione Enter.
+1.  No DC1, clique em **Iniciar**, digite **DSA. msc** e pressione Enter.
 
 2.  No console Active Directory usuários e computadores, abra **Corp.contoso.com/users** e clique duas vezes em **Win7_Clients_Site1**.
 
-3.  Na caixa de diálogo **Propriedades do Win7_Clients_Site1** , clique na guia **Membros** , clique em **CLIENT2**, em **remover**, em **Sim**e em **OK**.
+3.  Na caixa de diálogo **Propriedades do Win7_Clients_Site1** , clique na guia **Membros** , clique em **CLIENT2**, em **remover**, em **Sim** e em **OK**.
 
-4.  Clique duas vezes em **Win7_Clients_Site2**e, na caixa de diálogo **Propriedades do Win7_Clients_Site2** , clique na guia **Membros** .
+4.  Clique duas vezes em **Win7_Clients_Site2** e, na caixa de diálogo **Propriedades do Win7_Clients_Site2** , clique na guia **Membros** .
 
-5.  Clique em **Adicionar**e, na caixa de diálogo **Selecionar usuários, contatos, computadores ou contas de serviço** , clique em tipos de **objeto**, selecione **computadores**e clique em **OK**.
+5.  Clique em **Adicionar** e, na caixa de diálogo **Selecionar usuários, contatos, computadores ou contas de serviço** , clique em tipos de **objeto**, selecione **computadores** e clique em **OK**.
 
-6.  Em **Inserir os nomes de objeto a serem selecionados**, digite **CLIENT2**e clique em **OK**.
+6.  Em **Inserir os nomes de objeto a serem selecionados**, digite **CLIENT2** e clique em **OK**.
 
 7.  Reinicie o CLIENT2 e faça logon usando a conta Corp/Usuário1.
 
@@ -169,7 +170,7 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 7. Na janela do Windows PowerShell, digite **ping 2-App1** e pressione Enter. Você deve ver respostas do endereço IPv6 atribuído a 2-APP1, que neste caso é 2001: DB8:2:: 3.
 
-8. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD**C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
+8. Na janela do Windows PowerShell, digite **ping App2** e pressione Enter. Você deve ver respostas do endereço NAT64 atribuído por EDGE1 a APP2, que neste caso é FD **C9:9F4E: eb1b**: 7777:: A00:4. Observe que os valores em negrito variam em virtude de como o endereço é gerado.
 
    A capacidade de executar ping em APP2 é importante, pois o sucesso indica que você conseguiu estabelecer uma conexão usando NAT64/DNS64, pois APP2 é um recurso somente IPv4.
 
@@ -179,11 +180,11 @@ Conecte os dois computadores cliente à rede corpnet e reinicie os dois computad
 
 11. Na barra de endereços do Internet Explorer, digite **https://app2/** e pressione Enter. Você verá o site da Web padrão em APP3.
 
-12. Na tela **Iniciar** , digite<strong> \\ \App1\Files</strong>e pressione Enter. Clique duas vezes no arquivo de texto de exemplo.
+12. Na tela **Iniciar** , digite <strong> \\ \App1\Files</strong>e pressione Enter. Clique duas vezes no arquivo de texto de exemplo.
 
     Isso demonstra que você conseguiu se conectar ao servidor de arquivos no domínio corp.contoso.com quando conectado por meio de 2 a EDGE1.
 
-13. Na tela **Iniciar** , digite<strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
+13. Na tela **Iniciar** , digite <strong> \\ \App2\Files</strong>e pressione Enter. Clique duas vezes no arquivo Novo Documento de Texto.
 
     Isso demonstra que você conseguiu se conectar a um servidor somente IPv4 usando SMB para obter um recurso no domínio de recursos.
 

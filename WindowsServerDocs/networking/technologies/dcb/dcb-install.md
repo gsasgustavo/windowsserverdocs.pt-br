@@ -6,12 +6,13 @@ ms.assetid: b89213d8-143a-45f3-a609-bc6a7027204c
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fe9ef94784baf88ac4871c679d83eec3bbe30ecb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 5499751f44aaa8b361d166e42907b8f380418c84
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954002"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97948352"
 ---
 # <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>Instalar o Data Center Bridging \( DCB \) no windows Server 2016 ou Windows 10
 
@@ -56,7 +57,7 @@ Para executar esses procedimentos, você deve ser membro de **Administradores**.
 
 Você pode usar o procedimento a seguir para instalar o DCB usando o Windows PowerShell.
 
-1. Em um computador que executa o Windows Server 2016, clique em **Iniciar**e clique com o botão direito do mouse no ícone do Windows PowerShell. Um menu é exibido. No menu, clique em **mais**e, em seguida, clique em **Executar como administrador**. Se solicitado, digite as credenciais para uma conta que tenha privilégios de administrador no computador. O Windows PowerShell é aberto com privilégios de administrador.
+1. Em um computador que executa o Windows Server 2016, clique em **Iniciar** e clique com o botão direito do mouse no ícone do Windows PowerShell. Um menu é exibido. No menu, clique em **mais** e, em seguida, clique em **Executar como administrador**. Se solicitado, digite as credenciais para uma conta que tenha privilégios de administrador no computador. O Windows PowerShell é aberto com privilégios de administrador.
 2. Digite o comando a seguir e pressione ENTER.
 
 ````
@@ -70,10 +71,10 @@ Você pode usar o procedimento a seguir para instalar o DCB usando Gerenciador d
 >[!NOTE]
 >Depois de executar a primeira etapa neste procedimento, a página **antes de começar** do assistente para adicionar funções e recursos não será exibida se você tiver selecionado anteriormente **ignorar esta página por padrão** quando o assistente para adicionar funções e recursos for executado. Se a página **antes de começar** não for exibida, pule da etapa 1 para a etapa 3.
 
-1. No DC1, no Gerenciador do Servidor, clique em **gerenciar**e em **adicionar funções e recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
+1. No DC1, no Gerenciador do Servidor, clique em **gerenciar** e em **adicionar funções e recursos**. O Assistente para Adicionar Funções e Recursos é aberto.
 2. Em **Antes de Começar**, clique em **Avançar**.
 3. Em **Selecionar Tipo de Instalação**, verifique se **Instalação baseada em função ou recurso** está marcada e clique em **Avançar**.
-4. Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Próximo**.
+4. Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Avançar**.
 5. Em **Selecionar funções de servidor**, clique em **Avançar**.
 6. Em **selecionar recursos**, em **recursos**, clique em **ponte de data center**. Uma caixa de diálogo é aberta para perguntar se você deseja adicionar os recursos necessários do DCB. Clique em **Adicionar Recursos**.
 7. Em **selecionar recursos**, clique em **Avançar**.
@@ -97,10 +98,10 @@ Para executar esse procedimento, você deve ser membro de **Administradores**.
 
 1. Clique em **Iniciar**, role para baixo e clique em **sistema Windows**.
 2. Clique em **Painel de Controle**. A caixa de diálogo **painel de controle** é aberta.
-3. No **painel de controle**, clique em **Exibir por**e, em seguida, clique em **ícones grandes** ou **ícones pequenos**.
+3. No **painel de controle**, clique em **Exibir por** e, em seguida, clique em **ícones grandes** ou **ícones pequenos**.
 4. Clique em **Programas e Recursos**. A caixa de diálogo programas e recursos é aberta.
 5. Em **programas e recursos**, no painel esquerdo, clique em **Ativar ou desativar recursos do Windows**. A caixa de diálogo **recursos do Windows** é aberta.
-6. Em **recursos do Windows**, clique em **ponte do Data Center**e, em seguida, clique em **OK**.
+6. Em **recursos do Windows**, clique em **ponte do Data Center** e, em seguida, clique em **OK**.
 
 ![Caixa de diálogo ativar ou desativar recursos do Windows](../../media/Dcb-Scripting/Dcb-Scripting.jpg)
 
