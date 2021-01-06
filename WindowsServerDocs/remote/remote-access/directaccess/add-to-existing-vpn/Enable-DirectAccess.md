@@ -1,17 +1,17 @@
 ---
 title: Habilitar o DirectAccess
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba mais sobre as etapas de configuração necessárias para implantar um único servidor de acesso remoto do Windows Server 2016 ou do Windows Server 2012 com as configurações básicas.
 manager: brianlic
 ms.topic: article
 ms.assetid: bf9aaf36-fc3c-4007-bba9-c0b752774601
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 3be0ae83632a027f87e1006b6e9990f1579e0e83
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5bc495b50a3bc0b7d4da45baafd735f51beb7405
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951201"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904201"
 ---
 # <a name="enable-directaccess"></a>Habilitar o DirectAccess
 

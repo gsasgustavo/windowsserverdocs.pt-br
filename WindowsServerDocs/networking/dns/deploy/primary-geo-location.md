@@ -1,17 +1,17 @@
 ---
 title: Usar política de DNS para gerenciamento de tráfego baseado em localização geográfica com servidores primários
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como configurar a política DNS para permitir que servidores DNS primários respondam a consultas de cliente DNS com base na localização geográfica do cliente e do recurso ao qual o cliente está tentando se conectar, fornecendo ao cliente o endereço IP do recurso mais próximo.
 manager: brianlic
 ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 36089433b9168e8c49e443b77317c29366c6b9e5
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 2aa9e1392f133c5f076eac3b508851ae88c41d03
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866515"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904191"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers"></a>Usar política de DNS para gerenciamento de tráfego baseado em localização geográfica com servidores primários
 

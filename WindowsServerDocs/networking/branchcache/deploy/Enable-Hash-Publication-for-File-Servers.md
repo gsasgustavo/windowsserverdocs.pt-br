@@ -1,17 +1,17 @@
 ---
 title: Habilitar publicação de hash para servidores de arquivos
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como habilitar a publicação de hash do BranchCache em um servidor de arquivos ou em vários servidores de arquivos.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 405fe3ea4d7afc771c65442483b1660916aa8d4c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c3cbb414b02a9a2ed3c33c617c9d513c93cb1495
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971843"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904821"
 ---
 # <a name="enable-hash-publication-for-file-servers"></a>Habilitar publicação de hash para servidores de arquivos
 

@@ -1,17 +1,17 @@
 ---
 title: Respostas de DNS com base na hora do dia com o Servidor de aplicativos da nuvem do Azure
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como usar respostas DNS com base na hora do dia com um servidor de aplicativo de nuvem do Azure.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7ea14664702c2e3ff10e64e4f5c84680fdcc1a86
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: b90af11d4bb6f5c1f52699669a8eee4562a97d48
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865295"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904921"
 ---
 # <a name="dns-responses-based-on-time-of-day-with-an-azure-cloud-app-server"></a>Respostas de DNS com base na hora do dia com o Servidor de aplicativos da nuvem do Azure
 

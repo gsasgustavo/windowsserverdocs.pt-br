@@ -1,18 +1,18 @@
 ---
 title: Usar Política de Grupo para configurar computadores cliente membro do domínio
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como usar Política de Grupo para configurar computadores cliente membro do domínio.
 manager: dougkim
 ms.topic: get-started-article
 ms.assetid: 911c1538-f79d-42e9-ba38-f4618f87b008
 ms.author: lizross
 author: eross-msft
 ms.date: 06/02/2018
-ms.openlocfilehash: e36fd1b8884ea899156f2f413162efe14cce52be
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 281e67777ce54f1e03741f9d2120e0d4cafbb91f
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964332"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904642"
 ---
 # <a name="use-group-policy-to-configure-domain-member-client-computers"></a>Usar Política de Grupo para configurar computadores cliente membro do domínio
 
@@ -35,7 +35,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 ## <a name="to-create-a-group-policy-object-and-configure-branchcache-modes"></a><a name="bkmk_gp"></a>Para criar um objeto de Política de Grupo e configurar modos de BranchCache
 
-1.  Em um computador no qual a função de servidor Active Directory Domain Services está instalada, em Gerenciador do Servidor, clique em **ferramentas**e, em seguida, clique em **Gerenciamento de política de grupo**. O console de gerenciamento do Política de Grupo é aberto.
+1.  Em um computador no qual a função de servidor Active Directory Domain Services está instalada, em Gerenciador do Servidor, clique em **ferramentas** e, em seguida, clique em **Gerenciamento de política de grupo**. O console de gerenciamento do Política de Grupo é aberto.
 
 2.  No console de gerenciamento do Política de Grupo, expanda o seguinte caminho: **floresta:** *example.com*, **domínios**, *example.com*, **política de grupo objetos**, em que *example.com* é o nome do domínio em que as contas de computador cliente do BranchCache que você deseja configurar estão localizadas.
 
@@ -55,7 +55,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 10. Se você tiver uma ou mais filiais em que você está implantando o BranchCache no modo de cache hospedado e tiver implantado servidores de cache hospedados nesses escritórios, clique duas vezes em **habilitar descoberta automática de cache hospedado pelo ponto de conexão de serviço**. A caixa de diálogo configuração de política é aberta.
 
-11. Na caixa de diálogo **habilitar descoberta automática de cache hospedado por ponto de conexão de serviço** , clique em **habilitado**e em **OK**.
+11. Na caixa de diálogo **habilitar descoberta automática de cache hospedado por ponto de conexão de serviço** , clique em **habilitado** e em **OK**.
 
     > [!NOTE]
     > Quando você habilita as configurações de política **definir o modo de cache distribuído do BranchCache** e **habilitar descoberta automática de cache hospedado por serviço** , os computadores cliente operam no modo de cache distribuído do BranchCache, a menos que encontrem um servidor de cache hospedado na filial, em que ponto eles operam no modo de cache hospedado.
@@ -72,7 +72,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 4.  Clique com o botão direito do mouse em **Regras de Entrada** e clique em **Nova Regra**. O Assistente para Nova Regra de Entrada é aberto.
 
-5.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache-Recuperação de conteúdo (usa http)**. Clique em **Próximo**.
+5.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache-Recuperação de conteúdo (usa http)**. Clique em **Avançar**.
 
 6.  Em **Regras Predefinidas**, clique em **Avançar**.
 
@@ -83,7 +83,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 8.  Para criar uma exceção do firewall do WS-Discovery, clique novamente com o botão direito do mouse em **Regras de Entrada** e clique em **Nova Regra**. O Assistente para Nova Regra de Entrada é aberto.
 
-9. Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache – descoberta de mesmo nível (usa WSD)**. Clique em **Próximo**.
+9. Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache – descoberta de mesmo nível (usa WSD)**. Clique em **Avançar**.
 
 10. Em **Regras Predefinidas**, clique em **Avançar**.
 
@@ -96,7 +96,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 1.  No console do Editor de Gerenciamento de Diretiva de Grupo, clique com o botão direito do mouse em **Regras de Saída** e clique em **Nova Regra**. O Assistente para Nova Regra de Saída é aberto.
 
-2.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache-Recuperação de conteúdo (usa http)**. Clique em **Próximo**.
+2.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache-Recuperação de conteúdo (usa http)**. Clique em **Avançar**.
 
 3.  Em **Regras Predefinidas**, clique em **Avançar**.
 
@@ -107,7 +107,7 @@ Você deve ser membro de **Admins**. do domínio ou equivalente a executar esses
 
 5.  Para criar uma exceção do firewall do WS-Discovery, clique novamente com o botão direito do mouse em **Regras de Saída** e clique em **Nova Regra**. O Assistente para Nova Regra de Saída é aberto.
 
-6.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache – descoberta de mesmo nível (usa WSD)**. Clique em **Próximo**.
+6.  Em **tipo de regra**, clique em **predefinido**, expanda a lista de opções e clique em **BranchCache – descoberta de mesmo nível (usa WSD)**. Clique em **Avançar**.
 
 7.  Em **Regras Predefinidas**, clique em **Avançar**.
 

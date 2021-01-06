@@ -1,17 +1,17 @@
 ---
 title: Guia de cenários de política de DNS
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como usar a política DNS para controlar como um servidor DNS processa consultas de resolução de nomes com base em parâmetros diferentes que você define em políticas.
 manager: brianlic
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ed28fe6dd472b505d2a39ac55c74c399ef63e068
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 49a928ab46bc190af279b17eaa23ca0ae04869b5
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966653"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904621"
 ---
 # <a name="dns-policy-scenario-guide"></a>Guia de cenários de política de DNS
 
@@ -30,8 +30,8 @@ Este guia contém as seções a seguir.
 - [Usar política de DNS para gerenciamento de tráfego baseado em localização geográfica com implantações primárias e secundárias](primary-secondary-geo-location.md)
 - [Usar a política de DNS para respostas de DNS inteligente com base na hora do dia](dns-tod-intelligent.md)
 - [Respostas DNS com base na hora do dia com um servidor de aplicativos de nuvem do Azure](dns-tod-azure-cloud-app-server.md)
-- [Usar a política DNS para implantação de DNS de divisão-Brain](split-brain-DNS-deployment.md)
-- [Usar a política DNS para o DNS de divisão de cérebro no Active Directory](dns-sb-with-ad.md)
+- [Usar a política DNS para Split-Brain implantação de DNS](split-brain-DNS-deployment.md)
+- [Use a política DNS para Split-Brain DNS no Active Directory](dns-sb-with-ad.md)
 - [Usar a política DNS para aplicar filtros em consultas DNS](apply-filters-on-dns-queries.md)
 - [Usar a Política de DNS para balanceamento de carga de aplicativo](app-lb.md)
 - [Usar a Política de DNS para balanceamento de aplicativo com reconhecimento de localização geográfica](app-lb-geo.md)

@@ -1,17 +1,17 @@
 ---
 title: Instalar servidores de conteúdo dos Serviços de Arquivo
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como instalar o BranchCache para o serviço de função de arquivos de rede da função de servidor de serviços de arquivo e habilitar o BranchCache em compartilhamentos de arquivos de acordo com suas necessidades.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 74b0a5ed-dc20-4974-9d4b-2426987a01a1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1b62e18a1ca90008a2fb9b0d52d5a634f13c6dd5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 85809057c15e0b62aa2b5fdfbf7a8b8209096343
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952640"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904871"
 ---
 # <a name="install-file-services-content-servers"></a>Instalar servidores de conteúdo dos Serviços de Arquivo
 
@@ -32,7 +32,7 @@ Consulte os tópicos a seguir para implantar servidores de conteúdo.
 
 -   [Habilitar a publicação de hash para servidores de arquivos](../../branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md)
 
--   [Habilitar o BranchCache em um compartilhamento de arquivos &#40;&#41;opcional](../../branchcache/deploy/enable-bc-on-file-share.md)
+-   [Habilitar o BranchCache em um compartilhamento de arquivos &#40;&#41;opcional ](../../branchcache/deploy/enable-bc-on-file-share.md)
 
 
 

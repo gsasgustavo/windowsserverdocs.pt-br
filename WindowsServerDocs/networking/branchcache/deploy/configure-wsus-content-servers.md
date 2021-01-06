@@ -1,17 +1,17 @@
 ---
 title: Configurar servidores de conteúdo do WSUS (Windows Server Update Services)
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais.
+description: Saiba como configurar os servidores de conteúdo do Windows Server Update Services (WSUS) para armazenar arquivos de atualização no computador local.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 9724aa8d-e4ae-404c-bee6-cef1534cd3ca
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 0662a72f23a06e62d92fc040aa88e11f795083e3
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1ecd2e601a793690791451bfd39cb949bd08715f
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990163"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904431"
 ---
 # <a name="configure-windows-server-update-services-wsus-content-servers"></a>Configurar servidores de conteúdo do WSUS (Windows Server Update Services)
 

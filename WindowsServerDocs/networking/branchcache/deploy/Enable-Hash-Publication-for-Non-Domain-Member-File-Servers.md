@@ -1,17 +1,17 @@
 ---
 title: Habilitar publicação de hash para servidores de arquivos do membro que não sejam de domínio
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como configurar a publicação de hash para o BranchCache usando o computador local Política de Grupo em um servidor de arquivos com o serviço de função BranchCache para arquivos de rede da função de servidor serviços de arquivos instalada.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 80c65b20dcbae89ecccb67af22e3f569cd0d5c31
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: bee22a7cad20fc32bcb2f0384fdaa9a9a2d8ffce
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969653"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904221"
 ---
 # <a name="enable-hash-publication-for-non-domain-member-file-servers"></a>Habilitar publicação de hash para servidores de arquivos do membro que não sejam de domínio
 
@@ -40,7 +40,7 @@ A associação a **Administradores** ou equivalente é o requisito mínimo para 
 
 6.  Na caixa de diálogo **Publicação de Hash para BranchCache**, clique em **Habilitado**.
 
-7.  Em **Opções**, clique em **Permitir publicação de hash para todas as pastas compartilhadas**e clique em uma das opções a seguir:
+7.  Em **Opções**, clique em **Permitir publicação de hash para todas as pastas compartilhadas** e clique em uma das opções a seguir:
 
     1.  Para habilitar a publicação de hash para todas as pastas compartilhadas neste computador, clique em **Permitir publicação de hash para todas as pastas compartilhadas**.
 

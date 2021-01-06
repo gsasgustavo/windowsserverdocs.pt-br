@@ -1,17 +1,17 @@
 ---
 title: Implantar servidores de cache hospedado (opcional)
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como instalar e configurar servidores de cache hospedados do BranchCache localizados em filiais onde você deseja implantar o modo de cache hospedado do BranchCache.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 75f82b660edeac538bda511d71526aacc2433b5b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8c2ee077fa695f9b20e65a0a6e9f88f62294b1b3
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964242"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904381"
 ---
 # <a name="deploy-hosted-cache-servers-optional"></a>Implantar servidores de cache hospedado (opcional)
 
@@ -22,7 +22,7 @@ Você pode usar este procedimento para instalar e configurar servidores de cache
 > [!IMPORTANT]
 > Essa etapa é opcional porque o modo de cache distribuído não requer um computador de servidor de cache hospedado em filiais. Se você não estiver planejando implantar o modo de cache hospedado em qualquer filial, não será necessário implantar um servidor de cache hospedado e não precisará executar as etapas neste procedimento.
 
-Você deve ser membro de **Administradores**ou equivalente para executar este procedimento.
+Você deve ser membro de **Administradores** ou equivalente para executar este procedimento.
 
 ### <a name="to-install-and-configure-a-hosted-cache-server"></a>Para instalar e configurar um servidor de cache hospedado
 

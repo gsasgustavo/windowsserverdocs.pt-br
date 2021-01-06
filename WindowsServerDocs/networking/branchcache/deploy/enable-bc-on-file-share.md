@@ -1,17 +1,17 @@
 ---
 title: Habilitar BranchCache em um compartilhamento de arquivos (opcional)
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como habilitar o BranchCache em um compartilhamento de arquivos.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7528c00633c17d33dd1d09b23db8a56a3eba5a65
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8b55f38d332cb462b61503f8494f6662dd290a5c
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971813"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904771"
 ---
 # <a name="enable-branchcache-on-a-file-share-optional"></a>Habilitar BranchCache em um compartilhamento de arquivos (opcional)
 
@@ -30,7 +30,7 @@ A associação a **Administradores** ou equivalente é o requisito mínimo para 
 
 2.  No MMC, no menu **Arquivo**, clique em **Adicionar/Remover Snap-in**. A caixa de diálogo **Adicionar ou Remover Snap-ins** é aberta.
 
-3.  Em **Adicionar ou remover snap-ins**, em **snap-ins disponíveis**, clique duas vezes em **pastas compartilhadas**. O assistente de pastas compartilhadas é aberto com o objeto computador local selecionado. Configure o modo de exibição que você preferir, clique em **concluir**e em **OK**.
+3.  Em **Adicionar ou remover snap-ins**, em **snap-ins disponíveis**, clique duas vezes em **pastas compartilhadas**. O assistente de pastas compartilhadas é aberto com o objeto computador local selecionado. Configure o modo de exibição que você preferir, clique em **concluir** e em **OK**.
 
 4.  Clique duas vezes em **pastas compartilhadas (local)** e em **compartilhamentos**.
 

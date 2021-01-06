@@ -1,17 +1,16 @@
 ---
 title: Escolher um design para o BranchCache
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
-manager: brianlic
+description: Saiba como saber mais sobre os modos de BranchCache e para selecionar os melhores modos para sua implantação.
 ms.topic: get-started-article
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f64d27f3ef36c587e2ec5c08f51723942ba6a28c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cfc4632d9e4c8b7904134a9222f9b2d87ea6cdd0
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937505"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904391"
 ---
 # <a name="choosing-a-branchcache-design"></a>Escolher um design para o BranchCache
 

@@ -1,17 +1,17 @@
 ---
 title: Configurar BranchCache em computadores cliente
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como configurar computadores cliente membro do domínio e não membro do domínio como clientes de cache distribuído do BranchCache ou modo de cache hospedado.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: e16dbea9-0f0a-41db-b460-14a1a7ad7540
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fcbffbddcd2b83666722202aaed0f3eb7c7ad78b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 969ec77dfc098a589cf4905f18d8e054f871b455
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971933"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904741"
 ---
 # <a name="configure-branchcache-client-computers"></a>Configurar BranchCache em computadores cliente
 

@@ -1,17 +1,17 @@
 ---
 title: Usar a Política de DNS para balanceamento de carga de aplicativo
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como configurar a política DNS para executar o balanceamento de carga do aplicativo.
 manager: brianlic
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fa415f6c1b7065b0e5da6e83999ed425d9f6b28e
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 849baf9e95af51d5bd3c3bd4460f181fa8836691
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865352"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904911"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>Usar a Política de DNS para balanceamento de carga de aplicativo
 
@@ -27,7 +27,7 @@ Quando você implantou várias instâncias de um aplicativo, pode usar a políti
 
 Veja a seguir um exemplo de como você pode usar a política DNS para o balanceamento de carga do aplicativo.
 
-Este exemplo usa uma empresa fictícia-serviços de presente da Contoso, que fornece serviços gifings online e que tem um site chamado **contosogiftservices.com**.
+Este exemplo usa uma empresa fictícia-serviços de presente da Contoso, que fornece serviços de oferta online e que tem um site chamado **contosogiftservices.com**.
 
 O site contosogiftservices.com é hospedado em vários data centers que têm endereços IP diferentes.
 

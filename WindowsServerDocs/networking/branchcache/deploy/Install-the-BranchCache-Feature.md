@@ -1,17 +1,17 @@
 ---
 title: Instalar o recurso BranchCache
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como instalar o recurso do BranchCache e iniciar o serviço do BranchCache em um computador que executa o Windows Server 2016, o Windows Server 2012 R2 ou o Windows Server 2012.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 64fa6dea8d93d0e152b0cf795251aec0d9f52bc5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: abbc7fe051cda1f18b0baa6ec334ee3b339b2925
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952618"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904161"
 ---
 # <a name="install-the-branchcache-feature"></a>Instalar o recurso BranchCache
 
@@ -32,7 +32,7 @@ Antes de executar esse procedimento, é recomendável que você instale e config
 
 ### <a name="to-install-and-enable-the-branchcache-feature"></a>Para instalar e habilitar o recurso BranchCache
 
-1.  No Gerenciador do Servidor, clique em **Gerenciar** e depois em **Adicionar Funções e Recursos**. O assistente Adicionar funções e recursos é aberto. Clique em **Próximo**.
+1.  No Gerenciador do Servidor, clique em **Gerenciar** e depois em **Adicionar Funções e Recursos**. O assistente Adicionar funções e recursos é aberto. Clique em **Avançar**.
 
 2.  Em **Selecionar tipo de instalação**, verifique se a instalação baseada em **função ou em recurso** está selecionada e clique em **Avançar**.
 
@@ -40,7 +40,7 @@ Antes de executar esse procedimento, é recomendável que você instale e config
 
 4.  Em **Selecionar funções de servidor**, clique em **Avançar**.
 
-5.  Em **selecionar recursos**, clique em **BranchCache**e em **Avançar**.
+5.  Em **selecionar recursos**, clique em **BranchCache** e em **Avançar**.
 
 6.  Em **Confirmar seleções de instalação**, clique em **Instalar**. Em **andamento da instalação**, a instalação do recurso do BranchCache continua. Quando a instalação for concluída, clique em **fechar**.
 

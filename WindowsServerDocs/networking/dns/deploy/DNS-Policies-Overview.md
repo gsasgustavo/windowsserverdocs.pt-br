@@ -1,23 +1,23 @@
 ---
 title: Visão geral das políticas de DNS
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como usar a política DNS para gerenciamento de tráfego baseado em Geo-Location, respostas de DNS inteligente com base na hora do dia, para gerenciar um único servidor DNS configurado para implantação de divisão \- Brain, aplicação de filtros em consultas DNS e muito mais.
 manager: brianlic
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ef2917f59ff0e5f5bf5566b662f5463b2984261f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d913905fe5b40e4e3e24828a0c6b392c1691043d
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964252"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904661"
 ---
 # <a name="dns-policies-overview"></a>Visão geral das políticas de DNS
 
 >Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
 
-Você pode usar este tópico para saber mais sobre a política DNS, que é nova no Windows Server 2016. Você pode usar a política DNS para gerenciamento de tráfego baseado em localização geográfica, respostas de DNS inteligente com base na hora do dia, para gerenciar um único servidor DNS configurado para implantação de divisão \- Brain, aplicação de filtros em consultas DNS e muito mais. Os itens a seguir fornecem mais detalhes sobre esses recursos.
+Você pode usar este tópico para saber mais sobre a política DNS, que é nova no Windows Server 2016. Você pode usar a política DNS para gerenciamento de tráfego baseado em Geo-Location, respostas de DNS inteligente com base na hora do dia, para gerenciar um único servidor DNS configurado para implantação de divisão \- Brain, aplicação de filtros em consultas DNS e muito mais. Os itens a seguir fornecem mais detalhes sobre esses recursos.
 
 -   **Balanceamento de carga do aplicativo.** Quando você implantou várias instâncias de um aplicativo em locais diferentes, você pode usar a política DNS para balancear a carga de tráfego entre as diferentes instâncias de aplicativo, alocando dinamicamente a carga de tráfego para o aplicativo.
 
@@ -63,19 +63,19 @@ Você pode usar políticas de resolução de consulta DNS para especificar como 
 O campo de critérios de política DNS é composto por dois elementos:
 
 
-|              Nome               |                                         Descrição                                          |                                                                                                                               Valores de exemplo                                                                                                                               |
+|              Name               |                                         Descrição                                          |                                                                                                                               Valores de exemplo                                                                                                                               |
 |---------------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        **Sub-rede do cliente**        | Nome de uma sub-rede de cliente predefinida. Usado para verificar a sub-rede da qual a consulta foi enviada. |                             -   **EQ, Espanha, França** -resolve para verdadeiro se a sub-rede for identificada como Espanha ou França<br />-   **Ne, Canadá, México** -resolve para verdadeiro se a sub-rede do cliente for qualquer sub-rede diferente do Canadá e do México                             |
 |     **Protocolo de transporte**      |        Protocolo de transporte usado na consulta. As entradas possíveis são **UDP** e **TCP**        |                                                                                                                    -   **EQ, TCP**<br />-   **EQ, UDP**                                                                                                                     |
-|      **Protocolo IP**      |        Protocolo de rede usado na consulta. As entradas possíveis são **IPv4** e **IPv6**        |                                                                                                                   -   **EQ, IPv4**<br />-   **EQ, IPv6**                                                                                                                    |
+|      **Protocolo de Internet**      |        Protocolo de rede usado na consulta. As entradas possíveis são **IPv4** e **IPv6**        |                                                                                                                   -   **EQ, IPv4**<br />-   **EQ, IPv6**                                                                                                                    |
 | **Endereço IP da interface do servidor** |                   Endereço IP para a interface de rede do servidor DNS de entrada                   |                                                                                                              -   **EQ, 10.0.0.1**<br />-   **EQ, 192.168.1.1**                                                                                                              |
-|            **FQDN**             |            FQDN do registro na consulta, com a possibilidade de usar um curinga            | -   **EQ, www. contoso. com** -resolve para verdadeiro somente se a consulta estiver tentando resolver o FQDN do <em>www.contoso.com</em><br />-   **EQ, \* . contoso.com, \* . Woodgrove.com** -resolve para verdadeiro se a consulta for para qualquer registro que termina em *contoso.com***ou***Woodgrove.com* |
+|            **FQDN**             |            FQDN do registro na consulta, com a possibilidade de usar um curinga            | -   **EQ, www. contoso. com** -resolve para verdadeiro somente se a consulta estiver tentando resolver o FQDN do <em>www.contoso.com</em><br />-   **EQ, \* . contoso.com, \* . Woodgrove.com** -resolve para verdadeiro se a consulta for para qualquer registro que termina em * contoso.com ***ou**_Woodgrove.com_ |
 |         **Tipo de consulta**          |                          Tipo de registro que está sendo consultado (A, SRV, TXT)                          |                                                  -   **EQ, txt, SRV** -resolve para verdadeiro se a consulta estiver solicitando um registro txt **ou** SRV<br />-   **EQ, MX** -resolve para verdadeiro se a consulta estiver solicitando um registro MX                                                   |
 |         **Hora do dia**         |                              Hora do dia em que a consulta é recebida                               |                                                                    -   **EQ, 10:00-12:00, 22:00-23:00** -resolve para verdadeiro se a consulta for recebida entre 10 a.m. e meio-dia, **ou** entre 19:10 e 23h                                                                    |
 
 Usando a tabela acima como ponto de partida, a tabela a seguir pode ser usada para definir um critério que é usado para fazer a correspondência de consultas de qualquer tipo de registro, mas SRV registros no domínio contoso.com provenientes de um cliente na sub-rede 10.0.0.0/24 via TCP entre 8 e 10 PM por meio da interface 10.0.0.3:
 
-|Nome|Valor|
+|Name|Valor|
 |--------|---------|
 |Sub-rede do cliente|EQ, 10.0.0.0/24|
 |Protocolo de Transporte|EQ, TCP|
@@ -95,7 +95,7 @@ Você pode usar políticas de recursão para implementar uma configuração de D
 
 As políticas de recursão contêm os mesmos elementos que uma política de resolução de consulta DNS regular contém, juntamente com os elementos na tabela abaixo:
 
-|Nome|Descrição|
+|Name|Descrição|
 |--------|---------------|
 |**Aplicar na recursão**|Especifica que essa política só deve ser usada para recursão.|
 |**Escopo da recursão**|Nome do escopo de recursão.|
@@ -189,12 +189,12 @@ Para obter informações sobre como usar a política DNS para cenários específ
 - [Usar política de DNS para gerenciamento de tráfego baseado em localização geográfica com implantações primárias e secundárias](primary-secondary-geo-location.md)
 - [Usar a política de DNS para respostas de DNS inteligente com base na hora do dia](dns-tod-intelligent.md)
 - [Respostas DNS com base na hora do dia com um servidor de aplicativos de nuvem do Azure](dns-tod-azure-cloud-app-server.md)
-- [Usar a política DNS para implantação de DNS de divisão-Brain](split-brain-DNS-deployment.md)
-- [Usar a política DNS para o DNS de divisão de cérebro no Active Directory](dns-sb-with-ad.md)
+- [Usar a política DNS para Split-Brain implantação de DNS](split-brain-DNS-deployment.md)
+- [Use a política DNS para Split-Brain DNS no Active Directory](dns-sb-with-ad.md)
 - [Usar a política DNS para aplicar filtros em consultas DNS](apply-filters-on-dns-queries.md)
 - [Usar a Política de DNS para balanceamento de carga de aplicativo](app-lb.md)
 - [Usar a Política de DNS para balanceamento de aplicativo com reconhecimento de localização geográfica](app-lb-geo.md)
 
-## <a name="using-dns-policy-on-read-only-domain-controllers"></a>Usando a política DNS em controladores de domínio somente leitura
+## <a name="using-dns-policy-on-read-only-domain-controllers"></a>Usando a política DNS em Read-Only controladores de domínio
 
-A política DNS é compatível com controladores de domínio somente leitura. Observe que uma reinicialização do serviço do servidor DNS é necessária para que novas políticas de DNS sejam carregadas em controladores de domínio somente leitura. Isso não é necessário em controladores de domínio graváveis.
+A política DNS é compatível com Read-Only controladores de domínio. Observe que uma reinicialização do serviço do servidor DNS é necessária para que novas políticas de DNS sejam carregadas em Read-Only controladores de domínio. Isso não é necessário em controladores de domínio graváveis.

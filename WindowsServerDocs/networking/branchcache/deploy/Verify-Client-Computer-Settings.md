@@ -1,17 +1,17 @@
 ---
 title: Verificar as configurações do computador cliente
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como verificar se o computador cliente está configurado corretamente para BranchCache.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 14fcc91fc1fcf419a81dd5d774486dc5e0800f4e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1aeaf2bc86b1a71d0d58be7dce72ba36a63fac01
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937545"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904451"
 ---
 # <a name="verify-client-computer-settings"></a>Verificar as configurações do computador cliente
 
@@ -22,7 +22,7 @@ Você pode usar este procedimento para verificar se o computador cliente está c
 > [!NOTE]
 > Este procedimento inclui etapas para atualizar manualmente Política de Grupo e para reiniciar o serviço do BranchCache. Não será necessário executar essas ações se você reinicializar o computador, pois eles ocorrerão automaticamente nessa circunstância.
 
-Você deve ser membro de **Administradores**ou equivalente para executar este procedimento.
+Você deve ser membro de **Administradores** ou equivalente para executar este procedimento.
 
 ### <a name="to-verify-branchcache-client-computer-settings"></a>Para verificar as configurações do computador cliente do BranchCache
 

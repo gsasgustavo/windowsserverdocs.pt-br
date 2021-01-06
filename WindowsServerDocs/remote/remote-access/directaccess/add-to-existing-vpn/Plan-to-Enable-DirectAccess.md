@@ -1,17 +1,17 @@
 ---
 title: Plano para habilitar o DirectAccess
-description: Este tópico faz parte do guia adicionar o DirectAccess a uma implantação de VPN (acesso remoto) existente para o Windows Server 2016
+description: Saiba mais sobre a infraestrutura do DirectAccess e a implantação do DirectAccess para Windows Server (canal semestral), Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 34bb0ae02a2fe2461790d32095c247f56cdd8c43
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b0eb294425d3dde02e12a9b92281de6f80773900
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951191"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904211"
 ---
 # <a name="plan-to-enable-directaccess"></a>Plano para habilitar o DirectAccess
 

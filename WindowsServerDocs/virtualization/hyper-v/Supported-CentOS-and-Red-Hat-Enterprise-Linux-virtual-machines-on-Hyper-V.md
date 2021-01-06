@@ -6,12 +6,12 @@ ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: jperrin
 ms.author: japerrin
 ms.date: 11/11/2020
-ms.openlocfilehash: a43a5b3a107f6b4309bce33d61be123dedf8c8ed
-ms.sourcegitcommit: 4f7308430a69fe7965e16aa5b31f87c5d68e4a09
+ms.openlocfilehash: e92e52856bf293bbfbe55f9dc325ad0438f68a86
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577408"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904521"
 ---
 <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais CentOS e Red Hat Enterprise Linux com suporte no Hyper-V
 =========================================================================
@@ -52,44 +52,44 @@ Nesta seção:
 <a name="rhelcentos-8x-series"></a>Série RHEL/CentOS 8. x
 ----------------------
 
-| **Recurso**                                                                                                                              | **Versão do Windows Server** | **8.2**          | **8.1**          | **8.0**          |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|------------------|------------------|------------------|
-| **Disponibilidade**                                                                                                                         |                            |                  |                 |                   |
-| [Básico](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Tempo preciso do Windows Server 2016                                                                                                        | 2019, 2016                 | ✔                | ✔               | ✔                 |
-| \>256 vCPUs                                                                                                                              |                            |                  |                 |                   |
-| [Rede](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                            |                  |                 |                   |
-| Quadros jumbo                                                                                                                             | 2019, 2016, 2012 R2        | ✔                | ✔               |   ✔               |
-| Marcação e entroncamento de VLAN                                                                                                                | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Migração dinâmica                                                                                                                           | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Injeção de IP estático                                                                                                                      | 2019, 2016, 2012 R2        | Observação de ✔ 2         | Observação de ✔ 2        | Observação de ✔ 2          |
-| vRSS                                                                                                                                     | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Segmentação de TCP e descarregamentos de soma de verificação                                                                                                   | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| SR-IOV                                                                                                                                   | 2019, 2016                 | ✔                | ✔               | ✔                 |
-| [Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                            | ✔                |                 |                   |
-| Redimensionamento de VHDX                                                                                                                              | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Fibre Channel Virtual                                                                                                                    | 2019, 2016, 2012 R2        | Observação de ✔ 3         | Observação de ✔ 3        | Observação de ✔ 3          |
-| Backup de máquina virtual ao vivo                                                                                                              | 2019, 2016, 2012 R2        | Observação de ✔ 5         | Observação de ✔ 5        | Observação de ✔ 5          |
-| Suporte a corte                                                                                                                             | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| WWN DO SCSI                                                                                                                                 | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| [Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                            |                  |                 |                   |
-| Suporte ao kernel de PAE                                                                                                                       | 2019, 2016, 2012 R2        |                  | N/D             | N/D               |
-| Configuração da lacuna de MMIO                                                                                                                | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Memória Dinâmica-Hot-Add                                                                                                                 | 2019, 2016, 2012 R2        | Nota ✔ 8, 9, 10  | Nota ✔ 8, 9, 10 | Nota ✔ 8, 9, 10   |
-| Memória Dinâmica-balões                                                                                                              | 2019, 2016, 2012 R2        | Nota ✔ 8, 9, 10  | Nota ✔ 8, 9, 10 | Nota ✔ 8, 9, 10   |
-| Redimensionamento de memória de Runtime                                                                                                                    | 2019, 2016                 | ✔                | ✔               | ✔                 |
-| [Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                            |                  |                 |                   |
-| Dispositivo de vídeo específico do Hyper-V                                                                                                            | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| [Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                            |                  |                 |                   |
-| Key-Value emparelhar                                                                                                                           | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Interrupção não mascarável                                                                                                                   | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Cópia de arquivo do host para o convidado                                                                                                             | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| comando lsvmbus                                                                                                                          | 2019, 2016, 2012 R2        | ✔                | ✔               | ✔                 |
-| Soquetes do Hyper-V                                                                                                                          | 2019, 2016                 | ✔                | ✔               | ✔                 |
-| Passagem de PCI/DDA                                                                                                                      | 2019, 2016                 | ✔                | ✔               | ✔                 |
-| [Máquinas virtuais de 2ª geração](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                            |                  |                 |                   |
-| Inicializar usando UEFI                                                                                                                          | 2019, 2016, 2012 R2        | Nota de ✔ 14        | Nota de ✔ 14       | Nota de ✔ 14         |
-| Inicialização Segura                                                                                                                              | 2019, 2016                 | ✔                | ✔               | ✔                 |
+| **Recurso**                                                                                                                              | **Versão do Windows Server** |  **8.3**          |**8.2**          | **8.1**         |  **8.0**          |
+|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|-------------------|-----------------|-----------------|-------------------|
+| **Disponibilidade**                                                                                                                         |                            |                   |                 |                 |                   |
+| [Básico](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Tempo preciso do Windows Server 2016                                                                                                        | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
+| \>256 vCPUs                                                                                                                              |                            |                   |                 |                 |                   |
+| [Rede](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                            |                   |                 |                 |                   |
+| Quadros jumbo                                                                                                                             | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               |   ✔               |
+| Marcação e entroncamento de VLAN                                                                                                                | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Migração dinâmica                                                                                                                           | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Injeção de IP estático                                                                                                                      | 2019, 2016, 2012 R2        |  Observação de ✔ 2         |Observação de ✔ 2         | Observação de ✔ 2        | Observação de ✔ 2          |
+| vRSS                                                                                                                                     | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Segmentação de TCP e descarregamentos de soma de verificação                                                                                                   | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| SR-IOV                                                                                                                                   | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
+| [Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                            |  ✔                |✔                |                 |                   |
+| Redimensionamento de VHDX                                                                                                                              | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Fibre Channel Virtual                                                                                                                    | 2019, 2016, 2012 R2        |  Observação de ✔ 3         |Observação de ✔ 3         | Observação de ✔ 3        | Observação de ✔ 3          |
+| Backup de máquina virtual ao vivo                                                                                                              | 2019, 2016, 2012 R2        |  Observação de ✔ 5         |Observação de ✔ 5         | Observação de ✔ 5        | Observação de ✔ 5          |
+| Suporte a corte                                                                                                                             | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| WWN DO SCSI                                                                                                                                 | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| [Memória](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                            |                   |                 |                 |                   |
+| Suporte ao kernel de PAE                                                                                                                       | 2019, 2016, 2012 R2        |                   |                 | N/D             | N/D               |
+| Configuração da lacuna de MMIO                                                                                                                | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Memória Dinâmica-Hot-Add                                                                                                                 | 2019, 2016, 2012 R2        |  Nota ✔ 8, 9, 10  |Nota ✔ 8, 9, 10  | Nota ✔ 8, 9, 10 | Nota ✔ 8, 9, 10   |
+| Memória Dinâmica-balões                                                                                                              | 2019, 2016, 2012 R2        |  Nota ✔ 8, 9, 10  |Nota ✔ 8, 9, 10  | Nota ✔ 8, 9, 10 | Nota ✔ 8, 9, 10   |
+| Redimensionamento de memória de Runtime                                                                                                                    | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
+| [Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                            |                   |                 |                 |                   |
+| Dispositivo de vídeo específico do Hyper-V                                                                                                            | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| [Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                            |                   |                 |                 |                   |
+| Key-Value emparelhar                                                                                                                           | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Interrupção não mascarável                                                                                                                   | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Cópia de arquivo do host para o convidado                                                                                                             | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| comando lsvmbus                                                                                                                          | 2019, 2016, 2012 R2        |  ✔                |✔                | ✔               | ✔                 |
+| Soquetes do Hyper-V                                                                                                                          | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
+| Passagem de PCI/DDA                                                                                                                      | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
+| [Máquinas virtuais de 2ª geração](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                            |                   |                 |                 |                   |
+| Inicializar usando UEFI                                                                                                                          | 2019, 2016, 2012 R2        |  Nota de ✔ 14        |Nota de ✔ 14        | Nota de ✔ 14       | Nota de ✔ 14         |
+| Inicialização Segura                                                                                                                              | 2019, 2016                 |  ✔                |✔                | ✔               | ✔                 |
 
 <a name="rhelcentos-7x-series"></a>Série RHEL/CentOS 7. x
 ----------------------

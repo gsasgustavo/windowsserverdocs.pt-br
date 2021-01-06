@@ -1,17 +1,17 @@
 ---
 title: Usar a Política de DNS para a aplicação de filtros em consultas DNS
-description: Este tópico faz parte do guia de cenário de política DNS do Windows Server 2016
+description: Saiba como configurar a política DNS no Windows Server 2016 para criar filtros de consulta baseados em critérios fornecidos por você.
 manager: brianlic
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4f309a304e4457b27eec0ae41d581c5a7bf9bd50
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 056211f2753c4c9d445e04d5031ab48d1e18a216
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865335"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904572"
 ---
 # <a name="use-dns-policy-for-applying-filters-on-dns-queries"></a>Usar a Política de DNS para a aplicação de filtros em consultas DNS
 
@@ -28,7 +28,7 @@ Outro exemplo é criar uma lista de permissões de filtro de consulta que permit
 ## <a name="query-filter-criteria"></a><a name="bkmk_criteria"></a> Critérios de filtro de consulta
 Você pode criar filtros de consulta com qualquer combinação lógica (e/ou/não) dos critérios a seguir.
 
-|Nome|Descrição|
+|Name|Descrição|
 |-----------------|---------------------|
 |Sub-rede do cliente|Nome de uma sub-rede de cliente predefinida. Usado para verificar a sub-rede da qual a consulta foi enviada.|
 |Protocolo de Transporte|Protocolo de transporte usado na consulta. Os valores possíveis são UDP e TCP.|

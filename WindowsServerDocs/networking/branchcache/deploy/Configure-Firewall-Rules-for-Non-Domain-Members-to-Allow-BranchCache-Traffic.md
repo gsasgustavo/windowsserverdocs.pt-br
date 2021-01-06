@@ -1,17 +1,17 @@
 ---
 title: Configurar regras de firewall para membros não associados a domínio para permitir tráfego BranchCache
-description: Este tópico faz parte do guia de implantação do BranchCache para o Windows Server 2016, que demonstra como implantar o BranchCache em modos de cache distribuídos e hospedados para otimizar o uso de largura de banda WAN em filiais
+description: Saiba como configurar produtos de firewall de terceiros e configurar manualmente um computador cliente com regras de firewall que permitem que o BranchCache seja executado no modo de cache distribuído.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 414f28c72817e91c56c91b6fd6acbb48e786cbd8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b52a0c212ba7f0d30097aef6c7bd65e6d900b336
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971923"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904231"
 ---
 # <a name="configure-firewall-rules-for-non-domain-members-to-allow-branchcache-traffic"></a>Configurar regras de firewall para membros não associados a domínio para permitir tráfego BranchCache
 
