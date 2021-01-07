@@ -1,17 +1,18 @@
 ---
 title: Etapa 2 configurar o servidor DirectAccess básico
-description: Este tópico faz parte do guia implantar um único servidor DirectAccess usando o assistente de Introdução para Windows Server 2016
+description: Saiba como definir as configurações de cliente e servidor necessárias para uma implantação básica do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c70e68d6bdf96cd8493720936121b1ea90a9e971
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: 5e42d6c73701e7aa07e2f69b3d867258723bc7fd
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995907"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950462"
 ---
 # <a name="step-2-configure-the-basic-directaccess-server"></a>Etapa 2 configurar o servidor DirectAccess básico
 
@@ -41,13 +42,13 @@ Para implantar o Acesso Remoto, você deverá instalar a função Acesso Remoto 
 
 4.  Na caixa de diálogo **Selecionar recursos**, clique em **Avançar**.
 
-5.  Clique em **Avançar**e, na caixa de diálogo **selecionar serviços de função** , clique em **DirectAccess e VPN (RAS)** .
+5.  Clique em **Avançar** e, na caixa de diálogo **selecionar serviços de função** , clique em **DirectAccess e VPN (RAS)** .
 
-6.  Clique em **Adicionar recursos**, clique em **Avançar**e em **instalar**.
+6.  Clique em **Adicionar recursos**, clique em **Avançar** e em **instalar**.
 
 7.  Na caixa de diálogo **Progresso da instalação**, verifique se a instalação foi bem-sucedida e clique em **Fechar**.
 
-![](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>Comandos equivalentes</em> do Windows PowerShell***
+![](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif) * *_<em>Comandos equivalentes</em>_* do Windows PowerShell
 
 Os seguintes cmdlets ou cmdlets do Windows PowerShell instalam a função de acesso remoto:
 
@@ -78,13 +79,13 @@ Os seguintes cmdlets ou cmdlets do Windows PowerShell instalam a função de ace
 
 #### <a name="to-configure-directaccess-using-the-getting-started-wizard"></a>Para configurar o DirectAccess usando o Assistente do Guia de Introdução
 
-1.  No Gerenciador do Servidor, clique em **Ferramentas** e clique em **Gerenciamento de Acesso Remoto**.
+1.  Em Gerenciador do Servidor clique em _ * ferramentas * * e, em seguida, clique em **Gerenciamento de acesso remoto**.
 
 2.  No console de gerenciamento de acesso remoto, selecione o serviço de função a ser configurado no painel de navegação esquerdo e clique em **executar o assistente de introdução**.
 
 3.  Clique em **Implantar somente DirectAccess**.
 
-4.  Selecione a topologia da configuração de rede e digite o nome público ao qual os clientes de acesso remoto irão se conectar. Clique em **Próximo**.
+4.  Selecione a topologia da configuração de rede e digite o nome público ao qual os clientes de acesso remoto irão se conectar. Clique em **Avançar**.
 
     > [!NOTE]
     > Por padrão, o Assistente do Guia de Introdução implanta o DirectAccess em todos os laptops e notebooks no domínio por meio da aplicação de um filtro WMI ao GOP de configurações do cliente.

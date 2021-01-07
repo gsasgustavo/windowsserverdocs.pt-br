@@ -6,12 +6,13 @@ ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: eca49b5b20e34aca9c5e65b1544f2308295d7445
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: d95ed99889eef110f45f5c672b7491d7bbe1cdcc
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953862"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950282"
 ---
 # <a name="qos-policy-architecture"></a>Arquitetura de política de QoS
 
@@ -37,7 +38,7 @@ A arquitetura da QoS baseada em políticas consiste nos seguintes componentes:
 
 - **NDIS 6. x**. Uma interface padrão entre drivers de rede de modo kernel e o sistema operacional em sistemas operacionais Windows Server e cliente. O NDIS 6. x dá suporte a filtros leves, que é um modelo de driver simplificado para drivers intermediários NDIS e drivers de miniporta que fornece melhor desempenho.
 
-- Interface do provedor de rede de ** \( QoS NPI \) **. Uma interface para drivers de modo kernel para interagir com Pacer.sys.
+- Interface do provedor de rede de **\( QoS NPI \)**. Uma interface para drivers de modo kernel para interagir com Pacer.sys.
 
 - **Pacer.sys**. Um driver de filtro simples do NDIS 6. x que controla o agendamento de pacotes para a QoS baseada em políticas e para o tráfego de aplicativos que usam as \( APIs de TC de controle de tráfego e GQoS de QoS genérica \) \( \) . Pacer.sys substituído Psched.sys no Windows Server 2003 e no Windows XP. O Pacer.sys é instalado com o componente de Agendador de pacotes QoS nas propriedades de uma conexão de rede ou adaptador.
 

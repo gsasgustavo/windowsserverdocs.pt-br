@@ -6,12 +6,13 @@ ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d777824d8e88cdb4e96f669fba9a96269783443b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.date: 08/07/2020
+ms.openlocfilehash: f1a3b76c0939e0b6dbe445799bdc9c96c4f16f1f
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997261"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950382"
 ---
 # <a name="qos-policy-scenarios"></a>Cenários de política de QoS
 
@@ -48,7 +49,7 @@ Com três metas separadas a serem realizadas, o administrador de ti decide criar
 
 #### <a name="qos-policy-for-lob-app-servers"></a>Política de QoS para servidores de aplicativos LOB
 
-O primeiro \- aplicativo essencial para o qual o departamento de ti cria uma política de QoS é um \- aplicativo ERP de planejamento de recursos empresariais em toda a empresa \( \) . O aplicativo ERP é hospedado em vários computadores que estão executando o Windows Server 2016. Em Active Directory Domain Services, esses computadores são membros de uma UO de unidade organizacional \( \) que foi criada para servidores de aplicativos LOB de linha de negócios \( \) . O componente do lado do cliente \- para o aplicativo ERP é instalado em computadores que executam o Windows 10 e o Windows 8.1.
+O primeiro \- aplicativo essencial para o qual o departamento de ti cria uma política de QoS é um \- aplicativo ERP de planejamento de recursos empresariais em toda a empresa \( \) . O aplicativo ERP é hospedado em vários computadores que estão executando o Windows Server 2016. Em Active Directory Domain Services, esses computadores são membros de uma UO de unidade organizacional \( \) que foi criada para servidores de aplicativos LOB de linha de negócios \( \)  . O componente do lado do cliente \- para o aplicativo ERP é instalado em computadores que executam o Windows 10 e o Windows 8.1.
 
 No Política de Grupo, um administrador de ti seleciona o GPO do objeto Política de Grupo \( \) no qual a política de QoS será aplicada. Usando o assistente de política de QoS, o administrador de ti cria uma política de QoS chamada "política de LOB de servidor" que especifica um \- valor DSCP de alta prioridade de 44 para todos os aplicativos, qualquer endereço IP, TCP e UDP e número de porta.
 
@@ -75,7 +76,7 @@ Um terceiro GPO é criado e implantado para todos os computadores cliente no dom
 
 A tabela a seguir resume as políticas de QoS para esse cenário.
 
-|Nome de política|Valor de DSCP|Taxa de limitação|Aplicado a unidades organizacionais|Descrição|
+|Nome de política|Valor de DSCP|Taxa de limitação|Aplicado a unidades organizacionais|Description|
 |-----------------|----------------|-------------------|-----------------------------------|-----------------|
 |[Nenhuma política]|0|Nenhum|[Sem implantação]|Tratamento de melhor esforço (padrão) para tráfego não classificado.|
 |Dados de backup|1|Nenhum|Todos os clientes|Aplica um valor DSCP de baixa prioridade para esses dados em massa.|
@@ -161,11 +162,11 @@ Mas qual deles receberá precedência? As regras são simples. As políticas bas
 
 Os detalhes são os seguintes:
 
-####  <a name="1-url-scheme"></a><a name="bkmk_QoS_UrlScheme"></a>1. esquema de URL
+####  <a name="1-url-scheme"></a><a name="bkmk_QoS_UrlScheme"></a> 1. esquema de URL
 
- `https://`tem uma prioridade mais alta do que `https://` .
+ `https://` tem uma prioridade mais alta do que `https://` .
 
-####  <a name="2-url-host"></a><a name="bkmk_QoS_UrlHost"></a>2. URL de host
+####  <a name="2-url-host"></a><a name="bkmk_QoS_UrlHost"></a> 2. URL de host
 
  Da prioridade mais alta para a mais baixa, elas são:
 
@@ -189,11 +190,11 @@ No caso do nome do host, um nome de host com mais elementos pontilhados (mais pr
 
   **video.Internal.Training.hr.mycompany.com** tem a prioridade mais alta e **selfguide.Training.mycompany.com** tem a próxima prioridade mais alta. O **treinamento** e a **biblioteca** compartilham a mesma prioridade mais baixa.
 
-####  <a name="3-url-port"></a><a name="bkmk_QoS_UrlPort"></a>3. porta de URL
+####  <a name="3-url-port"></a><a name="bkmk_QoS_UrlPort"></a> 3. porta de URL
 
 Um número de porta específico ou implícito tem uma prioridade mais alta do que uma porta curinga.
 
-####  <a name="4-url-path"></a><a name="bkmk_QoS_UrlPath"></a>4. caminho da URL
+####  <a name="4-url-path"></a><a name="bkmk_QoS_UrlPath"></a> 4. caminho da URL
 
 Como um nome de host, um caminho de URL pode consistir em vários elementos. A única com mais elementos sempre tem uma prioridade mais alta do que aquela com menos. Por exemplo, os seguintes caminhos são listados por prioridade:
 

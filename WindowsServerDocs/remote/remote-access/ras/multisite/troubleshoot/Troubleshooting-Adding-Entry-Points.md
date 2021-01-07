@@ -1,17 +1,18 @@
 ---
 title: Solução de problemas da adição de pontos de entrada
-description: Este tópico faz parte do guia implantar vários servidores de acesso remoto em uma implantação multissite no Windows Server 2016.
+description: Saiba como solucionar problemas relacionados ao comando Add-DAEntryPoint.
 manager: brianlic
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e502b6e91225f91cdeffd34444a90f9b164cd5e1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: d4d9b9722342850b948bd00847fef11cc4b448b1
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958504"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950542"
 ---
 # <a name="troubleshooting-adding-entry-points"></a>Solução de problemas da adição de pontos de entrada
 

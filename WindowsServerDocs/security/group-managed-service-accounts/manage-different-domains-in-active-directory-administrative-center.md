@@ -6,12 +6,13 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: c793c30c6637a050d2b2cbb055ec289e3c3e8f20
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.topic: article
+ms.openlocfilehash: e3aaf9a999ba2d87e10eaeaace0d39450b1e13bf
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638034"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950472"
 ---
 # <a name="manage-different-domains-in-active-directory-administrative-center"></a>Gerenciar domínios diferentes no Centro Administrativo do Active Directory
 
@@ -28,12 +29,12 @@ ms.locfileid: "89638034"
 
 ### <a name="windows-server-2012-to-manage-a-foreign-domain-in-the-selected-instance-of-active-directory-administrative-center-using-the-current-set-of-logon-credentials"></a>Windows Server 2012: para gerenciar um domínio externo na instância selecionada do Centro Administrativo do Active Directory usando o conjunto atual de credenciais de logon
 
-1.  Para abrir o Centro Administrativo do Active Directory, em **Gerenciador do servidor**, clique em **ferramentas**e, em seguida, clique em **centro administrativo do Active Directory**.
+1.  Para abrir o Centro Administrativo do Active Directory, em **Gerenciador do servidor**, clique em **ferramentas** e, em seguida, clique em **centro administrativo do Active Directory**.
 
     > [!NOTE]
-    >  Outra maneira de abrir o Centro Administrativo do Active Directory é clicar em **Iniciar**e digitar **dsac.exe**.
+    >  Outra maneira de abrir o Centro Administrativo do Active Directory é clicar em **Iniciar** e digitar **dsac.exe**.
 
-2.  Para abrir **adicionar nós de navegação**, clique em **gerenciar**e, em seguida, clique em **adicionar nós de navegação** , conforme mostrado na ilustração a seguir.
+2.  Para abrir **adicionar nós de navegação**, clique em **gerenciar** e, em seguida, clique em **adicionar nós de navegação** , conforme mostrado na ilustração a seguir.
 
      ![Captura de tela mostrando * * adicionar nós de navegação * * interface do usuário](media/ADDS_ADACAddNavNode.gif)
 
@@ -50,7 +51,7 @@ ms.locfileid: "89638034"
 1. Para abrir a Central Administrativa do Active Directory, clique em **Iniciar**, clique em **Ferramentas Administrativas** e em **Central Administrativa do Active Directory**.
 
    > [!NOTE]
-   >  Outra maneira de abrir o Centro Administrativo do Active Directory é clicar em **Iniciar**, **executar**e digitar **dsac.exe**.
+   >  Outra maneira de abrir o Centro Administrativo do Active Directory é clicar em **Iniciar**, **executar** e digitar **dsac.exe**.
 
 2. Para abrir **adicionar nós de navegação**, próximo à parte superior da janela de centro administrativo do Active Directory, clique em **adicionar nós de navegação** , conforme mostrado na ilustração a seguir.
 

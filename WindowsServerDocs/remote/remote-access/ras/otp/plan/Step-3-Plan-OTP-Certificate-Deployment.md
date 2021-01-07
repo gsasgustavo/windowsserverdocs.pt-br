@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2653d316d3407604b2d1034eb71aeae87bd6c112
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 8c6898b6447e5d8c3a72653435028a7413fbb9c9
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968933"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950442"
 ---
 # <a name="step-3-plan-otp-certificate-deployment"></a>Etapa 3 planejar a implantação do certificado OTP
 
@@ -67,7 +68,7 @@ Cada cliente do DirectAccess requer um certificado de autenticação de OTP para
 ## <a name="33-plan-the-registration-authority-certificate"></a><a name="bkmk_33RACert"></a>3,3 planejar o certificado de autoridade de registro
 Quando os clientes do DirectAccess solicitam um certificado de OTP, o servidor de acesso remoto recebe a solicitação do cliente. O servidor de acesso remoto assina todas as solicitações de certificado OTP de clientes usando o certificado de autoridade de registro. A AC emitirá certificados somente se a solicitação for assinada pelo certificado de autoridade de registro no servidor de acesso remoto. O certificado deve ser emitido por uma AC interna, o certificado não pode ser autoassinado. Ele não precisa ser emitido pela autoridade de certificação que emitiu os certificados OTP, mas a autoridade de certificação que emite os certificados OTP deve confiar na autoridade de certificação que emite o certificado de autenticação da autoridade de registro.
 
-## <a name="see-also"></a><a name="BKMK_Links"></a>Consulte também
+## <a name="see-also"></a><a name="BKMK_Links"></a>Veja também
 
 -   [Etapa 4: planejar a OTP para o servidor de acesso remoto](Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md)
 

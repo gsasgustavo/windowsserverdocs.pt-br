@@ -4,15 +4,15 @@ description: Neste documento, você aprenderá a implantar o AD FS no Azure para
 author: billmath
 manager: mtillman
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.topic: get-started-article
+ms.topic: how-to
 ms.date: 10/28/2018
 ms.author: billmath
-ms.openlocfilehash: a077a76814cc5ed99d4a1c0eb6c23584b22363e1
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 9fe31d3cfbed9b81706571c7bc578239453810c9
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766749"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950492"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Implantando os Serviços de Federação do Active Directory no Azure
 O AD FS fornece recursos simplificados e seguros de federação de identidade e de logon único (SSO) da Web. A federação com o Azure AD ou o O365 habilita os usuários a se autenticar usando credenciais locais e acessar todos os recursos na nuvem. Como resultado, é importante ter uma infraestrutura altamente disponível do AD FS para garantir o acesso a recursos locais e na nuvem. Implantar o AD FS no Azure pode ajudar a atingir a alta disponibilidade necessária com esforço mínimo.
@@ -273,7 +273,7 @@ Siga as mesmas etapas usadas no ILB para configurar a regra de balanceamento de 
 
 Em geral, você precisa das regras a seguir para proteger com eficiência sua sub-rede interna (na ordem listada abaixo)
 
-| Regra | Descrição | Flow |
+| Regra | Description | Fluxo |
 |:--- |:--- |:---:|
 | AllowHTTPSFromDMZ |Permitir a comunicação HTTPS de rede de perímetro |Entrada |
 | DenyInternetOutbound |Sem acesso à Internet |Saída |
@@ -282,7 +282,7 @@ Em geral, você precisa das regras a seguir para proteger com eficiência sua su
 
 **9.2. Proteger a sub-rede de perímetro**
 
-| Regra | Descrição | Flow |
+| Regra | Description | Fluxo |
 |:--- |:--- |:---:|
 | AllowHTTPSFromInternet |Permitir HTTPS da Internet para a rede de perímetro |Entrada |
 | DenyInternetOutbound |Tudo para a Internet é bloqueado, exceto HTTPS |Saída |
@@ -346,7 +346,7 @@ Você pode usar uma rede virtual existente ou criar uma nova VNETao implantar es
 ## <a name="additional-resources"></a>Recursos adicionais
 * [Conjuntos de disponibilidade](https://aka.ms/Azure/Availability)
 * [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
-* [Balanceador de Carga Interno](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
+* [Load Balancer interno](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
 * [Balanceador de Carga para a Internet](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
 * [Contas de Armazenamento](https://aka.ms/Azure/Storage)
 * [Redes virtuais do Azure](/azure/virtual-network/virtual-networks-overview)

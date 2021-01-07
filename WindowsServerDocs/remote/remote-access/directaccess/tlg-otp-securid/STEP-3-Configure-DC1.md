@@ -6,12 +6,13 @@ ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 254789f18ca1adeebed227081c8177dc3c706e3d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: 642449e9c0c6524aa053cfb73c57b69507e5f4eb
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971683"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950452"
 ---
 # <a name="step-3-configure-dc1"></a>ETAPA 3 configurar DC1
 
@@ -21,7 +22,7 @@ DC1 atua como um controlador de domínio, servidor DNS e servidor DHCP para o do
 
 ## <a name="verify-user1-has-a-user-principal-name-defined-on-dc1"></a>Verifique se user1 tem um nome UPN definido em DC1
 
-1.  No DC1, abra Gerenciador do Servidor e clique em **AD DS** no painel esquerdo. Clique com o botão direito do mouse em **DC1** e selecione **Active Directory usuários e computadores**. No painel esquerdo, expanda **Corp. contoso. com\Users**e clique duas vezes em Usuário1.
+1.  No DC1, abra Gerenciador do Servidor e clique em **AD DS** no painel esquerdo. Clique com o botão direito do mouse em **DC1** e selecione **Active Directory usuários e computadores**. No painel esquerdo, expanda **Corp. contoso. com\Users** e clique duas vezes em Usuário1.
 
 2.  Na guia **conta** , verifique se **nome de logon do usuário** está definido como Usuário1. Caso contrário, digite **user1** no campo **nome de logon do usuário** .
 
