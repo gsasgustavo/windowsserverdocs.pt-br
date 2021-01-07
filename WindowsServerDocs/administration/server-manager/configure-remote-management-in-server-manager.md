@@ -1,18 +1,18 @@
 ---
 title: Configurar o gerenciamento remoto no Gerenciador do Servidor
-description: Gerenciador do Servidor
+description: Saiba como adicionar o servidor ao pool de servidores do Gerenciador do Servidor para executar tarefas de gerenciamento em servidores remotos.
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f709a30a571a43e6c299dabbfa006c12660fb92
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 71df577f4d1e487204ff25d66c9d3155bc1b9e67
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628356"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965728"
 ---
 # <a name="configure-remote-management-in-server-manager"></a>Configurar o gerenciamento remoto no Gerenciador do Servidor
 
@@ -81,7 +81,7 @@ No Windows Server 2016, Gerenciador do Servidor se baseia no gerenciamento remot
 
     -   Na área de trabalho do Windows, clique com o botão direito do mouse no **Windows PowerShell** na barra de tarefas e clique em **Executar como Administrador**.
 
-    -   Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell**e, em seguida, na barra de aplicativos, clique em **Executar como administrador**.
+    -   Na tela **Iniciar** do Windows, clique com o botão direito do mouse em **Windows PowerShell** e, em seguida, na barra de aplicativos, clique em **Executar como administrador**.
 
 2.  Digite o seguinte e pressione **Enter** para habilitar todas as exceções de regra de firewall necessárias.
 
@@ -97,11 +97,11 @@ No Windows Server 2016, Gerenciador do Servidor se baseia no gerenciamento remot
 
 3.  Realize um dos seguintes procedimentos:
 
-    -   Para desabilitar o gerenciamento remoto, digite **Configure-SMremoting.exe-Disable**e pressione **Enter**.
+    -   Para desabilitar o gerenciamento remoto, digite **Configure-SMremoting.exe-Disable** e pressione **Enter**.
 
-    -   Para habilitar o gerenciamento remoto, digite **Configure-SMremoting.exe-Enable**e pressione **Enter**.
+    -   Para habilitar o gerenciamento remoto, digite **Configure-SMremoting.exe-Enable** e pressione **Enter**.
 
-    -   Para exibir a configuração de gerenciamento remoto atual, digite **Configure-SMremoting.exe-Get**e pressione Enter.
+    -   Para exibir a configuração de gerenciamento remoto atual, digite **Configure-SMremoting.exe-Get** e pressione Enter.
 
 ### <a name="to-enable-server-manager-and-windows-powershell-remote-management-on-earlier-releases-of-windows-server"></a>Habilitar o Gerenciador de Servidores e o gerenciamento remoto do Windows PowerShell em versões anteriores do Windows Server
 
@@ -119,7 +119,7 @@ No Windows Server 2016, Gerenciador do Servidor se baseia no gerenciamento remot
 
     -   Na área **Propriedades** da página **servidor local** em Gerenciador do servidor, clique no valor de hipertexto para a propriedade **Firewall do Windows** e clique em **Configurações avançadas**.
 
-    -   Na tela **Iniciar** , digite **WF. msc**e, em seguida, clique no bloco snap-in quando ele for exibido nos resultados dos **aplicativos** .
+    -   Na tela **Iniciar** , digite **WF. msc** e, em seguida, clique no bloco snap-in quando ele for exibido nos resultados dos **aplicativos** .
 
 2.  No painel da árvore, selecione **Regras de entrada**.
 
@@ -141,9 +141,9 @@ No Windows Server 2016, Gerenciador do Servidor se baseia no gerenciamento remot
 
 1.  Siga um destes procedimentos para abrir o editor de Política de Grupo local.
 
-    -   Em um servidor que esteja executando o Windows Server 2016, o Windows Server 2012 R2 ou o Windows Server 2012, na tela **Iniciar** , digite **gpedit. msc**e, em seguida, clique no bloco **gpedit** quando ele for exibido.
+    -   Em um servidor que esteja executando o Windows Server 2016, o Windows Server 2012 R2 ou o Windows Server 2012, na tela **Iniciar** , digite **gpedit. msc** e, em seguida, clique no bloco **gpedit** quando ele for exibido.
 
-    -   Em um servidor que esteja executando o Windows Server 2008 R2 ou o Windows Server 2008, na caixa de diálogo **executar** , digite **gpedit. msc**e pressione **Enter**.
+    -   Em um servidor que esteja executando o Windows Server 2008 R2 ou o Windows Server 2008, na caixa de diálogo **executar** , digite **gpedit. msc** e pressione **Enter**.
 
 2.  Abra o **Computador\modelos Administrativos\Componentes do serviço \WinRM do gerenciamento remoto do Windows\Windows (WinRM)**.
 
@@ -179,7 +179,7 @@ A lista a seguir mostra as configurações padrão do ouvinte do WinRM para gere
 
 O número da porta padrão é 5985 para que o WinRM se comunique com um computador remoto.
 
-para obter mais informações sobre como definir as configurações do ouvinte do WinRM, em um prompt de comando, digite **winrm help config**e pressione Enter.
+para obter mais informações sobre como definir as configurações do ouvinte do WinRM, em um prompt de comando, digite **winrm help config** e pressione Enter.
 
 ## <a name="see-also"></a>Consulte Também
 [Adicionar servidores a Gerenciador do servidor](add-servers-to-server-manager.md) 

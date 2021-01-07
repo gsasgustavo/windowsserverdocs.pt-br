@@ -1,18 +1,18 @@
 ---
 title: Exibir detalhes e notificações de tarefas
-description: Gerenciador do Servidor
+description: Saiba como exibir o status de tarefas ou solicitações do usuário, consulte se uma tarefa falhou e solucionar problemas acessando mensagens de erro detalhadas sobre falhas de tarefas.
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 096fdab1cb44f1d71b8db81270396aeea0727fb9
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 3937f3536fbd5751150e3b02e8cb37b9fd0c70c0
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89627721"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965698"
 ---
 # <a name="view-task-details-and-notifications"></a>Exibir detalhes e notificações de tarefas
 
@@ -42,7 +42,7 @@ As notificações também desempenham uma parte importante na solução de probl
 Para excluir uma notificação que você não deseja mais ver na lista de **notificações** , passe o cursor do mouse sobre a notificação e clique em **remover tarefa** (**X**).
 
 ## <a name="viewing-and-troubleshooting-tasks-by-using-task-details"></a>Exibindo e Solucionando problemas de tarefas usando os detalhes da tarefa
-O comando **detalhes da tarefa** na parte inferior do menu **notificações** abre a caixa de diálogo detalhes da **tarefa** , que fornece descrições completas dos eventos de tarefa (iniciando, parando, avisos, êxitos ou falhas). Como outros controles de lista em Gerenciador do Servidor, como **eventos**, **Serviços**e blocos de **analisador de práticas recomendadas** , você pode filtrar e criar consultas para serem executadas nas tarefas que são exibidas na caixa de diálogo **detalhes da tarefa** . (para obter mais informações sobre filtragem e criação de consultas em controles de lista, consulte [Filtrar, classificar e consultar dados em blocos de Gerenciador do servidor](filter-sort-and-query-data-in-server-manager-tiles.md).) No painel superior, você pode examinar as notificações conforme elas foram exibidas no menu **notificações** e ver quantas notificações foram geradas sobre a mesma tarefa. a seleção de uma notificação no painel superior exibe detalhes completos sobre a notificação no painel inferior.
+O comando **detalhes da tarefa** na parte inferior do menu **notificações** abre a caixa de diálogo detalhes da **tarefa** , que fornece descrições completas dos eventos de tarefa (iniciando, parando, avisos, êxitos ou falhas). Como outros controles de lista em Gerenciador do Servidor, como **eventos**, **Serviços** e blocos de **analisador de práticas recomendadas** , você pode filtrar e criar consultas para serem executadas nas tarefas que são exibidas na caixa de diálogo **detalhes da tarefa** . (para obter mais informações sobre filtragem e criação de consultas em controles de lista, consulte [Filtrar, classificar e consultar dados em blocos de Gerenciador do servidor](filter-sort-and-query-data-in-server-manager-tiles.md).) No painel superior, você pode examinar as notificações conforme elas foram exibidas no menu **notificações** e ver quantas notificações foram geradas sobre a mesma tarefa. a seleção de uma notificação no painel superior exibe detalhes completos sobre a notificação no painel inferior.
 
 O painel inferior é especialmente útil para solucionar problemas de tarefas com falha. Se Gerenciador do Servidor não puder se conectar ou obter dados para um servidor que seja membro do pool de servidores, as entradas nesse painel geralmente contêm mensagens detalhadas, incluindo o texto completo de problemas subjacentes de gerenciamento remoto do Windows (WinRM), rede ou segurança que impedem Gerenciador do Servidor de se comunicar com um servidor de destino.
 

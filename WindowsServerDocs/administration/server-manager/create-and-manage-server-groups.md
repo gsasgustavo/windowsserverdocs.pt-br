@@ -1,18 +1,18 @@
 ---
 title: Create and Manage Server Groups
-description: Gerenciador do Servidor
+description: Saiba como criar grupos de servidores personalizados definidos pelo usuário no Gerenciador do Servidor no Windows Server.
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b9afff5a5080487ee14759d27537b2ce1278f5e1
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f1c62d0c7fba4dd23512ea5b3100dca9d099abb4
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628336"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965191"
 ---
 # <a name="create-and-manage-server-groups"></a>criar e gerenciar grupos de servidores
 
@@ -31,7 +31,7 @@ Os servidores podem ser membros de mais de um grupo.
 
 2.  Na caixa de texto **Nome do grupo de servidores**, digite um nome fácil para seu grupo de servidores, como **Servidores Contábeis**.
 
-3.  Adicione servidores à lista **selecionada** do pool de servidores ou adicione outros servidores ao grupo usando as guias **Active Directory**, **DNS**ou **Import** . Para obter mais informações sobre como usar essas guias, consulte [adicionar servidores a Gerenciador do servidor](add-servers-to-server-manager.md) neste guia.
+3.  Adicione servidores à lista **selecionada** do pool de servidores ou adicione outros servidores ao grupo usando as guias **Active Directory**, **DNS** ou **Import** . Para obter mais informações sobre como usar essas guias, consulte [adicionar servidores a Gerenciador do servidor](add-servers-to-server-manager.md) neste guia.
 
 4.  Após concluir a adição de servidores ao grupo, clique em **OK**. O novo grupo é exibido no painel de navegação Gerenciador do Servidor no grupo **todos os servidores** .
 
@@ -56,7 +56,7 @@ Os servidores podem ser membros de mais de um grupo.
 
     -   No painel de navegação Gerenciador do Servidor, clique com o botão direito do mouse em um grupo de servidores e clique em **excluir grupo de servidores**.
 
-    -   Na home page do grupo de servidores, abra o menu **tarefas** no bloco **servidores** e clique em **excluir grupo**de servidores.
+    -   Na home page do grupo de servidores, abra o menu **tarefas** no bloco **servidores** e clique em **excluir grupo** de servidores.
 
 2.  Quando for exibida uma mensagem perguntando se você deseja excluir o grupo de servidores, clique em **Sim**.
 

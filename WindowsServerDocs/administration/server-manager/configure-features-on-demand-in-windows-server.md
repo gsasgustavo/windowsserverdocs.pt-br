@@ -1,18 +1,18 @@
 ---
 title: Configure Features on Demand in Windows Server
-description: Gerenciador do Servidor
+description: Saiba como remover arquivos de recurso em uma configuração de recursos sob demanda usando o cmdlet Uninstall-WindowsFeature.
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f35b9cab30dcccbdc364d0fc76ec56aa4326b71
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8a2737aec1729bc30bba571a222cc659ff04d8af
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628371"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965091"
 ---
 # <a name="configure-features-on-demand-in-windows-server"></a>Configure Features on Demand in Windows Server
 
@@ -20,7 +20,7 @@ ms.locfileid: "89628371"
 
 Este tópico descreve como remover arquivos de recursos em uma configuração de Recursos sob Demanda usando o cmdlet Uninstall-WindowsFeature.
 
-Os recursos sob demanda são um recurso, introduzido no Windows 8 e no Windows Server 2012, que permite remover arquivos de função e recurso (às vezes chamado de *carga*de recursos) do sistema operacional para conservar espaço em disco e instalar funções e recursos de locais remotos ou mídia de instalação em vez de computadores locais. Você pode remover arquivos de recursos de computadores físicos ou virtuais em execução. Também é possível adicionar ou remover arquivos de recursos de arquivos WIM (Imagem do Windows) ou de VHDs (discos rígidos virtuais) offline para criar uma cópia das configurações de Recursos sob Demanda que pode ser reproduzida.
+Os recursos sob demanda são um recurso, introduzido no Windows 8 e no Windows Server 2012, que permite remover arquivos de função e recurso (às vezes chamado de *carga* de recursos) do sistema operacional para conservar espaço em disco e instalar funções e recursos de locais remotos ou mídia de instalação em vez de computadores locais. Você pode remover arquivos de recursos de computadores físicos ou virtuais em execução. Também é possível adicionar ou remover arquivos de recursos de arquivos WIM (Imagem do Windows) ou de VHDs (discos rígidos virtuais) offline para criar uma cópia das configurações de Recursos sob Demanda que pode ser reproduzida.
 
 Em uma configuração de recursos sob demanda, quando os arquivos de recurso não estão disponíveis em um computador, se uma instalação exigir esses arquivos de recurso, o Windows Server 2012 R2 ou o Windows Server 2012 pode ser direcionado para obter os arquivos de um repositório de recursos lado a lado (uma pasta compartilhada que contém arquivos de recursos e está disponível para o computador na rede), de Windows Update ou da mídia de instalação. Por padrão, quando os arquivos de recursos não estão disponíveis no servidor de destino, Recursos sob Demanda pesquisa os arquivos de recursos ausentes executando as tarefas a seguir na ordem mostrada.
 
@@ -51,7 +51,7 @@ Esta seção descreve como configurar uma pasta compartilhada de arquivo de recu
 
 #### <a name="to-create-a-feature-file-store"></a>Para criar um repositório de arquivos de recursos
 
-1.  Crie uma pasta compartilhada em um servidor em sua rede. Por exemplo, * \\ \network\share\sxs*.
+1.  Crie uma pasta compartilhada em um servidor em sua rede. Por exemplo, *\\ \network\share\sxs*.
 
 2.  Verifique se você tem as permissões corretas atribuídas ao repositório de recursos. O caminho de origem ou o compartilhamento de arquivos deve conceder permissões de **leitura** ao grupo **todos** (não recomendado por motivos de segurança) ou às contas de computador (*domínio* \\ *ServerName*$) dos servidores nos quais você planeja instalar recursos usando esse repositório de recursos; conceder acesso à conta de usuário não é suficiente.
 

@@ -1,21 +1,21 @@
 ---
 title: Verifique a migração do AD FS 2,0 para o Windows Server 2012 R2
-description: Fornece informações sobre como migrar um servidor de AD FS para o Windows Server 2012 R2.
+description: Saiba como verificar se os servidores de Federação em seu farm estão operacionais; ou seja, qualquer cliente na mesma rede pode acessar seus servidores de Federação.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.openlocfilehash: 35216baafefc5b304e1fc27b48f99b3afcde32fc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 59637d2d6ff0fe6e3aca1162831ba6b1959dd882
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940443"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965628"
 ---
 # <a name="verify-the-ad-fs-20-migration-to-windows-server-2012-r2"></a>Verifique a migração do AD FS 2,0 para o Windows Server 2012 R2
 
-Depois de concluir a migração do mesmo servidor do seu farm do Active Directory Serviço de Federação (AD FS) para o Windows Server 2012 R2, você pode usar o procedimento a seguir para verificar se os servidores de Federação em seu farm estão operacionais; ou seja, qualquer cliente na mesma rede pode acessar seus servidores federtation.
+Depois de concluir a migração do mesmo servidor do seu farm do Active Directory Serviço de Federação (AD FS) para o Windows Server 2012 R2, você pode usar o procedimento a seguir para verificar se os servidores de Federação em seu farm estão operacionais; ou seja, qualquer cliente na mesma rede pode acessar seus servidores de Federação.
 
 Uma associação em **Usuários**, **Operadores de Backup**, **Usuários Avançados**, **Administradores** ou equivalente no computador local é o mínimo necessário para concluir este procedimento.
 

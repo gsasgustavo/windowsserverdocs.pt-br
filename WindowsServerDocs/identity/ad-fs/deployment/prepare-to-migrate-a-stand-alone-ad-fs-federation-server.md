@@ -1,17 +1,17 @@
 ---
 title: Preparar para migrar um servidor de Federação AD FS autônomo
-description: Fornece informações sobre como preparar-se para migrar um servidor de AD FS autônomo para o Windows Server 2012.
+description: Saiba como exportar e fazer backup dos dados de configuração do AD FS deste servidor.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.openlocfilehash: a29b9246b32088ce8dcb63cf342c0fd41c912bc5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9f48972613e08566adbf2d45beeda315e5bc9862
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940625"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965638"
 ---
 #  <a name="prepare-to-migrate-a-stand-alone-ad-fs-federation-server-or-a-single-node-ad-fs-farm"></a>Preparar para migrar um servidor de federação AD FS autônomo ou um farm de AD FS de nó único
 
@@ -34,7 +34,7 @@ Para exportar os dados de configuração do AD FS, realize as seguintes tarefas:
 
 ### <a name="to-export-service-settings"></a>Para exportar as configurações de serviço
 
-1.  Registre o nome da entidade do certificado e o valor de impressão digital do certificado SSL usado pelo serviço de federação. Para localizar o certificado SSL, abra o console de gerenciamento do IIS (Serviços de Informações da Internet), selecione **Site Padrão** no painel esquerdo, clique em **Ligações…** no painel **Ação** , encontre e selecione a ligação https, clique em **Editar**e em **Exibir**.
+1.  Registre o nome da entidade do certificado e o valor de impressão digital do certificado SSL usado pelo serviço de federação. Para localizar o certificado SSL, abra o console de gerenciamento do IIS (Serviços de Informações da Internet), selecione **Site Padrão** no painel esquerdo, clique em **Ligações…** no painel **Ação** , encontre e selecione a ligação https, clique em **Editar** e em **Exibir**.
 
 > [!NOTE]
 >  Você pode também exportar o certificado SSL usado pelo serviço de federação e sua chave privada para um arquivo .pfx. Para obter mais informações, consulte [Exportar a parte da chave privada de um Certificado de Autenticação de Servidor](Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md).

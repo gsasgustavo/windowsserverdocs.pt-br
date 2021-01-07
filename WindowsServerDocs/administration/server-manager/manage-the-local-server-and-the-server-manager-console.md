@@ -1,18 +1,18 @@
 ---
 title: Manage the Local Server and the Server Manager Console
-description: Gerenciador do Servidor
+description: Saiba como gerenciar o servidor local e os servidores remotos que estão executando o Windows Server 2008 e versões mais recentes do sistema operacional Windows Server.
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c999e599d565f82f8f1d9f38dfb8ba84ffb3bb9b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 92434d59abf1373ac87f869b99552409cfeb22b9
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89627822"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965688"
 ---
 # <a name="manage-the-local-server-and-the-server-manager-console"></a>Manage the Local Server and the Server Manager Console
 
@@ -112,7 +112,7 @@ A caixa de seleção não **iniciar Gerenciador do servidor automaticamente no l
 Para ampliar ou reduzir a exibição do console do Gerenciador do Servidor, você pode usar os comandos de **zoom** no menu **Exibir** ou pressionar **Ctrl + mais (+)** para ampliar e **Ctrl + menos (-)** para reduzir.
 
 ## <a name="customize-tools-that-are-displayed-in-the-tools-menu"></a><a name=BKMK_tools></a>Personalizar as ferramentas exibidas no menu Ferramentas
-O menu **ferramentas** do Gerenciador do servidor inclui links suaves para atalhos na pasta **Ferramentas administrativas** no **painel de controle/sistema e segurança**. A pasta **Ferramentas administrativas** contém uma lista de atalhos ou arquivos lnk para as ferramentas de gerenciamento disponíveis, como snap-ins do MMC. Gerenciador do Servidor popula o menu **ferramentas** com links para esses atalhos e copia a estrutura de pastas da pasta **Ferramentas administrativas** para o menu **ferramentas** . Por padrão, as ferramentas na pasta Ferramentas Administrativas são organizadas em uma lista simples, classificadas por tipo e por nome. No menu**ferramentas** Gerenciador do servidor, os itens são classificados somente por nome, não por tipo.
+O menu **ferramentas** do Gerenciador do servidor inclui links suaves para atalhos na pasta **Ferramentas administrativas** no **painel de controle/sistema e segurança**. A pasta **Ferramentas administrativas** contém uma lista de atalhos ou arquivos lnk para as ferramentas de gerenciamento disponíveis, como snap-ins do MMC. Gerenciador do Servidor popula o menu **ferramentas** com links para esses atalhos e copia a estrutura de pastas da pasta **Ferramentas administrativas** para o menu **ferramentas** . Por padrão, as ferramentas na pasta Ferramentas Administrativas são organizadas em uma lista simples, classificadas por tipo e por nome. No menu **ferramentas** Gerenciador do servidor, os itens são classificados somente por nome, não por tipo.
 
 Para personalizar o menu **Ferramentas**, copie os atalhos das ferramentas ou dos scripts que você deseja usar para a pasta **Ferramentas Administrativas**. Você também pode organizar seus atalhos em pastas, o que cria menus em cascata no menu **Ferramentas**. Além disso, se você quiser restringir o acesso às ferramentas personalizadas no menu **ferramentas** , poderá definir direitos de acesso de usuário em suas pastas de ferramentas personalizadas em ferramentas administrativas ou diretamente na ferramenta original ou nos arquivos de script.
 
@@ -120,7 +120,7 @@ Para personalizar o menu **Ferramentas**, copie os atalhos das ferramentas ou do
 
 Contudo, as ferramentas de funções e recursos instaladas como parte das Ferramentas de Administração de Servidor Remoto em um computador baseado no cliente Windows podem ser organizadas em pastas personalizadas. A desinstalação da função ou do recurso pai não tem nenhum efeito sobre os atalhos de ferramenta que estão disponíveis em um computador remoto que esteja executando o Windows 10.
 
-O procedimento a seguir descreve como criar uma pasta de exemplo chamada *MyTools*e mover atalhos para dois scripts do Windows PowerShell para a pasta que, em seguida, é acessível no menu ferramentas do Gerenciador do servidor.
+O procedimento a seguir descreve como criar uma pasta de exemplo chamada *MyTools* e mover atalhos para dois scripts do Windows PowerShell para a pasta que, em seguida, é acessível no menu ferramentas do Gerenciador do servidor.
 
 #### <a name="to-customize-the-tools-menu-by-adding-shortcuts-in-administrative-tools"></a>Para personalizar o menu Ferramentas adicionando atalhos em Ferramentas Administrativas
 
@@ -135,14 +135,14 @@ O procedimento a seguir descreve como criar uma pasta de exemplo chamada *MyTool
 
 4.  Na guia **segurança** da caixa de diálogo **Propriedades** do arquivo, clique em **Editar**.
 
-5.  para os usuários para os quais você deseja restringir o acesso à ferramenta, desmarque as caixas de seleção para **ler & executar**, **ler**e **gravar** permissões. Essas permissões são herdadas pelo atalho da ferramenta na pasta **Ferramentas Administrativas**.
+5.  para os usuários para os quais você deseja restringir o acesso à ferramenta, desmarque as caixas de seleção para **ler & executar**, **ler** e **gravar** permissões. Essas permissões são herdadas pelo atalho da ferramenta na pasta **Ferramentas Administrativas**.
 
     Se você editar direitos de acesso para um usuário enquanto o usuário estiver usando Gerenciador do Servidor (ou enquanto Gerenciador do Servidor estiver aberto), as alterações não serão mostradas no menu **ferramentas** até que o usuário reinicie Gerenciador do servidor.
 
     > [!NOTE]
-    > Se você restringir o acesso a uma pasta inteira que você copiou para ferramentas administrativas, os usuários restritos poderão ver nem a pasta nem seu conteúdo no menu**ferramentas** do Gerenciador do servidor.
+    > Se você restringir o acesso a uma pasta inteira que você copiou para ferramentas administrativas, os usuários restritos poderão ver nem a pasta nem seu conteúdo no menu **ferramentas** do Gerenciador do servidor.
     >
-    > Edite permissões para a pasta na pasta **Ferramentas administrativas** . Como arquivos ocultos e pastas em ferramentas administrativas são sempre exibidos no menu**ferramentas** de Gerenciador do servidor, não use a configuração **oculta** em uma caixa de diálogo **Propriedades** de arquivo ou pasta para restringir o acesso de usuário aos seus atalhos de ferramenta personalizada.
+    > Edite permissões para a pasta na pasta **Ferramentas administrativas** . Como arquivos ocultos e pastas em ferramentas administrativas são sempre exibidos no menu **ferramentas** de Gerenciador do servidor, não use a configuração **oculta** em uma caixa de diálogo **Propriedades** de arquivo ou pasta para restringir o acesso de usuário aos seus atalhos de ferramenta personalizada.
     >
     > As permissões **Negar** sempre substituem as permissões **Permitir**.
 

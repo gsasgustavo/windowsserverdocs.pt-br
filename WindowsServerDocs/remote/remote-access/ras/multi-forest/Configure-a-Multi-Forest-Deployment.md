@@ -1,18 +1,18 @@
 ---
 title: Configure a Multi-Forest Deployment
-description: Este tópico faz parte do guia implantar o acesso remoto em um ambiente de várias florestas no Windows Server 2016.
+description: Saiba como configurar uma implantação de várias florestas de acesso remoto em vários cenários possíveis.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: f64df3e7879f54e56b2a4365af9f0d7c2d8376e8
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 0c66decd8b1704852c2ed3c62a185b877f7b88b8
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946972"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965648"
 ---
 # <a name="configure-a-multi-forest-deployment"></a>Configure a Multi-Forest Deployment
 

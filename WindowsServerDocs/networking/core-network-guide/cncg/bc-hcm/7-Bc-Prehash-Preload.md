@@ -1,18 +1,18 @@
 ---
 title: Realizar hash prévio e pré-carregar conteúdo no servidor de cache hospedado (opcional)
-description: Este guia fornece instruções sobre como implantar o BranchCache no modo de cache hospedado em computadores que executam o Windows Server 2016 e o Windows 10
+description: Saiba como fazer o hash de conteúdo em seus servidores de conteúdo, adicionar o conteúdo aos pacotes de dados e, em seguida, pré-carregar o conteúdo nos servidores de cache hospedados.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7e79c66a-8555-4d8e-8691-d6c37377aab4
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: c9f33a53ac7af8a76d8f6d9b018668ebc8b23771
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 912b5066b5dc0b3cac9fb40c01f0904e6c63477e
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950222"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965538"
 ---
 # <a name="prehash-and-preload-content-on-the-hosted-cache-server-optional"></a>Pré-hash e pré-carregamento de conteúdo no servidor de cache hospedado \( opcional\)
 

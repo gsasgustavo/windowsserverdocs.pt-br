@@ -1,18 +1,18 @@
 ---
 title: Instalar ou desinstalar funções, serviços de função ou recursos
-description: Gerenciador do Servidor
+description: Saiba como instalar funções e recursos em servidores locais ou remotos ou VHDs (discos rígidos virtuais) offline.
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 91cc11133d42168197541e451da27771a377bab9
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0b82bf3941b64d0a8456c086ce9022aa531ab281
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628400"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965121"
 ---
 # <a name="install-or-uninstall-roles-role-services-or-features"></a>Instalar ou desinstalar funções, serviços de função ou recursos
 
@@ -57,9 +57,9 @@ Em uma única sessão do assistente Adicionar funções e recursos, você pode i
 
 2.  No menu **gerenciar** , clique em **adicionar funções e recursos**.
 
-3.  Na página **Antes de começar**, verifique se o servidor de destino e o ambiente de rede estão preparados para a função e o recurso que você vai instalar. Clique em **Próximo**.
+3.  Na página **Antes de começar**, verifique se o servidor de destino e o ambiente de rede estão preparados para a função e o recurso que você vai instalar. Clique em **Avançar**.
 
-4.  Na página **Selecionar tipo de instalação**, escolha a **Instalação baseada em função ou recurso** para instalar todas as partes das funções ou dos recursos em um único servidor, ou a **Instalação de Serviços de Área de Trabalho Remota** para instalar uma infraestrutura de área de trabalho baseada em máquina virtual ou uma infraestrutura de área de trabalho baseada em sessão para os Serviços de Área de Trabalho Remota. A opção **Instalação dos Serviços de Área de Trabalho Remota** distribui partes lógicas da função Serviços de Área de Trabalho Remota por servidores diferentes, conforme necessário para os administradores. Clique em **Próximo**.
+4.  Na página **Selecionar tipo de instalação**, escolha a **Instalação baseada em função ou recurso** para instalar todas as partes das funções ou dos recursos em um único servidor, ou a **Instalação de Serviços de Área de Trabalho Remota** para instalar uma infraestrutura de área de trabalho baseada em máquina virtual ou uma infraestrutura de área de trabalho baseada em sessão para os Serviços de Área de Trabalho Remota. A opção **Instalação dos Serviços de Área de Trabalho Remota** distribui partes lógicas da função Serviços de Área de Trabalho Remota por servidores diferentes, conforme necessário para os administradores. Clique em **Avançar**.
 
 5.  Na página **Selecionar servidor de destino** , escolha um servidor no pool de servidores ou um VHD offline. Para selecionar um VHD offline como servidor de destino, primeiro selecione o servidor no qual deseja montar o VHD e selecione o arquivo VHD. Para obter informações sobre como adicionar servidores ao pool de servidores, consulte [adicionar servidores a Gerenciador do servidor](add-servers-to-server-manager.md). Após selecionar o servidor de destino, clique em **Avançar**.
 
@@ -81,7 +81,7 @@ Em uma única sessão do assistente Adicionar funções e recursos, você pode i
 
 7.  Na página **Confirmar seleções de instalação**, revise suas escolhas de função, recurso e servidor. Se já estiver pronto para instalar, clique em **Instalar**.
 
-    Você também pode exportar suas seleções para um arquivo de configuração baseado em XML que pode ser usado para instalações autônomas com o Windows PowerShell. Para exportar a configuração especificada nesta sessão do assistente para adicionar funções e recursos, clique em **exportar definições de configuração**e salve o arquivo XML em um local conveniente.
+    Você também pode exportar suas seleções para um arquivo de configuração baseado em XML que pode ser usado para instalações autônomas com o Windows PowerShell. Para exportar a configuração especificada nesta sessão do assistente para adicionar funções e recursos, clique em **exportar definições de configuração** e salve o arquivo XML em um local conveniente.
 
     O comando **Especificar um caminho de origem alternativo** na página **Confirmar seleções de instalação** permite especificar um caminho de origem alternativo para os arquivos necessários para a instalação das funções e dos recursos no servidor selecionado. No Windows Server 2012 e versões posteriores do Windows Server, os [recursos sob demanda](https://go.microsoft.com/fwlink/p/?LinkID=241573) permitem reduzir a quantidade de espaço em disco usado pelo sistema operacional, removendo os arquivos de função e recurso de servidores que são gerenciados exclusivamente remotamente. Se você tiver removido arquivos de funções e recursos de um servidor usando o cmdlet `Uninstall-WindowsFeature -remove` , será possível instalar funções e recursos no servidor futuramente, especificando um caminho de origem alternativo, ou um compartilhamento no qual os arquivos de funções e recursos obrigatórios estão armazenados. O caminho de origem ou o compartilhamento de arquivos deve conceder permissões de **leitura** ao grupo **todos** (não recomendado por motivos de segurança) ou à conta de computador (*domínio* \\ *nome_do_servidor*$) do servidor de destino; conceder acesso à conta de usuário não é suficiente. Para obter mais informações sobre Recursos sob Demanda, consulte [Opções de instalação do Windows Server](https://go.microsoft.com/fwlink/p/?LinkId=241573).
 
@@ -108,7 +108,7 @@ Os cmdlets de implantação Gerenciador do Servidor para o Windows PowerShell fu
    > [!NOTE]
    > No Windows PowerShell 3,0 e versões posteriores do Windows PowerShell, não é necessário importar o módulo do cmdlet Gerenciador do Servidor para a sessão do Windows PowerShell antes de executar os cmdlets que fazem parte do módulo. Um módulo é importado automaticamente durante a primeira execução de um cmdlet que faça parte do módulo. Além disso, nem os cmdlets do Windows PowerShell nem os nomes dos recursos usados com os cmdlets diferenciam maiúsculas de minúsculas.
 
-3. Digite **Get-Help install-WindowsFeature**e pressione **Enter** para exibir a sintaxe e os parâmetros aceitos para o `Install-WindowsFeature` cmdlet.
+3. Digite **Get-Help install-WindowsFeature** e pressione **Enter** para exibir a sintaxe e os parâmetros aceitos para o `Install-WindowsFeature` cmdlet.
 
 4. Digite o seguinte e pressione **Enter**, em que *feature_name* representa o nome do comando de uma função ou recurso que você deseja instalar (obtido na etapa 2) e *computer_name* representa um computador remoto no qual você deseja instalar funções e recursos. Separe com vírgulas vários valores de *nome_do_recurso*. O parâmetro `Restart` reiniciará o servidor de destino automaticamente se for exigido pela instalação da função ou do recurso.
 
@@ -155,7 +155,7 @@ Você deve estar conectado a um servidor como administrador para desinstalar fun
 
 2.  No menu **Gerenciar**, clique em **Remover Funções e Recursos**.
 
-3.  Na página **Antes de começar**, verifique se você está preparado para remover funções ou recursos de um servidor. Clique em **Próximo**.
+3.  Na página **Antes de começar**, verifique se você está preparado para remover funções ou recursos de um servidor. Clique em **Avançar**.
 
 4.  Na página **selecionar servidor de destino** , selecione um servidor no pool de servidores ou selecione um VHD offline. Para selecionar um VHD offline, primeiro selecione o servidor no qual deseja montar o VHD e depois selecione o arquivo VHD.
 
@@ -199,7 +199,7 @@ Os cmdlets de implantação Gerenciador do Servidor para o Windows PowerShell fu
    > [!NOTE]
    > No Windows PowerShell 3,0 e versões posteriores do Windows PowerShell, não é necessário importar o módulo do cmdlet Gerenciador do Servidor para a sessão do Windows PowerShell antes de executar os cmdlets que fazem parte do módulo. Um módulo é importado automaticamente durante a primeira execução de um cmdlet que faça parte do módulo. Além disso, nem os cmdlets do Windows PowerShell nem os nomes dos recursos usados com os cmdlets diferenciam maiúsculas de minúsculas.
 
-3. Digite **Get-Help Uninstall-WindowsFeature**e pressione **Enter** para exibir a sintaxe e os parâmetros aceitos para o `Uninstall-WindowsFeature` cmdlet.
+3. Digite **Get-Help Uninstall-WindowsFeature** e pressione **Enter** para exibir a sintaxe e os parâmetros aceitos para o `Uninstall-WindowsFeature` cmdlet.
 
 4. Digite o seguinte e pressione **Enter**, em que *nome_do_recurso* representa o nome do comando de uma função ou recurso que deseja remover (obtido na etapa 2) e *nome_do_computador* representa o computador remoto do qual as funções e os recursos serão removidos. Separe com vírgulas vários valores de *nome_do_recurso*. O parâmetro `Restart` reiniciará os servidores de destino automaticamente se for exigido pela remoção da função ou do recurso.
 
@@ -347,7 +347,7 @@ a partir do Windows Server 2012 e do Windows 8, os arquivos de recurso para .NET
 
    Para especificar um arquivo WIM, adicione o prefixo **WIM:** e acrescente o índice da imagem para usar no arquivo WIM como um sufixo, conforme mostrado no exemplo a seguir.
 
-   **Wim: \\ \\ ** <em>server_name</em>**\share\install.wim: 3**
+   **Wim: \\ \\** <em>server_name</em>**\share\install.wim: 3**
 
 6. Clique em **OK** e em **Instalar**.
 
@@ -393,13 +393,13 @@ A configuração de Política de Grupo descrita nesta seção especifica os loca
 
    **configuração do Computador\modelos Templates\System\Specify para instalação de componente opcional e reparo de componente**
 
-2. Sselect **habilitado** para habilitar a configuração de política, se ela ainda não estiver habilitada.
+2. Selecione **Habilitado** para habilitar a configuração de política, caso ainda não esteja habilitada.
 
 3. Na caixa de texto **Caminho de arquivo de origem alternativo** da área **Opções**, especifique o caminho totalmente qualificado para uma pasta compartilhada ou um arquivo WIM. Para especificar um arquivo WIM como um local de arquivo de origem alternativo, adicione o prefixo **WIM:** ao caminho e acrescente o índice da imagem para usar no arquivo WIM como um sufixo. Veja a seguir exemplos de valores que você pode especificar.
 
-   - caminho para uma pasta compartilhada: **\\\\** <em>server_name</em>**\share \\ **<em>Folder_Name</em>
+   - caminho para uma pasta compartilhada: **\\\\** <em>server_name</em>**\share \\**<em>Folder_Name</em>
 
-   - caminho para um arquivo WIM, no qual **3** representa o índice da imagem na qual os arquivos de recurso são encontrados: **wim: \\ \\ **<em>server_name</em>**\share\install.wim: 3**
+   - caminho para um arquivo WIM, no qual **3** representa o índice da imagem na qual os arquivos de recurso são encontrados: **wim: \\ \\**<em>server_name</em>**\share\install.wim: 3**
 
 4. Se você não quiser que os computadores que são controlados por essa configuração de política procurem arquivos de recursos ausentes no Windows Update, selecione **nunca tentar baixar conteúdo de Windows Update**.
 

@@ -1,17 +1,17 @@
 ---
 title: Migrar o servidor de Federação AD FS 2,0
-description: Fornece informações sobre como preparar-se para migrar um servidor de AD FS autônomo para o Windows Server 2012.
+description: Saiba mais sobre o ponto de partida para migrar seu servidor de Federação do AD FS 2,0 para o Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.openlocfilehash: 2f7950ce1c87c22fad7c4080f2a0b32044df7cf1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e9bb256974c4b9b2aef031efa9917d6557ab341d
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940799"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965658"
 ---
 # <a name="migrate-the-ad-fs-20-federation-server"></a>Migrar o servidor de Federação AD FS 2,0
 

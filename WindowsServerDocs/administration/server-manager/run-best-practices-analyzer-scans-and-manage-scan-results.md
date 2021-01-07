@@ -1,18 +1,18 @@
 ---
 title: Executar verificações de Analisador de Práticas Recomendadas e gerenciar Results_1 de verificação
-description: Gerenciador do Servidor
+description: Saiba como executar verificações de Analisador de Práticas Recomendadas (BPA) de Gerenciador do Servidor, usando a GUI do BPA ou usando cmdlets no Windows PowerShell e saiba como gerenciar os resultados da verificação.
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b8ef48e81daa9c673f42d43b2f95abadec619a8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0541a95ad2fd176ecad8565a66db303a4f609fbc
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89627805"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965061"
 ---
 # <a name="run-best-practices-analyzer-scans-and-manage-scan-results"></a>Executar varreduras do Analisador de Práticas Recomendadas e gerenciar os resultados das varreduras
 
@@ -42,14 +42,14 @@ O BPA funciona medindo a conformidade de uma função com as regras de práticas
 
 |Nível de severidade|Descrição|
 |---------|--------|
-|Erro do|Os resultados do erro são retornados quando uma função não satisfaz as condições de uma regra de prática recomendada e problemas de funcionalidade podem ser esperados.|
+|Erro|Os resultados do erro são retornados quando uma função não satisfaz as condições de uma regra de prática recomendada e problemas de funcionalidade podem ser esperados.|
 |Informações|Os resultados de informações são retornados quando uma função satisfaz as condições de uma regra de prática recomendada.|
 |Aviso|Os resultados de aviso são retornados quando os resultados de uma incompatibilidade podem causar problemas se as alterações não foram feitas. O aplicativo pode ser compatível com a operação atual, mas pode não satisfazer as condições de uma regra se não forem feitas alterações em sua configuração ou nas configurações da diretriz. Por exemplo, uma varredura dos Serviços de Área de Trabalho Remota pode mostrar um resultado de aviso se um servidor de licença estiver indisponível para a função, porque, mesmo se nenhuma conexão remota estiver ativa no momento da varredura, não ter o servidor de licença impede que novas conexões remotas obtenham licenças válidas de acesso ao cliente.|
 
 ### <a name="rule-categories"></a>Categorias de regras
 A tabela a seguir descreve as categorias de regras de práticas recomendadas nas quais as funções são medidas durante uma verificação de Analisador de Práticas Recomendadas.
 
-|Nome da categoria|Descrição|
+|Nome da categoria|Description|
 |---------|--------|
 |Segurança|As regras de segurança são aplicadas para medir o risco relativo de uma função para exposição a ameaças como usuários não autorizados ou mal-intencionados, ou perda ou roubo de dados confidenciais ou proprietários.|
 |Desempenho|Regras de desempenho são aplicadas para medir a capacidade de uma função de processar solicitações e executar suas tarefas prescritas na empresa dentro dos períodos de tempo esperados, considerando a carga de trabalho da função.|
@@ -94,7 +94,7 @@ Execute as etapas a seguir para examinar uma ou mais funções na GUI do BPA.
 Use os procedimentos a seguir para verificar uma ou mais funções usando cmdlets do Windows PowerShell.
 
 > [!NOTE]
-> Os procedimentos nessa seção não mostram todos os parâmetros e cmdlets do BPA. Para obter mais informações sobre as operações do BPA no Windows PowerShell, em sua sessão do Windows PowerShell, digite **Get-Help***BPACmdlet***-Full**, em que *BPACmdlet* pode ser um dos valores a seguir. Você também pode encontrar tópicos de ajuda do cmdlet do BPA no [TechCenter do Windows Server](https://go.microsoft.com/fwlink/p/?LinkId=240177).
+> Os procedimentos nessa seção não mostram todos os parâmetros e cmdlets do BPA. Para obter mais informações sobre as operações do BPA no Windows PowerShell, em sua sessão do Windows PowerShell, digite **Get-Help**_BPACmdlet_*_-Full_*, em que *BPACmdlet* pode ser um dos valores a seguir. Você também pode encontrar tópicos de ajuda do cmdlet do BPA no [TechCenter do Windows Server](https://go.microsoft.com/fwlink/p/?LinkId=240177).
 
 -   **Get-BPAmodel**
 
@@ -239,7 +239,7 @@ Para exibir e gerenciar os resultados da verificação usando cmdlets do Windows
 
 1.  Abra uma sessão do Windows PowerShell com direitos de usuário elevados.
 
-2.  Obtenha os resultados da varredura mais recente de uma identificação de modelo especificada. Digite o seguinte, no qual o modelo é representado por *ID de modelo*e pressione **Enter**. Você pode obter os resultados de várias identificações de modelo separando as identificações de modelo por vírgulas.
+2.  Obtenha os resultados da varredura mais recente de uma identificação de modelo especificada. Digite o seguinte, no qual o modelo é representado por *ID de modelo* e pressione **Enter**. Você pode obter os resultados de várias identificações de modelo separando as identificações de modelo por vírgulas.
 
     `Get-BPAResult <model ID>`
 

@@ -1,18 +1,18 @@
 ---
 title: Visão geral da implantação do modo de cache hospedado BranchCache
-description: Este guia fornece instruções sobre como implantar o BranchCache no modo de cache hospedado em computadores que executam o Windows Server 2016 e o Windows 10
+description: Saiba como implantar um servidor de cache hospedado do BranchCache em uma filial onde os computadores são ingressados em um domínio.
 manager: brianlic
 ms.topic: article
 ms.assetid: 55686a9c-60dd-47f4-9f1f-fe72c2873a44
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 1ade14a0c2d5a1c965861984ad32a8b28ad61a6b
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 8abb25c7d2b8e3bcf0e5361bbc4fc4da2a2e7567
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949512"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965588"
 ---
 # <a name="branchcache-hosted-cache-mode-deployment-overview"></a>Visão geral da implantação do modo de cache hospedado BranchCache
 

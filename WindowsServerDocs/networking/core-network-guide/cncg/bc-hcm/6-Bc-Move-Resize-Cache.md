@@ -1,18 +1,18 @@
 ---
 title: Mover e redimensionar o cache hospedado (opcional)
-description: Este guia fornece instruções sobre como implantar o BranchCache no modo de cache hospedado em computadores que executam o Windows Server 2016 e o Windows 10
+description: Saiba como mover o cache hospedado para a unidade e a pasta que você preferir, e para especificar a quantidade de espaço em disco que o servidor de cache hospedado pode usar para o cache hospedado.
 manager: brianlic
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 276ab47bc6f4f906aaeafc7779c4e2afdb80b260
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 426a38b0dfb37d6898f8ede9337f912998ec2158
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947882"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965548"
 ---
 # <a name="move-and-resize-the-hosted-cache-optional"></a>Mover e redimensionar o cache hospedado \( opcional\)
 
@@ -37,7 +37,7 @@ Você deve ser membro do grupo Administradores para executar esse procedimento.
     Set-BCCache -Path C:\datacache –MoveTo D:\datacache
     ```
 
-3.  Digite o seguinte comando para redimensionar o cache hospedado – especificamente, o DataCache \- no computador local. Pressione ENTER.
+3.  Digite o seguinte comando para redimensionar o cache hospedado – especificamente, o cache de dados \- no computador local. Pressione ENTER.
 
     > [!IMPORTANT]
     > Antes de executar o comando a seguir, substitua os valores de parâmetro, como \- percentual, por valores que são apropriados para sua implantação.

@@ -1,18 +1,18 @@
 ---
 title: Gerenciar vários servidores remotos com Gerenciador do Servidor
-description: Gerenciador do Servidor
+description: Saiba como usar recursos no console do Gerenciador do Servidor para gerenciar vários servidores remotos.
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c85e9bd4525cc40ddc7e5c77aacb9fd2ab9cf124
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 493570817b0deea7fe8b7b997472c657519ab95b
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89627833"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965051"
 ---
 # <a name="manage-multiple-remote-servers-with-server-manager"></a>Gerenciar vários servidores remotos com Gerenciador do Servidor
 
@@ -147,11 +147,11 @@ Os administradores podem usar dois cmdlets do Windows PowerShell no módulo cmdl
 |Adicione servidores remotos a um pool de servidores que Gerenciador do Servidor podem ser usados para gerenciar o.|Sim|Não|
 |Crie e edite grupos personalizados de servidores, como servidores que estão em uma localização geográfica específica ou que atendem a uma finalidade específica.|Sim|Sim|
 |Instale ou desinstale funções, serviços de função e recursos no local ou em servidores remotos que estejam executando o Windows Server 2012 R2 ou o Windows Server 2012. Para obter definições de funções, serviços de função e recursos, consulte [funções, serviços de função e recursos](https://go.microsoft.com/fwlink/p/?LinkId=239558).|Sim|Não|
-|Exibir e fazer alterações em funções e recursos do servidor instalados em servidores locais ou remotos. **Observação:** No Gerenciador do Servidor, os dados de função e de recurso são exibidos no idioma base do sistema, também chamado de idioma de GUI padrão do sistema ou no idioma selecionado durante a instalação do sistema operacional.|Sim|Os usuários padrão podem exibir e gerenciar funções e recursos, além de executar tarefas como exibir eventos de função, mas não podem adicionar ou remover serviços de função.|
+|Exibir e fazer alterações em funções e recursos do servidor instalados em servidores locais ou remotos. **Observação:** No Gerenciador do Servidor, os dados de função e de recurso são exibidos no idioma base do sistema, também chamado de idioma de GUI padrão do sistema ou no idioma selecionado durante a instalação do sistema operacional.|Yes|Os usuários padrão podem exibir e gerenciar funções e recursos, além de executar tarefas como exibir eventos de função, mas não podem adicionar ou remover serviços de função.|
 |Inicie ferramentas de gerenciamento, como o Windows PowerShell ou snap-ins do MMC. Você pode iniciar uma sessão do Windows PowerShell direcionada ao servidor remoto clicando com o botão direito do mouse no bloco **servidores** e clicando em **Windows PowerShell**. Você pode iniciar os snap-ins do MMC no menu **ferramentas** do console do Gerenciador do servidor e, em seguida, apontar o MMC para um computador remoto depois que o snap-in estiver aberto.|Sim|Sim|
 |Gerenciar servidores remotos com credenciais diferentes clicando com o botão direito do mouse no bloco **Servidores** e clicando em **Gerenciar como**. Você pode usar **Gerenciar como** para tarefas gerais de gerenciamento de servidores e Serviços de Arquivo e Armazenamento.|Sim|Não|
-|Executar tarefas de gerenciamento associadas ao ciclo de vida operacional de servidores, como iniciar ou interromper serviços; e inicie outras ferramentas que permitem que você defina as configurações de rede, os usuários e os grupos e as conexões de Área de Trabalho Remota de um servidor.|Sim|Os usuários padrão não podem iniciar ou parar serviços. Eles podem alterar o nome do servidor local, o grupo de trabalho ou a associação de domínio e as configurações de Área de Trabalho Remota, mas são solicitados pelo controle de conta de usuário para fornecer credenciais de administrador antes que eles possam concluir essas tarefas. Eles não podem alterar configurações de gerenciamento remoto.|
-|Executar tarefas de gerenciamento associadas ao ciclo de vida operacional de funções instaladas em servidores, incluindo a verificação de funções para garantir a conformidade com as práticas recomendadas.|Sim|Os usuários padrão não podem executar verificações de Analisador de Práticas Recomendadas.|
+|Executar tarefas de gerenciamento associadas ao ciclo de vida operacional de servidores, como iniciar ou interromper serviços; e inicie outras ferramentas que permitem que você defina as configurações de rede, os usuários e os grupos e as conexões de Área de Trabalho Remota de um servidor.|Yes|Os usuários padrão não podem iniciar ou parar serviços. Eles podem alterar o nome do servidor local, o grupo de trabalho ou a associação de domínio e as configurações de Área de Trabalho Remota, mas são solicitados pelo controle de conta de usuário para fornecer credenciais de administrador antes que eles possam concluir essas tarefas. Eles não podem alterar configurações de gerenciamento remoto.|
+|Executar tarefas de gerenciamento associadas ao ciclo de vida operacional de funções instaladas em servidores, incluindo a verificação de funções para garantir a conformidade com as práticas recomendadas.|Yes|Os usuários padrão não podem executar verificações de Analisador de Práticas Recomendadas.|
 |Determinar o status do servidor, identificar eventos críticos e analisar e solucionar falhas ou problemas de configuração.|Sim|Sim|
 |Personalize os eventos, dados de desempenho, serviços e Analisador de Práticas Recomendadas resultados sobre os quais você deseja ser alertado no painel de Gerenciador do Servidor.|Sim|Sim|
 |Reiniciar servidores.|Sim|Não|
@@ -200,7 +200,7 @@ No Gerenciador do Servidor, sua lista de servidores gerenciados, alterações em
 
 -   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
 
--   %% \Local\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID* de *AppData*%\6.2.0.0\user.config
+-   %% \Local\Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID* de *AppData*%\6.2.0.0\user.config
 
 > [!NOTE]
 > -   As credenciais Gerenciar como (ou alternativas) para servidores de seu pool de servidores não são armazenadas no perfil móvel. Os usuários do Gerenciador do servidor devem adicioná-los em cada computador do qual deseja gerenciar.
@@ -226,7 +226,7 @@ Você pode exportar Gerenciador do Servidor configurações, tornar Gerenciador 
 
         -   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
 
-        -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+        -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID*\6.2.0.0\user.config
 
 4.  Clique em **OK** para salvar suas alterações e fechar a caixa de diálogo **Propriedades**.
 
@@ -236,4 +236,4 @@ Você pode exportar Gerenciador do Servidor configurações, tornar Gerenciador 
 
     -   %*AppData*% \Microsoft\Windows\ServerManager\Serverlist.xml
 
-    -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+    -   %*LocalAppData*% \Microsoft_Corporation\ServerManager.exe_StrongName_ *GUID*\6.2.0.0\user.config

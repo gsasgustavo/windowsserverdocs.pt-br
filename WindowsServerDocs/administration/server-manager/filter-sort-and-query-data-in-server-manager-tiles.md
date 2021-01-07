@@ -1,18 +1,18 @@
 ---
 title: Filtrar, classificar e consultar dados em blocos do Gerenciador do Servidor
-description: Gerenciador do Servidor
+description: Saiba como usar blocos em Gerenciador do Servidor para filtrar e classificar dados e criar e salvar consultas personalizadas.
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ddaaadbda28b5494ce5ab0a053b70abd5882591
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7d63d195c075e022ef908df6450960ed5f7b1b3d
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628308"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965718"
 ---
 # <a name="filter-sort-and-query-data-in-server-manager-tiles"></a>Filtrar, classificar e consultar dados em blocos do Gerenciador do Servidor
 
@@ -67,7 +67,7 @@ Você pode criar consultas personalizadas nos blocos eventos, desempenho, Analis
 
     Você pode adicionar duplicatas dos critérios que já estão em sua consulta, mas as duplicatas são adicionadas à consulta com o operador **ou**.
 
-    por exemplo, para consultar as IDs de evento 1003 ou 1014, você primeiro adicionaria os critérios de ID à sua consulta, tornaria o valor de ID igual a **1003**e, em seguida, adicionará um segundo critério de ID à sua consulta, tornando o valor da segunda ID igual a **1014**. A consulta resultante é **e ID é igual a 1003 ou a ID é igual a 1014**.
+    por exemplo, para consultar as IDs de evento 1003 ou 1014, você primeiro adicionaria os critérios de ID à sua consulta, tornaria o valor de ID igual a **1003** e, em seguida, adicionará um segundo critério de ID à sua consulta, tornando o valor da segunda ID igual a **1014**. A consulta resultante é **e ID é igual a 1003 ou a ID é igual a 1014**.
 
 8.  Quando tiver terminado de adicionar critérios e especificar operadores e valores, clique em **Salvar** para salvar a consulta.
 
