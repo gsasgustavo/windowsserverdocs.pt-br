@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.openlocfilehash: 5b840243a7f17dc65db5d3c0605c3e5a321352f2
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 7272a25bac04ab864b44f234c69a1554c86d004a
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97049714"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977331"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Configurar o acesso condicional local usando dispositivos registrados
 
@@ -49,7 +49,7 @@ Para usar o acesso condicional local com dispositivos registrados, você deve pr
 Para verificar seu nível de esquema, faça o seguinte:
 
 1.  Você pode usar o ADSIEdit ou o LDP e conectar-se ao contexto de nomenclatura do esquema.
-2.  Usando o ADSIEdit, clique com o botão direito do mouse em "CN = esquema, CN = Configuração, DC = <domain> , DC = <com> e selecione Propriedades.  Domínio relpace e as partes com com suas informações de floresta.
+2.  Usando o ADSIEdit, clique com o botão direito do mouse em "CN = esquema, CN = Configuração, DC = <domain> , DC = <com> e selecione Propriedades.  Substitua o domínio e as partes com pelas informações da floresta.
 3.  No editor de atributos, localize o atributo objectVersion e ele dirá sua versão.
 
 ![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)
@@ -82,13 +82,13 @@ Para fazer isso, siga as etapas em [Configurando o ingresso no Azure AD em sua o
 ### <a name="create-ad-objects-for-ad-fs-device-authentication"></a>Criar objetos do AD para a autenticação de dispositivo do AD FS
 Se o farm do AD FS já não estiver configurado para Autenticação de dispositivo (você pode ver isso no console de Gerenciamento do AD FS em Serviço -> Registro de dispositivo), siga estas etapas para criar a configuração e os objetos corretos do AD DS.
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
+![Captura de tela que mostra a exibição de visão geral do registro do dispositivo.](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
 
 >Observação: os comandos a seguir exigem ferramentas de administração de Active Directory, portanto, se o servidor de Federação não for também um controlador de domínio, primeiro instale as ferramentas usando a etapa 1 abaixo.  Caso contrário, você pode ignorar a etapa 1.
 
 1.  Execute o assistente de **Adicionar funções e recursos** e selecione recurso **Ferramentas de administração de servidor remoto** -> **Ferramentas de administração de função** -> **Ferramentas do AD DS e AD LDS** -> Escolha o **Módulo do Active Directory para Windows PowerShell** e as **Ferramentas do AD DS**.
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
+![Captura de tela que realça o módulo Active Directory para o Windows PowerShell e as opções de ferramentas de AD DS.](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
 
 2. Em seu AD FS servidor primário, verifique se você está conectado como AD DS usuário com os privilégios de EA (administrador corporativo) e abra um prompt do PowerShell com privilégios elevados.  Em seguida, execute os seguintes comandos do PowerShell:
 
@@ -98,7 +98,7 @@ Se o farm do AD FS já não estiver configurado para Autenticação de dispositi
 
 >Observação: se o serviço de AD FS estiver configurado para usar uma conta do GMSA, insira o nome da conta no formato "DOMAIN\ACCOUNTNAME $"
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device3.png)
+![Captura de tela que mostra como usar os comandos do PowerShell listados.](media/Configure-Device-Based-Conditional-Access-on-Premises/device3.png)
 
 O PSH acima cria os seguintes objetos:
 
@@ -107,11 +107,11 @@ O PSH acima cria os seguintes objetos:
 - Contêiner de Serviço de registro do dispositivo e o objeto em Configuração--> Serviços --> Configuração do registro de dispositivo
 - Contêiner DKM de serviço de registro do dispositivo e o objeto em Configuração --> Serviços --> Configuração do registro de dispositivo
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)
+![Captura de tela que mostra o progresso dos objetos que estão sendo criados.](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)
 
 4. Depois disso, você verá uma mensagem de conclusão bem-sucedida.
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
+![Captura de tela que mostra a mensagem de conclusão bem-sucedida.](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
 
 ###        <a name="create-service-connection-point-scp-in-ad"></a>Criar ponto de conexão de serviço (SCP) no AD
 Se você pretende usar o ingresso em domínio no Windows 10 (com o registro automático no Azure AD) como descrito aqui, execute os seguintes comandos para criar um ponto de conexão de serviço no AD DS
@@ -121,13 +121,13 @@ Se você pretende usar o ingresso em domínio no Windows 10 (com o registro auto
 
 >Observação: se necessário, copie o arquivo AdSyncPrep. psm1 de seu servidor de Azure AD Connect.  O arquivo está localizado em Arquivos de Programas\Microsoft Azure Active Directory Connect\AdPrep
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
+![Captura de tela que mostra o caminho para o arquivo AdSyncPrep.](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
 
 2. Forneça suas credenciais de administrador global do Azure AD
 
     `PS C:>$aadAdminCred = Get-Credential`
 
-![Registro de dispositivo](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
+![Captura de tela que mostra onde fornecer as credenciais de administrador global do Azure AD.](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
 
 3. Execute o seguinte comando do PowerShell
 

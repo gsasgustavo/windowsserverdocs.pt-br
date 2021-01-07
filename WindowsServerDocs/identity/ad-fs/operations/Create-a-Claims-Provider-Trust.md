@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 4ed9370bda7bbad0c38e4b4c30159f91aa924410
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b768a57d3fa5873ed4e64fe0bf531110ca9333c8
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048904"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977371"
 ---
 # <a name="create-a-claims-provider-trust"></a>Criar uma relação de confiança do provedor de declarações
 
@@ -25,31 +25,31 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Em **ações**, clique em **Adicionar confiança do provedor de declarações**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)
+![Captura de tela que realça a ação de confiança de provedor de declarações Add.](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)
 
 3.  Na página **Bem-vindo**, clique em **Iniciar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)
+![Captura de tela que mostra a página de boas-vindas no Assistente para adicionar confiança do provedor de declarações.](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)
 
 4.  Na página **Selecionar Fonte de Dados**, clique em **Inserir manualmente dados da relação de confiança do provedor de declarações** e depois clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim3.PNG)
+![Captura de tela que mostra a opção Inserir confiança do provedor de declarações manualmente.](media/Create-a-Claims-Provider-Trust/addclaim3.PNG)
 
 5.  Na página **Especificar Nome para Exibição**, digite um **Nome para exibição**; em **Observações**, digite uma descrição para essa relação de confiança do provedor de declarações e clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim4.PNG)
+![Captura de tela que mostra onde especificar o nome de exibição.](media/Create-a-Claims-Provider-Trust/addclaim4.PNG)
 
 6.  Na página **Configurar URL** , ESPECIFIQUE a **URL passiva do WS-Federation** , se aplicável, e clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim5.PNG)
+![Captura de tela que mostra onde especificar o WS-Federation U passivo R L.](media/Create-a-Claims-Provider-Trust/addclaim5.PNG)
 
 8. Na página **Configurar Identificador**, em **Identificador da confiança do provedor de declarações**, digite o identificador apropriado e clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim6.PNG)
+![Captura de tela que mostra onde adicionar o identificador de confiança do provedor de declarações.](media/Create-a-Claims-Provider-Trust/addclaim6.PNG)
 
 9. Na página **Configurar Certificados**, clique em **Adicionar** para localizar um arquivo de certificado e adicioná-lo à lista de certificados. Em seguida, clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim7.PNG)
+![Captura de tela que mostra como localizar um arquivo de certificado e adicioná-lo à lista de certificados.](media/Create-a-Claims-Provider-Trust/addclaim7.PNG)
 
 10. Na página **Pronto para Adicionar Confiança**, clique em **Avançar** para salvar as informações sobre confianças do provedor de declarações.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim8.PNG)
+![Captura de tela que mostra como salvar suas informações de confiança do provedor de declarações.](media/Create-a-Claims-Provider-Trust/addclaim8.PNG)
 
 11. Na página **Concluir**, clique em **Fechar**. Essa ação exibe automaticamente a caixa de diálogo **Editar Regras de Declaração**. Para obter mais informações sobre como continuar com a adição de regras de declaração para essa confiança do provedor de declarações, consulte as referências adicionais a seguir.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim9.PNG)
+![Captura de tela que mostra como onde selecionar fechar.](media/Create-a-Claims-Provider-Trust/addclaim9.PNG)
 
 ## <a name="to-create-a-claims-provider-trust-using-federation-metadata"></a>Para criar uma confiança do provedor de declarações usando metadados de Federação
 Para adicionar uma nova confiança do provedor de declarações, usando o snap-in de gerenciamento de AD FS, importando automaticamente os dados de configuração sobre o parceiro de metadados de Federação que o parceiro publicou em uma rede local ou com a Internet, execute o procedimento a seguir em um servidor de Federação na organização do parceiro de recurso.
@@ -60,13 +60,13 @@ Para adicionar uma nova confiança do provedor de declarações, usando o snap-i
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Em **ações**, clique em **Adicionar confiança do provedor de declarações**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)
+![Captura de tela que mostra onde selecionar Adicionar confiança do provedor de declarações.](media/Create-a-Claims-Provider-Trust/addclaim1.PNG)
 
 3.  Na página **Bem-vindo**, clique em **Iniciar**.
 ![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim2.PNG)
 
 4.  Na página **Selecionar Fonte de Dados**, clique em **Importar dados sobre o provedor de declarações publicados online ou em uma rede local**. Em endereço de metadados de Federação (nome do host ou URL), digite a **URL de metadados de Federação** ou o nome do host do parceiro e clique em **Avançar**.
-![confiança do provedor de declarações](media/Create-a-Claims-Provider-Trust/addclaim10.PNG)
+![Captura de tela que mostra os dados de importação sobre o provedor de declarações publicado online ou em uma opção de rede local.](media/Create-a-Claims-Provider-Trust/addclaim10.PNG)
 
 5.  Na página Especificar nome de exibição, digite um **nome para exibição**, em observações, digite uma descrição para a confiança do provedor de declarações e clique em **Avançar**.
 

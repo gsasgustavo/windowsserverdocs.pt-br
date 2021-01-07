@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d256266afb99f45ededb3a14687c6164d2de6f8d
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 83f1efb62f3f7910f0866b63186ef97b11966fe5
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97044464"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977471"
 ---
 # <a name="access-control-policies-in-windows-server-2016-ad-fs"></a>Políticas de controle de acesso no AD FS para Windows Server 2016
 
@@ -27,12 +27,12 @@ O que os modelos de política de controle de acesso fazem é substituir esse mod
 
 Os modelos de política de controle de acesso usam um modelo de permissão.  Isso significa, por padrão, que ninguém tem acesso e que o acesso deve ser concedido explicitamente.  No entanto, isso não é apenas uma permissão de tudo ou nada.  Os administradores podem adicionar exceções à regra de permissão.  Por exemplo, um administrador pode desejar conceder acesso com base em uma rede específica selecionando essa opção e especificando o intervalo de endereços IP.  Mas o administrador pode adicionar e exceção, por exemplo, o administrador pode adicionar uma exceção de uma rede específica e especificar esse intervalo de endereços IP.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP2.PNG)
+![Captura de tela que mostra onde exibir as políticas de controle de acesso.](media/Access-Control-Policies-in-AD-FS/ADFSACP2.PNG)
 
 ## <a name="built-in-access-control-policy-templates-vs-custom-access-control-policy-templates"></a>Modelos de política de controle de acesso interno vs. modelos de política de controle de acesso personalizados
 O AD FS inclui vários modelos de política de controle de acesso interno.  Eles visam alguns cenários comuns que têm o mesmo conjunto de requisitos de política, por exemplo, política de acesso de cliente para o Office 365.  Esses modelos não podem ser modificados.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP3.PNG)
+![Captura de tela que mostra as políticas internas de controle de acesso.](media/Access-Control-Policies-in-AD-FS/ADFSACP3.PNG)
 
 Para fornecer maior flexibilidade para atender às suas necessidades de negócios, os administradores podem criar seus próprios modelos de política de acesso.  Eles podem ser modificados após a criação e as alterações no modelo de política personalizada serão aplicadas a todos os RPs que são controlados por esses modelos de política.  Para adicionar um modelo de política personalizada, basta clicar em Adicionar política de controle de acesso de dentro do gerenciamento de AD FS.
 
@@ -60,11 +60,11 @@ As políticas de controle de acesso podem ser
 
 Um modelo de política com parâmetros é um modelo de política que tem parâmetros. Um administrador precisa inserir o valor para esses parâmetros ao atribuir esse modelo ao administrador do RPs.An não é possível fazer alterações no modelo de política com parâmetros depois que ele tiver sido criado.  Um exemplo de uma política com parâmetros é a política interna, permitir grupo específico.  Sempre que essa política é aplicada a um RP, esse parâmetro precisa ser especificado.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP5.PNG)
+![Captura de tela que mostra um exemplo de um modelo de política com parâmetros.](media/Access-Control-Policies-in-AD-FS/ADFSACP5.PNG)
 
 Um modelo de política não parametrizado é um modelo de política que não tem parâmetros. Um administrador pode atribuir esse modelo ao RPs sem nenhuma entrada necessária e pode fazer alterações em um modelo de política não parametrizado depois que ele tiver sido criado.  Um exemplo disso é a política interna, permitir todos e exigir MFA.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP4.PNG)
+![Captura de tela que mostra um exemplo de um modelo de política não parametrizado.](media/Access-Control-Policies-in-AD-FS/ADFSACP4.PNG)
 
 ## <a name="how-to-create-a-non-parameterized-access-control-policy"></a>Como criar uma política de controle de acesso sem parâmetros
 Para criar uma política de controle de acesso sem parâmetros, use o procedimento a seguir
@@ -83,11 +83,11 @@ Para criar uma política de controle de acesso sem parâmetros, use o procedimen
 
 6.  Na janela que aparece, selecione **autenticado** na lista suspensa.  Clique em **OK**.
 
-    ![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP6.PNG)
+    ![Captura de tela que mostra como selecionar o nível de confiança do dispositivo.](media/Access-Control-Policies-in-AD-FS/ADFSACP6.PNG)
 
 7.  Clique em **OK**. Clique em **OK**.
 
-    ![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP7.PNG)
+    ![Captura de tela que mostra como aceitar a alteração da política.](media/Access-Control-Policies-in-AD-FS/ADFSACP7.PNG)
 
 ## <a name="how-to-create-a-parameterized-access-control-policy"></a>Como criar uma política de controle de acesso com parâmetros
 Para criar uma política de controle de acesso com parâmetros, use o procedimento a seguir
@@ -106,11 +106,11 @@ Para criar uma política de controle de acesso com parâmetros, use o procedimen
 
 6.  Na janela que aparece, selecione **o parâmetro especificado quando a política de controle de acesso é atribuída**.  Clique em **OK**.
 
-    ![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP8.PNG)
+    ![Captura de tela que mostra o parâmetro especificado quando a opção política de controle de acesso é atribuída.](media/Access-Control-Policies-in-AD-FS/ADFSACP8.PNG)
 
 7.  Clique em **OK**. Clique em **OK**.
 
-    ![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP9.PNG)
+    ![Captura de tela que mostra como aceitar a opção selecionada.](media/Access-Control-Policies-in-AD-FS/ADFSACP9.PNG)
 
 ## <a name="how-to-create-a-custom-access-control-policy-with-an-exception"></a>Como criar uma política de controle de acesso personalizada com uma exceção
 Para criar uma política de controle de acesso com uma exceção, use o procedimento a seguir.
@@ -137,7 +137,7 @@ Para criar uma política de controle de acesso com uma exceção, use o procedim
 
 10. Clique em **OK**. Clique em **OK**.
 
-    ![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP10.PNG)
+    ![Captura de tela que mostra a caixa de diálogo Editor de telas.](media/Access-Control-Policies-in-AD-FS/ADFSACP10.PNG)
 
 ## <a name="how-to-create-a-custom-access-control-policy-with-multiple-permit-conditions"></a>Como criar uma política de controle de acesso personalizada com várias condições de permissão
 Para criar uma política de controle de acesso com várias condições de permissão, use o procedimento a seguir
@@ -167,16 +167,16 @@ Para criar uma política de controle de acesso com várias condições de permis
 ## <a name="how-to-assign-an-access-control-policy-to-a-new-application"></a>Como atribuir uma política de controle de acesso a um novo aplicativo
 A atribuição de uma política de controle de acesso a um novo aplicativo é muito simples e agora foi integrada ao Assistente para adicionar um RP.  No assistente de confiança de terceira parte confiável, você pode selecionar a política de controle de acesso que deseja atribuir.  Esse é um requisito ao criar uma nova relação de confiança de terceira parte confiável.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP13.PNG)
+![Captura de tela que mostra as telas escolher política de controle de acesso.](media/Access-Control-Policies-in-AD-FS/ADFSACP13.PNG)
 
 ## <a name="how-to-assign-an-access-control-policy-to-an-existing-application"></a>Como atribuir uma política de controle de acesso a um aplicativo existente
 Atribuir uma política de controle de acesso a um aplicativo existente simplesmente selecione o aplicativo de relações de confiança de terceira parte confiável e clique com o botão direito do mouse em **Editar política de controle de acesso**.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP14.PNG)
+![Captura de tela que mostra o aplicativo de repetição de confiança da parte.](media/Access-Control-Policies-in-AD-FS/ADFSACP14.PNG)
 
 A partir daqui, você pode selecionar a política de controle de acesso e aplicá-la ao aplicativo.
 
-![políticas de controle de acesso](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)
+![Captura de tela que mostra como editar a política de controle de acesso.](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)
 
 ## <a name="see-also"></a>Consulte Também
 [Operações do AD FS](../ad-fs-operations.md)

@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 06/05/2018
 ms.topic: article
-ms.openlocfilehash: da683cec35c7cf43f5fbf5b29ed7441fadf0b218
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 5a1eecc5290f431702baf3c27ea76827d1a72f73
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048664"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977441"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Políticas de controle de acesso no Windows Server 2012 R2 e no Windows Server 2012 AD FS
 
@@ -185,7 +185,7 @@ As políticas descritas neste artigo sempre devem ser usadas com outro método d
 
 11. Para salvar as novas regras, na caixa de diálogo **Editar regras de declaração** , clique em **OK**. A lista resultante deve ser parecida com a seguinte.
 
-    ![Emissão](media/Access-Control-Policies-W2K12/clientaccess3.png)
+    ![Captura de tela que mostra a caixa de diálogo Editar regras de declaração.](media/Access-Control-Policies-W2K12/clientaccess3.png)
 
 ###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a> Cenário 4: bloquear todo o acesso externo ao Office 365, exceto para grupos de Active Directory designados
  O exemplo a seguir habilita o acesso de clientes internos com base no endereço IP. Ele bloqueia o acesso de clientes que residem fora da rede corporativa que têm um endereço IP de cliente externo, exceto aqueles indivíduos em um grupo de Active Directory especificado. Use as etapas a seguir para adicionar as regras de autorização de emissão corretas para a terceira parte confiável da **plataforma de identidade Microsoft Office 365** usando o assistente de regra de declaração:

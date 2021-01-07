@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5238f93656c1d918122fc9cbb3a6b73232fce548
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 7a784f63949fd198272ab2df8d11e1f7b990a473
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048864"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977351"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>Criar uma relação de confiança de terceira parte confiável sem reconhecimento de declaração
 
@@ -29,22 +29,22 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1. No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Em **ações**, clique em **Adicionar confiança de terceira parte confiável**.
-![terceira parte confiável](media/Create-a-Relying-Party-Trust/addtrust1.PNG)
+![Captura de tela que realça a ação adicionar confiança de terceira parte confiável.](media/Create-a-Relying-Party-Trust/addtrust1.PNG)
 
 3.  Na página de **boas-vindas** , escolha **não reconhecimento de declarações** e clique em **Iniciar**.
-![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon1.PNG)
+![Captura de tela que realça a opção sem reconhecimento de declaração.](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon1.PNG)
 
 4.  Na página **Especificar Nome de Exibição**, digite um nome em **Nome de exibição**, em **Notas** digite uma descrição para essa terceira parte confiável e, em seguida, clique em **Avançar**.
-![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon2.PNG)
+![Captura de tela que mostra onde especificar o nome para a terceira parte confiável.](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon2.PNG)
 
 5. Na página **Configurar Identificadores**, especifique um ou mais identificadores da terceira parte confiável, clique em **Adicionar** para adicioná-los à lista e clique em **Avançar**.
-![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon3.PNG)
+![Captura de tela que mostra onde especificar um ou mais identificadores para a terceira parte confiável.](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon3.PNG)
 
 6.  Em **Escolher Política de Controle de Acesso**, escolha uma política e clique em **Avançar**.  Para obter mais informações sobre políticas de controle de acesso, consulte [políticas de controle de acesso em AD FS](Access-Control-Policies-in-AD-FS.md).
-![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon4.PNG)
+![Captura de tela que mostra onde selecionar uma política de controle de acesso para a terceira parte confiável.](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon4.PNG)
 
 7. Na página **Pronto para adicionar confiança**, revise as configurações e clique em **Avançar** para salvar as informações do objeto de confiança de terceira parte confiável.
-   ![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon5.PNG)
+   ![Captura de tela que mostra como salvar suas informações de confiança de terceira parte confiável.](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon5.PNG)
 
 8. Na página **Concluir**, clique em **Fechar**. Essa ação exibe automaticamente a caixa de diálogo **Editar Regras de Declaração**.
 ![terceira parte confiável](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon6.PNG)

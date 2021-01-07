@@ -7,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 4b3564afacf23096b3e76e528015b0e1f155a324
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 6ce5b9f747e3bbe788a058b3e1cfa36d00530e01
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045494"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977391"
 ---
 # <a name="configure-authentication-policies"></a>Configurar políticas de autenticação
 
@@ -39,14 +39,14 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 2.  Em AD FS snap \- in, clique em **políticas de autenticação**.
 
 3.  Na seção **autenticação primária** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação** e selecionar **Editar Autenticação global primária** ou, no painel **ações** , selecionar **Editar Autenticação global primária**.
-![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy1.png)
+![Captura de tela que realça a opção Editar Autenticação global primária.](media/Configure-Authentication-Policies/authpolicy1.png)
 
 4.  Na janela **Editar política de autenticação global** , na guia **primário** , você pode definir as seguintes configurações como parte da política de autenticação global:
 
     -   Métodos de autenticação a serem usados para autenticação primária. Você pode selecionar os métodos de autenticação disponíveis na **extranet** e na **intranet**.
 
     -   Autenticação de dispositivo por meio da caixa de seleção **habilitar autenticação de dispositivo** . Para obter mais informações, consulte [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
-![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy2.png)
+![Captura de tela que mostra como definir as configurações como parte da política de autenticação global.](media/Configure-Authentication-Policies/authpolicy2.png)
 
 ## <a name="to-configure-primary-authentication-per-relying-party-trust"></a>Para configurar a autenticação primária por confiança de terceira parte confiável
 
@@ -55,12 +55,12 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 2.  No AD FS snap \- in, clique em **políticas de autenticação** \\ **por confiança de terceira parte confiável** e clique na confiança da terceira parte confiável para a qual você deseja configurar políticas de autenticação.
 
 3.  \-Clique com o botão direito do mouse na terceira parte confiável para a qual você deseja configurar as políticas de autenticação e selecione **Editar Autenticação primária personalizada** ou, no painel **ações** , selecione **Editar Autenticação primária personalizada**.
-![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy5.png)
+![Captura de tela que realça a opção de menu Editar Autenticação primária personalizada.](media/Configure-Authentication-Policies/authpolicy5.png)
 
 4.  Na janela **Editar política de autenticação para <\_ nome de \_ confiança \_ de terceira parte confiável>** , na guia **primária** , você pode definir a seguinte configuração como parte da política de autenticação de confiança de terceira parte **confiável** :
 
     -   Se os usuários precisam fornecer suas credenciais a cada vez ao entrar \- por meio do, os **usuários precisam fornecer suas credenciais a cada \-** vez na caixa de seleção entrar.
-![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy6.png)
+![Captura de tela que mostra como definir as configurações como parte da política de autenticação de confiança de terceira parte confiável.](media/Configure-Authentication-Policies/authpolicy6.png)
 
 ## <a name="to-configure-multi-factor-authentication-globally"></a>Para configurar a autenticação multifator globalmente
 
@@ -69,7 +69,7 @@ No AD FS, no Windows Server 2012 R2, você pode especificar uma política de aut
 2.  Em AD FS snap \- in, clique em **políticas de autenticação**.
 
 3.  Na seção **\- autenticação multifator** , clique em **Editar** ao lado de **configurações globais**. Você também pode clicar com o botão direito do mouse \- em **políticas de autenticação** e selecionar **Editar \- autenticação multifator global** ou, no painel **ações** , selecionar **Editar \- autenticação multifator global**.
-![políticas de autenticação](media/Configure-Authentication-Policies/authpolicy8.png)
+![Captura de tela que realça a \- opção Editar autenticação multifator global.](media/Configure-Authentication-Policies/authpolicy8.png)
 
 4.  Na janela **Editar política de autenticação global** , na guia **vários \- fatores** , você pode definir as seguintes configurações como parte da \- política de autenticação multifator global:
 

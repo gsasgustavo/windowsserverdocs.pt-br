@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a0d43fce44b7de6ecc5b435b7ed5f2de88ed0b9f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 12c835071c06255a638e65f0bdb78b0d8816cb4d
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89629379"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977241"
 ---
 # <a name="compact"></a>compact
 
@@ -21,21 +21,24 @@ Exibe ou altera a compactação de arquivos ou diretórios em partições NTFS. 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-compact [/c | /u] [/s[:<dir>]] [/a] [/i] [/f] [/q] [<filename>[...]]
+compact [/C | /U] [/S[:dir]] [/A] [/I] [/F] [/Q] [/EXE[:algorithm]] [/CompactOs[:option] [/windir:dir]] [filename [...]]
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| /c | Compacta o diretório ou arquivo especificado. |
-| /u | Descompacta o diretório ou arquivo especificado. |
-| /s [: `<dir>` ] | Aplica o comando **Compact** a todos os subdiretórios do diretório especificado (ou do diretório atual, se nenhum for especificado). |
-| /a | Exibe arquivos ocultos ou do sistema. |
-| /i | Ignora erros. |
-| /f | Força a compactação ou descompactação do diretório ou arquivo especificado. **/f** é usado no caso de um arquivo que foi parcialmente compactado quando a operação foi interrompida por uma falha do sistema. Para forçar o arquivo a ser compactado em sua totalidade, use os parâmetros **/c** e **/f** e especifique o arquivo parcialmente compactado. |
+| /c | Compacta o diretório ou arquivo especificado. Os diretórios são marcados para que todos os arquivos adicionados posteriormente sejam compactados, a menos que o parâmetro/EXE seja especificado. |
+| /u | Descompacta o diretório ou arquivo especificado. Os diretórios são marcados para que todos os arquivos adicionados posteriormente não sejam compactados. Se o parâmetro/EXE for especificado, somente os arquivos compactados como executáveis serão descompactados; Se você não especificar o parâmetro/EXE, somente os arquivos compactados NTFS serão descompactados. |
+| /s`[:<dir>]` | Executa a operação escolhida nos arquivos no diretório especificado e em todos os subdiretórios. Por padrão, o diretório atual é usado como o `<dir>` valor. |
+| /a | Exibe arquivos ocultos ou do sistema. Por padrão, esses arquivos não são incluídos. |
+| /i | Continua executando a operação especificada, ignorando erros. Por padrão, esse comando para quando um erro é encontrado. |
+| /f | Força a compactação ou descompactação do diretório ou arquivo especificado. Os arquivos já compactados são ignorados por padrão. O parâmetro **/f** é usado no caso de um arquivo que foi parcialmente compactado quando a operação foi interrompida por uma falha do sistema. Para forçar o arquivo a ser compactado em sua totalidade, use os parâmetros **/c** e **/f** e especifique o arquivo parcialmente compactado. |
 | /q | Relata apenas as informações mais essenciais. |
-| `<filename>` | Especifica o arquivo ou diretório. Você pode usar vários nomes de arquivo e o **&#42;** e **?** caracteres curinga. |
+| /EXE | Usa a compactação otimizada para arquivos executáveis que são lidas com frequência, mas não modificadas. Os algoritmos com suporte são:<ul><li>**XPRESS4K** (valor mais rápido e padrão)</li><li>**XPRESS8K**</li><li>**XPRESS16K**</li><li>**LZX** (mais compacta)</li></ul> |
+| /CompactOs | Define ou consulta o estado de compactação do sistema. As opções com suporte são:<ul><li>**Query** – consulta o estado **compacto** do sistema.</li><li>**sempre** -compacta todos os binários do sistema operacional e define o estado do sistema como Compact, o que permanece, a menos que o administrador o altere.</li><li>**nunca** – descompacta todos os binários do sistema operacional e define o estado do sistema como não compacto, o que permanece, a menos que o administrador o altere.</li></ul> |
+| /windir | Usado com o parâmetro de **consulta/CompactOs:** ao consultar o sistema operacional offline. Especifica o diretório em que o Windows está instalado. |
+| `<filename>` | Especifica um padrão, arquivo ou diretório. Você pode usar vários nomes de arquivo e o **&#42;** e **?** caracteres curinga. |
 | /? | Exibe a ajuda no prompt de comando. |
 
 #### <a name="remarks"></a>Comentários

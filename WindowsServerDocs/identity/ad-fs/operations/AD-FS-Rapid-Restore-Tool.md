@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 04/24/2019
 ms.topic: article
-ms.openlocfilehash: 4d8313d5a086f2a64ea840da49faa9ca22e46466
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 431f4cd79127758af49d451442d0a62d321abe1a
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046614"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977451"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>Ferramenta de restauração rápida do AD FS
 
@@ -59,7 +59,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 > [!NOTE]
 > Se você estiver usando o banco de dados integrado do Windows (WID), essa ferramenta precisará ser executada no servidor de AD FS primário.  Você pode usar o `Get-AdfsSyncProperties` cmdlet do PowerShell para determinar se o servidor no qual você está ou não é o servidor primário.
 
-### <a name="system-requirements"></a>Requisitos do sistema
+### <a name="system-requirements"></a>Requisitos de sistema
 
 - Essa ferramenta funciona para AD FS no Windows Server 2012 R2 e posterior.
 - O .NET Framework necessário é pelo menos 4,0.
@@ -77,7 +77,7 @@ O cmdlet usa os seguintes parâmetros:
 
 Conjuntos de parâmetros
 
-![Ferramenta de restauração rápida do AD FS](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
+![Captura de tela que mostra os conjuntos de parâmetros que o cmdlet aceita.](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
 ### <a name="detailed-description"></a>Descrição detalhada
 

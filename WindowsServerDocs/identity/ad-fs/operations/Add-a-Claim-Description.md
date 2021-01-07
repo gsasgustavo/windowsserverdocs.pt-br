@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: bdf57eddd1ad76c5bf9217e9aab97cfef9332b61
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 2890fe14ecd9a4e0b8375475fb740367a36dc01d
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97044294"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977411"
 ---
 # <a name="add-a-claim-description"></a>Adicionar uma descrição da declaração
 
@@ -30,7 +30,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1. No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2. Expanda **serviço** e clique com o botão direito do mouse em **Adicionar Descrição da declaração**.
-   ![Adicionar Descrição da declaração](media/Add-a-Claim-Description/claimdesc1.png)
+   ![Captura de tela que destaca a descrição de adicionar declaração.](media/Add-a-Claim-Description/claimdesc1.png)
 
 3. Na caixa de diálogo Adicionar uma descrição de declaração, em **nome de exibição**, digite um nome exclusivo que identifique o grupo ou a função dessa declaração.
 

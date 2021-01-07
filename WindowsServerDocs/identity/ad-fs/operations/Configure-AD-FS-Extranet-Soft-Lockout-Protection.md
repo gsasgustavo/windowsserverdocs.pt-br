@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 02/01/2019
 ms.topic: article
-ms.openlocfilehash: d64e30e3d59cf47ad3a8eb448ad5f856d28f1bea
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 0a4abb4f402a653f8b32a104c2d31f71c6dda589
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97040134"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977301"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>Configurar AD FS proteção contra bloqueio de extranet
 
@@ -66,7 +66,7 @@ Vamos dar uma olhada na política de bloqueio do AD primeiro. Há três configur
 Vamos dar uma olhada em dois exemplos e ver como o **badPwdCount** muda ao longo do tempo com base em diferentes configurações e Estados. Vamos supor nos dois exemplos de **limite de bloqueio de conta** = 4 e **ExtranetLockoutThreshold** = 2. A seta **vermelha** representa uma tentativa de senha incorreta, a seta **verde** representa uma boa tentativa de senha. No exemplo #1, **ExtranetObservationWindow** &gt; **redefina o contador de bloqueio de conta após**. No exemplo #2, **ExtranetObservationWindow** &lt; **redefina o contador de bloqueio de conta após**.
 
 ### <a name="example-1"></a>Exemplo 1
-![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
+![Diagrama que mostra como o badPwdCount muda ao longo do tempo com base em diferentes configurações e Estados.](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
 
 ### <a name="example-2"></a>Exemplo 2
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)

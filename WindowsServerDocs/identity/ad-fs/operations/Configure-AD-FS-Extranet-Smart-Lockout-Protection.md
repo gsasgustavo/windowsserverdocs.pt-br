@@ -7,12 +7,12 @@ ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.openlocfilehash: 182d529ce2cd5bdf8ce0dc833cb43a283f874218
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 415275a0d845191144010293f1a57d8caab77672
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97040144"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977311"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>Bloqueio de Extranet do AD FS e Extranet Smart Lockout
 
@@ -62,7 +62,7 @@ Há suporte para endereços IPv4 e IPv6.
 - **Logon bem-sucedido**: se o logon for bem-sucedido, os IPs da solicitação serão adicionados à lista de IPS de local familiar do usuário.
 - **Logon com falha**: se o logon falhar, o badPwdCount será aumentado. O usuário entrará em um estado de bloqueio se o invasor enviar mais senhas inadequadas ao sistema do que o limite permite. (badPwdCount > ExtranetLockoutThreshold)
 
-![configuração](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
+![Diagrama de fluxo de trabalho que mostra o processo de logon com falha.](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
 O valor "UnknownLockout" será igual a true quando a conta for bloqueada. Isso significa que o badPwdCount do usuário está acima do limite, ou seja, alguém tentou mais senhas do que o permitido pelo sistema. Nesse estado, há duas maneiras pelas quais um usuário válido pode fazer logon.
 - O usuário deve aguardar o tempo de ObservationWindow ser decorrido ou
@@ -255,7 +255,7 @@ No modo somente log, você pode verificar o log de auditoria de segurança para 
 |1203|Esse evento é gravado para cada tentativa de senha inadequada. Assim que o badPwdCount atingir o valor especificado em ExtranetLockoutThreshold, a conta será bloqueada no ADFS durante a duração especificada em ExtranetObservationWindow.</br>ID da atividade: %1</br>XML: %2|
 |1201|Esse evento é gravado cada vez que um usuário é bloqueado. </br>ID da atividade: %1</br>XML: %2|
 |557 (ADFS 2019)| Ocorreu um erro ao tentar se comunicar com o serviço REST do repositório de contas no nó %1. Se esse for um farm WID, o nó primário poderá estar offline. Se este for um farm do SQL, o ADFS selecionará automaticamente um novo nó para hospedar a função mestre de armazenamento do usuário.|
-|562 (ADFS 2019)|Ocorreu um erro ao communcating com o ponto de extremidade de repositório de conta no servidor %1.</br>Mensagem de exceção: %2|
+|562 (ADFS 2019)|Ocorreu um erro ao se comunicar com o ponto de extremidade do repositório de conta no servidor %1.</br>Mensagem de exceção: %2|
 |563 (ADFS 2019)|Ocorreu um erro ao calcular o status de bloqueio da extranet. Devido ao valor da configuração %1, a autenticação será permitida para esse usuário e a emissão do token continuará. Se esse for um farm WID, o nó primário poderá estar offline. Se este for um farm do SQL, o ADFS selecionará automaticamente um novo nó para hospedar a função mestre de armazenamento do usuário.</br>Nome do servidor de repositório de conta: %2</br>ID de usuário: %3</br>Mensagem de exceção: %4|
 |512|A conta para o usuário a seguir está bloqueada. Uma tentativa de logon está sendo permitida devido à configuração do sistema.</br>ID da atividade: %1 </br>Usuário: %2 </br>IP do cliente: %3 </br>Contagem de senha inadequada: %4  </br>Última tentativa de senha inadequada: %5|
 |515|A seguinte conta de usuário estava em um estado bloqueado e a senha correta acabou de ser fornecida. Essa conta pode estar comprometida.</br>Dados adicionais </br>ID da atividade: %1 </br>Usuário: %2 </br>IP do cliente: %3 |
