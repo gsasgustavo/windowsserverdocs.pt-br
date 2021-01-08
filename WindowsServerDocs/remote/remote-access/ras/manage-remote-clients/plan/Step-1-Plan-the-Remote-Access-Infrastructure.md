@@ -1,18 +1,18 @@
 ---
 title: Etapa 1 planejar a infraestrutura de acesso remoto
-description: Este tópico faz parte do guia gerenciar clientes DirectAccess remotamente no Windows Server 2016.
+description: Saiba mais sobre as etapas para planejar uma infraestrutura que você pode usar para configurar um único servidor de acesso remoto para o gerenciamento remoto de clientes DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: add64a49bdc0b4ae0b9cfa0eaece085576013b81
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: d66073b93bbb1f3f73c95443c04900c3e37dd628
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947672"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039916"
 ---
 # <a name="step-1-plan-the-remote-access-infrastructure"></a>Etapa 1 planejar a infraestrutura de acesso remoto
 
@@ -57,7 +57,7 @@ Ao planejar sua rede, você precisa considerar a topologia do adaptador de rede,
 
 3.  Configure os adaptadores e endereçamento necessários conforme a tabela a seguir. Para implantações que estão atrás de um dispositivo NAT usando um único adaptador de rede, configure seus endereços IP usando apenas a coluna **adaptador de rede interno** .
 
-    |Description|Adaptador de rede externa|Adaptador de rede interno<sup>1, acima</sup>|Requisitos de roteamento|
+    |Descrição|Adaptador de rede externa|Adaptador de rede interno<sup>1, acima</sup>|Requisitos de roteamento|
     |-|--------------|------------------------|------------|
     |Internet IPv4 e intranet IPv4|Configure o seguinte:<br/><br/>-Dois endereços IPv4 públicos consecutivos estáticos com as máscaras de sub-rede apropriadas (necessárias somente para Teredo).<br/>-Um endereço IPv4 de gateway padrão para seu firewall da Internet ou para o roteador do provedor de serviços de Internet local (ISP). **Observação:** O servidor de acesso remoto requer dois endereços IPv4 públicos consecutivos para que ele possa atuar como um servidor Teredo e clientes Teredo baseados no Windows podem usar o servidor de acesso remoto para detectar o tipo de dispositivo NAT.|Configure o seguinte:<br/><br/>-Um endereço de intranet IPv4 com a máscara de sub-rede apropriada.<br/>-Um sufixo DNS específico da conexão para seu namespace de intranet. Um servidor DNS também deverá ser configurado na interface interna. **Cuidado:** Não configure um gateway padrão em nenhuma interface de intranet.|Para configurar o servidor de acesso remoto para alcançar todas as sub-redes na rede IPv4 interna, faça o seguinte:<br/><br/>-Lista os espaços de endereço IPv4 para todos os locais na sua intranet.<br/>-Use os `route add -p` `netsh interface ipv4 add route` comandos ou para adicionar os espaços de endereço IPv4 como rotas estáticas na tabela de roteamento IPv4 do servidor de acesso remoto.|
     |Internet IPv6 e intranet IPv6|Configure o seguinte:<br/><br/>-Use a configuração de endereço autoconfigurado fornecida pelo seu ISP.<br/>-Use o `route print` comando para garantir que uma rota IPv6 padrão que aponta para o roteador do ISP exista na tabela de roteamento IPv6.<br/>-Determine se o ISP e os roteadores de intranet estão usando as preferências de roteador padrão, conforme descrito em RFC 4191, e se eles usam uma preferência padrão mais alta do que os roteadores de intranet local. Se as duas situações forem verdadeiras, nenhuma outra configuração para a rota padrão será necessária. A preferência mais alta para o roteador do ISP assegura que a rota IPv6 padrão ativa do servidor de Acesso Remoto aponte para a Internet IPv6.<br/><br/>Como o servidor de Acesso Remoto é um roteador IPv6, caso você tenha uma infraestrutura IPv6 nativa, a interface de Internet também poderá acessar os controladores de domínio na intranet. Nesse caso, adicione filtros de pacote ao controlador de domínio na rede de perímetro que impeçam a conectividade com o endereço IPv6 da interface de Internet do servidor de acesso remoto.|Configure o seguinte:<br/><br/>Se você não estiver usando níveis de preferência padrão, configure suas interfaces de intranet usando o `netsh interface ipv6 set InterfaceIndex ignoredefaultroutes=enabled` comando. Esse comando garante que as rotas padrão adicionais que apontam para os roteadores da intranet não sejam acrescentadas à tabela de roteamento de IPv6. Você pode obter o InterfaceIndex de suas interfaces de intranet na exibição do `netsh interface show interface` comando.|Se você possui uma intranet IPv6, execute o seguinte procedimento para configurar o servidor de Acesso Remoto para chegar a todos os locais IPv6:<br/><br/>-Lista os espaços de endereço IPv6 para todos os locais na sua intranet.<br/>-Use o `netsh interface ipv6 add route` comando para adicionar os espaços de endereço IPv6 como rotas estáticas na tabela de roteamento IPv6 do servidor de acesso remoto.|

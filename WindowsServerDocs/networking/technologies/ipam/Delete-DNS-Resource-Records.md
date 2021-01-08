@@ -1,18 +1,18 @@
 ---
 title: Excluir registros de recursos de DNS
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como excluir um ou mais registros de recursos DNS usando o console do cliente IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 70039e266e2696f69c5eee8077bab81ccee72d35
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: a305457d50985c2cefa56dbfe0d243bc9cd8b504
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97945452"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039566"
 ---
 # <a name="delete-dns-resource-records"></a>Excluir registros de recursos de DNS
 

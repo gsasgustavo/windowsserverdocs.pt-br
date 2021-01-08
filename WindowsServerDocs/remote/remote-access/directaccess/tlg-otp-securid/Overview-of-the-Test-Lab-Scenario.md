@@ -1,18 +1,18 @@
 ---
 title: Visão geral da autenticação de OTP do cenário de laboratório de teste e RSA SecurID
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess com autenticação OTP e RSA SecurID para Windows Server 2016
+description: Saiba mais sobre como estender a configuração de servidor único do DirectAccess com o guia de laboratório de teste de IPv4 e IPv6 misto para demonstrar uma configuração de OTP (senha única) de acesso remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 282dc78a0849234177cdbaa15ab82ea9eb00fc27
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: fc6f8696401f2284da19a989153ab2b87c453757
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946992"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040086"
 ---
 # <a name="overview-of-the-test-lab-scenario-otp-authentication-and-rsa-securid"></a>Visão geral da autenticação de OTP do cenário de laboratório de teste e RSA SecurID
 

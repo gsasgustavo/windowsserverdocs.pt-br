@@ -1,18 +1,18 @@
 ---
 title: Instalar a autoridade de certificação
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como instalar Active Directory serviços de certificados para que você possa registrar um certificado de servidor em servidores que estejam executando o servidor de políticas de rede, o serviço de roteamento e acesso remoto ou ambos.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 512653a98ff887b6d7f7d5c1af59ee5310a4df46
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 1e5c093a0c465f1f29cc8fd4606928515ae24091
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950172"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038546"
 ---
 # <a name="install-the-certification-authority"></a>Instalar a autoridade de certificação
 
@@ -51,7 +51,7 @@ A associação aos grupos **Administradores de Empresa** e **Admins. do Domínio
 
 4.  Em **Selecionar Tipo de Instalação**, verifique se **Instalação baseada em função ou recurso** está marcada e clique em **Avançar**.
 
-5.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Avançar**.
+5.  Em **Selecionar servidor de destino**, verifique se **Selecionar um servidor no pool de servidores** está marcada. Em **Pool de Servidores**, verifique se o computador local está selecionado. Clique em **Próximo**.
 
 6.  Em **selecionar funções de servidor**, em **funções**, selecione **Active Directory serviços de certificados**. Quando for solicitado a adicionar os recursos necessários, clique em **Adicionar recursos** e, em seguida, clique em **Avançar**.
 
@@ -59,7 +59,7 @@ A associação aos grupos **Administradores de Empresa** e **Admins. do Domínio
 
 8.  Em **Active Directory serviços de certificados**, leia as informações fornecidas e clique em **Avançar**.
 
-9. Em **Confirmar seleções de instalação**, clique em **Instalar**. Não feche o assistente durante o processo de instalação. Quando a instalação for concluída, clique em **configurar Active Directory serviços de certificados no servidor de destino**. O assistente de configuração do AD CS é aberto. Leia as informações de credenciais e, se necessário, forneça as credenciais para uma conta que seja membro do grupo Administradores de empresa. Clique em **Avançar**.
+9. Em **Confirmar seleções de instalação**, clique em **Instalar**. Não feche o assistente durante o processo de instalação. Quando a instalação for concluída, clique em **configurar Active Directory serviços de certificados no servidor de destino**. O assistente de configuração do AD CS é aberto. Leia as informações de credenciais e, se necessário, forneça as credenciais para uma conta que seja membro do grupo Administradores de empresa. Clique em **Próximo**.
 
 10. Em **serviços de função**, clique em **autoridade de certificação** e em **Avançar**.
 
@@ -69,12 +69,12 @@ A associação aos grupos **Administradores de Empresa** e **Admins. do Domínio
 
 13. Na página **especificar o tipo da chave privada** , verifique se **criar uma nova chave privada** está selecionado e clique em **Avançar**.
 
-14. Na página **criptografia para autoridade de certificação** , mantenha as configurações padrão para CSP (**RSA # provedor de armazenamento de chaves de software da Microsoft**) e algoritmo de hash (**SHA2**) e determine o melhor comprimento de caractere de chave para sua implantação. Comprimentos de caracteres de chave grandes fornecem segurança ideal; no entanto, eles podem afetar o desempenho do servidor e podem não ser compatíveis com os aplicativos herdados. É recomendável que você mantenha a configuração padrão de 2048. Clique em **Avançar**.
+14. Na página **criptografia para autoridade de certificação** , mantenha as configurações padrão para CSP (**RSA # provedor de armazenamento de chaves de software da Microsoft**) e algoritmo de hash (**SHA2**) e determine o melhor comprimento de caractere de chave para sua implantação. Comprimentos de caracteres de chave grandes fornecem segurança ideal; no entanto, eles podem afetar o desempenho do servidor e podem não ser compatíveis com os aplicativos herdados. É recomendável que você mantenha a configuração padrão de 2048. Clique em **Próximo**.
 
-15. Na página **nome da autoridade de certificação** , mantenha o nome comum sugerido para a autoridade de certificação ou altere o nome de acordo com seus requisitos. Verifique se você tem certeza de que o nome da autoridade de certificação é compatível com suas convenções de nomenclatura e fins, porque você não pode alterar o nome da autoridade de certificação depois de ter instalado o AD CS. Clique em **Avançar**.
+15. Na página **nome da autoridade de certificação** , mantenha o nome comum sugerido para a autoridade de certificação ou altere o nome de acordo com seus requisitos. Verifique se você tem certeza de que o nome da autoridade de certificação é compatível com suas convenções de nomenclatura e fins, porque você não pode alterar o nome da autoridade de certificação depois de ter instalado o AD CS. Clique em **Próximo**.
 
-16. Na página **período de validade** , em **especificar o período de validade**, digite o número e selecione um valor de hora (anos, meses, semanas ou dias). A configuração padrão de cinco anos é recomendada. Clique em **Avançar**.
+16. Na página **período de validade** , em **especificar o período de validade**, digite o número e selecione um valor de hora (anos, meses, semanas ou dias). A configuração padrão de cinco anos é recomendada. Clique em **Próximo**.
 
-17. Na página **banco de dados de CA** , em **especificar os locais do banco de dados**, especifique o local da pasta para o banco de dados do certificado e o log do banco de dados do certificado Se você especificar localizações diferentes do padrão, verifique se as pastas estão protegidas com ACLs (listas de controle de acesso) que impedem que usuários ou computadores não autorizados acessem os arquivos de log e o banco de dados da autoridade de certificação. Clique em **Avançar**.
+17. Na página **banco de dados de CA** , em **especificar os locais do banco de dados**, especifique o local da pasta para o banco de dados do certificado e o log do banco de dados do certificado Se você especificar localizações diferentes do padrão, verifique se as pastas estão protegidas com ACLs (listas de controle de acesso) que impedem que usuários ou computadores não autorizados acessem os arquivos de log e o banco de dados da autoridade de certificação. Clique em **Próximo**.
 
 18. Em **confirmação**, clique em **Configurar** para aplicar suas seleções e, em seguida, clique em **Fechar**.

@@ -1,18 +1,18 @@
 ---
 title: Filtrar a exibição de registros de recursos de DNS
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como filtrar a exibição de registros de recursos de DNS no console do cliente IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 528c3b8e86eb14c8bc5c08408f1326241b6da9fc
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: b17c071d78079933a04663e4fd1cd3528a9b86cb
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97945292"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039556"
 ---
 # <a name="filter-the-view-of-dns-resource-records"></a>Filtrar a exibição de registros de recursos de DNS
 

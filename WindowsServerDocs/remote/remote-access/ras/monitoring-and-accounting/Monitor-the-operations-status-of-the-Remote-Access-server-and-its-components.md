@@ -1,18 +1,18 @@
 ---
 title: Monitorar o status das operações do servidor de Acesso Remoto e seus componentes
-description: Este tópico faz parte do guia de monitoramento e contabilidade de acesso remoto no Windows Server 2016.
+description: Saiba como usar o console de gerenciamento no servidor de acesso remoto para monitorar seu status de operações.
 manager: brianlic
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 6c3204aee3b10e8871de744ce7db70a0ca81cc0e
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 74d43d4f1feacdeb10eb5e1ee55462187cf628f5
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947312"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039776"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>Monitorar o status das operações do servidor de Acesso Remoto e seus componentes
 

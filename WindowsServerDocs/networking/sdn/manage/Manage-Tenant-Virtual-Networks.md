@@ -1,18 +1,18 @@
 ---
 title: Gerenciar redes virtuais do locatário
-description: Este tópico faz parte do guia de rede definido pelo software sobre como gerenciar cargas de trabalho de locatário e redes virtuais no Windows Server 2016.
+description: Saiba como gerenciar redes virtuais de virtualização de rede Hyper-V de locatário depois de implantar a rede definida pelo software.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: 01a78c820098ed58bcbf4690982b8f3a68f63bb5
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 3fc38bf559da74fdbc4ed95da9d384bffcd48194
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949662"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038246"
 ---
 # <a name="manage-tenant-virtual-networks"></a>Gerenciar redes virtuais do locatário
 

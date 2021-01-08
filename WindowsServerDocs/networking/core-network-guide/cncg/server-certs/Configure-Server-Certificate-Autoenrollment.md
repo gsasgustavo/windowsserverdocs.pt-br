@@ -1,18 +1,18 @@
 ---
 title: Configurar o registro automático do certificado do servidor
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como configurar o registro automático do certificado do servidor e o registro automático do certificado do usuário.
 manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 6f37d19cd1805b5c8cf0be267e3d3317f17fcd11
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: ba491e280c4c575b3ab39efed2cb412ebc6954d5
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947852"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038796"
 ---
 # <a name="configure-certificate-auto-enrollment"></a>Configurar o registro automático do certificado
 

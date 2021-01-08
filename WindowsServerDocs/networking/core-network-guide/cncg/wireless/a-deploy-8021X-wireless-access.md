@@ -1,18 +1,18 @@
 ---
 title: Implantar acesso sem fio autenticado 802.1X baseado em senha
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
+description: Saiba como implantar o Instituto de engenheiros elétricos e eletrônicos com o acesso sem fio IEEE 802,11 autenticado usando protocolo de autenticação extensível protegida – protocolo de autenticação de handshake de desafio da Microsoft versão 2.
 manager: brianlic
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 2b6a04f10814a077ab1b8aefa612c9fbe6e153a6
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 6a861bf9df9d80efc5fd82b8c74ea54b71c8aef5
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948412"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038396"
 ---
 # <a name="deploy-password-based-8021x-authenticated-wireless-access"></a>Implantar o \- acesso sem fio autenticado 802.1 x baseado em senha
 
@@ -194,7 +194,7 @@ No Windows Server 2016, os seguintes \- métodos de criptografia sem fio baseado
 > [!IMPORTANT]
 > \(O WEP de privacidade de equivalência com fio \) era o padrão de segurança sem fio original que foi usado para criptografar o tráfego de rede. Você não deve implantar o WEP em sua rede porque há \- vulnerabilidades bem conhecidas nessa forma de segurança desatualizada.
 
-### <a name="active-directory-doman-services-ad-ds"></a>Active Directory serviços domínios \( AD DS\)
+### <a name="active-directory-domain-services-ad-ds"></a>Active Directory Domain Services \( AD DS\)
 O AD DS fornece um banco de dados distribuído que armazena e gerencia informações sobre recursos \- de rede e dados específicos do aplicativo de \- aplicativos habilitados para diretório. Os administradores podem usar AD DS para organizar elementos de uma rede, como usuários, computadores e outros dispositivos, em uma estrutura de confinamento hierárquica. A estrutura de confinamento hierárquica inclui a floresta Active Directory, os domínios na floresta e as UOs das unidades organizacionais \( \) em cada domínio. Um servidor que está executando o AD DS é chamado de *controlador de domínio*.
 
 AD DS contém as contas de usuário, as contas de computador e as propriedades de conta exigidas pelo IEEE 802.1 X e PEAP \- MS \- CHAP v2 para autenticar as credenciais do usuário e para avaliar a autorização de conexões sem fio.
@@ -253,7 +253,7 @@ A autenticação de PEAP do \- MS \- CHAP V2 com êxito tem duas partes principa
 
     Se você implantar sua própria autoridade de certificação privada, o certificado de autoridade de certificação será instalado automaticamente no repositório de certificados das autoridades de certificação raiz confiáveis para o usuário atual e para o computador local quando Política de Grupo for atualizado no computador cliente membro do domínio. Se você decidir implantar certificados de servidor de uma AC pública, verifique se o certificado de autoridade de certificação pública já está no repositório de certificados de autoridades de certificação raiz confiáveis.
 
-2.  O NPS autentica o usuário. Depois que o cliente autentica o NPS com êxito, o cliente envia as credenciais baseadas na senha do usuário \- para o NPS, que verifica as credenciais do usuário no banco de dados de contas de usuário em Active Directory serviços domínios \( AD DS \) .
+2.  O NPS autentica o usuário. Depois que o cliente autenticar o NPS com êxito, o cliente envia as credenciais baseadas na senha do usuário \- para o NPS, que verifica as credenciais do usuário no banco de dados de contas de usuário no Active Directory Domain Services \( AD DS \) .
 
 Se as credenciais forem válidas e a autenticação for bem sucedido, o NPS iniciará a fase de autorização do processamento da solicitação de conexão. Se as credenciais não forem válidas e a autenticação falhar, o NPS enviará uma mensagem de rejeição de acesso e a solicitação de conexão será negada.
 

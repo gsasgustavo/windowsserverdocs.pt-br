@@ -1,18 +1,18 @@
 ---
 title: Gerenciar cargas de trabalho de locatário
-description: Este tópico faz parte do guia de rede definido pelo software sobre como gerenciar cargas de trabalho de locatário e redes virtuais no Windows Server 2016.
+description: Saiba mais sobre a documentação que permite gerenciar cargas de trabalho de locatário adicionando VMs (máquinas virtuais) de locatário, usando soluções de virtualização de rede, configurando o balanceamento de carga de software e muito mais.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 4017184de9f74cd0c6d1277cc6b8161b8f3d6e98
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2a571b6ed9a850f6e81d6cdddeb2f62c5eac1271
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962221"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038206"
 ---
 # <a name="manage-tenant-workloads"></a>Gerenciar cargas de trabalho de locatário
 

@@ -1,18 +1,18 @@
 ---
 title: ETAPA 11 configurar a implantação multissite
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba como fazer alterações no assistente de configuração de acesso remoto atual no EDGE1, habilite o recurso multissite e, em seguida, adicione 2-EDGE1 como um segundo ponto de entrada.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 340029665915dd01766becd4bba9b01a66195969
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 7b70ab6e1f8f28fd0fb1a3a546188de1b4b37cbc
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947012"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039166"
 ---
 # <a name="step-11-configure-the-multisite-deployment"></a>ETAPA 11 configurar a implantação multissite
 

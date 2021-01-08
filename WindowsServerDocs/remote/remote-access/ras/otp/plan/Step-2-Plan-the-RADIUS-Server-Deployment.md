@@ -1,18 +1,18 @@
 ---
 title: Etapa 2 planejar a implantação do servidor RADIUS
-description: Este tópico faz parte do guia implantar o acesso remoto com autenticação OTP no Windows Server 2016.
+description: Saiba como planejar o servidor de autenticação de senha de uso único (OTP).
 manager: brianlic
 ms.topic: article
 ms.assetid: 2d6ad863-02a5-49b0-9aff-d189e78b2b80
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: c76327d4249d7266ad2c993836b2c98815094235
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 5658c4c3a323bf9e0df5af8cf57dad85d98fe8dd
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950252"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040156"
 ---
 # <a name="step-2-plan-the-radius-server-deployment"></a>Etapa 2 planejar a implantação do servidor RADIUS
 

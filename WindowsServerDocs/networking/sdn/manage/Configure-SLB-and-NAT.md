@@ -1,18 +1,18 @@
 ---
 title: Configurar o balanceador de carga de software para balanceamento de carga e Conversão de endereços de rede (NAT)
-description: Este tópico faz parte do guia de rede definido pelo software sobre como gerenciar cargas de trabalho de locatário e redes virtuais no Windows Server 2016.
+description: Saiba como usar o balanceador de carga de software de rede definido pelo software para fornecer conversão de endereços de rede de saída, NAT de entrada ou balanceamento de carga entre várias instâncias de um aplicativo.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: e7488c546753594f61e034b271fcaddfd52a0233
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a5130ab588f46bd8be8174a853b4e1f9cc1a568f
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954042"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038226"
 ---
 # <a name="configure-the-software-load-balancer-for-load-balancing-and-network-address-translation-nat"></a>Configurar o balanceador de carga de software para balanceamento de carga e Conversão de endereços de rede (NAT)
 

@@ -1,18 +1,18 @@
 ---
 title: Etapa 2 configurar o servidor de acesso remoto
-description: Este tópico faz parte do guia gerenciar clientes DirectAccess remotamente no Windows Server 2016.
+description: Saiba como definir as configurações de cliente e servidor que são necessárias para o gerenciamento remoto de clientes DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 5fb19aeed8cd390693b0d62516191e920e4d879b
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 7d7b2a29ef22f8768861eb456e0ded2c0e9a9432
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947702"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040032"
 ---
 # <a name="step-2-configure-the-remote-access-server"></a>Etapa 2 configurar o servidor de acesso remoto
 
@@ -137,7 +137,7 @@ Para implantar o acesso remoto, você precisa configurar o servidor que atuará 
 
     -   Certificado IP-HTTPS. Isso se baseia no nome público da implantação que você definiu durante a etapa anterior do assistente. Se o assistente não detectar o certificado IP-HTTPS correto, clique em **procurar** para selecionar manualmente o certificado correto.
 
-4.  Clique em **Avançar**.
+4.  Clique em **Próximo**.
 
 5.  Na página **configuração de prefixo** (essa página só ficará visível se o IPv6 for detectado na rede interna), o assistente detectará automaticamente as configurações de IPv6 que são usadas na rede interna. Se sua implantação necessitar de prefixos adicionais, configure os prefixos IPv6 para a rede interna, um prefixo IPv6 para atribuir a computadores cliente do DirectAccess e um para atribuir a computadores cliente do VPN.
 
@@ -170,7 +170,7 @@ Para configurar os servidores de infraestrutura em uma implantação de acesso r
 
 3.  Na página **DNS** , na tabela, insira os sufixos de nome adicionais que serão aplicados como isenções de tabela de políticas de resolução de nomes (NRPT). Selecione a opção de resolução de nome local e clique em **Avançar**.
 
-4.  Na página **lista de pesquisa de sufixo DNS** , o servidor de acesso remoto automaticamente detecta sufixos de domínio na implantação. Use os botões **Adicionar** e **remover** para criar a lista de sufixos de domínio que você deseja usar. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Avançar**.
+4.  Na página **lista de pesquisa de sufixo DNS** , o servidor de acesso remoto automaticamente detecta sufixos de domínio na implantação. Use os botões **Adicionar** e **remover** para criar a lista de sufixos de domínio que você deseja usar. Para adicionar um novo sufixo de domínio, em **Novo sufixo**, digite o sufixo e clique em **Adicionar**. Clique em **Próximo**.
 
 5.  Na página **Gerenciamento** , adicione servidores de gerenciamento que não são detectados automaticamente e clique em **Avançar**. O acesso remoto adiciona automaticamente os controladores de domínio e os servidores de Configuration Manager.
 

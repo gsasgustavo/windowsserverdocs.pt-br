@@ -1,18 +1,18 @@
 ---
 title: Exibir registros de recurso de DNS para uma zona DNS
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como exibir registros de recursos de DNS para uma zona DNS no console do cliente IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 63b05967e35ae878e5002d83ae2c0148f15c589b
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 518394310b43f9e1a4ee5be6313a462d41461ff2
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948322"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038196"
 ---
 # <a name="view-dns-resource-records-for-a-dns-zone"></a>Exibir registros de recurso de DNS para uma zona DNS
 

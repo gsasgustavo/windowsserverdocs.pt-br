@@ -1,18 +1,18 @@
 ---
 title: Verificar registro de servidor de um certificado do servidor
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como verificar se os servidores do servidor de diretivas de rede registraram um certificado de servidor da autoridade de certificação.
 manager: brianlic
 ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 174100f1886492f70fb98abbfcab61e687418133
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 188e75ed58c3adc0249305d669acbb06d0b6c15d
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947802"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038336"
 ---
 # <a name="verify-server-enrollment-of-a-server-certificate"></a>Verificar registro de servidor de um certificado do servidor
 

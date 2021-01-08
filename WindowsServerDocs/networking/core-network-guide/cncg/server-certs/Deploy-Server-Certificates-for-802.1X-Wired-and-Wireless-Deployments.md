@@ -1,18 +1,18 @@
 ---
 title: Implantar certificados de servidor para implantações com e sem fio do 802.1X
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como implantar certificados de servidor em servidores de infraestrutura de acesso remoto e servidor de políticas de rede (NPS).
 manager: brianlic
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 844a64558d4822c26effddc4b3772ad0a191718c
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: b33f0a6aacb5b956691787816c362e845491a6cc
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947842"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038566"
 ---
 # <a name="deploy-server-certificates-for-8021x-wired-and-wireless-deployments"></a>Implantar certificados de servidor para implantações com e sem fio do 802.1X
 

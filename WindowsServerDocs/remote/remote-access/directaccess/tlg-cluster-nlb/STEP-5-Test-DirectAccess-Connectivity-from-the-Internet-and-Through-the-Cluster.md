@@ -1,18 +1,18 @@
 ---
 title: ETAPA 5 testar a conectividade do DirectAccess da Internet e por meio do cluster
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess em um cluster com o NLB do Windows para Windows Server 2016
+description: Saiba como testar a conectividade do DirectAccess da Internet e do cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 20e4895834d56bfc0cb29700dee38fee9c0b9336
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: e301c9786b0d76e45c8417a7a3c9340937f5f529
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946552"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039206"
 ---
 # <a name="step-5-test-directaccess-connectivity-from-the-internet-and-through-the-cluster"></a>ETAPA 5 testar a conectividade do DirectAccess da Internet e por meio do cluster
 

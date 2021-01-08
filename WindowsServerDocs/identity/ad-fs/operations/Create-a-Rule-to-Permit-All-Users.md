@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: af24036b55ed695765c1c3424f180db718732cee
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: c532ce43d2974300cc55ffa1c04e1c81695c2b32
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048114"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039076"
 ---
 # <a name="create-a-rule-to-permit-all-users"></a>Criar uma regra para permitir todos os usuários
 
@@ -29,13 +29,13 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall1.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável.](media/Create-a-Rule-to-Permit-All-Users/permitall1.PNG)
 
 3.  Clique com o botão direito do mouse na **relação de confiança** de terceira parte confiável à qual você deseja permitir acesso e selecione **Editar política de controle de acesso**.
-![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall2.PNG)
+![Captura de tela que mostra onde selecionar a política de controle de acesso de edição.](media/Create-a-Rule-to-Permit-All-Users/permitall2.PNG)
 
 4. Na política de controle de acesso, selecione **permitir todos** e, em seguida, clique em **aplicar** e em **OK**.
-![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall3.PNG)
+![Captura de tela que realça a política de controle de acesso de permissão de todos.](media/Create-a-Rule-to-Permit-All-Users/permitall3.PNG)
 
 ## <a name="to-create-a-rule-to-permit-all-users-in-windows-server-2012-r2"></a>Para criar uma regra para permitir todos os usuários no Windows Server 2012 R2
 
@@ -44,10 +44,10 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 2.  Na árvore de console, em **AD FS \\ relações de confiança \\ confianças de terceira parte confiável**, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall4.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição.](media/Create-a-Rule-to-Permit-All-Users/permitall4.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , clique na guia **regras de autorização de emissão** ou na guia regras de autorização de **delegação** \( com base no tipo de regra de autorização que você precisa \) e clique em **Adicionar regra** para iniciar o **Assistente para Adicionar regra de declaração de autorização**.
-![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![Captura de tela que mostra a guia regras de autorização de emissão.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **permitir todos os usuários** na lista e clique em **Avançar**.
 ![Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall6.PNG)
 6.  Na página **Configurar regra** , clique em **concluir**.

@@ -1,18 +1,18 @@
 ---
 title: Etapa 3 configurar o servidor de acesso remoto para OTP
-description: Este tópico faz parte do guia implantar o acesso remoto com autenticação OTP no Windows Server 2016.
+description: Saiba como configurar o servidor de acesso remoto para dar suporte à OTP.
 manager: brianlic
 ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: c5b4cde212da9c585c4d9afdb068147f406beb51
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 51fe01ab53fbad09a0993c84eae97fb8e3ef52ae
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946452"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039026"
 ---
 # <a name="step-3-configure-the-remote-access-server-for-otp"></a>Etapa 3 configurar o servidor de acesso remoto para OTP
 
@@ -60,7 +60,7 @@ Para configurar o acesso remoto para usar a autenticação de dois fatores e a O
 
 4.  Se o suporte do Windows 7 for necessário, marque a caixa de seleção **habilitar computadores cliente do Windows 7 para se conectar via DirectAccess** . Observação: conforme discutido na seção de planejamento, os clientes do Windows 7 devem ter o DCA 2,0 instalado para dar suporte ao DirectAccess com OTP.
 
-5.  Clique em **Avançar**.
+5.  Clique em **Próximo**.
 
 6.  Na seção **servidor RADIUS de OTP** , clique duas vezes no campo **nome do servidor** em branco.
 
@@ -69,7 +69,7 @@ Para configurar o acesso remoto para usar a autenticação de dois fatores e a O
     > [!NOTE]
     > Se o servidor RADIUS estiver em um domínio diferente do servidor de acesso remoto, o campo nome do **servidor** deverá especificar o FQDN do servidor RADIUS.
 
-8.  Na seção **servidores de AC de OTP** , selecione os servidores de AC a serem usados para o registro de certificados de autenticação de cliente de OTP e clique em **Adicionar**. Clique em **Avançar**.
+8.  Na seção **servidores de AC de OTP** , selecione os servidores de AC a serem usados para o registro de certificados de autenticação de cliente de OTP e clique em **Adicionar**. Clique em **Próximo**.
 
 9. Na seção **modelos de certificado de OTP** , clique em **procurar** para selecionar o modelo de certificado usado para o registro de certificados emitidos para autenticação OTP.
 

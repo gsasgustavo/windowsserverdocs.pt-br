@@ -1,18 +1,18 @@
 ---
 title: ETAPA 1 concluir o DirectAccess em um cluster com a configuração do NLB do Windows
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess em um cluster com o NLB do Windows para Windows Server 2016
+description: Saiba mais sobre como concluir as etapas da instalação do servidor único DirectAccess com o guia de laboratório de teste de IPv4 e IPv6 misto.
 manager: brianlic
 ms.topic: article
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 99c464f9fefc429d682125aade70ed083ced5e18
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 2a71248292744514f5e05e928ef373c7ca654b94
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948232"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039346"
 ---
 # <a name="step-1-complete-the-directaccess-in-a-cluster-with-windows-nlb-configuration"></a>ETAPA 1 concluir o DirectAccess em um cluster com a configuração do NLB do Windows
 

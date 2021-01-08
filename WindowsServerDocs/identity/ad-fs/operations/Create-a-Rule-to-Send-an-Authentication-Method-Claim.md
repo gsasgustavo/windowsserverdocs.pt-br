@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: dc55613e8060eda42f5f4d47a59fc20246e1684f
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 63baded3b401a6bd79ed56aa1cff231056c4c190
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97040124"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039153"
 ---
 # <a name="create-a-rule-to-send-an-authentication-method-claim"></a>Criar uma regra para enviar uma declaração do método de autenticação
 
@@ -32,16 +32,16 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável na árvore de console quando você cria uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que mostra onde selecionar a opção de menu Editar política de emissão de declaração quando você cria uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra como adicionar uma regra ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar Associação de grupo como declaração** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)
+![Captura de tela que mostra onde selecionar o modelo enviar Associação de grupo como declaração.](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -58,23 +58,23 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 | \(Autenticação mútua do TLS de segurança da camada \) de transporte que usa certificados X. 509 | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |                  \-Autenticação baseada em X. 509 que não usa TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Criar regra](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
+![Captura de tela que mostra onde selecionar concluir ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações no Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
 ## <a name="to-create-by-using-the-send-group-membership-as-claims-rule-template-on-a-claims-provider-trust-in-windows-server-2016"></a>Para criar usando a associação de grupo Enviar como modelo de regra de declarações em uma confiança do provedor de declarações no Windows Server 2016
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança do provedor de declarações ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra onde selecionar o botão Adicionar regra quando você cria uma regra usando o modelo enviar Associação de grupo como regra de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar Associação de grupo como declaração** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)
+![Captura de tela que mostra onde selecionar o modelo enviar Associação de grupo como declaração quando você cria uma regra no Windows Server 2016.](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -91,7 +91,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 | \(Autenticação mútua do TLS de segurança da camada \) de transporte que usa certificados X. 509 | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |                  \-Autenticação baseada em X. 509 que não usa TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Criar regra](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
+![Captura de tela que mostra onde selecionar concluir ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações no Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
 
 ## <a name="to-create-this-rule-by-using-the-transform-an-incoming-claim-rule-template-on-a-relying-party-trust-in-windows-server-2016"></a>Para criar essa regra usando o modelo transformar uma regra de declaração de entrada em uma relação de confiança de terceira parte confiável no Windows Server 2016
@@ -99,16 +99,16 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável na árvore de console quando você cria uma regra usando o modelo transformar uma regra de declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que mostra onde selecionar a política de emissão editar declaração ao criar uma regra usando o modelo transformar uma regra de declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra usando o modelo transformar uma regra de declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
+![Captura de tela que mostra onde selecionar o modelo transformar uma declaração de entrada ao criar uma regra.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -129,7 +129,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 | Autenticação mútua de TLS que usa certificados X. 509 | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |   \-Autenticação baseada em X. 509 que não usa TLS    |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Criar regra](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
+![Captura de tela que mostra onde selecionar concluir ao criar uma regra usando o modelo transformar uma regra de declaração de entrada.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
 
 > [!NOTE]
 > Outros valores de URI podem ser usados além dos valores na tabela. Os valores de URI que são mostrados em íon a tabela anterior refletem os URIs que a terceira parte confiável aceita por padrão.
@@ -139,16 +139,16 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que mostra onde selecionar relações de confiança do provedor de declarações na árvore de console quando você cria uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
+![Captura de tela que mostra onde selecionar o modelo transformar uma declaração de entrada ao criar uma regra no Windows Server 2016.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -169,7 +169,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 | Autenticação mútua de TLS que usa certificados X. 509 | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |   \-Autenticação baseada em X. 509 que não usa TLS    |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Criar regra](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
+![Captura de tela que mostra onde selecionar concluir ao criar uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
 
 
 
@@ -200,7 +200,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, dependendo da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -211,10 +211,10 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar Associação de grupo como uma declaração** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group1.PNG)
+![Captura de tela que mostra onde selecionar a associação de grupo de envio como um modelo de declaração ao criar uma regra.](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group1.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -231,7 +231,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 | \(Autenticação mútua do TLS de segurança da camada \) de transporte que usa certificados X. 509 | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |                  \-Autenticação baseada em X. 509 que não usa TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Criar regra](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth1.PNG)
+![Captura de tela que mostra onde selecionar concluir ao criar uma regra usando o modelo enviar Associação de grupo como regra de declarações.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth1.PNG)
 
 > [!NOTE]
 > Outros valores de URI podem ser usados além dos valores na tabela. Os valores de URI que são mostrados na tabela anterior refletem os URIs que a terceira parte confiável aceita por padrão.
@@ -245,7 +245,7 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
 2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, que depende da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -256,10 +256,10 @@ Dependendo dos requisitos da sua organização, use um dos seguintes procediment
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra usando o modelo transformar uma regra de declaração de entrada no Windows Server 2012 R2.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)
+![Captura de tela que mostra onde selecionar o modelo transformar uma declaração de entrada ao criar uma regra no Windows Server 2012 R2.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 

@@ -1,18 +1,18 @@
 ---
 title: ETAPA 3 instalar e configurar o EDGE2
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess em um cluster com o NLB do Windows para Windows Server 2016
+description: Saiba como instalar e configurar o EDGE2 que é o segundo membro de um cluster de acesso remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 431e88c552b0df94808ce5ce0069f569c3a87d8f
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 191c1d20d18b35bdac36f6421f1f6eda5f99a72a
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950372"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039296"
 ---
 # <a name="step-3-install-and-configure-edge2"></a>ETAPA 3 instalar e configurar o EDGE2
 

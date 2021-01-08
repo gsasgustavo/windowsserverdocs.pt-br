@@ -1,18 +1,18 @@
 ---
 title: Planejar acesso remoto com autenticação OTP
-description: Este tópico faz parte do guia implantar o acesso remoto com autenticação OTP no Windows Server 2016.
+description: Saiba mais sobre as etapas de configuração necessárias para implantar uma implantação de multissite de acesso remoto do Windows Server 2016 ou Windows Server 2012.
 manager: brianlic
 ms.topic: article
 ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: e4b171c628259abe59a6954ef9936b025f10c28e
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: a3da7c4b67180f7b203e19111b3887432043ac9a
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950272"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040106"
 ---
 # <a name="plan-remote-access-with-otp-authentication"></a>Planejar acesso remoto com autenticação OTP
 

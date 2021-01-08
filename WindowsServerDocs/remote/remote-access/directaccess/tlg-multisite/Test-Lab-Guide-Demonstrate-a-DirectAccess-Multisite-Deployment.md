@@ -1,18 +1,18 @@
 ---
 title: Guia de laboratório de teste – demonstrar uma implantação multissite do DirectAccess
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba mais sobre como estender o guia de laboratório de teste – demonstre a configuração do servidor único do DirectAccess com IPv4 e IPv6 mistos para demonstrar o acesso remoto em um cenário multissite.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: ab74d3f7dd6f3f4069986b80ea749cbd901c1f2c
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 01357e5271932f3b8ad3140f34b3247c426f40e9
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947932"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040196"
 ---
 # <a name="test-lab-guide-demonstrate-a-directaccess-multisite-deployment"></a>Guia de Teste de Laboratório: demonstrar implantação multissite do DirectAccess
 

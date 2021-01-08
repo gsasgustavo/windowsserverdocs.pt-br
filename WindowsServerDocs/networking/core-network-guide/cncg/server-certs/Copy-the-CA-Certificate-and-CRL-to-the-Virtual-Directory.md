@@ -1,18 +1,18 @@
 ---
 title: Copiar o certificado de autoridade de certificação e a CRL para o diretório virtual
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como copiar a lista de certificados revogados e o certificado de AC raiz corporativa de sua autoridade de certificação para um diretório virtual no servidor Web e para garantir que o AD CS esteja configurado corretamente.
 manager: dougkim
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.author: lizross
 author: eross-msft
 ms.date: 07/19/2018
-ms.openlocfilehash: cea33d8328a2233503fda61b4261213bedce0f3a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 47d0e72b06d60b8865356d74c041a26f62635046
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949560"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038556"
 ---
 # <a name="copy-the-ca-certificate-and-crl-to-the-virtual-directory"></a>Copiar o certificado de autoridade de certificação e a CRL para o diretório virtual
 

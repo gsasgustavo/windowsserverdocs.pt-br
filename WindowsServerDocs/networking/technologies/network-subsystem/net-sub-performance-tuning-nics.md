@@ -1,6 +1,6 @@
 ---
 title: Adaptadores de rede para ajuste do desempenho
-description: Este tópico faz parte do guia de ajuste de desempenho do subsistema de rede para o Windows Server 2016.
+description: Saiba como ajustar os adaptadores de rede de desempenho para computadores que executam o Windows Server 2016 e versões posteriores.
 audience: Admin - CI ID 111485 - CSSTroubleshoot
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
@@ -8,12 +8,12 @@ manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 12/23/2019
-ms.openlocfilehash: 4b3c32a6382e7538ccfb1fab22b4d2be9495b3b0
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 04f6540cb86aa6af8b2c315132ff84765937e675
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866045"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039007"
 ---
 # <a name="performance-tuning-network-adapters"></a>Adaptadores de rede para ajuste do desempenho
 
@@ -226,7 +226,7 @@ Para obter mais informações sobre esses cmdlets, consulte os seguintes artigos
 
 Você pode definir o ajuste automática da janela de recebimento para qualquer um dos cinco níveis. O nível padrão é **normal**. A tabela a seguir descreve os níveis.
 
-|Level |Valor hexadecimal |Comentários |
+|Nível |Valor hexadecimal |Comentários |
 | --- | --- | --- |
 |Normal (padrão) |0x8 (fator de escala de 8) |Defina a janela de recepção TCP para aumentar para acomodar quase todos os cenários. |
 |Desabilitado |Nenhum fator de escala disponível |Defina a janela de recepção TCP com seu valor padrão. |

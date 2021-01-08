@@ -1,18 +1,18 @@
 ---
 title: Monitorar a atividade e o status de clientes remotos conectados
-description: Este tópico faz parte do guia de monitoramento e contabilidade de acesso remoto no Windows Server 2016.
+description: Saiba como usar o console de gerenciamento do no servidor de acesso remoto para monitorar a atividade e o status do cliente remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: d588f01e01ee5d2501cfaa380e93a91641b78d20
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 01d53fee8f5649b1d3fe03a78728ac04da465e87
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947352"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039876"
 ---
 # <a name="monitor-connected-remote-clients-for-activity-and-status"></a>Monitorar a atividade e o status de clientes remotos conectados
 

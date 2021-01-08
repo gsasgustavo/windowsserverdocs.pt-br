@@ -1,18 +1,18 @@
 ---
 title: Visão geral do cenário de Test Lab
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba mais sobre o que o DirectAccess está implantado e as quatro sub-redes que compõem o laboratório de teste.
 manager: brianlic
 ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 833221ee118c758ffc2ade7419ee75cf82bf9f35
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 12d6868334bafba881531fd2d5cdaa99d10555f8
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950342"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040096"
 ---
 # <a name="overview-of-the-test-lab-scenario"></a>Visão geral do cenário de Test Lab
 

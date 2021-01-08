@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ee00149fca0a78c8faa4338b3aa5ba0060909703
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: c19f7700905146345df92fe4143ef79712f0c0fe
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045654"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039196"
 ---
 # <a name="create-a-rule-to-send-an-ad-fs-1x-compatible-claim"></a>Criar uma regra para enviar uma declaração compatível com o AD FS 1. x
 
@@ -28,7 +28,7 @@ Em situações em que você está usando Serviços de Federação do Active Dire
 
     -   Nome comum
 
-    -   Grupo
+    -   Agrupar
 
     -   Qualquer outro tipo de declaração que comece com https://schemas.xmlsoap.org/claims/ , como https://schemas.xmlsoap.org/claims/EmployeeID
 
@@ -46,16 +46,16 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável ao criar uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que mostra onde selecionar a opção Editar política de emissão de declaração quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra onde selecionar Adicionar regra quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
+![Captura de tela que mostra onde selecionar a passagem ou filtrar um modelo de declaração de entrada quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -78,7 +78,7 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
     -   **Passar apenas os valores de declaração que correspondem a um valor de sufixo de email específico**
 
     -   **Passar apenas os valores de declaração que começam com um valor específico** 
- ![ Criar regra](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
+ ![ Captura de tela que mostra as telas configurar regra de declaração.](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
 
 10. Clique em **concluir** e em **OK** para salvar a regra.
 
@@ -88,16 +88,16 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança do provedor de declarações na árvore de console.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que mostra onde selecionar a opção de menu Editar regras de declaração quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra o botão Adicionar regra na guia regras de transformação de aceitação.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
+![Captura de tela que mostra onde selecionar a passagem ou filtrar um modelo de declaração de entrada quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -120,7 +120,7 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
     -   **Passar apenas os valores de declaração que correspondem a um valor de sufixo de email específico**
 
     -   **Passar apenas os valores de declaração que começam com um valor específico** 
- ![ Criar regra](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
+ ![ Captura de tela que mostra o local em que as opções são selecionadas na barra configurar regra de declaração.](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
 
 10. Clique em **concluir** e em **OK** para salvar a regra.
 
@@ -130,16 +130,16 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável ao criar uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que mostra onde selecionar a opção de menu Editar política de emissão de declaração quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra onde selecionar o botão Adicionar regra.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
+![Captura de tela que mostra onde selecionar transformar uma declaração de entrada ao criar uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -161,8 +161,8 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 
     -   **Substituir um valor de declaração de entrada por um valor diferente de declaração de saída**
 
-    -   **Substituir declarações de \- sufixo de email de entrada por uma nova regra de criação de \- sufixo de email** 
- ![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
+    -   **Substitua as \- declarações de sufixo de email de entrada por \- uma nova** captura de tela de sufixo de email 
+ ![ que mostra as opções que podem ser selecionadas na caixa de seleção configurar regra de declaração quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
 
 11. Clique em **concluir** e em **OK** para salvar a regra.
 
@@ -174,16 +174,16 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança do provedor de declarações na árvore de console quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que mostra onde selecionar a opção de menu Editar regras de declaração quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra onde selecionar o botão Adicionar regra na guia regras de transformação de aceitação quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
+![Captura de tela que mostra onde selecionar transformar uma declaração de entrada ao criar uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -205,8 +205,8 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 
     -   **Substituir um valor de declaração de entrada por um valor diferente de declaração de saída**
 
-    -   **Substituir declarações de \- sufixo de email de entrada por uma nova regra de criação de \- sufixo de email** 
- ![](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
+    -   **Substitua as \- declarações de sufixo de email de entrada por \- uma nova** captura de tela de sufixo de email 
+ ![ que mostra onde selecionar as opções na caixa de seleção configurar regra de declaração quando você cria uma regra para transformar uma declaração de entrada.](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
 
 11. Clique em **concluir** e em **OK** para salvar a regra.
 
@@ -230,7 +230,7 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar a opção de menu Editar regras de declaração quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, dependendo da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -241,10 +241,10 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)
+![Captura de tela que mostra onde selecionar a passagem ou filtrar um modelo de declaração de entrada quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 
@@ -267,7 +267,7 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
     -   **Passar apenas os valores de declaração que correspondem a um valor de sufixo de email específico**
 
     -   **Passar apenas os valores de declaração que começam com um valor específico** 
- ![ Criar regra](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)
+ ![ Captura de tela que mostra onde selecionar as opções na janela Configurar regra de declaração quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)
 
 10. Clique em **concluir** e em **OK** para salvar a regra.
 
@@ -279,7 +279,7 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
 2.  Na árvore de console, em **AD FS \\ relações de confiança**, clique em **confiança do provedor de declarações** ou em relações de confiança de terceira parte **confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, que depende da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -290,10 +290,10 @@ Dependendo das necessidades da sua organização, use um dos procedimentos a seg
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Captura de tela que mostra onde adicionar uma regra quando você cria uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **transformar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)
+![Captura de tela que mostra onde selecionar transformar uma declaração de entrada ao criar uma regra para emitir uma declaração de ID de nome AD FS 1. x no Windows Server 2012 R2.](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)
 
 6.  Na página **Configurar regra** , digite um nome de regra de declaração.
 

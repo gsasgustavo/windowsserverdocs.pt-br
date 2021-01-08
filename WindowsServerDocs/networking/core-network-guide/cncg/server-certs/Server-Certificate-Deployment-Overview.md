@@ -1,18 +1,18 @@
 ---
 title: Visão geral da implantação de certificado do servidor
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba mais sobre os componentes de implantação de certificado do servidor e o processo de implantação.
 manager: brianlic
 ms.topic: article
 ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: b4402611028b10dec6cd6e5ed22206bcec2e0ede
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: adb644114e7a1bb73ea68dc658fcc50693743f22
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950152"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038696"
 ---
 # <a name="server-certificate-deployment-overview"></a>Visão geral da implantação de certificado do servidor
 

@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 235d2bf0572e2b84536d09a1bf9784d635db3ad5
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: b3c3c41b5434913ab5b49d0430fa5269cc10077d
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048214"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039146"
 ---
 # <a name="create-a-rule-to-pass-through-or-filter-an-incoming-claim"></a>Criar uma regra para passar ou filtrar uma declaração de entrada
 
@@ -27,16 +27,16 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que realça as relações de confiança de terceira parte confiável na árvore de console.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que realça a opção de menu Editar política de emissão de declaração.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra a guia regras de transformação de emissão.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
+![Captura de tela que mostra onde selecionar a passagem ou filtrar um modelo de declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **tipo de declaração de entrada** , selecione um tipo de declaração na lista e, em seguida, selecione uma das seguintes opções, dependendo das necessidades da sua organização:
 
@@ -47,7 +47,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
     -   **Passar apenas os valores de declaração que correspondem a um valor de sufixo de email específico**
 
     -   **Passar apenas os valores de declaração que começam com um valor específico** 
- ![ Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)
+ ![ Captura de tela que mostra onde selecionar o tipo de declaração de entrada.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)
 
 7.  Clique no botão **Concluir**.
 
@@ -58,16 +58,16 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que realça as relações de confiança do provedor de declarações na árvore de console.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que realça a opção de menu Editar regras de declaração.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra a guia regras de transformação de aceitação.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
+![Captura de tela que mostra onde selecionar um modelo de regra.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule4.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **tipo de declaração de entrada** , selecione um tipo de declaração na lista e, em seguida, selecione uma das seguintes opções, dependendo das necessidades da sua organização:
 
@@ -78,7 +78,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
     -   **Passar apenas os valores de declaração que correspondem a um valor de sufixo de email específico**
 
     -   **Passar apenas os valores de declaração que começam com um valor específico** 
- ![ Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)
+ ![ Captura de tela que mostra onde fazer o anúncio do nome da regra de declaração.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule5.PNG)
 
 7.  Clique no botão **Concluir**.
 
@@ -91,7 +91,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 2.  Na árvore de console, em **\\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, dependendo da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -102,10 +102,10 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Sceenshot que mostra o botão Adicionar regra.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **passar ou filtrar uma declaração de entrada** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)
+![Captura de tela que mostra o botão escolher tipo de regra.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **tipo de declaração de entrada** , selecione um tipo de declaração na lista e, em seguida, selecione uma das seguintes opções, dependendo das necessidades da sua organização:
 

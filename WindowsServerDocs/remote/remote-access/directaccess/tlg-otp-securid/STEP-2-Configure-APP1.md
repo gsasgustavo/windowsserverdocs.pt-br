@@ -1,18 +1,18 @@
 ---
 title: ETAPA 2 configurar o APP1
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess com autenticação OTP e RSA SecurID para Windows Server 2016
+description: Saiba como criar e implantar um modelo de certificado usado para assinar solicitações de certificado OTP e uma usada para certificados OTP emitidos pela AC corporativa.
 manager: brianlic
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: ecfc88c74a4e9ddb0cec02c9156ce88f52916740
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 84d784975cbc5acfb1350ed6840ca3beb433e7cf
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949272"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040066"
 ---
 # <a name="step-2-configure-app1"></a>ETAPA 2 configurar o APP1
 

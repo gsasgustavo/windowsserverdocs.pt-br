@@ -1,18 +1,18 @@
 ---
 title: Gerenciar remotamente os clientes do DirectAccess
-description: Este tópico faz parte do guia gerenciar clientes DirectAccess remotamente no Windows Server 2016.
+description: Saiba como aproveitar os recursos de monitoramento do acesso remoto usando o console de gerenciamento do DirectAccess e os cmdlets do Windows PowerShell correspondentes, que são fornecidos como parte da função de servidor de acesso remoto.
 manager: brianlic
 ms.topic: article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 86824aaba3e249aa5cc4f0743d28ce0371481c21
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 45e1497de0041957df5e06e1a6c93cc58abbba70
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947732"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040046"
 ---
 # <a name="manage-directaccess-clients-remotely"></a>Gerenciar remotamente os clientes do DirectAccess
 

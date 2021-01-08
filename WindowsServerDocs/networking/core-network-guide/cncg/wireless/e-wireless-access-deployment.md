@@ -1,18 +1,18 @@
 ---
 title: Implantação de acesso sem fio
-description: Este tópico faz parte do guia de rede do Windows Server 2016 "implantar Password-Based acesso sem fio autenticado 802.1 X"
+description: Saiba como implantar o acesso sem fio em cinco etapas.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 7904476686c8e929876cf2ad574c8e09f4f351f1
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: bcd601d97ff8cef77d14691dd510df2679718dda
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949152"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038266"
 ---
 # <a name="wireless-access-deployment"></a>Implantação de acesso sem fio
 
@@ -472,7 +472,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
 3. Clique em **Configurar 802.1 x**. O assistente para configurar 802.1 X é aberto.
 
-4.  Na página **selecionar assistente de tipo de conexões 802.1 x** , em **tipo de conexões 802.1 x**, selecione **conexões sem fio seguras** e, em **nome**, digite um nome para a política ou deixe o nome padrão **conexões sem fio seguras**. Clique em **Avançar**.
+4.  Na página **selecionar assistente de tipo de conexões 802.1 x** , em **tipo de conexões 802.1 x**, selecione **conexões sem fio seguras** e, em **nome**, digite um nome para a política ou deixe o nome padrão **conexões sem fio seguras**. Clique em **Próximo**.
 
 5.  Na página especificar o assistente de **comutadores 802.1 x** , em **clientes RADIUS**, todos os comutadores 802.1 x e pontos de acesso sem fio que você adicionou como clientes RADIUS no snap do NPS \- no são mostrados. Execute um destes procedimentos:
 
@@ -485,7 +485,7 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
         >[!WARNING]
         >A remoção de um cliente RADIUS de dentro do assistente para **Configurar 802.1 x** exclui o cliente da configuração do NPS. Todas as adições, modificações e exclusões feitas dentro do assistente para **Configurar 802.1 x** para clientes RADIUS são refletidas no snap-in do NPS \- , no nó **clientes RADIUS** em  \/ **clientes e servidores RADIUS** do NPS. Por exemplo, se você usar o assistente para remover uma opção 802.1 X, a opção também será removida do snap- \- in do NPS.
 
-6. Clique em **Avançar**. Na página Assistente para **configurar um método de autenticação** , **em tipo \( baseado em método de acesso e configuração \) de rede**, selecione **Microsoft: EAP \( PEAP \) protegido** e clique em **Configurar**.
+6. Clique em **Próximo**. Na página Assistente para **configurar um método de autenticação** , **em tipo \( baseado em método de acesso e configuração \) de rede**, selecione **Microsoft: EAP \( PEAP \) protegido** e clique em **Configurar**.
 
     >[!TIP]
     >Se você receber uma mensagem de erro indicando que um certificado não pode ser encontrado para uso com o método de autenticação, e você configurou Active Directory serviços de certificados para emitir automaticamente certificados para servidores RAS e IAS em sua rede, primeiro verifique se você seguiu as etapas para registrar o NPS no Active Directory Domain Services, em seguida, use as seguintes etapas para atualizar Política de Grupo: clique em **Iniciar**, clique em **sistema Windows**, clique em **executar** e em **abrir**, digite **gpupdate** e pressione Enter. Quando o comando retorna resultados indicando que o usuário e o computador Política de Grupo foram atualizados com êxito, selecione **Microsoft: EAP \( PEAP \) Protected** novamente e clique em **Configurar**.
@@ -503,11 +503,11 @@ A associação no **Admins. do Domínio** ou equivalente é o requisito mínimo 
 
     - Para modificar as configurações de política para o tipo de EAP, em **tipos de EAP**, clique em **Editar**, em **Propriedades EAP MSCHAPv2**, modifique as configurações conforme necessário e clique em **OK**.
 
-8.  Clique em **OK**. A caixa de diálogo Editar propriedades EAP protegidas é fechada, retornando você ao Assistente para **Configurar 802.1 x** . Clique em **Avançar**.
+8.  Clique em **OK**. A caixa de diálogo Editar propriedades EAP protegidas é fechada, retornando você ao Assistente para **Configurar 802.1 x** . Clique em **Próximo**.
 
-9. Em **especificar grupos de usuários**, clique em **Adicionar** e digite o nome do grupo de segurança que você configurou para seus clientes sem fio no Active Directory usuários e computadores snap- \- in. Por exemplo, se você tiver nomeado seu grupo sem fio do grupo de segurança sem fio, digite **grupo sem fio**. Clique em **Avançar**.
+9. Em **especificar grupos de usuários**, clique em **Adicionar** e digite o nome do grupo de segurança que você configurou para seus clientes sem fio no Active Directory usuários e computadores snap- \- in. Por exemplo, se você tiver nomeado seu grupo sem fio do grupo de segurança sem fio, digite **grupo sem fio**. Clique em **Próximo**.
 
-10. Clique em **Configurar** para configurar atributos padrão RADIUS e \- atributos específicos de fornecedor para VLAN de LAN virtual \( \) , conforme necessário, e conforme especificado pela documentação fornecida pelo fornecedor de hardware de AP sem fio. Clique em **Avançar**.
+10. Clique em **Configurar** para configurar atributos padrão RADIUS e \- atributos específicos de fornecedor para VLAN de LAN virtual \( \) , conforme necessário, e conforme especificado pela documentação fornecida pelo fornecedor de hardware de AP sem fio. Clique em **Próximo**.
 
 11. Examine os detalhes do resumo da configuração e clique em **concluir**.
 

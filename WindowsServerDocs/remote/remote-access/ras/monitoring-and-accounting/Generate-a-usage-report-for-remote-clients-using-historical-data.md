@@ -1,18 +1,18 @@
 ---
 title: Gerar um relatório de uso para clientes remotos usando dados históricos
-description: Este tópico faz parte do guia de monitoramento e contabilidade de acesso remoto no Windows Server 2016.
+description: Saiba como habilitar a contabilidade no servidor de acesso remoto para que você possa gerar um relatório de uso para os clientes remotos que estão acessando o servidor.
 manager: brianlic
 ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: b8dafad68546cfe20ab1e7704b60694aea4d44e0
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 6234798ca63495d241b7ddb9eb18dd7ac17c3db3
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947372"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039896"
 ---
 # <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>Gerar um relatório de uso para clientes remotos usando dados históricos
 

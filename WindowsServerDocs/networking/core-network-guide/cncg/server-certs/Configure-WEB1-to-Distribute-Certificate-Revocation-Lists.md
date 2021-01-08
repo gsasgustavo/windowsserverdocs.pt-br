@@ -1,18 +1,18 @@
 ---
 title: Configurar o WEB1 para distribuir listas de certificados revogados (CRLs)
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como configurar o servidor Web WEB1 para distribuir CRLs.
 manager: brianlic
 ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 756dcdc046387fc11774fe751bd8901498a19b0d
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9a2dbec4320827c85ca6b08b8c94c43b992ee2df
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950202"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038756"
 ---
 # <a name="configure-web1-to-distribute-certificate-revocation-lists-crls"></a>Configurar o WEB1 para distribuir listas de certificados revogados (CRLs)
 

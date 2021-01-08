@@ -1,18 +1,18 @@
 ---
 title: Gerenciar controle de acesso baseado em função com o Gerenciador do Servidor
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como gerenciar o controle de acesso baseado em função usando Gerenciador do Servidor, que tem uma interface gráfica do usuário.
 manager: brianlic
 ms.topic: article
 ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 904726b7761abb2d3d57f2faedd268c3d7827c1d
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 12c21c9374115eab1de92a1eaf1ba583d4cbbcf0
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947512"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039496"
 ---
 # <a name="manage-role-based-access-control-with-server-manager"></a>Gerenciar controle de acesso baseado em função com o Gerenciador do Servidor
 

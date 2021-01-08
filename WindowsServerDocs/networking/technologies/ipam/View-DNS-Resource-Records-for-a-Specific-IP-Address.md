@@ -1,18 +1,18 @@
 ---
 title: Exibir registros de recurso de DNS para um endereço IP específico
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como exibir os registros de recursos de DNS associados ao endereço IP que você escolher.
 manager: brianlic
 ms.topic: article
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 2f1dd1f87ecaa390d5e5c43a7dc2ad9267fe8161
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9ad301081ae286c72e26a567970ac4f8a1a99aa2
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948312"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040116"
 ---
 # <a name="view-dns-resource-records-for-a-specific-ip-address"></a>Exibir registros de recurso de DNS para um endereço IP específico
 

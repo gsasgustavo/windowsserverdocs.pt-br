@@ -1,18 +1,18 @@
 ---
 title: Gerenciar controle de acesso baseado em função com o Windows PowerShell
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como usar o IPAM para gerenciar o controle de acesso baseado em função com o Windows PowerShell.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 9eda00bc769c32f707f37d2640a48bc7af03f030
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 21c5c10ffd6cebce2f6379d2adef21aacab500ad
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948012"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98039486"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Gerenciar controle de acesso baseado em função com o Windows PowerShell
 

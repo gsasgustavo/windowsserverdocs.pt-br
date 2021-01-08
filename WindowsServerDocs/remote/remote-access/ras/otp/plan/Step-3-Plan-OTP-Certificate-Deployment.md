@@ -1,18 +1,18 @@
 ---
 title: Etapa 3 planejar a implantação do certificado OTP
-description: Este tópico faz parte do guia implantar o acesso remoto com autenticação OTP no Windows Server 2016.
+description: Saiba como planejar os requisitos de autoridade de certificação, incluindo a AC que emitirá certificados de senha única, o modelo de certificado de OTP e o certificado de autoridade de registro usado pelo servidor de acesso remoto para assinar todas as solicitações de certificado OTP do cliente do DirectAccess.
 manager: brianlic
 ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 8c6898b6447e5d8c3a72653435028a7413fbb9c9
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: d563356d3c3635255a7fab3fcecef77becab53fb
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950442"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040146"
 ---
 # <a name="step-3-plan-otp-certificate-deployment"></a>Etapa 3 planejar a implantação do certificado OTP
 

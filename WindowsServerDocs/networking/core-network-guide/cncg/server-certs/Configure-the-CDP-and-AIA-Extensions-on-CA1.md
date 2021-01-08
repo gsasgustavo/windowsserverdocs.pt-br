@@ -1,18 +1,18 @@
 ---
 title: Configurar as extensões CDP e AIA em CA1
-description: Este tópico faz parte do guia implantar certificados de servidor para implantações com e sem fio 802.1 X
+description: Saiba como configurar o ponto de distribuição da CRL (lista de certificados revogados) e as configurações de AIA (acesso a informações de autoridade) no CA1.
 manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 ms.author: lizross
 author: eross-msft
 ms.date: 07/26/2018
-ms.openlocfilehash: 86c6bb664fc011be4f08e792118f3ff232f8410f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5e8ac26965bdeae2f46551478561be339bfb0bfc
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969633"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98038736"
 ---
 # <a name="configure-the-cdp-and-aia-extensions-on-ca1"></a>Configurar as extensões CDP e AIA em CA1
 
@@ -26,12 +26,12 @@ Para executar esse procedimento, você deve ser membro de admins. do domínio.
 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois em **Autoridade de Certificação**.
 
-2.  Na árvore de console da autoridade de certificação, clique com o botão direito do mouse em **Corp-CA1-AC**e clique em **Propriedades**.
+2.  Na árvore de console da autoridade de certificação, clique com o botão direito do mouse em **Corp-CA1-AC** e clique em **Propriedades**.
 
     > [!NOTE]
     > O nome da sua autoridade de certificação será diferente se você não nomear o computador CA1 e o nome de domínio for diferente daquele neste exemplo. O nome da autoridade de certificação está no formato *domínio* - *CAComputerName*-ca.
 
-3.  Clique na guia **extensões** . Verifique se a **extensão selecionada** está definida como **CDP (ponto de distribuição de CRL)** e, em **especificar locais dos quais os usuários podem obter uma CRL (lista de certificados**revogados), faça o seguinte:
+3.  Clique na guia **extensões** . Verifique se **selecionar extensão** está definido como **CDP (ponto de distribuição de CRL)** e, em **especificar locais dos quais os usuários podem obter uma CRL (lista de certificados** revogados), faça o seguinte:
 
     1.  Selecione a entrada `file://\\<ServerDNSName>\CertEnroll\<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl` e clique em **remover**. Em **confirmar remoção**, clique em **Sim**.
 
