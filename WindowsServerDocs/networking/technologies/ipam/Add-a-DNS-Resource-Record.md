@@ -1,18 +1,18 @@
 ---
 title: Adicionar um registro de recursos de DNS
-description: Este tópico faz parte do guia de gerenciamento do IPAM (gerenciamento de endereços IP) no Windows Server 2016.
+description: Saiba como adicionar um ou mais novos registros de recursos DNS usando o console do cliente IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 015a2b9527f00a792c179e64e0ac9c0cda51b2d3
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 5ced255a8cc15be6c0d8d6b6ec04f5031816eed5
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949062"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040486"
 ---
 # <a name="add-a-dns-resource-record"></a>Adicionar um registro de recursos de DNS
 

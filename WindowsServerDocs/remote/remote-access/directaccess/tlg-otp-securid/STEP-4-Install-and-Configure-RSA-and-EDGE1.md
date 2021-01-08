@@ -1,18 +1,18 @@
 ---
 title: ETAPA 4 instalar e configurar o RSA e o EDGE1
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess com autenticação OTP e RSA SecurID para Windows Server 2016
+description: Saiba como instalar e configurar o RSA e o EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 591d6051d6c2a754416f48b615fa17c286b822c8
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 51cfdf8e40ce6ba43a4067e16c82a777637e6382
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948962"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040356"
 ---
 # <a name="step-4-install-and-configure-rsa-and-edge1"></a>ETAPA 4 instalar e configurar o RSA e o EDGE1
 
@@ -132,7 +132,7 @@ Você executará as seguintes etapas para configurar a implantação RSA:
 
 9. Na página **verificar arquivo de licença** , clique em **Avançar**.
 
-10. No campo **ID de usuário** , digite **administrador** e, nos campos **senha** e **Confirmar senha** , digite uma senha forte. Clique em **Avançar**.
+10. No campo **ID de usuário** , digite **administrador** e, nos campos **senha** e **Confirmar senha** , digite uma senha forte. Clique em **Próximo**.
 
 11. Na tela de seleção de log, aceite os padrões e clique em **Avançar**.
 
@@ -319,7 +319,7 @@ Use este procedimento para configurar a OTP para o DirectAccess e verificar a co
 
 4.  Na janela de **instalação do DirectAccess** , em **etapa 2 – servidor de acesso remoto**, clique em **Editar**.
 
-5.  Clique em **Avançar** três vezes e, na **seção autenticação** , selecione autenticação de **dois fatores** e **use OTP** e verifique se a opção **usar certificados de computador** está marcada. Verifique se a autoridade de certificação raiz está definida como **CN = Corp-App1-CA**. Clique em **Avançar**.
+5.  Clique em **Avançar** três vezes e, na **seção autenticação** , selecione autenticação de **dois fatores** e **use OTP** e verifique se a opção **usar certificados de computador** está marcada. Verifique se a autoridade de certificação raiz está definida como **CN = Corp-App1-CA**. Clique em **Próximo**.
 
 6.  Na seção **servidor RADIUS de OTP** , clique duas vezes no campo **nome do servidor** em branco.
 
@@ -328,7 +328,7 @@ Use este procedimento para configurar a OTP para o DirectAccess e verificar a co
     > [!NOTE]
     > Se o servidor RADIUS estiver em um domínio diferente do servidor de acesso remoto, o campo nome do **servidor** deverá especificar o FQDN do servidor RADIUS.
 
-8.  Na seção **servidores de AC de OTP** , selecione App1.Corp.contoso.com e clique em **Adicionar**. Clique em **Avançar**.
+8.  Na seção **servidores de AC de OTP** , selecione App1.Corp.contoso.com e clique em **Adicionar**. Clique em **Próximo**.
 
 9. Na página **modelos de certificado de OTP** , clique em **procurar** para selecionar um modelo de certificado usado para o registro de certificados emitidos para autenticação OTP e, na caixa de diálogo **modelos de certificado** , selecione **DAOTPLogon**. Clique em **OK**. Clique em **procurar** para selecionar um modelo de certificado usado para registrar o certificado usado pelo servidor de acesso remoto para assinar solicitações de registro de certificado OTP e, na caixa de diálogo **modelos de certificado** , selecione **DAOTPRA**. Clique em **OK**. Clique em **Próximo**.
 

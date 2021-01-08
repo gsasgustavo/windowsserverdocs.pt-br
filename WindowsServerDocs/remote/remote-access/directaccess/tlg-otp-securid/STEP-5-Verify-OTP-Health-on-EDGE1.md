@@ -1,18 +1,18 @@
 ---
 title: ETAPA 5 verificar a integridade da OTP no EDGE1
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess com autenticação OTP e RSA SecurID para Windows Server 2016
+description: Saiba como verificar se a OTP está configurada e funcionando corretamente usando o monitoramento de integridade do servidor DirectAccess no EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: c677be9e958a830d12d06ef0f45729b5614fc171
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 6463bf67a9510f70bf435dedbadd9b28be63909b
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948952"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040346"
 ---
 # <a name="step-5-verify-otp-health-on-edge1"></a>ETAPA 5 verificar a integridade da OTP no EDGE1
 

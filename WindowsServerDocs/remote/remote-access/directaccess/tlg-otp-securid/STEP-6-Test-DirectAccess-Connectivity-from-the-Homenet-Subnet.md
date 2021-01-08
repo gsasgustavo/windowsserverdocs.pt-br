@@ -1,18 +1,18 @@
 ---
 title: ETAPA 6 teste a conectividade do DirectAccess da sub-rede HomeNet
-description: Este tópico faz parte do guia de laboratório de teste – demonstre o DirectAccess com autenticação OTP e RSA SecurID para Windows Server 2016
+description: Saiba como começar a testar a conectividade da sub-rede HomeNet.
 manager: brianlic
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 5dbfc9e65ca40eadc0812317c95f5a9b34b63619
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 1d0cd5c85ca97ffd7d5275d2402db17a560255fa
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949802"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040336"
 ---
 # <a name="step-6-test-directaccess-connectivity-from-the-homenet-subnet"></a>ETAPA 6 teste a conectividade do DirectAccess da sub-rede HomeNet
 

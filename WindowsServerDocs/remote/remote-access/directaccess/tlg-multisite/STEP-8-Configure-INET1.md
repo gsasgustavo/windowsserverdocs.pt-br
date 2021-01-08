@@ -1,18 +1,18 @@
 ---
 title: ETAPA 8 configurar o INET1
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba como configurar uma entrada DNS para 2-EDGE1 no INET1.
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 08/07/2020
-ms.openlocfilehash: 5c79f82ae0adf3fc19349da6ead3064376a81a6a
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 0a17e726d200cc344c83f2d4aafed2f5493b294a
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947962"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040366"
 ---
 # <a name="step-8-configure-inet1"></a>ETAPA 8: configurar INET1
 

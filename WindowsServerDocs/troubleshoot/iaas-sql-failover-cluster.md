@@ -5,20 +5,20 @@ ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.openlocfilehash: 39469ef6b36af20a2fd8fdab8f3400d5991c2446
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 5cce39ea42af57bbfd400427f763dfca5da75d7b
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948552"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040296"
 ---
-# <a name="iaas-with-sql-alwayson---tuning-failover-cluster-network-thresholds"></a>IaaS com SQL AlwaysOn - Ajustando Limites de Rede de Cluster de Failover
+# <a name="iaas-with-sql-server---tuning-failover-cluster-network-thresholds"></a>IaaS com limites de rede de cluster de failover de ajuste SQL Server
 
 Este artigo apresenta soluções para ajustar o limite de redes de cluster de failover.
 
 ## <a name="symptom"></a>Sintoma
 
-Ao executar os nós de cluster de failover do Windows no IaaS com SQL Server AlwaysOn, é recomendável alterar a configuração de cluster para um estado de monitoramento mais relaxado. As configurações de cluster prontas são restritivas e podem causar interrupções desnecessárias. As configurações padrão são projetadas para redes locais altamente ajustadas e não levam em conta a possibilidade de latência induzida causada por um ambiente multilocatário, como o Windows Azure (IaaS).
+Ao executar nós de cluster de failover do Windows no IaaS com um SQL Server Always On grupo de disponibilidade, é recomendável alterar a configuração de cluster para um estado de monitoramento mais relaxado. As configurações de cluster prontas são restritivas e podem causar interrupções desnecessárias. As configurações padrão são projetadas para redes locais altamente ajustadas e não levam em conta a possibilidade de latência induzida causada por um ambiente multilocatário, como o Windows Azure (IaaS).
 
 O clustering de failover do Windows Server está monitorando constantemente as conexões de rede e a integridade dos nós em um cluster do Windows.  Se um nó não puder ser acessado pela rede, uma ação de recuperação será executada para recuperar e colocar os aplicativos e os serviços online em outro nó no cluster. A latência na comunicação entre os nós de cluster pode levar ao seguinte erro:
 
@@ -90,7 +90,7 @@ C:\Windows\system32> get-cluster | fl *subnet*
 
 Valores padrão, mínimo, máximo e recomendado para cada sistema operacional de suporte
 
-| Description | Sistema operacional | Mín | Max | Padrão | Recomendado |
+| Descrição | Sistema operacional | Mín | Max | Padrão | Recomendadas |
 |--|--|--|--|--|--|
 | CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
 | Limite de CrossSubnet | 2012 | 3 | 120 | 5 | 20 |
@@ -117,7 +117,7 @@ O **limite** define o número de pulsações que são perdidas antes que o clust
     > [!NOTE]
     > A alteração do limite do cluster entrará em vigor imediatamente, você não precisará reiniciar o cluster ou todos os recursos.
 
-    As configurações a seguir são recomendadas para a mesma sub-rede e implantações entre regiões de grupos de disponibilidade AlwaysOn.
+    As configurações a seguir são recomendadas para a mesma sub-rede e implantações entre regiões de grupos de disponibilidade.
 
     ```powershell
     C:\Windows\system32> (get-cluster).SameSubnetThreshold = 20

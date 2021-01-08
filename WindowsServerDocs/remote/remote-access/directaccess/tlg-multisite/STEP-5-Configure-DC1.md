@@ -1,18 +1,18 @@
 ---
 title: ETAPA 5 configurar DC1
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba como configurar o gateway padrão no controlador de domínio, criar grupos de segurança para clientes do Windows 7 DirectAccess no DC1 e adicionar um novo site AD DS.
 manager: brianlic
 ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: b2381f72a8ca2c65c1a80f01788d33a81c83e8ad
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9939cb397fa7c5386e4058a834a205afaa99cd9f
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948212"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040476"
 ---
 # <a name="step-5-configure-dc1"></a>ETAPA 5 configurar DC1
 

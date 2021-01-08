@@ -1,18 +1,18 @@
 ---
 title: Etapa 12 testar conectividade do DirectAccess
-description: Este tópico faz parte do guia de laboratório de teste – demonstre uma implantação multissite do DirectAccess para o Windows Server 2016
+description: Saiba como garantir que os computadores cliente localizados na Internet ou nas redes HomeNet tenham as configurações de política de grupo corretas.
 manager: brianlic
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 533ba6aef1c64de60990c3f67c09d3be1996d63b
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 64672bfe50d2f1acfb5ea0013f53114ada9164fa
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950042"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040526"
 ---
 # <a name="step-12-test-directaccess-connectivity"></a>Etapa 12 testar conectividade do DirectAccess
 

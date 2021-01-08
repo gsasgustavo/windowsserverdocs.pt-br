@@ -1,18 +1,18 @@
 ---
 title: Escolhendo um adaptador de rede
-description: Este tópico faz parte do guia de ajuste de desempenho do subsistema de rede para o Windows Server 2016.
+description: Saiba como aprender alguns dos recursos de adaptadores de rede que podem afetar suas opções de compra.
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 08/07/2020
-ms.openlocfilehash: b136adc4e7cfae29ebb0517f83ac763d98bd622c
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 0a1730ccf8aef478d3d82ea9d08b1dd8129f3942
+ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949032"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040406"
 ---
 # <a name="choosing-a-network-adapter"></a>Escolhendo um adaptador de rede
 
@@ -31,7 +31,7 @@ O descarregamento de tarefas da CPU da unidade de processamento central \( \) pa
 
 A pilha de rede nos produtos da Microsoft pode descarregar uma ou mais tarefas em um adaptador de rede se você selecionar um adaptador de rede que tenha os recursos de descarregamento apropriados. A tabela a seguir fornece uma breve visão geral de diferentes recursos de descarregamento que estão disponíveis no Windows Server 2016.
 
-|Tipo de descarregamento|Description|
+|Tipo de descarregamento|Descrição|
 |------------------|-----------------|
 |Cálculo da soma de verificação para TCP|A pilha de rede pode descarregar o cálculo e a validação das somas de verificação TCP do protocolo de controle de transmissão \( \) nos caminhos de código de envio e recebimento. Ele também pode descarregar o cálculo e a validação de somas de verificação de IPv4 e IPv6 em caminhos de código de envio e recebimento.|
 |Cálculo da soma de verificação para UDP |A pilha de rede pode descarregar o cálculo e a validação de somas de verificação UDP do protocolo de datagrama de usuário \( \) em caminhos de código de envio e recebimento.|
