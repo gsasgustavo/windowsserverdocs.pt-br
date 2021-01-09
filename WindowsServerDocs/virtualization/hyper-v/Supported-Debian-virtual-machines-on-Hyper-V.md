@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 04/07/2020
-ms.openlocfilehash: 22d356f668f0e289a41bb43d738b03998b985ceb
-ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
+ms.date: 01/08/2021
+ms.openlocfilehash: d98f53c4adec614d8cb132f4c13c1d3ab21fe583
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97834321"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053608"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Máquinas virtuais do Debian com suporte no Hyper-V
 
->Aplica-se a: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 O mapa de distribuição de recursos a seguir indica os recursos que estão presentes em cada versão. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após a tabela.
 
@@ -40,7 +40,7 @@ O mapa de distribuição de recursos a seguir indica os recursos que estão pres
 | vRSS                                                                                                                                         | 2019, 2016, 2012 R2                         | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | Segmentação de TCP e descarregamentos de soma de verificação                                                                                                       | 2019, 2016, 2012 R2          | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | SR-IOV                                                                                                                                       | 2019, 2016                                  | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
-| **[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |
+| **[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |
 | Redimensionamento de VHDX                                                                                                                                  | 2019, 2016, 2012 R2                         | Observação de &#10004; 1       | Observação de &#10004; 1       | Observação de &#10004; 1       | Observação de &#10004; 1       |
 | Fibre Channel Virtual                                                                                                                        | 2019, 2016, 2012 R2                         |                       |                       |                       |                       |
 | Backup de máquina virtual ao vivo                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; NOTE2 | &#10004; NOTE2 | &#10004; NOTE2 | &#10004; NOTE2 |
@@ -52,7 +52,7 @@ O mapa de distribuição de recursos a seguir indica os recursos que estão pres
 | Memória Dinâmica-Hot-Add                                                                                                                     | 2019, 2016, 2012 R2                   | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | Memória Dinâmica-balões                                                                                                                  | 2019, 2016, 2012 R2                   | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
 | Redimensionamento de memória de Runtime                                                                                                                        | 2019, 2016                                  | &#10004; Observação 4       | &#10004; Observação 4       |                       |                       |
-| **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |
+| **[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                       |                       |                       |                       |
 | Dispositivo de vídeo específico do Hyper-V                                                                                                                | 2019, 2016, 2012 R2          | &#10004;              | &#10004;              | &#10004;              |                       |
 | **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                       |                       |                       |                       |
 | Key-Value emparelhar                                                                                                                               | 2019, 2016, 2012 R2          | Observação de &#10004; 2       | Observação de &#10004; 2       | Observação de &#10004; 2       |                       |

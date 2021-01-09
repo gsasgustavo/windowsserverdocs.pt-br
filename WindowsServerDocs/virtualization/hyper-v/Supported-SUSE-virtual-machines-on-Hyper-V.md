@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 04/07/2020
-ms.openlocfilehash: 7bbf64a4c5e1689196024d443c13710d4176d535
-ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
+ms.date: 01/08/2021
+ms.openlocfilehash: 9e75e48e51b7ae77bd084dc092a27184c303a3ae
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833831"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053559"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>Máquinas virtuais SUSE com suporte no Hyper-V
 
->Aplica-se a: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 Veja a seguir um mapa de distribuição de recursos que indica os recursos em cada versão. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após a tabela.
 
@@ -44,7 +44,7 @@ SLES12 + é de apenas 64 bits.
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Segmentação de TCP e descarregamentos de soma de verificação|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;||||
-|**[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|||||||||
+|**[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|||||||||
 |Redimensionamento de VHDX|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Fibre Channel Virtual|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Backup de máquina virtual ao vivo|2019, 2016, 2012 R2|&#10004; observação 2, 3, 8|&#10004;observação 2, 3, 8|&#10004; observação 2, 3, 8|&#10004; observação 2, 3, 8|&#10004; observação 2, 3, 8|&#10004; observação 2, 3, 8|&#10004; observação 2, 3, 8|
@@ -56,7 +56,7 @@ SLES12 + é de apenas 64 bits.
 |Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2|&#10004; observação 6|&#10004;observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; Observação 4, 5, 6|&#10004; Observação 4, 5, 6|
 |Memória Dinâmica-balões|2019, 2016, 2012 R2|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; Observação 4, 5, 6|&#10004; Observação 4, 5, 6|
 |Redimensionamento de memória de Runtime|2019, 2016|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6||||
-|**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
+|**[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
 |Dispositivo de vídeo específico do Hyper-V|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||||||
 |Pares chave/valor|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|Observação de &#10004; 7|Observação de &#10004; 7|

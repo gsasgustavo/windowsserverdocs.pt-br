@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 01/09/2017
-ms.openlocfilehash: 09b6f532bac2b57fd8334556501c6197fa3036cc
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.date: 01/08/2021
+ms.openlocfilehash: 396366e72dcfda60131267299ac7427ad83b05df
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747151"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053649"
 ---
 # <a name="best-practices-for-running-freebsd-on-hyper-v"></a>Práticas recomendadas para executar o FreeBSD no Hyper-V
 
->Aplica-se a: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Este tópico contém uma lista de recomendações para executar o FreeBSD como um sistema operacional convidado em uma máquina virtual do Hyper-V.
 
@@ -23,13 +23,13 @@ Este tópico contém uma lista de recomendações para executar o FreeBSD como u
 
 O CARP (protocolo de redundância de endereço comum) permite que vários hosts compartilhem o mesmo endereço IP e VHID (ID de host virtual) para ajudar a fornecer alta disponibilidade para um ou mais serviços. Se um ou mais hosts falharem, os outros hosts assumirão de modo transparente para que os usuários não percebam uma falha de serviço. Para usar o CARP no FreeBSD 10,2, siga as instruções no [manual do FreeBSD](https://www.freebsd.org/doc/en/books/handbook/carp.html) e faça o seguinte no Gerenciador do Hyper-V.
 
-* Verifique se a máquina virtual tem um adaptador de rede e se ele foi atribuído a um comutador virtual. Selecione a máquina virtual e selecione **Actions**  >  **configurações**de ações.
+* Verifique se a máquina virtual tem um adaptador de rede e se ele foi atribuído a um comutador virtual. Selecione a máquina virtual e selecione   >  **configurações** de ações.
 
 ![Captura de tela de configurações de máquina virtual com adaptador de rede selecionado](media/Hyper-V_Settings_NetworkAdapter.png)
 
 * Habilite a falsificação de endereço MAC. Para fazer isso,
 
-   1. Selecione a máquina virtual e selecione **Actions**  >  **configurações**de ações.
+   1. Selecione a máquina virtual e selecione   >  **configurações** de ações.
 
    2. Expanda **adaptador de rede** e selecione **recursos avançados**.
 
@@ -85,6 +85,6 @@ Se o comutador virtual no host for baseado no adaptador de rede sem fio, reduza 
 ```
 
 
-Confira também
+Veja também
 
 * [Máquinas virtuais FreeBSD com suporte no Hyper-V](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)

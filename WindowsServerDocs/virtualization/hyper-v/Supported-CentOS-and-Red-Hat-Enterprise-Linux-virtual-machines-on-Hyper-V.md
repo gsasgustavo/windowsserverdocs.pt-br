@@ -5,18 +5,18 @@ ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: jperrin
 ms.author: japerrin
-ms.date: 11/11/2020
-ms.openlocfilehash: e92e52856bf293bbfbe55f9dc325ad0438f68a86
-ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
+ms.date: 01/08/2021
+ms.openlocfilehash: f9a599f4929826c227e96ec96086a8d235f9095a
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97904521"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053639"
 ---
 <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais CentOS e Red Hat Enterprise Linux com suporte no Hyper-V
 =========================================================================
 
->   Aplica-se a: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>   Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 Os mapas de distribuição de recursos a seguir indicam os recursos que estão presentes nas versões internas e baixáveis do Linux Integration Services. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após as tabelas.
 

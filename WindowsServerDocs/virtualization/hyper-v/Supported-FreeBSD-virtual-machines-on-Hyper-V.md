@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 04/07/2020
-ms.openlocfilehash: f79c2c09f5fdce570ad6e61037756dab0d4056a1
-ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
+ms.date: 01/08/2021
+ms.openlocfilehash: cfda833dd6c644eec85b3f4914c89449bb906880
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97834861"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053579"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Máquinas virtuais FreeBSD com suporte no Hyper-V
 
->Aplica-se a: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 O mapa de distribuição de recursos a seguir indica os recursos em cada versão. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após a tabela.
 
@@ -41,7 +41,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |Segmentação de TCP e descarregamentos de soma de verificação|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Descarregamento de recebimento grande (LRO)|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||||
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||||
-|**[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Note1|Observação 1|Observação 1|Observação 1|Observação 1|Observação 1, 2|Observação 1, 2|
+|**[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Note1|Observação 1|Observação 1|Observação 1|Observação 1|Observação 1, 2|Observação 1, 2|
 |Redimensionamento de VHDX|2019, 2016, 2012 R2|&#10004; observação 6|&#10004; observação 6|&#10004; observação 6|||||
 |Fibre Channel Virtual|2019, 2016, 2012 R2||||||||
 |Backup de máquina virtual ao vivo|2019, 2016, 2012 R2|&#10004;|&#10004;||||||
@@ -53,7 +53,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2||||||||
 |Memória Dinâmica-balões|2019, 2016, 2012 R2||||||||
 |Redimensionamento de memória de Runtime|2019, 2016||||||||
-|**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
+|**[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
 |Dispositivo de vídeo específico do Hyper-V|2019, 2016, 2012 R2||||||||
 |**[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||||||
 |Pares chave/valor|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|Observação de &#10004; 5|&#10004;|

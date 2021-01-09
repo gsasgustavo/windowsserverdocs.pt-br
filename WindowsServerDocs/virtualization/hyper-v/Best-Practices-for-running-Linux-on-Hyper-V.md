@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 04/15/2020
-ms.openlocfilehash: 216bd83eb06cd14b2b2290e3294041b097cfdbd9
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.date: 01/08/2021
+ms.openlocfilehash: a0fdba4c5315ee4cbe00c5fd9dd98f5ae770301d
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90747161"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053619"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Práticas recomendadas para executar o Linux no Hyper-V
 
->Aplica-se a: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Este tópico contém uma lista de recomendações para executar a máquina virtual do Linux no Hyper-V.
 

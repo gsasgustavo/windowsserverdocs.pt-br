@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 08/29/2020
-ms.openlocfilehash: 4e1384d372714932d45f9274d8c6e98eb42a5a04
-ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
+ms.date: 01/08/2021
+ms.openlocfilehash: 1e05555a21aa656f5b1c90a56cbb244687b81ea3
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97834811"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053539"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Máquinas virtuais Ubuntu com suporte no Hyper-V
 
->Aplica-se a: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 O mapa de distribuição de recursos a seguir indica os recursos em cada versão. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após a tabela.
 
@@ -40,7 +40,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Segmentação de TCP e descarregamentos de soma de verificação|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;||
-|**[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|||||
+|**[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|||||
 |Redimensionamento de VHDX|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Fibre Channel Virtual|2019, 2016, 2012 R2|Observação de &#10004; 2|Observação de &#10004; 2|Observação de &#10004; 2|Observação de &#10004; 2|
 |Backup de máquina virtual ao vivo|2019, 2016, 2012 R2|&#10004; observação 3, 4, 5|&#10004; observação 3, 4, 5|&#10004; observação 3, 4, 5|&#10004; observação 3, 4, 5|
@@ -52,7 +52,7 @@ O mapa de distribuição de recursos a seguir indica os recursos em cada versão
 |Memória Dinâmica-Hot-Add|2019, 2016, 2012 R2|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|
 |Memória Dinâmica-balões|2019, 2016, 2012 R2|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|Nota de &#10004; 6, 7, 8|
 |Redimensionamento de memória de Runtime|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
+|**[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
 |Dispositivo de vídeo específico do Hyper-V|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||
 |Pares chave/valor|2019, 2016, 2012 R2|&#10004; observação 5, 9|&#10004; observação 5, 9|&#10004; observação 5, 9|&#10004; observação 5, 9|

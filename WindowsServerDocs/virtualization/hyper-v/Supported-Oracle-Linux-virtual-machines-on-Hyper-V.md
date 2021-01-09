@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 06/05/2020
-ms.openlocfilehash: ce31296712d23aaf30525eeec9a1e8b2c366d84f
-ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
+ms.date: 01/08/2021
+ms.openlocfilehash: 52fa36b53bf743f4eec4287b790107262f4911db
+ms.sourcegitcommit: 209b0995a11c89bb9ece3db0d48a35d7ba5bbd9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833841"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98053589"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Máquinas virtuais Oracle Linux com suporte no Hyper-V
 
->Aplica-se a: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Aplica-se a: Azure Stack HCI, versão 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 O mapa de distribuição de recursos a seguir indica os recursos que estão presentes em cada versão. Os problemas conhecidos e as soluções alternativas para cada distribuição são listados após a tabela.
 
@@ -53,7 +53,7 @@ Nesta seção:
 |       vRSS     | 2019, 2016, 2012 R2 | &#10004; |
 |       Segmentação de TCP e descarregamentos de soma de verificação | 2019, 2016, 2012 R2 | &#10004;|
 |       SR-IOV  | 2019, 2016 |  &#10004;   |
-|       **[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |
+|       **[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |
 |       Redimensionamento de VHDX  | 2019, 2016, 2012 R2 | &#10004; |
 |       Fibre Channel Virtual | 2019, 2016, 2012 R2 | Observação de &#10004; 3  |
 |       Backup de máquina virtual ao vivo  | 2019, 2016, 2012 R2 | Observação de &#10004; 5 |
@@ -65,7 +65,7 @@ Nesta seção:
 |       Memória Dinâmica-Hot-Add | 2019, 2016, 2012 R2  | Observação de &#10004; 7, 8, 9 |
 |       Memória Dinâmica-balões | 2019, 2016, 2012 R2 | Observação de &#10004; 7, 8, 9 |
 |       Redimensionamento de memória de Runtime | 2019, 2016  | &#10004;  |
-|       **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
+|       **[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
 |       Dispositivo de vídeo específico do Hyper-V | 2019, 2016, 2012 R2 | &#10004;   |
 |       **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | |
 |       Key-Value emparelhar  | 2019, 2016, 2012 R2 | &#10004;   |
@@ -483,7 +483,7 @@ SR-IOV
 <tr height="50px">
 <td width="20%">
 
-**[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**
+**[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**
 </td>
 <td width="20%">
 
@@ -876,7 +876,7 @@ Redimensionamento de memória de Runtime
 <tr height="50px">
 <td width="20%">
 
-**[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**
+**[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**
 </td>
 <td width="20%">
 
@@ -1280,7 +1280,7 @@ Esta série tem apenas kernels de 64 bits.
 |       vRSS     | 2019, 2016, 2012 R2 | &#10004; | &#10004;|
 |       Segmentação de TCP e descarregamentos de soma de verificação | 2019, 2016, 2012 R2 | &#10004;|  &#10004; |
 |       SR-IOV  | 2019, 2016 |    |  |
-|       **[Armazenamento](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |
+|       **[Repositório](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |
 |       Redimensionamento de VHDX  | 2019, 2016, 2012 R2 | &#10004; | &#10004; |
 |       Fibre Channel Virtual | 2019, 2016, 2012 R2 | Observação de &#10004; 3  | Observação de &#10004; 3 |
 |       Backup de máquina virtual ao vivo  | 2019, 2016, 2012 R2 | Observação de &#10004; 5 | Observação de &#10004; 5|
@@ -1292,7 +1292,7 @@ Esta série tem apenas kernels de 64 bits.
 |       Memória Dinâmica-Hot-Add | 2019, 2016, 2012 R2  | Nota de &#10004; 6, 8, 9 | Nota de &#10004; 6, 8, 9 |
 |       Memória Dinâmica-balões | 2019, 2016, 2012 R2 | Nota de &#10004; 6, 8, 9 | Nota de &#10004; 6, 8, 9 |
 |       Redimensionamento de memória de Runtime | 2019, 2016  |  | |
-|       **[Vídeo](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | | |
+|       **[Monitor](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | | |
 |       Dispositivo de vídeo específico do Hyper-V | 2019, 2016, 2012 R2 | &#10004;   | &#10004; |
 |       **[Diversos](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | | |
 |       Key-Value emparelhar  | 2019, 2016, 2012 R2 | Observação de &#10004; 10, 11   | Observação de &#10004; 10, 11  |
