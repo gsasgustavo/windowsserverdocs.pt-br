@@ -7,12 +7,12 @@ author: msjimwu
 ms.author: jimwu
 manager: mtillman
 ms.date: 3/15/2018
-ms.openlocfilehash: 769e9db9be5121b47c72b076bba3a78be841c5de
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 80bc794a5719792941f91d6d50fe35b92006dea6
+ms.sourcegitcommit: 29b8942ea46196c12a67f6b6ad7f8dd46bf94fb2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89625156"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98065662"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print"></a>Implantar o Windows Server Hybrid Cloud Print
 
@@ -48,7 +48,7 @@ Há várias assinaturas, serviços e computadores que você precisará adquirir 
 
   Você pode usar o nome de domínio criado para você pelo Azure (*DomainName*. onmicrosoft.com) ou comprar seu próprio nome de domínio. Consulte [Adicionar seu nome de domínio personalizado usando o portal de Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
-## <a name="deployment-steps"></a>Etapas de implantação
+## <a name="deployment-steps"></a>Etapas de implantação.
 
 As etapas a seguir são para uma implantação típica de impressão em nuvem híbrida.
 
@@ -82,7 +82,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
     ![Registro de aplicativo do AAD 3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
 
 2. Expor a API para os 2 aplicativos Web.
-    - Ainda na folha **registros de aplicativo** , clique no aplicativo serviço de descoberta do Mopria, selecione **expor uma API**e clique em **definir** ao lado de ID do aplicativo URI.
+    - Ainda na folha **registros de aplicativo** , clique no aplicativo serviço de descoberta do Mopria, selecione **expor uma API** e clique em **definir** ao lado de ID do aplicativo URI.
 
     ![API de exposição do AAD 1](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI.png)
 
@@ -107,11 +107,11 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
     ![Permissão 1 da API do AAD](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
 
-    - Mude para as **APIs que minha organização usa**e, em seguida, use a caixa de pesquisa para localizar o serviço de descoberta do Mopria adicionado anteriormente. Clique no serviço do resultado da pesquisa.
+    - Mude para as **APIs que minha organização usa** e, em seguida, use a caixa de pesquisa para localizar o serviço de descoberta do Mopria adicionado anteriormente. Clique no serviço do resultado da pesquisa.
 
     ![Permissão 2 da API do AAD](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria.png)
 
-    - Selecione **permissões delegadas**. Marque a caixa ao lado do escopo da API. Clique em **adicionar permissões**.
+    - Selecione **Permissões delegadas**. Marque a caixa ao lado do escopo da API. Clique em **adicionar permissões**.
 
     ![Permissão de API do AAD 3](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria-Add.png)
 
@@ -119,7 +119,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
     ![Permissão de API do AAD 4](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-ECP-Add.png)
 
-    - Depois de retornar à folha permissões de API, aguarde 10 segundos antes de clicar em **consentimento de administrador global...**.
+    - Depois de retornar à folha permissões de API, aguarde 10 segundos antes de clicar em **conceder consentimento de administrador...**.
 
     ![Permissão 5 da API do AAD](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent.png)
 
@@ -144,7 +144,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
     ![Proxy de aplicativo do AAD 3](../media/hybrid-cloud-print/AAD-EnterpriseApp-ECP-AppProxy.png)
 
-    - Vá para **Azure Active Directory**  >  **registros de aplicativo**. Clique no serviço de descoberta do Mopria. Em **visão geral**, observe que o URI da ID do aplicativo foi alterado do padrão para a URL externa em **proxy de aplicativo**. O URI será usado durante a instalação do Servidor de Impressão, na política de MDM do cliente e para a impressora de publicação.
+    - Acesse **Azure Active Directory** > **Registros de aplicativo**. Clique no serviço de descoberta do Mopria. Em **visão geral**, observe que o URI da ID do aplicativo foi alterado do padrão para a URL externa em **proxy de aplicativo**. O URI será usado durante a instalação do Servidor de Impressão, na política de MDM do cliente e para a impressora de publicação.
 
     ![Proxy de aplicativo do AAD 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
@@ -154,7 +154,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
     - Repita para o serviço de impressão de nuvem empresarial.
 
 6. Configurar URI de redirecionamento no aplicativo nativo
-    - Vá para **Azure Active Directory**  >  **registros de aplicativo**. Clique no aplicativo nativo. Acesse **visão geral** e copie a **ID do aplicativo (cliente)**.
+    - Acesse **Azure Active Directory** > **Registros de aplicativo**. Clique no aplicativo nativo. Acesse **visão geral** e copie a **ID do aplicativo (cliente)**.
 
     ![URI de redirecionamento do AAD 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
@@ -212,13 +212,13 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
     - Verifique o arquivo de log para ver se há algum erro: `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
-4. Execute **RegitEdit** em um prompt de comandos com privilégios elevados. Vá para o computador \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.
+4. Execute **RegitEdit** em um prompt de comandos com privilégios elevados. Vá para Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.
     - Certifique-se de que AzureAudience está definido como o URI de ID de aplicativo do aplicativo de impressão de nuvem empresarial.
     - Verifique se AzureTenant está definido como o nome de domínio do Azure AD.
 
     ![Servidor de Impressão chaves do registro ECP](../media/hybrid-cloud-print/PrintServer-RegEdit-ECP.png)
 
-5. Vá para o computador \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\MopriaDiscoveryService.
+5. Vá para Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\MopriaDiscoveryService.
     - Certifique-se de que AzureAudience é o URI de ID do aplicativo do aplicativo do serviço de descoberta do Mopria.
     - Certifique-se de que AzureTenant é o nome de domínio do Azure AD.
     - Verifique se a URL é o URI da ID do aplicativo do aplicativo do serviço de descoberta do Mopria.
@@ -306,12 +306,12 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 1. Examine o documento [delegação restrita de Kerberos para logon único em seus aplicativos com o proxy de aplicativo](/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd).
 
 2. Configure o Active Directory local.
-    - Na máquina Active Directory, abra Gerenciador do servidor e vá para **ferramentas**  >  **Active Directory usuários e computadores**.
+    - Na máquina Active Directory, abra Gerenciador do servidor e vá para **ferramentas**  >  **Active Directory usuários e computadores**.
     - Navegue até o nó **computadores** e selecione o servidor do conector.
-    - Clique com o botão direito **Properties**do mouse e selecione a  ->  guia**delegação**de propriedades   .
-    - Selecione **confiar neste computador para delegação apenas aos serviços especificados**.
-    - Selecione **usar qualquer protocolo de autenticação**.
-    - Em **serviços aos quais essa conta pode apresentar credenciais delegadas**.
+    - Clique com o botão direito do mouse e selecione a  ->  guia **delegação** de propriedades.
+    - Selecione **Confiar no computador para delegação apenas a serviços especificados**.
+    - Selecione **Usar qualquer protocolo de autenticação**.
+    - Em **serviços aos quais essa conta pode apresentar credenciais delegadas**.
         - Adicione o SPN (nome da entidade de serviço) da máquina Servidor de Impressão.
         - Selecione HOST para o tipo de serviço.
     ![Delegação de Active Directory](../media/hybrid-cloud-print/AD-Delegation.png)
@@ -331,7 +331,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
     - Defina o **SPN do aplicativo interno** para o SPN do computador servidor de impressão.
     - Defina a **identidade de logon delegada** para o nome principal do usuário.
     - Repita para o aplicativo EntperiseCloudPrint.
-    ![IWA de logon único do AAD](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png)
+    ![IWA único do AAD Sign-On](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png)
 
 ### <a name="step-6---configure-the-required-mdm-policies"></a>Etapa 6 – configurar as políticas de MDM necessárias
 
@@ -444,7 +444,7 @@ Em um dispositivo ingressado no Azure AD que tem as políticas de MDM configurad
 
 Veja abaixo problemas comuns durante a implantação HCP
 
-|Erro do |Etapas recomendadas |
+|Error |Etapas recomendadas |
 |------|------|
 |Falha no script do PowerShell do CloudPrintDeploy | <ul><li>Verifique se o Windows Server tem a atualização mais recente.</li><li>Se Windows Server Update Services (WSUS) for usado, consulte [como disponibilizar recursos sob demanda e pacotes de idiomas quando você estiver usando o WSUS/SCCM](/windows/deployment/update/fod-and-lang-packs).</li></ul> |
 |Falha na instalação do SQLite com a mensagem: loop de dependência detectado para o pacote ' System. Data. SQLite ' | Install-Package System. Data. sqlite. Core-ProviderName NuGet-SkipDependencies<br>Install-Package System. Data. sqlite. EF6-ProviderName NuGet-SkipDependencies<br>Install-Package System. Data. sqlite. Linq-ProviderName NuGet-SkipDependencies<br><br>Depois que os pacotes tiverem sido baixados com êxito, verifique se eles são da mesma versão. Caso contrário, adicione o parâmetro-requiredversion aos comandos acima e defina-os para que sejam da mesma versão. |

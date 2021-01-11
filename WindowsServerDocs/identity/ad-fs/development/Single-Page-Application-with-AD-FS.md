@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/13/2018
 ms.topic: article
-ms.openlocfilehash: 9e26d558755b0ae37ac07fb21ff42360693e4303
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 3c476de50a10d48757f19c41c80f10411222d885
+ms.sourcegitcommit: 29b8942ea46196c12a67f6b6ad7f8dd46bf94fb2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865705"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98065652"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Criar um aplicativo Web de página única usando OAuth e ADAL.JS com o AD FS 2016 ou posterior
 
@@ -19,16 +19,16 @@ Este tutorial fornece instruções para autenticação no AD FS usando a ADAL pa
 
 Nesse cenário, quando o usuário faz logon, o front-end de JavaScript usa a [Biblioteca de Autenticação do Active Directory para JavaScript (ADAL. JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) e a concessão de autorização implícita para obter um token de ID (id_token) do Azure AD. O token é armazenado em cache e o cliente o anexa à solicitação como o token de portador ao fazer chamadas paro o back-end de sua API da Web, que é protegido usando o middleware OWIN.
 
->[!IMPORTANT]
->O exemplo que você pode criar aqui é apenas para fins educacionais. Essas instruções são para a implementação mais simples e mínima possível para expor os elementos necessários do modelo. O exemplo pode não incluir todos os aspectos do tratamento de erros e outras funcionalidades relacionadas.
+> [!IMPORTANT]
+> O exemplo que você pode criar aqui é apenas para fins educacionais. Essas instruções são para a implementação mais simples e mínima possível para expor os elementos necessários do modelo. O exemplo pode não incluir todos os aspectos do tratamento de erros e outras funcionalidades relacionadas.
 
->[!NOTE]
->Este tutorial é aplicável **somente** ao AD FS Server 2016 e posterior
+> [!NOTE]
+> Este tutorial é aplicável **somente** ao AD FS Server 2016 e posterior
 
 ## <a name="overview"></a>Visão geral
 Neste exemplo, criaremos um fluxo de autenticação em que um cliente de aplicativo de página única será autenticado AD FS para proteger o acesso aos recursos do WebAPI no back-end. Abaixo está o fluxo de autenticação geral
 
-![Autorização de AD FS](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG)
+![Autorização de AD FS](media/Single-Page-Application-with-AD-FS/authenticationflow.png)
 
 Ao usar um aplicativo de página única, o usuário navega para um local inicial, de onde a página inicial e uma coleção de arquivos JavaScript e exibições HTML são carregadas. Você precisa configurar o Biblioteca de Autenticação do Active Directory (ADAL) para saber as informações críticas sobre seu aplicativo, ou seja, a instância de AD FS, ID do cliente, para que ele possa direcionar a autenticação para seu AD FS.
 
@@ -40,9 +40,9 @@ O passo a passo usa o Visual Studio 2015. O projeto usa a biblioteca do ADAL JS.
 ## <a name="setting-up-the-environment"></a>Configurando o ambiente
 Neste tutorial, usaremos uma configuração básica de:
 
-1.    DC: controlador de domínio para o domínio no qual AD FS será hospedado
-2.    Servidor de AD FS: o servidor de AD FS para o domínio
-3.    Máquina de desenvolvimento: computador onde o Visual Studio foi instalado e desenvolverei nosso exemplo
+1. DC: controlador de domínio para o domínio no qual AD FS será hospedado
+2. Servidor de AD FS: o servidor de AD FS para o domínio
+3. Máquina de desenvolvimento: computador onde o Visual Studio foi instalado e desenvolverei nosso exemplo
 
 Você pode, se desejar, usar apenas duas máquinas. Um para DC/AD FS e o outro para desenvolver o exemplo.
 
@@ -109,11 +109,11 @@ Abra o arquivo **app.js** e altere a definição de **tadalProvider.ini** para:
     );
 ```
 
-|Configuração|Descrição|
-|--------|--------|
-|instance|A URL do STS, por exemplo, https://fs.contoso.com/|
-|locatário|Mantenha-o como ' ADFS '|
-|clientID|Essa é a ID do cliente que você especificou ao configurar o cliente público para seu aplicativo de página única|
+| Configuração | Descrição |
+| ------------- | ----------- |
+| instance | A URL do STS, por exemplo, https://fs.contoso.com/ |
+| locatário | Mantenha-o como ' ADFS ' |
+| clientID | Essa é a ID do cliente que você especificou ao configurar o cliente público para seu aplicativo de página única |
 
 ## <a name="configure-webapi-to-use-ad-fs"></a>Configurar o WebAPI para usar AD FS
 Abra o arquivo **Startup.auth.cs** no exemplo e adicione o seguinte no início:
@@ -146,14 +146,14 @@ and add:
     );
 ```
 
-|Parâmetro|Descrição|
-|--------|--------|
-|ValidAudience|Isso configura o valor de ' Audience ' que será verificado no token|
-|ValidIssuer|Isso configura o valor de "emissor que será verificado em relação ao token|
-|MetadataEndpoint|Isso aponta para as informações de metadados de seu STS|
+| Parâmetro | Descrição |
+| --------- | ----------- |
+| ValidAudience | Isso configura o valor de ' Audience ' que será verificado no token |
+| ValidIssuer | Isso configura o valor de "emissor que será verificado em relação ao token |
+| MetadataEndpoint | Isso aponta para as informações de metadados de seu STS |
 
 ## <a name="add-application-configuration-for-ad-fs"></a>Adicionar configuração de aplicativo para AD FS
-Altere os appSettings da seguinte maneira:
+Altere o XML appSettings da seguinte maneira:
 
 ```xml
 <appSettings>
@@ -168,19 +168,19 @@ Limpe a solução, recompile a solução e execute-a. Se você quiser ver rastre
 
 O navegador (use o navegador Chrome) carregará o SPA e você verá a seguinte tela:
 
-![Registrar o cliente](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
+![Registrar o cliente](media/Single-Page-Application-with-AD-FS/singleapp3.png)
 
 Clique em logon.  A lista de tarefas disparará o fluxo de autenticação e a ADAL JS direcionará a autenticação para AD FS
 
-![Logon](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
+![Logon](media/Single-Page-Application-with-AD-FS/singleapp4a.png)
 
 No Fiddler, você pode ver o token que está sendo retornado como parte da URL no fragmento #.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
+![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
 
 Agora, você poderá chamar a API de back-end para adicionar itens de lista de tarefas para o usuário conectado:
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
+![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.png)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximas Etapas
 [Desenvolvimento do AD FS](../../ad-fs/AD-FS-Development.md)
