@@ -5,17 +5,16 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
-ms.openlocfilehash: f6b5e90b2134e21bccb7ed3006037963a77b6338
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.date: 08/07/2020
+ms.openlocfilehash: e35f2d8c80ab31f85dc16d3b8f9b37af3ed105ed
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941668"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950312"
 ---
 # <a name="express-updates-for-windows-server-2016-re-enabled-for-november-2018-update"></a>Atualizações expressas para o Windows Server 2016 ativadas novamente para a atualização de novembro de 2018
 
-> Por Joel Frauenheim
->
 > Aplica-se a: Windows Server 2016
 
 Nas atualizações das terças-feiras de 13 de novembro de 2018 em diante, o Windows publicará as Atualizações expressas novamente para o Windows Server 2016. As Atualizações expressas do Windows Server 2016 foram interrompidas em meados de 2017, depois que foi encontrado um problema significativo que impedia que as atualizações fossem instaladas corretamente. Embora o problema foi corrigido em novembro de 2017, a equipe de atualização adotou uma abordagem conservadora para publicação dos pacotes expressos para garantir que a maioria dos clientes teria a atualização de 14 de novembro de 2017 ([KB 4048953](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) instalada em seu ambientes de servidores e não seriam afetados pelo problema.

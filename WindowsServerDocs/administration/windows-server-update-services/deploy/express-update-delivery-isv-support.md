@@ -1,17 +1,17 @@
 ---
 title: Suporte a ISV para entrega de atualização Express
 description: Tópico do WSUS (Windows Server Update Service) – como ISVs (fornecedores independentes de software) podem configurar a entrega de atualização expressa usando o WSUS
-ms.topic: get-started article
+ms.topic: how-to
 author: brentfor
 ms.author: brentf
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a94ac8d85d8a86bb834f56a445bebf888fde71e0
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 1c677fbd56b21d69e7c9641583b5949aa2870480
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624509"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97947612"
 ---
 # <a name="express-update-delivery-isv-support"></a>Suporte a ISV para entrega de atualização Express
 

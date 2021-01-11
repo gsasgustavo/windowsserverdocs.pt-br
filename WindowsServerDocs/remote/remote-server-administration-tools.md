@@ -1,17 +1,18 @@
 ---
 title: Ferramentas de Administração de Servidor Remoto
 description: Tópico de nível superior das Ferramentas de Administração de Servidor Remoto
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 ms.author: lizross
 author: eross-msft
 manager: mtillman
-ms.openlocfilehash: a9851e00cde56c37d86b923a6780427d6dfab900
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.date: 09/09/2020
+ms.openlocfilehash: 1b74b746e0b6ddde9590b00f22b42b45d75ada79
+ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624195"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97950242"
 ---
 # <a name="remote-server-administration-tools"></a>Ferramentas de Administração de Servidor Remoto
 
@@ -91,7 +92,7 @@ Se você tiver uma versão do Windows 10 anterior à atualização de outubro de
 
 ##### <a name="to-uninstall-remote-server-administration-tools-for-windows-10-after-rsat-package-install"></a>Para desinstalar as Ferramentas de Administração de Servidor Remoto para Windows 10 (após a instalação do pacote das Ferramentas de Administração de Servidor Remoto)
 
-1. Na área de trabalho, clique em **Iniciar**, clique em **Todos os Aplicativos**, clique em **Sistema Windows**e, em seguida, clique em **Painel de Controle**.
+1. Na área de trabalho, clique em **Iniciar**, clique em **Todos os Aplicativos**, clique em **Sistema Windows** e, em seguida, clique em **Painel de Controle**.
 
 2. Em **Programas**, clique em **Desinstalar um programa**.
 
@@ -103,11 +104,11 @@ Se você tiver uma versão do Windows 10 anterior à atualização de outubro de
    S
    ##### <a name="to-turn-off-specific-tools-after-rsat-package-install"></a>Para desligar ferramentas específicas (após a instalação do pacote das Ferramentas de Administração de Servidor Remoto)
 
-6. Na área de trabalho, clique em **Iniciar**, clique em **Todos os Aplicativos**, clique em **Sistema Windows**e, em seguida, clique em **Painel de Controle**.
+6. Na área de trabalho, clique em **Iniciar**, clique em **Todos os Aplicativos**, clique em **Sistema Windows** e, em seguida, clique em **Painel de Controle**.
 
 7. Clique em **Programas**; em seguida, em **Programas e Recursos** , clique em **Ativar ou desativar recursos do Windows**.
 
-8. Na caixa de diálogo **Recursos do Windows** , expanda **Ferramentas de Administração de Servidor Remoto**e depois expanda **Ferramentas de Administração de Funções** ou **Ferramentas de Administração de Recursos**.
+8. Na caixa de diálogo **Recursos do Windows** , expanda **Ferramentas de Administração de Servidor Remoto** e depois expanda **Ferramentas de Administração de Funções** ou **Ferramentas de Administração de Recursos**.
 
 9. Limpe as caixas de seleção para qualquer ferramenta que você deseja desativar.
 
@@ -131,7 +132,7 @@ Em Ferramentas de Administração de Servidor Remoto para Windows 10, todas as f
 
 ##### <a name="to-start-server-manager-on-a-client-computer"></a>Para iniciar o Gerenciador do Servidor em um computador cliente
 
-1.  No menu **Iniciar** , clique em **Todos os Aplicativos**e, em seguida, clique em **Ferramentas Administrativas**.
+1.  No menu **Iniciar** , clique em **Todos os Aplicativos** e, em seguida, clique em **Ferramentas Administrativas**.
 
 2.  Na pasta **Ferramentas Administrativas** , clique em **Gerenciador do Servidor**.
 
@@ -139,7 +140,7 @@ Embora eles não estejam listados no menu **Ferramentas** do console do Gerencia
 
 ##### <a name="to-start-windows-powershell-with-elevated-user-rights-run-as-administrator"></a>Para iniciar o Windows PowerShell com direitos de usuário elevados (Executar como administrador)
 
-1.  No menu **Iniciar** , clique em **Todos os Aplicativos**, clique em **Sistema Windows**e, em seguida, clique em **Windows PowerShell**.
+1.  No menu **Iniciar** , clique em **Todos os Aplicativos**, clique em **Sistema Windows** e, em seguida, clique em **Windows PowerShell**.
 
 2.  Para executar o Windows PowerShell como administrador na área de trabalho, clique com o botão direito do mouse no atalho **Windows PowerShell** e clique em **Executar como Administrador**.
 
