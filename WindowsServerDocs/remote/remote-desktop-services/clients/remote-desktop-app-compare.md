@@ -1,21 +1,21 @@
 ---
-title: Área de Trabalho Remota – comparar os aplicativos cliente
-description: Saiba como se comparam os diferentes aplicativos de área de trabalho remota quando se trata de funções e recursos compatíveis.
+title: Área de Trabalho Remota – Comparar os redirecionamentos de aplicativos cliente
+description: Veja uma comparação de redirecionamentos dos diferentes aplicativos da Área de Trabalho Remota.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/07/2020
+ms.date: 12/16/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c34ab9c769beb25437e26442d85f75d40db163e
-ms.sourcegitcommit: ed77cfe8140a480b025907716e3635d40a5e3303
+ms.openlocfilehash: 7d06703386b60ad88271f3239700ef1a97e5c82c
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91806631"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644596"
 ---
-# <a name="compare-the-clients"></a>Comparar os clientes
+# <a name="compare-the-clients-redirections"></a>Comparar os clientes: redirecionamentos
 
 >Aplica-se a: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -62,3 +62,7 @@ Quando você habilita o redirecionamento de porta USB, quaisquer dispositivos US
 | Speakers            | X                         | X                           | X             | X       | X           | X                               | X (exceto o IE) |
 
 *Para redirecionamento de impressora – o aplicativo macOS dá suporte ao driver de impressora Publisher Imagesetter por padrão. Eles não dão suporte ao redirecionamento de drivers de impressora nativos.
+
+## <a name="other-resources"></a>Outros recursos
+
+Se estiver procurando comparações de recursos, confira [Comparar os clientes: recursos](remote-desktop-features.md).

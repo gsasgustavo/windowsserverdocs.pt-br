@@ -6,12 +6,12 @@ ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d408c70d75de0e2a14260f951209348e2aea63e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7307a4daa3f620f4b7dfc5d0103f0e75715fc1d8
+ms.sourcegitcommit: e57536e28902ae52d3040141bbd2aa00e91bbdd3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961870"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644676"
 ---
 # <a name="get-started-with-the-web-client"></a>Introdução ao cliente Web
 
@@ -43,6 +43,15 @@ Para começar a usar um aplicativo ou área de trabalho, selecione o item que qu
 
 Quando tiver terminado, é possível encerrar a sessão selecionando o botão **Sair** na barra de ferramentas na parte superior da tela ou fechando a janela do navegador.
 
+## <a name="web-client-keyboard-shortcuts"></a>Atalhos de teclado do cliente Web
+
+A tabela a seguir descreve combinações de teclas alternativas para injetar teclas de atalho padrão do Windows na sessão remota.
+
+|Tecla de atalho |Descrição |
+|-------------|------------|
+|(Windows) CTRL + ALT + END</br>(macOS) fn + control + option + delete|Injeta CTRL + ALT + Del na sessão remota.|
+|ALT + F3       |Injeta a tecla Windows na sessão remota.|    
+
 ## <a name="printing-from-the-remote-desktop-web-client"></a>Imprimir a partir do cliente Web da Área de Trabalho Remota
 
 Siga estas etapas para imprimir a partir do cliente Web:
@@ -59,7 +68,13 @@ O cliente Web atualmente oferece suporte para copiar e colar somente texto. Arqu
 
 ## <a name="use-an-input-method-editor-ime-in-the-remote-session"></a>Usar um IME (Editor de Método de Entrada) na sessão remota
 
-Para usar um Editor de Método de Entrada para inserir caracteres complexos na sessão remota, selecione o ícone de engrenagem na barra de navegação para abrir o painel lateral **Configurações** e defina o controle **Habilitar Editor de Método de Entrada** como **Ativado**. Você precisa ter um Editor de Método de Entrada instalado e habilitado na sessão remota.
+Siga estas etapas para usar um Editor de Método de Entrada para inserir caracteres complexos na sessão remota:
+
+1. Selecione o ícone de engrenagem na barra de navegação para abrir o painel lateral de **Configurações**.
+2. Defina a alternância **Habilitar Editor de Método de Entrada** como **Ativado**.
+3. Escolha seu layout de teclado IME preferido no menu suspenso.
+
+Você precisa ter um Editor de Método de Entrada instalado e habilitado na sessão remota.
 
 ## <a name="get-help-with-the-web-client"></a>Obter ajuda com o cliente Web
 

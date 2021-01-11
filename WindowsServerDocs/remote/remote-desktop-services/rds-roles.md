@@ -1,17 +1,17 @@
 ---
 title: Funções de Serviços de Área de Trabalho Remota
-description: Descreve os componentes de um serviço de hospedagem de área de trabalho.
+description: Saiba mais sobre as funções de um ambiente dos Serviços de Área de Trabalho Remota no Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: 378e93cb501bc380c33e2cdee4ce85b52d70430b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f99ad1529eb0882fc979240bab6f82f8779f0d49
+ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954893"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811413"
 ---
 # <a name="remote-desktop-services-roles"></a>Funções de Serviços de Área de Trabalho Remota
 

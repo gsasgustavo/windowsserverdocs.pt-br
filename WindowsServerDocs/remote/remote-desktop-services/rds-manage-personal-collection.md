@@ -1,17 +1,17 @@
 ---
 title: Gerenciar uma coleção de sessão de área de trabalho pessoal no RDS
-description: Saiba como adicionar um RDSH e programas RemoteApp na implantação do RDS.
+description: Saiba como gerenciar uma coleção de sessões da área de trabalho pessoal nos Serviços de Área de Trabalho Remota.
 ms.author: elizapo
 ms.date: 11/08/2016
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: bd6c91b7f022e60e488c90776e0981523da7bccb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7a7d0501aadabba8e650840906275bb4705b6d10
+ms.sourcegitcommit: 48d45b2adf44afb0207214be9c57fe589360d177
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961650"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833601"
 ---
 # <a name="manage-your-personal-desktop-session-collections"></a>Gerenciar coleções de sessão de área de trabalho pessoal
 

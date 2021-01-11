@@ -1,17 +1,17 @@
 ---
 title: Serviço de hospedagem da área de trabalho
-description: Descreve os componentes de um serviço de hospedagem da área de trabalho.
+description: Saiba mais sobre os componentes do serviço de hospedagem da área de trabalho do Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: e1973bca8218f1ece287b03fee24486e95fe5492
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4453c63b364cf664b9f1a0bd0325bcb88b6d3b2b
+ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971633"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879425"
 ---
 # <a name="desktop-hosting-service"></a>Serviço de hospedagem da área de trabalho
 
@@ -55,7 +55,7 @@ Há várias maneiras de implantar um banco de dados SQL:
 Para obter mais informações sobre como configurar uma infraestrutura altamente disponível do banco de dados SQL, consulte os artigos a seguir:
 
 * [O que é o serviço de Banco de Dados SQL do Azure?](/azure/sql-database/sql-database-technical-overview)
-* [Criação e configuração de grupos de disponibilidade (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [Criação e configuração de grupos de disponibilidade (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017&preserve-view=true).
 * [Adicionar o servidor do Agente de Conexão de Área de Trabalho Remota à implantação e configurar a alta disponibilidade](rds-connection-broker-cluster.md).
 
 ## <a name="file-server"></a>Servidor de arquivos
