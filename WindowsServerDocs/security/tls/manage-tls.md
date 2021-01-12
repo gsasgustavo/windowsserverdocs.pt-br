@@ -1,17 +1,17 @@
 ---
 title: Gerenciar o protocolo TLS
-description: Segurança do Windows Server
+description: Saiba como gerenciar a segurança da camada de transporte.
 ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: a6af172f515345a18bbd16f37b8007302ffbab70
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: c6dc0bcefda94b8d2b5490fa2378f60d26877bc5
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864026"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113292"
 ---
 # <a name="manage-transport-layer-security-tls"></a>Gerenciar o protocolo TLS
 
@@ -33,7 +33,7 @@ As alterações na ordem do conjunto de criptografia TLS entrarão em vigor na p
 
 Você pode usar a ordem do conjunto de codificação SSL Política de Grupo configurações para configurar a ordem padrão do conjunto de codificação TLS.
 
-1. No console de gerenciamento de política de grupo, vá para **configuração do computador**  >  **modelos administrativos**  >  definições de configuração de SSL de **rede**  >  **SSL Configuration Settings**.
+1. No console de gerenciamento de política de grupo, vá para **configuração do computador**  >  **modelos administrativos**  >  definições de configuração de SSL de **rede**  >  .
 2. Clique duas vezes em **ordem do pacote de criptografia SSL** e, em seguida, clique na opção **habilitado** .
 3. Clique com o botão direito do mouse na caixa **conjuntos de criptografia SSL** e selecione **selecionar tudo** no menu pop-up.
 

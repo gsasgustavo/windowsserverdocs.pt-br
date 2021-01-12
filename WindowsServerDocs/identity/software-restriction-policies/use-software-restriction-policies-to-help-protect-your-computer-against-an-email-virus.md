@@ -1,18 +1,18 @@
 ---
 title: Usar políticas de restrição de software para ajudar a proteger seu computador contra um vírus de email
-description: Segurança do Windows Server
+description: Saiba como definir políticas de controle de aplicativo usando políticas de restrição de software (SRP) para ajudar a proteger seu computador contra vírus de email a partir do Windows Server 2008 e do Windows Vista.
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 502d9a097928c6a9b828ebc3b9d5b3544d456388
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: bf7da1388ecbe65269ee6d847c86e643b3bc39bd
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640229"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113452"
 ---
 # <a name="use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus"></a>Usar políticas de restrição de software para ajudar a proteger seu computador contra um vírus de email
 

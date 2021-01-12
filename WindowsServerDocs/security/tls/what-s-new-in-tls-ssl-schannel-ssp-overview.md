@@ -1,18 +1,18 @@
 ---
 title: Visão geral de TLS-SSL (Schannel SSP)
-description: Segurança do Windows Server
+description: Saiba mais sobre as alterações na funcionalidade no SSP (provedor de suporte de segurança do Schannel).
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: 2592783d0f5187c27db45522420c93ac52748667
-ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
+ms.openlocfilehash: 831c92b85a9089161011ca89aa1e829d032ce22c
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879695"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113322"
 ---
 # <a name="overview-of-tls---ssl-schannel-ssp"></a>Visão geral do TLS-SSL (Schannel SSP)
 

@@ -1,18 +1,18 @@
 ---
 title: Rede de alto desempenho
-description: Este tópico fornece uma visão geral das tecnologias de descarregamento e otimização no Windows Server 2016 e inclui links para diretrizes adicionais sobre essas tecnologias.
+description: Saiba mais sobre a rede de alto desempenho e como as acelerações de hardware melhoram o desempenho da rede em conjunto com o software, mas não fazem parte de qualquer recurso de software.
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/12/2018
-ms.openlocfilehash: 30055b7954674b1cea99e7ef60d45cfa33543c3d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 13ab5cec3ef8ec035351f0a2a30c2152b1f48499
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996741"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113078"
 ---
 # <a name="hardware-only-ho-features-and-technologies"></a>Tecnologias e recursos do hardware apenas (HO)
 
@@ -29,7 +29,7 @@ No caminho de recebimento, o descarregamento de soma de verificação calcula as
 
 No caminho de envio, o descarregamento de soma de verificação calcula e insere as somas de verificação no cabeçalho IP, TCP ou UDP, conforme apropriado.
 
-Desabilitar descarregamentos de soma de verificação no caminho de envio não desabilita o cálculo da soma de verificação e a inserção de pacotes enviados para o driver de miniporta usando o recurso LSO (descarregamento de envio grande).Para desabilitar todos os cálculos de descarregamento de soma de verificação, o usuário também deve desabilitar o LSO.
+Desabilitar descarregamentos de soma de verificação no caminho de envio não desabilita o cálculo da soma de verificação e a inserção de pacotes enviados para o driver de miniporta usando o recurso LSO (descarregamento de envio grande).  Para desabilitar todos os cálculos de descarregamento de soma de verificação, o usuário também deve desabilitar o LSO.
 
 _**Gerenciar descarregamentos de soma de verificação de endereço**_
 

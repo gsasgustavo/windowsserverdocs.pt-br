@@ -1,18 +1,18 @@
 ---
 title: What's New for Managed Service Accounts
-description: Segurança do Windows Server
+description: Saiba mais sobre as alterações na funcionalidade de contas de serviço gerenciado com a introdução da conta de serviço gerenciado de grupo no Windows Server 2012 e no Windows 8.
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: f3b003ebe9ce766f39e10a21e0fa4002db562773
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d7ea925975254533ff7b9c6591ddde4a884a79ae
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639598"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112962"
 ---
 # <a name="what39s-new-for-managed-service-accounts"></a>O que&#39;s novo para contas de serviço gerenciado
 

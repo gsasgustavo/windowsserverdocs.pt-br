@@ -1,18 +1,18 @@
 ---
 title: Administrar políticas de restrição de software
-description: Segurança do Windows Server
+description: Saiba como administrar políticas de controle de aplicativo usando políticas de restrição de software (SRP) a partir do Windows Server 2008 e do Windows Vista.
 ms.topic: article
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: b67464b2a1b1d9f1828afc7885ddd8e18116c1d6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 84667034011ee655720e14f370fcd338e29dc98b
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89637875"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112932"
 ---
 # <a name="administer-software-restriction-policies"></a>Administrar políticas de restrição de software
 
@@ -41,7 +41,7 @@ Este tópico contém:
 
 Para obter informações sobre como realizar tarefas específicas usando o SRP, consulte o seguinte:
 
--   [Determinar lista de permissões de negação e inventário de aplicativos para diretivas de restrição de software](determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
+-   [Determinar a lista de Allow-Deny e o inventário de aplicativos para diretivas de restrição de software](determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
 
 -   [Trabalhar com regras de políticas de restrição de software](work-with-software-restriction-policies-rules.md)
 
@@ -74,7 +74,7 @@ Para obter informações sobre como realizar tarefas específicas usando o SRP, 
 
 1.  Abra o MMC (Console de Gerenciamento Microsoft).
 
-2.  No menu **arquivo** , clique em **Adicionar/remover snap-in**e, em seguida, clique em **Adicionar**.
+2.  No menu **arquivo** , clique em **Adicionar/remover snap-in** e, em seguida, clique em **Adicionar**.
 
 3.  Clique em **Editor de Objeto de Política de Grupo Local** e clique em **Adicionar**.
 
@@ -82,7 +82,7 @@ Para obter informações sobre como realizar tarefas específicas usando o SRP, 
 
 5.  Em **procurar um objeto de política de grupo**, selecione um objeto de política de grupo (GPO) no domínio, site ou unidade organizacional apropriado-ou crie um novo e, em seguida, clique em **concluir**.
 
-6.  Clique em **Fechar**e clique em **OK**.
+6.  Clique em **Fechar** e clique em **OK**.
 
 7.  Na árvore de console, clique em **diretivas de restrição de software**.
 
@@ -122,13 +122,13 @@ Para obter informações sobre como realizar tarefas específicas usando o SRP, 
 
     **Posição?**
 
-    -   Active Directory sites e serviços [*Domain_Controller_Name. domain_name*]/sites/site
+    -   Active Directory sites e serviços [*Domain_Controller_Name. nome_do_domínio*]/sites/site
 
 3.  Clique em uma entrada em **política de grupo links de objeto** para selecionar um objeto de política de grupo (GPO) existente e clique em **Editar**. Você também pode clicar em **Novo** para criar um novo GPO e clique em **Editar**.
 
 4.  Na árvore de console, clique em **diretivas de restrição de software**.
 
-    **Onde**
+    **Where**
 
     -   *Política de grupo objeto* [*ComputerName*] configuração do computador/política ou
 
@@ -214,6 +214,6 @@ Para obter informações sobre como realizar tarefas específicas usando o SRP, 
 
 > [!NOTE]
 > -   Para executar esse procedimento, você deve ser membro do grupo Administradores no computador local ou deve ter recebido a autoridade apropriada. Se o computador estiver em um domínio, é possível que os membros do grupo Admins. do Domínio possam executar esse procedimento.
-> -   Por padrão, as políticas de restrição de software não verificam DLLs (bibliotecas de links dinâmicos). A verificação de DLLs pode diminuir o desempenho do sistema, porque as políticas de restrição de software devem ser avaliadas sempre que uma DLL é carregada. Entretanto, você poderá optar por verificar as DLLs se estiver preocupado que receberá um vírus direcionado a DLLs. Se o nível de segurança padrão estiver definido como não **permitido**e você habilitar a verificação de dll, você deverá criar regras de diretivas de restrição de software que permitam a execução de cada DLL.
+> -   Por padrão, as políticas de restrição de software não verificam DLLs (bibliotecas de links dinâmicos). A verificação de DLLs pode diminuir o desempenho do sistema, porque as políticas de restrição de software devem ser avaliadas sempre que uma DLL é carregada. Entretanto, você poderá optar por verificar as DLLs se estiver preocupado que receberá um vírus direcionado a DLLs. Se o nível de segurança padrão estiver definido como não **permitido** e você habilitar a verificação de dll, você deverá criar regras de diretivas de restrição de software que permitam a execução de cada DLL.
 
 

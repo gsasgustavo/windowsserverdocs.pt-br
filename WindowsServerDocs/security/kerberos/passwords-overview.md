@@ -1,18 +1,18 @@
 ---
 title: Visão geral de senhas
-description: Segurança do Windows Server
+description: Saiba mais sobre senhas conforme elas são usadas nos sistemas operacionais Windows e encontre links para documentação e discussões sobre o uso de senhas em uma estratégia de gerenciamento de credenciais.
 ms.topic: article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 1b917691f931836605cfe044c725f5200925d2ca
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 34397f99156f743e4e2ea07e319a1eeadcb5682a
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89621879"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113412"
 ---
 # <a name="passwords-overview"></a>Visão geral de senhas
 
@@ -33,7 +33,7 @@ No Windows Server 2012 e no Windows 8, as senhas de imagem são novas. As senhas
 
 Não houve alteração na funcionalidade de senha no Windows Server 2012 e no Windows 8. Nenhuma nova configuração de Política de Grupo foi adicionada. No entanto, melhorias e aprimoramentos foram feitos no \( Gerenciamento de credenciais e senhas \) , como com as senhas de imagem, o armário de credenciais e a entrada no Windows 8 com um conta Microsoft, anteriormente conhecido como Windows Live ID.
 
-## <a name="deprecated-functionality"></a><a name="BKMK_DEP"></a>Funcionalidades preteridas
+## <a name="deprecated-functionality"></a><a name="BKMK_DEP"></a>Funcionalidade preterida
 Nenhuma funcionalidade de senha foi preterida no Windows Server 2012 e no Windows 8.
 
 ## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>Requisitos de software
@@ -47,6 +47,6 @@ Esta tabela lista recursos adicionais para recursos de senha, tecnologia e geren
 |**Documentação do cenário**|[Protegendo sua identidade digital](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
 |**Operações**|[Usuários e computadores do Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754217(v=ws.11))|
 |**Solução de problemas**|[Descubra quando sua senha expira \- Active Directory Blog do PowerShell](https://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
-|**Segurança**| [Guia de ameaças e contramedidas](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125920(v=ws.10)) do windows Server 2008 R2 e do Windows 7: políticas de conta<p>Diretrizes para [alterar e criar senhas fortes](https://www.microsoft.com/security/online-privacy/passwords-create.aspx)|
+|**Security**| [Guia de ameaças e contramedidas](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125920(v=ws.10)) do windows Server 2008 R2 e do Windows 7: políticas de conta<p>Diretrizes para [alterar e criar senhas fortes](https://www.microsoft.com/security/online-privacy/passwords-create.aspx)|
 |**Ferramentas e configurações**|[Referência de configurações de Política de Grupo para Windows e Windows Server no centro de download da Microsoft](https://www.microsoft.com/download/en/details.aspx?amp;displaylang=en&displaylang=en&id=25250)|
 |**Recursos da comunidade**|[Protegendo sua identidade digital](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<p>[Entrando no Windows 8 com um Windows Live ID](https://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<p>[Entrando com uma senha de imagem](/archive/blogs/b8/signing-in-with-a-picture-password)<p>[Otimizando a segurança de senha de imagem](/archive/blogs/b8/optimizing-picture-password-security)|

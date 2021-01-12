@@ -1,18 +1,18 @@
 ---
 title: Aumentar autenticações simultâneas processadas pelo NPS
-description: Este tópico fornece instruções sobre como configurar as autenticações simultâneas do servidor de políticas de rede no Windows Server 2016.
+description: Saiba como melhorar o desempenho do NPS aumentando o número de autenticações simultâneas permitidas entre o NPS e o controlador de domínio.
 manager: brianlic
 ms.topic: article
 ms.assetid: 2d9cdada-0625-41c8-8248-a32259b03e47
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 5036ee3299aec9e57c60b960aa9e25fb53d2f18e
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: fd48dc876cd2b8a24199ffc4fc95b8fa5a6d0d72
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948662"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113372"
 ---
 # <a name="increase-concurrent-authentications-processed-by-nps"></a>Aumentar autenticações simultâneas processadas pelo NPS
 

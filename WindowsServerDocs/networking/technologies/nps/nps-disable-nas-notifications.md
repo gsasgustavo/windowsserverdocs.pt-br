@@ -1,18 +1,18 @@
 ---
 title: Desabilitar o encaminhamento de notificação do NAS no NPS
-description: Este tópico fornece instruções sobre como configurar as autenticações simultâneas do servidor de políticas de rede no Windows Server 2016.
+description: Saiba como desabilitar o encaminhamento de mensagens de início e de parada de servidores de acesso à rede para membros de um grupo de servidores RADIUS remoto configurado no NPS.
 manager: brianlic
 ms.topic: article
 ms.assetid: a09bfb03-95fc-4534-bf3c-97078ef6b07e
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 795db196c5fd1b6241fe0b32c3d277e674e1e9aa
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: f99e8e19df70113997600e25528647b608146d27
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948992"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112852"
 ---
 # <a name="disable-nas-notification-forwarding-in-nps"></a>Desabilitar o encaminhamento de notificação do NAS no NPS
 

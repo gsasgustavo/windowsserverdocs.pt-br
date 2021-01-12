@@ -1,18 +1,18 @@
 ---
 title: Visão geral técnica das políticas de restrição de software
-description: Segurança do Windows Server
+description: Saiba mais sobre as diretivas de restrição de software, quando e como usar o recurso e quais alterações foram implementadas nas versões anteriores.
 ms.topic: article
 ms.assetid: dc7013b0-0efd-40fd-bd6d-75128adbd0b8
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 49d0f32d1634a37f5ddda71f8147017e9863b1e6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: f8167814376e630ce45097c1fc6abfdd562dce57
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640243"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113272"
 ---
 # <a name="software-restriction-policies-technical-overview"></a>Visão geral técnica das políticas de restrição de software
 
@@ -29,7 +29,7 @@ As políticas de restrição de software são políticas de confiança, que são
 
 -   [Administrar políticas de restrição de software](administer-software-restriction-policies.md)
 
-    -   [Determinar lista de permissões de negação e inventário de aplicativos para diretivas de restrição de software](determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
+    -   [Determinar a lista de Allow-Deny e o inventário de aplicativos para diretivas de restrição de software](determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md)
 
     -   [Trabalhar com regras de políticas de restrição de software](work-with-software-restriction-policies-rules.md)
 
@@ -174,6 +174,6 @@ Para obter mais informações sobre a arquitetura SRP, como o SRP gerencia regra
 |**Planejamento**|[Referência técnica das diretivas de restrição de software](/previous-versions/windows/it-pro/windows-server-2003/cc728085(v=ws.10))|
 |**Operações**|[Administrar políticas de restrição de software](administer-software-restriction-policies.md)|
 |**Solução de problemas**|[Solução de problemas de diretivas de restrição de software (2003)](/previous-versions/windows/it-pro/windows-server-2003/cc737011(v=ws.10))|
-|**Segurança**|[Ameaças e contramedidas para políticas de restrição de software (2008)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10))<p>[Ameaças e contramedidas para políticas de restrição de software (2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10))|
+|**Security**|[Ameaças e contramedidas para políticas de restrição de software (2008)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10))<p>[Ameaças e contramedidas para políticas de restrição de software (2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10))|
 |**Ferramentas e configurações**|[Ferramentas e configurações de diretivas de restrição de software (2003)](/previous-versions/windows/it-pro/windows-server-2003/cc782454(v=ws.10))|
 |**Recursos da comunidade**|[Bloqueio de Aplicativo com Políticas de Restrição de Software](/previous-versions/technet-magazine/cc510322(v=msdn.10)?pr=blog)|

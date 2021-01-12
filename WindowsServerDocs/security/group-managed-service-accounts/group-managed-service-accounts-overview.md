@@ -1,18 +1,18 @@
 ---
 title: Group Managed Service Accounts Overview
-description: Segurança do Windows Server
+description: Saiba mais sobre a conta de serviço gerenciado de grupo; especificamente, aplicativos práticos, alterações na implementação da Microsoft e requisitos de hardware e software.
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: ce51e1f1dab3940154ecee6b2743c39e2ff654b5
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ad6fc6ff95fda08369d88bd76606b523a56cd0b2
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638045"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113432"
 ---
 # <a name="group-managed-service-accounts-overview"></a>Group Managed Service Accounts Overview
 

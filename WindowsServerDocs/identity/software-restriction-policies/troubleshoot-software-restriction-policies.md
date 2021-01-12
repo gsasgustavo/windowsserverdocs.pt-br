@@ -1,18 +1,18 @@
 ---
 title: Solucionar problemas de políticas de restrição de software
-description: Segurança do Windows Server
+description: Saiba mais sobre problemas comuns e suas soluções ao solucionar problemas de SRP (diretivas de restrição de software) que começam com o Windows Server 2008 e o Windows Vista.
 ms.topic: article
 ms.assetid: 4fd53736-03e7-4bf9-ba90-d1212d93e19a
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 003a71ed8c6b7e8d9b788c4eb8aa5efcc4bd6286
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: b9c96f43ebbcc41a210357b2006d2b153a69545a
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640211"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113472"
 ---
 # <a name="troubleshoot-software-restriction-policies"></a>Solucionar problemas de políticas de restrição de software
 
@@ -28,7 +28,7 @@ A partir do Windows Server 2008 R2 e do Windows 7, o Windows AppLocker pode ser 
 ### <a name="windows-cannot-open-a-program"></a>O Windows não pode abrir um programa
 Os usuários recebem uma mensagem dizendo que "o Windows não pode abrir este programa porque ele foi impedido por uma diretiva de restrição de software. Para obter mais informações, abra Visualizador de Eventos ou contate o administrador do sistema. " Ou, na linha de comando, uma mensagem diz "o sistema não pode executar o programa especificado".
 
-**Causa:** O nível de segurança padrão (ou uma regra) foi criado para que o programa de software seja definido como não **permitido**e, consequentemente, ele não será iniciado.
+**Causa:** O nível de segurança padrão (ou uma regra) foi criado para que o programa de software seja definido como não **permitido** e, consequentemente, ele não será iniciado.
 
 **Solução:** Examine o log de eventos para obter uma descrição detalhada da mensagem. A mensagem de log de eventos indica qual programa de software está definido como não **permitido** e qual regra é aplicada ao programa.
 
@@ -85,6 +85,6 @@ As diretivas de restrição de software resolvem o problema de regulagem de cód
 
 1.  Investigue o log de eventos do sistema, filtrando a origem da "diretiva de restrição de software". As entradas explicitamente deformam qual regra é implementada para cada aplicativo.
 
-2.  Habilite o registro em log avançado. Consulte [determinar a lista de permissões de negação e o inventário de aplicativos para](software-restriction-policies.md) obter as políticas de restrição de software para obter mais informações.
+2.  Habilite o registro em log avançado. Consulte [determinar a lista de Allow-Deny e o inventário de aplicativos para](software-restriction-policies.md) obter as políticas de restrição de software para obter mais informações.
 
 

@@ -1,18 +1,18 @@
 ---
 title: Política de QoS (qualidade de serviço)
-description: Este tópico fornece uma visão geral da política de QoS (qualidade de serviço), que permite que você use Política de Grupo para priorizar a largura de banda de tráfego de rede de aplicativos e serviços específicos no Windows Server 2016.
+description: Saiba como usar a política de QoS como um ponto central de gerenciamento de largura de banda de rede em toda a sua infraestrutura de Active Directory criando perfis de QoS, cujas configurações são distribuídas com Política de Grupo.
 ms.topic: article
 ms.assetid: 16918506-102c-482e-89d3-004ad8d6aabe
 manager: brianlic
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: dd43c38e44a02b3d50bff952b8a174b049c585d8
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 616fe115246b1b6bb6aa4eae6c98265ff6250765
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946652"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113382"
 ---
 # <a name="quality-of-service-qos-policy"></a>Qualidade da \( política de QoS de serviço \)
 

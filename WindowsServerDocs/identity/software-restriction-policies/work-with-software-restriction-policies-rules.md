@@ -1,18 +1,18 @@
 ---
 title: Trabalhar com regras de políticas de restrição de software
-description: Segurança do Windows Server
+description: Saiba mais sobre os procedimentos que funcionam com regras de certificado, caminho, zona da Internet e hash usando as diretivas de restrição de software.
 ms.topic: article
 ms.assetid: 4a8047d5-9bb9-4bed-bc8f-583a237731e2
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 883788eb2966a2f5e108b912f087abd4e601ea0b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: d36483dec8d5802df042d3444e477bcb508a9819
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624212"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113442"
 ---
 # <a name="work-with-software-restriction-policies-rules"></a>Trabalhar com regras de políticas de restrição de software
 
@@ -50,7 +50,7 @@ Quando as regras são criadas para o domínio usando Política de Grupo, você d
 
 1.  Abra Políticas de Restrição de Software.
 
-2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais**e clique em **nova regra de certificado**.
+2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais** e clique em **nova regra de certificado**.
 
 3.  Clique em **Procurar** e selecione um certificado ou arquivo assinado.
 
@@ -102,7 +102,7 @@ Há diferentes procedimentos para habilitar as regras de certificado dependendo 
 
 5.  Em **procurar um objeto de política de grupo**, selecione um objeto de política de grupo (GPO) no domínio, site ou unidade organizacional apropriado-ou crie um novo e, em seguida, clique em **concluir**.
 
-6.  Clique em **Fechar**e clique em **OK**.
+6.  Clique em **Fechar** e clique em **OK**.
 
 7.  Na árvore de console, clique em **Opções de segurança** localizadas em *GroupPolicyObject* [*ComputerName*] política/configuração do computador/configurações do Windows/configurações de segurança/políticas locais/.
 
@@ -164,7 +164,7 @@ As configurações de políticas na guia **Fornecedores Confiáveis** da políti
 
 ##### <a name="to-configure-the-trusted-publishers-policy-settings-for-a-local-computer"></a>Para configurar as definições de política de fornecedores confiáveis para um computador local
 
-1.  Na tela **Iniciar** , digite**gpedit. msc** e pressione Enter.
+1.  Na tela **Iniciar** , digite **gpedit. msc** e pressione Enter.
 
 2.  Na árvore de console em **Política do Computador Local\Configuração do Computador\Configurações do Windows\Configurações de Segurança**, clique em **Políticas de Chave Pública**.
 
@@ -190,7 +190,7 @@ As configurações de políticas na guia **Fornecedores Confiáveis** da políti
 
 1.  Na tela **Iniciar** , digite, **gpedit. msc** , nos **programas e arquivos de pesquisa** ou no Windows 8, na área de trabalho e pressione Enter.
 
-2.  Na árvore de console, em política de **domínio padrão** ou **diretiva de computador local**, clique duas vezes em **configuração do computador**, **configurações do Windows**e configurações de **segurança**e clique em **políticas de chave pública**.
+2.  Na árvore de console, em política de **domínio padrão** ou **diretiva de computador local**, clique duas vezes em **configuração do computador**, **configurações do Windows** e configurações de **segurança** e clique em **políticas de chave pública**.
 
 3.  Clique duas vezes em **Configurações de Validação de Caminho do Certificado** e clique na guia **Fornecedores Confiáveis**.
 
@@ -221,7 +221,7 @@ Por exemplo, é possível criar uma regra de hash e definir o nível de seguran�
 
 1.  Abra Políticas de Restrição de Software.
 
-2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais**e clique em **nova regra de hash**.
+2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais** e clique em **nova regra de hash**.
 
 3.  Clique em **procurar** para localizar um arquivo.
 
@@ -249,11 +249,11 @@ As regras de zona da Internet se aplicam somente aos pacotes do Windows Installe
 
 1.  Abra Políticas de Restrição de Software.
 
-2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais**e clique em **nova regra de zona da Internet**.
+2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais** e clique em **nova regra de zona da Internet**.
 
 3.  Em **Zona da Internet**, clique em uma zona da Internet.
 
-4.  Em **nível de segurança**, clique em não **permitido** ou **irrestrito**e, em seguida, clique em **OK**.
+4.  Em **nível de segurança**, clique em não **permitido** ou **irrestrito** e, em seguida, clique em **OK**.
 
 > [!NOTE]
 > -   Talvez seja necessário criar uma nova configuração de política de restrição de software para o GPO (Objeto de Política de Grupo), se você ainda não tiver feito isso.
@@ -270,7 +270,7 @@ Como essas regras são especificadas pelo caminho, se um programa de software fo
 
 1.  Abra Políticas de Restrição de Software.
 
-2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais**e clique em **nova regra de caminho**.
+2.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais** e clique em **nova regra de caminho**.
 
 3.  Em **Caminho**, digite um caminho, ou clique em **Procurar** para encontrar um arquivo ou pasta.
 
@@ -300,11 +300,11 @@ Como essas regras são especificadas pelo caminho, se um programa de software fo
 
 3.  Abra Políticas de Restrição de Software.
 
-4.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais**e clique em **nova regra de caminho**.
+4.  Na árvore de console ou no painel de detalhes, clique com o botão direito do mouse em **regras adicionais** e clique em **nova regra de caminho**.
 
 5.  Em **caminho**, Cole o nome da chave do registro, seguido pelo nome do valor.
 
-6.  Coloque o caminho do registro em sinais de porcentagem (%), por exemplo,% HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\PlatformSDK\Directories\InstallDir%.
+6.  Coloque o caminho do registro em sinais de porcentagem (%), por exemplo,% HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PlatformSDK\Directories\InstallDir%.
 
 7.  Em **nível de segurança**, clique em não **permitido** ou **irrestrito**.
 

@@ -1,18 +1,18 @@
 ---
 title: Definir as configurações de Firewall e DNS
-description: Este tópico fornece instruções detalhadas para a implantação de Always On VPN no Windows Server 2016.
+description: Saiba como configurar o DNS e as configurações de firewall para conectividade VPN.
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
 ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 06/11/2018
-ms.openlocfilehash: 99db65c2c5bd78154e14ab9e388eb709351afc11
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e35936590b6ae7f98583ee9c595091c2919a3e3a
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946679"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113352"
 ---
 # <a name="step-5-configure-dns-and-firewall-settings"></a>Etapa 5. Definir configurações de DNS e firewall
 
@@ -33,7 +33,7 @@ Para garantir que os clientes remotos possam se conectar ao seu servidor VPN, vo
 
 ### <a name="to-add-a-host-a-or-aaaa-resource-record-to-a-zone"></a>Para adicionar um registro de recurso de host (A ou AAAA) a uma zona
 
-1. Em um servidor DNS, em Gerenciador do Servidor, selecione **ferramentas**e, em seguida, selecione **DNS**. O Gerenciador DNS é aberto.
+1. Em um servidor DNS, em Gerenciador do Servidor, selecione **ferramentas** e, em seguida, selecione **DNS**. O Gerenciador DNS é aberto.
 2. Na árvore de console do Gerenciador de DNS, selecione o servidor que você deseja gerenciar.
 3. No painel de detalhes, em **nome**, clique duas vezes em **zonas de pesquisa direta** para expandir a exibição.
 4. Em detalhes de **zonas de pesquisa direta** , clique com o botão direito do mouse na zona de pesquisa direta à qual você deseja adicionar um registro e, em seguida, selecione **novo host (a ou aaaa)**. A caixa de diálogo **novo host** é aberta.

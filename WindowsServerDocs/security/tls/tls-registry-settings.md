@@ -1,17 +1,17 @@
 ---
 title: Configurações do Registro do protocolo TLS
-description: Segurança do Windows Server
+description: Saiba mais sobre as informações de configuração do registro com suporte para a implementação do Windows do protocolo TLS.
 ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 02/28/2019
-ms.openlocfilehash: 3304d236511c9018d734984029239608e59ab1a3
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 474b8d709fca920290459601e7c214d8167ff1a2
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989559"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113392"
 ---
 # <a name="transport-layer-security-tls-registry-settings"></a>Configurações do Registro do protocolo TLS
 
@@ -101,7 +101,7 @@ Como o SNI e o CCS permitem que o IIS seja dimensionado para milhares de sites q
 
 Versões aplicáveis: todas as versões que começam com o Windows Server 2012 e o Windows 8.
 
-Caminho do registro: [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]
+Caminho do registro: [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL]
 
 Adicione a seguinte chave:
 
@@ -180,9 +180,9 @@ Essa entrada não existe no Registro por padrão.
 Depois de criar a entrada, altere o valor DWORD para o comprimento de bit desejado.
 Se não estiver configurado, um máximo não será imposto.
 
-## <a name="keyexchangealgorithm---diffie-hellman-key-sizes"></a>Tamanhos de chave KeyExchangeAlgorithm-Diffie-Hellman
+## <a name="keyexchangealgorithm---diffie-hellman-key-sizes"></a>KeyExchangeAlgorithm-tamanhos de chave de Diffie-Hellman
 
-Essa entrada controla os tamanhos de chave Diffie-Hellman.
+Essa entrada controla o Diffie-Hellman tamanhos de chave.
 
 O uso de algoritmos de troca de chaves deve ser controlado pela configuração da ordem do conjunto de codificação.
 

@@ -1,18 +1,18 @@
 ---
 title: Como funciona a política de QoS
-description: Este tópico fornece uma visão geral da política de QoS (qualidade de serviço), que permite que você use Política de Grupo para priorizar a largura de banda de tráfego de rede de aplicativos e serviços específicos no Windows Server 2016.
+description: Saiba mais sobre como funciona a política de QoS.
 ms.topic: article
 ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 41bbf2245143281cd80a46c23c2c6bf704ea3ccc
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: c3042c6e0c6c74e76472962c4bde323e044ff1fd
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97943162"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113362"
 ---
 # <a name="how-qos-policy-works"></a>Como funciona a política de QoS
 

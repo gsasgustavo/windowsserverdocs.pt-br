@@ -1,18 +1,18 @@
 ---
 title: Visão geral do Active Directory Domain Services
-description: Segurança do Windows Server
+description: Saiba mais sobre como Active Directory Domain Services, fornece os métodos para armazenar dados de diretório e disponibilizar esses dados para usuários e administradores de rede.
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: b339d513b5bf04bf54a6ba69e4539d6148d7641c
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7bf44fc77dfa89c3663b74c5fd1a7468e9ffa82c
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624187"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112972"
 ---
 # <a name="overview-of-active-directory-domain-services"></a>Visão geral do Active Directory Domain Services
 

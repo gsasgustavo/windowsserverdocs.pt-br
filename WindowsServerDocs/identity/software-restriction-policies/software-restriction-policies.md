@@ -1,18 +1,18 @@
 ---
 title: Software Restriction Policies
-description: Segurança do Windows Server
+description: Saiba mais sobre as políticas de restrição de software (SRP) no Windows Server 2012 e no Windows 8 e encontre links para informações técnicas sobre o SRP a partir do Windows Server 2003.
 ms.topic: article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: f4019902622b667267562a8490b6540a6c27d1e4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 3d98c52719efeec447d9bdedc4fb824c6dbeca4d
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640237"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112942"
 ---
 # <a name="software-restriction-policies"></a>Software Restriction Policies
 
@@ -88,6 +88,6 @@ A tabela a seguir fornece links para os recursos relevantes para compreensão e 
 |**Implantação**|Nenhum recurso disponível.|
 |**Operações**|[Administrar políticas de restrição de software](administer-software-restriction-policies.md) (Windows Server 2012)<p>[Ajuda do produto das diretivas de restrição de software](/previous-versions/windows/it-pro/windows-server-2003/cc779607(v=ws.10)) (Windows Server 2003)|
 |**Solução de problemas**|[Solucionar problemas de diretivas de restrição de software](troubleshoot-software-restriction-policies.md) (Windows Server 2012)<p>[Solução de problemas de diretivas de restrição de software](/previous-versions/windows/it-pro/windows-server-2003/cc737011(v=ws.10)) (Windows Server 2003)|
-|**Segurança**|[Ameaças e contramedidas para políticas de restrição de software](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10)) (Windows Server 2008)<p>[Ameaças e contramedidas para políticas de restrição de software](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10)) (Windows Server 2008 R2)|
+|**Security**|[Ameaças e contramedidas para políticas de restrição de software](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10)) (Windows Server 2008)<p>[Ameaças e contramedidas para políticas de restrição de software](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10)) (Windows Server 2008 R2)|
 |**Ferramentas e configurações**|[Ferramentas e configurações de diretivas de restrição de software](/previous-versions/windows/it-pro/windows-server-2003/cc782454(v=ws.10)) (Windows Server 2003)|
 |**Recursos da comunidade**|[Bloqueio de Aplicativo com Políticas de Restrição de Software](/previous-versions/technet-magazine/cc510322(v=msdn.10)?pr=blog)|

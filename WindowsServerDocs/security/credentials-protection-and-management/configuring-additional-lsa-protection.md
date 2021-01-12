@@ -1,18 +1,18 @@
 ---
 title: Configurando a proteção LSA adicional
-description: Segurança do Windows Server
+description: Saiba como configurar a proteção adicional para o processo de autoridade de segurança local (LSA) para evitar a injeção de código que possa comprometer as credenciais.
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 54bc100c935df2ff0cc7086b258fb395458f259f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c88ff82fc1a6e7c1440823539a14d6edc00270a3
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638087"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113502"
 ---
 # <a name="configuring-additional-lsa-protection"></a>Configurando a proteção LSA adicional
 

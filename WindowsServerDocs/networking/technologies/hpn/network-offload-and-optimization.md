@@ -1,18 +1,18 @@
 ---
 title: Tecnologias de descarregamento e otimização de rede
-description: Este tópico fornece uma visão geral das tecnologias de descarregamento e otimização no Windows Server 2016 e inclui links para diretrizes adicionais sobre essas tecnologias.
+description: Saiba mais sobre os diferentes recursos de descarregamento de rede e otimização disponíveis no Windows Server 2016 e discuta como eles ajudam a tornar a rede mais eficiente.
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/20/2018
-ms.openlocfilehash: e6f53fa8462a51e23fa9fc00aad89d8a8a3ee445
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8d0728dda0bca8188668c1bbb3570390f8608432
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947000"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112912"
 ---
 # <a name="network-offload-and-optimization-technologies"></a>Tecnologias de descarregamento e otimização de rede
 

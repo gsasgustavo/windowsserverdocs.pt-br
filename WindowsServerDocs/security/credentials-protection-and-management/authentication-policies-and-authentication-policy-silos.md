@@ -1,18 +1,18 @@
 ---
 title: Políticas de autenticação e silos de políticas de autenticação
-description: Segurança do Windows Server
+description: Saiba mais sobre os silos de política de autenticação e as políticas que podem restringir contas a esses silos.
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 931ebeda8b865c16dc6f67ae765b6bc6f7aaed1f
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 30afdda4b0d3eabeb8f57ed3b0ad1c9d79ebc9ee
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89621933"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113512"
 ---
 # <a name="authentication-policies-and-authentication-policy-silos"></a>Políticas de autenticação e silos de políticas de autenticação
 
@@ -89,11 +89,11 @@ As políticas para os objetos do Active Directory para usuários, computadores e
 |Política|Política de autenticação imposta|Especifica se a política de autenticação foi imposta.<p>Quando não está imposta, a política fica no modo de auditoria por padrão e os eventos que indicam potenciais sucessos ou falhas são gerados, mas as proteções não são aplicadas ao sistema.|
 |Política|Vínculo regressivo da política de autenticação atribuída|Este atributo é o vínculo regressivo para msDS-AssignedAuthNPolicy.|
 |Política|Política de autenticação atribuída|Especifica qual AuthNPolicy deve ser aplicada a esta entidade.|
-|Usuário|Política de autenticação de usuário|Especifica qual AuthNPolicy deve ser aplicada aos usuários atribuídos a este objeto de silo.|
-|Usuário|Vínculo regressivo da política de autenticação de usuário|Este atributo é o vínculo regressivo para msDS-UserAuthNPolicy.|
-|Usuário|ms-DS-User-Allowed-To-Authenticate-To|Este atributo é usado para determinar o conjunto de entidades permitidas para autenticação a um serviço executado sob uma conta de usuário.|
-|Usuário|ms-DS-User-Allowed-To-Authenticate-From|Este atributo é usado para determinar o conjunto de dispositivos com os quais uma conta de usuário possui permissão para entrar.|
-|Usuário|Tempo de vida de TGT de usuário|Especifica a duração máxima de um TGT de Kerberos emitido para um usuário (expressada em segundos). Os TGTs resultantes não são renováveis.|
+|User|Política de autenticação de usuário|Especifica qual AuthNPolicy deve ser aplicada aos usuários atribuídos a este objeto de silo.|
+|User|Vínculo regressivo da política de autenticação de usuário|Este atributo é o vínculo regressivo para msDS-UserAuthNPolicy.|
+|User|ms-DS-User-Allowed-To-Authenticate-To|Este atributo é usado para determinar o conjunto de entidades permitidas para autenticação a um serviço executado sob uma conta de usuário.|
+|User|ms-DS-User-Allowed-To-Authenticate-From|Este atributo é usado para determinar o conjunto de dispositivos com os quais uma conta de usuário possui permissão para entrar.|
+|User|Tempo de vida de TGT de usuário|Especifica a duração máxima de um TGT de Kerberos emitido para um usuário (expressada em segundos). Os TGTs resultantes não são renováveis.|
 |Computador|Política de autenticação de computador|Especifica qual AuthNPolicy deve ser aplicada aos computadores atribuídos a este objeto de silo.|
 |Computador|Vínculo regressivo da política de autenticação de computador|Este atributo é o vínculo regressivo para msDS-ComputerAuthNPolicy.|
 |Computador|ms-DS-Computer-Allowed-To-Authenticate-To|Este atributo é usado para determinar o conjunto de entidades permitidas para autenticação a um serviço executado sob uma conta de computador.|

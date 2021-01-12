@@ -1,18 +1,18 @@
 ---
 title: Criar a chave raiz do KDS (serviço de distribuição de chave)
-description: Segurança do Windows Server
+description: Saiba como criar uma chave raiz do serviço de distribuição de chaves da Microsoft (kdssvc.dll) no controlador de domínio usando o Windows PowerShell para gerar senhas de conta de serviço gerenciado de grupo no Windows Server 2012 ou posterior.
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 6f1852e245bb2f8a26fb15ebe67bfaab8c260192
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 84b925cb44aa8f1da43ac71beff3341da3ff3880
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638069"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112922"
 ---
 # <a name="create-the-key-distribution-services-kds-root-key"></a>Criar a chave raiz do KDS (serviço de distribuição de chave)
 
@@ -39,7 +39,7 @@ A associação ao grupo **Admins. do Domínio** ou **Administradores de Empresa*
     **Add-KdsRootKey-EffectiveImmediately**
 
     > [!TIP]
-    > O parâmetro de tempo Efetivo pode ser usado para dar tempo para que as chaves sejam propagadas a todos os DCs antes do uso. O uso de Add-KdsRootKey-EffectiveImmediately adicionará uma chave raiz ao controlador de domínio de destino que será usado pelo serviço KDS imediatamente. No entanto, outros controladores de domínio não poderão usar a chave raiz até que a replicação seja bem-sucedida.
+    > O parâmetro de tempo Efetivo pode ser usado para dar tempo para que as chaves sejam propagadas a todos os DCs antes do uso. O uso de Add-KdsRootKey-EffectiveImmediately adicionará uma chave raiz ao DC de destino que será usado pelo serviço KDS imediatamente. No entanto, outros controladores de domínio não poderão usar a chave raiz até que a replicação seja bem-sucedida.
 
 Para ambientes de teste com apenas um DC, você pode criar uma chave raiz do KDS e definir a hora de início no passado para evitar a espera do intervalo para a geração de chave usando o procedimento a seguir. Valide que um evento 4004 foi registrado no log de eventos do KDS.
 

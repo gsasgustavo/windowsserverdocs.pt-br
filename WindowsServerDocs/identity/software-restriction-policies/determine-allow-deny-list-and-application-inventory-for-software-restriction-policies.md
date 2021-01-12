@@ -1,18 +1,18 @@
 ---
 title: Determinar a lista de permissão-restrição e inventário de aplicativos para políticas de restrição de Software
-description: Segurança do Windows Server
+description: Saiba como criar uma lista de permissões e negações para que os aplicativos sejam gerenciados por políticas de restrição de software (SRP) a partir do Windows Server 2008 e do Windows Vista.
 ms.topic: article
 ms.assetid: 0abb73b6-b5d8-4505-8ab1-2f29e4bf0411
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 9da7cc8490f5b660ed5ce327b4572dc968e10c48
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 64b7c085c8bf64aa4d7d9d9de346ac71274f650c
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89637866"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113422"
 ---
 # <a name="determine-allow-deny-list-and-application-inventory-for-software-restriction-policies"></a>Determinar a lista de permissão-restrição e inventário de aplicativos para políticas de restrição de Software
 
@@ -46,7 +46,7 @@ Para usar efetivamente a regra permitir padrão, você precisa determinar exatam
 
 2.  Crie o seguinte valor de registro para habilitar o recurso de registro em log avançado e defina o caminho para onde o arquivo de log deve ser gravado.
 
-    **"HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers"**
+    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers"**
 
     Valor da cadeia *de caracteres: LogFileName caminho para LogFileName*
 

@@ -1,18 +1,18 @@
 ---
 title: NTLM Overview
-description: Segurança do Windows Server
+description: Saiba mais sobre o NTLM, quaisquer alterações na funcionalidade e encontre links para recursos técnicos para autenticação do Windows e NTLM para Windows Server 2012 e versões anteriores.
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: d12e61fac3ba6c44dbcac35ea3097e95db54752a
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: c639176afb1886cef2509d1747a94a79dfc3a017
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766779"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112872"
 ---
 # <a name="ntlm-overview"></a>NTLM Overview
 
@@ -41,7 +41,7 @@ Não há nenhuma funcionalidade removida ou preterida para NTLM para o Windows S
 ## <a name="server-manager-information"></a><a name="BKMK_INSTALL"></a>Informações sobre o Gerenciador do Servidor
 O NTLM não pode ser configurado a partir do Gerenciador do Servidor. Você pode usar as configurações de Política de Segurança ou Políticas de Grupo para gerenciar o uso da autenticação NTLM entre sistemas de computadores. Em um domínio, o Kerberos é o protocolo de autenticação padrão.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Confira também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Consulte também
 A tabela a seguir lista os recursos relevantes para NTLM e outras tecnologias de autenticação do Windows.
 
 |Tipo de conteúdo|Referências|
