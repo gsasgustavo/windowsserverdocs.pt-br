@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6b6cddaa5df89e16f77022b41400be75c2bd67d5
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: d6487cebe0f0cdfeec30fd6f25813254c35a7256
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048074"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103788"
 ---
 # <a name="create-a-rule-to-send-ldap-attributes-as-claims"></a>Criar uma regra para enviar atributos LDAP como declarações
 
@@ -28,19 +28,19 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança** de terceira parte confiável.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança de terceira parte confiável ao criar uma regra para enviar atributos LDAP como declarações para uma relação de confiança de terceira parte confiável no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar política de emissão de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
+![Captura de tela que mostra onde selecionar a política de emissão editar declaração ao criar uma regra para enviar atributos LDAP como declarações para uma relação de confiança de terceira parte confiável no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
 
 4.  Na caixa de diálogo **Editar política de emissão de declaração** , em **regras de transformação de emissão** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
+![Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra para enviar atributos LDAP como declarações para uma relação de confiança de terceira parte confiável no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
+![Captura de tela que mostra onde selecionar o modelo enviar atributos LDAP como declarações quando você cria uma regra para enviar atributos LDAP como declarações para uma relação de confiança de terceira parte confiável no Windows Server 2016.](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos** e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
-![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
+![Captura de tela que mostra onde digitar o nome da regra de declaração quando você cria uma regra para enviar atributos LDAP como declarações para uma relação de confiança de terceira parte confiável no Windows Server 2016.](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
 
 7.  Clique no botão **Concluir**.
 
@@ -51,19 +51,19 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 1.  No Gerenciador do Servidor, clique em **Ferramentas** e depois selecione **Gerenciamento do AD FS**.
 
 2.  Na árvore de console, em **AD FS**, clique em **relações de confiança do provedor de declarações**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
+![Captura de tela que mostra onde selecionar as relações de confiança do provedor de declarações ao criar uma regra para enviar atributos LDAP como declarações para uma confiança do provedor de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra para enviar atributos LDAP como declarações para uma confiança do provedor de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , em **regras de transformação de aceitação** , clique em **Adicionar regra** para iniciar o assistente de regra.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
+![Captura de tela que mostra onde selecionar Adicionar regra ao criar uma regra para enviar atributos LDAP como declarações para uma confiança do provedor de declarações no Windows Server 2016.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
+![Captura de tela que mostra onde selecionar enviar atributos LDAP como declarações ao criar uma regra no Windows Server 2016.](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap1.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, selecione o **repositório de atributos** e, em seguida, selecione o atributo LDAP e mapeie-o para o tipo de declaração de saída.
-![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
+![Captura de tela que mostra onde digitar o nome da regra de declaração quando você cria uma regra para enviar atributos LDAP como declarações para uma confiança do provedor de declarações no Windows Server 2016.](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap2.PNG)
 
 7.  Clique no botão **Concluir**.
 
@@ -78,7 +78,7 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
 2.  Na árvore de console, em **\\ relacionamentos de confiança do AD FSAD FS**, clique em relações de confiança do **provedor de declarações** ou em relações de confiança de terceira **parte confiável** e, em seguida, clique em uma relação de confiança específica na lista em que você deseja criar essa regra.
 
 3.  Clique com o botão direito \- do mouse na relação de confiança selecionada e clique em **Editar regras de declaração**.
-![Criar regra](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Captura de tela que mostra onde selecionar as regras de declaração de edição ao criar uma regra para enviar atributos LDAP como declarações para o Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  Na caixa de diálogo **Editar regras de declaração** , selecione uma das seguintes guias, dependendo da relação de confiança que você está editando e de qual conjunto de regras você deseja criar essa regra e, em seguida, clique em **Adicionar regra** para iniciar o assistente de regra que está associado a esse conjunto de regras:
 
@@ -89,10 +89,10 @@ A associação em **Administradores**, ou equivalente, no computador local é o 
     -   **Regras de Autorização de Emissão**
 
     -   Regras de autorização de **delegação** 
- ![ Criar regra](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+ ![ Captura de tela que mostra onde selecionar Adicionar regra crie uma regra para enviar atributos LDAP como declarações para o Windows Server 2012 R2.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  Na página **selecionar modelo de regra** , em **modelo de regra de declaração**, selecione **Enviar atributos LDAP como declarações** na lista e clique em **Avançar**.
-![Criar regra](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap3.PNG)
+![Captura de tela que mostra onde selecionar enviar atributos LDAP como declarações criar uma regra para o Windows Server 2012 R2.](media/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims/ldap3.PNG)
 
 6.  Na página **Configurar regra** , em **nome da regra de declaração** , digite o nome para exibição desta regra, em **repositório de atributos** , selecione **Active Directory** e, em **mapeamento de atributos LDAP para tipos de declaração de saída** , selecione o **atributo LDAP** desejado e os tipos de **tipo de declaração de saída** correspondentes nas listas suspensas \- .
 

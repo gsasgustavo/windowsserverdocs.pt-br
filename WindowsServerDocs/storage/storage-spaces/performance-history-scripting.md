@@ -7,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 3894e6ce2e5f89c98d064ceedb3822cf9ab7061a
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 76820414e98487e3cf046f53d914f090ba037e48
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048924"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103758"
 ---
 # <a name="scripting-with-powershell-and-storage-spaces-direct-performance-history"></a>Criando scripts com o PowerShell e Espaços de Armazenamento Diretos histórico de desempenho
 
@@ -42,13 +42,13 @@ Este exemplo usa a `ClusterNode.Cpu.Usage` série do `LastWeek` período de temp
 
 Na captura de tela abaixo, vemos que o *servidor-02* teve um pico não explicado na última semana:
 
-![Captura de tela do PowerShell](media/performance-history/Show-CpuMinMaxAvg.png)
+![Captura de tela que mostra que o servidor-02 teve um pico não explicado na semana passada.](media/performance-history/Show-CpuMinMaxAvg.png)
 
 ### <a name="how-it-works"></a>Como ele funciona
 
 A saída de `Get-ClusterPerf` pipes é bem no cmdlet interno `Measure-Object` , apenas especificamos a `Value` propriedade. Com seus `-Maximum` `-Minimum` sinalizadores,, e `-Average` , `Measure-Object` nos dá as três primeiras colunas quase gratuitas. Para fazer a análise de quartil, podemos canalizar `Where-Object` e contar quantos valores foram `-Gt` (maiores que) 25, 50 ou 75. A última etapa é Beautify com `Format-Hours` `Format-Percent` funções auxiliares e, certamente, opcional.
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -101,7 +101,7 @@ Este exemplo usa a `PhysicalDisk.Latency.Average` série do `LastHour` período 
 
 Na captura de tela abaixo, vemos que não há exceções:
 
-![Captura de tela do PowerShell](media/performance-history/Show-LatencyOutlierHDD.png)
+![Captura de tela que mostra que não há exceções.](media/performance-history/Show-LatencyOutlierHDD.png)
 
 ### <a name="how-it-works"></a>Como ele funciona
 
@@ -111,7 +111,7 @@ Implementamos a [fórmula amplamente conhecida](http://www.mathsisfun.com/data/s
 
 Se qualquer unidade for maior do que +3 σ, `Write-Host` em vermelho; se não, em verde.
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -208,7 +208,7 @@ O histórico de desempenho também pode responder a perguntas sobre *o momento.*
 
 Na captura de tela abaixo, vemos as 10 principais máquinas virtuais por atividade de armazenamento:
 
-![Captura de tela do PowerShell](media/performance-history/Show-TopIopsVMs.png)
+![Captura de tela que mostra as 10 principais máquinas virtuais por atividade de armazenamento.](media/performance-history/Show-TopIopsVMs.png)
 
 ### <a name="how-it-works"></a>Como ele funciona
 
@@ -219,7 +219,7 @@ Ao contrário `Get-PhysicalDisk` do, o `Get-VM` cmdlet não reconhece o cluster 
 
 Os resultados de cada servidor vêm juntos como `$Output` , que podemos `Sort-Object` e depois `Select-Object -First 10` . Observe que `Invoke-Command` decora os resultados com uma `PsComputerName` propriedade que indica de onde eles vieram, que podemos imprimir para saber onde a VM está em execução.
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -260,7 +260,7 @@ Este exemplo usa a `NetAdapter.Bandwidth.Total` série do `LastDay` período de 
 
 Na captura de tela abaixo, vemos que uma *Fabrikam NX-4 Pro #2* foi efetuada com pico no último dia:
 
-![Captura de tela do PowerShell](media/performance-history/Show-NetworkSaturation.png)
+![Captura de tela que mostra que a Fabrikam NX-4 Pro #2 foi efetuada com pico no último dia.](media/performance-history/Show-NetworkSaturation.png)
 
 ### <a name="how-it-works"></a>Como ele funciona
 
@@ -269,7 +269,7 @@ Repetimos nosso `Invoke-Command` truque de acima para `Get-NetAdapter` em cada s
    > [!NOTE]
    > Alguns fornecedores, como o Chelsio, incluem atividade de RDMA (acesso remoto direto à memória) em seus contadores de desempenho do *adaptador de rede* , portanto, ele está incluído na `NetAdapter.Bandwidth.Total` série. Outros, como o Mellanox, talvez não. Se seu fornecedor não, basta adicionar a `NetAdapter.Bandwidth.RDMA.Total` série à sua versão do script.
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -332,7 +332,7 @@ Para examinar as tendências de macro, o histórico de desempenho é retido por 
 
 Na captura de tela abaixo, vemos que o volume de *backup* está adicionando cerca de 15 GB por dia:
 
-![Captura de tela do PowerShell](media/performance-history/Show-StorageTrend.png)
+![Captura de tela que mostra que o volume de backup está adicionando cerca de 15 GB por dia.](media/performance-history/Show-StorageTrend.png)
 
 A essa taxa, ela atingirá sua capacidade em mais de 42 dias.
 
@@ -345,7 +345,7 @@ Dividir a propriedade do volume `SizeRemaining` pela tendência (a inclinação 
    > [!IMPORTANT]
    > Essa estimativa é linear e baseada apenas nas últimas 14 medidas diárias. Existem técnicas mais sofisticadas e precisas. Faça um bom Judgement e não confie nesse script sozinho para determinar se deve investir na expansão do armazenamento. Ele é apresentado aqui apenas para fins educacionais.
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -453,7 +453,7 @@ Na captura de tela abaixo, vemos as 10 principais máquinas virtuais por uso de 
 
 Repetimos nosso `Invoke-Command` truque, apresentado acima, para `Get-VM` em cada servidor. Usamos `Measure-Object -Average` para obter a média mensal de cada VM e, em seguida, `Sort-Object` seguimos `Select-Object -First 10` para obter nosso placar. (Ou talvez seja nossa lista *mais desejada* ?)
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 Este é o script:
 
@@ -490,5 +490,5 @@ Pronto! Espero que esses exemplos inspiram você e o ajudem a começar. Com o hi
 ## <a name="additional-references"></a>Referências adicionais
 
 - [Introdução ao Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 - [Histórico de desempenho](performance-history.md)

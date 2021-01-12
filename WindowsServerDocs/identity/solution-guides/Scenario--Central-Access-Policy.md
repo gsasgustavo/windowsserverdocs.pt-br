@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 74fab5d6d790c4cf8ff4548f723a58dee50a941e
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 8413f257b91035f8ec01602f1b440bc8cbd75a9a
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97044604"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103768"
 ---
 # <a name="scenario-central-access-policy"></a>Cenário: Política de Acesso Central
 
@@ -52,11 +52,11 @@ Uma regra de política de acesso central tem as seguintes partes lógicas:
 
 As duas figuras a seguir mostram o fluxo de trabalho de acesso central e políticas de auditoria.
 
-![guias de solução](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
+![Diagrama que mostra os conceitos de política de auditoria e acesso central.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
 
 **Figura 1** Acesso central e conceitos de política de auditoria
 
-![guias de solução](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
+![Diagrama que mostra o fluxo de trabalho da política de acesso central.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
 
 **Figura 2** Fluxo de trabalho da política de acesso central
 

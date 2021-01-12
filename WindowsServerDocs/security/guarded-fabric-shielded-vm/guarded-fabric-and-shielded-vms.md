@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: f80daef1d7d6bfae0cc78e3ed41474995186fbb5
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: ce03cb4c851abb4b0eb6fbce8a7fe9667f74403d
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97047524"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103818"
 ---
 # <a name="guarded-fabric-and-shielded-vms-overview"></a>Visão geral sobre malha protegida e VMs blindadas
 
@@ -82,7 +82,7 @@ O arquivo de dados de blindagem (arquivo PDK) fornece garantias de que a VM ser�
 
 A figura a seguir mostra o arquivo de dados de blindagem e os elementos de configuração relacionados.
 
-![Arquivo de dados de blindagem](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
+![Ilustração que mostra o arquivo de dados de blindagem e elementos de configuração relacionados.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
 
 ## <a name="what-are-the-types-of-virtual-machines-that-a-guarded-fabric-can-run"></a>Quais são os tipos de máquinas virtuais que podem ser executados por uma malha protegida?
 
@@ -105,8 +105,8 @@ A tabela a seguir resume as diferenças entre as VMs blindadas e com suporte de 
 |Criptografar o estado da VM e o tráfego da migração ao vivo | Sim, obrigatória mas configurável |  Sim, obrigatória e imposta  |
 |Componentes de integração | Configurável pelo administrador da malha      | Alguns componentes de integração bloqueados (por exemplo, troca de dados, PowerShell Direct) |
 |Conexão de máquina virtual (Console), dispositivos HID (por exemplo, teclado, mouse) | Ligados, não podem ser desabilitados | Habilitado nos hosts que começam com o Windows Server versão 1803; Desabilitado em hosts anteriores |
-|Portas seriais/COM   | Com suporte                             | Desabilitados (não podem ser habilitados) |
-|Anexar um depurador (ao processo da VM)<sup>1</sup>| Com suporte          | Desabilitados (não podem ser habilitados) |
+|Portas seriais/COM   | Suportado                             | Desabilitados (não podem ser habilitados) |
+|Anexar um depurador (ao processo da VM)<sup>1</sup>| Suportado          | Desabilitados (não podem ser habilitados) |
 
 <sup>1</sup> os depuradores tradicionais que são anexados diretamente a um processo, como WinDbg.exe, são bloqueados para VMs blindadas porque o processo de trabalho da VM (VMWP.exe) é uma ppl (sinal de processo protegido).
 Técnicas de depuração alternativas, como as usadas pelo LiveKd.exe, não são bloqueadas.

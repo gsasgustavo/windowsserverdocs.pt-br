@@ -7,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
-ms.openlocfilehash: 55ae8f4630c21ceb5cde91982970ff52c10047da
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 5f05abf8c14fc3829fe9a0e99ef12de2cde97f81
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039734"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103718"
 ---
 # <a name="multi-factor-authentication-and-external-authentication-providers-customization"></a>Personalização de autenticação multifator e provedores de autenticação externa
 
@@ -26,7 +26,7 @@ Export-AdfsWebTheme -Name default -DirectoryPath C:\theme
 
 Veja a seguir um exemplo da interface do \- usuário de entrada, que é realçada em vermelho, por um provedor de autenticação externa. A interface do usuário usa as classes de IU no arquivo AD FS. css.
 
-![AD FS e MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
+![Captura de tela que mostra um exemplo da interface do usuário de entrada.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
 
 Antes de escrever um novo método de autenticação personalizado, recomendamos que você estude as definições AD FS tema e estilo para entender os requisitos de criação de conteúdo.
 

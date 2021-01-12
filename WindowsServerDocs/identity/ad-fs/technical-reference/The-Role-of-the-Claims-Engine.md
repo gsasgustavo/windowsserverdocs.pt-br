@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1be762cefabdc40050e7656ec29033778b92bbf6
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 8e458a59348cc02d2f7e19aaef1c8bca78ae505b
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050484"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103748"
 ---
 # <a name="the-role-of-the-claims-engine"></a>A função do mecanismo de declaração
 Em seu nível mais alto, o mecanismo de declarações no Serviços de Federação do Active Directory (AD FS) \( AD FS \) é um \- mecanismo baseado em regras que é dedicado a servir e processar solicitações de declaração para o serviço de Federação. O mecanismo de declarações é a única entidade no serviço de federação que é responsável por executar cada um dos conjuntos de regras em todas as relações de confiança federadas que você configurou e por entregar o resultado ao pipeline de declarações.
@@ -21,7 +21,7 @@ Embora o pipeline de declarações seja mais um conceito lógico do processo de 
 
 Conforme mostrado na ilustração a seguir, o ato de aceitar regras de aceitação de declarações de entrada \( \) , autorizar regras de autorização de solicitantes de declarações \( \) e emitir \( as regras de emissão de declarações de saída \) por meio de regras de declaração em todas as relações de confiança federada em sua organização é executado pelo mecanismo de declarações.
 
-![AD FS funções](media/adfs2_enginepipeline.gif)
+![Ilustração que mostra os processos executados pelo mecanismo de declarações.](media/adfs2_enginepipeline.gif)
 
 ## <a name="claim-rules-execution-process"></a>Processo de execução de regras de declaração
 Quando você configura uma confiança de provedor de declarações ou confiança de terceira parte confiável em sua organização com regras de declaração, a regra de declaração define \( s \) para essa relação de confiança atua como um gatekeeper para declarações de entrada invocando o mecanismo de declarações para aplicar a lógica necessária nas regras de declaração para determinar se deve emitir quaisquer declarações e quais declarações devem ser emitidas.
@@ -44,7 +44,7 @@ O conjunto de declarações de entrada é criado pelo mecanismo de declarações
 
 Por exemplo, na ilustração abaixo, o mecanismo de declarações lê as declarações de A e B das declarações de entrada e as copia para o conjunto de declarações de entrada. Depois que estiverem no conjunto de declaração de entrada, o mecanismo de declarações recupera e processa solicitações A e B como entrada para a lógica na primeira regra no conjunto de regras de declaração.
 
-![AD FS funções](media/adfs2_context1.gif)
+![Ilustração que mostra que o mecanismo de declarações lê as declarações de a e B das declarações de entrada e as copia para o conjunto de declarações de entrada.](media/adfs2_context1.gif)
 
 Todas as regras em um conjunto de regras de declaração compartilham o mesmo conjunto de declarações de entrada. Cada regra nesse conjunto pode ser adicionada ao conjunto de declarações de entrada compartilhado, afetando assim todas as regras subsequentes no conjunto.
 
@@ -69,7 +69,7 @@ Se a declaração *adicionar* for usada, as declarações são adicionadas apena
 
 Se a parte de condição de uma regra em um conjunto de regras não corresponder às declarações no conjunto de declaração de entrada, a parte da declaração de emissão da regra é ignorada e, portanto, nenhuma declaração é adicionada no conjunto de declarações de saída ou no conjunto de declarações de entrada. A ilustração a seguir e as etapas correspondentes mostram o que acontece quando o mecanismo de declarações executa uma regra de transformação:
 
-![AD FS funções](media/adfs2_context2.gif)
+![Ilustração que mostra o que acontece quando o mecanismo de declarações executa uma regra de transformação.](media/adfs2_context2.gif)
 
 1.  Declarações de entrada são adicionadas no conjunto de declarações de entrada definido pelo mecanismo de declarações.
 
@@ -103,7 +103,7 @@ Se o conjunto de regras de declaração que está sendo executado durante a etap
 
 O objetivo das regras de autorização é emitir uma declaração de permissão ou negação com base em se o usuário deve obter token para a determinada terceira parte confiável ou não. Conforme mostrado na ilustração a seguir, a saída da execução de autorização é usada pelo pipeline para determinar se o conjunto de regras de emissão é executado ou não — com base na presença ou ausência da declaração de permissão e \/ negação — mas a saída de execução de autorização em si não é usada como uma entrada para o conjunto de regras de declaração.
 
-![AD FS funções](media/adfs2_authorization.gif)
+![A ilustração que mostra a saída da execução de autorização é usada pelo pipeline para determinar se o conjunto de regras de emissão é executado ou não.](media/adfs2_authorization.gif)
 
 Para obter mais informações sobre a autorização de declarações, consulte [When to Use an Authorization Claim Rule](When-to-Use-an-Authorization-Claim-Rule.md).
 

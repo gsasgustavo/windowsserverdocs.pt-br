@@ -6,12 +6,12 @@ ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.openlocfilehash: 55ac25e37f7c7621426db031ba1ad148d3a02a98
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 2816b2ac03fda883e67a0dd58f7797a0e4847678
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97042394"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103868"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Configurar o Serviço Web de Registro de Certificado para renovação baseada em chave de certificados em uma porta personalizada
 
@@ -132,7 +132,7 @@ Esse comando instala o Serviço Web de Registro de Certificado (CES) para usar a
 ##### <a name="step-2-check-the-internet-information-services-iis-manager-console"></a>Etapa 2 verificar o console do Gerenciador do Serviços de Informações da Internet (IIS)
 
 Após uma instalação bem-sucedida, você espera ver a exibição a seguir no console do Gerenciador do Serviços de Informações da Internet (IIS).
-![Gerenciador do IIS](media/certificate-enrollment-certificate-key-based-renewal-4.png)
+![Captura de tela que mostra o console do Serviços de Informações da Internet Manager.](media/certificate-enrollment-certificate-key-based-renewal-4.png)
 
 Em **site padrão**, selecione **ADPolicyProvider_CEP_UsernamePassword** e, em seguida, abra **configurações do aplicativo**. Observe a **ID** e o **URI**.
 
@@ -250,16 +250,16 @@ No computador cliente, configure as políticas de registro e a política de regi
    b. Para **tipo de autenticação**, selecione **nome de usuário/senha**.
 
    c. Defina uma prioridade de **10** e, em seguida, valide o servidor de políticas.
-      ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-10.png)
+      ![Captura de tela que mostra onde definir a prioridade.](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
    > [!Note]
    > Certifique-se de que o número da porta seja adicionado ao URI e seja permitido no firewall.
 
 5. Registre o primeiro certificado para o computador por meio de certlm. msc.
-   ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-11.png)
+   ![Captura de tela que mostra onde selecionar a política de registro de certificado.](media/certificate-enrollment-certificate-key-based-renewal-11.png)
 
    Selecione o modelo KBR e registre o certificado.
-   ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-12.png)
+   ![Captura de tela que mostra onde selecionar o modelo K B R.](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
 6. Abra **gpedit. msc** novamente. Edite a **política de registro cliente de serviços de certificados – certificado** e adicione a política de registro de renovação baseada em chave:
 
@@ -286,7 +286,7 @@ Execute o comando a seguir:
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
+![Captura de tela que mostra como executar o comando fornecido.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
 
 ### <a name="method-2"></a>Método 2
 
