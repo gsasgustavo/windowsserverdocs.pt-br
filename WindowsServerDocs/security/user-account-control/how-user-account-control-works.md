@@ -1,18 +1,18 @@
 ---
 title: Como funciona o Controle de Conta de Usuário
-description: Segurança do Windows Server
+description: Saiba mais sobre o UAC (controle de conta de usuário) e como ele ajuda a impedir que programas mal-intencionados danifiquem um computador e ajudam as organizações a implantar uma área de trabalho melhor gerenciada.
 ms.topic: article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 66af2af28a1c26920e906f58f738e25d5032c4c1
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 948ef5cc3145f3ecdb35415f77f316ed265b44bf
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639445"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177615"
 ---
 # <a name="how-user-account-control-works"></a>Como funciona o Controle de Conta de Usuário
 
@@ -50,7 +50,7 @@ Com o UAC habilitado, o Windows Server 2012 solicita consentimento ou solicita c
 
 **A solicitação de consentimento**
 
-A solicitação de consentimento é apresentada quando um usuário tenta realizar uma tarefa que requer um token de acesso administrativo do usuário. A imagem a seguir é uma captura de tela da solicitação de consentimento do UAC.
+A solicitação de consentimento é apresentada quando um usuário tenta realizar uma tarefa que requer um token de acesso administrativo do usuário. Veja a seguir uma captura de tela do prompt de consentimento do UAC.
 
 ![Captura de tela do prompt de consentimento do UAC](../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
 
@@ -58,7 +58,7 @@ A solicitação de consentimento é apresentada quando um usuário tenta realiza
 
 A solicitação de credenciais é apresentada quando um usuário padrão tenta realizar uma tarefa que requer um token de acesso administrativo do usuário. O comportamento dessa solicitação padrão do usuário pode ser configurado por meio do snap-in de Política de Segurança Local (Secpol.msc) ou da Política de Grupo. Também poderá ser necessário que os administradores forneçam suas credenciais definindo o valor da configuração de política Controle de Conta de Usuário: comportamento da solicitação de elevação de administradores no Modo de Aprovação de Administrador como Pedir credenciais.
 
-A captura de tela a seguir é um exemplo da solicitação de credenciais do UAC.
+A captura de tela a seguir é um exemplo do prompt de credenciais do UAC.
 
 ![Captura de tela mostrando um exemplo do prompt de credenciais do UAC](../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
 
@@ -78,7 +78,7 @@ A codificação de cores das solicitações de elevação é a seguinte:
 
 **Ícone de proteção**
 
-Alguns itens do Painel de Controle, como **Propriedades de data e hora**, contêm uma combinação de operações de administrador e de usuário padrão. Os usuários padrão podem ver o relógio e alterar o fuso horário, mas um token de acesso de administrador completo é necessário para alterar a hora local do sistema. A imagem a seguir é uma captura de tela do item do Painel de Controle **Propriedades de data e hora**.
+Alguns itens do Painel de Controle, como **Propriedades de data e hora**, contêm uma combinação de operações de administrador e de usuário padrão. Os usuários padrão podem ver o relógio e alterar o fuso horário, mas um token de acesso de administrador completo é necessário para alterar a hora local do sistema. Veja a seguir uma captura de tela do item do painel de controle **Propriedades de data e hora** .
 
 ![Captura de tela mostrando o * * Propriedades de data e hora * * painel de controle](../media/How-User-Account-Control-Works/UACShieldIcon.gif)
 
@@ -107,7 +107,7 @@ Para entender melhor cada componente, examine a tabela abaixo:
 |O usuário executa a operação que requer privilégio|Se o operador alterar o sistema de arquivos ou o registro, Virtualization será chamado. Todas as outras operações chamam ShellExecute.|
 |ShellExecute|ShellExecute chama CreateProcess. ShellExecute procura o erro ERROR_ELEVATION_REQUIRED em CreateProcess. Se receber o erro, ShellExecute chamará o serviço de Informações de Aplicativos para tentar realizar a tarefa solicitada com o prompt de privilégios elevados.|
 |CreateProcess|Se o aplicativo exigir elevação, CreateProcess rejeitará a chamada com ERROR_ELEVATION_REQUIRED.|
-|**Sistema**||
+|**System**||
 |Serviço de Informações de Aplicativos|Um serviço do sistema que ajuda a iniciar aplicativos que exigem um ou mais direitos de usuário ou privilégios elevados para serem executados, como tarefas administrativas locais, e aplicativos que exigem níveis maiores de integridade. O Serviço de Informações de Aplicativos ajuda a iniciar esses aplicativos criando novos processos para eles com o token de acesso completo de um usuário administrativo quando a elevação é necessária e (dependendo da Política de Grupo) e quando o usuário deu o seu consentimento para isso.|
 |Elevando uma instalação do ActiveX|Se o ActiveX não estiver instalado, o sistema verificará o nível do controle deslizante do UAC. Se o ActiveX estiver instalado, a configuração de Política de Grupo **Controle de Conta de Usuário: alternar para a área de trabalho segura ao pedir elevação** estará marcada.|
 |Verificar nível do controle deslizante do UAC|Agora, o UAC tem quatro níveis de notificação para seleção, além de um controle deslizante que deve ser usado para escolher o nível de notificação:<p><ul><li>Alta<p>    Se o controle deslizante estiver definido como **Sempre notificar**, o sistema verificará se a área de trabalho protegida está habilitada.</li><li>Médio<p>    Se o controle deslizante estiver definido como **Padrão - Notificar-me somente quando os programas tentarem fazer alterações no meu computador**, a configuração de política **Controle de Conta de Usuário: elevar somente executáveis assinados e validados** estará marcada:<p><ul><li>Se essa configuração de política estiver habilitada, a validação do caminho de certificação de PKI (infraestrutura de chave pública) será imposta para um arquivo executável específico antes que ele possa ser executado.</li><li>Se essa configuração de política não estiver habilitada, a validação do caminho de certificação de PKI não será imposta para que um arquivo executável específico possa ser executado. A configuração de Política de Grupo **Controle de Conta de Usuário: alternar para a área de trabalho segura ao pedir elevação** está marcada.</li></ul></li><li>Baixo<p>    Se o controle deslizante estiver definido como **Notificar somente quando programas tentarem fazer alterações no meu computador (não esmaecer a área de trabalho)**, CreateProcess será chamado.</li><li>Nunca notificar<p>    Se o controle deslizante estiver definido como **nunca notificar quando**, o prompt do UAC nunca notificará quando um programa estiver tentando instalar ou tentar fazer qualquer alteração no computador. **Importante:**     Essa configuração não é recomendada. Essa configuração é igual a definir o **controle de conta de usuário: comportamento da solicitação de elevação para administradores na** configuração de política de modo de aprovação de administrador para **elevar sem avisar**.</li></ul>|

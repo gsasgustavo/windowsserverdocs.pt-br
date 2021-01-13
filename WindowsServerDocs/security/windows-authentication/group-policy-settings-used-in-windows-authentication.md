@@ -1,18 +1,18 @@
 ---
 title: Configurações da Política de Grupo usada na autenticação do Windows
-description: Segurança do Windows Server
+description: Saiba mais sobre o uso e o impacto das configurações de Política de Grupo no processo de autenticação.
 ms.topic: article
 ms.assetid: 9e237f89-45b1-4a4e-9b72-11dc7d6a470b
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: b26d9a454361c5487ceac408f0ab78db1657fa4b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 9cc5bceade2c10fe89e6a93cbd79815f2dec2c1e
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640061"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177285"
 ---
 # <a name="group-policy-settings-used-in-windows-authentication"></a>Configurações da Política de Grupo usada na autenticação do Windows
 

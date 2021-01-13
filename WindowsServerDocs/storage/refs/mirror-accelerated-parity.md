@@ -7,12 +7,12 @@ ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: b39e3d518b3721bffce7b111655406cd982ccc0b
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 27768eecdbe97e77be576bdb2848d610e1269d2a
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97043594"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177525"
 ---
 # <a name="mirror-accelerated-parity"></a>Paridade acelerada por espelho
 
@@ -20,9 +20,9 @@ ms.locfileid: "97043594"
 
 Espaços de armazenamento podem fornecer tolerância a falhas de dados usando duas técnicas fundamentais: espelhamento e paridade. Em [Espaços de Armazenamento Diretos](../storage-spaces/storage-spaces-direct-overview.md), ReFS apresenta a paridade acelerada por espelho, que permite a criação de volumes que usam as resiliências de espelhamento e paridade. A paridade acelerada por espelho oferece armazenamento acessível com espaço eficiente sem sacrificar o desempenho.
 
-![Volume de paridade acelerada por espelho](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
+![Diagrama que ilustra o volume de paridade acelerada do espelho.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Tela de fundo
 
 Esquemas de resiliência de espelhamento e paridade têm características de armazenamento e desempenho fundamentalmente diferentes:
 - A resiliência do espelho permite que os usuários obtenham desempenho rápido de gravação, mas replicar os dados para cada cópia não é eficiente em termos de espaço.
@@ -36,13 +36,13 @@ ReFS ativamente gira dados entre espelhamento e paridade, em tempo real. Isso pe
 
 Para girar dados entre espelhamento e paridade, ReFS logicamente divide o volume em regiões de 64 MiB, que são a unidade de rotação. A imagem a seguir mostra um volume de paridade com aceleração de espelho dividido em regiões.
 
-![Volume de paridade acelerada por espelho com contêiners de armazenamento](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume-with-Storage-Containers.png)
+![Diagrama que ilustra o volume de paridade acelerado de espelhamento com contêineres de armazenamento.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume-with-Storage-Containers.png)
 
 ReFS começa a rodar regiões completas de espelhamento a paridade uma vez que a camada do espelhamento tiver alcançado um nível de capacidade especificado. Em vez de imediatamente mover os dados de espelhamento a paridade, ReFS aguarda e mantém dados no espelhamento por quanto tempo for possível, permitindo que o ReFS continue entregando desempenho ideal de dados (consulte "desempenho de E/S" abaixo).
 
 Quando os dados são movidos de espelhamento para paridade, os dados são lidos, as codificações de paridade são computadas, e depois que os dados são escritos na paridade. A animação abaixo ilustra isso usando uma região espelhada tripla que é convertida em uma região codificada de eliminação durante rotação:
 
-![Rotação de paridade acelerada por espelho](media/mirror-accelerated-parity/Container-Rotation.gif)
+![Animação mostrando rotação de paridade acelerada por espelho.](media/mirror-accelerated-parity/Container-Rotation.gif)
 
 ## <a name="io-on-mirror-accelerated-parity"></a>E/S de paridade acelerada por espelho
 ### <a name="io-behavior"></a>Comportamento de E/S
@@ -52,17 +52,17 @@ Quando os dados são movidos de espelhamento para paridade, os dados são lidos,
 
     - **1a.** Se a gravação de entrada modificar os dados existentes no espelho, ReFS modificará os dados no local.
     - **1B.** Se a gravação de entrada for uma nova gravação e o ReFS encontrar com êxito espaço livre suficiente em espelho para suportar essa gravação, o ReFS escreve no espelho.
-    ![Gravar no espelho](media/mirror-accelerated-parity/Write-to-Mirror.png)
+    ![Captura de tela mostrando como o serviço ReFS grava no espelho.](media/mirror-accelerated-parity/Write-to-Mirror.png)
 
 2. **Grava no espelho, Realocado da paridade:**
 
     Se a gravação de entrada modificar os dados que estão em paridade, e ReFS puder encontrar com êxito espaço livre suficiente no espelho para atender à gravação de entrada, ReFS primeiro invalidará os dados anteriores na paridade e, em seguida, gravará no espelho. Essa invalidação é uma operação de metadados rápida e barata que ajuda a aumentar significativamente o desempenho de gravação feito a paridade.
-    ![Gravação realocada](media/mirror-accelerated-parity/Reallocated-Write.png)
+    ![Captura de tela mostrando como o serviço ReFS grava no espelho, realocado da paridade.](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **Grava na paridade:**
 
     Se o ReFS não conseguir encontrar com sucesso espaço livre suficiente no espelhamento, o ReFS escreverá novos dados na paridade ou modificará dados existentes na paridade diretamente. A seção "Otimizações de desempenho" abaixo fornece orientações que ajudam a minimizar gravações na paridade.
-    ![Grava na paridade](media/mirror-accelerated-parity/Write-to-Parity.png)
+    ![Captura de tela mostrando como o serviço ReFS grava na paridade.](media/mirror-accelerated-parity/Write-to-Parity.png)
 
 **Leituras:** ReFS lerá diretamente da camada que contém os dados relevantes. Se a paridade é construída com HDDs, o cache em espaços de armazenamento direto armazenará em cache esses dados para acelerar leituras futuras.
 
@@ -157,4 +157,4 @@ New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePool
 -   [Visão geral do ReFS](refs-overview.md)
 -   [Clonagem de blocos ReFS](block-cloning.md)
 -   [Fluxos de integridade ReFS](integrity-streams.md)
--   [Visão geral de Espaços de Armazenamento Diretos](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Visão geral dos Espaços de Armazenamento Diretos](../storage-spaces/storage-spaces-direct-overview.md)

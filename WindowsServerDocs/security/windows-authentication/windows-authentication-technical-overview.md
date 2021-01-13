@@ -1,18 +1,18 @@
 ---
 title: Visão geral técnica de autenticação do Windows
-description: Segurança do Windows Server
+description: Encontre links para artigos para a visão geral técnica da autenticação do Windows.
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: c64df4b76c67f1dd0dbe696812d79d83b5997813
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: e7dd9f927667b72e256572a5856c0a363e0ef09b
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638687"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177105"
 ---
 # <a name="windows-authentication-technical-overview"></a>Visão geral técnica de autenticação do Windows
 

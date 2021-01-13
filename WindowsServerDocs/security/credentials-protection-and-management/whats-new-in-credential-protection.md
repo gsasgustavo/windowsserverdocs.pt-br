@@ -1,18 +1,18 @@
 ---
 title: O que há de novo na proteção de credenciais
-description: Segurança do Windows Server
+description: Saiba mais sobre o Credential Guard para usuários conectados, Remote Credential Guard para usuários conectados e proteções de domínio.
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f297
 author: gitmichiko
 ms.author: michikos
 manager: dongill
 ms.date: 03/06/2017
-ms.openlocfilehash: 521562b938b002e4c5fe5ffee5fcd7c677551f98
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8f546884ef8400da397a6f2508b9e9ee2e5422e8
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995756"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177305"
 ---
 # <a name="whats-new-in-credential-protection"></a>O que há de novo na proteção de credenciais
 
@@ -57,7 +57,7 @@ A partir do Windows Server 2016, o KDCs pode dar suporte à extensão de atualiz
 
 ### <a name="rolling-public-key-only-users-ntlm-secrets"></a>Segredos de NTLM do usuário de chave pública sem interrupção
 
-A partir do DFL (nível funcional de domínio) do Windows Server 2016, os DCs podem dar suporte à distribuição de segredos de NTLM de um usuário de chave pública. Esse recurso é unavailble no DFLs inferior.
+A partir do DFL (nível funcional de domínio) do Windows Server 2016, os DCs podem dar suporte à distribuição de segredos de NTLM de um usuário de chave pública. Este recurso não está disponível no DFLs inferior.
 
 > [!WARNING]
 > Adicionar um controlador de domínio a um domínio com segredos NTLM sem interrupção habilitados antes que o DC seja atualizado com pelo menos o 8 de novembro de 2016, a manutenção do serviço corre o risco de falha do DC.

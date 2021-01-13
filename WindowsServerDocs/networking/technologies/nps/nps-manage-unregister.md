@@ -1,18 +1,18 @@
 ---
 title: Cancelar o registro de um NPS de um domínio do Active Directory
-description: Você pode usar este tópico para registrar um servidor que executa o servidor de diretivas de rede no Windows Server 2016 no domínio padrão do NPS ou em outro domínio.
+description: Saiba como cancelar o registro de um NPS de um Domínio do Active Directory para que você possa mover um NPS para outro domínio, substituir um NPS ou desativar um NPS.
 manager: brianlic
 ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: aff5090a5f9fcd2791835f21e2caf1c0dccaa510
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 032a7b36b207c75955f879b4740a43d32e543228
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949332"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177405"
 ---
 # <a name="unregister-an-nps-from-an-active-directory-domain"></a>Cancelar o registro de um NPS de um domínio do Active Directory
 

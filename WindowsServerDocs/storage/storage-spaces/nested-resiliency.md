@@ -6,12 +6,12 @@ manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/15/2019
-ms.openlocfilehash: e433539eced1a9f7a52bbaf9bc45e8a6586586ff
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: f1cb6b458ed01a52478d47e0c8e9d2e8dfdb386e
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039394"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177625"
 ---
 # <a name="nested-resiliency-for-storage-spaces-direct"></a>Resiliência aninhada para Espaços de Armazenamento Diretos
 
@@ -79,7 +79,7 @@ A eficiência da capacidade é a taxa de espaço utilizável para a [superfície
 
 Observe que a eficiência da capacidade do espelhamento bidirecional clássico (cerca de 50%) e paridade com aceleração de espelhamento aninhado (até 40%) Não são muito diferentes. Dependendo dos seus requisitos, a eficiência de capacidade ligeiramente menor pode ser um aumento significativo na disponibilidade do armazenamento. Você escolhe resiliência por volume, para que possa misturar volumes de resiliência aninhados e volumes de espelho bidirecionais clássicos no mesmo cluster.
 
-![Relações](media/nested-resiliency/tradeoff.png)
+![Diagrama mostrando a compensação entre um espelho bidirecional e uma paridade acelerada por espelhamento aninhado.](media/nested-resiliency/tradeoff.png)
 
 ## <a name="usage-in-powershell"></a>Uso no PowerShell
 
@@ -146,7 +146,7 @@ Uma vez definido como **true**, o comportamento do cache é:
 
 | Situação                       | Comportamento do cache                           | Pode tolerar a perda da unidade de cache? |
 |---------------------------------|------------------------------------------|--------------------------------|
-| Ambos os servidores                 | Leituras e gravações de cache, desempenho completo | Yes                            |
+| Ambos os servidores                 | Leituras e gravações de cache, desempenho completo | Sim                            |
 | Servidor inativo, primeiros 30 minutos   | Leituras e gravações de cache, desempenho completo | Não (temporariamente)               |
 | Após os primeiros 30 minutos          | Somente leituras de cache, desempenho afetado   | Sim (depois que o cache tiver sido gravado em unidades de capacidade)                           |
 
@@ -185,7 +185,7 @@ Para obter detalhes, consulte o tópico [remover servidores](remove-servers.md) 
 
 ## <a name="additional-references"></a>Referências adicionais
 
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 - [Entender a tolerância a falhas no Espaços de Armazenamento Diretos](storage-spaces-fault-tolerance.md)
 - [Planejar volumes em Espaços de Armazenamento Diretos](plan-volumes.md)
 - [Criar volumes em Espaços de Armazenamento Diretos](create-volumes.md)

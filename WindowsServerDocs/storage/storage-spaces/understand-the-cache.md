@@ -8,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: a6ab48a2079513e69538eb2673be4cf7d656b94f
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 633b36da552160e7a72793ace93e554e02d7d468
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97047754"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177535"
 ---
 # <a name="understanding-the-cache-in-storage-spaces-direct"></a>Noções básicas sobre o cache nos Espaços de Armazenamento Diretos
 
@@ -44,13 +44,13 @@ Elas podem ser combinadas de várias maneiras, que agrupamos em duas categorias:
 
 As implantações tudo flash pretendem maximizar o desempenho de armazenamento e não incluem unidades de disco rígido (HDD) rotacionais.
 
-![All-Flash-Deployment-Possibilities](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
+![Diagrama mostrando as possibilidades de implantação de todos os flash.](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
 
 ### <a name="hybrid-deployment-possibilities"></a>Possibilidades de implantação híbrida
 
 As implantações híbridas pretendem equilibrar desempenho e capacidade ou maximizar a capacidade e incluem unidades de disco rígido (HDD) rotacionais.
 
-![Hybrid-Deployment-Possibilities](media/understand-the-cache/Hybrid-Deployment-Possibilities.png)
+![Diagrama mostrando possibilidades de implantação híbrida.](media/understand-the-cache/Hybrid-Deployment-Possibilities.png)
 
 ## <a name="cache-drives-are-selected-automatically"></a>Unidades de cache são selecionadas automaticamente
 
@@ -58,7 +58,7 @@ Em implantações com vários tipos de unidades, os Espaços de Armazenamento Di
 
 O tipo "mais rápido" é determinado de acordo com a hierarquia a seguir.
 
-![Drive-Type-Hierarchy](media/understand-the-cache/Drive-Type-Hierarchy.png)
+![Diagrama que mostra a hierarquia da velocidade das diferentes unidades com a unidade de disco rígido sendo a mais lenta e a NVMe a mais rápida.](media/understand-the-cache/Drive-Type-Hierarchy.png)
 
 Por exemplo, se você tiver NVMe e SSDs, o NVMe armazenará em cache para as SSDs.
 
@@ -76,7 +76,7 @@ Quando todas as unidades são do mesmo tipo, nenhum cache é configurado automat
 
 O comportamento do cache é determinado automaticamente com base nos tipos de unidades que estão sendo usadas no armazenamento em cache. Durante o armazenamento em cache para unidades de estado sólido (como armazenamento em cache NVMe para SSDS), apenas as gravações são armazenadas em cache. Durante o armazenamento em cache para unidades de disco rígido (por exemplo, armazenamento em cache SSDs para HDDs), as leituras e as gravações são armazenadas em cache.
 
-![Cache-Read-Write-Behavior](media/understand-the-cache/Cache-Read-Write-Behavior.png)
+![Diagrama mostrando o comportamento de cache, leitura e gravação de toda a implantação do flash em comparação com uma implantação híbrida.](media/understand-the-cache/Cache-Read-Write-Behavior.png)
 
 ### <a name="write-only-caching-for-all-flash-deployments"></a>Armazenamento em cache somente leitura para implantações tudo em flash
 
@@ -117,7 +117,7 @@ Como está abaixo do restante da pilha de armazenamento definido pelo software W
 
 Uma vez que a resiliência em Espaços de Armazenamento Diretos está pelo menos no nível do servidor (o que significa que as cópias dos dados são sempre gravadas em servidores diferentes; no máximo, uma cópia por servidor), os dados no cache aproveitam a mesma resiliência de dados que não estão no cache.
 
-![Cache-Server-Side-Architecture](media/understand-the-cache/Cache-Server-Side-Architecture.png)
+![Diagrama mostrando a arquitetura do lado do servidor de cache.](media/understand-the-cache/Cache-Server-Side-Architecture.png)
 
 Por exemplo, durante o uso do espelhamento triplo, três cópias de todos os dados são gravadas em servidores diferentes, onde eles chegam ao cache. Independentemente de serem despreparados ou não depois, sempre haverá três cópias.
 
@@ -125,7 +125,7 @@ Por exemplo, durante o uso do espelhamento triplo, três cópias de todos os dad
 
 A associação entre as unidades de cache e capacidade podem ter qualquer proporção, de 1:1 a 1:12 e além. Ela é ajustada dinamicamente sempre que as unidades são adicionadas ou removidas, como acontece durante escalas verticais ou depois de falhas. Isso significa que você pode adicionar unidades de cache ou de capacidade de maneira independente, sempre que quiser.
 
-![Dynamic-Binding](media/understand-the-cache/Dynamic-Binding.gif)
+![Animação mostrando como as associações de unidade são dinâmicas.](media/understand-the-cache/Dynamic-Binding.gif)
 
 Por simetria, recomendamos que o número de unidades de capacidade seja um múltiplo do número de unidades de cache. Por exemplo, se você tiver 4 unidades de cache, terá um desempenho mais uniforme com 8 unidades de capacidade (proporção 1:2) do que com 7 ou 9.
 
@@ -137,7 +137,7 @@ Por um breve período, as unidades de capacidade que estavam associadas à unida
 
 É por causa desse cenário que pelo menos duas unidades de cache são necessárias por servidor para preservar o desempenho.
 
-![Handling-Failure](media/understand-the-cache/Handling-Failure.gif)
+![Animação mostrando por que, no mínimo, duas unidades de cache são exigidas por servidor para preservar o desempenho.](media/understand-the-cache/Handling-Failure.gif)
 
 É possível acabar substituindo a unidade de cache assim como qualquer outra troca de unidade.
 
@@ -196,7 +196,7 @@ Você pode verificar se as unidades desejadas estão sendo usadas no armazenamen
 
 A configuração manual permite as seguintes possibilidades de implantação:
 
-![Exotic-Deployment-Possibilities](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
+![Diagrama que mostra as possibilidades de implantação manual.](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
 
 ### <a name="set-cache-behavior"></a>Definir comportamento do cache
 

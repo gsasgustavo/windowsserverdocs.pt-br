@@ -1,18 +1,18 @@
 ---
 title: Visão geral da autenticação do Windows
-description: Segurança do Windows Server
+description: Saiba mais sobre a lista de recursos de documentação para a autenticação do Windows e as tecnologias de logon que incluem a avaliação do produto, guias de introdução, procedimentos, guias de design e implantação, referências técnicas e referências de comando.
 ms.topic: article
 ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 4a2b5e6b48a56a1a2148df262d2785640ac6054d
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: df5529245882daafed361b283cb77c331bb3486d
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638691"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177555"
 ---
 # <a name="windows-authentication-overview"></a>Visão geral da autenticação do Windows
 

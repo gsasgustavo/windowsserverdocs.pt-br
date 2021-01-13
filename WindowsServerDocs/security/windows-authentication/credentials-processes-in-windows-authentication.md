@@ -1,18 +1,18 @@
 ---
 title: Processos de credenciais na autenticação do Windows
-description: Segurança do Windows Server
+description: Saiba mais sobre como a autenticação do Windows processa as credenciais.
 ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 3d2948c632697e6278b716784f68c7a0085eab07
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 397294b9dba9535b098dde715e8eef75ae50cad5
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640088"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177595"
 ---
 # <a name="credentials-processes-in-windows-authentication"></a>Processos de credenciais na autenticação do Windows
 
@@ -24,7 +24,7 @@ O gerenciamento de credenciais do Windows é o processo pelo qual o sistema oper
 
 Por padrão, as credenciais do Windows são validadas no banco de dados SAM (Gerenciador de contas de segurança) no computador local ou em relação a Active Directory em um computador ingressado no domínio, por meio do serviço Winlogon. As credenciais são coletadas por meio da entrada do usuário na interface do usuário de logon ou programaticamente por meio da API (interface de programação de aplicativo) a ser apresentada ao destino de autenticação.
 
-As informações de segurança local são armazenadas no registro em **HKEY_LOCAL_MACHINE \Security**. As informações armazenadas incluem configurações de política, valores de segurança padrão e informações de conta, como credenciais de logon armazenadas em cache. Uma cópia do banco de dados SAM também é armazenada aqui, embora esteja protegida contra gravação.
+As informações de segurança local são armazenadas no registro em **HKEY_LOCAL_MACHINE\SECURITY**. As informações armazenadas incluem configurações de política, valores de segurança padrão e informações de conta, como credenciais de logon armazenadas em cache. Uma cópia do banco de dados SAM também é armazenada aqui, embora esteja protegida contra gravação.
 
 O diagrama a seguir mostra os componentes necessários e os caminhos que as credenciais assumem pelo sistema para autenticar o usuário ou o processo para um logon bem-sucedido.
 
@@ -250,7 +250,7 @@ Quando um usuário entra em um dispositivo Windows 8.1, o LSA salva as credencia
 
 Ao reiniciar, o usuário é conectado automaticamente por meio do mecanismo de logon automático e, em seguida, o computador é bloqueado adicionalmente para proteger a sessão do usuário. O bloqueio é iniciado por meio do Winlogon, enquanto o gerenciamento de credenciais é feito pela LSA. Ao entrar automaticamente e bloquear a sessão do usuário no console do, os aplicativos da tela de bloqueio do usuário são reiniciados e disponibilizados.
 
-Para obter mais informações sobre ARSO, consulte [logon automático de reinício do Winlogon &#40;ARSO&#41;](winlogon-automatic-restart-sign-on-arso.md).
+Para obter mais informações sobre ARSO, consulte [reinicialização automática do Winlogon Sign-On &#40;&#41;do ARSO ](winlogon-automatic-restart-sign-on-arso.md).
 
 ### <a name="stored-user-names-and-passwords-in-windows-vista-and-windows-xp"></a>Nomes de usuário e senhas armazenados no Windows Vista e no Windows XP
 No Windows Server 2008, no Windows Server 2003, no Windows Vista e no Windows XP, os **nomes de usuário e as senhas armazenados** no painel de controle simplificam o gerenciamento e o uso de vários conjuntos de credenciais de logon, incluindo certificados X. 509 usados com cartões inteligentes e credenciais do Windows Live (agora chamado de conta Microsoft). As credenciais-parte do perfil do usuário – são armazenadas até que sejam necessárias. Essa ação pode aumentar a segurança por recurso, garantindo que, se uma senha for comprometida, ela não compromete toda a segurança.
@@ -314,7 +314,7 @@ A tecnologia de cartão inteligente virtual foi introduzida no Windows 8. Ele ar
 
 **Autenticação remota e sem fio**
 
-A autenticação de rede remota e sem fio é outra tecnologia que usa certificados para autenticação. O IAS (serviço de autenticação da Internet) e os servidores de rede virtual privada usam EAP-TLS (protocolo de autenticação extensível), PEAP (protocolo de autenticação extensível protegida) ou IPsec (segurança de protocolo IP) para executar a autenticação baseada em certificado para muitos tipos de acesso à rede, incluindo VPN (rede virtual privada) e conexões sem fio.
+A autenticação de rede remota e sem fio é outra tecnologia que usa certificados para autenticação. O IAS (serviço de autenticação da Internet) e os servidores de rede virtual privada usam EAP-TLS (autenticação extensível Protocol-Transport segurança de nível), PEAP (protocolo de autenticação extensível protegida) ou IPsec (segurança de protocolo Internet) para executar a autenticação baseada em certificado para muitos tipos de acesso à rede, incluindo VPN (rede virtual privada) e conexões sem fio.
 
 Para obter informações sobre a autenticação baseada em certificado em rede, consulte [autenticação e certificados de acesso à rede](/previous-versions/windows/it-pro/windows-server-2003/cc759575(v=ws.10)).
 

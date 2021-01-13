@@ -8,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d1f975299593db29da20c35a621ea870e436d8be
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: d60b186ff118d3e162e2eb117493ef09becdd363
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048934"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177565"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>Planejamento de volumes nos Espaços de Armazenamento Diretos
 
@@ -28,11 +28,11 @@ Os volumes são onde você coloca os arquivos de que suas cargas de trabalho pre
    >[!NOTE]
    > Em toda a documentação de Espaços de Armazenamento Direto, usamos o termo "volume" para nos referir conjuntamente ao volume e ao disco virtual sob ele, incluindo a funcionalidade fornecida por outros recursos internos do Windows, como Volumes Compartilhados do Cluster (CSV) e ReFS. Não é necessário entender essas distinções no nível de implementação para planejar e implantar com êxito Espaços de Armazenamento Diretos.
 
-![o que são volumes](media/plan-volumes/what-are-volumes.png)
+![Diagrama que ilustra quais volumes são.](media/plan-volumes/what-are-volumes.png)
 
 Todos os volumes são acessíveis por todos os servidores do cluster ao mesmo tempo. Depois de criadas, elas aparecem em **C:\ClusterStorage \\** em todos os servidores.
 
-![pasta de captura de tela csv](media/plan-volumes/csv-folder-screenshot.png)
+![Captura de tela de uma janela do explorador de arquivos mostrando os volumes de armazenamento do cluster.](media/plan-volumes/csv-folder-screenshot.png)
 
 ## <a name="choosing-how-many-volumes-to-create"></a>Escolhendo quantos volumes criar
 
@@ -66,17 +66,17 @@ Com dois servidores no cluster, você pode usar o espelhamento bidirecional. Se 
 
 O espelhamento bidirecional mantém duas cópias de todos os dados, uma cópia nas unidades de cada servidor. Sua eficiência de armazenamento é de 50% – para gravar 1 TB de dados, você precisa de pelo menos 2 TB de capacidade de armazenamento físico no pool de armazenamento. O espelhamento bidirecional pode tolerar com segurança uma falha de hardware por vez (um servidor ou unidade).
 
-![espelhamento de duas vias](media/plan-volumes/two-way-mirror.png)
+![Diagrama que ilustra o conceito de armazenamento de dados de espelho bidirecional.](media/plan-volumes/two-way-mirror.png)
 
 A resiliência aninhada (disponível somente no Windows Server 2019) fornece resiliência de dados entre servidores com espelhamento bidirecional e, em seguida, adiciona resiliência em um servidor com espelhamento bidirecional ou paridade acelerada por espelho. O aninhamento fornece resiliência de dados mesmo quando um servidor está reiniciando ou indisponível. Sua eficiência de armazenamento é de 25% com espelhamento bidirecional aninhado e cerca de 35-40% para paridade com aceleração de espelho aninhado. A resiliência aninhada pode tolerar com segurança duas falhas de hardware por vez (duas unidades ou um servidor e uma unidade no servidor restante). Por causa dessa resiliência de dados adicionada, recomendamos o uso de resiliência aninhada em implantações de produção de clusters de dois servidores, se você estiver executando o Windows Server 2019. Para obter mais informações, consulte [resiliência aninhada](nested-resiliency.md).
 
-![Espelhamento aninhado-paridade acelerada](media/nested-resiliency/nested-mirror-accelerated-parity.png)
+![Diagrama que ilustra o conceito de paridade com aceleração de espelho aninhado.](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### <a name="with-three-servers"></a>Com três servidores
 
 Com três servidores, você deve usar o espelhamento de três voas para melhor tolerância de falhas e melhor desempenho. O espelhamento de três vias mantém três cópias de todos os dados, uma cópia nas unidades em cada servidor. A eficiência de armazenamento é de 33,3% – para gravar 1 TB de dados, é necessário ter pelo menos 3 TB de capacidade de armazenamento físico no pool de armazenamento. O espelhamento de três vias pode tolerar com segurança [pelo menos dois problemas de hardware (unidade ou servidor) por vez](storage-spaces-fault-tolerance.md#examples). Se 2 nós ficarem indisponíveis, o pool de armazenamento perderá o quorum, uma vez que 2/3 dos discos não estão disponíveis e os discos virtuais ficarão inacessíveis. No entanto, um nó pode estar inoperante e um ou mais discos em outro nó podem falhar e os discos virtuais permanecerão online. Por exemplo, se você estiver reiniciando um servidor quando, de repente, outra unidade ou servidor falhar, todos os dados permanecem seguros e continuamente acessíveis.
 
-![espelhamento de três vias](media/plan-volumes/three-way-mirror.png)
+![Diagrama que ilustra o conceito de armazenamento de dados de espelhamento de três vias.](media/plan-volumes/three-way-mirror.png)
 
 ### <a name="with-four-or-more-servers"></a>Com quatro ou mais servidores
 
@@ -84,7 +84,7 @@ Com quatro ou mais servidores, você pode escolher para cada volume se deseja us
 
 A paridade dupla fornece a mesma tolerância a falhas que o espelhamento de três vias, mas com melhor eficiência de armazenamento. Com quatro servidores, sua eficiência de armazenamento é 50.0% – para armazenar 2 TB de dados, você precisa de 4 TB de capacidade de armazenamento físico no pool de armazenamento. Isso aumenta a eficiência de armazenamento para 66,7% com sete servidores e continua a aumentar até 80,0% de eficiência de armazenamento. A desvantagem é que codificação de paridade tem um processamento mais intensivo, o que pode limitar seu desempenho.
 
-![paridade dupla](media/plan-volumes/dual-parity.png)
+![Diagrama que ilustra o conceito de armazenamento de dados de paridade dupla.](media/plan-volumes/dual-parity.png)
 
 O tipo de resiliência a ser usado depende das necessidades de sua carga de trabalho. Aqui está uma tabela que resume quais cargas de trabalho são uma boa opção para cada tipo de resiliência, bem como a eficiência de desempenho e armazenamento de cada tipo de resiliência.
 
@@ -142,7 +142,7 @@ Tamanho é diferente da *superfície* do volume, a capacidade total de armazenam
 
 As superfícies de seus volumes precisam caber no pool de armazenamento.
 
-![tamanho versus superfície](media/plan-volumes/size-versus-footprint.png)
+![Diagrama que mostra que o tamanho do seu volume deve caber no pool de armazenamento.](media/plan-volumes/size-versus-footprint.png)
 
 ### <a name="reserve-capacity"></a>Capacidade de reserva
 
@@ -150,7 +150,7 @@ Deixar alguma capacidade não alocada no pool de armazenamento oferece espaço a
 
 É recomendável reservar o equivalente a uma unidade de capacidade por servidor, até 4 unidades. Você pode reservar mais a seu critério, mas essa recomendação mínima garante que um reparo imediato, in-loco e paralelo pode ter sucesso após a falha de qualquer unidade.
 
-![reserva](media/plan-volumes/reserve.png)
+![Diagrama que ilustra o conceito de capacidade de reserva.](media/plan-volumes/reserve.png)
 
 Por exemplo, se você tiver 2 servidores e estiver usando unidades de 1 TB de capacidade, separe 2 x 1 = 2 TB do pool como reserva. Se você tiver 3 servidores e unidades de 1 TB de capacidade, separe 3 x 1 = 3 TB como reserva. Se você tiver 4 ou mais servidores e unidades de 1 TB de capacidade, separe 4 x 1 = 4 TB como reserva.
 
@@ -187,7 +187,7 @@ Os *Volume3* e *Volume4* ocuparão cada um 12 TB x 50,0% de eficiência = 24 TB 
 
 Os quatro volumes se encaixam exatamente na capacidade de armazenamento físico disponível no nosso pool. Perfeito!
 
-![exemplo](media/plan-volumes/example.png)
+![Diagrama mostrando um exemplo de quatro volumes que se ajustam exatamente à capacidade de armazenamento físico disponível no pool.](media/plan-volumes/example.png)
 
    >[!TIP]
    > Você não precisa criar todos os volumes imediatamente. Sempre é possível estender volumes ou criar novos volumes mais tarde.
@@ -200,6 +200,6 @@ Consulte [Criando volumes em Espaços de Armazenamento Diretos](create-volumes.m
 
 ### <a name="additional-references"></a>Referências adicionais
 
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 - [Escolher unidades para Espaços de Armazenamento Diretos](choosing-drives.md)
 - [Tolerância a falhas e eficiência de armazenamento](storage-spaces-fault-tolerance.md)

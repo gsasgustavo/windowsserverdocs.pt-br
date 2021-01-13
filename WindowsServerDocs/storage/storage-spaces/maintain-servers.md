@@ -8,12 +8,12 @@ author: eldenchristensen
 ms.date: 10/08/2018
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f2a8a926fefe68b0afe79c0d120164d97f1eb90
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 78166006da9936da144c871009e2cf44fb146ea5
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97042064"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177335"
 ---
 # <a name="taking-a-storage-spaces-direct-server-offline-for-maintenance"></a>Colocando um servidor de Espaços de Armazenamento Diretos offline para manutenção
 
@@ -68,20 +68,20 @@ Suspend-ClusterNode -Drain
 
 Para fazer isso no Gerenciador de Cluster de Failover, acesse **Nós**, clique com botão direito do mouse no nó e selecione **Pausar** > **Esvaziar Funções**.
 
-![Pausar/Esvaziar](media/maintain-servers/pause-drain.png)
+![Captura de tela da Gerenciador de Cluster de Failover mostrando a opção Pause esvaziar Rolls selecionada.](media/maintain-servers/pause-drain.png)
 
 Todas as máquinas virtuais começarão a realizar a migração ao vivo para outros servidores no cluster. Isso pode levar alguns minutos.
 
    > [!NOTE]
    > Quando você pausar e esvaziar o nó do cluster corretamente, o Windows executará uma verificação de segurança automática para garantir que é seguro continuar. Se houver volumes não íntegros, ele interromperá o processo e alertará você de que não é seguro continuar.
 
-![Verificação de segurança](media/maintain-servers/safety-check.png)
+![Captura de tela mostrando uma mensagem de erro que diz que um espaço clusterizado está em uma condição degradada e que a ação não pode ser concluída.](media/maintain-servers/safety-check.png)
 
 ## <a name="shutting-down-the-server"></a>Desligar o servidor
 
 Depois que o servidor tiver concluído o esvaziamento, ele aparecerá como **Em Pausa** no Gerenciador de Cluster de Failover e no PowerShell.
 
-![Em Pausa](media/maintain-servers/paused.png)
+![Captura de tela da Gerenciador de Cluster de Failover mostrando que um dos nós está em pausa.](media/maintain-servers/paused.png)
 
 Agora você pode reiniciá-lo ou desligá-lo com segurança como faria normalmente (por exemplo, usando os cmdlets Restart-Computer ou Stop-Computer do PowerShell).
 
@@ -115,7 +115,7 @@ Resume-ClusterNode –Failback Immediate
 
 Para fazer isso no Gerenciador de Cluster de Failover, acesse **Nós**, clique com botão direito do mouse no nó e selecione **Retomar** > **Fazer Failback de Funções**.
 
-![Retomar/Failback](media/maintain-servers/resume-failback.png)
+![Captura de tela da Gerenciador de Cluster de Failover mostrando a opção retomar as funções de failback selecionadas.](media/maintain-servers/resume-failback.png)
 
 ## <a name="waiting-for-storage-to-resync"></a>Aguardar armazenamento para ressincronizar
 
@@ -184,5 +184,5 @@ Use as etapas a seguir para atualizar o sistema Espaços de Armazenamento Direto
 
 ## <a name="additional-references"></a>Referências adicionais
 
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
 - [CAU (Atualização com Suporte a Cluster)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11))

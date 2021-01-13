@@ -1,18 +1,18 @@
 ---
 title: Visão geral de TLS/SSL (SSP do Schannel)
-description: Segurança do Windows Server
+description: Saiba mais sobre as implementações de TLS e SSL no Windows usando o SSP (provedor de serviços de segurança do Schannel).
 ms.topic: article
 ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 05/16/2018
-ms.openlocfilehash: 21ad7977039eda311dd6f093fc53c09c08cf0317
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: fc4e4e89be200a2276532b0c4859e4900897a4b5
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89637846"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177585"
 ---
 # <a name="tlsssl-overview-schannel-ssp"></a>Visão geral de TLS/SSL (SSP do Schannel)
 

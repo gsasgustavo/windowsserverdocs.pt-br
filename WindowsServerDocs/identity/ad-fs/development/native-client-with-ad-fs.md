@@ -7,12 +7,12 @@ ms.reviewer: anandy
 manager: mtillman
 ms.date: 07/17/2018
 ms.topic: article
-ms.openlocfilehash: 0cfb91269e0a55524346d7189d728848d9c6e670
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 930da983421b7e6367b1d387c6bbd80538a8fab9
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940463"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177435"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>Criar um aplicativo cliente nativo usando clientes OAuth públicos com o AD FS 2016 ou posterior
 
@@ -123,9 +123,9 @@ Dois arquivos precisam de alterações neste projeto – Web.config e Startup.Au
 **Web.config**
 
 * Comente a chave **ida: Tenant** , pois não precisamos dela
-* Adicione a chave para **ida: Authority** com o valor que indica o FQDN do serviço de Federação, por exemplo,https://fs.contoso.com/adfs/
+* Adicione a chave para **ida: Authority** com o valor que indica o FQDN do serviço de Federação, por exemplo, https://fs.contoso.com/adfs/
 * Modificar chave **ida: Audience** com o valor do identificador da API Web especificado na página **Configurar API da Web** durante a adição do grupo de aplicativos no AD FS.
-* Adicione a chave **ida: AdfsMetadataEndpoint** com o valor correspondente à URL de metadados de Federação do serviço de AD FS, por ex:https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
+* Adicione a chave **ida: AdfsMetadataEndpoint** com o valor correspondente à URL de metadados de Federação do serviço de AD FS, por ex: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
 
 ![Configuração da Web](media/native-client-with-ad-fs-2016/webconfig.PNG)
 
@@ -157,7 +157,7 @@ Executando o aplicativo
 ![Propriedades da solução](media/native-client-with-ad-fs-2016/solutionproperties.png)
 
 2.  Pressione o botão F5 ou selecione depurar > continuar na barra de menus. Isso abrirá o aplicativo nativo e o WebAPI. Clique no botão entrar no aplicativo nativo e ele exibirá um logon interativo do AD AL e redirecionará para o serviço de AD FS. Insira as credenciais de um usuário válido.
-![Entrar](media/native-client-with-ad-fs-2016/sign-in.png)
+![Captura de tela mostrando a caixa de diálogo entrar.](media/native-client-with-ad-fs-2016/sign-in.png)
 
 Nesta etapa, o aplicativo nativo Redirecionado para AD FS e obteve um token de ID e um token de acesso para a API Web
 

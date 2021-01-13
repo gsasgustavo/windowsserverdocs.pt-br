@@ -7,12 +7,12 @@ manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/04/2018
-ms.openlocfilehash: a7f0a3b190232cafb68e3a39104c357972831441
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e0764c3df4ba998936962a619f10180cd9e42bfc
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951946"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177415"
 ---
 # <a name="resolve-vrss-issues"></a>Resolver problemas de vRSS
 
@@ -58,7 +58,7 @@ Se você tiver concluído todas as etapas de preparação e ainda não vir o tr�
    - VmmqEnabled = **false**
    - VmmqEnabledRequested = **true**
 
-   ![habilitado para vmmq](../../media/vmmq-enabled.png)
+   ![Captura de tela da janela do PowerShell mostrando as configurações em cada adaptador anexado ao comutador virtual.](../../media/vmmq-enabled.png)
 
    **Exibir as configurações atuais:**
 

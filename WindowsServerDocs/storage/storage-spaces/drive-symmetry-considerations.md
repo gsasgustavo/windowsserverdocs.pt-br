@@ -7,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 38ab78f24e6900019a134b480ce477b45ca5ff0e
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: aad7c0feb36699bedf7c955cd0172669e56910dd
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039384"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177495"
 ---
 # <a name="drive-symmetry-considerations-for-storage-spaces-direct"></a>Considerações sobre simetria de unidade para Espaços de Armazenamento Diretos
 
@@ -90,7 +90,7 @@ No entanto, o uso de unidades de cache de tamanhos diferentes pode não melhorar
 
 Aqui estão algumas configurações com e sem suporte:
 
-### <a name="supported-supported-different-models-between-servers"></a>![com suporte](media/drive-symmetry-considerations/supported.png) Com suporte: modelos diferentes entre servidores
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationssupportedpng-supported-different-models-between-servers"></a>:::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Com suporte: modelos diferentes entre servidores
 
 Os dois primeiros servidores usam o modelo NVMe "X", mas o terceiro servidor usa o modelo de NVMe "Z", que é muito semelhante.
 
@@ -101,7 +101,7 @@ Os dois primeiros servidores usam o modelo NVMe "X", mas o terceiro servidor usa
 
 Com suporte.
 
-### <a name="supported-supported-different-models-within-server"></a>![com suporte](media/drive-symmetry-considerations/supported.png) Com suporte: modelos diferentes no servidor
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationssupportedpng-supported-different-models-within-server"></a>:::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Com suporte: modelos diferentes no servidor
 
 Cada servidor usa algumas combinações diferentes de modelos de HDD "Y" e "Z", que são muito semelhantes. Cada servidor tem 10 HDD total.
 
@@ -113,7 +113,7 @@ Cada servidor usa algumas combinações diferentes de modelos de HDD "Y" e "Z", 
 
 Com suporte.
 
-### <a name="supported-supported-different-sizes-across-servers"></a>![com suporte](media/drive-symmetry-considerations/supported.png) Com suporte: tamanhos diferentes entre servidores
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationssupportedpng-supported-different-sizes-across-servers"></a>:::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Com suporte: tamanhos diferentes entre servidores
 
 Os dois primeiros servidores usam HDD de 4 TB, mas o terceiro servidor usa HDD de 6 TB muito semelhante.
 
@@ -124,7 +124,7 @@ Os dois primeiros servidores usam HDD de 4 TB, mas o terceiro servidor usa HDD d
 
 Há suporte para isso, embora isso resulte em capacidade com falha.
 
-### <a name="supported-supported-different-sizes-within-server"></a>![com suporte](media/drive-symmetry-considerations/supported.png) Com suporte: tamanhos diferentes no servidor
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationssupportedpng-supported-different-sizes-within-server"></a>:::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Com suporte: tamanhos diferentes no servidor
 
 Cada servidor usa uma combinação diferente de 1,2 TB e um SSD de 1,6 TB muito semelhante. Cada servidor tem 4 SSD total.
 
@@ -136,7 +136,7 @@ Cada servidor usa uma combinação diferente de 1,2 TB e um SSD de 1,6 TB muito 
 
 Com suporte.
 
-### <a name="unsupported-not-supported-different-types-of-drives-across-servers"></a>![não compatível](media/drive-symmetry-considerations/unsupported.png) Sem suporte: tipos diferentes de unidades entre servidores
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationsunsupportedpng-not-supported-different-types-of-drives-across-servers"></a>:::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Sem suporte: tipos diferentes de unidades entre servidores
 
 O servidor 1 tem o NVMe, mas os outros não.
 
@@ -148,7 +148,7 @@ O servidor 1 tem o NVMe, mas os outros não.
 
 Não há suporte para isso. Os tipos de unidades devem ser os mesmos em todos os servidores.
 
-### <a name="unsupported-not-supported-different-number-of-each-type-across-servers"></a>![não compatível](media/drive-symmetry-considerations/unsupported.png) Sem suporte: número diferente de cada tipo entre servidores
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationsunsupportedpng-not-supported-different-number-of-each-type-across-servers"></a>:::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Sem suporte: número diferente de cada tipo entre servidores
 
 O servidor 3 tem mais unidades do que as outras.
 
@@ -159,7 +159,7 @@ O servidor 3 tem mais unidades do que as outras.
 
 Não há suporte para isso. O número de unidades de cada tipo deve ser o mesmo em todos os servidores.
 
-### <a name="unsupported-not-supported-only-hdd-drives"></a>![não compatível](media/drive-symmetry-considerations/unsupported.png) Sem suporte: somente unidades HDD
+### <a name="image-typeicon-sourcemediadrive-symmetry-considerationsunsupportedpng-not-supported-only-hdd-drives"></a>:::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Sem suporte: somente unidades HDD
 
 Todos os servidores têm apenas unidades de HDD conectadas.
 
@@ -175,12 +175,12 @@ Para recapitular, todos os servidores no cluster devem ter os mesmos tipos de un
 
 | Constraint | Estado |
 |--|--|
-| Mesmos tipos de unidades em cada servidor | **Necessária** |
-| Mesmo número de cada tipo em cada servidor | **Necessária** |
+| Mesmos tipos de unidades em cada servidor | **Necessário** |
+| Mesmo número de cada tipo em cada servidor | **Necessário** |
 | Mesmos modelos de unidade em cada servidor | Recomendado |
 | Mesmos tamanhos de unidade em cada servidor | Recomendado |
 
 ## <a name="additional-references"></a>Referências adicionais
 
 - [Requisitos de hardware Espaços de Armazenamento Diretos](storage-spaces-direct-hardware-requirements.md)
-- [Visão geral de Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)
+- [Visão geral dos Espaços de Armazenamento Diretos](storage-spaces-direct-overview.md)

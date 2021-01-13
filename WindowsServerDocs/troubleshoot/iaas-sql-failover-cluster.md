@@ -5,12 +5,12 @@ ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.openlocfilehash: 5cce39ea42af57bbfd400427f763dfca5da75d7b
-ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
+ms.openlocfilehash: e24521ac89c0eb1eb4b2063ec7d70384a3755a33
+ms.sourcegitcommit: decb6c8caf4851b13af271d926c650d010a6b9e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98040296"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98177505"
 ---
 # <a name="iaas-with-sql-server---tuning-failover-cluster-network-thresholds"></a>IaaS com limites de rede de cluster de failover de ajuste SQL Server
 
@@ -90,7 +90,7 @@ C:\Windows\system32> get-cluster | fl *subnet*
 
 Valores padrão, mínimo, máximo e recomendado para cada sistema operacional de suporte
 
-| Descrição | Sistema operacional | Mín | Max | Padrão | Recomendadas |
+| Descrição | Sistema operacional | Mín | Max | Padrão | Recomendado |
 |--|--|--|--|--|--|
 | CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
 | Limite de CrossSubnet | 2012 | 3 | 120 | 5 | 20 |
@@ -133,7 +133,7 @@ O **limite** define o número de pulsações que são perdidas antes que o clust
     C:\Windows\system32> get-cluster | fl *subnet*
     ```
 
-    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="cmd" border="false":::
+    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="Captura de tela da janela do PowerShell mostrando os resultados do comando." border="false":::
 
 ## <a name="references"></a>Referências
 
