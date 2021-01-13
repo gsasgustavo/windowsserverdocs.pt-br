@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: cd08794084c8f2ac5c9822331b89ad03005e82a4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 39193d0863845ff34d86a39bfd734cd6aba05fc4
+ms.sourcegitcommit: 029b1e19ce11160d5f988046e04a83e8ab5a60dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946349"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904901"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>Configurações recomendadas para desktops de VDI
 
@@ -565,5 +565,5 @@ Para remover o aplicativo OneDrive:
 4. Clique ou toque em **Ligar ou desligar ícones do sistema** e, em seguida, ative ou desative os ícone do sistema como preferir para a imagem.
 
 ### <a name="delete-downloaded-updates"></a>Excluir atualizações baixadas
-1. Usando o Explorador de Arquivos, navegue até **C:\Windows\Software Distribution\Download**.
+1. Usando o Explorador de Arquivos, navegue até **C:\Windows\SoftwareDistribution\Download**.
 2. Exclua todos os arquivos e pastas desse diretório.

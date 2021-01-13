@@ -1,18 +1,18 @@
 ---
 title: Atualização das suas implantações de Host de Área de Trabalho Remota para o Windows Server 2016
-description: Este artigo descreve como atualizar as implantações existentes de Serviços de Área de Trabalho Remota para o Windows Server 2016.
+description: Saiba como atualizar seu Host de Virtualização de Área de Trabalho Remota para o Windows Server 2016.
 ms.author: spatnaik
 ms.date: 08/01/2016
 ms.topic: article
 ms.assetid: 5aed8ba7-f541-4416-b01c-4d3b1712e2b1
 author: spatnaik
 manager: scottman
-ms.openlocfilehash: 4260748ada0371e637edef23a579e7253721f4f4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3f42d078158cf6f78151418836795925e2bdb926
+ms.sourcegitcommit: 605a9b46b74b2c7a9116e631e902467ea02a6e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948819"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97965788"
 ---
 # <a name="upgrading-your-remote-desktop-virtualization-host-to-windows-server-2016"></a>Atualização das suas implantações de Host de Área de Trabalho Remota para o Windows Server 2016
 
@@ -61,7 +61,7 @@ Esses servidores devem ser atualizados ao mesmo tempo. Siga as etapas a seguir p
        > [!NOTE]
        > Conforme mencionado, você precisa já ter criado uma nova subpasta de destino antes dessa etapa. A caixa de diálogo Selecionar Pasta não permitirá que você crie uma subpasta nesta etapa.
 
-       Clique em **Avançar**e em **Concluído**.
+       Clique em **Avançar** e em **Concluído**.
 11. Depois que as VMs forem realocadas, adicione-as como objetos de cluster de **Alta Disponibilidade**:
      1. Abra o Gerenciador de Cluster de Failover em um servidor de Host de Virtualização de Área de Trabalho Remota atualizado.
      1. Clique com o botão direito do mouse no nó **Funções** e clique em **Função Configurar**. Clique em **Avançar** na página **Inicial** do Assistente de Alta Disponibilidade.

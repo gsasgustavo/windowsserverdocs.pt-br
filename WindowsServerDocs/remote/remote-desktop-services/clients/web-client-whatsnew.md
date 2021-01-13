@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/02/2020
+ms.date: 01/06/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ae5c0af5f434b73b9b4590c2a5c53c9551b76b6c
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: 8f9d822aebcc12e7d8f93a78258ed993d64e5a9d
+ms.sourcegitcommit: 528bdff90a7c797cdfc6839e5586f2cd5f0506b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330398"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977461"
 ---
 # <a name="whats-new-in-the-web-client"></a>Novidades do cliente Web
 
@@ -21,11 +21,21 @@ Atualizamos regularmente o [cliente da Web da Área de Trabalho Remota](remote-d
 > [!NOTE]
 > Alteramos o sistema de controle de versão para o cliente da Web. Começando com a versão 1.0.18.0, todas as versões de lançamento do cliente da Web irão conter números (no formato "W.X.Y.Z"). Os números de versão para o cliente Web de Área de Trabalho Remota sempre terminarão com um 0 (por exemplo, W.X.Y.0). Cada versão do cliente Web de Área de Trabalho Remota Virtual do Windows alterará o último dígito até a próxima versão do cliente Web da Área de Trabalho Remota (por exemplo, 1.0.18.1).
 
+## <a name="updates-for-10240"></a>Atualizações para 1.0.24.0
+*Data da publicação: 6/1/2021*
+
+>[!IMPORTANT]
+> A versão 1.0.24.0 inclui uma correção de segurança importante. Removemos versões anteriores do cliente Web que contêm esse bug. Incentivamos todos os clientes a atualizar para a versão 1.0.24.0 assim que possível. 
+
+- Adicionado suporte para redirecionar a entrada do microfone local para a sessão remota.
+- Correção de problemas com **AltGr** e vários outros bugs de teclado.
+- Aprimoramentos na acessibilidade.
+
 ## <a name="updates-for-10220"></a>Atualizações da versão 1.0.22.0
 *Data da publicação: 02/09/2020*
 
 > [!IMPORTANT]
-> Na versão 1.0.22.0, apresentamos uma regressão que afeta alguns sistemas operacionais Chromebook. Os usuários em sistemas operacionais afetados não poderão se conectar a uma sessão remota usando o cliente Web. Atualmente, estamos investigando esse problema e liberaremos uma nova versão do cliente Web assim que corrigirmos essa regressão. Enquanto isso, você poderá evitar esse problema revertendo para a versão 1.0.21.0. 
+> Na versão 1.0.22.0, apresentamos uma regressão que afeta alguns sistemas operacionais Chromebook. Os usuários em sistemas operacionais afetados não poderão se conectar a uma sessão remota usando o cliente Web. Atualmente, estamos investigando esse problema e liberaremos uma nova versão do cliente Web assim que corrigirmos essa regressão. Enquanto isso, você poderá evitar esse problema revertendo para a versão 1.0.21.0.
 
 - Agora, os usuários podem mover o menu minimizado.
 - Suporte aprimorado para monitores 4K e ultra-amplos e correção de um problema em que a cópia de grandes quantidades de dados causava falhas em sessões.

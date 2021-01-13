@@ -7,12 +7,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/02/2020
 ms.topic: article
-ms.openlocfilehash: a04fb0cec0d93180e6a9f0c822754a64435b79f9
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 94b5a3e188567875332f05f378ab3ebf8a84336f
+ms.sourcegitcommit: 29b8942ea46196c12a67f6b6ad7f8dd46bf94fb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863915"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98065642"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>Perguntas frequentes do AD FS
 
@@ -279,15 +279,19 @@ Em servidores WAP, você ainda poderá usar Set-WebApplicationProxySslCertificat
 2. Nos servidores selecionados na etapa 1, importe o novo certificado via MMC
 3. Excluir os certificados existentes
 
-    a. netsh http delete sslcert hostnameport=fs.contoso.com:443 b. netsh http delete sslcert hostnameport=localhost:443 c. netsh http delete sslcert hostnameport=fs.contoso.com:49443
+    a. netsh http delete sslcert hostnameport=fs.contoso.com:443
+    
+    b. netsh http delete sslcert hostnameport=localhost:443
+    
+    c. netsh http delete sslcert hostnameport=fs.contoso.com:49443
 
 4.  Adicionar o novo certificado
 
-    a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable sslctlstorename=AdfsTrustedDevices
 
-    b. netsh http add sslcert hostnameport=localhost:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    b. netsh http add sslcert hostnameport=localhost:443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable
 
-    c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable clientcertnegotiation=Enable
 
 5. Reiniciar o serviço ADFS no servidor selecionado
 6. Remover o subconjunto de servidores WAP para manutenção

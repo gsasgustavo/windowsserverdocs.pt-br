@@ -4,14 +4,14 @@ description: Como usar o Windows Server para implantar o Redirecionamento de Pas
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 06/06/2019
+ms.date: 01/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 368feec41fbecee57eb82bbe54a6fe31a9d0e3b5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: eeaa9dc868f93550d5226ce66084f840a5de4901
+ms.sourcegitcommit: 29b8942ea46196c12a67f6b6ad7f8dd46bf94fb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954703"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98065622"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>Implantar Redirecionamento de Pastas com Arquivos Offline
 
@@ -58,26 +58,26 @@ Veja como criar um grupo de segurança para o Redirecionamento de Pastas:
 4. Na janela **Criar Grupo** , na seção **Grupo** , especifique as seguintes configurações:
     - Em **Nome do grupo**, digite o nome do grupo de segurança, por exemplo: **Usuários do Redirecionamento de Pastas**.
     - Em **Escopo do grupo**, selecione **Segurança** e, em seguida, selecione **Global**.
-5. Na seção **Membros**, selecione **Adicionar**. A caixa de diálogo Selecionar Usuários, Contatos, Computadores, Contas de Serviço ou Grupos é exibida.
+5. Na seção **Membros**, selecione **Adicionar**. A caixa de diálogo **Selecionar Usuários, Contatos, Computadores, Contas de Serviço ou Grupos** é exibida.
 6. Digite os nomes dos usuários ou grupos nos quais você deseja implantar o Redirecionamento de Pastas, selecione **OK** e, em seguida, selecione **OK** novamente.
 
 ## <a name="step-2-create-a-file-share-for-redirected-folders"></a>Etapa 2: Criar um compartilhamento de arquivo para pastas redirecionadas
 
-Se você ainda não tiver um compartilhamento de arquivo para pastas redirecionadas, use o procedimento a seguir para criar um compartilhamento de arquivo em um servidor que executa o Windows Server 2012.
+Se você ainda não tiver um compartilhamento de arquivo para pastas redirecionadas, use o procedimento a seguir para criar um compartilhamento de arquivo em um servidor que executa o Windows Server 2012/2016/2019.
 
 > [!NOTE]
-> Alguma funcionalidade pode ser diferente ou estar indisponível, se você criar o compartilhamento de arquivos em um servidor que executar outra versão do Windows Server.
+> Algumas funcionalidades poderão ser diferentes ou estar indisponíveis se você criar o compartilhamento de arquivo em um servidor que executa uma versão diferente do Windows Server.
 
 Veja como criar um compartilhamento de arquivo no Windows Server 2019, no Windows Server 2016 e no Windows Server 2012:
 
-1. No painel de navegação Gerenciador do Servidor, selecione **Serviços de Arquivos e Armazenamento**e, em seguida, selecione **Compartilhamentos** para exibir a página Compartilhamentos.
+1. No painel de navegação Gerenciador do Servidor, selecione **Serviços de Arquivos e Armazenamento** e, em seguida, selecione **Compartilhamentos** para exibir a página Compartilhamentos.
 2. No bloco **Compartilhamentos**, selecione **Tarefas** e, em seguida, selecione **Novo Compartilhamento**. O Assistente Novo Compartilhamento é exibido.
 3. Na página **Selecionar Perfil**, selecione **Compartilhamento SMB – Rápido**. Se você tiver o Gerenciador de Recursos de Servidor de Arquivos instalado e estiver usando propriedades de gerenciamento de pasta, em vez disso, selecione **Compartilhamento SMB – Avançado**.
 4. Na página **Compartilhar Local** , selecione o servidor e o volume nos quais deseja criar o compartilhamento.
 5. Na página **Nome do Compartilhamento**, digite um nome para o compartilhamento (por exemplo, **Users$** ) na caixa **Nome do compartilhamento**.
-    >[!TIP]
-    >Ao criar o compartilhamento, oculte-o colocando um ```$``` após o nome do compartilhamento. Isso ocultará o compartilhamento de navegadores casuais.
-6. Na página **Outras Configurações**, desmarque a caixa de seleção Habilitar disponibilidade contínua (se presente) e, como opção, marque as caixas de seleção **Habilitar enumeração baseada em acesso** e **Criptografar o acesso a dados**.
+    > [!TIP]
+    > Ao criar o compartilhamento, oculte-o colocando um `$` após o nome do compartilhamento. Isso ocultará o compartilhamento de navegadores casuais.
+6. Na página **Outras Configurações**, desmarque a caixa de seleção Habilitar disponibilidade contínua, se presente, e opcionalmente marque as caixas de seleção **Habilitar enumeração baseada em acesso** e **Criptografar o acesso a dados**.
 7. Na página **Permissões**, clique em **Personalizar Permissões…** . A caixa de diálogo Configurações de Segurança Avançada é exibida.
 8. Clique em **Desabilitar herança** e, em seguida, selecione **Converter permissões herdadas em permissões explícitas nesse objeto**.
 9. Definir as permissões conforme descrito na Tabela 1 e mostrado na Figura 1, removendo as permissões para contas e grupos não listados e incluindo permissões especiais ao grupo Usuários de Redirecionamento de Pastas que você criou na Etapa 1.
@@ -92,12 +92,12 @@ Veja como criar um compartilhamento de arquivo no Windows Server 2019, no Window
 ### <a name="required-permissions-for-the-file-share-hosting-redirected-folders"></a>Permissões necessárias para o compartilhamento de arquivo que hospeda pastas redirecionadas
 
 | Conta de Usuário  | Acesso  | Aplica-se a  |
-| --------- | --------- | --------- |
-| Sistema     | Controle total        |    Essa pasta, subpastas e arquivos     |
-| Administradores     | Controle total       | Apenas essa pasta        |
-| Criador/Proprietário     |   Controle total      |   Apenas subpastas e arquivos      |
-| Grupo de segurança de usuários que precisam colocar dados no compartilhamento (Usuários de Redirecionamento de Pastas)     |   Listar pasta/ler dados *(permissões avançadas)* <p>Criar pastas/acrescentar dados *(permissões avançadas)* <p>Ler atributos *(permissões avançadas)* <p>Ler atributos estendidos *(permissões avançadas)* <p>Ler permissões *(permissões avançadas)*      |  Apenas essa pasta       |
-| Outros grupos e contas     |  Nenhum (remover)       |         |
+| ------------- | ------- | ----------- |
+| Sistema | Controle total | Essa pasta, subpastas e arquivos |
+| Administradores | Controle total | Apenas essa pasta |
+| Criador/Proprietário | Controle total | Apenas subpastas e arquivos |
+| Grupo de segurança de usuários que precisam colocar dados no compartilhamento (Usuários de Redirecionamento de Pastas) | <p> Listar pasta/ler dados *(permissões avançadas)* <p> Criar pastas/acrescentar dados *(permissões avançadas)* <p> Ler atributos *(permissões avançadas)* <p> Ler atributos estendidos *(permissões avançadas)* <p> Ler permissões *(permissões avançadas)* <p> Percorrer pasta/Executar arquivo *(permissões avançadas)* | Apenas essa pasta |
+| Outros grupos e contas | Nenhum (remover) |  |
 
 ## <a name="step-3-create-a-gpo-for-folder-redirection"></a>Etapa 3: Criar GPO para Redirecionamento de Pastas
 
@@ -109,7 +109,7 @@ Veja como criar um GPO para o Redirecionamento de Pastas:
 2. No menu **Ferramentas**, selecione **Gerenciamento de Política de Grupo**.
 3. Clique com o botão direito do mouse no domínio ou UO em que deseja instalar o Redirecionamento de Pastas, então selecione **Criar um GPO nesse domínio e vincule-o aqui**.
 4. Na caixa de diálogo **Novo GPO**, insira um nome para o GPO (por exemplo, **Configurações de Redirecionamento de Pastas**) e, em seguida, selecione **OK**.
-5. Clique com o botão direito do mouse no GPO recentemente criado e, em seguida, desmarque a caixa de seleção **Vínculo habilitado** . Isso evita que o GPO seja aplicado até que você finalize a configuração dele.
+5. Clique com o botão direito do mouse no GPO recentemente criado e desmarque a caixa de seleção **Vínculo Habilitado**. Isso evita que o GPO seja aplicado até que você finalize a configuração dele.
 6. Selecione o GPO. Na seção **Filtragem de Segurança** da guia **Escopo**, selecione **Usuários Autenticados** e, em seguida, selecione **Remover** para impedir que o GPO seja aplicado a todos.
 7. Na seção **Filtro de Segurança**, selecione **Adicionar**.
 8. Na caixa de diálogo **Selecionar Usuário, Computador ou Grupo**, digite o nome do grupo de segurança criado por você na Etapa 1 (por exemplo, **Usuários de Redirecionamento de Pastas**) e, em seguida, selecione **OK**.
@@ -126,7 +126,7 @@ Depois de criar um GPO para as configurações de Redirecionamento de Pastas, ed
 
 > [!NOTE]
 > A opção Arquivos Offline está habilitada por padrão para pastas redirecionadas em computadores cliente do Windows e desabilitada em computadores que executam o Windows Server, a menos que seja alterado pelo usuário. Para usar Política de Grupo para controlar se a opção Arquivos Offline está habilitada, use a configuração de política **Permitir ou proibir o uso do recurso Arquivos Offline**.
-> Para obter informações sobre algumas das outras configurações da Política de Grupo de Arquivos Offline, confira [Habilitar a Funcionalidade de Arquivos Offline Avançada](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>) e [Configurar a Política de Grupo para Arquivos Offline](</previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>).
+> Para obter informações sobre algumas das outras configurações da Política de Grupo de Arquivos Offline, confira [Habilitar a Funcionalidade de Arquivos Offline Avançada](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v=ws.11)) e [Configurar a Política de Grupo para Arquivos Offline](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759721(v=ws.10)).
 
 Veja como configurar o Redirecionamento de Pastas na Política de Grupo:
 
@@ -163,7 +163,7 @@ Veja aqui como testar o Redirecionamento de Pastas:
 1. Entre em um computador primário (caso seu computador primário esteja habilitado para suporte) com uma conta de usuário para a qual você tenha habilitado o Redirecionamento de Pastas.
 2. Caso o usuário tenha sido anteriormente designado para o computador, abra um prompt de comandos com privilégios elevados e, em seguida, digite o comando a seguir para garantir que as configurações de Política de Grupo mais recentes sejam aplicadas ao computador cliente:
 
-    ```PowerShell
+    ```
     gpupdate /force
     ```
 3. Abra o Explorador de Arquivos.
@@ -187,7 +187,7 @@ Veja aqui como testar o Redirecionamento de Pastas:
 
 A tabela a seguir resume algumas das alterações mais importantes para este tópico.
 
-| Data | Descrição | Motivo|
+| Data | Descrição | Motivo |
 | --- | --- | --- |
 | 18 de janeiro de 2017 | Adicionada uma etapa à [Etapa 3: Criar um GPO para Redirecionamento de Pastas](#step-3-create-a-gpo-for-folder-redirection) para delegar permissões de Leitura a Usuários Autenticados, que agora é necessário devido a uma atualização de segurança da Política de Grupo. | Comentários de clientes |
 
@@ -196,6 +196,6 @@ A tabela a seguir resume algumas das alterações mais importantes para este tó
 * [Redirecionamento de Pastas, Arquivos Offline e Perfis de Usuários Móveis](folder-redirection-rup-overview.md)
 * [Implantar computadores primários para Redirecionamento de Pastas e Perfis de Usuários Móveis](deploy-primary-computers.md)
 * [Habilitar a funcionalidade de Arquivos Offline avançada](enable-always-offline.md)
-* [Declaração de suporte da Microsoft sobre dados de perfil do usuário replicados](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
-* [Realizar o sideload de aplicativos com o DISM](</previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-* [Solução de problemas de empacotamento, implantação e consulta de aplicativos baseados em Windows Runtime](/windows/win32/appxpkg/troubleshooting)
+* [Declaração de suporte da Microsoft sobre dados de perfil do usuário replicados](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+* [Realizar o sideload de aplicativos com o DISM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
+* [Solução de problemas de empacotamento, implantação e consulta de aplicativos baseados em Windows Runtime](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting)
