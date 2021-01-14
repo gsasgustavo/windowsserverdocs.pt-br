@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5fe0f2a5dfd51f3b7689db7b3ad6a38938428a01
-ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
+ms.openlocfilehash: 4102971c4490eb42ccd5d17e7cc60f09c95b6878
+ms.sourcegitcommit: e0070b24e0423187eb2b36ba92072fed23880aa8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97091260"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98186394"
 ---
 # <a name="findstr"></a>findstr
 
@@ -94,7 +94,7 @@ findstr hello there x.y
 Para procurar *Olá* no arquivo *x. y*, digite:
 
 ```
-findstr /c:hello there x.y
+findstr /c:"hello there" x.y
 ```
 
 Para localizar todas as ocorrências da palavra *Windows* (com uma letra inicial maiúscula W) no arquivo *proposal.txt*, digite:

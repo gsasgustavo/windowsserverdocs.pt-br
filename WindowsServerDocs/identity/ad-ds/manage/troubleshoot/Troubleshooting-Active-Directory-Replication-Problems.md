@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7b095dc75d18af2a03f7d6a95d4865bc6e975097
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 00d88c05bf5a662c1375d0cc632e195752627631
+ms.sourcegitcommit: e0070b24e0423187eb2b36ba92072fed23880aa8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046324"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98186414"
 ---
 # <a name="troubleshooting-active-directory-replication-problems"></a>Solucionar problemas de replicação do Active Directory
 
@@ -26,7 +26,7 @@ O restante deste tópico explica as ferramentas e uma metodologia geral para cor
 
 A falha de replicação de entrada ou saída faz com que Active Directory objetos que representam a topologia de replicação, o agendamento de replicação, os controladores de domínio, os usuários, os computadores, as senhas, os grupos de segurança, as associações de grupo e a Política de Grupo sejam inconsistentes entre os controladores de domínio A inconsistência de diretório e a falha de replicação causam falhas operacionais ou resultados inconsistentes, dependendo do controlador de domínio que é contatado para a operação e podem impedir o aplicativo de Política de Grupo e permissões de controle de acesso. O Active Directory Domain Services (AD DS) depende da conectividade de rede, da resolução de nomes, da autenticação e da autorização, do banco de dados de diretório, da topologia de replicação e do mecanismo de replicação. Quando a causa raiz de um problema de replicação não é imediatamente óbvia, determinar a causa entre as muitas causas possíveis requer uma eliminação sistemática das causas prováveis.
 
-Para uma ferramenta baseada em interface do usuário para ajudar a monitorar a replicação e diagnosticar erros, consulte a [ferramenta de status de replicação do Active Directory](https://www.microsoft.com/download/details.aspx?id=30005)
+Para uma ferramenta baseada em interface do usuário para ajudar a monitorar a replicação e diagnosticar erros, baixe e execute o [suporte da Microsoft e a ferramenta assistente de recuperação](https://aka.ms/sara-adreplication) **ou** use a [ferramenta de status de replicação do Active Directory](https://www.microsoft.com/download/details.aspx?id=30005) se desejar apenas analisar o status de replicação.
 
 Para obter um documento abrangente que descreve como você pode usar a ferramenta repadmin para solucionar problemas de replicação Active Directory está disponível; consulte [monitoramento e solução de problemas Active Directory replicação usando repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
