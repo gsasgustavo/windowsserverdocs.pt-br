@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/15/2020
+ms.date: 01/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ce679c49abac80e4d3fa1edef9768ae8abf34b3
-ms.sourcegitcommit: 4f7308430a69fe7965e16aa5b31f87c5d68e4a09
+ms.openlocfilehash: 1d5dc9e76680b6c222f67b8f94c12bedd57af263
+ms.sourcegitcommit: 56297d3b8aa8f4796cb74b736d599d433aeee339
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577398"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98134802"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Novidades no cliente da Área de Trabalho do Windows
 
@@ -24,18 +24,20 @@ O cliente pode ser configurado para diferentes [grupos de usuários](windowsdesk
 
 |Grupo de usuários |Última versão  |Versão mínima com suporte |
 |-----------|----------------|--------------------------|
-|Público     |1.2.1524        |1.2.945                   |
-|Participante do Programa Windows Insider    |1.2.1526        |1.2.945                   |
+|Público     |1.2.1525        |1.2.945                   |
+|Participante do Programa Windows Insider    |1.2.1670        |1.2.945                   |
 
-## <a name="updates-for-version-121526-insider"></a>Atualizações para a versão 1.2.1526 (Participante do Programa Windows Insider)
+## <a name="updates-for-version-121670-insider"></a>Atualizações para a versão 1.2.1670 (Participante do Programa Windows Insider)
 
-*Data da publicação: 15/12/2020*
+*Data da publicação: 12/01/2021*
 
 Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Adição de suporte para o recurso de proteção de captura de tela para pontos de extremidade do Windows 10. Para saber mais, confira [Melhores práticas de segurança do host da sessão](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
+- Suporte adicionado para proxies que exigem autenticação para a assinatura de feed.
+- Agora o cliente mostrará uma notificação com uma opção para tentar novamente se uma atualização não tiver sido baixada com êxito.
 
-## <a name="updates-for-version-121524"></a>Atualizações para a versão 1.2.1524
+## <a name="updates-for-version-121525"></a>Atualizações da versão 1.2.1525
 
 *Data da publicação: 01/12/2020*
 

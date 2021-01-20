@@ -1,6 +1,6 @@
 ---
 title: Novidades no Windows Server 2016
-description: Quais são os novos recursos de computação, identidade, gerenciamento, automação, rede, segurança, armazenamento.
+description: Quais são os novos recursos de computação, identidade, gerenciamento, automação, rede, segurança, armazenamento no Windows Server 2016.
 ms.date: 05/21/2019
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 5dfed9e70e4f0406c59c31201c8d2d1a9b3caafe
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 0e4b52f7f4bdbbf82a9f87a02a0305c7e351163c
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766859"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113112"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Novidades no Windows Server 2016
 
@@ -92,7 +92,7 @@ O Windows Server 2016 e o Windows 10 inclui um novo recurso PackageManagement (a
 Para saber mais, confira [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).
 
 ### <a name="powershell-enhancements-to-assist-digital-forensics-and-help-reduce-security-breaches"></a>Aprimoramentos do PowerShell para auxiliar o trabalho forense digital e ajudar a reduzir as violações de segurança
-Para ajudar a equipe responsável pela investigação de sistemas comprometidos - às vezes conhecida como "equipe azul" - adicionamos registro em log do PowerShell e outras funcionalidades de computação forense digital, e adicionamos funcionalidades para ajudar a reduzir as vulnerabilidades de scripts, como o PowerShell restrito e APIs CodeGeneration protegidas.
+Para ajudar a equipe responsável pela investigação de sistemas comprometidos (às vezes conhecida como "equipe azul"), adicionamos registro em log do PowerShell e outras funcionalidades de computação forense digital e acrescentamos funcionalidades para ajudar a reduzir as vulnerabilidades de scripts, como o PowerShell restrito e APIs CodeGeneration protegidas.
 
 Para obter mais informações, confira [PowerShell ♥ a equipe azul](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/).
 
@@ -105,7 +105,7 @@ Você pode agora espelhar e rotear o tráfego para soluções de virtualização
 ### <a name="tcp-performance-improvements"></a>Aprimoramentos de desempenho de TCP
 A ICW (Janela de Congestionamento Inicial) padrão aumentou de quatro para 10 e a TFO (Abertura Rápida de TCP) foi implementada. A TFO reduz a quantidade de tempo necessária para estabelecer uma conexão TCP, e o ICW maior permite que objetos maiores sejam transferido no pico inicial. Essa combinação pode reduzir consideravelmente o tempo necessário para transferir um objeto da Internet entre o cliente e a nuvem.
 
-Para melhorar o comportamento do TCP durante a recuperação de perda de pacotes, implementamos o TLP (TCP Tail Loss Probe) e o RACK (Confirmação recente). O TLP ajuda a converter RTOs (Tempo limite de retransmissão) em Recuperações rápidas, e o RACK reduz o tempo necessário para Recuperação rápida a fim de retransmitir um pacote perdido. 
+Para aprimorar o comportamento do TCP durante a recuperação de perda de pacotes, implementamos o TLP (TCP Tail Loss Probe) e o RACK (Confirmação Recente).  O TLP ajuda a converter RTOs (Tempo limite de retransmissão) em Recuperações rápidas, e o RACK reduz o tempo necessário para Recuperação rápida a fim de retransmitir um pacote perdido. 
 
 ## <a name="security-and-assurance"></a>[Segurança e garantia](../security/Security-and-Assurance.yml)
 Inclui recursos e soluções de segurança para profissionais de TI implantarem em seu data center e ambiente de nuvem. Para obter informações sobre a segurança no Windows Server 2016 em geral, confira [Garantia e segurança](../security/Security-and-Assurance.yml).

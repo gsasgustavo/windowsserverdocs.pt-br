@@ -5,13 +5,13 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
-ms.date: 08/07/2020
-ms.openlocfilehash: ef5a4df53efeb6e24a86d74906fc5847d1924163
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.date: 01/14/2021
+ms.openlocfilehash: 20e2c1098aaf77559c32cca8f457a3ec5e3080f8
+ms.sourcegitcommit: 17571fb06af2634dbf0163a2c08014cd6e9f9762
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947552"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98206055"
 ---
 # <a name="install-and-manage-extensions"></a>Instalar e gerenciar extensões
 
@@ -62,7 +62,7 @@ Se o Windows Admin Center estiver instalado em um computador que não está cone
 2. Clique no nome do pacote que você deseja instalar para exibir a página de detalhes do pacote.
 3. Clique no link **Baixar** na barra de navegação da página de detalhes do pacote e baixe o arquivo .nupkg para a extensão.
 4. Repita as etapas 2 e 3 para todos os pacotes que você deseja baixar.
-5. Copie os arquivos de pacote para um compartilhamento de arquivo que possa ser acessado no computador em que o Windows Admin Center está instalado ou no disco local do computador.
+5. Copie os arquivos de pacote para um compartilhamento de arquivo que possa ser acessado no computador em que o Windows Admin Center está instalado ou no disco local do computador em que o Windows Admin Center está instalado.
 6. [Siga as instruções para instalar extensões de um feed diferente](#installing-extensions-from-a-different-feed).
 
 ### <a name="downloading-packages-with-a-powershell-script"></a>Como baixar pacotes com um script do PowerShell

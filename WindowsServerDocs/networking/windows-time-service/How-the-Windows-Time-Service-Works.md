@@ -6,12 +6,12 @@ author: dahavey
 ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.openlocfilehash: c407db49c289414cd92b3ff0316d4097754fac5b
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 66b24e4f1b99ba13e48520743069fc4aff4abf28
+ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97046824"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98103658"
 ---
 # <a name="how-the-windows-time-service-works"></a>Como funciona o serviço Horário do Windows
 
@@ -69,7 +69,7 @@ A figura a seguir mostra a arquitetura do Serviço de Horário do Windows.
 
 **Arquitetura do Serviço de Horário do Windows**
 
-![Tempo do Windows](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
+![Diagrama que mostra a arquitetura do Serviço de Horário do Windows.](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
 
 O Gerenciador de Controle de Serviço é responsável por iniciar e parar o Serviço de Horário do Windows. O Gerenciador do Serviço de Horário do Windows é responsável por iniciar a ação dos provedores de horário de NTP incluídos no sistema operacional. O Gerenciador do Serviço de Horário do Windows controla todas as funções do Serviço de Horário do Windows e o agrupamento de todas as amostras de tempo. Além de fornecer informações sobre o estado atual do sistema, como a fonte de horário atual ou a última vez em que o relógio do sistema foi atualizado, o Gerenciador do Serviço de Horário do Windows também é responsável pela criação de eventos no log de eventos.
 

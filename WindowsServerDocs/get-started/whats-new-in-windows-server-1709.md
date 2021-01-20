@@ -1,18 +1,18 @@
 ---
 title: Novidades no Windows Server, versão 1709
-description: Quais são os novos recursos de computação, identidade, gerenciamento, automação, rede, segurança, armazenamento.
+description: Quais são os novos recursos de computação, identidade, gerenciamento, automação, rede, segurança, armazenamento no Windows Server, versão 1709.
 ms.topic: article
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: f80e08817a8c7e4d3e9aef64f84d534413b32281
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 5f0c20b9056bf7c56f9cdbffd02fe058528f0f19
+ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865445"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113182"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Novidades no Windows Server, versão 1709
 
