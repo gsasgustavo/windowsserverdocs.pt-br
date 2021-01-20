@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.openlocfilehash: 2622271abcd283471513cb7ae909499ba9d858a4
-ms.sourcegitcommit: 8e330f9066097451cd40e840d5f5c3317cbc16c2
+ms.openlocfilehash: de69c0f7bf53eefd1da39b2ac629dfe3ccd47668
+ms.sourcegitcommit: 7674bbe49517bbfe0e2c00160e08240b60329fd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697039"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98603430"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Criar um método de autenticação personalizado para AD FS no Windows Server
 
@@ -34,7 +34,7 @@ O passo a passo usa o Visual Studio 2012. O projeto pode ser criado usando qualq
 
 2. Selecione biblioteca de classes e verifique se você está direcionando para o .NET 4,5.
 
-    ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "criar o provedor")
+    ![Captura de tela da caixa de diálogo novo projeto mostrando a opção biblioteca de classes selecionada.](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "criar o provedor")
 
 3. Faça uma cópia de **Microsoft.IdentityServer.Web.dll** de% windir% ADFS no servidor Windows Server 2012 R2 em que AD FS foi instalado e cole-o na pasta do projeto no computador de desenvolvimento.
 
@@ -44,13 +44,13 @@ O passo a passo usa o Visual Studio 2012. O projeto pode ser criado usando qualq
 
 6. Clique em **OK** para confirmar a nova referência:
 
-    ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "criar o provedor")
+    ![Captura de tela da caixa de diálogo Gerenciador de referências mostrando a Microsoft.IdentityServer.Web.dll selecionada.](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "criar o provedor")
 
     Agora você deve estar configurado para resolver todos os tipos necessários para o provedor.
 
 7. Adicione uma nova classe ao seu projeto (clique com o botão direito do mouse no projeto, **adicione... Classe...**) e dê a ele um nome como **myadapter**, mostrado abaixo:
 
-    ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "criar o provedor")
+    ![Captura de tela da caixa de diálogo Adicionar novo item com a opção de classe selecionada.](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "criar o provedor")
 
 8. No novo arquivo MyAdapter.cs, substitua o código existente pelo seguinte:
 
@@ -450,7 +450,7 @@ O passo a passo usa o Visual Studio 2012. O projeto pode ser criado usando qualq
 
 16. Em seguida, selecione **projeto- \> Adicionar componente...** Arquivo de recursos e nomeie os **recursos** de arquivo e clique em **Adicionar:**
 
-    ![criar o provedor](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "criar o provedor")
+    ![Captura de tela da caixa de diálogo Adicionar novo item mostrando o arquivo de recurso selecionado.](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "criar o provedor")
 
 17. Em seguida, no arquivo **Resources. resx** , escolha **Adicionar recurso... Adicionar arquivo existente**. Navegue até o arquivo de texto (que contém o fragmento HTML) que você salvou acima.
 
@@ -605,11 +605,11 @@ Por fim, execute as etapas abaixo para testar seu adaptador:
 
     Se você tiver mais de um adaptador configurado, verá a página de escolha do MFA com seu nome amigável acima.
 
-    ![autenticar com adaptador](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "autenticar com adaptador")
+    ![Captura de tela da página de formulários M F com exemplos de perguntas de desafio.](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "autenticar com adaptador")
 
-    ![autenticar com adaptador](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "autenticar com adaptador")
+    ![Captura de tela da página de escolha M F a.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "autenticar com adaptador")
 
-Agora você tem uma implementação funcional da interface e tem o conhecimento de como o modelo funciona. Você pode Trym como um exemplo extra para definir pontos de interrupção no BeginAuthentication, bem como o TryEndAuthentication. Observe como o BeginAuthentication é executado quando o usuário entra pela primeira vez no formulário MFA, enquanto o TryEndAuthentication é disparado em cada envio do formulário.
+Agora você tem uma implementação funcional da interface e tem o conhecimento de como o modelo funciona. Você pode tentar como um exemplo extra para definir pontos de interrupção no BeginAuthentication, bem como o TryEndAuthentication. Observe como o BeginAuthentication é executado quando o usuário entra pela primeira vez no formulário MFA, enquanto o TryEndAuthentication é disparado em cada envio do formulário.
 
 ## <a name="update-the-adapter-for-successful-authentication"></a>Atualizar o adaptador para autenticação bem-sucedida
 
@@ -753,11 +753,11 @@ Por fim, execute as etapas abaixo para testar seu adaptador:
 
     1. Se você tiver mais de um adaptador configurado, verá a página de escolha do MFA com seu nome amigável.
 
-Você deverá ver uma entrada bem-sucedida ao inserir "adfabric" na página de autenticação do MFA.
+Você deverá ver uma entrada bem-sucedida ao inserir _adfabric_ na página de autenticação do MFA.
 
-![entrar com adaptador](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "entrar com adaptador")
+![Captura de tela da página de formulários M F com exemplo de texto de desafio.](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "entrar com adaptador")
 
-![entrar com adaptador](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "entrar com adaptador")
+![Captura de tela da página de entrada com êxito do M F.](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "entrar com adaptador")
 
 ## <a name="see-also"></a>Consulte Também
 

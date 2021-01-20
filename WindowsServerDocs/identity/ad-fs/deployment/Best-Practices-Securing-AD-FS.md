@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 10aa277a990dd91016c4dada6f8de3730b1a60fc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e70a62a80b3a40b70c261e96b841db92a996bb46
+ms.sourcegitcommit: 7674bbe49517bbfe0e2c00160e08240b60329fd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969793"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98603412"
 ---
 # <a name="best-practices-for-securing-active-directory-federation-services"></a>Práticas recomendadas para proteger Serviços de Federação do Active Directory (AD FS)
 
@@ -23,20 +23,20 @@ Este documento se aplica a AD FS e WAP no Windows Server 2012 R2 e no Windows Se
 ## <a name="standard-deployment-topology"></a>Topologia de implantação padrão
 Para implantação em ambientes locais, recomendamos uma topologia de implantação padrão que consiste em um ou mais servidores de AD FS na rede corporativa interna, com um ou mais servidores de proxy de aplicativo Web (WAP) em uma rede DMZ ou Extranet.  Em cada camada, AD FS e WAP, um balanceador de carga de hardware ou software é colocado na frente do farm de servidores e lida com o roteamento de tráfego.  Os firewalls são colocados conforme necessário na frente do endereço IP externo do balanceador de carga na frente de cada farm (FS e proxy).
 
-![AD FS topologia padrão](media/Best-Practices-Securing-AD-FS/adfssec1.png)
+![Um diagrama que ilustra uma topologia D F S padrão.](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
 >[!NOTE]
-> AD FS requer um controlador de domínio gravável completo para funcionar em oposição a um controlador de domínio somente leitura. Se uma topologia planejada incluir um controlador de domínio somente leitura, o controlador de domínio somente leitura poderá ser usado para autenticação, mas o processamento de declarações LDAP exigirá uma conexão com o controlador de domínio gravável.
+> AD FS requer um controlador de domínio gravável completo para funcionar em oposição a um controlador de domínio Read-Only. Se uma topologia planejada incluir um controlador de domínio Read-Only, o controlador de domínio Read-Only poderá ser usado para autenticação, mas o processamento de declarações LDAP exigirá uma conexão com o controlador de domínio gravável.
 
 ## <a name="ports-required"></a>Portas necessárias
 O diagrama abaixo ilustra as portas de firewall que devem ser habilitadas entre e entre os componentes da implantação de AD FS e WAP.  Se a implantação não incluir o Azure AD/Office 365, os requisitos de sincronização poderão ser desconsiderados.
 
 >Observe que a porta 49443 só será necessária se a autenticação de certificado do usuário for usada, o que é opcional para o Azure AD e o Office 365.
 
-![AD FS topologia padrão](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+![um diagrama que mostra as portas e os protocolos necessários para uma implantação D F S.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
 >[!NOTE]
-> A porta 808 (Windows Server 2012R2) ou a porta 1501 (Windows Server 2016 +) é a porta Net. TCP que o AD FS usa para o ponto de extremidade do WCF local para transferir dados de configuração para o processo de serviço e o PowerShell. Essa porta pode ser vista executando Get-Adfsproperties | Selecione NetTcpPort. Essa é uma porta local que não precisará ser aberta no firewall, mas será exibida em uma verificação de porta.
+> A porta 808 (Windows Server 2012R2) ou a porta 1501 (Windows Server 2016 +) é a porta Net. TCP que o AD FS usa para o ponto de extremidade do WCF local para transferir dados de configuração para o processo de serviço e o PowerShell. Essa porta pode ser vista com a execução de Get-AdfsProperties | Selecione NetTcpPort. Essa é uma porta local que não precisará ser aberta no firewall, mas será exibida em uma verificação de porta.
 
 ### <a name="azure-ad-connect-and-federation-serverswap"></a>Azure AD Connect e servidores de Federação/WAP
 Esta tabela descreve as portas e protocolos que são necessários para a comunicação entre o servidor do Azure AD Connect e servidores de Federação/WAP.
@@ -79,7 +79,7 @@ Abaixo está a lista de pontos de extremidade que devem ser habilitados no proxy
 |/adfs/ls|Os fluxos de autenticação baseados em navegador e as versões atuais do Microsoft Office usam esse ponto de extremidade para a autenticação do Azure AD e do Office 365 |
 |/adfs/services/trust/2005/usernamemixed|Usado para o Exchange Online com clientes do Office mais antigos do que o Office 2013 pode ser atualizado em 2015.  Os clientes posteriores usam o ponto de extremidade \adfs\ls passivo. |
 |/adfs/services/trust/13/usernamemixed|Usado para o Exchange Online com clientes do Office mais antigos do que o Office 2013 pode ser atualizado em 2015.  Os clientes posteriores usam o ponto de extremidade \adfs\ls passivo. |
-|/adfs/oauth2|Este é usado para todos os aplicativos modernos (no local ou na nuvem) que você configurou para autenticar diretamente no AD FS (ou seja, não por meio do AAD) |
+|/adfs/oauth2|Este é usado para qualquer aplicativo moderno (local ou na nuvem) que você configurou para autenticar diretamente no AD FS (ou seja, não por meio do AAD) |
 |/adfs/services/trust/mex|Usado para o Exchange Online com clientes do Office mais antigos do que o Office 2013 pode ser atualizado em 2015.  Os clientes posteriores usam o ponto de extremidade \adfs\ls passivo.|
 |federationmetadata.xml/adfs/ls/FederationMetadata/2007-06/    |Requisito para qualquer fluxo passivo; e usado pelo Office 365/Azure AD para verificar AD FS certificados. |
 
@@ -146,9 +146,9 @@ Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -Ex
 
 Para referência, a documentação pública desse recurso está [aqui](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486806(v=ws.11)).
 
-### <a name="disable-ws-trust-windows-endpoints-on-the-proxy-ie-from-extranet"></a>Desabilite pontos de extremidade do Windows do WS-Trust no proxy, ou seja, da extranet
+### <a name="disable-ws-trust-windows-endpoints-on-the-proxy-ie-from-extranet"></a>Desabilite WS-Trust pontos de extremidade do Windows no proxy, ou seja, da extranet
 
-Os pontos de extremidade do Windows do WS-Trust (*/ADFS/Services/Trust/2005/windowstransport* e */ADFS/Services/Trust/13/windowstransport*) são destinados apenas a pontos de extremidade voltados para a intranet que usam a associação WIA em https. Expô-los à extranet podem permitir solicitações nesses pontos de extremidade para ignorar as proteções de bloqueio. Esses pontos de extremidade devem ser desabilitados no proxy (ou seja, desabilitados da extranet) para proteger o bloqueio de conta do AD usando os comandos do PowerShell a seguir. Não há nenhum impacto conhecido do usuário final ao desabilitar esses pontos de extremidade no proxy.
+WS-Trust pontos de extremidade do Windows (*/ADFS/Services/Trust/2005/windowstransport* e */ADFS/Services/Trust/13/windowstransport*) devem ser apenas pontos de extremidade voltados para a intranet que usam a associação WIA em https. Expô-los à extranet podem permitir solicitações nesses pontos de extremidade para ignorar as proteções de bloqueio. Esses pontos de extremidade devem ser desabilitados no proxy (ou seja, desabilitados da extranet) para proteger o bloqueio de conta do AD usando os comandos do PowerShell a seguir. Não há nenhum impacto conhecido do usuário final ao desabilitar esses pontos de extremidade no proxy.
 
 ```powershell
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
@@ -172,6 +172,6 @@ Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprin
 
 onde:
 
-- `CertificateThumbprint`é seu certificado SSL
-- `SigningCertificateThumbprint`é seu certificado de autenticação (com chave protegida por HSM)
-- `DecryptionCertificateThumbprint`é seu certificado de criptografia (com chave protegida por HSM)
+- `CertificateThumbprint` é seu certificado SSL
+- `SigningCertificateThumbprint` é seu certificado de autenticação (com chave protegida por HSM)
+- `DecryptionCertificateThumbprint` é seu certificado de criptografia (com chave protegida por HSM)

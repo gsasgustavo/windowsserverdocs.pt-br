@@ -7,12 +7,12 @@ ms.topic: how-to
 author: nedpyle
 ms.date: 04/15/2020
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-ms.openlocfilehash: 6cb59e94549aed049a4555ad2d9d7fd0448da4f8
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 51bd95800ed7658a5123d00d6d04c6fb7b95d111
+ms.sourcegitcommit: 7674bbe49517bbfe0e2c00160e08240b60329fd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948612"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98603392"
 ---
 # <a name="frequently-asked-questions-about-storage-replica"></a>Perguntas frequentes sobre Réplica de Armazenamento
 
@@ -172,31 +172,6 @@ vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
 Você também pode agendar essa ferramenta para execução periódica usando uma tarefa agendada. Para saber mais sobre como usar o VSS, consulte [Vssadmin](../../administration/windows-commands/vssadmin.md). O backup de volumes de log não é necessário nem tem valor. Tentativas de fazer isso serão ignoradas pelo VSS.
 
 O uso do Backup do Windows Server, do Backup do Microsoft Azure, do Microsoft DPM ou de outras tecnologias de instantâneos, VSS, máquina virtual ou baseadas em arquivo têm suporte na Réplica de Armazenamento contanto que operem na camada do volume. A Réplica de Armazenamento não dá suporte ao backup e à restauração baseados em bloco.
-
-## <a name="can-i-configure-replication-to-restrict-bandwidth-usage"></a><a name="FAQ14"></a> Posso configurar a replicação para restringir o uso de largura de banda?
-
-Sim, por meio do limitador de largura de banda do SMB. Essa é uma configuração global para todo o tráfego de Réplica de Armazenamento e, assim, afeta toda a replicação desse servidor. Normalmente, isso é necessário apenas com a configuração de sincronização inicial da Réplica de Armazenamento, em que todos os dados do volume devem ser transferidos. Se for necessário após a sincronização inicial, a largura de banda de rede será muito baixa para sua carga de trabalho de E/S. Reduza a E/S ou aumente a largura de banda.
-
-Isso só deve ser usado com a replicação assíncrona (observação: a sincronização inicial é sempre assíncrona, mesmo que você tenha especificado que ela seja síncrona).
-Você também pode usar políticas de QoS de rede para moldar o tráfego de Réplica de Armazenamento. O uso da replicação de Réplica de Armazenamento com propagação altamente correspondente também reduzirá consideravelmente o uso de largura de banda de sincronização inicial geral.
-
-Para definir o limite de largura de banda, use:
-
-```
-Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond x
-```
-
-Para ver o limite de largura de banda, use:
-
-```
-Get-SmbBandwidthLimit -Category StorageReplication
-```
-
-Para remover o limite de largura de banda, use:
-
-```
-Remove-SmbBandwidthLimit -Category StorageReplication
-```
 
 ## <a name="what-network-ports-does-storage-replica-require"></a><a name="FAQ15"></a>Quais portas de rede são exigidas pela Réplica de Armazenamento?
 
