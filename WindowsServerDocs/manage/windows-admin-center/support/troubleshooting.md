@@ -5,22 +5,22 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.date: 06/07/2019
-ms.openlocfilehash: 1775149495871353ef250eff3cb8f6f8cc5c22d6
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.date: 01/15/2021
+ms.openlocfilehash: d057a15b54ebabb6ed5e89dab7159aa1fa26c58d
+ms.sourcegitcommit: 58a13a29869b39b6a6ba0db4d7b9fe1ff8371ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766199"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625809"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Solução de problemas do Windows Admin Center
 
-> Aplica-se a: Windows Admin Center, Versão prévia do Windows Admin Center
+> Aplica-se a: centro de administração do Windows, visualização do centro de administração do Windows, Azure Stack HCI, versão v20H2
 
 > [!Important]
 > Este guia ajudará você a diagnosticar e resolver problemas que impedem o uso do Windows Admin Center. Se tiver problemas com uma ferramenta específica, verifique se você encontrou um [problema conhecido.](./known-issues.md)
 
-## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>Falha do instalador com a mensagem: ** _o módulo ' Microsoft. PowerShell. LocalAccounts ' não pôde ser carregado._**
+## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>Falha do instalador com a mensagem: **_o módulo ' Microsoft. PowerShell. LocalAccounts ' não pôde ser carregado._**
 
 Isso pode acontecer se o caminho padrão do módulo do PowerShell tiver sido modificado ou removido. Para resolver o problema, verifique se ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` é o **primeiro** item em sua variável de ambiente PSModulePath. Você pode conseguir isso com a seguinte linha do PowerShell:
 
@@ -84,6 +84,12 @@ Isso pode acontecer se o caminho padrão do módulo do PowerShell tiver sido mod
 * Abra a caixa de diálogo Executar com WindowsKey + R
 * Digite ```services.msc``` e pressione Enter
 * Na janela que é aberta, procure Gerenciamento Remoto do Windows (WinRM), verifique se ele está em execução e definido para iniciar automaticamente
+
+### <a name="if-youre-getting-winrm-error-messages-while-managing-servers-in-windows-admin-center"></a>Se você estiver recebendo mensagens de erro do WinRM ao gerenciar servidores no centro de administração do Windows
+
+O WinRM não permite a delegação de credenciais por padrão. Para permitir a delegação, o computador precisa ter o provedor de suporte de segurança de credencial (CredSSP) habilitado temporariamente.
+
+Se você estiver recebendo mensagens de erro do WinRM, tente usar as etapas de verificação na seção [solução de problemas manual](https://docs.microsoft.com/azure-stack/hci/manage/troubleshoot-credssp#manual-troubleshooting) de [solucionar problemas de CredSSP](https://docs.microsoft.com/azure-stack/hci/manage/troubleshoot-credssp) para resolvê-los.
 
 ### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>Você atualizou o servidor de 2016 para 2019?
 
