@@ -6,12 +6,12 @@ ms.topic: article
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 65b514fd61e812abfc52d42b88fbd39e125c2003
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 834259ce4d7349359c54a8cd2d4219feff4a31d3
+ms.sourcegitcommit: eb995fa887ffe1408b9f67caf743c66107173666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948252"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666545"
 ---
 # <a name="step-1-plan-the-basic-directaccess-infrastructure"></a>Etapa 1 planejar a infraestrutura básica do DirectAccess
 A primeira etapa para uma implantação básica do DirectAccess em um único servidor é executar o planejamento para a infraestrutura necessária para a implantação. Este tópico descreve as etapas de planejamento de infraestrutura:
@@ -47,7 +47,7 @@ As tarefas de planejamento não precisam ser feitas em uma ordem específica.
 
 3.  Configure os adaptadores e endereçamento necessários conforme a tabela a seguir. Para implantações por trás de um dispositivo NAT usando um único adaptador de rede, configure seus endereços IP usando apenas a coluna **adaptador de rede interna** .
 
-    |Description|Adaptador de rede externa|Adaptador de rede interna<sup>1</sup>|Requisitos de roteamento|
+    |Descrição|Adaptador de rede externa|Adaptador de rede interna<sup>1</sup>|Requisitos de roteamento|
     |-|--------------|--------------------|------------|
     |Intranet IPv4 e Internet IPv4|Configure o seguinte:<p>-Um endereço IPv4 público estático com a máscara de sub-rede apropriada.<br />-Um endereço IPv4 de gateway padrão do seu firewall de Internet ou de seu roteador de provedor de serviços de Internet local (ISP).|Configure o seguinte:<p>-Um endereço de intranet IPv4 com a máscara de sub-rede apropriada.<br />-Um sufixo DNS específico da conexão do seu namespace da intranet. Um servidor DNS também deve ser configurado na interface interna.<br />-Não configure um gateway padrão em nenhuma interface de intranet.|Para configurar o servidor do DirectAccess para acessar todas as sub-redes na rede IPv4 interna, execute este procedimento:<p>1. liste os espaços de endereço IPv4 para todos os locais na sua intranet.<br />2. Use os comandos de rota **Add-p** ou **netsh interface ipv4 add route** para adicionar os espaços de endereço IPv4 como rotas estáticas na tabela de roteamento IPv4 do servidor DirectAccess.|
     |Internet IPv6 e intranet IPv6|Configure o seguinte:<p>-Use a configuração de endereço autoconfigurado fornecida pelo seu ISP.<br />-Use o comando **Route Print** para garantir que uma rota IPv6 padrão apontando para o roteador do ISP exista na tabela de roteamento IPv6.<br />-Determine se o ISP e os roteadores de intranet estão usando as preferências de roteador padrão descritas na RFC 4191 e usando uma preferência padrão mais alta do que os roteadores de intranet local. Se as duas situações forem verdadeiras, nenhuma outra configuração para a rota padrão será necessária. A preferência mais alta para o roteador do ISP assegura que a rota IPv6 padrão ativa do servidor DirectAccess aponte para a Internet IPv6.<p>Como o servidor do DirectAccess é um roteador IPv6, caso você tenha uma infraestrutura IPv6 nativa, a interface de Internet também poderá acessar os controladores de domínio na intranet. Nesse caso, adicione filtros de pacote ao controlador de domínio na rede de perímetro para evitar a conectividade com o endereço IPv6 da interface voltada para Internet do servidor do DirectAccess.|Configure o seguinte:<p>-Se você não estiver usando níveis de preferência padrão, configure suas interfaces de intranet com o comando **netsh interface ipv6 set InterfaceIndex ignoredefaultroutes = Enabled** . Esse comando garante que as rotas padrão adicionais que apontem para os roteadores da intranet não sejam acrescentadas à tabela de roteamento de IPv6. É possível obter o InterfaceIndex das interfaces da intranet na exibição do comando netsh interface show interface.|Se você possui uma intranet IPv6, execute o seguinte procedimento para configurar o servidor do DirectAccess para chegar a todos os locais IPv6:<p>1. liste os espaços de endereço IPv6 para todos os locais na sua intranet.<br />2. Use o comando **netsh interface ipv6 add route** para adicionar os espaços de endereço IPv6 como rotas estáticas na tabela de roteamento IPv6 do servidor DirectAccess.|
@@ -114,6 +114,17 @@ Em uma implantação do DirectAccess, é necessário DNS para o seguinte:
     1.  Se a rede corporativa for baseada em IPv4 ou IPv4 e IPv6, o endereço padrão será o endereço do DNS64 do adaptador interno no servidor DirectAccess.
 
     2.  Se a rede corporativa for baseada em IPv6, o endereço padrão será o endereço IPv6 dos servidores DNS na rede corporativa.
+
+> [!NOTE]
+> A partir do Windows 10 pode ser 2020 atualização, um cliente não registra mais seus endereços IP em servidores DNS configurados em um Tabela de Políticas de Resolução de Nomes (NRPT).
+> Se o registro de DNS for necessário, por exemplo, **gerencie**-o, ele poderá ser explicitamente habilitado com essa chave do registro no cliente:
+>
+> Caminho: `HKLM\System\CurrentControlSet\Services\Dnscache\Parameters`<br/>
+> Digite: `DWORD`<br/>
+> Nome do valor: `DisableNRPTForAdapterRegistration`<br/>
+> Valores:<br/>
+> `1` -Registro de DNS desabilitado (padrão, pois a atualização do Windows 10 pode ser 2020)<br/>
+> `0` -Registro de DNS habilitado
 
 -   **Servidores de infraestrutura**
 
@@ -247,4 +258,3 @@ O **Gerenciamento do DirectAccess** exibirá a seguinte mensagem de erro: **<GPO
 ### <a name="next-step"></a><a name="BKMK_Links"></a>Próxima etapa
 
 -   [Etapa 2: Planejar a implantação do DirectAccess Básico](da-basic-plan-s2-deployment.md)
-

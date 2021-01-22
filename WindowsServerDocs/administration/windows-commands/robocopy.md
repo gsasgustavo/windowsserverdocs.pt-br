@@ -7,12 +7,12 @@ author: jasongerend
 ms.author: jgerend
 manager: lizapo
 ms.date: 06/07/2020
-ms.openlocfilehash: 23d2742d7afeba630c11545cefa3696da05fbcc6
-ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
+ms.openlocfilehash: eb3da171f835cf8715fc2f6b3e08020921f31d3d
+ms.sourcegitcommit: eb995fa887ffe1408b9f67caf743c66107173666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97390254"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666555"
 ---
 # <a name="robocopy"></a>robocopy
 
@@ -24,7 +24,7 @@ Copia dados de arquivo de um local para outro.
 robocopy <source> <destination> [<file>[ ...]] [<options>]
 ```
 
-Por exemplo, para copiar um arquivo chamado *yearly-Report. mov* de *c:\Reports* para um compartilhamento de arquivos *\\ marketing\videos* enquanto habilita o multithreading para um melhor desempenho (com o parâmetro **/MT** ) e a capacidade de reiniciar a transferência caso ela seja interrompida (com o parâmetro **/z** ), digite:
+Por exemplo, para copiar um arquivo chamado *yearly-Report. mov* de *c:\Reports* para um compartilhamento de arquivos *\\ \\ marketing\videos* enquanto habilita o multithreading para um melhor desempenho (com o parâmetro **/MT** ) e a capacidade de reiniciar a transferência caso ela seja interrompida (com o parâmetro **/z** ), digite:
 
 ```dos
 robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z

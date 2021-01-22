@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 382e3618e66f56e05ebd0a7d6b6034e6d7543d64
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 78cc02dc6c777aa8bcb394d19d2f7c5b2c129c01
+ms.sourcegitcommit: eb995fa887ffe1408b9f67caf743c66107173666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89629683"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666535"
 ---
 # <a name="choice"></a>opção
 
@@ -47,7 +47,7 @@ choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m 
 
 ## <a name="examples"></a>Exemplos
 
-Para apresentar as opções **Y**, **N**e **C**, digite a seguinte linha em um arquivo em lotes:
+Para apresentar as opções **Y**, **N** e **C**, digite a seguinte linha em um arquivo em lotes:
 
 ```
 choice /c ync
@@ -59,10 +59,10 @@ O prompt a seguir é exibido quando o arquivo em lotes executa o comando **Choic
 [Y,N,C]?
 ```
 
-Para ocultar as opções **Y**, **N**e **C**, mas exibir o texto **Sim**, **não**ou **continuar**, digite a seguinte linha em um arquivo em lotes:
+Para ocultar as opções **Y**, **N** e **C**, mas exibir o texto **Sim**, **não** ou **continuar**, digite a seguinte linha em um arquivo em lotes:
 
 ```
-choice /c ync /n /m Yes, No, or Continue?
+choice /c ync /n /m "Yes, No, or Continue?"
 ```
 
 > [!NOTE]
@@ -71,7 +71,7 @@ choice /c ync /n /m Yes, No, or Continue?
 Para mostrar o texto e as opções usadas nos exemplos anteriores, digite a seguinte linha em um arquivo em lotes:
 
 ```
-choice /c ync /m Yes, No, or Continue
+choice /c ync /m "Yes, No, or Continue"
 ```
 
 Para definir um limite de tempo de cinco segundos e especificar **N** como o valor padrão, digite a seguinte linha em um arquivo em lotes:

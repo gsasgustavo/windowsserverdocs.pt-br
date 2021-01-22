@@ -7,17 +7,18 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.openlocfilehash: 93bca831222700f12cccd2ae6aef60ca189197b9
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 60e93280e00fb980871c1289047ee2ff54d4d449
+ms.sourcegitcommit: eb995fa887ffe1408b9f67caf743c66107173666
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97048844"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666585"
 ---
 # <a name="configuring-alternate-login-id"></a>Configurar a ID de logon alternativa
 
 
 ## <a name="what-is-alternate-login-id"></a>O que é a ID de logon alternativa?
+
 Na maioria dos cenários, os usuários usam seus UPN (nomes de entidade de usuário) para fazer logon em suas contas. No entanto, em alguns ambientes devido a políticas corporativas ou dependências locais de aplicativos de linha de negócios, os usuários podem estar usando alguma outra forma de entrada.
 
 > [!NOTE]
@@ -35,6 +36,7 @@ Uma organização pode ter que usar a ID alternativa nos seguintes cenários:
    Nos cenários mencionados acima, a ID alternativa com AD FS permite que os usuários entrem no Azure AD sem modificar seus UPNs locais.
 
 ## <a name="configure-alternate-logon-id"></a>Configurar a ID de logon alternativa
+
 Usando Azure AD Connect é recomendável usar o Azure AD Connect para configurar a ID de logon alternativa para seu ambiente.
 
 - Para obter uma nova configuração de Azure AD Connect, consulte conectar-se ao Azure AD para obter instruções detalhadas sobre como configurar a ID alternativa e o farm de AD FS.
@@ -46,6 +48,7 @@ Quando Azure AD Connect é fornecido detalhes sobre o ambiente de AD FS, ele ver
 > A Microsoft recomenda o uso de Azure AD Connect para configurar a ID de logon alternativa.
 
 ### <a name="manually-configure-alternate-id"></a>Configurar manualmente a ID alternativa
+
 Para configurar a ID de logon alternativa, você deve executar as seguintes tarefas: configurar seu AD FS relações de confiança do provedor de declarações para habilitar a ID de logon alternativa
 
 1.  Se você tiver o servidor 2012R2, verifique se você tem o KB2919355 instalado em todos os servidores de AD FS. Você pode obtê-lo por meio de serviços Windows Update ou baixá-lo diretamente.
@@ -80,6 +83,7 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $
 > O seguinte só foi testado em relação a AD FS e não a provedores de identidade de terceiros.
 
 ### <a name="exchange-and-skype-for-business"></a>Exchange e Skype for Business
+
 Se você estiver usando uma ID de logon alternativo com o Exchange e o Skype for Business, a experiência do usuário varia dependendo se você está usando a HMA ou não.
 
 > [!NOTE]
@@ -88,6 +92,7 @@ Se você estiver usando uma ID de logon alternativo com o Exchange e o Skype for
 ou mais informações, consulte [visão geral da autenticação moderna híbrida](https://support.office.com/article/Hybrid-Modern-Authentication-overview-and-prerequisites-for-using-it-with-on-premises-Skype-for-Business-and-Exchange-servers-ef753b32-7251-4c9e-b442-1a5aec14e58d)
 
 ### <a name="pre-requisites-for-exchange-and-skype-for-business"></a>Pré-requisitos para o Exchange e Skype for Business
+
 Veja a seguir os pré-requisitos para obter o SSO com a ID alternativa.
 
 - O Exchange Online deve ter a autenticação moderna ativada.
@@ -110,12 +115,15 @@ Configurar seu diretório para SSO com a ID alternativa usando a ID alternativa 
 Com a configuração adicional a seguir, a experiência do usuário é significativamente melhor, e você pode obter prompts quase zero para autenticação para usuários de ID alternativa em sua organização.
 
 ##### <a name="step-1-update-to-required-office-version"></a>Etapa 1. Atualizar para a versão do Office necessária
+
 A versão 1712 do Office (Build no 8827,2148) e superior atualizaram a lógica de autenticação para manipular o cenário de ID alternativo. Para aproveitar a nova lógica, os computadores cliente precisam ser atualizados para a versão 1712 do Office (Build no 8827,2148) e superior.
 
 ##### <a name="step-2-update-to-required-windows-version"></a>Etapa 2. Atualizar para a versão do Windows necessária
+
 O Windows versão 1709 e superior atualizaram a lógica de autenticação para manipular o cenário de ID alternativo. Para aproveitar a nova lógica, os computadores cliente precisam ser atualizados para a versão 1709 e posteriores do Windows.
 
 ##### <a name="step-3-configure-registry-for-impacted-users-using-group-policy"></a>Etapa 3. Configurar o registro para usuários afetados usando a política de grupo
+
 Os aplicativos do Office dependem das informações enviadas pelo administrador de diretório para identificar o ambiente de ID alternativo. As seguintes chaves do registro precisam ser configuradas para ajudar os aplicativos do Office a autenticar o usuário com uma ID alternativa sem mostrar prompts extras
 
 |RegKey a adicionar|Nome de dados RegKey, tipo e valor|Windows 7/8|Windows 10|Descrição|
@@ -164,9 +172,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
     - Domínios não roteáveis (por exemplo, contoso. local) que não podem ser verificados pelo Azure AD.
     - Ambientes gerenciados que não têm AD FS implantados.
 
-
 - Quando habilitada, o recurso de ID de logon alternativo só estará disponível para autenticação de nome de usuário/senha em todos os protocolos de autenticação de nome/senha com suporte do AD FS (SAML-P, WS-enalimentated, WS-Trust e OAuth).
-
 
 - Quando a autenticação integrada do Windows (WIA) é executada (por exemplo, quando os usuários tentam acessar um aplicativo corporativo em um computador ingressado no domínio da intranet e AD FS administrador configurou a política de autenticação para usar o WIA para intranet), o UPN é usado para autenticação. Se você tiver configurado qualquer regra de declaração para as terceiras partes confiáveis para o recurso de ID de logon alternativo, verifique se essas regras ainda são válidas no caso WIA.
 
@@ -183,6 +189,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 - O novo tipo de declaração que contém o valor de ID de logon alternativo é **http:schemas. Microsoft. com/WS/2013/11/alternateloginid**
 
 ## <a name="events-and-performance-counters"></a>Eventos e contadores de desempenho
+
 Os seguintes contadores de desempenho foram adicionados para medir o desempenho de servidores de AD FS quando a ID de logon alternativa está habilitada:
 
 - Autenticações de ID de logon alternativas: número de autenticações executadas usando a ID de logon alternativa
@@ -203,4 +210,5 @@ A seguir estão os vários casos de erro e o impacto correspondente na experiên
 |   Vários objetos de usuário são encontrados em várias florestas    |          Falha de logon           |           ID do evento 364 com a mensagem de exceção MSIS8014: encontrou várias contas de usuário com a identidade ' {0} ' nas florestas: {1}            |
 
 ## <a name="see-also"></a>Consulte Também
+
 [Operações do AD FS](../ad-fs-operations.md)
