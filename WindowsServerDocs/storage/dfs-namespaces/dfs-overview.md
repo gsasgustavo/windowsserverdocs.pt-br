@@ -4,14 +4,14 @@ ms.author: jgerend
 manager: daveba
 ms.topic: article
 author: jasongerend
-ms.date: 06/07/2019
+ms.date: 01/21/2021
 description: Este tópico descreve o namespaces do DFS, que é um serviço de função no Windows Serve que permite que você agrupe pastas compartilhadas localizadas em diferentes servidores em um ou mais namespaces estruturados logicamente.
-ms.openlocfilehash: 5f2ab44b902d5ed1d27be9eb14bda8f003387f52
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: ffc909f4feb23d26cf496eddca51899a97f4cafe
+ms.sourcegitcommit: fc2a7c69a74edcd79372054c4a9a24237510babd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865995"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98672938"
 ---
 # <a name="dfs-namespaces-overview"></a>Visão geral de Namespaces DFS
 
@@ -106,11 +106,11 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 ## <a name="interoperability-with-azure-virtual-machines"></a>Interoperabilidade com máquinas virtuais do Azure
 
-O uso de Namespaces em uma máquina virtual no Microsoft Azure foi testado; no entanto, há algumas limitações e requisitos que devem ser seguidos.
-
-- Não é possível clusterizar namespaces autônomos em máquinas virtuais do Azure.
+O uso de namespaces do DFS em uma máquina virtual no Microsoft Azure foi testado.
 
 - Você pode hospedar Namespaces baseados em domínio em máquinas virtuais do Azure, incluindo ambientes com Azure Active Directory.
+- Você pode clusterizar namespaces autônomos em máquinas virtuais do Azure usando clusters de failover que usam [disco compartilhado](/azure/virtual-machines/disks-shared) ou [ultra discos](/azure/virtual-machines/disks-enable-ultra-ssd).
+
 
 Para saber mais sobre como começar a usar máquinas virtuais do Windows Azure, consulte [Documentação de máquinas virtuais do Windows Azure](/azure/virtual-machines/).
 

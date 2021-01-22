@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.openlocfilehash: cf293b6732a29a173050bcf90ed8cbec4e1d9ea4
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 88333427cf8f147e0d81d8d07dfff08fb2cebb09
+ms.sourcegitcommit: fc2a7c69a74edcd79372054c4a9a24237510babd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865775"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98672958"
 ---
 # <a name="scenario-native-app-calling-web-api"></a>Cenário: API Web de chamada de aplicativo nativo
 >Aplica-se a: AD FS 2019 e posterior
@@ -42,23 +42,23 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
   2. No assistente de grupo de aplicativos, para o **nome** , insira **NativeAppToWebApi** e, em **aplicativos cliente-servidor** , selecione o **aplicativo nativo acessando um modelo de API Web** . Clique em **Avançar**.
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native2.png)
+      ![Captura de tela da página inicial do assistente para Adicionar grupo de aplicativos mostrando o aplicativo nativo que está acessando um modelo de API Web realçado.](media/adfs-msal-native-app-web-api/native2.png)
 
   3. Copie o valor do **identificador de cliente** . Ele será usado posteriormente como o valor de **ClientID** no arquivo de **App.config** do aplicativo. Insira o seguinte para o **URI de redirecionamento:** https://ToDoListClient . Clique em **Adicionar**. Clique em **Avançar**.
 
-     ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native3.png)
+     ![Captura de tela da página do aplicativo nativo do assistente para Adicionar grupo de aplicativos mostrando o s R I de redirecionamento.](media/adfs-msal-native-app-web-api/native3.png)
 
   4. Na tela configurar API da Web, insira o **identificador:** https://localhost:44321/ . Clique em **Adicionar**. Clique em **Avançar**. Esse valor será usado posteriormente nos arquivos de **App.config** e **Web.config** do aplicativo.
 
-     ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native4.png)
+     ![Captura de tela da página Configurar API da Web do assistente para Adicionar grupo de aplicativos mostrando o identificador correto.](media/adfs-msal-native-app-web-api/native4.png)
 
   5. Na tela aplicar política de controle de acesso, selecione **permitir todos** e clique em **Avançar**.
 
-     ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native5.png)
+     ![Captura de tela da página escolher política de controle de acesso do assistente para Adicionar grupo de aplicativos mostrando a opção permitir todos realçada.](media/adfs-msal-native-app-web-api/native5.png)
 
   6. Na tela configurar permissões de aplicativo, verifique se **OpenID** está selecionado e clique em **Avançar**.
 
-     ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native6.png)
+     ![Captura de tela da página configurar permissões de aplicativo do assistente para Adicionar grupo de aplicativos mostrando abrir I D selecionado.](media/adfs-msal-native-app-web-api/native6.png)
 
   7. Na tela Resumo, clique em **Avançar**.
 
@@ -66,23 +66,23 @@ Esta seção mostra como registrar o aplicativo nativo como um cliente público 
 
   9. Em gerenciamento de AD FS, clique em **grupos de aplicativos** e selecione grupo de aplicativos **NativeAppToWebApi**         . Clique com o botão direito do mouse e selecione **Propriedades**.
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native7.png)
+      ![Captura de tela da caixa de diálogo de gerenciamento a D S mostrando o grupo NativeAppToWebApi realçado e a opção Propriedades na lista suspensa.](media/adfs-msal-native-app-web-api/native7.png)
 
   10. Na tela de propriedades do NativeAppToWebApi, selecione **NativeAppToWebApi – API Web** em **API da Web** e clique em **Editar..** .
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native8.png)
+      ![Captura de tela da caixa de diálogo Propriedades do NativeAppToWebApi mostrando o aplicativo NativeAppToWebApi-Web a P realçado.](media/adfs-msal-native-app-web-api/native8.png)
 
   11. Na tela NativeAppToWebApi – Propriedades da API Web, selecione a guia **regras de transformação de emissão** e clique em **Adicionar regra..** .
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native9.png)
+      ![Captura de tela da caixa de diálogo Propriedades do P-Web NativeAppToWebApi que mostra a guia regras de transformação de emissão.](media/adfs-msal-native-app-web-api/native9.png)
 
   12. Em Adicionar Assistente de regra de declaração de transformação, selecione **transformar uma declaração de entrada** do **modelo de regra de declaração:** menu suspenso e clique em **Avançar**.
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native10.png)
+      ![Captura de tela da página Selecionar modelo de regra do assistente para Adicionar regra de declaração de transformação mostrando a opção transformar uma declaração de entrada selecionada.](media/adfs-msal-native-app-web-api/native10.png)
 
   13. Insira **NameID** no campo **nome da regra de declaração:** . Selecione o **nome** para o **tipo de declaração de entrada:**, **ID de nome** para tipo de **declaração de saída:** e **nome comum** para **formato de ID de nome de saída:**. clique em **concluir**.
 
-      ![Reg do aplicativo](media/adfs-msal-native-app-web-api/native11.png)
+      ![Captura de tela da página Configurar regra do assistente para Adicionar regra de declaração de transformação mostrando a configuração explicada acima.](media/adfs-msal-native-app-web-api/native11.png)
 
   14. Clique em OK em NativeAppToWebApi – tela de propriedades da API Web e, em seguida, NativeAppToWebApi tela de propriedades.
 
@@ -100,13 +100,13 @@ Esta seção mostra como configurar um aplicativo nativo para o usuário de entr
    - todo: TodoListResourceId – Insira o valor do **identificador** de #4 no registro do aplicativo na seção AD FS acima
    - Ida: todo: TodoListBaseAddress-Insira o valor do **identificador** de #4 no registro do aplicativo na seção AD FS acima.
 
-     ![configuração de código](media/adfs-msal-native-app-web-api/native12.png)
+     ![Captura de tela do arquivo de configuração do aplicativo mostrando os valores modificados.](media/adfs-msal-native-app-web-api/native12.png)
 
  4. Abra o arquivo Web.config. Modifique o seguinte:
     - Ida: Audience-Insira o valor do **identificador** de #4 no registro do aplicativo na seção AD FS acima
     - Ida: AdfsMetadataEndpoint-Enter `https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml`
 
-      ![configuração de código](media/adfs-msal-native-app-web-api/native13.png)
+      ![Captura de tela do arquivo de configuração da Web mostrando os valores modificados.](media/adfs-msal-native-app-web-api/native13.png)
 
 ## <a name="test-the-sample"></a>O exemplo de teste
 Esta seção mostra como testar o exemplo configurado acima.
@@ -115,29 +115,29 @@ Esta seção mostra como testar o exemplo configurado acima.
 
   2. No Visual Studio, clique com o botão direito do mouse em solução e selecione **definir projetos de inicialização...**
 
-     ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native14.png)
+     ![Captura de tela da lista que aparece quando você clica com o botão direito do mouse na solução com a opção definir projetos de inicialização realçada.](media/adfs-msal-native-app-web-api/native14.png)
 
   3. Nas páginas de propriedades, verifique se a **ação** está definida como **Iniciar** para cada um dos projetos
 
-     ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native15.png)
+     ![Captura de tela da caixa de diálogo páginas de propriedades da solução mostrando a opção vários projetos de inicialização selecionada e todas as ações do projeto definidas como iniciar.](media/adfs-msal-native-app-web-api/native15.png)
 
   4. Na parte superior do Visual Studio, clique na seta verde.
 
-     ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native16.png)
+     ![Captura de tela da interface do usuário do Visual Studio com a opção de início chamada out.](media/adfs-msal-native-app-web-api/native16.png)
 
   5. Na tela principal do aplicativo nativo, clique em **entrar**.
 
-     ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native17.png)
+     ![Captura de tela da caixa de diálogo do cliente lista de tarefas.](media/adfs-msal-native-app-web-api/native17.png)
 
    Se você não vir a tela do aplicativo nativo, pesquise e remova os `*msalcache.bin` arquivos da pasta em que o repositório do projeto é salvo em seu sistema.
 
   1. Você será direcionado novamente para a página de entrada AD FS. Vá em frente e entre.
 
-      ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native18.png)
+      ![Captura de tela da página de entrada.](media/adfs-msal-native-app-web-api/native18.png)
 
   2. Depois de conectado, insira texto **Compilar aplicativo nativo para API Web** no **criar um item de tarefas pendentes**. Clique em **Adicionar item**.  Isso chamará o **serviço de lista de tarefas pendentes (API Web)** e adicionará o item no cache.
 
-       ![Teste de aplicativo](media/adfs-msal-native-app-web-api/native19.png)
+       ![Captura de tela da caixa de diálogo do cliente lista de tarefas com o novo item a ser feito preenchendo a seção tarefas pendentes.](media/adfs-msal-native-app-web-api/native19.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 [Fluxos e cenários de aplicativo do AD FS OpenID Connect/OAuth](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
