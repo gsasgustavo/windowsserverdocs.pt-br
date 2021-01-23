@@ -1,24 +1,24 @@
 ---
 title: Serviço DNS interno (iDNS) para SDN
-description: Este tópico explica como você pode fornecer serviços DNS para suas cargas de trabalho de locatários hospedados usando o iDNS (DNS interno), que é integrado à rede definida pelo software no Windows Server 2016.
+description: Este tópico explica como você pode fornecer serviços DNS para suas cargas de trabalho de locatários hospedados usando o iDNS (DNS interno), que é integrado à rede definida pelo software no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 01/04/2021
-ms.openlocfilehash: 03f8164212cb08bedffd1caf2f35e2dd7814b9aa
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: f104a9546be7e3a0403387358ea63c94a43b3027
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949952"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716322"
 ---
 # <a name="internal-dns-service-idns-for-sdn"></a>Serviço DNS interno (iDNS) para SDN
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-Se você trabalha para um CSP ou uma empresa do provedor de serviços de nuvem \( \) que está planejando implantar a rede definida pelo software \( Sdn \) no Windows Server 2016, você pode fornecer serviços DNS para suas cargas de trabalho de locatário hospedadas usando iDNS do DNS interno \( \) , que é integrado com Sdn.
+Se você trabalha para um CSP ou uma empresa do provedor de serviços de nuvem \( \) que está planejando implantar a rede definida pelo software \( Sdn \) no Windows Server 2019 ou 2016, você pode fornecer serviços DNS para suas cargas de trabalho de locatário hospedadas usando iDNS DNS internos \( \) , que é integrado com Sdn.
 
 VMs e aplicativos de máquinas virtuais hospedadas \( \) exigem que o DNS se comunique em suas próprias redes e com recursos externos na Internet. Com iDNS, você pode fornecer locatários com serviços de resolução de nomes DNS para seu espaço de nome local isolado e para recursos da Internet.
 

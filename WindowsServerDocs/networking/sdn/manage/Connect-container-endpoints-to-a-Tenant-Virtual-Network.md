@@ -7,16 +7,16 @@ ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: af8232de75005ae295079eb2207bce303629acaa
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: a09d3f7002ffd0bb73d39a57caba4e497eafd17a
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995196"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716802"
 ---
 # <a name="connect-container-endpoints-to-a-tenant-virtual-network"></a>Conectar pontos de extremidade do contêiner a uma rede virtual do locatário
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, mostraremos como conectar pontos de extremidade do contêiner a uma rede virtual de locatário existente criada por meio de SDN. Use o driver de rede *l2bridge* (e, opcionalmente, *l2tunnel*) disponível com o plug-in libnetwork do Windows para o Docker para criar uma rede de contêiner na VM de locatário.
 
@@ -26,7 +26,7 @@ O serviço de rede de host (HNS), por meio do plug-in de nuvem privada, atribui 
 
 A política de rede (ACLs, encapsulamento e QoS) para esses pontos de extremidade de contêiner são impostas no host físico do Hyper-V conforme recebido pelo controlador de rede e definido em sistemas de gerenciamento de camada superior.
 
-A diferença entre os drivers *l2bridge* e *l2tunnel* é:
+As diferenças entre os drivers *l2bridge* e *l2tunnel* são:
 
 
 |                                                                                                                                                                                                                                                                            l2bridge                                                                                                                                                                                                                                                                            |                                                                                                 l2tunnel                                                                                                  |

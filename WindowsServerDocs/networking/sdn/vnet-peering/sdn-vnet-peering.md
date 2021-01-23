@@ -6,16 +6,16 @@ ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018
-ms.openlocfilehash: 5bd66299271257026504dcff4b5021c0be4ef73a
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 325dd4468281e1b6b5ab1fb577908d9a29ba2a28
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97945742"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716572"
 ---
 # <a name="virtual-network-peering"></a>Emparelhamento de rede virtual
 
->Aplica-se a: Windows Server
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 O emparelhamento de rede virtual permite que você conecte duas redes virtuais diretamente. Uma vez emparelhadas, para fins de conectividade, as redes virtuais aparecem como uma.
 
@@ -72,7 +72,7 @@ O emparelhamento de rede virtual permite que o próximo salto em uma rota defini
 
 Cada rede virtual, independentemente de estar emparelhada com outra rede virtual, ainda pode ter seu próprio gateway para se conectar a uma rede local. Ao emparelhar redes virtuais, você também pode configurar o gateway na rede virtual emparelhada como um ponto de trânsito para uma rede local. Nesse caso, a rede virtual que usa um gateway remoto não pode ter seu próprio gateway. Uma rede virtual pode ter apenas um gateway que pode ser um gateway local ou remoto (na rede virtual emparelhada).
 
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Monitoramento
 
 Ao emparelhar duas redes virtuais, você deve configurar um emparelhamento para cada rede virtual no emparelhamento.
 

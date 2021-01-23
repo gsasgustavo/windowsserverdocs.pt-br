@@ -7,16 +7,16 @@ ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018
-ms.openlocfilehash: a28132747d11c352987638c9db368561897c421f
-ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
+ms.openlocfilehash: 15f47d48ca0e3873433fcaa3e6dd7160bc0f9126
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113402"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716602"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>Configurar a criptografia para uma sub-rede virtual
 
->Aplica-se a: Windows Server
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 A criptografia de rede virtual permite a criptografia de tráfego de rede virtual entre VMs que se comunicam entre si em sub-redes marcadas como ' criptografia habilitada '. Ela também utiliza o DTLS (Datagrama do protocolo TLS) na sub-rede virtual para criptografar os pacotes. O DTLS protege contra interceptações, falsificação e adulteração por qualquer pessoa com acesso à rede física.
 

@@ -6,17 +6,16 @@ ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: bf385cfedf973409c5789c94891240ae643c36d6
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 51cc64337029792fe8df724ad0d91515c3ab0eb8
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949112"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716442"
 ---
 # <a name="windows-server-2019-gateway-performance"></a>Desempenho do gateway do Windows Server 2019
 
->Aplica-se a: Windows Server
-
+>Aplica-se a: Windows Server 2019
 
 No Windows Server 2016, uma das preocupações dos clientes foi a incapacidade do gateway de SDN de atender aos requisitos de produtividade das redes modernas. A taxa de transferência de rede de túneis IPsec e GRE teve limitações com a taxa de transferência de conexão única para a conectividade IPsec de cerca de 300 Mbps e para a conectividade do GRE sendo cerca de 2,5 Gbps.
 

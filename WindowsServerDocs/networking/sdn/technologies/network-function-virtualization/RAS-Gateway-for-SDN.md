@@ -1,28 +1,26 @@
 ---
 title: Gateway de RAS para SDN
-description: Você pode usar este tópico para saber mais sobre o gateway de RAS, que é um roteador com capacidade de Border Gateway Protocol de vários locatários, baseado em software (BGP) no Windows Server 2016.
+description: Você pode usar este tópico para saber mais sobre o gateway de RAS, que é um roteador com capacidade de Border Gateway Protocol de vários locatários, baseado em software (BGP) no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: d8bd138599001bdf31aa52c817b64d2475e9b783
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: d5709f00e865a19f14568ea0eebb670276b22f1f
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946022"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98717002"
 ---
 # <a name="ras-gateway-for-sdn"></a>Gateway de RAS para SDN
 
->Aplica-se a: Windows Server (canal semestral), Windows Server 2016 # # gateway de RAS para SDN
-
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 O gateway de RAS é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) projetado para CSPs (provedores de serviços de nuvem) e empresas que hospedam várias redes virtuais de locatário usando a virtualização de rede Hyper-V. Os gateways RAS roteiam o tráfego de rede entre a rede física e os recursos da rede VM, independentemente do local. Você pode rotear o tráfego de rede no mesmo local físico ou em vários locais diferentes.
 
 A multilocação é a capacidade de uma infraestrutura de nuvem dar suporte às cargas de trabalho de máquina virtual de vários locatários, mas ainda isolá-las umas das outras, enquanto todas as cargas de trabalho são executadas na mesma infraestrutura. As várias cargas de trabalho de um locatário individual podem se interconectar e serem gerenciadas remotamente, mas esses sistemas não interconectam com as cargas de trabalho de outros locatários, nem outros locatários podem gerenciá-las remotamente.
-
 
 > [!NOTE]
 > Além deste tópico, os tópicos de gateway RAS a seguir estão disponíveis.

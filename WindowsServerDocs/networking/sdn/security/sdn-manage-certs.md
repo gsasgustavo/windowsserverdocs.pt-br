@@ -1,31 +1,31 @@
 ---
 title: Gerenciar certificados para rede definida pelo software
-description: Você pode usar este tópico para aprender a gerenciar certificados para as comunicações Northbound e Southbound do controlador de rede ao implantar SDN (rede definida pelo software) no Windows Server 2016 datacenter.
+description: Você pode usar este tópico para aprender a gerenciar certificados para as comunicações Northbound e Southbound do controlador de rede ao implantar SDN (rede definida pelo software) no Windows Server 2019 e no 2016 datacenter.
 manager: grcusanz
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 2bd72ec096d7c1301601848602a1d55e44ca5086
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: bcba64a74a2414cb239257161de50bf99acbad62
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866505"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716342"
 ---
 # <a name="manage-certificates-for-software-defined-networking"></a>Gerenciar certificados para rede definida pelo software
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-Você pode usar este tópico para aprender a gerenciar certificados para as comunicações Northbound e Southbound do controlador de rede ao implantar o Sdn de rede definido pelo software \( \) no Windows Server 2016 datacenter e usar System Center Virtual Machine Manager \( SCVMM \) como seu cliente de gerenciamento de Sdn.
+Você pode usar este tópico para aprender a gerenciar certificados para as comunicações Northbound e Southbound do controlador de rede ao implantar o Sdn de rede definido pelo software \( \) no Windows Server 2019 ou 2016 datacenter e você estiver usando System Center Virtual Machine Manager \( SCVMM \) como seu cliente de gerenciamento de Sdn.
 
 >[!NOTE]
 >Para obter informações gerais sobre o controlador de rede, consulte [controlador de rede](../technologies/network-controller/Network-Controller.md).
 
 Se você não estiver usando o Kerberos para proteger a comunicação do controlador de rede, poderá usar certificados X. 509 para autenticação, autorização e criptografia.
 
-O SDN no Windows Server 2016 datacenter dá suporte \- a certificados autoassinados e \( \) de autoridade de certificação X. 509 assinados por AC. Este tópico fornece instruções passo a passo para criar esses certificados e aplicá-los para proteger os canais de comunicação Northbound do controlador de rede com clientes de gerenciamento e comunicações Southbound com dispositivos de rede, como o software Load Balancer \( SLB \) .
+O SDN no Windows Server 2019 e 2016 datacenter dá suporte \- a certificados autoassinados e \( \) de autoridade de certificação X. 509 assinados por AC. Este tópico fornece instruções passo a passo para criar esses certificados e aplicá-los para proteger os canais de comunicação Northbound do controlador de rede com clientes de gerenciamento e comunicações Southbound com dispositivos de rede, como o software Load Balancer \( SLB \) .
 .
 Ao usar a \- autenticação baseada em certificado, você deve registrar um certificado em nós do controlador de rede que é usado das seguintes maneiras.
 
@@ -140,7 +140,7 @@ Você pode usar o snap-in de certificados para solicitar certificados. Você pod
 5. Selecione a **política de registro de Active Directory** \( com base no modelo de autoridade de certificação que você configurou na seção anterior \) .
 6. Expanda a seção **detalhes** e configure os itens a seguir.
    1. Verifique se o **uso da chave** inclui <strong>assinatura digital * * e * * codificação de chave</strong>.
-   2. Verifique se **as políticas de aplicativo** incluem **Server Authentication** \( 1.3.6.1.5.5.7.3.1 de autenticação de servidor \) e 1.3.6.1.5.5.7.3.2 de **autenticação de cliente** \( \) .
+   2. Verifique se **as políticas de aplicativo** incluem  \( 1.3.6.1.5.5.7.3.1 de autenticação de servidor \) e 1.3.6.1.5.5.7.3.2 de **autenticação de cliente** \( \) .
 7. Clique em **Propriedades**.
 8. Na guia **assunto** , em **nome da entidade**, em **tipo**, selecione **nome comum**. Em valor, especifique **ponto de extremidade REST do controlador de rede**.
 9. Clique em **Aplicar** e em **OK**.

@@ -1,22 +1,22 @@
 ---
 title: Controlador de rede
-description: Este tópico fornece uma visão geral do controlador de rede no Windows Server 2016.
+description: Este tópico fornece uma visão geral do controlador de rede no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 12/08/2020
-ms.openlocfilehash: 8db1514711834430b88a94306189ce03c0036899
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 81a85a5625538ccba7de48d78b471f04a9f23d49
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949392"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716252"
 ---
 # <a name="network-controller"></a>Controlador de rede
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Novidade no Windows Server 2016, o controlador de rede fornece um ponto de automação centralizado e programável para gerenciar, configurar, monitorar e solucionar problemas de infraestrutura de rede física e virtual em seu datacenter.
 

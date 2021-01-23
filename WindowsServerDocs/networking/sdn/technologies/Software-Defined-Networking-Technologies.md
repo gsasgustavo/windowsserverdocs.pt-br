@@ -1,24 +1,24 @@
 ---
 title: Tecnologias de SDN
-description: Os tópicos nesta seção fornecem uma visão geral e informações técnicas sobre as tecnologias de rede definidas pelo software que estão incluídas no Windows Server 2016.
+description: Os tópicos nesta seção fornecem uma visão geral e informações técnicas sobre as tecnologias de rede definidas pelo software que estão incluídas no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 02/14/2019
-ms.openlocfilehash: 69e01630cf34a588b6861c833015076bd4a31ef4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 62a0773fb51397cab2893826939736685eed798b
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996467"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716232"
 ---
 # <a name="sdn-technologies"></a>Tecnologias de SDN
 
->Aplica-se a: Windows Server 2019, Windows Server 2016, Windows Server (canal semestral)
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-Os tópicos nesta seção fornecem uma visão geral e informações técnicas sobre as tecnologias de rede definidas pelo software que estão incluídas no Windows Server 2016.
+Os tópicos nesta seção fornecem uma visão geral e informações técnicas sobre as tecnologias de rede definidas pelo software que estão incluídas no Windows Server 2019 e 2016.
 
 ## <a name="network-controller"></a>[Controlador de rede](network-controller/Network-Controller.md)
 

@@ -6,16 +6,16 @@ ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: c4350636c0977b23c94a73fb8bf7a6179736eb5a
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 0bb62eda416d60f130573ee01e75d47f09d4a3c2
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949122"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716452"
 ---
 # <a name="gateway-bandwidth-allocation"></a>Alocação de largura de banda de gateway
 
->Aplica-se a: Windows Server
+>Aplica-se a: Windows Server 2019
 
 No Windows Server 2016, a largura de banda de túnel individual para IPsec, GRE e L3 era uma proporção da capacidade total do gateway. Portanto, os clientes forneceriam a capacidade do gateway com base na largura de banda TCP padrão, esperando isso fora da VM do gateway.
 

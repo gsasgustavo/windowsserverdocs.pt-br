@@ -1,24 +1,24 @@
 ---
 title: Novidades no Gateway de RAS
-description: Você pode usar este tópico para saber mais sobre os novos recursos do gateway de RAS, que é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) no Windows Server 2016.
+description: Você pode usar este tópico para saber mais sobre os novos recursos do gateway de RAS, que é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: c40969f18684dbe3fffff205c9f46582c7a2b3ae
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 3b6ccfa396e0e083bf68ba39e22d093303bd55c1
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97943202"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716982"
 ---
 # <a name="whats-new-in-ras-gateway"></a>Novidades no Gateway de RAS
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-Você pode usar este tópico para saber mais sobre os novos recursos do gateway de RAS, que é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) no Windows Server 2016. O roteador BGP multilocatário do gateway de RAS foi projetado para CSPs (provedores de serviços de nuvem) e empresas que hospedam várias redes virtuais de locatário usando a virtualização de rede Hyper-V.
+Você pode usar este tópico para saber mais sobre os novos recursos do gateway de RAS, que é um roteador compatível com BGP (baseado em software, multilocatário Border Gateway Protocol) introduzido no Windows Server 2016. O roteador BGP multilocatário do gateway de RAS foi projetado para CSPs (provedores de serviços de nuvem) e empresas que hospedam várias redes virtuais de locatário usando a virtualização de rede Hyper-V.
 
 > [!NOTE]
 > No Windows Server 2012 R2, o gateway RAS é chamado de gateway RRAS; e, no System Center Virtual Machine Manager, o gateway RAS é chamado de gateway do Windows Server.

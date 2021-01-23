@@ -1,28 +1,27 @@
 ---
 title: Saída monitoração na rede virtual
-description: Um aspecto fundamental do monetização de rede em nuvem é A saída da largura de banda da rede. Por exemplo-transferências de dados de saída no modelo de negócios Microsoft Azure. Os dados de saída são cobrados com base na quantidade total de dados que saem dos data centers do Azure pela Internet em um determinado ciclo de cobrança.
+description: Um aspecto fundamental do monetização de rede em nuvem é a egresso da largura de banda da rede, por exemplo, transferências de dados de saída no modelo de negócios Microsoft Azure. Os dados de saída são cobrados com base na quantidade total de dados que saem dos data centers do Azure pela Internet em um determinado ciclo de cobrança.
 manager: grcusanz
 ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 10/02/2018
-ms.openlocfilehash: 821adcc4ae3ac99a92de8b0b57e3248be1786ce3
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9af91caea19536a457cc26db10370a0c4d592e4c
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947272"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98715992"
 ---
 # <a name="egress-metering-in-a-virtual-network"></a>Saída de medição em uma rede virtual
 
->Aplica-se a: Windows Server 2019
-
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Um aspecto fundamental do monetização de rede em nuvem é ser capaz de cobrar pela utilização da largura de banda da rede. Os dados de saída são cobrados com base na quantidade total de dados que saem do data center pela Internet em um determinado ciclo de cobrança.
 
 A medição de saída para o tráfego de rede SDN no Windows Server 2019 permite a capacidade de oferecer medidores de uso para transferências de dados de saída. O tráfego de rede que deixa cada rede virtual, mas permanece dentro do data center pode ser acompanhado separadamente para que possa ser excluído dos cálculos de cobrança. Os pacotes associados aos endereços IP de destino que não estão incluídos em um dos intervalos de endereços não faturados são controlados como transferências de dados de saída cobradas.
 
-## <a name="virtual-network-unbilled-address-ranges-allowlist-of-ip-ranges"></a>Intervalos de endereços não faturados da rede virtual (lista de permissões de intervalos de IP)
+## <a name="virtual-network-unbilled-address-ranges-allow-list-of-ip-ranges"></a>Intervalos de endereços não faturados da rede virtual (lista de permissões de intervalos de IP)
 
 Você pode encontrar intervalos de endereços não faturados na propriedade **UnbilledAddressRanges** de uma rede virtual existente. Por padrão, não há nenhum intervalo de endereços adicionado.
 

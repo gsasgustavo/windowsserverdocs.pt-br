@@ -7,16 +7,16 @@ ms.assetid: 6a7ac5af-85e9-4440-a631-6a3a38e9015d
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/27/2018
-ms.openlocfilehash: f96f41f18b57e53ebe01c70b6775d3608d06b28c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6810ffac057edce99696a394fc652833e6791796
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953992"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716922"
 ---
 # <a name="use-access-control-lists-acls-to-manage-datacenter-network-traffic-flow"></a>Usar ACLs (listas de controle de acesso) para gerenciar o fluxo de tráfego de rede do datacenter
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprenderá a configurar listas de controle de acesso (ACLs) para gerenciar o fluxo de tráfego de dados usando o Firewall do datacenter e as ACLs em sub-redes virtuais. Você habilita e configura o Firewall do datacenter criando ACLs que são aplicadas a uma sub-rede virtual ou a uma interface de rede.
 
@@ -31,8 +31,8 @@ Use as entradas na tabela a seguir para criar um conjunto de regras que permitem
 
 | IP de origem | IP de destino | Protocolo | Porta de origem | Porta de destino | Direção | Ação | Prioridade |
 |:---------:|:--------------:|:--------:|:-----------:|:----------------:|:---------:|:------:|:--------:|
-|    \*     |       \*       |   Todos    |     \*      |        \*        |  Entrada  | Allow  |   100    |
-|    \*     |       \*       |   Todos    |     \*      |        \*        | Saída  | Allow  |   110    |
+|    \*     |       \*       |   Tudo    |     \*      |        \*        |  Entrada  | Allow  |   100    |
+|    \*     |       \*       |   Tudo    |     \*      |        \*        | Saída  | Allow  |   110    |
 
 ---
 
@@ -86,12 +86,12 @@ Neste exemplo, você cria uma ACL que impede que as VMs na sub-rede 192.168.0.0/
 
 |   IP de origem    | IP de destino | Protocolo | Porta de origem | Porta de destino | Direção | Ação | Prioridade |
 |:--------------:|:--------------:|:--------:|:-----------:|:----------------:|:---------:|:------:|:--------:|
-|  192.168.0.1   |       \*       |   Todos    |     \*      |        \*        |  Entrada  | Allow  |   100    |
-|       \*       |  192.168.0.1   |   Todos    |     \*      |        \*        | Saída  | Allow  |   101    |
-| 192.168.0.0/24 |       \*       |   Todos    |     \*      |        \*        |  Entrada  | Bloquear  |   102    |
-|       \*       | 192.168.0.0/24 |   Todos    |     \*      |        \*        | Saída  | Bloquear  |   103    |
-|       \*       |       \*       |   Todos    |     \*      |        \*        |  Entrada  | Allow  |   104    |
-|       \*       |       \*       |   Todos    |     \*      |        \*        | Saída  | Allow  |   105    |
+|  192.168.0.1   |       \*       |   Tudo    |     \*      |        \*        |  Entrada  | Allow  |   100    |
+|       \*       |  192.168.0.1   |   Tudo    |     \*      |        \*        | Saída  | Allow  |   101    |
+| 192.168.0.0/24 |       \*       |   Tudo    |     \*      |        \*        |  Entrada  | Bloquear  |   102    |
+|       \*       | 192.168.0.0/24 |   Tudo    |     \*      |        \*        | Saída  | Bloquear  |   103    |
+|       \*       |       \*       |   Tudo    |     \*      |        \*        |  Entrada  | Allow  |   104    |
+|       \*       |       \*       |   Tudo    |     \*      |        \*        | Saída  | Allow  |   105    |
 
 ---
 

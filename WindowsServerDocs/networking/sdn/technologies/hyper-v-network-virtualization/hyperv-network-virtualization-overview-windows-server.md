@@ -1,24 +1,24 @@
 ---
-title: Visão geral da virtualização de rede Hyper-V no Windows Server 2016
-description: Este tópico fornece uma visão geral da virtualização de rede Hyper-V no Windows Server 2016
+title: Visão geral da virtualização de rede Hyper-V no Windows Server
+description: Este tópico fornece uma visão geral da virtualização de rede Hyper-V no Windows Server 2019 e 2016
 manager: grcusanz
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: 7e4483218c35a99f898701fbdd7fdbe86b021206
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: a11c73eda48819e44e30df6121193ddb6ae7ddd2
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949092"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716212"
 ---
-# <a name="hyper-v-network-virtualization-overview-in-windows-server-2016"></a>Visão geral da virtualização de rede Hyper-V no Windows Server 2016
+# <a name="hyper-v-network-virtualization-overview-in-windows-server"></a>Visão geral da virtualização de rede Hyper-V no Windows Server
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-No Windows Server 2016 e Virtual Machine Manager, a Microsoft fornece uma solução de virtualização de rede de ponta a ponta.  Há cinco componentes principais que compõem a solução de virtualização de rede da Microsoft:
+No Windows Server e no Virtual Machine Manager, a Microsoft fornece uma solução de virtualização de rede de ponta a ponta.  Há cinco componentes principais que compõem a solução de virtualização de rede da Microsoft:
 
 -   O **pacote do Microsoft Azure para Windows Server** fornece um portal voltado para o locatário para criar redes virtuais e um portal administrativo para gerenciar redes virtuais.
 
@@ -130,7 +130,7 @@ Veja a seguir uma lista dos principais recursos, benefícios e funcionalidades d
 ## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>Requisitos de software
 A virtualização de rede Hyper-V usando o controlador de rede da Microsoft requer o Windows Server 2016 e a função Hyper-V.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Veja também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Confira também
 Para saber mais sobre a virtualização de rede Hyper-V no Windows Server 2016, consulte os links a seguir:
 
 

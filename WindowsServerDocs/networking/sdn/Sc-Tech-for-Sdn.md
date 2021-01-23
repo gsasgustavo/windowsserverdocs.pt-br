@@ -7,16 +7,16 @@ ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 12/08/2020
-ms.openlocfilehash: 1dcd639f4c97b48ec03d56a6c3e2dbbd794ea8d1
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 40198827f359c98f7572078efdf1a6d3ed2dc33b
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949672"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716152"
 ---
 # <a name="system-center-technologies-for-sdn"></a>Tecnologias do System Center para SDN
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 O System Center inclui as seguintes tecnologias para uso com a SDN (rede definida pelo software):
 
@@ -26,12 +26,12 @@ O System Center inclui as seguintes tecnologias para uso com a SDN (rede definid
 
 
 ## <a name="system-center-operations-manager"></a><a name="bkmk_scom"></a>System Center Operations Manager
-O System Center 2016 Operations Manager fornece monitoramento de infraestrutura flexível e econômico, ajuda a garantir o desempenho previsível e a disponibilidade de aplicativos vitais e oferece monitoramento abrangente para seu datacenter e nuvem, tanto privados como públicos.
+O System Center 2019 e 2016 Operations Manager fornecem monitoramento de infraestrutura flexível e econômico, ajuda a garantir o desempenho previsível e a disponibilidade de aplicativos vitais, além de oferecer monitoramento abrangente para seu datacenter e nuvem, tanto privados como públicos.
 
-Para obter mais informações, consulte [Operations Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12)).
+Para obter mais informações, consulte [Operations Manager](/system-center/scom/welcome?view=sc-om-2019)
 
 ## <a name="system-center-virtual-machine-manager"></a><a name="bkmk_scvmm"></a>System Center Virtual Machine Manager
-Com o VMM (System Center 2016 Virtual Machine Manager), você pode:
+Com o System Center 2019 e 2016 Virtual Machine Manager (VMM), você pode:
 
 - Provisionar e gerenciar redes virtuais em grande escala.
 - Implante e gerencie a infraestrutura SDN, incluindo controladores de rede, balanceadores de carga de software e gateways.

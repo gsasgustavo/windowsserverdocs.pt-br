@@ -1,22 +1,22 @@
 ---
 title: Implantar uma infraestrutura de rede definida pelo software
-description: Este tópico fornece links para tópicos sobre como implantar uma infraestrutura de SDN (rede definida pelo software) da Microsoft usando scripts no Windows Server 2016.
+description: Este tópico fornece links para tópicos sobre como implantar uma infraestrutura de SDN (rede definida pelo software) da Microsoft usando scripts no Windows Server 2019 e 2016.
 ms.topic: how-to
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 ms.date: 08/23/2018
 ms.author: anpaul
 author: AnirbanPaul
 manager: grcusanz
-ms.openlocfilehash: 43bb1af29735dd1bf8ba911690abb78a09f1cf0d
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: a9ce251488d80b4e5180d1641bc2157227d08d71
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97950112"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716012"
 ---
 # <a name="deploy-a-software-defined-network-infrastructure"></a>Implantar uma infraestrutura de rede definida pelo software
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Implante a infraestrutura de SDN (rede definida pelo software) da Microsoft.
 

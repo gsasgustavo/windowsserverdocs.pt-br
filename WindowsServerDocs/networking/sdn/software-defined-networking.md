@@ -7,24 +7,24 @@ ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/09/2018
-ms.openlocfilehash: ac42422a8827f3c31bc7a5dd8326865fb730e50e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: aa5ff02e7bbb790b8d7af2b2dd7d7f478c2e3d0a
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966643"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716952"
 ---
 # <a name="sdn-in-windows-server-overview"></a>SDN na visão geral do Windows Server
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 
 A Rede Definida pelo Software (SDN) fornece um método para configurar e gerenciar centralmente dispositivos de rede física e virtual, como roteadores, comutadores e gateways no seu data center. Você pode usar seus dispositivos existentes compatíveis com SDN para obter uma integração mais profunda entre a rede virtual e a rede física. Elementos de rede virtual, como comutador virtual Hyper-v, virtualização de rede Hyper-x e gateway RAS, são projetados para serem elementos integrantes da sua infraestrutura de SDN.
 
 >[!Note]
->Hosts Hyper-V e máquinas virtuais (VMs) executando servidores de infraestrutura SDN, como controladores de rede e nós de balanceamento de carga de software, devem ter o Windows Server 2016 Datacenter Edition instalado.
+>Hosts Hyper-V e máquinas virtuais (VMs) executando servidores de infraestrutura SDN, como controladores de rede e nós de balanceamento de carga de software, devem ter o Windows Server 2019 ou 2016 Datacenter Edition instalado.
 >
->Os hosts do Hyper-V que contêm apenas VMs de carga de trabalho de locatário conectadas a redes controladas por SDN podem usar o Windows Server 2016 Standard Edition.
+>Os hosts do Hyper-V que contêm apenas VMs de carga de trabalho de locatário conectadas a redes controladas por SDN podem usar o Windows Server 2019 ou 2016 Standard Edition.
 
 O SDN é possível porque os planos de rede não estão mais ligados aos próprios dispositivos de rede. No entanto, outras entidades, como software de gerenciamento de datacenter, como o System Center 2016, usam planos de rede. O SDN permite que você gerencie sua rede de datacenter dinamicamente, fornecendo uma maneira automatizada e centralizada para atender aos requisitos de seus aplicativos e cargas de trabalho.
 

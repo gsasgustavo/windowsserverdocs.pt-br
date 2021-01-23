@@ -7,16 +7,16 @@ ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: 6acfb6cbd3a8eaa528dd7457d5de008209b99ad3
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: c99da7531df37500e7c1e0d05dfc5f755a1253c0
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948392"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716142"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>Entrar em contato com a equipe de rede na nuvem e Datacenter
 
-> Aplica-se a: Windows Server 2016
+> Aplica-se a: Windows Server 2019, Windows Server 2016
 
 As soluções de redes de **contêiner** e **\( Sdn \) de rede definidas pelo software** da Microsoft são criadas pelo datacenter e pela equipe de rede de nuvem. Use esta página para estar em contato com a equipe – para fazer perguntas, fornecer comentários, relatar bugs ou fazer solicitações de recursos.
 

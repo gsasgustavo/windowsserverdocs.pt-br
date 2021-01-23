@@ -7,16 +7,16 @@ ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 6d597d4ced923c751e54ed4678ffb2d956a7b471
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5c05a611b19248db46e92b23edf7a02eee05a008
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994765"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716092"
 ---
 # <a name="guest-clustering-in-a-virtual-network"></a>Clustering convidado em uma rede virtual
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 As máquinas virtuais conectadas a uma rede virtual só têm permissão para usar os endereços IP que o controlador de rede atribuiu para se comunicar na rede.  As tecnologias de clustering que exigem um endereço IP flutuante, como o clustering de failover da Microsoft, exigem algumas etapas adicionais para funcionar corretamente.
 
@@ -148,13 +148,13 @@ Você pode usar as etapas a seguir para configurar um cluster de failover do.
 2. Crie o cluster em um nó.
 
    ```PowerShell
-   New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
+   New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
    ```
 
 3. Pare o recurso de cluster.
 
    ```PowerShell
-   Stop-ClusterResource "Cluster Name" 
+   Stop-ClusterResource "Cluster Name" 
    ```
 
 4. Defina o IP do cluster e a porta de investigação.<p>O endereço IP deve corresponder ao endereço IP de front-end usado no exemplo anterior, e a porta de investigação deve corresponder à porta de investigação no exemplo anterior.
@@ -166,14 +166,14 @@ Você pode usar as etapas a seguir para configurar um cluster de failover do.
 5. Inicie os recursos de cluster.
 
    ```PowerShell
-    Start-ClusterResource "Cluster IP Address"  -Wait 60 
-    Start-ClusterResource "Cluster Name"  -Wait 60 
+    Start-ClusterResource "Cluster IP Address"  -Wait 60 
+    Start-ClusterResource "Cluster Name"  -Wait 60 
    ```
 
 6. Adicione os nós restantes.
 
    ```PowerShell
-   Add-ClusterNode $nodes[1]
+   Add-ClusterNode $nodes[1]
    ```
 
 _**O cluster está ativo.**_ O tráfego que vai para o VIP na porta especificada é direcionado para o nó ativo.

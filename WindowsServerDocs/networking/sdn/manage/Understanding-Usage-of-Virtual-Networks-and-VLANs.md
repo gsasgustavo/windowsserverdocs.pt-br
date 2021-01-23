@@ -7,21 +7,18 @@ ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 1f1f1f56fbac8c7faa7628ac0adb0cbeef3a78d3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 58ab0a66e5f08ba9661326b418170563a56a86a4
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962204"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716652"
 ---
 # <a name="understand-the-usage-of-virtual-networks-and-vlans"></a>Entender o uso de redes virtuais e VLANs
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprende sobre as redes virtuais de virtualização de rede Hyper-V e como elas diferem das VLANs (redes locais virtuais). Com a virtualização de rede Hyper-V, você cria sobreposição de redes virtuais, também chamadas de redes virtuais.
-
-
-
 
 A SDN (rede definida pelo software) no Windows Server 2016 é baseada na política de programação para sobreposição de redes virtuais em um comutador virtual do Hyper-V. Você pode criar sobreposição de redes virtuais, também chamadas de redes virtuais, com virtualização de rede Hyper-V.
 
@@ -34,5 +31,3 @@ A rede física na qual o tráfego encapsulado de cada locatário é encapsulado 
 Você pode criar redes lógicas e sub-redes adicionais para fins de infraestrutura para transportar o tráfego de gerenciamento, o tráfego de armazenamento, o tráfego de migração ao vivo, etc.
 
 O Microsoft SDN não oferece suporte ao isolamento de redes de locatário usando VLANs. O isolamento de locatário é realizado unicamente usando a sobreposição de redes virtuais e encapsulamento de virtualização de rede Hyper-V.
-
-

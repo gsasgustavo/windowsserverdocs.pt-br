@@ -7,16 +7,16 @@ ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: 2ca1c308ee38726d02ef19ebdfa4c83086fef0a7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: ad45131964eb44af2e55f005dd52e43f69d321db
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995147"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716712"
 ---
 # <a name="create-a-vm-and-connect-to-a-tenant-virtual-network-or-vlan"></a>Criar uma máquina virtual e se conectar a uma rede virtual de locatário ou VLAN
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você cria uma VM de locatário e a conecta a uma rede virtual que você criou com a virtualização de rede Hyper-V ou a uma rede de área local virtual (VLAN). Você pode usar os cmdlets do controlador de rede do Windows PowerShell para se conectar a uma rede virtual ou NetworkControllerRESTWrappers para se conectar a uma VLAN.
 

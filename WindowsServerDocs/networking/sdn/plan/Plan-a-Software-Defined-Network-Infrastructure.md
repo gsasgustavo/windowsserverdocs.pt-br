@@ -7,28 +7,27 @@ ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: 1d461d8da9c19e0aa755d4173f86050a7b389062
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 0473b130b53018132ff5e705808a6fd3e37fccaa
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949982"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716492"
 ---
 # <a name="plan-a-software-defined-network-infrastructure"></a>Planejar uma infraestrutura de rede definida pelo software
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Saiba mais sobre o planejamento de implantação para uma infraestrutura de rede definida pelo software, incluindo os pré-requisitos de hardware e software.
-
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Este tópico descreve uma série de pré-requisitos de hardware e software, incluindo:
 
--   **Grupos de segurança configurados, locais de arquivos de log e registro de DNS dinâmico** Você deve preparar o datacenter para a implantação do controlador de rede, o que exige um ou mais computadores ou VMs e um computador ou VM. Antes de implantar o controlador de rede, você deve configurar os grupos de segurança, os locais do arquivo de log (se necessário) e o registro de DNS dinâmico.  Se você não preparou seu datacenter para a implantação do controlador de rede, consulte [requisitos de instalação e preparação para implantar o controlador de rede](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md) para obter detalhes.
+-   **Grupos de segurança configurados, locais de arquivos de log e registro de DNS dinâmico.** Você deve preparar o datacenter para a implantação do controlador de rede, o que exige um ou mais computadores ou VMs e um computador ou VM. Antes de implantar o controlador de rede, você deve configurar os grupos de segurança, os locais do arquivo de log (se necessário) e o registro de DNS dinâmico.  Se você não preparou seu datacenter para a implantação do controlador de rede, consulte [requisitos de instalação e preparação para implantar o controlador de rede](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md) para obter detalhes.
 
--   **Rede física**  Você precisa acessar seus dispositivos de rede física para configurar VLANs, roteamento, BGP, Data Center Bridging (ETS) se estiver usando uma tecnologia RDMA e a ponte do Data Center (PFC) se estiver usando uma tecnologia RDMA baseada em RoCE. Este tópico mostra a configuração manual do comutador, bem como o emparelhamento via protocolo BGP em comutadores/roteadores de camada 3, ou em uma máquina virtual RRAS (servidor de roteamento e acesso remoto).
+-   **Rede física.**  Você precisa acessar seus dispositivos de rede física para configurar VLANs, roteamento, BGP, Data Center Bridging (ETS) se estiver usando uma tecnologia RDMA e a ponte do Data Center (PFC) se estiver usando uma tecnologia RDMA baseada em RoCE. Este tópico mostra a configuração manual do comutador, bem como o emparelhamento via protocolo BGP em comutadores/roteadores de camada 3, ou em uma máquina virtual RRAS (servidor de roteamento e acesso remoto).
 
--   **Hosts de computação física**  Esses hosts executam o Hyper-V e são necessários para hospedar máquinas virtuais de locatário e infraestrutura de SDN.  O hardware de rede específico é necessário nesses hosts para obter o melhor desempenho, que é descrito posteriormente na seção **hardware de rede** .
+-   **Hosts de computação física.**  Esses hosts executam o Hyper-V e são necessários para hospedar máquinas virtuais de locatário e infraestrutura de SDN.  O hardware de rede específico é necessário nesses hosts para obter o melhor desempenho, que é descrito posteriormente na seção **hardware de rede** .
 
 
 ## <a name="physical-network-and-compute-host-configuration"></a>Configuração de host de computação e rede física
@@ -74,7 +73,7 @@ Redes lógicas adicionais precisam ser criadas e provisionadas para o uso de gat
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   **Rede lógica de trânsito**   | O gateway RAS e o SLB/MUX usam a rede lógica de trânsito para trocar informações de emparelhamento de BGP e tráfego de locatário de Norte/Sul (externo interno). O tamanho dessa sub-rede normalmente será menor do que as outras. Somente os hosts de computação física que executam o gateway RAS ou máquinas virtuais SLB/MUX precisam ter conectividade com essa sub-rede com essas VLANs trunked e acessíveis nas portas do comutador às quais os adaptadores de rede dos hosts de computação estão conectados. Cada máquina virtual SLB/MUX ou gateway RAS é atribuída estaticamente a um endereço IP da rede lógica de trânsito. |
 | **Rede lógica VIP pública**  |                                                                                                                             A rede lógica VIP pública é necessária para ter prefixos de sub-rede IP roteáveis fora do ambiente de nuvem (normalmente Internet roteável).  Esses serão os endereços IP de front-end usados por clientes externos para acessar recursos nas redes virtuais, incluindo o VIP de front-end para o Gateway site a site.                                                                                                                             |
-| **Rede lógica VIP privada** |                                                                                                                                                                                       A rede lógica VIP privada não precisa ser roteável fora da nuvem, pois ela é usada para VIPs que são acessados somente de clientes de nuvem internos, como o SLB Manager ou serviços privados.                                                                                                                                                                                       |
+| **Rede lógica VIP privada** |                                                                                                                                                                                       A rede lógica VIP privada não precisa ser roteável fora da nuvem, pois é usada para VIPs que são acessados somente de clientes de nuvem internos, como o Gerenciador de SLB ou serviços privados.                                                                                                                                                                                       |
 |   **Rede lógica VIP GRE**   |                                                                                                                                           A rede de VIP do GRE é uma sub-rede que existe somente para definir VIPs atribuídos às máquinas virtuais de gateway que está sendo executado em sua malha SDN para um tipo de conexão GRE S2S. Essa rede não precisa ser pré-configurada em seus comutadores físicos ou no roteador nem precisa ter uma VLAN atribuída.                                                                                                                                            |
 
 ---
@@ -199,7 +198,7 @@ Os itens a seguir fornecem disponibilidade e redundância.
 
 Os itens a seguir fornecem recursos de gerenciamento.
 
-**Monitoring**
+**Monitoramento**
 
 - SNMP v1 ou SNMP v2 (necessário se estiver usando o controlador de rede para o monitoramento de comutador físico)
 - MIBs \( de SNMP são necessárias se você estiver usando o controlador de rede para monitoramento de comutador físico\)

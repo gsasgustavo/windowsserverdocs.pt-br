@@ -7,16 +7,16 @@ ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: 95307dafd077f1efc3b44131494ced709334a2d8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3b7bbec3cb145d9cb5fbd2339e2150e2dc01286b
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962220"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716822"
 ---
 # <a name="configure-quality-of-service-qos-for-a-tenant-vm-network-adapter"></a>Configurar a QoS (qualidade de serviço) para um adaptador de rede de VM de locatário
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Ao configurar a QoS para um adaptador de rede de VM de locatário, você tem uma opção entre a ponte de data center \( DCB \) ou a rede definida pelo software \( QoS de Sdn \) .
 

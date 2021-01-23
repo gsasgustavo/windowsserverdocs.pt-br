@@ -1,24 +1,24 @@
 ---
 title: Implantar o controlador de rede usando o Windows PowerShell
-description: Este tópico fornece instruções sobre como usar o Windows PowerShell para implantar o controlador de rede em um ou mais computadores ou máquinas virtuais (VMs) que executam o Windows Server 2016.
+description: Este tópico fornece instruções sobre como usar o Windows PowerShell para implantar o controlador de rede em um ou mais computadores ou máquinas virtuais (VMs) que executam o Windows Server 2019 ou 2016.
 ms.topic: how-to
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: anpaul
 author: AnirbanPaul
 manager: grcusanz
 ms.date: 08/23/2018
-ms.openlocfilehash: 78adaa6182ed24596471cb0ed5f1a736417af4d9
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 3e7e020dfa5567608c53d41c4478a54ba89fb720
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948382"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716222"
 ---
 # <a name="deploy-network-controller-using-windows-powershell"></a>Implantar o controlador de rede usando o Windows PowerShell
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
-Este tópico fornece instruções sobre como usar o Windows PowerShell para implantar o controlador de rede em uma ou mais máquinas virtuais (VMs) que executam o Windows Server 2016.
+Este tópico fornece instruções sobre como usar o Windows PowerShell para implantar o controlador de rede em uma ou mais máquinas virtuais (VMs) que executam o Windows Server 2019 ou 2016.
 
 >[!IMPORTANT]
 >Não implante a função de servidor do controlador de rede em hosts físicos. Para implantar o controlador de rede, você deve instalar a função de servidor do controlador de rede em uma VM de máquina virtual do Hyper-V \( \) instalada em um host do Hyper-v. Depois de ter instalado o controlador de rede em VMs em três \- hosts Hyper-v diferentes, você deve habilitar os \- hosts Hyper v para o Sdn de rede definido pelo software \( \) adicionando os hosts ao controlador de rede usando o comando **New-NetworkControllerServer** do Windows PowerShell. Ao fazer isso, você está permitindo que o software SDN Load Balancer funcione. Para obter mais informações, consulte [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
@@ -82,7 +82,7 @@ A tabela a seguir fornece descrições para cada parâmetro do comando **New-Net
 
 |Parâmetro|Descrição|
 |-------------|---------------|
-|Name|O parâmetro **Name** especifica o nome amigável do servidor que você deseja adicionar ao cluster|
+|Nome|O parâmetro **Name** especifica o nome amigável do servidor que você deseja adicionar ao cluster|
 |Servidor|O parâmetro **Server** especifica o nome do host, o FQDN (nome de domínio totalmente qualificado) ou o endereço IP do servidor que você deseja adicionar ao cluster. Para computadores ingressados no domínio, o FQDN é necessário.|
 |FaultDomain|O parâmetro **FaultDomain** especifica o domínio de falha do servidor que você está adicionando ao cluster. Esse parâmetro define os servidores que podem apresentar falha ao mesmo tempo que o servidor que você está adicionando ao cluster. Essa falha pode ser causada por dependências físicas compartilhadas, como fontes de energia e rede. Os domínios de falha normalmente representam hierarquias relacionadas a essas dependências compartilhadas, com mais servidores que provavelmente falham juntos em um ponto mais alto na árvore de domínio de falha. Durante o tempo de execução, o controlador de rede considera os domínios de falha no cluster e tenta distribuir os serviços do controlador de rede para que eles estejam em domínios de falha separados. Esse processo ajuda a garantir que, em caso de falha de qualquer domínio de falha, a disponibilidade do serviço e seu estado não sejam comprometidos. Os domínios de falha são especificados em um formato hierárquico. Por exemplo: "FD:/DC1/Rack1/Host1", em que DC1 é o nome do datacenter, Rack1 é o nome do rack e Host1 é o nome do host onde o nó é colocado.|
 |RestInterface|O parâmetro **RestInterface** especifica o nome da interface no nó em que a comunicação de transferência de estado de reapresentação (REST) é encerrada. Essa interface de controlador de rede recebe solicitações de API Northbound da camada de gerenciamento da rede.|

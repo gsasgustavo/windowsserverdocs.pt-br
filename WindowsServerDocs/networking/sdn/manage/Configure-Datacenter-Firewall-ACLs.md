@@ -7,16 +7,16 @@ ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: da5b34556f0a9fd65a4a56adc778666f6911b449
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e466b84846a9180c9f438eda28aacbdab7b3f6fc
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995175"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716832"
 ---
 # <a name="configure-datacenter-firewall-access-control-lists-acls"></a>Configurar listas de controle de acesso (ACLs) do firewall do datacenter
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Depois de criar uma ACL e atribuí-la a uma sub-rede virtual, talvez você queira substituir essa ACL padrão na sub-rede virtual por uma ACL específica para uma interface de rede individual.  Nesse caso, você aplica ACLs específicas diretamente às interfaces de rede anexadas a VLANs, em vez da rede virtual. Se você tiver ACLs definidas na sub-rede virtual conectada à interface de rede, ambas as ACLs serão aplicadas e priorizará as ACLs de interface de rede acima das ACLs de sub-rede virtual.
 

@@ -7,14 +7,16 @@ ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/30/2018
-ms.openlocfilehash: c66030d1940bca12ab603767da2d17d1086004a6
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: de9f178d6f70478de162db9c063d414b021c9d1e
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996541"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716472"
 ---
 # <a name="secure-the-network-controller"></a>Proteger o controlador de rede
+
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprenderá a configurar a segurança para toda a comunicação entre o [controlador de rede](../technologies/network-controller/network-controller.md) e outros softwares e dispositivos.
 

@@ -1,22 +1,22 @@
 ---
 title: Alta disponibilidade do controlador de rede
-description: Você pode usar este tópico para saber mais sobre a alta disponibilidade do controlador de rede para SDN (rede definida pelo software) no Windows Server 2016.
+description: Você pode usar este tópico para saber mais sobre a alta disponibilidade do controlador de rede para SDN (rede definida pelo software) no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 12/08/2020
-ms.openlocfilehash: fe0967334e993c44d0edc38417998f51c8376262
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 5990591e087561ff8e327cca8db489fda501b86c
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949102"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716392"
 ---
 # <a name="network-controller-high-availability"></a>Alta disponibilidade do controlador de rede
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Você pode usar este tópico para saber mais sobre a configuração de alta disponibilidade e escalabilidade do controlador de rede para Sdn de rede definida pelo software \( \) .
 

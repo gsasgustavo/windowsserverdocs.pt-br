@@ -7,16 +7,16 @@ ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: b0d7b860d783a441991804eb0b6b9892d196e746
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 831fbaac35124d050432d4f3fbccc00b6f9b5f63
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970793"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716783"
 ---
 # <a name="create-delete-or-update-tenant-virtual-networks"></a>Criar, excluir ou atualizar redes virtuais do locatário
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprenderá a criar, excluir e atualizar redes virtuais de virtualização de rede Hyper-V depois de implantar o SDN (rede definida pelo software). A virtualização de rede Hyper-V ajuda você a isolar redes de locatários para que cada rede de locatários seja uma entidade separada. Cada entidade não tem nenhuma possibilidade de conexão cruzada, a menos que você configure cargas de trabalho de acesso público.
 

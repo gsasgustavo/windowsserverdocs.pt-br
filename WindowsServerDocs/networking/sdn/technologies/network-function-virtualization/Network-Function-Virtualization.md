@@ -1,22 +1,22 @@
 ---
 title: Virtualização de função de rede
-description: Você pode usar este tópico para saber mais sobre a virtualização de função de rede, que permite implantar dispositivos de rede virtual como firewall de datacenter, gateway de RAS multilocatário e SLB (balanceamento de carga de software) no Windows Server 2016.
+description: Você pode usar este tópico para saber mais sobre a virtualização de função de rede, que permite implantar dispositivos de rede virtual como firewall de datacenter, gateway de RAS multilocatário e SLB (balanceamento de carga de software) no Windows Server 2019 e 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: b5b2b4bb93a9d90e9c74f8310430ef3e7d826f1d
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9f35ff0cea3800eb3f5b86bcb9466f5ec2c5d665
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949082"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716692"
 ---
 # <a name="network-function-virtualization"></a>Virtualização de função de rede
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Você pode usar este tópico para saber mais sobre a virtualização de função de rede, que permite implantar dispositivos de rede virtual, como o Firewall do datacenter, o gateway de RAS multilocatário e o multiplexador SLB de balanceamento de carga de software \( \) \( MUX \) .
 
@@ -66,7 +66,7 @@ O Marketplace para funções de rede virtualizadas está crescendo rapidamente. 
 
 -   **Otimizadores de aplicativo/WAN**
 
--   **Microsoft Edge**
+-   **Perímetro**
 
     -   Gateway site a site
 

@@ -7,16 +7,16 @@ ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/14/2018
-ms.openlocfilehash: 2bf186d2f8761ca51c77b4d02489b0d85c53e046
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8069bee3933e64e47a9bc9fc3259201dda68c669
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990159"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716632"
 ---
 # <a name="troubleshoot-the-windows-server-software-defined-networking-stack"></a>Solucionar problemas de pilha de rede definida do Windows Server Software
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Este guia examina os erros comuns de SDN (rede definida pelo software) e os cenários de falha e descreve um fluxo de trabalho de solução de problemas que aproveita as ferramentas de diagnóstico disponíveis.
 
@@ -61,7 +61,7 @@ Esses cmdlets estão documentados no TechNet no [tópico do cmdlet de diagnósti
 ### <a name="hyper-v-host-diagnostics"></a>Diagnóstico de host do Hyper-V
 Esses cmdlets estão documentados no TechNet no [tópico do cmdlet de diagnóstico de HNV (virtualização de rede) do Hyper-V](/powershell/module/hnvdiagnostics/). Eles ajudam a identificar problemas no caminho de dados entre as máquinas virtuais de locatário (leste/oeste) e o tráfego de entrada por meio de um VIP SLB (Norte/Sul).
 
-O _debug-VirtualMachineQueueOperation_, o _Get-CustomerRoute_, o _Get-PACAMapping_, o _Get-ProviderAddress_, o _Get-VMNetworkAdapterPortId_, o _Get-VMSwitchExternalPortId_e o _Test-EncapOverheadSettings_ são todos os testes locais que podem ser executados em qualquer host Hyper-V. Os outros cmdlets invocam testes de caminho de dados por meio do controlador de rede e, portanto, precisam de acesso ao controlador de rede como Descried acima.
+O _debug-VirtualMachineQueueOperation_, o _Get-CustomerRoute_, o _Get-PACAMapping_, o _Get-ProviderAddress_, o _Get-VMNetworkAdapterPortId_, o _Get-VMSwitchExternalPortId_ e o _Test-EncapOverheadSettings_ são todos os testes locais que podem ser executados em qualquer host Hyper-V. Os outros cmdlets invocam testes de caminho de dados por meio do controlador de rede e, portanto, precisam de acesso ao controlador de rede como Descried acima.
 
 ### <a name="github"></a>GitHub
 O [repositório GitHub Microsoft/Sdn](https://github.com/microsoft/sdn) tem vários scripts de exemplo e fluxos de trabalho que se baseiam nesses cmdlets na caixa. Em particular, os scripts de diagnóstico podem ser encontrados na pasta de [diagnóstico](https://github.com/Microsoft/sdn/diagnostics) . Ajude-nos a contribuir com esses scripts enviando solicitações pull.
@@ -114,9 +114,9 @@ Message:          Host is not Connected.
 
 A tabela a seguir mostra a lista de códigos de erro, mensagens e ações de acompanhamento a serem executadas com base no estado de configuração observado.
 
-| **Código** | **Message** | **Ação** |
+| **Código** | **Mensagem** | **Ação** |
 |--|--|--|
-| Unknown (desconhecido) | Erro desconhecido |  |
+| Unknown | Erro desconhecido |  |
 | HostUnreachable | O computador host não está acessível | Verificar a conectividade de rede de gerenciamento entre o controlador de rede e o host |
 | PAIpAddressExhausted | Os endereços IP PA foram exauridos | Aumentar o tamanho do pool de IPS da sub-rede lógica do provedor HNV |
 | PAMacAddressExhausted | Os endereços MAC do PA esgotados | Aumentar o intervalo do pool de Mac |
@@ -231,7 +231,7 @@ Properties       : Microsoft.Windows.NetworkController.ServerProperties
 
 *Correção* Se estiver usando scripts SDNExpress ou implantação manual, atualize a chave de hostid no registro para corresponder à ID de instância do recurso de servidor. Reinicie o agente de host do controlador de rede no host do Hyper-V (servidor físico) se estiver usando o VMM, exclua o servidor Hyper-V do VMM e remova a chave do registro hostid. Em seguida, adicione novamente o servidor por meio do VMM.
 
-Verifique se as impressões digitais dos certificados X. 509 usados pelo host do Hyper-V (o nome do host será a entidade) para a comunicação (SouthBound) entre o host Hyper-V (serviço do agente de host do NC) e os nós do controlador de rede são os mesmos. Verifique também se o certificado REST do controlador de rede tem o nome de assunto *CN = <FQDN or IP> *.
+Verifique se as impressões digitais dos certificados X. 509 usados pelo host do Hyper-V (o nome do host será a entidade) para a comunicação (SouthBound) entre o host Hyper-V (serviço do agente de host do NC) e os nós do controlador de rede são os mesmos. Verifique também se o certificado REST do controlador de rede tem o nome de assunto *CN = <FQDN or IP>*.
 
 ```
 # On Hyper-V Host
@@ -345,7 +345,7 @@ PS > (Get-NetworkControllerVirtualgatewayNetworkConnection -ConnectionUri $uri -
 PS > (Get-NetworkControllerVirtualgatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "TenantName").property
 ```
 
-### <a name="hoster-validate-data-plane"></a>Hoster Validar plano de dados
+### <a name="hoster-validate-data-plane"></a>Hoster Validar Data-Plane
 Depois que o controlador de rede foi implantado, as redes virtuais de locatário e as sub-redes foram criadas e as VMs foram anexadas às sub-redes virtuais, testes de nível de malha adicionais podem ser executados pelo hoster para verificar a conectividade do locatário.
 
 #### <a name="check-hnv-provider-logical-network-connectivity"></a>Verificar conectividade de rede lógica do provedor de HNV
@@ -632,7 +632,7 @@ Da mesma forma, quando um host/SLB/gateway é removido do controlador de rede, o
 
 #### <a name="enable-logging"></a>Habilitar o registro em log
 
-O registro em log é habilitado automaticamente quando você instala o cluster do controlador de rede usando o cmdlet **install-NetworkControllerCluster** . Por padrão, os logs são coletados localmente nos nós do controlador de rede em *%systemdrive%\SDNDiagnostics*. É **altamente recomendável** que você altere esse local para que seja um compartilhamento de arquivos remoto (não local).
+O registro em log é habilitado automaticamente quando você instala o cluster do controlador de rede usando o cmdlet  **install-NetworkControllerCluster** . Por padrão, os logs são coletados localmente nos nós do controlador de rede em *%systemdrive%\SDNDiagnostics*. É **altamente recomendável** que você altere esse local para que seja um compartilhamento de arquivos remoto (não local).
 
 Os logs de cluster do controlador de rede são armazenados em *%ProgramData%\Windows Fabric\log\Traces*. Você pode especificar um local centralizado para a coleta de log com o parâmetro **DiagnosticLogLocation** com a recomendação de que esse também seja um compartilhamento de arquivo remoto.
 
@@ -677,7 +677,7 @@ Se um usuário tiver executado o cmdlet _debug-NetworkController_ , logs adicion
 2.  Valide o *SDNSLBMPerfCounters* no perfmon em uma das VMs do nó do controlador de rede (preferivelmente o nó do controlador de rede primário-get-NetworkControllerReplica):
     1.  O mecanismo de Load Balancer (LB) está conectado ao SLBM? (*Total de configurações de LBEngine do SLBM* > 0)
     2.  O SLBM não conhece pelo menos seus pontos de extremidade? (*Total de pontos de extremidade VIP* >= 2)
-    3.  Os hosts do Hyper-V (DIP) estão conectados ao SLBM? (*Clientes HP conectados* = = número de servidores)
+    3.  Os hosts do Hyper-V (DIP) estão conectados ao SLBM? (*Clientes HP conectados*  = = número de servidores)
     4.  O SLBM está conectado ao Muxes? (*Muxes conectado*  ==  *Muxes íntegro no SLBM*  ==  *Muxes Reporting Healthy* = # SLB Muxes VMS).
 3.  Verifique se o roteador BGP configurado está emparelhando com êxito com o SLB MUX
     1.  Se estiver usando o RRAS com acesso remoto (ou seja, máquina virtual BGP):
@@ -687,8 +687,8 @@ Se um usuário tiver executado o cmdlet _debug-NetworkController_ , logs adicion
         1.  Por exemplo: # show BGP Instance
 4.  Validar os contadores *SlbMuxPerfCounters* e *SLBMUX* no perfmon na VM SLB MUX
 5.  Verificar o estado de configuração e os intervalos VIP no recurso do Gerenciador de Load Balancer de software
-    1.  Get-NetworkControllerLoadBalancerConfiguration-Conexãouri <https:// <FQDN or IP> | ConvertTo-JSON-Depth 8 (verificar intervalos VIP em pools de IPS e assegurar o AUTOvip de SLBM (*LoadBalanacerManagerIPAddress*) e quaisquer VIPs voltados para o locatário estão dentro desses intervalos)
-        1. Get-NetworkControllerIpPool-networkid "<ID de recurso de rede lógica VIP pública/privada>"-Subnetid "<ID de recurso de sub-rede lógica VIP pública/privada>"-ResourceId " <IP Pool Resource Id> "-conexãouri $URI | ConvertTo-JSON-profundidade 8
+    1.  Get-NetworkControllerLoadBalancerConfiguration-Conexãouri <https:// <FQDN or IP> | ConvertTo-JSON-Depth 8 (verifique os intervalos VIP em pools de IPS e garanta o AUTOvip de SLBM (*LoadBalanacerManagerIPAddress*) e quaisquer VIPs voltados para o locatário estão dentro desses intervalos)
+        1. Get-NetworkControllerIpPool-networkid "<ID de recurso de rede lógica VIP pública/privada>"-Subnetid "<ID de recurso de sub-rede lógica VIP pública/privada>"-ResourceId " <IP Pool Resource Id> " – conexãouri $URI | ConvertTo-JSON-Depth 8
     2.  Debug-NetworkControllerConfigurationState-
 
 Se qualquer uma das verificações acima falhar, o estado SLB do locatário também estará em um modo de falha.
@@ -710,7 +710,7 @@ Se qualquer uma das verificações acima falhar, o estado SLB do locatário tamb
     1.  Validar pontos de extremidade DIP que são registrados no SLBM que hospedam máquinas virtuais de locatário que correspondem às configurações de IP do pool de endereços de back-end do balanceador de carga
 3.  Hoster Se os pontos de extremidade DIP não forem descobertos ou conectados:
     1.  Verificar *debug-NetworkControllerConfigurationState*
-        1.  Valide se o NC e o agente de host SLB estão conectados com êxito ao coordenador de eventos do controlador de rede usando``netstat -anp tcp |findstr 6640)``
+        1.  Valide se o NC e o agente de host SLB estão conectados com êxito ao coordenador de eventos do controlador de rede usando ``netstat -anp tcp |findstr 6640)``
     2.  Verifique o *hostid* na RegKey do serviço *nchostagent* (o código de erro *HostNotConnected* de referência no apêndice) corresponde à ID de instância do recurso de servidor correspondente ( ``Get-NCServer |convertto-json -depth 8`` )
     3.  Verificar a ID do perfil da porta para a porta da máquina virtual corresponde à ID da instância do recurso NIC da máquina virtual correspondente
 4.  [Provedor de hospedagem] Coletar logs

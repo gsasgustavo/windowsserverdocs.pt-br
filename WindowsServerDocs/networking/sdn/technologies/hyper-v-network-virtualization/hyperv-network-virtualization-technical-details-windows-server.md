@@ -7,16 +7,16 @@ ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
-ms.openlocfilehash: 7b9fdb3e4bb6404e129a97222be9aa3e8adbf614
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 3e7a4c5d52ae9fff29e558bcd8d0bdbc3c9d7d0a
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97949422"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716962"
 ---
 # <a name="hyper-v-network-virtualization-technical-details-in-windows-server-2016"></a>Detalhes técnicos da virtualização de rede Hyper-V no Windows Server 2016
 
->Aplica-se a: Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 A virtualização de servidores permite que várias instâncias do servidor sejam executadas simultaneamente em um único host físico, mas as instâncias do servidor são isoladas umas das outras. Cada máquina virtual opera essencialmente como se fosse o único servidor em execução no computador físico.
 
@@ -256,7 +256,7 @@ A hierarquia de objetos para o vSwitch e a extensão de encaminhamento VFP é a 
 
             -   Tabela de fluxo
 
-            -   Agrupar
+            -   Grupo
 
             -   Regra
 
@@ -285,7 +285,7 @@ Figura 9: Arquitetura de HNV
 ## <a name="summary"></a>Resumo
 Os datacenters baseados em nuvem podem oferecer diversos benefícios, como escalabilidade aprimorada e melhor utilização de recursos. Para aproveitar esses possíveis benefícios, é necessária uma tecnologia que basicamente trate dos problemas de escalabilidade multilocatário em um ambiente dinâmico. A HNV foi projetada para lidar com essas questões e também para aprimorar a eficiência operacional do datacenter, separando a topologia da rede virtual para a topologia da rede física. Com base em um padrão existente, o HNV é executado no datacenter atual e opera com a infraestrutura existente do VXLAN. Os clientes com HNV agora podem consolidar seus data centers em uma nuvem privada ou estender diretamente seus data centers para um ambiente de provedor de servidor de hospedagem com uma nuvem híbrida.
 
-## <a name="see-also"></a><a name="BKMK_LINKS"></a>Veja também
+## <a name="see-also"></a><a name="BKMK_LINKS"></a>Confira também
 Para saber mais sobre o HNVv2, consulte os links a seguir:
 
 

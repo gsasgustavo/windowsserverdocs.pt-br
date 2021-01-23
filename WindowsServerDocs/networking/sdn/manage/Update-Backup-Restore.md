@@ -7,16 +7,16 @@ ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/27/2018
-ms.openlocfilehash: 71ea9f33dbebf34614a67a9c305761d66b31411b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8e8cb44b22751a45c8ea37d652525c01b0a707cb
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993986"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716902"
 ---
 # <a name="upgrade-backup-and-restore-sdn-infrastructure"></a>Atualizar, fazer backup e restaurar a infraestrutura SDN
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprenderá a atualizar, fazer backup e restaurar uma infraestrutura de SDN.
 

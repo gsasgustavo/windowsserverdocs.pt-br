@@ -7,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b9fdfa0dddabd96623532d1b67dc2a189cde66d9
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: aed5fac9cf53ec41d79828ef94eb194b6dfb1d84
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946242"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716942"
 ---
 # <a name="token-signing-certificates"></a>Certificados de autenticação de tokens
 
@@ -44,10 +44,6 @@ O servidor Web no parceiro de recurso usa a chave pública do certificado de aut
 ## <a name="deployment-considerations-for-token-signing-certificates"></a>Considerações de implantação para \- certificados de assinatura de token
 Ao implantar o primeiro servidor de Federação em uma nova instalação do AD FS, você deve obter um \- certificado de autenticação de token e instalá-lo no repositório de certificados pessoal do computador local nesse servidor de Federação. Você pode obter um \- certificado de autenticação de token solicitando um de uma autoridade de certificação corporativa ou uma AC pública ou criando um \- certificado autoassinado.
 
-Quando você implanta um farm de AD FS, os certificados de assinatura de token \- são instalados de forma diferente, dependendo de como você cria o farm de servidores.
-
-Há duas opções de farm de servidores que você pode considerar ao obter \- certificados de assinatura de token para sua implantação:
-
 -   Uma chave privada de um certificado de autenticação de token \- é compartilhada entre todos os servidores de Federação em um farm.
 
     Em um ambiente de farm de servidores de Federação, é recomendável que todos os servidores de Federação compartilhem \( ou reutilizem \) o mesmo certificado de autenticação de token \- . Você pode instalar um único \- certificado de autenticação de token de uma AC em um servidor de Federação e, em seguida, exportar a chave privada, desde que o certificado emitido seja marcado como exportável.
@@ -56,13 +52,6 @@ Há duas opções de farm de servidores que você pode considerar ao obter \- ce
 
     ![A ilustração que mostra a chave privada de um único \- certificado de autenticação de token pode ser compartilhada para todos os servidores de Federação em um farm.](media/adfs2_fedserver_certstory_3.gif)
 
--   Há um \- certificado de autenticação de token exclusivo para cada servidor de Federação em um farm.
-
-    Quando você usa vários certificados exclusivos em todo o farm, cada servidor desse farm assina tokens com sua própria chave privada exclusiva.
-
-    Conforme mostrado na ilustração a seguir, você pode obter um \- certificado de autenticação de tokens separado para cada servidor de Federação único no farm. Essa opção será mais cara se você planeja obter seus \- certificados de assinatura de token de uma AC pública.
-
-    ![assinatura de token](media/adfs2_fedserver_certstory_4.gif)
 
 Para obter informações sobre como instalar um certificado ao usar os serviços de certificados da Microsoft como sua AC corporativa, consulte [IIS 7,0: criar um certificado do servidor de domínio no IIS 7,0](https://go.microsoft.com/fwlink/?LinkId=108548).
 

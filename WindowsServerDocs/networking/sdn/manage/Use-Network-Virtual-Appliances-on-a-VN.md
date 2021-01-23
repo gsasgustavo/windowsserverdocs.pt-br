@@ -7,16 +7,16 @@ ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/30/2018
-ms.openlocfilehash: 3fa6fcd735a2cad6a062d7b2daaa7cf206589c20
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fc263ea778209da699cc7c78fd6111f512760951
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954052"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716892"
 ---
 # <a name="use-network-virtual-appliances-on-a-virtual-network"></a>Usar dispositivos virtuais de rede em uma rede virtual
 
->Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+>Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Neste tópico, você aprenderá a implantar dispositivos de rede virtual em redes virtuais de locatário. Você pode adicionar soluções de virtualização de rede a redes que executam funções de espelhamento de porta e roteamento definidas pelo usuário.
 

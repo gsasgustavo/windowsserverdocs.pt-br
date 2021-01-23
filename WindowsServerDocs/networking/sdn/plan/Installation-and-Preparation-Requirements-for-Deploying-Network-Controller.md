@@ -7,16 +7,16 @@ ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: 74e449b51cb5513e353067e64d41aeedf6652672
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 088ea4a49c2785a691a52a9e816e26a709c19d07
+ms.sourcegitcommit: fb2ae5e6040cbe6dde3a87aee4a78b08f9a9ea7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948372"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98716592"
 ---
 # <a name="requirements-for-deploying-network-controller"></a>Requisitos para a implantação do controlador de rede
 
-> Aplica-se a: Windows Server (Canal Semestral), Windows Server 2016
+> Aplica-se a: Windows Server 2019, Windows Server 2016
 
 Prepare seu datacenter para a implantação do controlador de rede, que exige um ou mais computadores ou VMs e um computador ou VM. Antes de implantar o controlador de rede, você deve configurar os grupos de segurança, os locais do arquivo de log (se necessário) e o registro de DNS dinâmico.
 
@@ -24,8 +24,8 @@ Prepare seu datacenter para a implantação do controlador de rede, que exige um
 
 A implantação do controlador de rede requer um ou mais computadores ou VMs que servem como o controlador de rede e um computador ou VM para servir como um cliente de gerenciamento para o controlador de rede.
 
-- Todas as VMs e computadores planejados como nós do controlador de rede devem estar executando o Windows Server 2016 Datacenter Edition.
-- Qualquer computador ou VM (máquina virtual) no qual você instala o controlador de rede deve estar executando a Datacenter Edition do Windows Server 2016.
+- Todas as VMs e computadores planejados como nós do controlador de rede devem estar executando o Windows Server 2019 ou 2016 Datacenter Edition.
+- Qualquer computador ou VM (máquina virtual) no qual você instala o controlador de rede deve estar executando o Windows Server 2019 ou 2016 Datacenter Edition.
 - O computador cliente de gerenciamento ou a VM para o controlador de rede deve estar executando o Windows 10.
 
 ## <a name="configuration-requirements"></a>Requisitos de configuração
