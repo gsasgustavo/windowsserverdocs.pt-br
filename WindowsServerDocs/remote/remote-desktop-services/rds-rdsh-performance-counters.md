@@ -2,23 +2,23 @@
 title: Use contadores de desempenho para diagnosticar os problemas de capacidade de resposta do aplicativo nos Hosts da Sessão da Área de Trabalho Remota
 description: Seu aplicativo está executando lentamente no RDS? Saiba mais sobre contadores de desempenho que você pode usar para diagnosticar problemas de desempenho do aplicativo no RDSH
 ms.author: elizapo
-ms.date: 07/11/2019
+ms.date: 01/19/2021
 ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 1db80d7ad93eea13decf90f1195a022c27c83e5e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7681c8abca0cc6b36fb8f8bebab7526733993e97
+ms.sourcegitcommit: 7674bbe49517bbfe0e2c00160e08240b60329fd9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954983"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98603423"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>Use contadores de desempenho para diagnosticar os problemas de desempenho do aplicativo nos Hosts da Sessão da Área de Trabalho Remota
 
 > Aplica-se a: Windows Server 2019, Windows 10
 
-Um dos problemas mais difíceis de diagnosticar é o desempenho insatisfatório do aplicativo – quando os aplicativos estão lentos ou não respondem. Tradicionalmente, você pode iniciar o seu diagnóstico pela coleta de CPU, memória, entrada/saída de disco e outras métricas e, em seguida, usar ferramentas como o Windows Performance Analyzer para tentar descobrir o que está causando o problema. Na maioria das situações, esses dados não o ajudarão a identificar a causa raiz, porque contadores de consumo de recursos têm variações grandes e frequentes. Isso torna difícil ler os dados e correlacioná-los com o problema relatado. Para ajudá-lo a resolver seus problemas de desempenho do aplicativo rapidamente, adicionamos alguns novos contadores de desempenho (disponíveis [para download](#download-windows-server-insider-software) por meio do [Programa Windows Insider](https://insider.windows.com)) que medem os fluxos de entrada do usuário.
+Um dos problemas mais difíceis de diagnosticar é o desempenho insatisfatório do aplicativo – quando os aplicativos estão lentos ou não respondem. Tradicionalmente, você pode iniciar o seu diagnóstico pela coleta de CPU, memória, entrada/saída de disco e outras métricas e, em seguida, usar ferramentas como o Windows Performance Analyzer para tentar descobrir o que está causando o problema. Na maioria das situações, esses dados não o ajudarão a identificar a causa raiz, porque contadores de consumo de recursos têm variações grandes e frequentes. Isso torna difícil ler os dados e correlacioná-los com o problema relatado.
 
 > [!NOTE]
 > O contador de Atraso de Entrada do Usuário só é compatível com:
@@ -135,12 +135,6 @@ Eis aqui a aparência que isso teria se você ativasse ambas as chaves:
 
 Ferramentas de monitoramento podem consumir esse contador ao [Usar Contadores de Desempenho](/windows/win32/perfctrs/using-performance-counters).
 
-## <a name="download-windows-server-insider-software"></a>Baixar o software do Windows Server Insider
-
-Insiders registrados podem navegar diretamente para a [página de download do Windows Server Insider Preview](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) para obter os downloads de software mais recentes do Insider.  Para saber como se registrar como um Insider, confira [Introdução ao servidor](https://insider.windows.com/en-us/for-business-getting-started-server/).
-
 ## <a name="share-your-feedback"></a>Compartilhe seus comentários
 
 Você pode enviar comentários para esse recurso por meio do Hub de Comentários. Selecione **Aplicativos > Todos os outros aplicativos** e inclua "Contadores de desempenho do RDS – monitor de desempenho" no título da sua postagem.
-
-Para obter ideias gerais sobre os recursos, visite a [página de UserVoice do RDS](https://aka.ms/uservoice-rds).
