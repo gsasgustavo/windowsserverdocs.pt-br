@@ -6,12 +6,12 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/23/2017
 ms.topic: article
-ms.openlocfilehash: a96b256fbd2f1a5ce3db71bd11de8715eccf60e9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9676962e2c0917f950ab81cd0577cd41fea51710
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966903"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781855"
 ---
 # <a name="obtain-and-configure-ts-and-td-certificates-for-ad-fs"></a>Obter e configurar certificados TS e TD para AD FS
 
@@ -26,7 +26,7 @@ Por padrão, o AD FS está configurado para gerar os certificados de autenticaç
 
 Você pode executar o seguinte comando do Windows PowerShell: `Get-AdfsProperties` .
 
-  ![Obter-ADFSproperties](media/configure-TS-TD-certs-ad-fs/ts1.png)
+  ![Captura de tela da janela do PowerShell mostrando os resultados do comando Get-ADFSProperties com as propriedades de substituição automática de certificado e limite de geração de certificado, chamadas.](media/configure-TS-TD-certs-ad-fs/ts1.png)
 
 A propriedade AutoCertificateRollover descreve se AD FS está configurado para renovar a assinatura de token e certificados de descriptografia de token automaticamente.
 
@@ -40,7 +40,7 @@ CertificateGenerationThreshold descreve quantos dias antes do certificado não a
 
 CertificatePromotionThreshold determina quantos dias após a geração do novo certificado que ele será promovido para ser o certificado principal (em outras palavras, AD FS começará a usá-lo para assinar tokens que emite e descriptografar tokens de provedores de identidade).
 
-![Obter-ADFSproperties](media/configure-TS-TD-certs-ad-fs/ts2.png)
+![Captura de tela da janela do PowerShell mostrando os resultados do comando Get-ADFSProperties com as propriedades limite de geração de certificado e limite de promoção de certificado chamadas.](media/configure-TS-TD-certs-ad-fs/ts2.png)
 
 Se AD FS estiver configurado para renovar certificados de assinatura de token e de descriptografia de token automaticamente (AutoCertificateRollover estiver definido como TRUE), você poderá determinar quando eles serão renovados:
 
@@ -50,9 +50,9 @@ Se AD FS estiver configurado para renovar certificados de assinatura de token e 
 ## <a name="determine-when-the-current-certificates-expire"></a>Determinar quando os certificados atuais expiram
 Você pode usar o procedimento a seguir para identificar os certificados de assinatura de token primário e de descriptografia de token e para determinar quando os certificados atuais expiram.
 
-Você pode executar o seguinte comando do Windows PowerShell: `Get-AdfsCertificate –CertificateType token-signing` (ou `Get-AdfsCertificate –CertificateType token-decrypting ` ). Ou você pode examinar os certificados atuais no MMC: certificados de >de serviço.
+Você pode executar o seguinte comando do Windows PowerShell:  `Get-AdfsCertificate –CertificateType token-signing` (ou  `Get-AdfsCertificate –CertificateType token-decrypting ` ). Ou você pode examinar os certificados atuais no MMC: certificados de >de serviço.
 
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts3.png)
+![Captura de tela da janela do PowerShell mostrando os resultados do comando de assinatura de token Get-AdfsCertificate – Certificatetype com as propriedades not After e is Primary chamadas.](media/configure-TS-TD-certs-ad-fs/ts3.png)
 
 O certificado para o qual o valor **IsPrimary** está definido como **true** é o certificado que AD FS está usando no momento.
 
@@ -64,10 +64,10 @@ Para garantir a continuidade do serviço, todos os parceiros de Federação (rep
 Você pode usar as etapas a seguir para gerar um novo certificado autoassinado manualmente antes do fim do período de carência.
 
 1. Verifique se você está conectado ao servidor de AD FS primário.
-2. Abra o Windows PowerShell e execute o seguinte comando:`Add-PSSnapin "microsoft.adfs.powershell"`
+2. Abra o Windows PowerShell e execute o seguinte comando: `Add-PSSnapin "microsoft.adfs.powershell"`
 3. Opcionalmente, você pode verificar os certificados de autenticação atuais em AD FS. Para fazer isso, execute o seguinte comando: `Get-ADFSCertificate –CertificateType token-signing` . Examine a saída do comando para ver as datas não posteriores de quaisquer certificados listados.
 4. Para gerar um novo certificado, execute o seguinte comando para renovar e atualizar os certificados no servidor de AD FS: `Update-ADFSCertificate –CertificateType token-signing` .
-5. Verifique a atualização executando o seguinte comando novamente:`Get-ADFSCertificate –CertificateType token-signing`
+5. Verifique a atualização executando o seguinte comando novamente: `Get-ADFSCertificate –CertificateType token-signing`
 6. Dois certificados devem ser listados agora, um dos quais não tem uma data **posterior** de aproximadamente um ano no futuro e para o qual o valor **IsPrimary** é **false**.
 
 >[!IMPORTANT]
@@ -81,13 +81,13 @@ Primeiro, você deve obter um novo certificado de sua autoridade de certificaç�
 Em seguida, você deve configurar esse certificado como o certificado de assinatura ou descriptografia de token de AD FS secundário. (Você o configura como um certificado secundário para permitir que seus parceiros de Federação tenham tempo suficiente para consumir esse novo certificado antes de promovê-lo para o certificado primário).
 
 ### <a name="to-configure-a-new-certificate-as-a-secondary-certificate"></a>Para configurar um novo certificado como um certificado secundário
-1. Abra o PowerShell e execute o seguinte:`Set-ADFSProperties -AutoCertificateRollover $false`
+1. Abra o PowerShell e execute o seguinte: `Set-ADFSProperties -AutoCertificateRollover $false`
 2. Depois de importar o certificado. Abra o console de **Gerenciamento do AD FS** .
 3. Expanda **Serviço** e, em seguida, selecione **Certificados**.
-4. No painel Ações, clique em **Adicionar certificado de autenticação de tokens**.
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts4.png)</br>
+4. No painel Ações, clique em **adicionar Token-Signing certificado**.
+    ![Captura de tela da caixa de diálogo D F S mostrando a opção Adicionar certificado de autenticação de tokens chamada out.](media/configure-TS-TD-certs-ad-fs/ts4.png)</br>
 5. Selecione o novo certificado a partir da lista de certificados mostrados e, em seguida, clique em OK.
-6.  Abra o PowerShell e execute o seguinte:`Set-ADFSProperties -AutoCertificateRollover $true`
+6.  Abra o PowerShell e execute o seguinte: `Set-ADFSProperties -AutoCertificateRollover $true`
 
 >[!WARNING]
 >Verifique se o novo certificado tem uma chave privada associada a ele e se a conta de serviço de AD FS recebeu permissões de leitura para a chave privada. Verifique isso em cada servidor de Federação. Para isso, no snap-in Certificados, clique duas vezes no novo certificado, clique Todas as Tarefas e, em seguida, clique em Gerenciar Chaves Privadas.
@@ -100,7 +100,7 @@ Depois de ter permitido tempo suficiente para que seus parceiros de Federação 
 2. Expanda **Serviço** e, em seguida, selecione **Certificados**.
 3. Clique no certificado de autenticação de token secundário.
 4. No painel **Ações**, clique em **Configurar como Primário**. Clique Sim no prompt de confirmação.
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts5.png)</br>
+    ![Captura de tela da caixa de diálogo D F S mostrando a opção Definir como primária no painel Ações chamado.](media/configure-TS-TD-certs-ad-fs/ts5.png)</br>
 
 
 ## <a name="updating-federation-partners"></a>Atualizando parceiros de Federação

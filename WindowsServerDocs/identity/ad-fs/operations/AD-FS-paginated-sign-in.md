@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/19/2018
 ms.topic: article
-ms.openlocfilehash: 27b0232b65a3003dde9a5702ec45063781abd813
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f7918c6b6a0ee4f5efb9da45d722f5c49dcc9f42
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947442"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781862"
 ---
 # <a name="ad-fs-paginated-sign-in"></a>AD FS entrada paginada
 
@@ -21,7 +21,7 @@ Para AD FS no Windows Server 2019, reprojetamos a interface do usuário de entra
 ## <a name="whats-changing"></a>O que está mudando
 Em AD FS no Windows Server 2012 R2 e 2016, sua tela de entrada se parece com esta:
 
-![oldsignin](media/AD-FS-paginated-sign-in/signin1.png)
+![Captura da tela de entrada antiga.](media/AD-FS-paginated-sign-in/signin1.png)
 
 Estamos afastando da exibição de um único Formulário localizado no lado direito da tela.
 
@@ -31,15 +31,15 @@ Em AD FS no Windows Server 2019, essas são as principais alterações de design
 - **Uma interface do usuário centralizada**. Anteriormente, a interface do usuário de entrada existia no lado direito da tela, como mostrado acima. Mudamos a frente e a central da interface do usuário para modernizar a experiência.
 - **Paginação**. Em vez de fornecer um longo formato a ser preenchido, incorporamos um novo fluxo que o guiará pela experiência de entrada passo a passo. Nossa telemetria mostra que, com essa abordagem, nossos clientes têm entradas mais bem-sucedidas. Ele também fornece mais flexibilidade para incorporar vários métodos de autenticação, como a autenticação de fator de telefone dos EUA.
 
-![newsignin](media/AD-FS-paginated-sign-in/signin2.png)
+![Captura de tela da nova entrada de conexão.](media/AD-FS-paginated-sign-in/signin2.png)
 
 Na primeira página, você será solicitado a inserir seu nome de usuário. Você também pode selecionar a opção "Mantenha-me conectado" para reduzir a frequência de prompts de entrada e permanecer conectado quando for seguro fazê-lo. (Essa opção está desabilitada por padrão.)
 
-![newsignin](media/AD-FS-paginated-sign-in/signin3.png)
+![Captura de tela da primeira página do novo logon.](media/AD-FS-paginated-sign-in/signin3.png)
 
 Na segunda página, você verá as opções de autenticação, configuradas pelo administrador. Se permitir a autenticação externa como primário estiver habilitado, isso também será incluído.
 
-![newsignin](media/AD-FS-paginated-sign-in/signin4.png)
+![Captura de tela da segunda página do novo botão entrar.](media/AD-FS-paginated-sign-in/signin4.png)
 
 Na terceira página, você será solicitado a inserir sua senha (supondo que você selecionou "senha" como a opção de autenticação).
 
@@ -51,10 +51,10 @@ Se você for um novo cliente para AD FS, você receberá o novo design por padr�
 ### <a name="upgrading-a-farm"></a>Atualizando um farm
 Se você for um cliente existente AD FS 2012 R2 ou 2016, há duas maneiras de receber o novo design depois de atualizar os servidores para AD FS 2019 e habilitar o FBL para 2019.
 
-- Permitir a nova entrada por meio do PowerShell. Execute o seguinte comando para habilitar a paginação:``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
+- Permitir a nova entrada por meio do PowerShell. Execute o seguinte comando para habilitar a paginação: ``Set-AdfsGlobalAuthenticationPolicy -EnablePaginatedAuthenticationPages $true``
 
  - Habilite a autenticação externa como primária, seja por meio do PowerShell ou pelo Gerenciador do Servidor de AD FS. As novas páginas de entrada paginadas serão habilitadas quando esse recurso estiver habilitado.
-Se você for um novo cliente para AD FS, você receberá o novo design por padrão. No entanto, se você for um cliente existente com AD FS 2012 R2 ou 2016, haverá várias etapas que você precisará tomar para receber o novo design:``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
+Se você for um novo cliente para AD FS, você receberá o novo design por padrão. No entanto, se você for um cliente existente com AD FS 2012 R2 ou 2016, haverá várias etapas que você precisará tomar para receber o novo design: ``Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true``
 
 ## <a name="customization"></a>Personalização
 As opções de personalização ainda serão aplicáveis para o AD FS 2019.

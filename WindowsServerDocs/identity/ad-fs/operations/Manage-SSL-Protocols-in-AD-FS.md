@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 43c5cbda88f02792a4c0a8f91f84909a3c303c2b
-ms.sourcegitcommit: 9e19436bd8b20af60284071ab512405aebfbec83
+ms.openlocfilehash: 25c0c6f6f13d036ca5bc83df86cd63940d82f46c
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97811443"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781845"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Gerenciando protocolos SSL/TLS e conjuntos de codificação para AD FS
 A documentação a seguir fornece informações sobre como desabilitar e habilitar determinados protocolos TLS/SSL e conjuntos de codificação que são usados pelo AD FS
@@ -42,7 +42,7 @@ No dia e na idade de hoje, a proteção dos servidores e a remoção de pacotes 
 
 As chaves do registro abaixo estão localizadas no mesmo local: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use o regedit ou o PowerShell para habilitar ou desabilitar esses protocolos e conjuntos de codificação.
 
-![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
+![Captura de tela do editor do registro mostrando as chaves do registro localizadas na pasta protocolos.](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
 ## <a name="enable-and-disable-ssl-20"></a>Habilitar e desabilitar SSL 2,0
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o SSL 2,0.
@@ -178,7 +178,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
     Write-Host 'TLS 1.1 has been disabled.'
 ```
 
-## <a name="enable-and-disable-tls-12"></a>Habilitar e desabilitar o TLS 1,2
+## <a name="enable-and-disable-tls-12"></a>Habilitar e desabilitar o TLS 1.2
 
 Use as seguintes chaves do registro e seus valores para habilitar e desabilitar o TLS 1,2.
 
@@ -217,7 +217,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
-![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
+![Captura de tela do editor do registro mostrando as chaves do registro localizadas na pasta de codificações.](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
 
 
 
@@ -233,7 +233,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Habilitado" = DWORD: 00000000
 - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Habilitado" = DWORD: 00000000
 
-### <a name="using-powershell"></a>Usando o PowerShell
+### <a name="using-powershell"></a>Usar o PowerShell
 
 ```powershell
     ([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey('SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128')
@@ -250,7 +250,7 @@ Use as seguintes chaves do registro e seus valores para habilitar e desabilitar 
 
 Você pode desabilitar determinadas codificações específicas removendo-as da HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002
 
-![Local do Registro](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
+![Captura de tela do editor do registro mostrando a caixa de diálogo Editar Cadeia de caracteres múltipla para a pasta 00010002.](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
 Para habilitar um conjunto de codificação, adicione seu valor de cadeia de caracteres à chave de valor de várias cadeias de caracteres do functions.  Por exemplo, se quisermos habilitar TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521, vamos adicioná-lo à cadeia de caracteres.
 

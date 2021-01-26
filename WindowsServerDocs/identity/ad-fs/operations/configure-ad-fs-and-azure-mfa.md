@@ -7,12 +7,12 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.openlocfilehash: c61b8555cb875403a9c5c28e9d370fa87eee753e
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 8adcd7c06e769f2c457afde4faabdd4a3ca5e3c0
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050264"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781836"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>Configurar o Azure MFA como provedor de autenticação com AD FS
 
@@ -91,12 +91,12 @@ Para concluir a configuração do Azure MFA para AD FS, você precisa configurar
 
 A primeira coisa que você precisa fazer é gerar um certificado para o Azure MFA usar.  Isso pode ser feito usando o PowerShell.  O certificado gerado pode ser encontrado no repositório de certificados de máquinas locais e é marcado com um nome de entidade que contém a Tenantid para seu diretório do Azure AD.
 
-![AD FS e MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
+![Captura de tela do repositório de certificados de um computador local mostrando o certificado gerado.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
 
 Observe que Tenantid é o nome do seu diretório no Azure AD.  Use o seguinte cmdlet do PowerShell para gerar o novo certificado.
     `$certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>`
 
-![AD FS e MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
+![Captura de tela da janela do PowerShell mostrando o cmdlet acima.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
 
 ### <a name="step-2-add-the-new-credentials-to-the-azure-multi-factor-auth-client-service-principal"></a>Etapa 2: adicionar as novas credenciais à entidade de serviço do cliente de autenticação multifator do Azure
 
@@ -128,7 +128,7 @@ Abra um prompt do PowerShell e insira seu próprio *tenantid* com o cmdlet [set-
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-![AD FS e MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
+![Captura de tela da janela do PowerShell mostrando a mensagem de aviso recebida após a execução do cmdlet Set-AdfsAzureMfaTenant.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
 
 O Windows Server sem o service pack mais recente não oferece suporte ao `-Environment` parâmetro para o cmdlet [set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) . Se você usar a nuvem do Azure governamental e as etapas anteriores falharem ao configurar seu locatário do Azure devido ao `-Environment` parâmetro ausente, conclua as etapas a seguir para criar manualmente as entradas do registro. Ignore estas etapas se o cmdlet anterior registrou corretamente suas informações de locatário ou se você não estiver na nuvem do Azure governamental:
 
@@ -145,7 +145,7 @@ O Windows Server sem o service pack mais recente não oferece suporte ao `-Envir
 
 Depois disso, você verá que o Azure MFA está disponível como um método de autenticação principal para uso de intranet e extranet.
 
-![AD FS e MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
+![Captura de tela da caixa de diálogo Editar métodos de autenticação mostrando a opção F M a do Azure, realçada nas seções extranet e intranet.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
 ## <a name="renew-and-manage-ad-fs-azure-mfa-certificates"></a>Renovar e gerenciar AD FS certificados do Azure MFA
 

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/13/2018
 ms.topic: article
-ms.openlocfilehash: 2f730fad7996c17dbe7c7130f078492917537efb
-ms.sourcegitcommit: e0070b24e0423187eb2b36ba92072fed23880aa8
+ms.openlocfilehash: 7e3299d9d33690066206a5698958f95663414ae4
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98186404"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781810"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Criar um aplicativo Web de página única usando OAuth e ADAL.JS com o AD FS 2016 ou posterior
 
@@ -78,17 +78,17 @@ No exemplo, o WebAPI está configurado para escutar em https://localhost:44326/ 
 
 1. Abra o console de gerenciamento do AD FS e clique em **Adicionar grupo de aplicativos**. No **Assistente para Adicionar grupo de aplicativos** , insira o nome do aplicativo, a descrição e selecione o **navegador da Web acessando um modelo de aplicativo Web** na seção **aplicativos cliente-servidor** , como mostrado abaixo
 
-    ![Criar novo grupo de aplicativos](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+    ![Captura de tela da página inicial do assistente para Adicionar grupo de aplicativos mostrando o navegador da Web que está acessando um modelo de aplicativo Web realçado.](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
 2. No **aplicativo nativo** da próxima página, forneça o identificador do cliente do aplicativo e o URI de redirecionamento, conforme mostrado abaixo
 
-    ![Criar novo grupo de aplicativos](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+    ![Captura de tela da página do aplicativo nativo do assistente para Adicionar grupo de aplicativos mostrando o s R I de redirecionamento.](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
 3. Na próxima página, **aplique a política de controle de acesso** e deixe as permissões como *permitir todos*
 
 4. A página de resumo deve ser semelhante à seguinte
 
-    ![Criar novo grupo de aplicativos](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+    ![Captura de tela da página Resumo do assistente para Adicionar grupo de aplicativos.](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
 5. Clique em **Avançar** para concluir a adição do grupo de aplicativos e feche o assistente.
 
@@ -177,11 +177,11 @@ Clique em logon.  A lista de tarefas disparará o fluxo de autenticação e a AD
 
 No Fiddler, você pode ver o token que está sendo retornado como parte da URL no fragmento #.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
+![Captura de tela do Fiddler mostrando que você pode ver o token sendo retornado como parte da URL no fragmento #.](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
 
 Agora, você poderá chamar a API de back-end para adicionar itens de lista de tarefas para o usuário conectado:
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.png)
+![Captura de tela do aplicativo de exemplo do ADAL JS.](media/Single-Page-Application-with-AD-FS/singleapp6.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 [Desenvolvimento do AD FS](../../ad-fs/AD-FS-Development.md)

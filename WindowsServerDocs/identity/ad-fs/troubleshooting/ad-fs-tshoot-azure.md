@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 03/01/2018
 ms.topic: article
-ms.openlocfilehash: d7941733ff2191e94c6c1e380d4349585a5c98d3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d176ed425ffe760a018a090ba66e43597a1bbc05
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956173"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781823"
 ---
 # <a name="ad-fs-troubleshooting---azure-ad"></a>Solução de problemas AD FS-Azure AD
 Com o crescimento da nuvem, muitas empresas passaram a migrar para usar o Azure AD para seus vários aplicativos e serviços.  A Federação com o Azure AD se tornou uma prática padrão com muitas organizações.  Este documento abordará alguns dos aspectos da solução de problemas que surgem com essa Federação.  Vários tópicos do documento geral de solução de problemas ainda pertencem à Federação com o Azure para que este documento se concentre em apenas especificações com o Azure AD e a interação AD FS.
@@ -36,9 +36,9 @@ Se o redirecionamento não estiver ocorrendo, há algumas coisas que você desej
 
 3. Por fim, você deseja verificar o [DNS](ad-fs-tshoot-dns.md) e certificar-se de que seus servidores AD FS ou servidores WAP estejam resolvendo da Internet.  Verifique se isso resolve e se você pode navegar até ele.
 
-4. Você também pode usar o cmdlt do PowerShell `Get-AzureADDomain` para obter essas informações também.
+4. Você também pode usar o cmdlet do PowerShell `Get-AzureADDomain` para obter essas informações também.
 
-   ![Tela de cmdlet do PowerShell](media/ad-fs-tshoot-azure/azure6.png)
+   ![Captura de tela da janela do PowerShell mostrando os resultados do comando Get-AzureADDomain.](media/ad-fs-tshoot-azure/azure6.png)
 
 ### <a name="you-are-receiving-an-unknown-auth-method-error"></a>Você está recebendo um erro de método de autenticação desconhecido
 Você pode encontrar um erro de "método de autenticação desconhecido" informando que AuthnContext não tem suporte no nível AD FS ou STS quando você é redirecionado do Azure.
@@ -121,9 +121,9 @@ Depois que AD FS emitir um token, o Azure AD poderá gerar um erro. Nessa situa�
         - UPN: o valor dessa declaração deve corresponder ao UPN dos usuários no Azure AD.
         - Imutávelid: o valor dessa declaração deve corresponder ao sourceAnchor ou à imutávelid do usuário no Azure AD.
 
-Para obter o valor de atributo de usuário no Azure AD, execute a seguinte linha de comando:`Get-AzureADUser –UserPrincipalName <UPN>`
+Para obter o valor de atributo de usuário no Azure AD, execute a seguinte linha de comando: `Get-AzureADUser –UserPrincipalName <UPN>`
 
-![Tela de cmdlet do PowerShell](media/ad-fs-tshoot-azure/azure5.png)
+![Captura de tela da janela do PowerShell mostrando os resultados do comando Get-AzureADUser.](media/ad-fs-tshoot-azure/azure5.png)
 
    - SAML 2,0:
        - Idpemail.: o valor dessa declaração deve corresponder ao nome principal do usuário dos usuários no Azure AD.

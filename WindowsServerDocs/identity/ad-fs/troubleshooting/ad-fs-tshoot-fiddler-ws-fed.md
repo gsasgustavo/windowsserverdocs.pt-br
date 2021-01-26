@@ -1,19 +1,19 @@
 ---
-title: Solução de problemas de AD FS-Fiddler-WS-Federation
-description: Este documento mostra um rastreamento detalhado de uma troca do WS-Federation com AD FS
+title: Solução de problemas AD FS-Fiddler-WS-Federation
+description: Este documento mostra um rastreamento detalhado de um WS-Federation Exchange com AD FS
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 01/18/2018
 ms.topic: article
-ms.openlocfilehash: f30b66bd80b3c5002bdc2c66a1d89718cdb1ee39
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 96d202a0c4379d2d52e41bdfb0c750e0e64ffaf2
+ms.sourcegitcommit: 6717decb5839aa340c81811d6fde020aabaddb3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956203"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98781920"
 ---
-# <a name="ad-fs-troubleshooting---fiddler---ws-federation"></a>Solução de problemas de AD FS-Fiddler-WS-Federation
+# <a name="ad-fs-troubleshooting---fiddler---ws-federation"></a>Solução de problemas AD FS-Fiddler-WS-Federation
 
 ![Diagrama de Federação do AD FS e do Windows Server](media/ad-fs-tshoot-fiddler-ws-fed/fiddler9.png)
 
@@ -30,7 +30,7 @@ Solicitação:
 Resposta:
 
 - A resposta é um HTTP 302 (redirecionamento).  Os dados de transporte no cabeçalho de resposta mostram para onde redirecionar (https://sts.contoso.com/adfs/ls)
-- A URL de redirecionamento contém wa = wsignin 1,0, que nos informa que nosso aplicativo RP criou uma solicitação de entrada do WS-Federation para nós e enviou isso ao ponto de extremidade/adfs/ls/do AD FS.  Isso é conhecido como associação de redirecionamento.
+- A URL de redirecionamento contém wa = wsignin 1,0, que nos informa que nosso aplicativo RP criou um WS-Federation solicitação de entrada para nós e o enviou para o ponto de extremidade/adfs/ls/do AD FS.  Isso é conhecido como associação de redirecionamento.
 
 ![Dados de transporte no cabeçalho de resposta](media/ad-fs-tshoot-fiddler-ws-fed/fiddler2.png)
 
@@ -44,10 +44,10 @@ Solicitação:
 
 Resposta:
 
-- A resposta é um prompt para credenciais.  Isso indica que estamos usando o Forms authnetication
+- A resposta é um prompt para credenciais.  Isso indica que estamos usando a autenticação de formulários
 - Ao clicar no WebView da resposta, você poderá ver o prompt de credenciais.
 
-![Continuação do rastreamento do Fiddler](media/ad-fs-tshoot-fiddler-ws-fed/fiddler6.png)
+![Captura de tela da exibição da Web da resposta mostrando o prompt de credenciais.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler6.png)
 
 ## <a name="step-5-and-6"></a>Etapa 5 e 6
 
@@ -64,7 +64,7 @@ Resposta:
 
 ## <a name="step-7-and-8"></a>Etapa 7 e 8
 
-![Continuação do rastreamento do Fiddler](media/ad-fs-tshoot-fiddler-ws-fed/fiddler5.png)
+![Captura de tela do rastreamento Fiddler que mostra a solicitação H T T P Get e a resposta a essa solicitação.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler5.png)
 
 Solicitação:
 
@@ -76,11 +76,11 @@ Resposta:
 - Além disso, definimos 3 cookies de volta para o cliente
     - MSISAuthenticated contém um valor de carimbo de data/hora codificado em base64 para quando o cliente foi autenticado.
     - MSISLoopDetectionCookie é usado pelo mecanismo de detecção de loop infinito AD FS para interromper os clientes que acabaram em um loop de redirecionamento infinito para o servidor de Federação. Os dados do cookie são um carimbo de data/hora codificado em base64.
-    - MSISSignout é usado para acompanhar o IdP e todos os RPs visitados para a sessão de SSO. Esse cookie é utilizado quando uma saída do WS-Federation é invocada. Você pode ver o conteúdo desse cookie usando um decodificador base64.
+    - MSISSignout é usado para acompanhar o IdP e todos os RPs visitados para a sessão de SSO. Esse cookie é utilizado quando uma saída de WS-Federation é invocada. Você pode ver o conteúdo desse cookie usando um decodificador base64.
 
 ## <a name="step-9-and-10"></a>Etapa 9 e 10
 
-![Continuação do rastreamento do Fiddler](media/ad-fs-tshoot-fiddler-ws-fed/fiddler7.png)
+![Captura de tela do rastreamento Fiddler mostrando a solicitação H T T P Post e a resposta a essa solicitação.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler7.png)
 
 Solicitação:
 
