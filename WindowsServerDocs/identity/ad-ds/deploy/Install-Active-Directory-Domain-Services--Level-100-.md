@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e66a03ec89a2cd77fbeafd59972a24a020ed66f7
-ms.sourcegitcommit: 5f234fb15c1d0365b60e83a50bf953e317d6239c
+ms.openlocfilehash: 1d7217d6e559315cd1f5e4b1aac500cf28b2bd11
+ms.sourcegitcommit: 2ede79efbadd109099bb6fdb744796adde123922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879835"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923679"
 ---
 # <a name="install-active-directory-domain-services-level-100"></a>Instalar os Serviços de Domínio Active Directory (nível 100)
 
@@ -91,7 +91,7 @@ O Windows PowerShell pode ser executado com base em servidores remotos:
     Invoke-Command { Install-ADDSDomainController -DomainName contoso.com -Credential (Get-Credential) } -ComputerName ConDC3
     ```
 
-- ou -
+-ou-
 
 -   No Gerenciador do Servidor, crie um grupo de servidores que inclua o servidor remoto. Clique com o botão direito do mouse no nome do servidor remoto e depois clique em **Windows PowerShell**.
 
@@ -360,12 +360,12 @@ Use os procedimentos a seguir para instalar o AD DS por meio do método GUI. As 
 
 9. Na página **Resultados**, verifique se houve êxito na instalação e clique em **Promover este servidor para a um controlador de domínio** para iniciar o Assistente de Configuração dos Serviços de Domínio Active Directory.
 
-    ![Instalar AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
+    ![Captura de tela da página progresso da instalação do assistente para adicionar funções e recursos com a opção promover este servidor a um controlador de domínio chamada out.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
 
     > [!IMPORTANT]
     > Se, nesse ponto, você fechar o Assistente para Adicionar Funções sem iniciar o Assistente de Configuração dos Serviços de Domínio Active Directory, será possível reiniciá-lo clicando em Tarefas, no Gerenciador do Servidor.
 
-    ![Instalar AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
+    ![Captura de tela da Gerenciador do Servidor mostrando o ícone de aviso de configuração após a implantação.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
 
 10. Na página **Configuração de Implantação**, selecione uma destas opções:
 

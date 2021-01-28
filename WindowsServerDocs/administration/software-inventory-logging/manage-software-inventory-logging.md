@@ -7,18 +7,18 @@ author: brentfor
 ms.author: brentf
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: dba46b75da685f5b2cb74e8e08c53db9aa643aba
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 9be0d8c33ca8347cd03f4db1cb99c1d371add1c3
+ms.sourcegitcommit: 2ede79efbadd109099bb6fdb744796adde123922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89628265"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923662"
 ---
 # <a name="manage-software-inventory-logging"></a>Gerenciar o Log de Inventário de Software
 
 >Aplica-se a: Windows Server (canal semestral), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-Este documento descreve como gerenciar o log de inventário de software, um recurso que ajuda os administradores do Datacenter a registrar facilmente os dados de gerenciamento de ativos de software da Microsoft para suas implantações ao longo do tempo. Este documento descreve como gerenciar o Log de Inventário de Software. Antes de usar o log de inventário de software com o Windows Server 2012 R2, verifique se Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850) e [KB 3060681](https://support.microsoft.com/kb/3060681) estão instalados em cada sistema que precisa ser inventariado. Nenhuma atualização de clique é necessária para o Windows Server 2016. Esse recurso é executado localmente em cada servidor a ser inventariado. Ele não coleta dados de servidores remotos.
+Este documento descreve como gerenciar o log de inventário de software, um recurso que ajuda os administradores do Datacenter a registrar facilmente os dados de gerenciamento de ativos de software da Microsoft para suas implantações ao longo do tempo. Este documento descreve como gerenciar o Log de Inventário de Software. Antes de usar o log de inventário de software com o Windows Server 2012 R2, verifique se Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850) e [KB 3060681](https://support.microsoft.com/kb/3060681) estão instalados em cada sistema que precisa ser inventariado. Nenhuma atualização do Windows é necessária para o Windows Server 2016. Esse recurso é executado localmente em cada servidor a ser inventariado. Ele não coleta dados de servidores remotos.
 
 O recurso do Log de Inventário de Software também pode ser adicionado a duas versões do Windows Server anteriores ao Windows Server 2012 R2. Você pode instalar as atualizações a seguir para adicionar funcionalidade do Log de Inventário de Software ao Windows Server 2012 e Windows Server 2008 R2 SP1:
 
@@ -204,7 +204,7 @@ O Log de Inventário de Software não tem a finalidade de ser um componente crí
 
 2. Abra o Windows Explorer.
 
-3. Vá para **\Windows\System32\Logfiles\SIL \\ **
+3. Vá para **\Windows\System32\Logfiles\SIL \\**
 
 4. Exclua todos os arquivos da pasta.
 
@@ -212,7 +212,7 @@ O Log de Inventário de Software não tem a finalidade de ser um componente crí
 O Log de Inventário de Software armazenará temporariamente coletas de dados de hora em hora se os encaminhamentos pela rede estiverem falhando. Os arquivos de log são armazenados no diretório \Windows\System32\LogFiles\SIL\. Os backups desses dados de Log de Inventário de Software podem ser feitos com seus backups de servidora programados regularmente.
 
 > [!IMPORTANT]
-> Se for necessária uma instalação de reparo ou atualização do sistema operacional por algum motivo, os arquivos de log armazenados localmente serão perdidos.Se esses dados forem essenciais para operações, é recomendável fazer backup antes da instalação do novo sistema operacional. Após o reparo ou atualização, simplesmente restaure no mesmo local.
+> Se for necessária uma instalação de reparo ou atualização do sistema operacional por algum motivo, os arquivos de log armazenados localmente serão perdidos.  Se esses dados forem essenciais para operações, é recomendável fazer backup antes da instalação do novo sistema operacional. Após o reparo ou atualização, simplesmente restaure no mesmo local.
 
 > [!NOTE]
 > Se por algum motivo o gerenciamento da duração da retenção dos dados registrados localmente pelo SIL se tornar importante, isso poderá ser configurado alterando o valor do registro aqui: \ HKEY_LOCAL_MACHINE \\ SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. O padrão é ' 30 ' por 30 dias.
@@ -229,11 +229,11 @@ Todos os dados armazenados localmente em um Windows Server (ocorre apenas se o r
 
 ## <a name="working-with-date-and-time-settings-in-windows-server-2012-r2-software-inventory-logging"></a><a name="BKMK_Step8"></a>Trabalhando com configurações de data e hora no Log de Inventário de Software do Windows Server 2012 R2
 
--   Ao usar [Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TimeOfDay para definir a hora em que o registro em log do SIL é executado, é necessário especificar uma data e hora.A data do calendário será definida e registro em log não ocorrerá até que a data seja atingida, na hora do sistema local.
+-   Ao usar [Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TimeOfDay para definir a hora em que o registro em log do SIL é executado, é necessário especificar uma data e hora. A data do calendário será definida e registro em log não ocorrerá até que a data seja atingida, na hora do sistema local.
 
 -   Ao usar [Get-SilSoftware](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630))ou [Get-SilWindowsUpdate](/previous-versions/windows/powershell-scripting/dn283393(v=wps.630)), "InstallDate" sempre mostrará 12:00:10:00, um valor sem sentido.
 
--   Ao usar [Get-SilUalAccess](/previous-versions/windows/powershell-scripting/dn283389(v=wps.630)), "SampleDate" sempre mostrará 11:59:13h, um valor sem sentido.A data é o dado pertinente para essas consultas de cmdlet.
+-   Ao usar [Get-SilUalAccess](/previous-versions/windows/powershell-scripting/dn283389(v=wps.630)), "SampleDate" sempre mostrará 11:59:13h, um valor sem sentido.  A data é o dado pertinente para essas consultas de cmdlet.
 
 ## <a name="enabling-and-configuring-software-inventory-logging-in-a-mounted-virtual-hard-disk"></a><a name="BKMK_Step10"></a>Habilitando e configurando o Log de Inventário de Software em um disco rígido virtual montado
 O Log de Inventário de Software também dá suporte à configuração e habilitação em máquinas virtuais offline. Os usos práticos para isso se destinam a cobrir a configuração de "imagem ouro" para ampla implantação em data centers, bem como a configuração de imagens do usuário final de um local para uma implantação em nuvem.
@@ -273,20 +273,20 @@ Foram feitas as seguintes alterações nas configurações padrão e de funciona
 > [!NOTE]
 > Esta funcionalidade é removida com a instalação da atualização [KB 3000850](https://support.microsoft.com/kb/3000850).
 
-Ao usar o log de inventário de software em um host Hyper-V do Windows Server 2012 R2, é possível recuperar dados do SIL de convidados do Windows Server 2012 R2 que estão em execução localmente, se o log do SIL tiver sido iniciado nos convidados. No entanto, isso só é possível ao usar os cmdlets do PowerShell Get-SilData e Publish-SilData e só é possível com o WIndows Server 2012 R2 no host e no convidado.O objetivo dessa funcionalidade é permitir que os administradores do data center que fornecem VMs convidadas para locatários ou outras entidades de uma grande corporação capturem dados de inventário de software no host do hipervisor e subsequentemente encaminhem todos esses dados para um agregador (ou URI de destino).
+Ao usar o log de inventário de software em um host Hyper-V do Windows Server 2012 R2, é possível recuperar dados do SIL de convidados do Windows Server 2012 R2 que estão em execução localmente, se o log do SIL tiver sido iniciado nos convidados. No entanto, isso só é possível ao usar os cmdlets Get-SilData e Publish-SilData PowerShell e só é possível com o Windows Server 2012 R2 no host e no convidado.  O objetivo dessa funcionalidade é permitir que os administradores do data center que fornecem VMs convidadas para locatários ou outras entidades de uma grande corporação capturem dados de inventário de software no host do hipervisor e subsequentemente encaminhem todos esses dados para um agregador (ou URI de destino).
 
-Veja a seguir dois exemplos de como a saída no console do PowerShell ficaria (muito abreviada) em um host do Windows Server 2012 R2 Hyper-V executando uma VM de convidado do Windows Server 2012 R2 com o log do SIL iniciado.Você observará que o primeiro exemplo, que usa apenas o Get-SilData, retornará todos os dados do host conforme o esperado.Também estão incluídos todos os dados de SIL do convidado, mas em um formato recolhido.Para expandir e exibir esses dados do convidado, basta recortar e colar o snippet usado no segundo exemplo abaixo.Os objetos de dados de SIL do convidado sempre terão o GUID da VM associada dentro do objeto.
+Veja a seguir dois exemplos de como a saída no console do PowerShell ficaria (muito abreviada) em um host do Windows Server 2012 R2 Hyper-V executando uma VM de convidado do Windows Server 2012 R2 com o log do SIL iniciado.  Você observará que o primeiro exemplo, que usa apenas o Get-SilData, retornará todos os dados do host conforme o esperado.  Também estão incluídos todos os dados de SIL do convidado, mas em um formato recolhido.  Para expandir e exibir esses dados do convidado, basta recortar e colar o snippet usado no segundo exemplo abaixo.  Os objetos de dados de SIL do convidado sempre terão o GUID da VM associada dentro do objeto.
 
 > [!NOTE]
-> Como os dados de SIL são emitidos no console, ao usar o cmdlet Get-SilData, em fluxos de dados, os objetos nem sempre serão emitidos em uma ordem previsível.Nos dois exemplos abaixo, o texto foi codificado por cores (azul para dados de host físico e verde para dados de convidado virtual) apenas como uma ferramenta ilustrativa para este documento.
+> Como os dados de SIL são emitidos no console, ao usar o cmdlet Get-SilData, em fluxos de dados, os objetos nem sempre serão emitidos em uma ordem previsível.  Nos dois exemplos abaixo, o texto foi codificado por cores (azul para dados de host físico e verde para dados de convidado virtual) apenas como uma ferramenta ilustrativa para este documento.
 
 **Exemplo de saída 1**
 
-![Imagem de um exemplo de relatório de saída](../media/software-inventory-logging/SILHyper-VExample1.png)
+![Captura de tela do primeiro exemplo de relatório de saída.](../media/software-inventory-logging/SILHyper-VExample1.png)
 
-**Exemplo de saída 2** (c/função Expand-SilData)
+**Exemplo de saída 2** (com a função Expand-SilData)
 
-![Imagem de um exemplo de relatório de saída](../media/software-inventory-logging/SILHyper-VExample2.png)
+![Captura de tela do segundo exemplo de relatório de saída que inclui a função Expand-SilData.](../media/software-inventory-logging/SILHyper-VExample2.png)
 
 ## <a name="see-also"></a>Consulte Também
 [Introdução ao log](get-started-with-software-inventory-logging.md) 
