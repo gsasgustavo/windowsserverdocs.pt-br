@@ -5,14 +5,14 @@ manager: eldenc
 ms.author: nedpyle
 ms.topic: how-to
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 01/27/2021
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 9d7153b5147d576f54fa90efc5724f994618cfc5
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: ad15d4159190a41b62bf2df1d4eb2db827c2a8a4
+ms.sourcegitcommit: ebe97af985429ec5cdb86eba75820bc180552811
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97941722"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98925914"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>Replicação de cluster estendido usando Armazenamento Compartilhado
 
@@ -22,6 +22,9 @@ Neste exemplo de avaliação, você irá configurar esses computadores e seu arm
 
 > [!IMPORTANT]
 > Nesta avaliação, os servidores em locais diferentes devem ser capazes de se comunicar com outros servidores através de uma rede, mas não ter nenhuma conectividade física com o armazenamento compartilhado do outro local. Esse cenário não usa Espaços de Armazenamento Diretos.
+
+> [!NOTE]
+> Talvez você também queira considerar o uso de uma solução de HCI Azure Stack para implementar um cluster de ampliação. Para obter mais informações, consulte [visão geral de clusters ampliados em Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/stretched-clusters).
 
 ## <a name="terms"></a>Termos
 Este passo a passo usa o seguinte ambiente como exemplo:
@@ -804,3 +807,4 @@ Agora você irá gerenciar e operar o cluster estendido. Você pode executar tod
 ## <a name="see-also"></a>Consulte Também
 - [Windows Server 2016](../../index.yml)
 - [Espaços de Armazenamento Diretos no Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+- [Clusters ampliados no HCI Azure Stack](https://docs.microsoft.com/azure-stack/hci/concepts/stretched-clusters)
