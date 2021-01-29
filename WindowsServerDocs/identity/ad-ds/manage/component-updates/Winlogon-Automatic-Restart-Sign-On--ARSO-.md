@@ -8,12 +8,12 @@ manager: daveba
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.openlocfilehash: bbeff22ce85e1c108852a0e978ad56b1e70d10c5
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 36cb5e03e8e9693b4227e2cde650f9a2f6ccbab6
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070537"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042502"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Logon automático de reinício do Winlogon (ARSO)
 
@@ -70,7 +70,7 @@ Se você desabilitar essa configuração de política, o dispositivo não config
 
 **Editor do registro:**
 
-| Nome do valor | Tipo | Dados |
+| Nome do valor | Type | Dados |
 | --- | --- | --- |
 | DisableAutomaticRestartSignOn | DWORD | 0 (habilitar ARSO) |
 |   |   | 1 (desabilitar ARSO) |
@@ -79,7 +79,7 @@ Se você desabilitar essa configuração de política, o dispositivo não config
 
 **Tipo:** DWORD
 
-![Winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
+![Captura de tela da entrada e bloquear o último usuário interativo automaticamente após uma caixa de diálogo de reinicialização.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
 
 ## <a name="policy-2"></a>#2 de política
 
@@ -111,7 +111,7 @@ Se você desabilitar ou não definir essa configuração, o logon automático us
 
 **Editor do registro**
 
-| Nome do valor | Tipo | Dados |
+| Nome do valor | Type | Dados |
 | --- | --- | --- |
 | AutomaticRestartSignOnConfig | DWORD | 0 (habilitar ARSO se seguro) |
 |   |   | 1 (habilitar ARSO Always) |
@@ -120,7 +120,7 @@ Se você desabilitar ou não definir essa configuração, o logon automático us
 
 **Tipo:** DWORD
 
-![Winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
+![Captura de tela do configurar o modo de entrada e bloqueio automático do último usuário interativo após uma caixa de diálogo de reinicialização ou inicialização a frio.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

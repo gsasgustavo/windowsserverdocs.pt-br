@@ -6,12 +6,12 @@ ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 02/01/2019
-ms.openlocfilehash: 56130833ca2c3de8752fb79f5acdf30a1fafae2f
-ms.sourcegitcommit: 67a486b4fb3937a457eb00d21a2e33b753489fd8
+ms.openlocfilehash: 1f5c3dfadc295caa6f3232c9cb1e98b3ed7861c1
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88149550"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042522"
 ---
 # <a name="deploying-a-two-node-clustered-file-server"></a>Implantando um servidor de arquivos clusterizado de dois nós
 
@@ -166,7 +166,7 @@ Nesta etapa, a função de servidor de arquivos e o recurso de cluster de failov
 
 1. Abra **Gerenciador do servidor** e, na lista suspensa **gerenciar** , selecione **adicionar funções e recursos**.
 
-   ![Adicionar recurso](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
+   ![Captura de tela da lista suspensa gerenciar no Gerenciador do Servidor com a opção Adicionar funções e recursos realçada.](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
 
 2. Se a janela **antes de começar** for aberta, escolha **Avançar**.
 
@@ -174,9 +174,9 @@ Nesta etapa, a função de servidor de arquivos e o recurso de cluster de failov
 
 4. Verifique se **selecionar um servidor do pool de servidores** está selecionado, se o nome do computador está realçado e **próximo**.
 
-5. Para a função de servidor, na lista de funções, abra **serviços de arquivos**, selecione **servidor de arquivos**e **Avançar**.
+5. Para a função de servidor, na lista de funções, abra **serviços de arquivos**, selecione **servidor de arquivos** e **Avançar**.
 
-   ![Adicionar função](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
+   ![Captura de tela da página funções de servidor da caixa de diálogo Adicionar funções e recursos mostrando a opção servidor de arquivos selecionada e realçada.](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
 
 6. Para os recursos, na lista de recursos, selecione **clustering de failover**.  Uma caixa de diálogo pop-up mostrará que lista as ferramentas de administração também estão sendo instaladas.  Mantenha todas as selecionadas, escolha **Adicionar recursos** e **Avançar**.
 
@@ -188,7 +188,7 @@ Nesta etapa, a função de servidor de arquivos e o recurso de cluster de failov
 
 9. Repita as etapas no segundo computador.
 
-#### <a name="using-powershell"></a>Usando o PowerShell
+#### <a name="using-powershell"></a>Usar o PowerShell
 
 1. Abra uma sessão administrativa do PowerShell clicando com o botão direito do mouse em Iniciar e selecionando **Windows PowerShell (administrador)**.
 2. Para instalar a função de servidor de arquivos, execute o comando:
@@ -242,7 +242,7 @@ Antes de criar um cluster, é recomendável validar a configuração. A validaç
 
 9. Para exibir os tópicos da Ajuda sobre a validação de cluster depois de fechar o assistente, em Gerenciamento de Cluster de Failover, clique em Ajuda, Tópicos da Ajuda, guia Conteúdo, expanda o conteúdo da Ajuda do cluster de failover e clique em Validando a Configuração de um Cluster de Failover.
 
-#### <a name="using-powershell"></a>Usando o PowerShell
+#### <a name="using-powershell"></a>Usar o PowerShell
 
 1. Abra uma sessão administrativa do PowerShell clicando com o botão direito do mouse em Iniciar e selecionando **Windows PowerShell (administrador)**.
 
@@ -280,7 +280,7 @@ O seguinte procedimento criará um cluster fora dos computadores e da configura�
 
 8. Na página **Resumo** , ele fornecerá a configuração que ele criou.  Você pode selecionar Exibir relatório para ver o relatório da criação.
 
-#### <a name="using-powershell"></a>Usando o PowerShell
+#### <a name="using-powershell"></a>Usar o PowerShell
 
 1. Abra uma sessão administrativa do PowerShell clicando com o botão direito do mouse em Iniciar e selecionando **Windows PowerShell (administrador)**.
 
@@ -312,7 +312,7 @@ Para configurar um cluster de failover do servidor de arquivos, siga as etapas a
 
 6. Na lista de funções, escolha **servidor de arquivos** e **Avançar**.
 
-7. Para o tipo de servidor de arquivos, selecione **servidor de arquivos para uso geral** e **Avançar**.<br>Para obter informações sobre Servidor de Arquivos de Escalabilidade Horizontal, consulte [servidor de arquivos de escalabilidade horizontal visão geral](sofs-overview.md).
+7. Para o tipo de servidor de arquivos, selecione **servidor de arquivos para uso geral** e **Avançar**.<br>Para obter informações sobre Scale-Out servidor de arquivos, consulte [servidor de arquivos de escalabilidade horizontal visão geral](sofs-overview.md).
 
    ![Tipo de servidor de arquivos](media/Cluster-File-Server/Cluster-FS-File-Server-Type.png)
 

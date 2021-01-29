@@ -6,12 +6,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 4a00bc2c6eabd8b5419d3a0d867efba9dfc1592a
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: eb3d016a3cd0bc7819b58bedd43908b0bc9fa352
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069168"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042552"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Fazer upgrade de controladores de domínio para o Windows Server 2016
 
@@ -30,8 +30,8 @@ A maneira recomendada para atualizar um domínio é promover controladores de do
 1. Verifique a conectividade com o servidor de destino a partir do computador em que você planeja executar a instalação.
 1. Verifique a disponibilidade das funções mestras de operações necessárias:
    - Para instalar o primeiro DC que executa o Windows Server 2016 em um domínio e floresta existentes, o computador em que você executa a instalação precisa de conectividade com o **mestre de esquema** para executar adprep/forestprep e o mestre de infraestrutura para executar adprep/domainprep.
-   - Para instalar o primeiro DC em um domínio em que o esquema de floresta já está estendido, você só precisa de conectividade com o **mestre de infraestrutura** .
-   - Para instalar ou remover um domínio em uma floresta existente, você precisa de conectividade com o **mestre de nomeação de domínio** .
+   - Para instalar o primeiro DC em um domínio em que o esquema de floresta já está estendido, você só precisa de conectividade com o **mestre de infraestrutura**.
+   - Para instalar ou remover um domínio em uma floresta existente, você precisa de conectividade com o **mestre de nomeação de domínio**.
    - Qualquer instalação do controlador de domínio também requer conectividade com o **mestre de RID.**
    - Se você estiver instalando o primeiro controlador de domínio somente leitura em uma floresta existente, precisará de conectividade com o **mestre de infraestrutura** para cada partição de diretório de aplicativo, também conhecido como contexto de nomenclatura não domínio ou NDNC.
 
@@ -42,12 +42,12 @@ A tabela a seguir fornece um resumo das etapas de atualização e dos requisitos
 |Ação de instalação|Requisitos de credenciais|
 | ----- | ----- |
 |Instalar uma nova floresta|Administrador local no servidor de destino|
-|Instalar um novo domínio em uma floresta existente|Administradores Corporativos|
-|Instalar um controlador de domínio adicional em um domínio existente|Administradores de Domínio|
+|Instalar um novo domínio em uma floresta existente|Administrador corporativo|
+|Instalar um controlador de domínio adicional em um domínio existente|Administradores do domínio|
 |Executar adprep/forestprep|Administradores de esquema, administradores corporativos e administradores do domínio|
-|Executar adprep/domainprep|Administradores de Domínio|
-|Executar adprep/domainprep/gpprep|Administradores de Domínio|
-|Executar adprep/rodcprep|Administradores Corporativos|
+|Executar adprep/domainprep|Administradores do domínio|
+|Executar adprep/domainprep/gpprep|Administradores do domínio|
+|Executar adprep/rodcprep|Administrador corporativo|
 
 Para obter informações adicionais sobre os novos recursos do Windows Server 2016, consulte [o que há de novo no Windows server 2016](../../../get-started/whats-new-in-windows-server-2016.md).
 
@@ -122,31 +122,31 @@ Use o Ferramentas de Administração de Servidor Remoto para Windows 10 para ger
 
 Veja a seguir um exemplo simples de atualização da floresta contoso do Windows Server 2012 R2 para o Windows Server 2016.
 
-![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
+![Imagem que ilustra uma atualização da floresta contoso do Windows Server 2012 R2 para o Windows Server 2016.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
 
 1. Junte-se ao novo Windows Server 2016 à sua floresta. Reinicie quando solicitado.
 
-   ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
+   ![Captura de tela da Gerenciador do Servidor mostrando as caixas de diálogo Propriedades do sistema e nome do computador/alterações de domínio.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
 
 1. Entre no novo Windows Server 2016 com uma conta de administrador de domínio.
-1. No **Gerenciador do servidor** , em **adicionar funções e recursos** , instale **Active Directory Domain Services** no novo Windows Server 2016. Isso executará automaticamente a Adprep na floresta e no domínio do 2012 R2.
+1. No **Gerenciador do servidor**, em **adicionar funções e recursos**, instale **Active Directory Domain Services** no novo Windows Server 2016. Isso executará automaticamente a Adprep na floresta e no domínio do 2012 R2.
 
-   ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
+   ![Captura de tela da página Selecionar funções de servidor do assistente para adicionar funções e recursos mostrando a opção Active Directory Domain Services realçada.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
 
-1. Em **Gerenciador do servidor** , clique no triângulo amarelo e, na lista suspensa, clique em **promover o servidor para um controlador de domínio** .
+1. Em **Gerenciador do servidor**, clique no triângulo amarelo e, na lista suspensa, clique em **promover o servidor para um controlador de domínio**.
 
-   ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
+   ![Captura de tela da caixa de diálogo progresso da configuração pós-implantação com a opção promover o servidor a um controlador de domínio chamada out](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
 1. Na tela **configuração de implantação** , selecione **Adicionar um controlador de domínio a uma floresta existente** e clique em Avançar.
 
-   ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+   ![Captura de tela da página configuração de implantação do assistente de configuração do Active Directory Domain Services mostrando a opção Adicionar um controlador de domínio a uma floresta existente selecionada.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
 1. Na tela **Opções do controlador de domínio** , insira a senha do **modo de restauração dos serviços de diretório (DSRM)** e clique em Avançar.
-1. Para o restante das telas, clique em **Avançar** .
-1. Na tela de **verificação de pré-requisitos** , clique em **instalar** . Depois que a reinicialização for concluída, você poderá entrar novamente.
-1. No servidor Windows Server 2012 R2, em **Gerenciador do servidor** , em ferramentas, selecione **Active Directory módulo para o Windows PowerShell** .
+1. Para o restante das telas, clique em **Avançar**.
+1. Na tela de **verificação de pré-requisitos** , clique em **instalar**. Depois que a reinicialização for concluída, você poderá entrar novamente.
+1. No servidor Windows Server 2012 R2, em **Gerenciador do servidor**, em ferramentas, selecione **Active Directory módulo para o Windows PowerShell**.
 
-   ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
+   ![Captura de tela da lista suspensa ferramentas no Gerenciador do Servidor com a opção Active Directory Module for Windows PowerShell chamada out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
 1. Nas janelas do PowerShell, use o Move-ADDirectoryServerOperationMasterRole para mover as funções FSMO. Você pode digitar o nome de cada-OperationMasterRole ou usar números para especificar as funções. Para obter mais informações [, consulte Move-ADDirectoryServerOperationMasterRole](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10))
 
@@ -154,13 +154,13 @@ Veja a seguir um exemplo simples de atualização da floresta contoso do Windows
     Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
     ```
 
-    ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
+    ![Captura de tela da janela Módulo Active Directory para Windows PowerShell mostrando os resultados do cmdlet Move-ADDirectoryServerOperationMasterRole.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
 
-1. Verifique se as funções foram movidas indo para o servidor do Windows Server 2016, em **Gerenciador do servidor** , em **ferramentas** , selecione **Active Directory módulo para o Windows PowerShell** . Use os `Get-ADDomain` `Get-ADForest` cmdlets e para exibir os detentores de função FSMO.
+1. Verifique se as funções foram movidas indo para o servidor do Windows Server 2016, em **Gerenciador do servidor**, em **ferramentas**, selecione **Active Directory módulo para o Windows PowerShell**. Use os `Get-ADDomain` `Get-ADForest` cmdlets e para exibir os detentores de função FSMO.
 
-    ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
+    ![Captura de tela da janela do módulo Active Directory para Windows PowerShell mostrando os resultados do cmdlet Get-ADDomain com o mestre de infraestrutura, o emulador P D C e os valores mestres de R I D chamados.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
 
-    ![Atualizar](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
+    ![Captura de tela da janela Módulo Active Directory para Windows PowerShell mostrando os resultados do cmdlet Get-ADForest com os valores mestre de nomeação de domínio e mestre de esquema chamados.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 
 1. Rebaixe e remova o controlador de domínio do Windows Server 2012 R2. Para obter informações sobre como rebaixar um DC, consulte [rebaixar controladores de domínio e domínios](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 1. Depois que o servidor for rebaixado e removido, você poderá aumentar os níveis funcionais da floresta e do domínio para o Windows Server 2016.

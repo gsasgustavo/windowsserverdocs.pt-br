@@ -7,12 +7,12 @@ author: msjimwu
 ms.author: jimwu
 manager: mtillman
 ms.date: 3/15/2018
-ms.openlocfilehash: 80bc794a5719792941f91d6d50fe35b92006dea6
-ms.sourcegitcommit: 29b8942ea46196c12a67f6b6ad7f8dd46bf94fb2
+ms.openlocfilehash: 143848ed2ea4c9c1b01e3df795faacfcca9c2968
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98065662"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042582"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print"></a>Implantar o Windows Server Hybrid Cloud Print
 
@@ -200,15 +200,15 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
     - Consulte a captura de tela abaixo para localizar o nome de domínio Azure Active Directory.
 
-    ![Servidor de Impressão como obter o nome de domínio do AAD](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
+      ![Servidor de Impressão como obter o nome de domínio do AAD](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
 
     - Consulte a captura de tela abaixo para localizar a ID de Azure Active Directory.
 
-    ![Implantação de impressão em nuvem Servidor de Impressão](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
+      ![Captura de tela do Azure mostrando as opções Azure Active Directory, propriedades e I D do diretório chamadas.](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
 
     - A saída do script CloudPrintDeploy é parecida com esta:
 
-    ![Implantação de impressão em nuvem Servidor de Impressão](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
+      ![Captura de tela da janela do PowerShell mostrando a aparência do script CloudPrintDeploy.](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
     - Verifique o arquivo de log para ver se há algum erro: `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
@@ -223,7 +223,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
     - Certifique-se de que AzureTenant é o nome de domínio do Azure AD.
     - Verifique se a URL é o URI da ID do aplicativo do aplicativo do serviço de descoberta do Mopria.
 
-    ![Servidor de Impressão chaves do registro Mopria](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
+    ![Captura de tela mostrando a pasta do serviço de descoberta do Mopria exibida no editor do registro com o público do Azure, o locatário do Azure e os valores de URL chamados.](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
 
 6. Execute **iisreset** em um prompt de comando do PowerShell de elevação. Isso garantirá que qualquer alteração no registro feita na etapa anterior entrará em vigor.
 
@@ -244,7 +244,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
 
    > Observação: é recomendável baixar e instalar a versão mais recente, deixando a opção-requiredversion.
 
-    ![Servidor de Impressão chaves do registro Mopria](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
+    ![Captura de tela da janela do PowerShell mostrando os resultados dos cmdlets Register-PackageSource e Install-Package.](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
 
 9. Copie as DLLs do SQLite para a pasta bin do MopriaCloudService webapp (C:\inetpub\wwwroot\MopriaCloudService\bin).
     - Crie um arquivo. ps1 contendo o script do PowerShell abaixo.
@@ -299,7 +299,7 @@ Para habilitar a comunicação autenticada com os serviços HCP, precisamos cria
     - No explorador de arquivos, abra as propriedades do arquivo MopriaDeviceDb. DB para adicionar usuários ou grupos que têm permissão para publicar no banco de dados Mopria na guia segurança. Os usuários ou grupos devem existir no local Active Directory e sincronizados com o Azure AD.
     - Se a solução for implantada em um domínio não roteável (por exemplo, *mydomain*. local), o domínio do Azure AD (por exemplo, *DomainName*. onmicrosoft.com, ou uma comprada do fornecedor de terceiros) precisará ser adicionado como um sufixo UPN ao Active Directory local. Isso é assim, exatamente o mesmo usuário que publicará impressoras (por exemplo, admin@*nome_do_domínio*. onmicrosoft.com) pode ser adicionado na configuração de segurança do arquivo de banco de dados. Consulte [preparar um domínio não roteável para sincronização de diretório](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
 
-    ![Servidor de Impressão chaves do registro Mopria](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
+    ![Captura de tela da guia Segurança da caixa de diálogo Propriedades do dispositivo Mopria D b ponto D b com o valor de administrador H C P realçado.](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
 ### <a name="step-5-optional---configure-pre-authentication-with-azure-ad"></a>Etapa 5 \[ opcional \] – configurar pré-autenticação com o Azure AD
 
@@ -444,7 +444,7 @@ Em um dispositivo ingressado no Azure AD que tem as políticas de MDM configurad
 
 Veja abaixo problemas comuns durante a implantação HCP
 
-|Error |Etapas recomendadas |
+|Erro |Etapas recomendadas |
 |------|------|
 |Falha no script do PowerShell do CloudPrintDeploy | <ul><li>Verifique se o Windows Server tem a atualização mais recente.</li><li>Se Windows Server Update Services (WSUS) for usado, consulte [como disponibilizar recursos sob demanda e pacotes de idiomas quando você estiver usando o WSUS/SCCM](/windows/deployment/update/fod-and-lang-packs).</li></ul> |
 |Falha na instalação do SQLite com a mensagem: loop de dependência detectado para o pacote ' System. Data. SQLite ' | Install-Package System. Data. sqlite. Core-ProviderName NuGet-SkipDependencies<br>Install-Package System. Data. sqlite. EF6-ProviderName NuGet-SkipDependencies<br>Install-Package System. Data. sqlite. Linq-ProviderName NuGet-SkipDependencies<br><br>Depois que os pacotes tiverem sido baixados com êxito, verifique se eles são da mesma versão. Caso contrário, adicione o parâmetro-requiredversion aos comandos acima e defina-os para que sejam da mesma versão. |

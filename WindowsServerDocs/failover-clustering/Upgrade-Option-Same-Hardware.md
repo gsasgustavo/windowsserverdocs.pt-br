@@ -7,12 +7,12 @@ author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 02/28/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e25660eda2d21658f01fe1d8a01ae86a4b42116
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1c45fe1ea576946e499013c3dccb04cfef90c9a2
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990951"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042512"
 ---
 # <a name="upgrading-failover-clusters-on-the-same-hardware"></a>Atualizando clusters de failover no mesmo hardware
 
@@ -40,11 +40,11 @@ No exemplo a seguir, o nome do cluster de failover é CLUSTER e os nomes de nó 
 
 1. Em Gerenciador de Cluster de Failover, dissipe todos os recursos de NODE1 para NODE2 clicando com o botão direito do mouse no nó e selecionando **Pausar** e **drenar funções**.  Como alternativa, você pode usar o comando [Suspend-CLUSTERNODE](/powershell/module/failoverclusters/suspend-clusternode)do PowerShell.
 
-    ![Nó de dreno](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
+    ![Captura de tela da Gerenciador de Cluster de Failover mostrando a opção pausar > funções de dreno.](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
 
 2. Remova NODE1 do cluster clicando com o botão direito do mouse no nó e selecionando **mais ações** e **remover**.  Como alternativa, você pode usar o comando [Remove-CLUSTERNODE](/powershell/module/failoverclusters/remove-clusternode)do PowerShell.
 
-    ![Nó de dreno](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
+    ![Captura de tela da Gerenciador de Cluster de Failover mostrando mais ações > opção de remoção.](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
 
 3. Como precaução, desanexe o NODE1 do armazenamento que você está usando.  Em alguns casos, desconectar os cabos de armazenamento do computador será suficiente.  Verifique com seu fornecedor de armazenamento as etapas de desanexação adequadas, se necessário.  Dependendo do seu armazenamento, isso pode não ser necessário.
 
@@ -52,11 +52,11 @@ No exemplo a seguir, o nome do cluster de failover é CLUSTER e os nomes de nó 
 
 5. Crie um novo cluster chamado CLUSTER1 com NODE1.  Abra Gerenciador de Cluster de Failover e, no painel **Gerenciamento** , escolha **criar cluster** e siga as instruções no assistente.
 
-    ![Nó de dreno](media/In-Place-Upgrade/In-Place-Upgrade-4.png)
+    ![Captura de tela do painel de gerenciamento do Gerenciador de Cluster de Failover mostrando a opção criar cluster chamada out.](media/In-Place-Upgrade/In-Place-Upgrade-4.png)
 
 6. Depois que o cluster for criado, as funções precisarão ser migradas do cluster original para esse novo cluster.  No novo cluster, clique com o botão direito do mouse no nome do cluster (CLUSTER1) e selecione **mais ações** e **copie as funções do cluster**.  Acompanhe o assistente para migrar as funções.
 
-    ![Nó de dreno](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
+    ![Captura de tela da Gerenciador de Cluster de Failover mostrando a opção mais ações > copiar cluster.](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
 
 7.  Depois que todos os recursos tiverem sido migrados, desligue o NODE2 (cluster original) e desconecte o armazenamento para não causar nenhuma interferência.  Conecte o armazenamento ao NODE1.  Quando todos estiverem conectados, coloque todos os recursos online e verifique se eles estão funcionando como deveria.
 
@@ -74,7 +74,7 @@ Depois de verificar que tudo está funcionando como deveria, o NODE2 pode ser re
 
    c. Ao escolher OK ou aplicar, você verá o Popup da caixa de diálogo abaixo.
 
-    ![Nó de dreno](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
+    ![Captura de tela da caixa de diálogo confirmar ação.](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
 
     d. O serviço de cluster será interrompido e precisará ser iniciado novamente para que a renomeação seja concluída.
 

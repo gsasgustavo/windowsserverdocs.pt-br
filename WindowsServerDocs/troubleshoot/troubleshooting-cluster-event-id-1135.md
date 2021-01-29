@@ -5,12 +5,12 @@ ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.openlocfilehash: f75e6bcca3a4447920d3b3f571fc606ad68752e6
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 902ce4f5e30811d54d986c63fb8ca30cd0803aa5
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947182"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042472"
 ---
 # <a name="troubleshooting-cluster-issue-with-event-id-1135"></a>Como solucionar o problema de cluster com a ID de Evento 1135
 
@@ -69,8 +69,8 @@ Há três cenários típicos:
 
 Você está examinando todos os eventos e todos os nós no cluster estão indicando que o nó A perdeu A comunicação.
 
-![Cenário um ](media/troubleshooting-cluster-event-id-1135/18647.png)
- ![ cenário a](media/troubleshooting-cluster-event-id-1135/18648.png)
+![Diagrama que mostra o nó A, o nó B e o nó C se comunicando com êxito. ](media/troubleshooting-cluster-event-id-1135/18647.png)
+ ![ O diagrama que mostra o nó A perdeu a comunicação com o nó B e o nó C.](media/troubleshooting-cluster-event-id-1135/18648.png)
 
 Pode ser possível que, quando você estiver vendo os logs do sistema no nó A, ele tenha eventos para todos os nós restantes no cluster.
 
@@ -84,11 +84,11 @@ Você deve examinar e validar a configuração de rede e os problemas de comunic
 
 Você está observando os eventos nos nós e nos permite dizer que o cluster está disperso em dois sites. NÓ A, nó B e nó C no site 1 e nó D & nó E no site 2.
 
-![Cenário B](media/troubleshooting-cluster-event-id-1135/18649.png)
+![O diagrama que mostra que o site 1 está se comunicando com êxito com o site 2 em um link WAN.](media/troubleshooting-cluster-event-id-1135/18649.png)
 
 Nos nós A, B e C, você verá que os eventos registrados são para conectividade com os nós D & E. Da mesma forma, quando você vê os eventos nos nós D & E, os eventos sugerem que perdemos a comunicação com A, B e C.
 
-![Cenário B](media/troubleshooting-cluster-event-id-1135/18650.png)
+![O diagrama que mostra o SIte 1 perdeu a conexão de link de WAN com o site 2.](media/troubleshooting-cluster-event-id-1135/18650.png)
 
 #### <a name="solution"></a>Solução
 

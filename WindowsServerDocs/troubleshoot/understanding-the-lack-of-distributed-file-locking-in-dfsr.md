@@ -5,12 +5,12 @@ ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.openlocfilehash: 55acc6e01e597261d0da3e7dfb572e77a277216b
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 9def2be46000671c5ca725683437afaae8a8a366
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97947642"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042532"
 ---
 # <a name="understanding-the-lack-of-distributed-file-locking-in-dfsr"></a>Entender a ausência de bloqueio de arquivo distribuído na DFSR
 
@@ -31,11 +31,11 @@ Como os usuários podem modificar dados em vários servidores e, como cada servi
 
 Agora, isso é muito *menos* comum do que as pessoas gostam de acreditar. Normalmente, os verdadeiros arquivos compartilhados são modificados em um ambiente local; na filial ou na mesma linha de baias. Normalmente, eles são trabalhados por pessoas na mesma equipe, de modo que as pessoas geralmente sabem que os colegas estão modificando os dados. E, como eles geralmente estão no mesmo site, as chances são muito maiores que todos os usuários que trabalham em um documento compartilhado usarão o mesmo servidor. O Windows SMB lida com a situação aqui. Quando um usuário tiver um arquivo bloqueado para modificação e seu colega tentar editá-lo, o outro usuário receberá um erro como:
 
-![Arquivo em uso](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/1.jpg)
+![Captura de tela da caixa de diálogo arquivo em uso mostrando uma mensagem de erro dizendo que essa ação não pode ser concluída porque o arquivo está aberto em outro programa.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/1.jpg)
 
 E se o aplicativo que abre o arquivo for realmente inteligente, como o Word 2007, ele poderá lhe fornecer:
 
-![Arquivo em uso](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/2.jpg)
+![Captura de tela da caixa de diálogo arquivo em uso mostrando três ações que você pode executar quando um arquivo está bloqueado por outro usuário.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/2.jpg)
 
 O DFSR tem um mecanismo para arquivos bloqueados, mas está apenas dentro do próprio contexto do servidor. O DFSR não replicará um arquivo para dentro ou para fora se sua cópia local tiver um bloqueio exclusivo. Mas isso não impede que ninguém em outro servidor modifique o arquivo.
 
@@ -49,13 +49,13 @@ Há algumas soluções de fornecedor que assumem esse problema, que normalmente 
 
 > Ter um "Cop" de tráfego central permite que um servidor esteja ciente de todos os outros servidores e quais arquivos eles bloquearam por usuários. Infelizmente, isso também significa que geralmente há um único ponto de falha no sistema de bloqueio distribuído.
 
-![Topologia](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/3.png)
+![Diagrama mostrando o uso de um mecanismo de agente.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/3.png)
 
   - Requisito para uma rede totalmente roteada
 
 > Como um agente central deve ser capaz de se comunicar com todos os servidores que participam da replicação de arquivos, isso remove a capacidade de lidar com topologias de rede complexas. Topologias de anel e topologias de vários hubs e spokes geralmente não são possíveis. Em uma rede não totalmente roteada, alguns servidores podem não conseguir entrar em contato diretamente entre si ou com um agente e só podem conversar com um parceiro que possa se comunicar com outro servidor – e assim por diante. Isso é bom em um ambiente de vários mestres, mas não com um mecanismo de agente.
 
-![Topologia](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/4.png)
+![Diagrama que mostra o requisito para uma rede totalmente roteada.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/4.png)
 
   - São limitados a um par de servidores
 
@@ -73,13 +73,13 @@ Há algumas soluções de fornecedor que assumem esse problema, que normalmente 
 
 Como você imagina mais sobre esse problema, alguns problemas fundamentais começam a ser cortados. Por exemplo, se tivermos quatro servidores com dados que podem ser modificados por usuários em quatro sites e a conexão WAN com um deles ficar offline, o que fazemos? Os usuários ainda podem acessar seus servidores individuais, mas deveriam permiti-los? Não queremos que eles façam alterações que estejam em conflito, mas, definitivamente, queremos que eles continuem a trabalhar e tornando nosso dinheiro na empresa. Se bloquearmos arbitrariamente as alterações nesse ponto, nenhum usuário poderá trabalhar mesmo que, na verdade, pode não haver nenhum conflito acontecendo\! Não há como informar aos outros servidores que o arquivo está em uso e que você está de volta ao quadrado.
 
-![Topologia](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/5.png)
+![Diagrama mostrando os resultados de uma interrupção de rede parcial.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/5.png)
 
 Em seguida, há o próprio SMB e o tratamento de erros de bloqueios de relatórios. Na verdade, não podemos alterar como os relatórios SMB compartilham violações à medida que violamos uma tonelada de aplicativos e os clientes não entendem novas mensagens de erro estendidas mesmo assim. Aplicativos como o Word 2007 fazem um truque Undercover para descobrir quem está bloqueando arquivos, mas a grande maioria dos aplicativos não sabe quem tem um arquivo em uso (ou até mesmo que o SMB exista. Realmente.). Assim, quando um usuário recebe a mensagem ' este arquivo está em uso ', isso não é particularmente acionável – caso todos chamem o suporte técnico? O suporte técnico tem acesso a todos os servidores de arquivos para ver quais usuários estão acessando arquivos? Confuso.
 
 Como queremos vários mestres para alta disponibilidade, um sistema de agente é menos desejável; Talvez seja necessário ter algo em execução em todos os servidores que permita que todos se comuniquem mesmo por meio de redes não totalmente roteadas. Isso exigirá técnicas de sincronização muito complexas. Ele adicionará alguma sobrecarga à rede (embora provavelmente não seja muito) e precisará ser um raio rápido para garantir que não estamos mantendo o usuário em seu trabalho; Ele precisa OutRun a própria replicação de arquivo, na verdade, talvez seja necessário estar vinculado à replicação de alguma forma. Ele também precisará levar em conta as interrupções do servidor que estão relacionadas à rede e não falhas do servidor, de alguma forma.
 
-![Topologia](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/6.png)
+![Diagrama mostrando o bloqueio e a replicação em cinco servidores.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/6.png)
 
 E, em seguida, voltamos ao software cliente especial para esse cenário que melhor entende os bloqueios e pode dar ao usuário algumas informações úteis ("chamar Susana em contabilidade e informar a ela para liberar esse documento", "a topologia de bloqueio de arquivo está interrompida e o administrador está impedindo que você abra esse arquivo até que ele seja corrigido", etc). Fazer isso funcionar bem com milhões de aplicativos em execução no Windows certamente será interessante. Há muitos sistemas operacionais que não teriam suporte ou que o software – o Windows 2000 está fora do suporte base e XP em breve será. Os clientes Linux e Mac não teriam esse software até que eles achassem que era importante, de modo que o cliente teria que esperar que seus fornecedores tivessem algo análogo.
 

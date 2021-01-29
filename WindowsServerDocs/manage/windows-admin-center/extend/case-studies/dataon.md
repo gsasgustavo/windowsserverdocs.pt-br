@@ -6,12 +6,12 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 01/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: bd7a7d66d0f842fc0f9592f21309e2eec9723a1d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dd4ff1de9f930abbcf74b00285b5e16c6f5651c8
+ms.sourcegitcommit: d1815253b47e776fb96a3e91556fd231bef8ee6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966753"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99042562"
 ---
 # <a name="dataon-must-extension"></a>O dataize deve ser uma extensão
 
@@ -31,16 +31,16 @@ A extensão deve estender a funcionalidade do centro de administração do Windo
 - **Alertas do sistema** – aproveita as falhas do Windows serviço de integridade para identificar falhas de hardware, problemas de configuração e saturação de recursos. Ele também fornece uma avaliação de vários níveis de locais específicos, descrições de falhas e ações de recuperação. Você também pode aproveitar as interceptações de monitoramento SNMP de terceiros para alertá-lo quando precisar de substituições de disco ou de hardware.
 - **Serviço de chamada do tipo San** – solicitado por alertas do sistema, os administradores podem ter alertas de email automatizados enviados aos principais contatos.
 
-![O mapeamento de disco de extensão de dados ](../../media/extend-case-study-dataon/dataon-1.png)
- *na DATAize deve ser a extensão do centro de administração do Windows*
+![Captura de tela do centro de administração do Windows mostrando o mapeamento de disco em Dataize deve ser a extensão. ](../../media/extend-case-study-dataon/dataon-1.png)
+ *O mapeamento de disco nos dados deve ser a extensão do centro de administração do Windows*
 
 > <cite>"É ótimo que o centro de administração do Windows permita extensões como Dataize, de modo que eu possa usar ambas as ferramentas no mesmo console e gosto de quão direta essa integração é. O centro de administração do Windows e o Dataize devem, em grande medida, permitir que possamos ser mais eficientes e economizar nossa equipe uma infinidade de tempo. Ele nos permite atingir nossas tarefas de administrador muito mais rápido do que antes. "</cite>
 >
 > --Matt Roper, facilitador de serviços de suporte de tecnologia, distrito escolar (GA)
 
-![Os serviços de alerta de extensão de dados ](../../media/extend-case-study-dataon/dataon-2.png)
- *na data de entrada devem ser a extensão do centro de administração do Windows*
+![Captura de tela do centro de administração do Windows mostrando os serviços de alerta na data de extensão deve ser prorrogada. ](../../media/extend-case-study-dataon/dataon-2.png)
+ *Os serviços de alerta na data de entrada devem ser a extensão do centro de administração do Windows*
 
-> <cite>"Deve ter sido muito valioso e foi um grande ponto de venda. Para nós, ele demonstrou um compromisso de dados para dar suporte à infraestrutura hiperconvergente da Microsoft. A inclusão de deve com seu dispositivo S2D é o que conclui a solução com Espaços de Armazenamento Diretos como uma substituição de SAN viável ".</cite>
+> <cite>"Deve ter sido muito valioso e foi um grande ponto de venda. Para nós, ele demonstrou um compromisso de dados para dar suporte à infraestrutura hiperconvergente da Microsoft. A inclusão de deve com seu dispositivo S2D é o que conclui a solução com Espaços de Armazenamento Diretos como uma substituição de SAN viável ". </cite>
 >
 > --Benjamin Clements, Presidente, sistemas online estratégicos, Inc.
