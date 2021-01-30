@@ -7,12 +7,12 @@ ms.author: jgerend
 manager: lizross
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: cf4b9a5196c6cf92d4f075d25e03ab719b341422
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 7aec60e1d66e956875dd43889fdeb69485292eae
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865720"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081732"
 ---
 # <a name="configure-and-manage-quorum"></a>Configurar e gerenciar o quorum
 

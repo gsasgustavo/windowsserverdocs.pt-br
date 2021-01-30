@@ -4,14 +4,14 @@ description: Breve descrição do tópico para resultados do mecanismo de pesqui
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 03/25/2020
+ms.date: 01/29/2021
 ms.topic: article
-ms.openlocfilehash: 6a6fa412ec4a4472c0651332187515f7f4988641
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d38a6c058d6629f0b73e613e417dea76a22bc71b
+ms.sourcegitcommit: f89c1bc137ff92eeca2499131854287f28851f63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939344"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99084944"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>Usar o serviço de migração de armazenamento para migrar um servidor
 
@@ -25,9 +25,9 @@ Antes de começar, instale o serviço de migração de armazenamento e verifique
 2. No centro de administração do Windows, conecte-se ao servidor do Orchestrator que executa o Windows Server 2019. <br>Este é o servidor no qual você instalará o serviço de migração de armazenamento e usará o para gerenciar a migração. Se você estiver migrando apenas um servidor, poderá usar o servidor de destino contanto que ele esteja executando o Windows Server 2019. Recomendamos que você use um servidor de orquestração separado para qualquer migração de vários servidores.
 3. Vá para **Gerenciador do servidor** (no centro de administração do Windows) > **serviço de migração de armazenamento** e selecione **instalar** para instalar o serviço de migração de armazenamento e seus componentes necessários (mostrados na Figura 1).
     ![Captura de tela da página do serviço de migração de armazenamento mostrando o botão instalar ](media/migrate/install.png) **Figura 1: Instalando o serviço de migração de armazenamento**
-4. Instale o proxy do serviço de migração de armazenamento em todos os servidores de destino que executam o Windows Server 2019. Isso duplica a velocidade de transferência quando instalado nos servidores de destino. <br>Para fazer isso, conecte-se ao servidor de destino no centro de administração do Windows e vá para **Gerenciador do servidor** (no centro de administração do windows) > **funções e recursos**, > **recursos**, selecione proxy de serviço de **migração de armazenamento**e, em seguida, selecione **instalar**.
-5. Se você pretende migrar de ou para clusters do Windows failover, instale as ferramentas de clustering de failover no servidor do Orchestrator. <br>Para fazer isso, conecte-se ao servidor do Orchestrator no centro de administração do Windows e vá para **Gerenciador do servidor** (no centro de administração do windows) > **funções e recursos**, > **recursos**, > **ferramentas de administração de servidor remoto**, > ferramentas de **Administração de recursos**, selecione **ferramentas de clustering de failover**e, em seguida, selecione **instalar**.
-6. Em todos os servidores de origem e em todos os servidores de destino que executam o Windows Server 2012 R2 ou o Windows Server 2016, no centro de administração do Windows, conecte-se a cada servidor, vá para **Gerenciador do servidor** (no centro de administração do Windows) > regras de **Firewall**  >  **entrada**do firewall e verifique se as regras a seguir estão habilitadas:
+4. Instale o proxy do serviço de migração de armazenamento em todos os servidores de destino que executam o Windows Server 2019. Isso duplica a velocidade de transferência quando instalado nos servidores de destino. <br>Para fazer isso, conecte-se ao servidor de destino no centro de administração do Windows e vá para **Gerenciador do servidor** (no centro de administração do windows) > **funções e recursos**, > **recursos**, selecione proxy de serviço de **migração de armazenamento** e, em seguida, selecione **instalar**.
+5. Se você pretende migrar de ou para clusters do Windows failover, instale as ferramentas de clustering de failover no servidor do Orchestrator. <br>Para fazer isso, conecte-se ao servidor do Orchestrator no centro de administração do Windows e vá para **Gerenciador do servidor** (no centro de administração do windows) > **funções e recursos**, > **recursos**, > **ferramentas de administração de servidor remoto**, > ferramentas de **Administração de recursos**, selecione **ferramentas de clustering de failover** e, em seguida, selecione **instalar**.
+6. Em todos os servidores de origem e em todos os servidores de destino que executam o Windows Server 2012 R2 ou o Windows Server 2016, no centro de administração do Windows, conecte-se a cada servidor, vá para **Gerenciador do servidor** (no centro de administração do Windows) > regras de   >  **entrada** do firewall e verifique se as regras a seguir estão habilitadas:
     - Compartilhamento de arquivos e de impressora (SMB-Entrada)
     - Serviço Netlogon (NP-in)
     - DCOM-In (Instrumentação de Gerenciamento do Windows)
@@ -112,8 +112,15 @@ Nesta etapa, você reduz os servidores de origem para os servidores de destino, 
 7. Selecione **validar** na página **validar dispositivo de origem e de destino** e, em seguida, selecione **Avançar**.
 8. Quando estiver pronto para realizar a transferência, selecione **Iniciar transferência**. <br>Os usuários e aplicativos podem experimentar uma interrupção enquanto o endereço e os nomes são movidos e os servidores são reiniciados várias vezes cada, mas não serão afetados pela migração. Por quanto tempo a transferência demora depende da rapidez com que os servidores são reiniciados, bem como Active Directory e tempos de replicação de DNS.
 
+## <a name="post-migration-operations"></a>Operações de pós-migração
+
+Depois de migrar um servidor ou cluster, avalie o ambiente para possíveis operações de migração posterior: 
+
+- **Crie um plano para o servidor de origem agora descomissionado**. O serviço de migração de armazenamento usa o processo de transferência para que um servidor de destino assuma a identidade de um servidor de origem, alterando os nomes e IPs da origem para que os usuários e aplicativos não possam mais acessá-lo. No entanto, ele não desliga ou altera o conteúdo do servidor de origem. Você deve criar um plano para encerrar o servidor de origem. É recomendável deixar a origem online por pelo menos duas semanas no caso de dados perdidos em uso, para que os arquivos possam ser recuperados facilmente sem a necessidade de uma restauração de backup offline. Após esse período, recomendamos desativar o servidor por mais quatro semanas para que ele ainda esteja disponível para a recuperação de dados, mas que não consuma mais recursos operacionais ou de energia. Após esse período, execute um backup completo final do servidor e avalie a redefinição se for um servidor físico ou excluindo se ele for uma máquina virtual.      
+- **Emita novamente os certificados no novo servidor de destino**. Durante o tempo em que o servidor de destino estava online, mas ainda não foi interrompido, os certificados podem ter sido emitidos por meio de registro automático ou de outros processos. A renomeação de um Windows Server não altera automaticamente nem reemite certificados existentes, de modo que os certificados existentes podem conter o nome do servidor antes da transferência de ti. Você deve examinar os certificados existentes no servidor e reemitir os novos, conforme necessário.   
+
 ## <a name="additional-references"></a>Referências adicionais
 
 - [Visão geral do serviço de migração de armazenamento](overview.md)
 - [Perguntas frequentes sobre serviços de migração de armazenamento](faq.md)
-- [Planejar uma implantação da Sincronização de Arquivos do Azure](/azure/storage/files/storage-sync-files-planning)
+- [Planejando uma implantação da Sincronização de Arquivos do Azure](/azure/storage/files/storage-sync-files-planning)

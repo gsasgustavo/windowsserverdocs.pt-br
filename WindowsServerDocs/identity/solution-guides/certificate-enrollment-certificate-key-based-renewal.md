@@ -6,12 +6,12 @@ ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.openlocfilehash: 2816b2ac03fda883e67a0dd58f7797a0e4847678
-ms.sourcegitcommit: 6a62d736e4d9989515c6df85e2577662deb042b6
+ms.openlocfilehash: d3a5b2e4ca377bdbeaa7085851fa4b47aebdc93a
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98103868"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081782"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Configurar o Serviço Web de Registro de Certificado para renovação baseada em chave de certificados em uma porta personalizada
 
@@ -24,7 +24,7 @@ Este artigo fornece instruções passo a passo para implementar o Serviço Web d
 
 Este artigo também explica como o CEP e o CES funcionam e fornece diretrizes de instalação.
 
-> [!Note]
+> [!NOTE]
 > O fluxo de trabalho incluído neste artigo se aplica a um cenário específico. O mesmo fluxo de trabalho pode não funcionar para uma situação diferente. No entanto, os princípios permanecem os mesmos.
 >
 > Isenção de responsabilidade: essa configuração é criada para um requisito específico no qual você não deseja usar a porta 443 para a comunicação HTTPS padrão para servidores CEP e CES. Embora essa configuração seja possível, ela tem suporte limitado. Os serviços de atendimento ao cliente e o suporte podem ajudá-lo a se seguir este guia com cuidado usando o desvio mínimo da configuração de servidor Web fornecida.
@@ -54,17 +54,17 @@ Para este exemplo, as instruções são baseadas em um ambiente que usa a seguin
 2. Como pré-requisito, configure um servidor CEP e CES para autenticação de nome de usuário e senha.
    Nesse ambiente, nos referimos à instância como "CEPCES01".
 
-3.  Configure outra instância de CEP e CES usando o PowerShell para autenticação baseada em certificado no mesmo servidor. A instância do CES usará uma conta de serviço.
+3. Configure outra instância de CEP e CES usando o PowerShell para autenticação baseada em certificado no mesmo servidor. A instância do CES usará uma conta de serviço.
 
     Nesse ambiente, nos referimos à instância como "CEPCES02". A conta de serviço usada é "cepcessvc".
 
-4.  Defina as configurações do lado do cliente.
+4. Defina as configurações do lado do cliente.
 
 ### <a name="configuration"></a>Configuração
 
 Esta seção fornece as etapas para configurar o registro inicial.
 
-> [!Note]
+> [!NOTE]
 > Você também pode configurar qualquer conta de serviço de usuário, MSA ou GMSA para o CES funcionar.
 
 Como pré-requisito, você deve configurar o CEP e o CES em um servidor usando a autenticação de nome de usuário e senha.
@@ -83,7 +83,7 @@ Você pode duplicar um modelo de computador existente e definir as seguintes con
 
 4. Publique o novo modelo na autoridade de certificação.
 
-> [!Note]
+> [!NOTE]
 > Verifique se as configurações de compatibilidade no modelo estão definidas para o **Windows Server 2012 R2** , pois há um problema conhecido em que os modelos não estarão visíveis se a compatibilidade estiver definida como Windows Server 2016 ou versão posterior. Para obter mais informações, consulte [não é possível selecionar modelos de certificado compatíveis com a AC do Windows server 2016 do Windows server 2016 ou servidores de CAS ou CEP baseados em versões posteriores](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
 
 
@@ -101,7 +101,7 @@ Consulte os artigos a seguir para obter orientações passo a passo para habilit
 
 [Diretrizes de Serviço Web de Registro de Certificado](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
-> [!Note]
+> [!NOTE]
 > Certifique-se de não selecionar a opção "Habilitar renovação de Key-Based" se configurar as instâncias CEP e CES de autenticação de nome de usuário e senha.
 
 **Método 2**
@@ -120,7 +120,7 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThum
 
 Esse comando instala o Serviço Web de Política de Registro de Certificado (CEP) especificando que um nome de usuário e uma senha são usados para autenticação.
 
-> [!Note]
+> [!NOTE]
 > Nesse comando, \<**SSLCertThumbPrint**\> é a impressão digital do certificado que será usado para associar o IIS.
 
 ```PowerShell
@@ -150,7 +150,7 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Certificate -SSLCertT
 
 Esse comando instala o Serviço Web de Política de Registro de Certificado (CEP) e especifica que um certificado é usado para autenticação.
 
-> [!Note]
+> [!NOTE]
 > Nesse comando, \<SSLCertThumbPrint\> é a impressão digital do certificado que será usado para associar o IIS.
 
 A renovação baseada em chave permite que os clientes de certificado renovem seus certificados usando a chave de seu certificado existente para autenticação. Quando estiver no modo de renovação baseado em chave, o serviço retornará apenas os modelos de certificado definidos para a renovação baseada em chave.
@@ -165,8 +165,8 @@ Nesse comando, a identidade do Serviço Web de Registro de Certificado é especi
 
 O cmdlet **RenewalOnly** permite que o CES seja executado no modo somente renovação. O cmdlet **AllowKeyBasedRenewal** também especifica que o CES aceitará solicitações de renovação com base em chave para o servidor de registro. Eles são certificados de cliente válidos para autenticação que não são mapeados diretamente para uma entidade de segurança.
 
-> [!Note]
-> A conta de serviço deve fazer parte do grupo **IISUsers** no servidor.
+> [!NOTE]
+> A conta de serviço deve fazer parte do grupo de **IIS_IUSRS** no servidor.
 
 ##### <a name="step-2-check-the-iis-manager-console"></a>Etapa 2 verificar o console do Gerenciador do IIS
 
@@ -175,7 +175,7 @@ Após uma instalação bem-sucedida, você espera ver a exibição a seguir no c
 
 Selecione **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** em **site padrão** e abra **configurações do aplicativo**. Anote a **ID** e o **URI**. Você pode adicionar um **nome amigável** para o gerenciamento.
 
-> [!Note]
+> [!NOTE]
 > Se a instância estiver instalada em um novo servidor, clique duas vezes na ID para certificar-se de que a ID é a mesma que foi gerada na instância CEPCES01. Você pode copiar e colar o valor diretamente se ele for diferente.
 
 #### <a name="complete-certificate-enrollment-web-services-configuration"></a>Concluir a configuração de serviços Web de registro de certificado
@@ -186,7 +186,7 @@ Para poder registrar o certificado em nome da funcionalidade do CEP e do CES, vo
 
 Essa conta será usada para autenticação em relação à renovação baseada em chave e à opção "publicar no Active Directory" no modelo de certificado.
 
-> [!Note]
+> [!NOTE]
 > Você não precisa ingressar no domínio no computador cliente. Essa conta entra em imagem durante a autenticação baseada em certificado no KBR para o serviço dsmapper.
 
 ![Novo objeto](media/certificate-enrollment-certificate-key-based-renewal-6.png)
@@ -200,10 +200,10 @@ Get-ADUser -Identity cepcessvc | Set-ADAccountControl -TrustedToAuthForDelegatio
 Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.contoso.com','RPCSS/CA1.contoso.com')}
 ```
 
-> [!Note]
-> Nesse comando, \<cepcessvc\> é a conta de serviço e <CA1.contoso.com >é a autoridade de certificação.
+> [!NOTE]
+> Nesse comando, \<cepcessvc\> é a conta de serviço e <CA1.contoso.com> é a autoridade de certificação.
 
-> [!Important]
+> [!IMPORTANT]
 > Não estamos habilitando o sinalizador RENEWALONBEHALOF na autoridade de certificação nessa configuração porque estamos usando a delegação restrita para fazer o mesmo trabalho para nós. Isso nos permite evitar a adição da permissão para a conta de serviço à segurança da autoridade de certificação.
 
 ##### <a name="step-3-configure-a-custom-port-on-the-iis-web-server"></a>Etapa 3: configurar uma porta personalizada no servidor Web do IIS
@@ -252,7 +252,7 @@ No computador cliente, configure as políticas de registro e a política de regi
    c. Defina uma prioridade de **10** e, em seguida, valide o servidor de políticas.
       ![Captura de tela que mostra onde definir a prioridade.](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
-   > [!Note]
+   > [!NOTE]
    > Certifique-se de que o número da porta seja adicionado ao URI e seja permitido no firewall.
 
 5. Registre o primeiro certificado para o computador por meio de certlm. msc.
@@ -269,7 +269,7 @@ No computador cliente, configure as políticas de registro e a política de regi
 
    ![Política de registro](media/certificate-enrollment-certificate-key-based-renewal-13.png)
 
-> [!Note]
+> [!NOTE]
 > Certifique-se de que o valor de prioridade da política de registro de renovação baseada em chave seja menor que a prioridade da prioridade de política de registro de senha de nome de usuário. A primeira preferência é dada à prioridade mais baixa.
 
 ## <a name="testing-the-setup"></a>Testando a instalação
@@ -300,7 +300,7 @@ Portanto, se você adiantar o tempo até 8:10 P.M. no dia 19, uma vez que nossa 
 
 Após a conclusão do teste, reverta a configuração de hora para o valor original e reinicie o computador cliente.
 
-> [!Note]
+> [!NOTE]
 > A captura de tela anterior é um exemplo para demonstrar que o mecanismo de registro automático funciona conforme o esperado porque a data da autoridade de certificação ainda está definida como 18. Portanto, ele continua a emitir certificados. Em uma situação real, essa grande quantidade de renovações não ocorrerá.
 
 ## <a name="references"></a>Referências
@@ -313,7 +313,7 @@ Após a conclusão do teste, reverta a configuração de hora para o valor origi
 
 [Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice)
 
-Confira também
+### <a name="see-also"></a>Confira também
 
 [Fórum de Segurança do Windows Server](https://aka.ms/adcsforum)
 

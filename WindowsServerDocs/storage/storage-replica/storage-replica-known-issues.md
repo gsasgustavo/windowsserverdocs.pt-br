@@ -7,12 +7,12 @@ ms.topic: how-to
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: 0eaf5b415ecd71087cc375d113b86fe4bd76b000
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 15f5ab032d41dd0968ac834419801d4ccc3c12e3
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97948602"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081742"
 ---
 # <a name="known-issues-with-storage-replica"></a>Problemas conhecidos com a Réplica de Armazenamento
 
@@ -262,7 +262,7 @@ Ao especificar um limite de largura de banda para a réplica de armazenamento, o
 Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB
 ```
 
-Isso ocorre devido ao um problema de interoperabilidade entre a réplica de armazenamento e o SMB. Esse problema foi corrigido primeiro na atualização cumulativa de julho de 2017 do Windows Server 2016 e no Windows Server, versão 1709.
+Isso ocorre devido ao um problema de interoperabilidade entre a réplica de armazenamento e o SMB.
 
 ## <a name="event-1241-warning-repeated-during-initial-sync"></a>Aviso de evento 1241 repetido durante sincronização inicial
 

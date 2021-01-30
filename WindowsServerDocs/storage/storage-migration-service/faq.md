@@ -4,14 +4,14 @@ description: Perguntas frequentes sobre o serviço de migração de armazenament
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 06/02/2020
+ms.date: 01/29/2021
 ms.topic: article
-ms.openlocfilehash: c59be01c856cac27f4372291b52bd43419c9ac46
-ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
+ms.openlocfilehash: 48dd8848f401556dc005727484006a95bf1f51b9
+ms.sourcegitcommit: f89c1bc137ff92eeca2499131854287f28851f63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99084954"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>FAQ (perguntas frequentes) sobre o serviço de migração de armazenamento
 
@@ -60,11 +60,11 @@ O serviço de migração de armazenamento migra todos os sinalizadores, configur
 - Tempo limite da CA
 - Limite de usuários simultâneos
 - Continuamente disponível
-- Description
+- Descrição
 - Criptografar Dados
 - Comunicação remota de identidade
 - Infraestrutura
-- Name
+- Nome
 - Caminho
 - Com escopo
 - Nome do escopo
@@ -165,6 +165,10 @@ Ao executar uma transferência, o serviço de migração de armazenamento procur
 ## <a name="what-do-the-error-numbers-mean-in-the-transfer-csv"></a>O que significam os números de erro no CSV de transferência?
 
 A maioria dos erros encontrados no arquivo CSV de transferência são os códigos de erro do sistema Windows. Você pode descobrir o que cada erro significa examinando a [documentação de códigos de erro do Win32](/windows/win32/debug/system-error-codes).
+
+## <a name="are-existing-certificates-updated-on-the-destination-server-during-cutover"></a>Os certificados existentes são atualizados no servidor de destino durante a transferência?
+
+Um servidor de destino pode conter certificados emitidos antes da transferência-em seu repositório de certificados local, com o nome do servidor que está sendo parte do assunto, nome alternativo da entidade ou outros campos. Quando a transferência ocorre e o servidor é renomeado, esses certificados não são atualizados. Você deve reemitir certificados para seus servidores renomeados recentemente usando seus métodos de implantação atuais, como Política de Grupo ou registro na Web.    
 
 ## <a name="what-are-my-options-to-give-feedback-file-bugs-or-get-support"></a><a name="give-feedback"></a> Quais são minhas opções para fornecer comentários, arquivos de erros ou obter suporte?
 

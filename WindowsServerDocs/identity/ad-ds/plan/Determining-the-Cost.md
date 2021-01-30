@@ -7,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fe950d2ebe5d5ae4508921367d9e0b9044f6ae88
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 1f435d77215515562fa8a58fed522b094ef19ada
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97039314"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081714"
 ---
 # <a name="determining-the-cost"></a>Determinando o custo
 
@@ -39,9 +39,9 @@ A tabela a seguir lista as velocidades para diferentes tipos de redes.
 |100Baset|100 Mbps|
 |Gigabit Ethernet|1 gigabit por segundo (Gbps)|
 
-Use a tabela a seguir para calcular o custo de cada link de site com base na velocidade de link de WAN (velocidade de rede de longa distância). Para a velocidade de link de WAN que não está listada na tabela, você pode calcular um fator de custo relativo dividindo 1.024 pelo log da largura de banda disponível, conforme medido em Kbps.
+Use a tabela a seguir para calcular o custo de cada link de site com base na velocidade de link de WAN (velocidade de rede de longa distância). Para a velocidade de link de WAN que não está listada na tabela, você pode calcular um fator de custo relativo dividindo 1.024 pelo logaritmo da largura de banda disponível, conforme medido em Kbps.
 
-|Largura de banda disponível (Kbps)|Custo|
+|Largura de banda disponível (Kbps)|Cost|
 |--------------------------------|--------|
 |9.6.|1.042|
 |19,2|798|
@@ -56,6 +56,5 @@ Use a tabela a seguir para calcular o custo de cada link de site com base na vel
 |4\.096|283|
 
 Esses custos não refletem as diferenças na confiabilidade entre os links de rede. Defina custos mais altos em qualquer link de rede propenso a falhas para que você não precise confiar nesses links para replicação. Ao definir custos de link de site mais altos, você pode controlar o failover de replicação quando um link de site falha.
-
 
 

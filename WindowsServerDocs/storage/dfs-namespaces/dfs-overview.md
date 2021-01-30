@@ -6,12 +6,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 01/21/2021
 description: Este tópico descreve o namespaces do DFS, que é um serviço de função no Windows Serve que permite que você agrupe pastas compartilhadas localizadas em diferentes servidores em um ou mais namespaces estruturados logicamente.
-ms.openlocfilehash: ffc909f4feb23d26cf496eddca51899a97f4cafe
-ms.sourcegitcommit: fc2a7c69a74edcd79372054c4a9a24237510babd
+ms.openlocfilehash: cb9a0a8c90cb906046397280281fbea39231e0e0
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98672938"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081752"
 ---
 # <a name="dfs-namespaces-overview"></a>Visão geral de Namespaces DFS
 
@@ -121,7 +121,7 @@ Para obter informações adicionais relacionadas, consulte os seguintes recursos
 | Tipo de conteúdo        | Referências |
 | ------------------  | ----------------|
 | **Avaliação do produto** | [Novidades no Namespaces DFS e Replicação DFS no Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281957(v=ws.11)) |
-| **Implantação**    | [Considerações de escalabilidade do Namespace DFS](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
+| **Implantação**    | [Considerações de escalabilidade do Namespace DFS](https://techcommunity.microsoft.com/t5/storage-at-microsoft/dfs-namespace-scalability-considerations/ba-p/424485) |
 | **Operações**    | [Namespaces do DFS: perguntas frequentes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10)) |
 | **Recursos da comunidade** | [The File Services and Storage TechNet Forum (O Fórum TechNet para serviços e armazenamento de arquivos)](/answers/topics/windows-server-storage.html) |
 | **Protocolos**        | [Protocolos de serviços de arquivos no Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) (preterido) |

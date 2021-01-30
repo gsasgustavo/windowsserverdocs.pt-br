@@ -1,5 +1,5 @@
 ---
-title: Cenários de recuperação de desastre para a infraestrutura hiperconvergente
+title: Cenários de recuperação de desastre para a infraestrutura de Hyper-Converged
 manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
@@ -7,12 +7,12 @@ ms.author: johnmar
 ms.date: 03/29/2018
 description: Este artigo descreve os cenários disponíveis hoje para recuperação de desastre do Microsoft HCI (Espaços de Armazenamento Diretos)
 ms.localizationpriority: medium
-ms.openlocfilehash: e154cd4bbb5039e2a35237ec2a4644ebecff8d06
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d1da4cf9e3c6b1d3b0043bc73462730d1e9457c4
+ms.sourcegitcommit: 1e94c10ff51f43325fa9184b09bbdfeb8c8fed36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961139"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99081762"
 ---
 # <a name="disaster-recovery-with-storage-spaces-direct"></a>Recuperação de desastre com Espaços de Armazenamento Diretos
 
@@ -83,13 +83,13 @@ Quando o HCI participa da réplica do Hyper-V, você deve ter o recurso [agente 
 
 ## <a name="backup-and-restore"></a>Backup e restauração
 
-Uma opção de recuperação de desastres tradicional que não é comentada muito, mas é tão importante quanto a falha de todo o cluster ou de um nó no cluster. Qualquer opção com esse cenário usa o backup do Windows NT.
+Uma opção de recuperação de desastres tradicional que não é comentada muito, mas é tão importante quanto a falha de todo o cluster ou de um nó no cluster. Qualquer opção com esse cenário usa Backup do Windows Server.
 
 É sempre uma recomendação ter backups periódicos da infraestrutura hiperconvergente. Enquanto o serviço de cluster estiver em execução, se você fizer um backup de estado do sistema, o banco de dados do registro de cluster será parte desse backup. A restauração do cluster ou do banco de dados tem dois métodos diferentes (não autoritativo e autoritativos).
 
 ### <a name="non-authoritative"></a>Não autoritativo
 
-Uma restauração não autoritativa pode ser realizada usando o backup do Windows NT e equivale a uma restauração completa apenas do nó de cluster em si. Se você só precisa restaurar um nó de cluster (e o banco de dados do registro de cluster) e todas as informações de cluster atuais forem válidas, restaure usando não autoritativo. As restaurações não autorizadas podem ser feitas por meio da interface de backup do Windows NT ou da WBADMIN.EXE de linha de comando.
+Uma restauração não autoritativa pode ser realizada usando Backup do Windows Server e equivale a uma restauração completa apenas do nó de cluster em si. Se você só precisa restaurar um nó de cluster (e o banco de dados do registro de cluster) e todas as informações de cluster atuais forem válidas, restaure usando não autoritativo. As restaurações não autorizadas podem ser feitas por meio da interface Backup do Windows Server ou da WBADMIN.EXE de linha de comando.
 
 Depois de restaurar o nó, permita que ele ingresse no cluster. O que acontecerá é que ele irá para o cluster em execução existente e atualizará todas as suas informações com o que está atualmente lá.
 
