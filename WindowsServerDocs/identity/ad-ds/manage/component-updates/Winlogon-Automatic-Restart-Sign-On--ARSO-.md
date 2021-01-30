@@ -70,7 +70,7 @@ Se você desabilitar essa configuração de política, o dispositivo não config
 
 **Editor do registro:**
 
-| Nome do valor | Type | Dados |
+| Nome do valor | Tipo | Dados |
 | --- | --- | --- |
 | DisableAutomaticRestartSignOn | DWORD | 0 (habilitar ARSO) |
 |   |   | 1 (desabilitar ARSO) |
@@ -111,7 +111,7 @@ Se você desabilitar ou não definir essa configuração, o logon automático us
 
 **Editor do registro**
 
-| Nome do valor | Type | Dados |
+| Nome do valor | Tipo | Dados |
 | --- | --- | --- |
 | AutomaticRestartSignOnConfig | DWORD | 0 (habilitar ARSO se seguro) |
 |   |   | 1 (habilitar ARSO Always) |
