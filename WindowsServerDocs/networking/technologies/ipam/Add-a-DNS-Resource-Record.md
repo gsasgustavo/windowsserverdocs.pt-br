@@ -7,12 +7,12 @@ ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 5ced255a8cc15be6c0d8d6b6ec04f5031816eed5
-ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
+ms.openlocfilehash: 99cad9f3ad2e746c1f3a530c89c67e2bb39b80a6
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98040486"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245455"
 ---
 # <a name="add-a-dns-resource-record"></a>Adicionar um registro de recursos de DNS
 
@@ -46,7 +46,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 7.  Em **novo registro de recurso,** em **nome**, digite um nome de registro de recurso. Em **endereço IP**, digite um endereço IP e, em seguida, selecione as propriedades de registro de recurso que são apropriadas para sua implantação. Clique em **adicionar registro de recurso**.
 
-    ![Adicionar registro de recurso](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)
+    ![Captura de tela da página registro de recurso do assistente para adicionar registro de recurso mostrando a seção novo registro de recurso.](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)
 
 8.  Se você não quiser criar novos registros de recursos adicionais, clique em **OK**. Se você quiser criar novos registros de recursos adicionais, clique em **novo**.
 
@@ -56,7 +56,7 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 10. Em **novo registro de recurso,** em **nome**, digite um nome de registro de recurso. Em **endereço IP**, digite um endereço IP e, em seguida, selecione as propriedades de registro de recurso que são apropriadas para sua implantação. Clique em **adicionar registro de recurso**.
 
-    ![Adicionar registro de recurso](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)
+    ![Captura de tela da página registro de recurso do assistente para adicionar registro de recurso com a opção Adicionar registro de recurso realçada.](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)
 
 11. Se você quiser adicionar mais registros de recursos, repita o processo para criar registros. Quando terminar de criar novos registros de recursos, clique em **aplicar**.
 

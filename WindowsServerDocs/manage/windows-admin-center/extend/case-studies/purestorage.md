@@ -6,12 +6,12 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 1/7/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: a79b575397c5dc139200f69a0110ab3c909d5fd5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 81185af0bbe7bde894ccb71875497285f51531e3
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942698"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245425"
 ---
 # <a name="pure-storage-extension"></a>Extensão de armazenamento pura
 
@@ -23,7 +23,7 @@ No início, quando o centro de administração do Windows era conhecido como "pr
 
 Quando começou a Pesquisar novamente o caso de uso com "Project Honolulu", eles perceberam imediatamente o potencial para fornecer uma experiência de gerenciamento unificada entre o centro de administração do Windows e o FlashArray. Com uma colaboração de forma pura com a equipe de engenharia do centro de administração do Windows, que ajudou a definir os detalhes de implementação para os recursos. O puro também foi capaz de fornecer comentários nos primeiros estágios do centro de administração do Windows e fazer contribuições para a equipe da Microsoft.
 
-![Extensão de armazenamento pura](../../media/extend-case-study-purestorage/purestorage-1.png)
+![Captura de tela da página de capacidade da extensão de armazenamento pura.](../../media/extend-case-study-purestorage/purestorage-1.png)
 
 > <cite>"Nós integramos um conjunto de recursos que imita nossa interface da Web FlashArray para habilitar o gerenciamento direto no centro de administração do Windows. Nossos clientes e parceiros se beneficiarão de um único painel de vidro versus a necessidade de trabalhar com duas ferramentas de gerenciamento diferentes. Além dos benefícios de ponto único de gerenciamento, os clientes poderão gerenciar contextualmente os servidores do Windows que estão conectados à FlashArray. "</cite>
 >
@@ -41,11 +41,11 @@ Foi criado um [vídeo de demonstração](https://youtu.be/IFAeCAd6V2g) que mostr
 
 A captura de tela abaixo ilustra como exibir quais discos (volumes) estão conectados a um host do Windows Server específico. Além de exibir os detalhes de conectividade, verificamos se o multipath-IO está configurado.
 
-![Extensão de armazenamento pura](../../media/extend-case-study-purestorage/purestorage-2.png)
+![Captura de tela mostrando quais discos estão conectados a um host específico do Windows Server.](../../media/extend-case-study-purestorage/purestorage-2.png)
 
 Além de exibir os discos, novos volumes podem ser criados e montados imediatamente no host sem a necessidade de usar a ferramenta de gerenciamento de disco do Windows.
 
-![Extensão de armazenamento pura](../../media/extend-case-study-purestorage/purestorage-3.png)
+![Captura de tela mostrando como novos volumes podem ser criados e montados imediatamente no host usando o host de armazenamento puro.](../../media/extend-case-study-purestorage/purestorage-3.png)
 
 Desde a liberação de nossa Technical Preview, os comentários dos clientes coletados até o momento têm sido muito positivos e também nos forneceram informações sobre diferentes recursos para adicionar em versões futuras.
 

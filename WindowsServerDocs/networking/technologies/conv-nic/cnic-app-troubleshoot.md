@@ -7,12 +7,12 @@ manager: brianlic
 ms.author: lizross
 author: eross-msft
 ms.date: 12/18/2020
-ms.openlocfilehash: 652c945a4702e851cdfec382ebe31cd2bd7ea148
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: 524d73c759230b375d50cb6645e9c336684a18ea
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97945632"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245387"
 ---
 # <a name="troubleshooting-converged-nic-configurations"></a>Solucionando problemas de configurações de NIC convergida
 
@@ -45,9 +45,9 @@ O host vNIC e a NIC física mostram recursos RDMA diferentes de zero.
 Execute as etapas a seguir se você receber resultados inesperados ao executar o comando **Get-NetAdapterRdma** .
 
 1. Verifique se os drivers de barramento Mlnx e miniporta Mlnx são mais recentes. Para o Mellanox, use pelo menos a remoção de 42.
-2. Verifique se a miniporta Mlnx e os drivers de barramento correspondem verificando a versão do driver por meio de Device Manager. O driver de barramento pode ser encontrado em dispositivos do sistema. O nome deve começar com Mellanox Connect-X 3 PRO VPI, conforme ilustrado na captura de tela a seguir das propriedades do adaptador de rede.
+2. Verifique se a miniporta Mlnx e os drivers de barramento correspondem verificando a versão do driver por meio de Gerenciador de Dispositivos. O driver de barramento pode ser encontrado em dispositivos do sistema. O nome deve começar com Mellanox Connect-X 3 PRO VPI, conforme ilustrado na seguinte captura de tela das propriedades do adaptador de rede.
 
-![Propriedades do adaptador de rede](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
+   ![Captura de tela mostrando a guia informações da caixa de diálogo Propriedades do Mellanox ConnectX-3 pro EthernetAdapter e a guia Driver da caixa de diálogo Propriedades do adaptador de rede Mellanox ConnectX-3 pro VPI.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
 
 4. Verifique se a RDMA (rede direta) está habilitada na NIC física e no host vNIC.
 5. Verifique se o vSwitch foi criado no adaptador físico correto verificando seus recursos de RDMA.
@@ -65,12 +65,12 @@ Get-SmbClientNetworkInterface
 
 O host vNIC também deve aparecer como RDMA habilitado da perspectiva do SMB.
 
-![Propriedades do adaptador de rede](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
+![Captura de tela da janela do PowerShell mostrando o resultado do cmdlet Get-SmbClientNetworkInterface.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
 ### <a name="get-smbclientnetworkinterface-unexpected-results"></a>Get-SmbClientNetworkInterface resultados inesperados
 
 1. Verifique se os drivers de barramento Mlnx e miniporta Mlnx são mais recentes. Para o Mellanox, use pelo menos a remoção de 42.
-2. Verifique se a miniporta Mlnx e os drivers de barramento correspondem verificando a versão do driver por meio de Device Manager. O driver de barramento pode ser encontrado em dispositivos do sistema. O nome deve começar com Mellanox Connect-X 3 PRO VPI, conforme ilustrado na captura de tela a seguir das propriedades do adaptador de rede.
+2. Verifique se a miniporta Mlnx e os drivers de barramento correspondem verificando a versão do driver por meio de Gerenciador de Dispositivos. O driver de barramento pode ser encontrado em dispositivos do sistema. O nome deve começar com Mellanox Connect-X 3 PRO VPI, conforme ilustrado na seguinte captura de tela das propriedades do adaptador de rede.
 3. Verifique se a RDMA (rede direta) está habilitada na NIC física e no host vNIC.
 4. Verifique se o comutador virtual do Hyper-V foi criado no adaptador físico correto, verificando seus recursos de RDMA.
 5. Verifique os logs do visualizador para "cliente SMB" em **aplicativos e serviços | Microsoft | Windows**.

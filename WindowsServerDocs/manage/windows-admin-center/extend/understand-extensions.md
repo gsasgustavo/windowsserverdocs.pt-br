@@ -6,12 +6,12 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 44038185bb4f9cb61920033ce5edc67afb3de99b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 578376a10b83466382bf9e02f91ff94656bd6c88
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964572"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245473"
 ---
 # <a name="understanding-windows-admin-center-extensions"></a>Noções básicas sobre extensões do Windows Admin Center
 
@@ -22,7 +22,7 @@ Caso você ainda não esteja familiarizado com o funcionamento do centro de admi
 - Um **serviço Web** leve que serve de páginas da Web da interface do usuário do Windows Admin Center às solicitações de navegador.
 - **Componente de gateway** que escuta solicitações da API REST das páginas da Web e retransmite chamadas WMI ou scripts do PowerShell para ser executado em um servidor de destino ou cluster.
 
-![Arquitetura do Windows Admin Center](../media/understand-extensions/wac-architecture-500px.png)
+![Um diagrama de uma arquitetura do centro de administração do Windows.](../media/understand-extensions/wac-architecture-500px.png)
 
 As páginas da web de IU de Windows Admin Center atendido pelo serviço web tem dois componentes principais de interface do usuário de uma perspectiva de extensibilidade, soluções e ferramentas, que são implementadas como extensões, e, em um terceiro tipo de extensão chamado plug-ins do gateway.
 
@@ -30,7 +30,7 @@ As páginas da web de IU de Windows Admin Center atendido pelo serviço web tem 
 
 Na tela inicial do Windows Admin Center, por padrão, você pode adicionar conexões que são de um dos quatro tipos: Windows Server, conexões de computador Windows, conexões de cluster de failover e conexões de cluster de hiperconvergência. Depois que uma conexão é adicionada, o nome da conexão e tipo serão exibidas na tela inicial. Clicar no nome da conexão resulta na tentativa de conexão ao servidor de destino ou cluster e depois no carregamento da interface do usuário da conexão.
 
-![Arquitetura do Windows Admin Center](../media/understand-extensions/solutions-ui.png)
+![Captura de tela do recurso Adicionar conexões do centro de administração do Windows.](../media/understand-extensions/solutions-ui.png)
 
 Cada um desses tipos de conexão mapeia para uma solução e soluções são definidas por meio de um tipo de extensão chamado extensões de "solução". Soluções geralmente definem um tipo exclusivo do objeto que você deseja gerenciar por meio do Windows Admin Center, como servidores, PCs ou clusters de failover. Você também pode definir uma nova solução para conectar e gerenciar outros dispositivos, como comutadores de rede e servidores Linux ou mesmo serviços como Serviços de Área de Trabalho Remota.
 

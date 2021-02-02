@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ded1b6741829fb74d3be9b33828c89b8091faf1a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: cc2c81e1b534c25ea0aa6a6abd6c2089620b920e
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624387"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245377"
 ---
 # <a name="viewing-and-managing-updates"></a>Exibir e gerenciar atualizações
 
@@ -45,13 +45,13 @@ Na página **atualizações** , você pode fazer o seguinte:
 
 #### <a name="to-filter-the-list-of-updates-displayed-on-the-updates-page"></a>Para filtrar a lista de atualizações exibidas na página atualizações
 
-1.  No console de administração do WSUS, expanda **atualizações**e clique em **todas as atualizações**.
+1.  No console de administração do WSUS, expanda **atualizações** e clique em **todas as atualizações**.
 
 2.  No painel central ao lado de **aprovação**, selecione o status de aprovação desejado e, ao lado de **status** , selecione o status de instalação desejado. Clique em **Atualizar**.
 
 #### <a name="to-create-a-new-update-view-on-wsus"></a>Para criar uma nova exibição de atualização no WSUS
 
-1.  No console de administração do WSUS, expanda **atualizações**e clique em **todas as atualizações**.
+1.  No console de administração do WSUS, expanda **atualizações** e clique em **todas as atualizações**.
 
 2.  No painel **ações** , clique em **nova exibição de atualização**.
 
@@ -81,11 +81,11 @@ O novo modo de exibição será exibido no painel exibição de árvore em atual
 
 2.  No painel **ações** , clique em **Pesquisar**.
 
-3.  Na janela **Pesquisar** , na guia **atualizações** , insira seus critérios de pesquisa. Você pode usar o texto dos campos **título**, **Descrição**e **número de artigo da base de dados de conhecimento Microsoft (KB)** . Cada um desses itens é uma propriedade listada na guia **detalhes** nas propriedades da atualização.
+3.  Na janela **Pesquisar** , na guia **atualizações** , insira seus critérios de pesquisa. Você pode usar o texto dos campos **título**, **Descrição** e **número de artigo da base de dados de conhecimento Microsoft (KB)** . Cada um desses itens é uma propriedade listada na guia **detalhes** nas propriedades da atualização.
 
 #### <a name="to-view-the-properties-for-an-update"></a>Para exibir as propriedades de uma atualização
 
-1.  No console de administração do WSUS, expanda **atualizações**e clique em **todas as atualizações**.
+1.  No console de administração do WSUS, expanda **atualizações** e clique em **todas as atualizações**.
 
 2.  Na lista de atualizações, clique na atualização que você deseja exibir.
 
@@ -177,21 +177,21 @@ Para exibir esses ícones, você precisa habilitar a coluna substituição no co
  não há problemas operacionais.
 
 ### <a name="superseding-icon"></a>Ícone de substituição
- ![ícone](../../media/wsus/wsus-superseding.png) Esta atualização substitui outras atualizações.
+ :::image type="icon" source="../../media/wsus/wsus-superseding.png"::: Esta atualização substitui outras atualizações.
 
  **Problemas operacionais:**
 
  não há problemas operacionais.
 
 ### <a name="superseded--superseding-icon"></a>Ícone de substituição de & substituído
- ![ícone](../../media/wsus/wsus-superseded.png) Essa atualização é substituída por outra atualização e substitui outras atualizações.
+ :::image type="icon" source="../../media/wsus/wsus-superseded.png"::: Essa atualização é substituída por outra atualização e substitui outras atualizações.
 
  **Problemas operacionais:**
 
  Substitua essas atualizações com as atualizações substitutas quando possível.
 
 ### <a name="superseded-icon"></a>Ícone substituído
- ![ícone](../../media/wsus/wsus-superseded-leaf.png) Esta atualização foi substituída por outra atualização.
+ :::image type="icon" source="../../media/wsus/wsus-superseded-leaf.png"::: Esta atualização foi substituída por outra atualização.
 
  **Problemas operacionais:**
 

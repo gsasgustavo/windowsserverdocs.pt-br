@@ -7,12 +7,12 @@ ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: fceb3ff5421be65a9bb25ae74510257f70d0aaa6
-ms.sourcegitcommit: 40905b1f9d68f1b7d821e05cab2d35e9b425e38d
+ms.openlocfilehash: c34cec47edc2808d16964f3a8f3071c50940a578
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97946772"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245397"
 ---
 # <a name="ras-gateway-gre-tunnel-throughput-and-performance"></a>Desempenho e produtividade de túnel GRE de Gateway RAS
 
@@ -20,7 +20,7 @@ ms.locfileid: "97946772"
 
 Você pode usar este tópico para saber mais sobre o \( \) desempenho de túnel de protocolo GRE do gateway RAS do servidor de acesso remoto \( \) no Windows Server, versão 1709, em um \( ambiente de \) teste baseado em sistema de rede definido por Sdn sem software.
 
-O gateway de RAS é um roteador de software e gateway que você pode usar no modo de locatário único ou em modo multilocatário. Este tópico discute um modo de locatário único, configuração de alta disponibilidade com clustering de failover. As estatísticas de desempenho do túnel GRE apresentadas neste tópico são válidas para o gateway RAS nos modos locatário Singele e multilocatário.
+O gateway de RAS é um roteador de software e gateway que você pode usar no modo de locatário único ou em modo multilocatário. Este tópico discute um modo de locatário único, configuração de alta disponibilidade com clustering de failover. As estatísticas de desempenho do túnel GRE apresentadas neste tópico são válidas para o gateway RAS nos modos de locatário único e multilocatário.
 
 >[!NOTE]
 >O clustering de failover é um recurso do Windows Server que permite agrupar vários servidores juntos em um cluster tolerante a falhas. Para obter mais informações, consulte [clustering de failover](../../../failover-clustering/failover-clustering-overview.md)
@@ -92,11 +92,11 @@ Com várias sessões TCP, a utilização da CPU atinge 100% e a taxa de transfer
 
 A ilustração a seguir descreve a utilização da CPU em ambas as VMs de gateway de RAS. A VM ativa, a VM do gateway RAS #1, está à esquerda, enquanto a VM passiva, a VM do gateway RAS #2, está à direita.
 
-![Utilização da CPU da VM do gateway no Gerenciador de tarefas](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
+![Captura de tela de duas janelas do Gerenciador de tarefas mostrando a utilização da CPU nas duas VMs do gateway de RAS quando há várias sessões TCP.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
 
 A ilustração a seguir ilustra a taxa de transferência da rede Ethernet nas VMs do gateway de RAS. A VM ativa, a VM do gateway RAS #1, está à esquerda, enquanto a VM passiva, a VM do gateway RAS #2, está à direita.
 
-![Taxa de transferência de rede Ethernet de VM de gateway no Gerenciador de tarefas](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
+![Captura de tela de duas janelas do Gerenciador de tarefas mostrando a taxa de transferência da rede Ethernet nas VMs do gateway de RAS quando há várias sessões TCP.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
 
 
 ### <a name="gre-tunnel-performance-with-one-tcp-connection"></a>Desempenho do túnel GRE com uma conexão TCP
@@ -107,11 +107,11 @@ A taxa de transferência máxima no túnel GRE está entre 400-500 Mbps.
 
 A ilustração a seguir descreve a utilização da CPU em ambas as VMs de gateway de RAS. A VM ativa, a VM do gateway RAS #1, está à esquerda, enquanto a VM passiva, a VM do gateway RAS #2, está à direita.
 
-![Utilização da CPU da VM do gateway no Gerenciador de tarefas](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
+![Captura de tela de duas janelas do Gerenciador de tarefas mostrando a utilização da CPU nas duas VMs do gateway de RAS quando há uma sessão TCP.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
 
 
 A ilustração a seguir ilustra a taxa de transferência da rede Ethernet nas VMs do gateway de RAS. A VM ativa, a VM do gateway RAS #1, está à esquerda, enquanto a VM passiva, a VM do gateway RAS #2, está à direita.
 
-![Taxa de transferência de rede Ethernet de VM de gateway no Gerenciador de tarefas](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
+![Captura de tela de duas janelas do Gerenciador de tarefas mostrando a taxa de transferência da rede Ethernet nas VMs do gateway de RAS quando há uma sessão TCP.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
 
 Para obter mais informações sobre o desempenho do gateway RAS, consulte [ajuste de desempenho do gateway HNV em redes definidas pelo software](../../../administration/performance-tuning/subsystem/software-defined-networking/hnv-gateway-performance.md).

@@ -6,12 +6,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: c6dc0bcefda94b8d2b5490fa2378f60d26877bc5
-ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
+ms.openlocfilehash: d3e06dbaf61b422779822cce208040601f2e56fa
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113292"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245407"
 ---
 # <a name="manage-transport-layer-security-tls"></a>Gerenciar o protocolo TLS
 
@@ -123,7 +123,7 @@ O processo de distribuição de uma curva é:
 4. Configure a coleção de registro de preferência de Política de Grupo recém-criada adicionando um novo **item de registro** para cada valor de registro listado em *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[ curvename]*.
 5. Implante o objeto de Política de Grupo que contém Política de Grupo item de coleção do registro em computadores com Windows 10 e Windows Server 2016 que devem receber as novas curvas nomeadas.
 
-    ![Distribuir curvas de GPP](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
+    ![Captura de tela da guia preferências do Editor de Gerenciamento de Política de Grupo.](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
 
     *Figura 3 usando preferências de Política de Grupo para distribuir curvas*
 
@@ -133,6 +133,6 @@ A partir do Windows 10 e do Windows Server 2016, as configurações da política
 Usando o ECC genérico e essa configuração, as organizações podem adicionar suas próprias curvas nomeadas confiáveis (que são aprovadas para uso com TLS) para o sistema operacional e, em seguida, adicionar essas curvas nomeadas à prioridade de curva Política de Grupo configuração para garantir que elas sejam usadas em Handshakes de TLS futuros.
 Novas listas de prioridades de curva se tornam ativas na próxima reinicialização depois de receber as configurações de política.
 
-![Distribuir curvas de GPP](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
+![Captura de tela da caixa de diálogo ordem de curva do EEC.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
 
 *Figura 4 Gerenciando a prioridade da curva TLS usando Política de Grupo*

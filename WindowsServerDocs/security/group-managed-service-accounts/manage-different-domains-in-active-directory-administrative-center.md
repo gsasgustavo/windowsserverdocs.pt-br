@@ -7,12 +7,12 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
 ms.topic: article
-ms.openlocfilehash: 35defc771c18753296eb37c96f65086626475a95
-ms.sourcegitcommit: d42b80f947dbfa8660d982be67d77745a28081e5
+ms.openlocfilehash: 900a536fb5a5f0f1ab37725a133fa822107ec9cd
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113462"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245445"
 ---
 # <a name="manage-different-domains-in-active-directory-administrative-center"></a>Gerenciar domínios diferentes no Centro Administrativo do Active Directory
 
@@ -36,11 +36,11 @@ ms.locfileid: "98113462"
 
 2.  Para abrir **adicionar nós de navegação**, clique em **gerenciar** e, em seguida, clique em **adicionar nós de navegação** , conforme mostrado na ilustração a seguir.
 
-     ![Captura de tela mostrando * * adicionar nós de navegação * * interface do usuário](media/ADDS_ADACAddNavNode.gif)
+     ![Captura de tela da Centro Administrativo do Active Directory mostrando a lista suspensa gerenciar com a opção Adicionar nós de navegação disponível para seleção.](media/ADDS_ADACAddNavNode.gif)
 
 3.  Em **adicionar nós de navegação**, clique em **conectar a outros domínios** , conforme mostrado na ilustração a seguir.
 
-     ![Captura de tela mostrando * * adicionar nós de navegação * * interface do usuário](media/ADDS_ADACConnectToDomain.gif)
+     ![Captura de tela mostrando a caixa de diálogo Adicionar nós de navegação mostrando a opção conectar a outros domínios disponível para seleção.](media/ADDS_ADACConnectToDomain.gif)
 
 4.  Em **conectar a**, digite o nome do domínio externo que você deseja gerenciar, \( por exemplo, **contoso.com** \) , e clique em **OK**.
 
@@ -55,7 +55,7 @@ ms.locfileid: "98113462"
 
 2. Para abrir **adicionar nós de navegação**, próximo à parte superior da janela de centro administrativo do Active Directory, clique em **adicionar nós de navegação** , conforme mostrado na ilustração a seguir.
 
-    ![Captura de tela mostrando * * adicionar nós de navegação * * interface do usuário](media/click_add_nav_nodes.gif)
+    ![Captura de tela da Centro Administrativo do Active Directory com a opção Adicionar nós de navegação disponível para seleção chamada out.](media/click_add_nav_nodes.gif)
 
    > [!NOTE]
    >  Outra maneira de abrir **adicionar nós de navegação** é clicar com o botão direito do mouse em \- qualquer lugar no espaço vazio no painel de navegação centro administrativo do Active Directory e clicar em **adicionar nós de navegação**.

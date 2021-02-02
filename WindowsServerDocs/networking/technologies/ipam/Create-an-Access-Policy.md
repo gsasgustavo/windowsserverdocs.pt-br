@@ -7,12 +7,12 @@ ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
 ms.author: lizross
 author: eross-msft
 ms.date: 08/07/2020
-ms.openlocfilehash: 11494ec838851ffffb6e3eab31cfb462e30e2462
-ms.sourcegitcommit: f8da45df984f0400922a8306855b0adfdaec71af
+ms.openlocfilehash: 3fd8490321070dc73658bd6c6cad08f09bb9025c
+ms.sourcegitcommit: 84b97d34d606b6bf4b6ec8760a93107f1b311428
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98039726"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99245483"
 ---
 # <a name="create-an-access-policy"></a>Criar uma política de acesso
 
@@ -31,11 +31,11 @@ A associação em **Administradores**, ou equivalente, é o requisito mínimo pa
 
 2.  No painel de navegação, clique em **controle de acesso**. No painel de navegação inferior, clique com o botão direito do mouse em **políticas de acesso** e clique em **Adicionar política de acesso**.
 
-    ![Adicionar política de acesso](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
+    ![Captura de tela de Gerenciador do Servidor mostrando as políticas de acesso optoin realçadas e a opção Adicionar política de acesso disponível para seleção.](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
 
 3.  A caixa de diálogo **Adicionar política de acesso** é aberta. Em **configurações do usuário**, clique em **Adicionar**.
 
-    ![Adicionar política de acesso](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)
+    ![Captura de tela da caixa de diálogo Adicionar política de acesso.](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)
 
 4.  A caixa de diálogo **Selecionar usuário ou grupo** é aberta. Clique em **Locais**.
 
