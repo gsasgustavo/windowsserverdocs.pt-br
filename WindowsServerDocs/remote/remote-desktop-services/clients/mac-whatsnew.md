@@ -5,20 +5,30 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 01/27/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b9b811f3a0beb71461f868c61f0508566136a5d8
-ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
+ms.openlocfilehash: 6fd6a464b1f816fbaf93c7c4efed805305ef7aa8
+ms.sourcegitcommit: ebe97af985429ec5cdb86eba75820bc180552811
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563816"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98925924"
 ---
 # <a name="whats-new-in-the-macos-client"></a>Novidades do cliente para macOS
 
 Atualizamos regularmente o [cliente da Área de Trabalho Remota para macOS](remote-desktop-mac.md), adicionando novos recursos e corrigindo problemas. Veja onde você encontrará as atualizações mais recentes.
 
 Caso tenha problemas, entre em contato conosco a qualquer momento navegando em **Ajuda** > **Relatar um Problema**.
+
+## <a name="updates-for-version-1051"></a>Atualizações da versão 10.5.1
+
+*Data da publicação: 29/01/2020*
+
+Chegou a hora de nossa primeira versão do ano! Nesta versão, fizemos as seguintes alterações:
+
+- Foi resolvido um problema em que a interface do usuário parava de resolver um nome de workspace durante a assinatura.
+- Foi corrigido um bug na sessão em que as atualizações de gráficos paralisavam enquanto o cliente continuava enviando entrada.
+- Foram solucionados vários problemas de confiabilidade identificados por meio do relatório de falhas.
 
 ## <a name="updates-for-version-1050"></a>Atualizações para a versão 10.5.0
 
@@ -92,7 +102,6 @@ Nessa versão, fizemos atualizações substanciais no código subjacente que pos
 - Foram corrigidos vários problemas de acessibilidade que afetavam os cenários de navegação do teclado e o VoiceOver.
 - Muitas atualizações para aprimorar a interoperabilidade com os recursos atuais e futuros no serviço de Área de Trabalho Virtual do Windows.
 - Agora você pode configurar o nível de suporte ao AVC anunciado pelo cliente de um prompt de terminal. Estes são os níveis de suporte que você pode configurar:
-  
    - Não anunciar o suporte ao AVC ao servidor: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
    - Anunciar o suporte ao AVC420 ao servidor: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc420`
    - Anunciar o suporte ao AVC444 ao servidor: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc444`

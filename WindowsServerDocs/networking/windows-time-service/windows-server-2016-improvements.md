@@ -5,12 +5,12 @@ author: dahavey
 ms.author: dahavey
 ms.date: 10/17/2018
 ms.topic: article
-ms.openlocfilehash: a09022cf1ad2929dfdffa244b86c211970b53aae
-ms.sourcegitcommit: a7fb96c0b1d186baeb29349befbbd6bd3b955813
+ms.openlocfilehash: 0dd8c4c9714f50ba3eee45efdb714e66a8916dd6
+ms.sourcegitcommit: 2ede79efbadd109099bb6fdb744796adde123922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94522519"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923666"
 ---
 # <a name="time-accuracy-improvements-for-windows-server-2016"></a>Aprimoramentos de precisão de tempo para o Windows Server 2016
 
@@ -23,7 +23,7 @@ O Windows 2016 aprimorou o serviço TimeSync do Hyper-V. Os aprimoramentos inclu
 > [!NOTE]
 > A carga foi criada com o parâmetro de comparação prime95 usando o perfil equilibrado.
 
-Além disso, o nível de camada que o host relata para o convidado é mais transparente. Anteriormente, o host apresentava uma camada fixa igual a 2, independentemente da precisão. Com as alterações do Windows Server 2016, o host relata a primeira camada maior que a camada do host, o que resulta em um tempo melhor para os convidados virtuais. A camada do host é determinada pelo w32time em meio normal com base no tempo de origem. Os convidados do Windows 2016 ingressados no domínio encontrarão o relógio mais preciso, em vez de usar o padrão do host. Foi por esse motivo que aconselhamos desabilitar manualmente a configuração do Provedor de Tempo do Hyper-V nos computadores que participam de um domínio no Windows 2012 R2 e inferior.
+Além disso, o nível de Camada que o host relata para o convidado é mais transparente. Anteriormente, o host apresentava uma Camada fixa igual a 2, independentemente da precisão. Com as alterações do Windows Server 2016, o host relata a primeira Camada maior que a Camada do host, o que resulta em um tempo melhor para os convidados virtuais. A Camada do host é determinada pelo w32time em meio normal com base no tempo de origem. Os convidados do Windows 2016 ingressados no domínio encontrarão o relógio mais preciso, em vez de usar o padrão do host. Foi por esse motivo que aconselhamos desabilitar manualmente a configuração do Provedor de Tempo do Hyper-V nos computadores que participam de um domínio no Windows 2012 R2 e inferior.
 
 ## <a name="monitoring"></a>Monitoramento
 
@@ -68,7 +68,7 @@ Veja a seguir uma descrição das alterações na configuração padrão entre o
 | |Frequência de votação|NA|1\.204 a 32.768 segundos|1\.024 a 32.768 segundos|
 | |Frequência de Atualização do Relógio|NA|Uma vez a cada 5 minutos|Uma vez a cada 5 minutos|
 |**Convidado do Hyper-V**||||
-| |Servidor de Horário|Escolhe a melhor opção com base na camada do host e no servidor de horário|Escolhe a melhor opção com base na camada do host e no servidor de horário|Usa o host como padrão|
+| |Servidor de Horário|Escolhe a melhor opção com base na Camada do host e no servidor de horário|Escolhe a melhor opção com base na Camada do host e no servidor de horário|Usa o host como padrão|
 | |Frequência de votação|Com base na função acima|Com base na função acima|Com base na função acima|
 | |Frequência de Atualização do Relógio|Com base na função acima|Com base na função acima|Com base na função acima|
 
@@ -81,7 +81,7 @@ Para fornecer uma hora mais precisa, os padrões de frequências de sondagem e a
 
 Em dispositivos com suporte de bateria, o aumento da frequência de sondagem pode causar problemas. Os dispositivos de bateria não armazenam a hora quando estão desligados. Quando eles são retomados, pode ser necessário correções frequentes no relógio. O aumento da frequência de sondagem fará com que o relógio fique instável e também poderá usar mais energia. A Microsoft recomenda que você não altere as configurações padrão do cliente.
 
-Os controladores de domínio devem ser minimamente afetados mesmo com o efeito multiplicado do aumento das atualizações de clientes NTP em um domínio do AD. O NTP tem um consumo de recursos muito menor em comparação com outros protocolos e um impacto marginal. É mais provável que você alcance os limites de outras funcionalidades do domínio antes de ser afetado pelo aumento das configurações do Windows Server 2016. O Active Directory usa o NTP seguro, que tende a sincronizar a hora de maneira menos precisa do que o NTP simples, mas verificamos que ele atingirá os clientes que estão a duas camadas de distância do controlador de domínio primário.
+Os controladores de domínio devem ser minimamente afetados mesmo com o efeito multiplicado do aumento das atualizações de clientes NTP em um domínio do AD. O NTP tem um consumo de recursos muito menor em comparação com outros protocolos e um impacto marginal. É mais provável que você alcance os limites de outras funcionalidades do domínio antes de ser afetado pelo aumento das configurações do Windows Server 2016. O Active Directory usa o NTP seguro, que tende a sincronizar a hora de maneira menos precisa do que o NTP simples, mas verificamos que ele atingirá os clientes que estão a duas Camadas de distância do controlador de domínio primário.
 
 Como um plano conservador, você deverá reservar 100 solicitações de NTP por segundo e por núcleo. Por exemplo, um domínio composto por quatro controladores de domínio com quatro núcleos cada, você deverá conseguir atender a 1.600 solicitações de NTP por segundo. Se você tiver 10 mil clientes configurados para sincronizar a hora uma vez a cada 64 segundos e as solicitações forem recebidas de maneira uniforme ao longo do tempo, verá 10.000/64 ou cerca de 160 solicitações/segundo, distribuídas por todos os controladores de domínio. Isso se enquadra facilmente dentro de nossas 1.600 solicitações de NTP/s com base neste exemplo. Essas são recomendações de planejamento conservadoras e, obviamente, têm uma grande dependência da rede, das velocidades e das cargas do processador, assim como sempre da linha de base e do teste nos ambientes.
 
@@ -113,33 +113,33 @@ Os resultados do teste mostrados abaixo são um subconjunto de medidas que fizem
 
 Para comparação, testamos uma topologia baseada no Windows Server 2012 R2 e no Windows Server 2016. Ambas as topologias consistem em dois computadores host físicos do Hyper-V que referenciam um computador Windows Server 2016 com o hardware de relógio de GPS instalado. Cada host executa três convidados do Windows ingressados no domínio, que são organizados de acordo com a topologia a seguir. As linhas representam a hierarquia de tempo e o protocolo/o transporte usado.
 
-![Diagrama de topologia de Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
+![Diagrama da topologia de Horário do Windows com apenas um Cliente de Domínio Filho em execução no primeiro Host do Hyper-V.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
 
-![Diagrama de topologia de Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology2.png)
+![Diagrama da topologia de Horário do Windows com dois Clientes de Domínio Filho; um em execução no primeiro Host do Hyper-V e outro em execução no segundo.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology2.png)
 
 ### <a name="graphical-results-overview"></a>Visão geral dos resultados gráficos
 
 Os dois grafos a seguir representam a precisão de tempo de dois membros específicos em um domínio baseado na topologia acima. Cada grafo exibe os resultados do Windows Server 2012 R2 e 2016 sobrepostos, o que demonstra os aprimoramentos visualmente. A precisão foi medida no computador convidado em comparação com o host. Os dados gráficos representam um subconjunto de todo o conjunto de testes que fizemos e mostra os cenários de melhor e pior caso.
 
-![Diagrama de topologia de Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology3.png)
+![Diagrama da topologia de Horário do Windows com o servidor do controlador de domínio primário do Domínio Raiz e os servidores do Cliente de Domínio Filho no primeiro Host do Hyper-V em destaque.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology3.png)
 
 ### <a name="performance-of-the-root-domain-pdc"></a>Desempenho do controlador de domínio primário do domínio raiz
 
 O controlador de domínio primário raiz é sincronizado com o host do Hyper-V (usando o VMIC), que é um Windows Server 2016 com um hardware de GPS comprovado como sendo preciso e estável. Esse é um requisito crítico para uma precisão de 1 ms, que é mostrada como a área sombreada verde.
 
-![Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart1.png)
+![Diagrama ilustrando o Domínio Raiz.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart1.png)
 
 ### <a name="performance-of-the-child-domain-client"></a>Desempenho do cliente de domínio filho
 
 O cliente de domínio filho é anexado a um controlador de domínio primário de domínio filho que se comunica com o controlador de domínio primário raiz. O tempo também está dentro do requisito de 1 ms.
 
-![Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart2.png)
+![Diagrama ilustrando o Cliente de Domínio Filho.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart2.png)
 
 ### <a name="long-distance-test"></a>Teste de longa distância
 
 O gráfico a seguir compara 1 salto de rede virtual para 6 saltos de rede física com o Windows Server 2016. Dois gráficos são sobrepostos entre si com transparência para mostrar os dados sobrepostos. O aumento de saltos de rede significa uma latência mais alta e maiores desvios de tempo. O gráfico é ampliado e, portanto, os limites de 1 ms, representados pela área verde, são maiores. Como você pode ver, o tempo ainda está dentro de 1 ms com vários saltos. Ele é deslocado negativamente, o que demonstra uma assimetria da rede. É claro que cada rede é diferente e as medidas dependem de uma infinidade de fatores ambientais.
 
-![Tempo do Windows](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart3.png)
+![Diagrama ilustrando o Teste de Longa Distância.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart3.png)
 
 ## <a name="best-practices-for-accurate-timekeeping"></a>Melhores práticas para a manutenção de hora precisa
 

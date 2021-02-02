@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/12/2021
+ms.date: 01/27/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d5dc9e76680b6c222f67b8f94c12bedd57af263
-ms.sourcegitcommit: 56297d3b8aa8f4796cb74b736d599d433aeee339
+ms.openlocfilehash: c0f316517c722e407e36c489556a4e6069020a23
+ms.sourcegitcommit: 2ede79efbadd109099bb6fdb744796adde123922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98134802"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923647"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Novidades no cliente da Área de Trabalho do Windows
 
@@ -24,10 +24,10 @@ O cliente pode ser configurado para diferentes [grupos de usuários](windowsdesk
 
 |Grupo de usuários |Última versão  |Versão mínima com suporte |
 |-----------|----------------|--------------------------|
-|Público     |1.2.1525        |1.2.945                   |
-|Participante do Programa Windows Insider    |1.2.1670        |1.2.945                   |
+|Público     |1.2.1672        |1.2.945                   |
+|Participante do Programa Windows Insider    |1.2.1672        |1.2.945                   |
 
-## <a name="updates-for-version-121670-insider"></a>Atualizações para a versão 1.2.1670 (Participante do Programa Windows Insider)
+## <a name="updates-for-version-121672"></a>Atualizações da versão 1.2.1672
 
 *Data da publicação: 12/01/2021*
 
@@ -36,12 +36,13 @@ Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139233), [W
 - Adição de suporte para o recurso de proteção de captura de tela para pontos de extremidade do Windows 10. Para saber mais, confira [Melhores práticas de segurança do host da sessão](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
 - Suporte adicionado para proxies que exigem autenticação para a assinatura de feed.
 - Agora o cliente mostrará uma notificação com uma opção para tentar novamente se uma atualização não tiver sido baixada com êxito.
+- Foram solucionados alguns problemas de acessibilidade com o foco do teclado e o modo de alto contraste.
 
 ## <a name="updates-for-version-121525"></a>Atualizações da versão 1.2.1525
 
 *Data da publicação: 01/12/2020*
 
-Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qb), [Windows 32 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qc), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qa)
 
 - Foi adicionada uma exibição de lista para recursos remotos a fim de que nomes de aplicativos mais longos sejam legíveis.
 - Foi adicionado um ícone de notificação que aparece quando uma atualização está disponível para o cliente.
@@ -49,8 +50,6 @@ Download: [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2139369), [W
 ## <a name="updates-for-version-121446"></a>Atualizações para a versão 1.2.1446
 
 *Data da publicação: 27/10/2020*
-
-Download: [Windows 64 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hq7C), [Windows 32 bits](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4HvgF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ho64)
 
 - Foi adicionado o recurso de atualização automática, que permite que o cliente instale as atualizações mais recentes automaticamente.
 - O cliente agora consegue distinguir os diferentes feeds no Centro de Conexão.
